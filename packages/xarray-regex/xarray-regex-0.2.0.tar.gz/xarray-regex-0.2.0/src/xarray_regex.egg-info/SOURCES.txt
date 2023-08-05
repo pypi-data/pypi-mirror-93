@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+changelog.md
+setup.py
+src/xarray_regex/__init__.py
+src/xarray_regex/file_finder.py
+src/xarray_regex/library.py
+src/xarray_regex/matcher.py
+src/xarray_regex.egg-info/PKG-INFO
+src/xarray_regex.egg-info/SOURCES.txt
+src/xarray_regex.egg-info/dependency_links.txt
+src/xarray_regex.egg-info/top_level.txt
+src/xarray_regex/__pycache__/__init__.cpython-37.pyc
+src/xarray_regex/__pycache__/file_finder.cpython-37.pyc
+src/xarray_regex/__pycache__/library.cpython-37.pyc
+src/xarray_regex/__pycache__/matcher.cpython-37.pyc
