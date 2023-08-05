@@ -1,0 +1,20 @@
+pyyaml<5.4,>=5.3
+rouge<2,>=1.0
+sacrebleu<1.6,>=1.5.0
+tensorflow<2.5,>=2.3
+tensorflow-addons<0.13,>=0.12
+
+[:platform_system == "Darwin"]
+ctranslate2<2,>=1.17
+
+[:platform_system == "Linux"]
+ctranslate2<2,>=1.7
+
+[:platform_system == "Linux" or platform_system == "Darwin"]
+pyonmttok<2,>=1.23.0
+
+[tests]
+black==20.8b1
+flake8==3.8.*
+parameterized==0.8.1
+pytest-cov
