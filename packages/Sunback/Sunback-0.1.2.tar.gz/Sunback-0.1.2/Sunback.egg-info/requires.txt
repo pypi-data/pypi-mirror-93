@@ -1,0 +1,13 @@
+sunpy[net]>=1.1
+matplotlib
+twine
+pillow
+moviepy
+pippi
+parfive
+playsound
+opencv-python
+numba
+
+[:platform_system == "Darwin"]
+appscript
