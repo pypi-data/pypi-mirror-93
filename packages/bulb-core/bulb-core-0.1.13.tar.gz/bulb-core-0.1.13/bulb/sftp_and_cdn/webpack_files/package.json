@@ -1,0 +1,48 @@
+{
+    "name": "bulb",
+    "version": "0.0.88",
+    "description": "Neo4j integration for Django, and much more tools to deploy consequent websites...",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Bulb-Core/bulb.git"
+    },
+    "author": "Lilian CRUANES",
+    "license": "GPL-3.0-or-later",
+    "bugs": {
+        "url": "https://github.com/LilianCruanes/bulb/issues"
+    },
+    "homepage": "https://github.com/LilianCruanes/bulb#readme",
+    "dependencies": {
+        "@babel/runtime-corejs3": "^7.12.5",
+        "core-js": "^3.8.3",
+        "postcss-preset-env": "^6.7.0",
+        "regenerator-runtime": "^0.13.7"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.7.7",
+        "@babel/plugin-transform-runtime": "^7.12.10",
+        "@babel/preset-env": "^7.12.11",
+        "babel-loader": "^8.0.6",
+        "babel-minify-webpack-plugin": "^0.3.1",
+        "babel-preset-minify": "^0.5.1",
+        "css-loader": "^3.4.1",
+        "css-mqpacker": "^7.0.0",
+        "cssnano": "^4.1.10",
+        "cssnano-preset-advanced": "^4.0.7",
+        "mini-css-extract-plugin": "^0.9.0",
+        "node-sass": "^4.14.1",
+        "optimize-css-assets-webpack-plugin": "^5.0.3",
+        "postcss-loader": "^3.0.0",
+        "sass-loader": "^8.0.0",
+        "webpack": "^4.41.4",
+        "webpack-cli": "^3.3.10"
+    },
+    "browserslist": [
+        "cover 100%"
+    ]
+}
