@@ -1,0 +1,15 @@
+pymrmr.cpython-37m-darwin.so,sha256=zYsfDxJs2RRl_2DGxtS7k3jiGqdJWz0j5tGEf0u1SOw,110328
+pymrmr/crank.cpp,sha256=LgV3QLSxbS2VVS862dX9tWUhKkofN7MsE87WsnacAws,496
+pymrmr/mrmr.cpp,sha256=B5iSR1if7FlPd2Rf2l5UIFQI577-ZUGjCzjOA0tQafM,11158
+pymrmr/nrutil.cpp,sha256=A2U6NQXH_PIt6c2SnGLjsjoZpZUAJDpFMyYe3J6nOeI,16840
+pymrmr/nrutil.h,sha256=54CMogxSQi_N7EZn6CpJLrYtyFOiuHar_Hz1_4iXtDA,3330
+pymrmr/pbetai.cpp,sha256=UP9um06vfq_FsbD4pmw8EXKV48VIk3bkarT_TstK-Co,1927
+pymrmr/pymrmr.cpp,sha256=8BMYcW9yV9ER3PIX72Qz39YZUQ93sW0jYRl9gLzG3ms,351820
+pymrmr/pymrmr.pyx,sha256=GqlwTksv-EjtNMKdgQRNoAhwxJGnHr1rzvxFyfKIi5E,767
+pymrmr/sort2.cpp,sha256=WRfCshoZmKcsn07oAKWgu9sE-Sd9BCCdg_o-nHmxK_c,1572
+pymrmr-0.1.11.dist-info/AUTHORS.rst,sha256=le1bHIX4-aJg2vdbMnd1ctp64I5fD788pPnAEeCkj5M,210
+pymrmr-0.1.11.dist-info/LICENSE,sha256=f24AsoogtotA1DLWjGm1pO5JNGNMfCaTozg4M6CyDdo,1079
+pymrmr-0.1.11.dist-info/METADATA,sha256=DhF1G9jWbmlNM3oeI2XoeL4gVvguvnsZE8fJLTWKqk4,7588
+pymrmr-0.1.11.dist-info/WHEEL,sha256=SPFsdN-g7Osut7El6pRHojcroYU7REc1DdD4VXzi4B4,111
+pymrmr-0.1.11.dist-info/top_level.txt,sha256=6rq2vJEXKmNlRVaKd2aeV3J4ezsQPPgPcP-1gSDveb0,7
+pymrmr-0.1.11.dist-info/RECORD,,
