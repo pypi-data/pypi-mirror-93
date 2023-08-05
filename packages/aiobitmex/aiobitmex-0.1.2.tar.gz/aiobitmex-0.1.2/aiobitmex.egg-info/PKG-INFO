@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: aiobitmex
+Version: 0.1.2
+Summary: Async connector to the BitMEX API.
+Home-page: https://github.com/forkcs/aiobitmex
+Author: Fedor Soldatkin
+Author-email: fsoldatkin@yandex.ru
+License: MIT License
+Description: UNKNOWN
+Keywords: {keywords}
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

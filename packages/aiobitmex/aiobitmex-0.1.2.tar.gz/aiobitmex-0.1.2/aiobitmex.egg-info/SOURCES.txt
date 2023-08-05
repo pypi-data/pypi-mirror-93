@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+aiobitmex/__init__.py
+aiobitmex/auth.py
+aiobitmex/constants.py
+aiobitmex.egg-info/PKG-INFO
+aiobitmex.egg-info/SOURCES.txt
+aiobitmex.egg-info/dependency_links.txt
+aiobitmex.egg-info/not-zip-safe
+aiobitmex.egg-info/requires.txt
+aiobitmex.egg-info/top_level.txt
+aiobitmex/http/__init__.py
+aiobitmex/ws/__init__.py
