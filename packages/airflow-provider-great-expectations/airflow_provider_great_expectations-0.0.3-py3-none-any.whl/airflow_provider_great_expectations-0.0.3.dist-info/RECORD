@@ -1,0 +1,11 @@
+great_expectations_provider/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+great_expectations_provider/examples/data/yellow_tripdata_sample_2019-01.csv,sha256=L5i_VfVRnlU5y2GvuoFwv8lhhiVUOgaFlXHkp8-gzCc,954456
+great_expectations_provider/examples/data/yellow_tripdata_sample_2019-02.csv,sha256=IkKvlr2igUtxIfmAz0mCkZTpW8mOF2mpWz3Ed4tZG1w,976570
+great_expectations_provider/operators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+great_expectations_provider/operators/great_expectations.py,sha256=Djtif2IndBgkQ-HZ6PnEK5ZL-BfdNbuUtIzhXjDXoQg,6341
+great_expectations_provider/operators/__pycache__/great_expectations.cpython-37.pyc,sha256=Bb-_dC8GB3kSV5OOHf0qTZMgO86SYt5ApBYtqPZtcVo,3772
+airflow_provider_great_expectations-0.0.3.dist-info/LICENSE.md,sha256=a2jxuFp0N0sgsFO04VmyYbX86gg5zCSteAt5JExZubM,11340
+airflow_provider_great_expectations-0.0.3.dist-info/METADATA,sha256=YfT15-lrFakfjfhCmBOsGGY9qpapTVncOY6xDxdaaE4,1599
+airflow_provider_great_expectations-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+airflow_provider_great_expectations-0.0.3.dist-info/top_level.txt,sha256=VltgZYs1xQqYaaFnvSWAbs6bpRcotfzj_ck1YjqVFUE,28
+airflow_provider_great_expectations-0.0.3.dist-info/RECORD,,
