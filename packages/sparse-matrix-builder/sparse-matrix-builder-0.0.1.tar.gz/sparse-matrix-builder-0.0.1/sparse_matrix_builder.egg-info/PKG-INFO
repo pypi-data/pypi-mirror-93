@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: sparse-matrix-builder
+Version: 0.0.1
+Summary: This program is intended to build sparse matrices in a more intuitive GUI environment.
+Home-page: UNKNOWN
+Author: Taewoo Han
+Author-email: htw1127@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: matrix
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
