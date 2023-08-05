@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: client-mess-is-that-joke
+Version: 0.1.2
+Summary: simple client chat
+Home-page: https://github.com/isthatjoke/messenger/tree/main/part_2/lesson_7
+Author: is_that_joke
+Author-email: leniviy7@gmail.com
+License: UNKNOWN
+Description: # Образец пакета PyPi
+        
+        This is a simple exercise to publish a package onto PyPi.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

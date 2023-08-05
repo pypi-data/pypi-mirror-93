@@ -1,0 +1,3 @@
+SQLAlchemy==1.3.22
+PyQt5-sip==12.8.1
+chardet==3.0.4
