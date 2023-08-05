@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: aiotailf
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/YangzhenZhao/aiotailf
+Author: nocilantro
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: aiofiles
+Requires-Dist: click
+
+UNKNOWN
+
+
