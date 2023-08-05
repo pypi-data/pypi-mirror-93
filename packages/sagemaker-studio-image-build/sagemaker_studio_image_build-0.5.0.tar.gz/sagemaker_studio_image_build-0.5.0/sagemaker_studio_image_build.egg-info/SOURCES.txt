@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+sagemaker_studio_image_build/__init__.py
+sagemaker_studio_image_build/builder.py
+sagemaker_studio_image_build/cli.py
+sagemaker_studio_image_build/codebuild.py
+sagemaker_studio_image_build/logs.py
+sagemaker_studio_image_build.egg-info/PKG-INFO
+sagemaker_studio_image_build.egg-info/SOURCES.txt
+sagemaker_studio_image_build.egg-info/dependency_links.txt
+sagemaker_studio_image_build.egg-info/entry_points.txt
+sagemaker_studio_image_build.egg-info/requires.txt
+sagemaker_studio_image_build.egg-info/top_level.txt
+sagemaker_studio_image_build/data/buildspec.template.yml

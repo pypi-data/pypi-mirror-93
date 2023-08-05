@@ -1,0 +1,3 @@
+[console_scripts]
+sm-docker = sagemaker_studio_image_build.cli:main
+
