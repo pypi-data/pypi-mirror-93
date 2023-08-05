@@ -1,0 +1,8 @@
+aws_cdk/aws_iotevents/__init__.py,sha256=tpPz5YAVaWhXMqGQTvq9WjjBhqOWYyfwRcXHHzJa1pc,111201
+aws_cdk/aws_iotevents/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_iotevents/_jsii/__init__.py,sha256=Q5iQO-i5nsmY2xBtHsxBMwZ2PfouJn2DcJ_kVcPR-GA,375
+aws_cdk/aws_iotevents/_jsii/aws-iotevents@1.87.1.jsii.tgz,sha256=rrgAm4CGZJlBUD2J4JdNVRsT1Yc_fEiJusGDyCFkW-0,48392
+aws_cdk.aws_iotevents-1.87.1.dist-info/METADATA,sha256=DL8uax9ke6SK3XM4njLmldBlHLCxY4cBmwkB4R_DXBU,1706
+aws_cdk.aws_iotevents-1.87.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aws_cdk.aws_iotevents-1.87.1.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_iotevents-1.87.1.dist-info/RECORD,,
