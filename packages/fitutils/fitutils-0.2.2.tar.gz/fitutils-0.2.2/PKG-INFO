@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: fitutils
+Version: 0.2.2
+Summary: Utility function and classes for fitting
+Home-page: https://https://github.com/M-A-Verdier/Fitutils
+Author: Marc-Antoine Verdier
+Author-email: marc-antoine.verdier@u-paris.fr
+License: bsd-3-clause
+Download-URL: https://github.com/M-A-Verdier/Fitutils/archive/v_0.2.2.tar.gz
+Description: UNKNOWN
+Keywords: LeastSquare,ErrorBars,Fitting
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
