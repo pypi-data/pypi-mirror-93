@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+vasiandr/__init__.py
+vasil.egg-info/PKG-INFO
+vasil.egg-info/SOURCES.txt
+vasil.egg-info/dependency_links.txt
+vasil.egg-info/top_level.txt
