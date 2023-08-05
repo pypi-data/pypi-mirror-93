@@ -1,0 +1,12 @@
+igwn_accounting/__init__.py,sha256=DRUeurX8GiddfweAFM6SRh4z8c5WVWjrOgovsnBD94w,686
+igwn_accounting/report.py,sha256=NJ-63mgGGMPYvp_2hA7JP8Nam3Zg5goBio0xFbaJFxs,18501
+igwn_accounting/tests/__init__.py,sha256=wnR7hYO1Oph5vh4xfryltrBKw0e5Fbi5va71epWAeQ0,710
+igwn_accounting/tests/condor_history.txt,sha256=5AOFcChaJ1yE3n9jE5B9IjrtNMRXhonEXJyDd22luIc,2177
+igwn_accounting/tests/test_report.py,sha256=mlSWO-QKsmZtleEw2rzcbVCwiAHyS8kV7rr0nSxZ1wk,7321
+igwn_accounting/tests/utils.py,sha256=RErsz6fwhbJghFe__5Z4eANjr0YHDEUaQpjCAZaKM_M,1526
+igwn_accounting-1.1.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+igwn_accounting-1.1.0.dist-info/METADATA,sha256=2aNPCPryJphrkBt5y2CZoLshZK2n5iaXckxpFQzMmoo,1925
+igwn_accounting-1.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+igwn_accounting-1.1.0.dist-info/entry_points.txt,sha256=h2B3W4DACBuX-CVZM6LGgpB_um03buMUjX-UW_8w08w,72
+igwn_accounting-1.1.0.dist-info/top_level.txt,sha256=MLMCsc4W7tADVEZIZu-NOdOn7vSibKtzetolUkG-8Ck,16
+igwn_accounting-1.1.0.dist-info/RECORD,,
