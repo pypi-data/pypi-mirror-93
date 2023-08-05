@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+drivelib/__init__.py
+drivelib/_version.py
+drivelib/drive.py
+drivelib.egg-info/PKG-INFO
+drivelib.egg-info/SOURCES.txt
+drivelib.egg-info/dependency_links.txt
+drivelib.egg-info/requires.txt
+drivelib.egg-info/top_level.txt
