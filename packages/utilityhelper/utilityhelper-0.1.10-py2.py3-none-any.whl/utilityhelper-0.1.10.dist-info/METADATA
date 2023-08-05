@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: utilityhelper
+Version: 0.1.10
+Summary: assistant tool for coding
+Home-page: https://github.com/leileigong/utility-helper
+Author: Lemon Gong
+Author-email: gll72344@gmail.com
+License: MIT
+Requires-Dist: pip (>=9.0.1)
+Requires-Dist: setuptools (>=36.2.1)
+Requires-Dist: pyserial (>2.7)
+
+
+# utility-helper
+
