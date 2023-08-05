@@ -1,0 +1,4 @@
+pyTigerDriver==1.0.6
+validators
+requests
+pandas

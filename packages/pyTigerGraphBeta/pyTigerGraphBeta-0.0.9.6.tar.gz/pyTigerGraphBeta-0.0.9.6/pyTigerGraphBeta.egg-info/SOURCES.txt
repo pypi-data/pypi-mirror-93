@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+pyTigerGraphBeta/__init__.py
+pyTigerGraphBeta/graphML.py
+pyTigerGraphBeta/pyTigerGraphBeta.py
+pyTigerGraphBeta.egg-info/PKG-INFO
+pyTigerGraphBeta.egg-info/SOURCES.txt
+pyTigerGraphBeta.egg-info/dependency_links.txt
+pyTigerGraphBeta.egg-info/requires.txt
+pyTigerGraphBeta.egg-info/top_level.txt
