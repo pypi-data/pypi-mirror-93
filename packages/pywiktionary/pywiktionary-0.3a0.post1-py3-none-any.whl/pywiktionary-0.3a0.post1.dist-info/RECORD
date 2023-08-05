@@ -1,0 +1,11 @@
+pywiktionary/__init__.py,sha256=YDu7erw2gX0YWPsRwhucROPx__maHRg2hxDARD-PUwk,180
+pywiktionary/wiktionary_parser_factory.py,sha256=ve6ZS1eeI0ebCERdYZVCm_dCmIdfECOpuELq3DHsFdU,3120
+pywiktionary/parsers/__init__.py,sha256=HUNqbhDy3ZX9jlkdYENgT-QwNHnEyyMeZjRxclbFds4,193
+pywiktionary/parsers/basic_parser.py,sha256=fuLrxQUphrsG23__a--TjRxtu_JJS4_bb2GF4WQLPec,409
+pywiktionary/parsers/english_parser.py,sha256=b2lYonbs1jEQzkgYjplsF2Uf99Px2Jfc_o1NVYvMil4,6178
+pywiktionary/parsers/italian_parser.py,sha256=1IZ5wbMcRHf7KtVsoq_Rto_QIzEBqIaFnmFvjqs19qw,6537
+pywiktionary-0.3a0.post1.dist-info/LICENSE,sha256=jeG3FpM3lRmeeHF6j_Hx5iYA0V3vlnCSiLEOY1pkYpI,1094
+pywiktionary-0.3a0.post1.dist-info/METADATA,sha256=wOJ9cbq8ZzxN07QVvf57w9LN5Oclm2fJbPGVuLT1wIo,3854
+pywiktionary-0.3a0.post1.dist-info/WHEEL,sha256=QBOOAdG2icRHGBs2s94rfaUlHrdfNBp-TceubUYCwOE,97
+pywiktionary-0.3a0.post1.dist-info/top_level.txt,sha256=PZlnW1a-xpyuPO9o2oZFYazcD9RKujQVg8nkWuPNDpE,13
+pywiktionary-0.3a0.post1.dist-info/RECORD,,
