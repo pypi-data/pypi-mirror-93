@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pangadfs
+Version: 0.1.1
+Summary: extensible pandas-based genetic algorithm for fantasy sports lineup optimization
+Home-page: UNKNOWN
+Author: Eric Truett
+Author-email: sansbacon@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+pangadfs
+==============
+
+# Introduction
+
+pangadfs is a pandas-based genetic algorithm for NFL dfs
+
+
