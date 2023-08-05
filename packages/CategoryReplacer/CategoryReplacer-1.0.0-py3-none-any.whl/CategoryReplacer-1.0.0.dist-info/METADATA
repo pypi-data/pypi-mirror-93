@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: CategoryReplacer
+Version: 1.0.0
+Summary: Categorical Features replace to Numerical Values.
+Home-page: https://github.com/yoshida121/CategoryReplacer
+Author: yoshida121
+Author-email: yoshida.pypi@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: category-encoders
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+
+
+Categorical Feature Enginieering.
+
+Include Method:
+    CountEncoder
+    CombinCountEncoder
+    FrequencyEncoder
+    NullCounter
+    AutoCalcEncoder
+
+
