@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+airflow_aws_executors/__init__.py
+airflow_aws_executors/batch_executor.py
+airflow_aws_executors/conf.py
+airflow_aws_executors/ecs_fargate_executor.py
+airflow_aws_executors.egg-info/PKG-INFO
+airflow_aws_executors.egg-info/SOURCES.txt
+airflow_aws_executors.egg-info/dependency_links.txt
+airflow_aws_executors.egg-info/requires.txt
+airflow_aws_executors.egg-info/top_level.txt
