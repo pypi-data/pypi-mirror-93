@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+aiotailf/__init__.py
+aiotailf/cli.py
+aiotailf.egg-info/PKG-INFO
+aiotailf.egg-info/SOURCES.txt
+aiotailf.egg-info/dependency_links.txt
+aiotailf.egg-info/entry_points.txt
+aiotailf.egg-info/requires.txt
+aiotailf.egg-info/top_level.txt
