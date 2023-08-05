@@ -1,0 +1,5 @@
+svgutils==0.3.2
+
+[tests]
+parameterized
+pytest
