@@ -1,0 +1,8 @@
+README.md
+setup.py
+whatstrending.py
+whatstrending.egg-info/PKG-INFO
+whatstrending.egg-info/SOURCES.txt
+whatstrending.egg-info/dependency_links.txt
+whatstrending.egg-info/requires.txt
+whatstrending.egg-info/top_level.txt
