@@ -1,0 +1,2 @@
+include versioneer.py
+include bwsi_grader/_version.py
