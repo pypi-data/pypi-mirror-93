@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: gotrue
+Version: 0.1.0
+Summary: Python Client Library for GoTrue
+Author: Joel Lee
+Author-email: joel@joellee.org
+Requires-Python: >=3.9.1,<4.0.0
+Classifier: Programming Language :: Python :: 3
