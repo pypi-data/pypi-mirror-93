@@ -1,0 +1,68 @@
+sudo: false
+language: python
+python:
+  - "3.8"
+cache: pip
+env:
+  global:
+    - LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so
+    - SEGFAULT_SIGNALS=all
+matrix:
+  fast_finish: true
+  include:
+    - python: '3.8'
+      dist: xenial
+      env:
+        - TOXENV=check,docs
+    - python: '3.8-dev'
+      dist: xenial
+      env:
+        - TOXENV=check,docs
+    - python: 'nightly'
+      dist: xenial
+      env:
+        - TOXENV=check,docs
+  allow_failures:
+    - python: 3.8-dev
+    - python: nightly
+os:
+- linux
+git:
+  depth: 3
+branches:
+  only:
+  - "/.*/"
+before_install:
+  - python --version
+  - uname -a
+  - lsb_release -a
+install:
+  - pip install --upgrade pip
+  - pip install codecov tox
+  - pip install .[TESTS]
+script:
+  - tox -v
+after_success:
+  - codecov
+after_failure:
+  - more .tox/log/* | cat
+  - more .tox/*/log/* | cat
+before_deploy:
+  - python setup.py sdist bdist_wheel
+deploy:
+  - provider: pypi
+    user: __token__
+    password:
+        secure: test
+    skip_existing: true
+    distributions: "sdist bdist_wheel"
+    on:
+      tags: true
+      branch: master
+  - provider: releases
+    api_key:
+        secure: iMrqcPX4UinOJUgFuxCcd53WR4PIRIlwixh0BAzlifE0iK3rq2pX5KrgvQR531xo5ZDQO+O/WliXj81HW7szPbYWWl1n9wvQpsqOVIiLLDq9jB1v1k508GKNwBjZ4HL2gOgFIHRGj660HkFZiZYtPJeY1gOR78q7m3zF+k8m8v0h3k0WlXLwZWvArF6ZCC6difKDp0q++0t9UZcY70+mGt0p3Hdf2drX6yx4ouecB5IidS70R4+knYfV8x+VeKINwuPmqJyF/jfSgfx4k7qw8uTZjTzLe6/i0QWWEumdfu7eHFuX8foMLxHn6O7btfgqoaAtgvqG9BV30ptLjQNyEnlujN4DhbkYhd7PYxBJHAq3k0+buTM2EJtI7AU7JPc3QYYZkY/9VudrBUWMz8Soxf37hVQuaFqd1+IVebsyEiUeUJqtKd93fW6hF/D/dIupMzjxmixFDsZNyip0ntskj9/jmoZ4z1lCGPbugYJC+OFDy5lgcKNZYsFa/C4HCU+t9aTSQU4FLORj+gVoxOdase3GG3sbWLfXTYAXIsTCtAtS9deB3FUHQ6QWT3CLmiaJnRdpbH2D8JhLrPnGX95ZtnV3OvAcKDMZ4fANFC1zcD+3OlFSewSQedutaF9rkg6En20uHPmFanEL23O/NY6vYCFIsJa7ufy2Kiz+lyC7gtY=
+    file: dist/*
+    skip_cleanup: true
+    on:
+      tags: true
