@@ -1,0 +1,10 @@
+duckit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+duckit/batch.py,sha256=MMo9Tw7msvz2y2FF2kvsz9QnznMgsR8P13cIH76OLxI,3510
+duckit/db.py,sha256=GwWJdMiSPWsXQzqEzmSFxqD3Sgc1_m67CdF4PkeUFzQ,244
+duckit/table.py,sha256=2jpAkkSS6oN6Ld68oTXz8fqRti24r0qhuv-phhv77Fw,4868
+duckit/types.py,sha256=86tnFpFxvaelIKGU2wcH-5gE4vdKqR6egQBR-H4EY44,628
+duckit-0.0.6.dist-info/LICENSE,sha256=FbsocOORs8fjWXTa82TPviKVsYb7x5p5vzzPrZyvjgA,1069
+duckit-0.0.6.dist-info/METADATA,sha256=bpzlIs48z0btK1Neq9F53zmrR3UGLXUlp1QB7IILLeE,512
+duckit-0.0.6.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+duckit-0.0.6.dist-info/top_level.txt,sha256=b9_ECTpaK6yx4YszN7A4ervMWz6Zv7cTE7U8AF5_4o4,7
+duckit-0.0.6.dist-info/RECORD,,
