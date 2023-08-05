@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: bwsi-grader
+Version: 1.9.0
+Summary: A suite of auto-graders for the BWSI EdX courses.
+Home-page: UNKNOWN
+Author: Ryan Soklaski
+Author-email: ry26099@mit.edu
+License: MIT
+Platform: Windows
+Platform: Linux
+Platform: Mac OS-X
+Platform: Unix
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Requires-Dist: numpy (>=1.10)
+
+
+A package to be utilized locally by students to grade assignments that 
+are written in Python. These graders correspond to coursework associated 
+with BWSI-EdX.
+
+
