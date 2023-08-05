@@ -1,0 +1,9 @@
+README.md
+setup.py
+takeme_pymsteams/__init__.py
+takeme_pymsteams.egg-info/PKG-INFO
+takeme_pymsteams.egg-info/SOURCES.txt
+takeme_pymsteams.egg-info/dependency_links.txt
+takeme_pymsteams.egg-info/not-zip-safe
+takeme_pymsteams.egg-info/requires.txt
+takeme_pymsteams.egg-info/top_level.txt
