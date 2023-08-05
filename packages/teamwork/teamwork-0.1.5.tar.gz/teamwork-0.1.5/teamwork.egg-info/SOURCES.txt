@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+teamwork/__init__.py
+teamwork/teamwork.py
+teamwork.egg-info/PKG-INFO
+teamwork.egg-info/SOURCES.txt
+teamwork.egg-info/dependency_links.txt
+teamwork.egg-info/requires.txt
+teamwork.egg-info/top_level.txt
+teamwork/.ipynb_checkpoints/__init__-checkpoint.py
+teamwork/.ipynb_checkpoints/teamwork-checkpoint.py
+teamwork/.ipynb_checkpoints/utils-checkpoint.py
