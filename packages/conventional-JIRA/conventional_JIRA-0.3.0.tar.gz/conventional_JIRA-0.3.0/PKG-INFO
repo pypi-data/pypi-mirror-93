@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: conventional_JIRA
+Version: 0.3.0
+Summary: UNKNOWN
+Home-page: https://github.com/Crystalix007/conventional_jira
+Author: Michael Kuc
+Author-email: michaelkuc6@gmail.com
+License: MIT
+Description: A variation of conventional commits enforcing a JIRA issue as the scope.
+Platform: UNKNOWN

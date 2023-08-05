@@ -1,0 +1,8 @@
+README.md
+cz_conventional_JIRA.py
+setup.py
+conventional_JIRA.egg-info/PKG-INFO
+conventional_JIRA.egg-info/SOURCES.txt
+conventional_JIRA.egg-info/dependency_links.txt
+conventional_JIRA.egg-info/requires.txt
+conventional_JIRA.egg-info/top_level.txt
