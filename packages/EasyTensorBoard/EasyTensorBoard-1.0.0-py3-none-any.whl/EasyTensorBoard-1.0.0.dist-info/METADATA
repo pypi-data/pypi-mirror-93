@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: EasyTensorBoard
+Version: 1.0.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: zhmh
+Author-email: zhmhbest@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: tensorboard (>=1.8.0)
+
+# EasyTensorBoard
+
+```py
+import tensorflow as tf
+from easytensorboard import EasyTensorBoard
+
+a = tf.constant(5.0, name="a")
+b = tf.constant(6.0, name="b")
+c = tf.add(a, b, name='c')
+
+tb = EasyTensorBoard()
+with tf.Session() as sess:
+    tb.save(sess.graph)
+tb.board()
+```
+
+
