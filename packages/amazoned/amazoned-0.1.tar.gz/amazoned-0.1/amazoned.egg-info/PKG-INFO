@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: amazoned
+Version: 0.1
+Summary: Amazon link to affiliate link
+Home-page: https://github.com/YoungTrep/Python-Amazoned
+Author: youngtrep
+Author-email: youngtrep.business@gmail.com
+License: UNKNOWN
+Description: Python script to change an original Amazon link to an affiliate Amazon link.
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6

@@ -1,0 +1,1 @@
+Python script to change an original Amazon link to an affiliate Amazon link.

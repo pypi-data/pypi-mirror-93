@@ -1,0 +1,6 @@
+README.txt
+setup.py
+amazoned.egg-info/PKG-INFO
+amazoned.egg-info/SOURCES.txt
+amazoned.egg-info/dependency_links.txt
+amazoned.egg-info/top_level.txt
