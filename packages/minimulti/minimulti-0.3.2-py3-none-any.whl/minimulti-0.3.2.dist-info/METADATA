@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: minimulti
+Version: 0.3.2
+Summary: Mini Extendable framework of multi Hamiltonian
+Home-page: UNKNOWN
+Author: Xu He
+Author-email: mailhexu@gmail.com
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: ase
+Requires-Dist: numba
+Requires-Dist: tbmodels
+Requires-Dist: netcdf4
+Requires-Dist: jupyter
+
+minimulti is a python framework of effective potentials, including lattice model, electron (tight-binding+Hubbard), magnetic Heisenberg model, etc 
+
+
