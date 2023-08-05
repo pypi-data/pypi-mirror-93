@@ -1,0 +1,5 @@
+numpy~=1.19
+tcod~=11.19
+
+[dev]
+pytest>=3.8

@@ -1,0 +1,381 @@
+Super-Science Dungeon Adventure!
+
+Scientist: Notebook, vials, darts? jumpsuit.
+spy: Darts? Poison? Silenced gun.
+hacker: USB Drive, credit card.
+soldier: Gun, knife, bullet proof vest.
+explosives expert: leather jacket, brass knuckles.
+roboticist: Lab coat. Remote control, 3 drone upgrades...
+janitor: Mop, towel, insect spray
+
+Robots
+    Defense Turret
+    Drones
+    Cyborgs
+
+HP/DEF/POW:
+
+Nethack Monsters:
+    e gas spore. 8/1/5. 4d6 explode on death.
+    e yellow light. 1/1/2.  Explode blind. When adjacent.
+    e Black light. 1/1/2. explode hallucintion. Invisible.
+    e flaming sphere. 2/1/10. living mine. targeted explode fire.
+    e shocking sphere. 2/1/10. living mine. targeted explode shock.
+    e freezing sphere. 2/1/10. living mine. targeted explode cold.
+
+    b jiggling blob. 11/3/3. moves. touch attack. passive acid.
+    b lava blob. 11/3/3. moves. fire attack. passive fire.
+    b static blob. 11/3/3. moves. shock attack and passive.
+    b burbling blob. 11/3/3. moves. powerful acid attack and passive..
+    b Quivering blob. 6/1/2. white. moves. touch 1d8
+    b Gelatinous cube. 30/5/15. light blue. paralysis attack and passive.
+    b acid blob. 8/2/4. light green. passive acid 1d8
+
+    F lichen 1/1/1. Touch 1d4 sticky
+    F Brown mold. 1/1/2. Stationary. passive cold
+    F Yellow mold. 1/1/2. Stationary. passive stun.
+    F Green mold. 1/1/2. Stationary. passive acid.
+    F Red mold. 1/1/2. Stationary. passive fire
+    F Shrieker. 1/1/1. moves slow. no attack. shrieks.
+    F Violet fungus. 1/1/1. slow. Touch 1d4 sticky
+    F disgusting mold. 8/2/8. Stationary. passive poison and acid.
+    F black mold. 10/4/16. Stationary. passive poison and acid.
+
+    x Grid bug. 1/1/2. moves only in NESW.
+    x spark bug. 2/2/2. bite shock. weakest
+    x arc bug. 4/4/4. bite shock. medium.
+    x lightning bug. 8/8/8 bite shock. strongest.
+    x firefly. 1/4/1. lights up the dark areas.
+    x xan. Flying, poisonous.
+
+
+    # Not implemented yet....
+    j Green Slime (converted to j) - Slime death
+
+    j blue jelly.dark blue. Passive cold.
+    j Spotted jelly. light green. Passive acid.
+    j Ochre jelly. brown. engulf acid.
+    j clear jelly. touch acid.
+    j yellow jelly. engulf acid. passive stun.
+    j orange jelly. engulf acid. passive sleep.
+    j rancid jelly. engulf acid. passive acid. powerful.
+
+
+
+Genetic Experiments
+    Chickatrice
+    c Cockatrice
+    c Pyrolisk
+    quantum mechanic
+    bad egg	%
+    killer tripe ration	%
+    killer food ration	%
+    pile of killer coins
+    large pile of killer coins
+    huge pile of killer coins
+    glowing eye	e
+    bloodshot eye
+    blinking eye
+    phase spider
+    spark bug	x	2	Bite 1d3 (shock)	Never appears in Gehennom
+    arc bug	x	4	Bite 2d4 (shock)	Never appears in Gehennom
+    lightning bug
+
+
+Aliens
+    scramper
+    squealer
+    mangler
+    face-sucker
+
+Operatives:
+    @ Soldier
+    @ Sergeant
+    @ Lieutenant
+    @ Captain
+    @ Watchman
+    @ Watch captain
+    Mad Scientist
+    fembots
+    men in black
+    secret agents
+    mugger
+    genetic engineer
+    henchman
+    OSI agents, FBI agents/CIA, NSA
+    Rookie Agent
+    Architect
+    Robotic Engineer
+    Shot-Gunner
+    Machine-Gunner
+    Fire-Trooper
+
+Aligned/Peacefuls:
+    @ nurse
+    @ Shopkeeper
+    @ Guard
+    @ Prisoner
+    H.E.L.P.eR unit
+
+Real Monsters:
+    Wolf
+    Mouse, Rat
+    Kitten, Cat, Large Cat
+    Little Dog, Dog, Large Dog
+    s cave spider
+    s Centipede
+    s Giant spider
+    s Scorpion
+    B bat
+    B giant bat
+    recluse spider
+    barking spider
+    black rat
+    giant scorpion
+    snake
+    flea
+    tick
+    giant louse
+    giant tick
+    giant flea
+    yellow jacket
+    black wasp
+    Chameleon
+    tsetse fly
+    giant wasp
+    spitting beetle
+    pit bull	d	11	Bite 4d4	Never appears in Gehennom
+    wolverine	d	9	Bite 4d6, claw 2d6	Never appears in Gehennom
+    larva	w	1	Bite 1d2
+    maggot	w	2	Bite 1d3
+    dung worm	w	3	Bite 1d4
+    acid worm	w	4	Spits acid, bite 1d4 (poison)
+    bloodworm	w	6	Bite 2d4 (poison)	Never appears in Gehennom
+    tunnel worm	w	7	Bite 3d4	Tunnels, never appears in Gehennom
+    rot worm	w	1	Bite 1d2 (disease)	Only appears in the Wyrm Caves
+    giant crab
+    gila monster
+    komodo dragon
+
+Variations on "normal" beings:
+    Mutants
+    Mini
+    Giant
+    Mega
+    Zombified ...
+    Rabid
+    Bezerking
+    Shielded
+
+Legendary Monsters:
+    migo drone
+    migo warrior
+    migo queen
+    shadow wolf
+    mist wolf
+    displacer beast
+    galltrit (deferred)	g
+    jermlaine (deferred)
+    duergar	h	4
+    deep one
+    deeper one
+    deepest one
+    byakhee	B
+    nightgaunt
+    carrion crawler
+    nickelpede	s
+    shoggoth
+    giant shoggoth	P
+
+
+
+Transportation:
+    Scooter
+    Segway
+    Teleporters
+    Jet Pack
+    Elevator
+    Portal Gun
+    Portals
+
+Items:
+    Shrink Ray
+    Mega Ray
+    Newspaper
+    Flashlight (instead of oil lamp.)
+    jPad, VPhone
+    Grappling Gun
+    Pills
+    "Diet Pills"
+    God gas (hallucinaion)
+    Infrared Sensor
+    Camera
+    Watch Laser
+    Tricorder
+	Cigarettes
+	Mine Detector
+	Antenna
+	Towel
+	Lighter
+	Lock-pick
+	Oxygen Tank
+	Flashlight
+	Bomb Defuser
+	Briefcase
+	Bug, Bug Detector
+	Circuit Board
+	Battery, Lithium Battery
+
+Melee Weapons:
+    Scalpal
+    Bowie Knife
+    Throwing Knife
+    Brass Knucles
+    Billie Club
+    Golf Club
+    Iron Bar
+    Large Crowbar
+    Hammer
+    Wooden Staff
+    Dagger
+    Short Sword
+    Long Sword
+	Steel Pipe, Rebar
+
+Explosives:
+    Bombs
+    Smoke Bomb
+    Hand Grenade
+    Timed Mine
+    Proximity Mine
+    Remote Mine
+    Detonator
+    Taser
+    Plastic Explosive
+	Pipe Bomb
+
+Firearms:
+    Silencer
+    laser ray
+    PP7 Special Issue
+    Silenced PP7
+    DD44 Dostovei
+    Klobb
+    KF7 Soviet
+    ZMG (9mm)
+    D5K Deutsche
+    Silenced D5K
+    AR33 Assault Rifle
+    RC-P90
+    Shotgun
+    Automatic Shotgun
+    Cougar Magnum
+    Grenade Launcher
+    Rocket Launcher
+    Flame thrower
+
+
+Equipment:
+    Anti-Gravity Boots (levitation)
+    mind control helmet
+    Costume
+    Super Hero Costume
+    Gas Mask
+    Biohazard suit
+    Heat Suit
+    Radiation Suit
+    Radiation Monitor
+    Communicator Watch
+
+Rooms/Features:
+    Cloning Facility
+    Tesla Coil
+    Super computer station
+    Matrix chair station
+    Area 51 research room
+    Lunar landing research room
+    DoD room
+	Manhole... Manhole cover.
+	Air vents, sewers...
+	Dumpster, Trash Bin
+
+Traps:
+
+Vials:
+    Poison
+    Speed
+    Coffee
+    Hallucination
+    Fruit Juice
+    See Invisible
+    X-ray vision
+    Double Vision
+    Hyper Sensitivity
+    Antidote
+    Mutagen Ooze, Radioactive Ooze
+    Giantness
+    Gas
+    Healing
+    Extra Healing
+    Full Healing
+    Booze
+    Strength
+
+
+Instead of scrolls/spellbooks, maybe we have recipes, crafting, skill upgrades?
+    Book on hacking
+    Book
+    Or computer chips?  Implant?
+
+Ability to craft bullets?
+Fix firearms
+craft explosives?
+
+
+Hacking skills
+Chemistry skills
+Explosives skill
+Firearms skills
+Melee Weapon skills
+Solar Power... in a dungeon...
+
+Kreygasm
+Martial Arts skills
+
+
+### low level 1
+brown_mold
+yellow_mold
+green_mold
+red_mold
+shrieker
+violet_fungus
+lichen
+grid_bug
+firefly
+
+### level 2
+gas_spore
+yellow_light
+black_light
+flaming_sphere
+freezing_sphere
+shocking_sphere
+spark_bug
+troll
+orc
+
+### Level 3
+jiggling_blob
+lava_blob
+static_blob
+burbling_blob
+quivering_blob
+arc_bug
+acid_blob
+
+###Level 4
+gelatinous_cube
+disgusting_mold
+black_mold
+lightning_bug
