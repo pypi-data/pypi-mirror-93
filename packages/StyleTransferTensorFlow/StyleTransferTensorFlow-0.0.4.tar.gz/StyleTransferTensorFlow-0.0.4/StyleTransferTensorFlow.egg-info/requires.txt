@@ -1,0 +1,11 @@
+matplotlib
+tensorflow
+os
+ffmpy
+glob
+shutil
+pytube
+opencv-python
+pillow
+numpy
+tensorflow_hub
