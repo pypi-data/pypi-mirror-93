@@ -1,0 +1,9 @@
+README.md
+setup.py
+vexilla_client/__init__.py
+vexilla_client/client.py
+vexilla_client/hasher.py
+vexilla_client.egg-info/PKG-INFO
+vexilla_client.egg-info/SOURCES.txt
+vexilla_client.egg-info/dependency_links.txt
+vexilla_client.egg-info/top_level.txt
