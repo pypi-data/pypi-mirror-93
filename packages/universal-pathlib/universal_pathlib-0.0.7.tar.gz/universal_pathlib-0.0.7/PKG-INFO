@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: universal_pathlib
+Version: 0.0.7
+Summary: Pathlib API extended to use fsspec backends
+Home-page: https://github.com/Quansight/universal_pathlib
+Author: Andrew Fulton
+Author-email: andrewfulton9@gmail.com
