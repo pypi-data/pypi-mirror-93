@@ -1,0 +1,3 @@
+[console_scripts]
+pi_weatherstation = pi_weatherstation.cli:main
+
