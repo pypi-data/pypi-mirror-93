@@ -1,0 +1,16 @@
+numpy
+jinja2
+matplotlib
+tqdm
+scikit-image
+scipy
+pims
+vedo
+networkx
+nd2reader
+blosc
+openpyxl
+lxml
+
+[kimimaro]
+kimimaro
