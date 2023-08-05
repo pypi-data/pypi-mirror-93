@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: config-reader-ryazantseff
+Version: 0.0.1
+Summary: Json config reader and writer
+Home-page: https://github.com/ryazantseff/py-config-reader
+Author: Maxim Ryazantsev
+Author-email: maxim.ryazancev@gmail.com
+License: MIT
+Keywords: JSON,Config
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pathlib
+
+# Example Package
+
+This is a simple example package. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+

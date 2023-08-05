@@ -1,0 +1,8 @@
+config_reader/Config.py,sha256=sAMtwfxpQogFhAvE4JX5cYXWkv4-F1Z9Hiix7dB5J8A,2515
+config_reader/__init__.py,sha256=izfhCSihwXMSCEoVb57BEIIptKBc1Ztvqjt3CeAdfSg,26
+tests/__init__.py,sha256=7jMSG-f1fYIu8VpNAd2Hus-x-1uorE6vFFN8gPmtAXA,1371
+config_reader_ryazantseff-0.0.1.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+config_reader_ryazantseff-0.0.1.dist-info/METADATA,sha256=qzgqa-hvLR2RJ0WbQuVnIvB05A99mwz2GF1qXmFlZsI,817
+config_reader_ryazantseff-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+config_reader_ryazantseff-0.0.1.dist-info/top_level.txt,sha256=66ZTI9k2bOLJdbRrG-bLV2aqUyhdTynnh-6QdLXh1lQ,20
+config_reader_ryazantseff-0.0.1.dist-info/RECORD,,
