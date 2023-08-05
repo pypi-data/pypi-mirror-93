@@ -1,0 +1,14 @@
+README.rst
+setup.cfg
+setup.py
+webdriverdownloader2/__init__.py
+webdriverdownloader2/cli.py
+webdriverdownloader2/util.py
+webdriverdownloader2/webdriverdownloader2.py
+webdriverdownloader2.egg-info/PKG-INFO
+webdriverdownloader2.egg-info/SOURCES.txt
+webdriverdownloader2.egg-info/dependency_links.txt
+webdriverdownloader2.egg-info/entry_points.txt
+webdriverdownloader2.egg-info/not-zip-safe
+webdriverdownloader2.egg-info/requires.txt
+webdriverdownloader2.egg-info/top_level.txt
