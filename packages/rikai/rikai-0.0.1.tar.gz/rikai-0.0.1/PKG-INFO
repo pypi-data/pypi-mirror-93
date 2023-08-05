@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: rikai
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Rikai authors
+License: Apache License, Version 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.7
+Provides-Extra: all
+Provides-Extra: aws
+Provides-Extra: docs
+Provides-Extra: jupyter
+Provides-Extra: pytorch
+Provides-Extra: test
+Provides-Extra: youtube
