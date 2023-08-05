@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: usbwde-mccrab
+Version: 2021.1.1
+Summary: A client class for the USB-WDE1 receiver by ELV.
+Home-page: https://github.com/mccrab/usbwde
+Author: Gabe Krabbe
+Author-email: krabbe@google.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: System :: Hardware :: Hardware Drivers
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pyserial
+
+# usbwde
+
+Python client library for ELV's USB-WDE1 receiver.
+
+
