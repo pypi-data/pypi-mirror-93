@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: RareDecipher
+Version: 0.1.0
+Summary: RareDecipher: Robust and accurate inference of rare cell type proportions from bulk gene expression or DNA methylation data
+Home-page: https://github.com/WangLabTHU/RareDecipher/
+Author: Hanwen Xu
+Author-email: xuhw20@mails.tsinghua.edu.cn
+License: Hanwen
+Description: RareDecipher: Robust and accurate inference of rare cell type proportions from bulk gene expression or DNA methylation data
+Keywords: pip,RareDecipher
+Platform: any
