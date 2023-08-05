@@ -1,0 +1,16 @@
+python_autocomplete/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_autocomplete/bundle.py,sha256=gb7AUsuxm6L7iUXSZasmPPdLEhQUwWR-EMbNR0GBsgI,260
+python_autocomplete/create_dataset.py,sha256=5ZfNDgv5jJfVxN8mbSibtHdUgzfA7lB9FkRskbkhMdo,6172
+python_autocomplete/distributed.py,sha256=rHg5wLZxnUntTDC8kW5U5j20lW5D1_xY6WzrP1TNnOg,3707
+python_autocomplete/evaluate.py,sha256=GSHbXbyugz3sMK334eXgELJ0nnHZRXTYp1W8yd1pNbA,6809
+python_autocomplete/serve.py,sha256=2kC2cytNmjVwQfG9RZxCE2tgSAahV9jsCQggCG91NUU,1064
+python_autocomplete/train.py,sha256=gXePstO37nC8-Ak8hnqPAs788njK1ZFlH_9Zc9vT36c,7540
+python_autocomplete/models/__init__.py,sha256=ajz1GSNU9xYVrFEDSz6Xwg7amWQ_yvW75tQa1ZvRIWc,3
+python_autocomplete/models/highway.py,sha256=Y5TVWa6kMCit20uwClH0-UBEjbbD7PDAghJL84eNdDs,851
+python_autocomplete/models/lstm.py,sha256=nr8h7THSB0I-_gmD5RS7_ZhbSn11pFNGZBzZzj2Ta1w,852
+python_autocomplete/models/transformer.py,sha256=Bq1NwqeDIdqwrfwV63HkdoFM84pumhb4xgCeAd_b6ps,1104
+labml_python_autocomplete-0.0.4.dist-info/LICENSE,sha256=d5lqnLYRmwaMZQaoI535ZeQVwTNNXK8EPtcnLLeO8Kc,1072
+labml_python_autocomplete-0.0.4.dist-info/METADATA,sha256=yxY9T3YiVZytOjAltHVER47TZAjY2VpqKCz340Xz6_Q,4578
+labml_python_autocomplete-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+labml_python_autocomplete-0.0.4.dist-info/top_level.txt,sha256=zXyfe-1Q-_TlhExNq03ETV582SoRtcGbwN15POVKCyI,20
+labml_python_autocomplete-0.0.4.dist-info/RECORD,,
