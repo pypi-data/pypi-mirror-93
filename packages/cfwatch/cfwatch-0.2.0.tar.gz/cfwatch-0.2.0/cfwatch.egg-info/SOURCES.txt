@@ -1,0 +1,10 @@
+README.rst
+cfwatch.py
+setup.py
+cfwatch.egg-info/PKG-INFO
+cfwatch.egg-info/SOURCES.txt
+cfwatch.egg-info/dependency_links.txt
+cfwatch.egg-info/entry_points.txt
+cfwatch.egg-info/not-zip-safe
+cfwatch.egg-info/requires.txt
+cfwatch.egg-info/top_level.txt
