@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: weasel-pipeline
+Version: 1.1.7
+Summary: A minimalist pipelining framework for the WEASEL project.
+Home-page: https://gitlab.com/weasel-project/weasel-pipeline
+License: MIT
+Author: Fabian Marquardt
+Author-email: marquard@cs.uni-bonn.de
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: docs
+Requires-Dist: aio-pika (>=6.7.1,<7.0.0)
+Requires-Dist: configargparse (>=1.2.3,<2.0.0)
+Requires-Dist: uvloop (>=0.14.0,<0.15.0)
+Project-URL: Documentation, https://weasel-pipeline.readthedocs.io/en/latest/
+Project-URL: Repository, https://gitlab.com/weasel-project/weasel-pipeline
+Description-Content-Type: text/markdown
+
+WEASEL Pipeline
+===============
+
+[![pipeline status](https://gitlab.com/weasel-project/weasel-pipeline/badges/master/pipeline.svg)](https://gitlab.com/weasel-project/weasel-pipeline/-/commits/master)
+[![PyPI version](https://img.shields.io/pypi/v/weasel-pipeline)](https://pypi.org/project/weasel-pipeline/)
+[![Documentation](https://readthedocs.org/projects/weasel-pipeline/badge/?version=latest&style=flat)](https://weasel-pipeline.readthedocs.io/en/latest/)
+[![dependency status](https://img.shields.io/librariesio/release/pypi/weasel-pipeline)](https://libraries.io/pypi/weasel-pipeline)
+![PyPI license](https://img.shields.io/pypi/l/weasel-pipeline)
+![PyPI Python version](https://img.shields.io/pypi/pyversions/weasel-pipeline)
+
+`weasel-pipeline` is a minimalist pipelining framework that serves as a common foundation of our scanning and data processing tool chains.
+
+Installation instructions, examples, and further documentation available [here](https://weasel-pipeline.readthedocs.io/en/latest/).
