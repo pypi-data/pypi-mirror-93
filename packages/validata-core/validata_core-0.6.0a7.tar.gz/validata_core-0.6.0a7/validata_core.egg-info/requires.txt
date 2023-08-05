@@ -1,0 +1,9 @@
+ezodf
+frictionless
+importlib_resources
+openpyxl
+lxml
+requests
+tablib[pandas]
+toolz
+python-stdnum
