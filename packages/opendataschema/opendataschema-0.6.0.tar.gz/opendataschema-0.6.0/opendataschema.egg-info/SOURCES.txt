@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+opendataschema/__init__.py
+opendataschema/cli.py
+opendataschema.egg-info/PKG-INFO
+opendataschema.egg-info/SOURCES.txt
+opendataschema.egg-info/dependency_links.txt
+opendataschema.egg-info/entry_points.txt
+opendataschema.egg-info/requires.txt
+opendataschema.egg-info/top_level.txt
+opendataschema.egg-info/zip-safe
