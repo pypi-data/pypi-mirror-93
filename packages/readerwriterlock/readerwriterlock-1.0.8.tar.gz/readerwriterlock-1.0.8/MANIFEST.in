@@ -1,0 +1,10 @@
+include .gitignore
+include HEARTBEAT
+include LICENSE.txt
+include NAME
+include README.md
+include tests/test_*.md
+include tests/test_*.py
+include VERSION
+include requirements.txt
+include GNUmakefile

@@ -1,0 +1,25 @@
+# OS generated files #
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+*~
+*.lock
+
+# Python related stuff
+__pycache__/
+.mypy_cache/
+*.py[cod]
+*$py.class
+
+# Python Coverage relate stuff
+.coverage
+htmlcov/
+coverage.xml
+
+# Python Distribution / packaging related stuff
+build/
+develop-eggs/
+dist/
+*.egg-info/
