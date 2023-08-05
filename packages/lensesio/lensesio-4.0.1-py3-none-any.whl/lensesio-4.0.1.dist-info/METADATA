@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: lensesio
+Version: 4.0.1
+Summary: Lenses Python Client
+Home-page: https://github.com/Landoop/lenses-python
+Author: Lenses.io LTD
+Author-email: info@lenses.io
+License: Apache License 2.0
+Project-URL: Documentation, https://docs.lenses.io/2.3/dev/python-lib/
+Project-URL: HomePage, https://github.com/lensesio/lenses-python
+Keywords: lensesio kafka_integration
+Platform: UNKNOWN
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: websocket-client (==0.56.0)
+Provides-Extra: full
+Requires-Dist: pulsar-client (==2.5.1) ; extra == 'full'
+Requires-Dist: kerberos (==1.3.0) ; extra == 'full'
+Provides-Extra: kerberos
+Requires-Dist: kerberos (==1.3.0) ; extra == 'kerberos'
+Provides-Extra: pulsar
+Requires-Dist: pulsar-client (==2.5.1) ; extra == 'pulsar'
+
+UNKNOWN
+
+
