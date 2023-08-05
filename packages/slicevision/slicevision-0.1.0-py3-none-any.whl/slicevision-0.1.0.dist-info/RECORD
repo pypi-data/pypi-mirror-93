@@ -1,0 +1,11 @@
+slicevision/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+slicevision/annotation.py,sha256=grz45d3M19GmmjrHjyzETDaktizsgQ4sceUD7wazqFQ,19219
+slicevision/model.py,sha256=EKVFovatgeAaGIPhSllbIpCZX05kZ23GNlsXIMKJO-E,12702
+slicevision/predict.py,sha256=-gqtY2srjrViKHI6SrHlDAVWBSbDLOYFDinQaLgWQjs,12407
+slicevision/prediction.py,sha256=t4qMR5k-BYFPCnamu2jDGjwl4C3exuvYb4Sfd6raD4I,4776
+slicevision/slicing.py,sha256=u6dN7ugRUe398SJ08xYuY6vUhPBqRVZPnKpytWBuLdE,17678
+slicevision-0.1.0.dist-info/LICENSE,sha256=6ZNPtrnDfFV7-BA3jEodw2cqsWlKVzgClypkh13OTas,1064
+slicevision-0.1.0.dist-info/METADATA,sha256=K3GXgGR7iblfMhwA9Qxhx4kbJQl7OPkGDZFQ7xZmA8Y,3835
+slicevision-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+slicevision-0.1.0.dist-info/top_level.txt,sha256=a1q34Tx7z3CI5gLNQoyhJD2kXKoi20zZlVW0nRf0sLY,12
+slicevision-0.1.0.dist-info/RECORD,,
