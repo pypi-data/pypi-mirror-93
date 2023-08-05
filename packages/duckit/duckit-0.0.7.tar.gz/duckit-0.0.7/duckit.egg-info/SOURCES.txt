@@ -1,0 +1,12 @@
+README.md
+setup.py
+duckit/__init__.py
+duckit/batch.py
+duckit/db.py
+duckit/table.py
+duckit/types.py
+duckit.egg-info/PKG-INFO
+duckit.egg-info/SOURCES.txt
+duckit.egg-info/dependency_links.txt
+duckit.egg-info/requires.txt
+duckit.egg-info/top_level.txt
