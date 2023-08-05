@@ -1,0 +1,34 @@
+[pangadfs.crossover]
+crossover_default = pangadfs.crossover:CrossoverDefault
+
+[pangadfs.fitness]
+fitness_default = pangadfs.fitness:FitnessDefault
+
+[pangadfs.mutate]
+mutate_default = pangadfs.mutate:MutateDefault
+
+[pangadfs.optimize]
+optimize_default = pangadfs.optimize:OptimizeDefault
+
+[pangadfs.penalty]
+distance_penalty = pangadfs.penalty.DistancePenalty
+diversity_penalty = pangadfs.penalty.DiversityPenalty
+high_ownership_penalty = pangadfs.penalty.HighOwnershipPenalty
+ownership_penalty = pangadfs.penalty.OwnershipPenalty
+
+[pangadfs.pool]
+pool_default = pangadfs.pool:PoolDefault
+
+[pangadfs.populate]
+populate_default = pangadfs.populate:PopulateDefault
+
+[pangadfs.pospool]
+pospool_default = pangadfs.pospool:PospoolDefault
+
+[pangadfs.select]
+select_default = pangadfs.select:SelectDefault
+
+[pangadfs.validate]
+validate_duplicates = pangadfs.validate:DuplicatesValidate
+validate_salary = pangadfs.validate:SalaryValidate
+
