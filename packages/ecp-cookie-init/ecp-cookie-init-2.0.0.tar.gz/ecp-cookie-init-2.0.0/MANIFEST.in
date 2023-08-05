@@ -1,0 +1,4 @@
+include COPYING README.md
+include requirements.txt
+include ecp-cookie-init.spec
+recursive-include debian *

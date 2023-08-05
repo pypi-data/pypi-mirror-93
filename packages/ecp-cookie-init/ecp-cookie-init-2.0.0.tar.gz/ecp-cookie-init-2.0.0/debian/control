@@ -1,0 +1,39 @@
+Source: ecp-cookie-init
+Section: net
+Priority: optional
+Maintainer: Duncan Macleod <duncan.macleod@ligo.org>
+Uploaders: Duncan Macleod <duncan.macleod@ligo.org>
+Standards-Version: 3.9.1
+Homepage: http://www.ligo.org
+Build-Depends:
+ debhelper (>= 9),
+ dh-python,
+ python3-all,
+ python3-argparse-manpage | help2man,
+ python3-ciecplib,
+ python3-pytest,
+ python3-setuptools,
+
+Package: python3-ecp-cookie-init
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ python3-ciecplib,
+Description: ecp-cookie-init python library
+ Utility for obtaining short-lived cookies for accessing Shibbolized SPs from
+ command-line tools (e.g., curl or git), now just a wrapper around
+ python3-ciecplib.  This package contains the python 3
+ modules that support the scripts in the ecp-cookie-init package.
+
+Package: ecp-cookie-init
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ python3-ecp-cookie-init (= ${binary:Version}),
+Recommends: krb5-user
+Description: LIGO (ECP) Auth cookie utilities
+ Utility for obtaining short-lived cookies for accessing Shibbolized SPs from
+ command-line tools (e.g., curl or git), now just a wrapper around
+ python3-ciecplib.

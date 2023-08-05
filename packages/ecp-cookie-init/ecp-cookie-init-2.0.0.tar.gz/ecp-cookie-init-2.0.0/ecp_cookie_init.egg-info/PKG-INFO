@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: ecp-cookie-init
+Version: 2.0.0
+Summary: Utility for obtaining short-lived cookies for accessing Shibbolized SPs from command-line tools (e.g., curl or git)
+Home-page: https://wiki.ligo.org/AuthProject
+Author: Duncan Macleod
+Author-email: auth@ligo.org
+License: GPL-3.0-or-later
+Description: # ecp-cookie-init
+        Utility for obtaining short-lived cookies for accessing Shibbolized SPs from
+        command-line tools (e.g., curl or git)
+        
+        [![pipeline status](https://git.ligo.org/authpublic/ecp-cookie-init/badges/master/pipeline.svg)](https://git.ligo.org/authpublic/ecp-cookie-init/commits/master)
+        [![coverage](https://git.ligo.org/authpublic/ecp-cookie-init/badges/master/coverage.svg)](https://git.ligo.org/authpublic/ecp-cookie-init/commits/master)
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Physics
+Description-Content-Type: text/markdown
