@@ -1,0 +1,14 @@
+geopackage_tools/__init__.py,sha256=hCRZt_rJqC9XxtCqIybKlt4LlrxyF8OqrhBfK_cMQ6U,439
+geopackage_tools/app.py,sha256=57koXV5PoWmMqURbabhvTo9NtsUpw-tmwShUZPV6DZQ,1676
+geopackage_tools/config.py,sha256=YN0qmHn00A9qfeOnQz6H9F3VkyeCfM1wFjuSMDw2i6A,771
+geopackage_tools/main.py,sha256=X8CABZozu7TJuIDtg_IoU_-pV6pfdH4QrZCXEPU-FWo,959
+geopackage_tools/infra/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geopackage_tools/infra/db_conn.py,sha256=RC_MiutPNyFgapvvG6I_MCXIMEw4rm_DTkkguOScP-0,1775
+geopackage_tools/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geopackage_tools/tests/sanbox.py,sha256=ynvTJY3JSzrmPftsqudHpNXzfV6F7MvxX-uzcOJKvZU,499
+geopackage_tools/validators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geopackage_tools/validators/validator.py,sha256=7Rqq75KToDmSbaOOEQ_lqMCMamnzbSni9io27InuisQ,6019
+gpval-0.0.10.dist-info/METADATA,sha256=CYkl94wDnyWgnwifeW2kGdKVv4eESNxdKXQBkF_12GU,584
+gpval-0.0.10.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+gpval-0.0.10.dist-info/top_level.txt,sha256=4kXaaX7XdSt7n67TQ2xeOptnKwZM3JoEo15kN7oTPjU,17
+gpval-0.0.10.dist-info/RECORD,,
