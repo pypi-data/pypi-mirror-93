@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: xudoku
+Version: 0.3.0a0
+Summary: Solve sudoku using an 'exact cover' algorithm.
+Home-page: https://github.com/jwg4/xudoku
+License: GNU GPL v2.0
+Author: Moy Easwaran
+Requires-Python: >=3.7.1,<4.0.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: exact-cover (>=0.4.1,<0.5.0)
+Project-URL: Repository, https://github.com/jwg4/xudoku
+Description-Content-Type: text/markdown
+
+# xudoku - Solve sudoku using an 'exact cover' algorithm
+
+This is the sudoku code from @moygit's project 'exact_cover_np'.
+
+The package is maintained by me, @jwg4.
+
+I separated the code for the 'exact cover' algorithm (now available at https://github.com/jwg4/exact_cover) from the sudoku code and created this package.
+
+
