@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: pi-weatherstation
+Version: 0.0.1
+Summary: Read the data from pimoroni BME680 and display on pimoroni SPI screen
+Home-page: http://github.com/guilhermef/pi_weatherstation
+Author: Guilherme Souza
+Author-email: guilherme@souza.tech
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: async-imgkit (<1.0)
+Requires-Dist: jinja2 (<3.0)
+Requires-Dist: asyncio-periodic (==2019.2)
+Requires-Dist: aioprometheus[aiohttp] (<21.0)
+Requires-Dist: Pillow (<9.0)
+Provides-Extra: bme680
+Requires-Dist: bme680 (<2.0) ; extra == 'bme680'
+Requires-Dist: smbus (==1.1.post2) ; extra == 'bme680'
+Provides-Extra: st7789
+Requires-Dist: st7789 (<1.0) ; extra == 'st7789'
+Requires-Dist: numpy (<2.0) ; extra == 'st7789'
+Requires-Dist: spidev (<4.0) ; extra == 'st7789'
+Requires-Dist: RPi.GPIO (<1.0) ; extra == 'st7789'
+
+# pi_weatherstation
+Read the data from pimoroni BME680 and display on pimoroni SPI screen
+
+## This project is still under development
+
+## Dependencies:
+* wkhtmltopdf(https://wkhtmltopdf.org/downloads.html)
+
+
+## Install on RaspberryPI
+* Enable SPI and I2C
+```
+sudo apt-get install python3-venv python3-dev libatlas-base-dev wkhtmltopdf libopenjp2-7
+
+git clone git@github.com:guilhermef/pi_weatherstation.git
+
+cd pi_weatherstation
+
+python3 -m venv .env
+
+source .env/bin/activate
+
+# this will install the core dependencies
+# and the dependencies for the screen st7789 and the sensor bme680
+
+pip install -e .[st7789,bme680]
+
+#run
+
+pi_weatherstation -l debug
+```
+
+
