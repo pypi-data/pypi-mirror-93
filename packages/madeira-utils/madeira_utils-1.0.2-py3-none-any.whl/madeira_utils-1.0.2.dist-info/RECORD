@@ -1,0 +1,8 @@
+madeira_utils/__init__.py,sha256=CgFD2uPQdD_PZe8CSi_dcj0LiMayo-jpgmqh5mXCS40,799
+madeira_utils/dns.py,sha256=efySMKEVKf7xqaAjgkNZaxLZz3zV2BY3nRmNoCv9Aa0,1525
+madeira_utils/godaddy_dns.py,sha256=Z3JPxHdJD-Wz_nwO5mjkPJTrGCDoj8aBXEu1t563BLE,3973
+madeira_utils/utils.py,sha256=eVy2_k6mlFJyZWT_XPVBrK49jWuFLc2NmSYnVK4OfEw,4972
+madeira_utils-1.0.2.dist-info/METADATA,sha256=3Yq8uF1hm2NbTD1p2ckVdzArWW2Dh5X94hlp3Yf4WcQ,1404
+madeira_utils-1.0.2.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+madeira_utils-1.0.2.dist-info/top_level.txt,sha256=0qWQSAoz3JTkLmCZ5iWrvX9UaRl1bMSsyFqf_FwF7L4,14
+madeira_utils-1.0.2.dist-info/RECORD,,
