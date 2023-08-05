@@ -1,0 +1,9 @@
+README.md
+setup.py
+bottleneck_transformer_pytorch/__init__.py
+bottleneck_transformer_pytorch/bottleneck_transformer_pytorch.py
+bottleneck_transformer_pytorch.egg-info/PKG-INFO
+bottleneck_transformer_pytorch.egg-info/SOURCES.txt
+bottleneck_transformer_pytorch.egg-info/dependency_links.txt
+bottleneck_transformer_pytorch.egg-info/requires.txt
+bottleneck_transformer_pytorch.egg-info/top_level.txt
