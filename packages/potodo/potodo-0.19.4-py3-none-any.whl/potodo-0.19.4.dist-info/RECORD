@@ -1,0 +1,16 @@
+potodo/__init__.py,sha256=Ie7O3Es53CsOx8cKX7Ag7NIdAjYKpu74kQ-gFA_5ouc,114
+potodo/__main__.py,sha256=yfF4cc7jHmg82vhUdLc_CWkwlMJE9cdYOs7dTMDS6jE,66
+potodo/arguments_handling.py,sha256=g4Au0B-EpPEcoo97csd9xiYsvStZXAd3403hL9wE7Lk,2302
+potodo/cache.py,sha256=XGPpWJ-C-HjIp6u3dxEKYhxAj8nhX_6Tn6V944W6K40,1250
+potodo/github.py,sha256=KwGUHmwWtnoVHxjHLn2zx57dgGFoqMKaFmxIjVxHPuk,3507
+potodo/interactive.py,sha256=MG1vl1j_f21w7FhbIl51gX7DVqkMHOlMULw2_m4a7Ek,4051
+potodo/json.py,sha256=fObWrOvZn8zuYNG2l1D62q7gQyPTOR1R3_65hC67t8Q,174
+potodo/logging.py,sha256=1yiGlx2BL0ClSgKYyclAeNLdZtDUPPUvk69Zmh7fFIE,419
+potodo/po_file.py,sha256=0I91Q8YH3a5EPZfrvzKoUI7O4H4np0a8N0ghP_yHBzw,5009
+potodo/potodo.py,sha256=7mY7rK8pLoCMWL-MB2or267KVe1C1wwq2JjeISxaCog,14158
+potodo-0.19.4.dist-info/LICENSE,sha256=z0VjlQhnaFXX5kjtP0_09kKffOu7aznPV62-66yZPpw,1109
+potodo-0.19.4.dist-info/METADATA,sha256=tcEZAgCJy8dCwUXwjjk9SB7abp7_Te7OE4DnDZLShYA,6129
+potodo-0.19.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+potodo-0.19.4.dist-info/entry_points.txt,sha256=3QN9t1XtRKYJpmnOHN7qHHM_E-sH-_ouOLs0dewu7Ts,47
+potodo-0.19.4.dist-info/top_level.txt,sha256=cTkD5ImOkIGrk3dDlKK7qrjzOn2-ttqGYPl3KcT3bDA,7
+potodo-0.19.4.dist-info/RECORD,,
