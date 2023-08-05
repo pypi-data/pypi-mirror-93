@@ -1,0 +1,4 @@
+.cui textarea.telemetry-output {
+    width: 100%;
+    font-family: monospace;
+}

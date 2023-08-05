@@ -1,0 +1,58 @@
+{% extends 'yangsuite/base-cui.html' %}
+{% load staticfiles %}
+{% block javascript %}
+<script src="{% static 'ysgrpctelemetry/js/grpctelemetry.js' %}"></script>
+{% endblock javascript %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'ysgrpctelemetry/css/grpctelemetry.css' %}"/>
+{% endblock css %}
+{% block breadcrumbs %}<li><span>gRPC Telemetry</span></li>{% endblock %}
+{% block page-title %}gRPC Telemetry{% endblock %}
+{% block body %}
+<div class="content">
+ <div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <div class="form-group">
+        <div class="form-group__text">
+          <label for="ys-listen-ip">Listen at IP address</label>
+          <input type="text" id="ys-listen-ip" placeholder="127.0.0.1">
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="form-group">
+        <div class="form-group__text">
+          <label for="ys-listen-port">Listen at port</label>
+          <input type="number" min="1" max="65535" id="ys-listen-port" placeholder="57344">
+        </div>
+      </div>
+    </div>
+    <div class="col-auto">
+      <button id="ys-listen-start-stop" class="btn btn--small btn--primary">Start telemetry receiver</button>
+    </div>
+    <div class="col-auto">
+      <button id="ys-listen-clear" class="btn btn--small">Clear output</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div id="ys-telemetry-output" class="telemetry-output"></div>
+    </div>
+  </div>
+ </div>
+</div>
+{% endblock body %}
+{% block script %}
+<script>
+$(function() {
+    $("#ys-listen-start-stop").click(function() {
+        grpctelemetry.toggleListen();
+    });
+
+    $("#ys-listen-clear").click(function() {
+        $("#ys-telemetry-output").empty();
+    });
+});
+</script>
+{% endblock script %}

@@ -1,0 +1,11 @@
+Receiving gRPC telemetry with YANG Suite
+========================================
+
+From the YANG Suite sidebar menu, select "Protocols → gRPC telemetry".
+On the page that appears, enter the IP address of your YANG Suite server
+and the port number you wish it to listen on, then click
+"Start telemetry receiver".
+
+Configure your telemetry-generating device (router) to send telemetry
+updates to this IP address and port, and you will see the telemetry
+messages appearing on the page as they are received by YANG Suite.
