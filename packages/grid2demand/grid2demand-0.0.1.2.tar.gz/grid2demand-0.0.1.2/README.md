@@ -1,0 +1,32 @@
+# GRID2DEMAND: A tool for generating zone-to-zone travel demand based on grid zones
+
+## Introduction
+GRID2DEMAND is a quick trip generation and distribution tool based on the four-step travel model. First, the research region is divided into grid zones of the same scale. POI nodes are used to generate node production/attraction. Second, trip distribution is achieved by a typical gravity model.
+
+## Quick Start
+Users can refer to the [template code and test data set](https://github.com/asu-trans-ai-lab/Grid2Demand/tree/main/test_file) to have a quick start.
+
+## Installation
+```
+pip install grid2demand
+```
+If you meet installation issues, please refer to the [user guide](https://github.com/asu-trans-ai-lab/Grid2Demand/blob/main/README.md) for solutions.
+
+
+## Simple Example
+```python
+import grid2demand as gd
+gd.readNetworkFile("./data_folder")
+gd.NetworkPartition(number_of_x_blocks=None, number_of_y_blocks=None, cell_width=500, cell_height=500, latitude=30)
+gd.GetPoiTripRate(trip_rate_folder = "./data_folder", trip_purpose=1)
+gd.getNodeDemand()
+gd.ProduceAccessMatrix(latitude=30,accessibility_folder=None)
+gd.RunGravityModel(trip_purpose=1, a=None, b=None, c=None)
+gd.GenerateAgentBasedDemand()
+```
+
+## Visualization
+Open [QGIS](https://www.qgis.org/) and add Delimited Text Layer of the output files.
+
+## User guide
+Users can check the [user guide](https://github.com/asu-trans-ai-lab/Grid2Demand/blob/main/README.md) for a detailed introduction of grid2demand.
