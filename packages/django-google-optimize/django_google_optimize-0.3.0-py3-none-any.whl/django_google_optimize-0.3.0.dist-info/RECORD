@@ -1,0 +1,12 @@
+django_google_optimize/__init__.py,sha256=L162VnsOY7qZJVwdcdtE8pirU4pQvLsbpYTbIkxgFrg,78
+django_google_optimize/admin.py,sha256=mog_aYvGpir40f4ti_ZtdK6RUj8Q5j8FGaUzmVzQnbM,501
+django_google_optimize/apps.py,sha256=MkplCW1-H7vyIx8nYHC2oaHFZoEUtBWEi4dE6U5teGs,154
+django_google_optimize/middleware.py,sha256=sngAcIXCFFYpYYMD7tShVMnZp64GCcfmUogZoXJPhik,810
+django_google_optimize/migrations/0001_initial.py,sha256=c312pP_mhaCSjXR6kv4pXjKaOC-bLx52WFywBQv_mkc,2399
+django_google_optimize/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_google_optimize/models.py,sha256=6acWMc7o8VbfpK0oy2Qv7xRUsdyRlLDZNrZONvtn9qs,1486
+django_google_optimize/utils.py,sha256=jQ0GGyFVzaq_nq3vWmZBel3XWOyL9wrPucMJSMANOhw,2307
+django_google_optimize-0.3.0.dist-info/LICENSE,sha256=e42YlVeOGAB2heklLsO4tYucTnYX3FeqR-h3TLxmjBQ,1091
+django_google_optimize-0.3.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+django_google_optimize-0.3.0.dist-info/METADATA,sha256=ityu6vdcWLeAyngEPcbY-8gVuDYc1P5HGd-1Myz2jG8,3874
+django_google_optimize-0.3.0.dist-info/RECORD,,
