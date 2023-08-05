@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: grpc-extensions
+Version: 0.0.1
+Summary: python grpc library
+Home-page: UNKNOWN
+Author: haoyinqianzui
+Author-email: 810909753@qq.com
+License: MIT Licence
+Platform: any
+Requires-Python: >=3.7.9
+Requires-Dist: grpcio (>=1.32.0)
+
+python grpc library
+
+
