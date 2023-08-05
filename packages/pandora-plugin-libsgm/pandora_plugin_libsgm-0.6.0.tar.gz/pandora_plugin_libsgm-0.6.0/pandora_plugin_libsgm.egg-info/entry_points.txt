@@ -1,0 +1,4 @@
+
+          [pandora.plugin]
+          pandora_plugin_libsgm = pandora_plugin_libsgm.lib_sgm:SGM
+      
