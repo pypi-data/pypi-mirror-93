@@ -1,0 +1,8 @@
+README.md
+setup.py
+usbwde/__init__.py
+usbwde_mccrab.egg-info/PKG-INFO
+usbwde_mccrab.egg-info/SOURCES.txt
+usbwde_mccrab.egg-info/dependency_links.txt
+usbwde_mccrab.egg-info/requires.txt
+usbwde_mccrab.egg-info/top_level.txt
