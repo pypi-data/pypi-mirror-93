@@ -1,0 +1,6 @@
+README.md
+setup.py
+edupdf.egg-info/PKG-INFO
+edupdf.egg-info/SOURCES.txt
+edupdf.egg-info/dependency_links.txt
+edupdf.egg-info/top_level.txt
