@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package grebbleFlow.v1;
+option go_package = "gitlab.com/grebble/backend/go-mono/pkg/grpc/generated/v1";
+
+service ExternalApp{
+  rpc AppInfo(AppExternalInfoRequest) returns (AppInfoExternalResponse) {}
+}
+
+message AppExternalInfoRequest {
+
+}
+
+message ProcessorExternalInfo {
+  string name = 1;
+  string attributeSchema = 2;
+}
+
+message AppInfoExternalResponse{
+  repeated ProcessorExternalInfo processors = 1;
+}
