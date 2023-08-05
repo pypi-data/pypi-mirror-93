@@ -1,0 +1,10 @@
+dbcli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dbcli/mcli.py,sha256=Zo6DOM6Wr1outB_lnCWUahMwlB4unM2z7TA7LGp54NY,6293
+dbcli/rcli.py,sha256=RsehJIFE3FjywZaBsuhPZftT1ifRJ_m8XYrz0hqw5wQ,9369
+dbcli/test_mcli.py,sha256=e9S43M_fkS635yDophJAbJzs6MAkp2hTCqi7UX26gwk,1857
+dbcli/test_rcli.py,sha256=o4Em-PVe6-ADlxNQiMGfTmggQ_AwNJT7ooAS0e4my74,1482
+dbcli_mongo_redis-0.3.4.dist-info/METADATA,sha256=yoa2t06lnNIdYLuT_pCCMNIE4IX-HJypvMTItkgMwOY,2242
+dbcli_mongo_redis-0.3.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dbcli_mongo_redis-0.3.4.dist-info/entry_points.txt,sha256=H-pUcvA07tfERJFQMt4UGTXVSdC8V5_svUKRcTStkVE,67
+dbcli_mongo_redis-0.3.4.dist-info/top_level.txt,sha256=fxe0KL4uFjdHrvTlABZ8BluRi5D-Gr1qyNCLvXG95NE,6
+dbcli_mongo_redis-0.3.4.dist-info/RECORD,,
