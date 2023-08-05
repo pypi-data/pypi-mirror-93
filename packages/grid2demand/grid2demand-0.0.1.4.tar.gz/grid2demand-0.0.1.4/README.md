@@ -1,0 +1,32 @@
+# GRID2DEMAND: A tool for generating zone-to-zone travel demand based on grid cells
+
+## Introduction
+Gird2demand is an open-source trip generation and distribution tool for teaching transportation planning and applications. It generates zone-to-zone travel demand based on alphanumeric grid zones. Users can obtain zone-to-zone and node-to-node travel demand with a few lines of python code based on OpenStreetMap and OSM2GMNS.
+
+## Quick Start
+Users can refer to the [template code and test data set](https://github.com/asu-trans-ai-lab/Grid2Demand/tree/main/test_file) to have a quick start.
+
+## Installation
+```
+pip install grid2demand
+```
+If you meet installation issues, please refer to the [user guide](https://github.com/asu-trans-ai-lab/Grid2Demand/blob/main/README.md) for solutions.
+
+
+## Simple Example
+```python
+import grid2demand as gd
+gd.ReadNetworkFiles("./data_folder")
+gd.PartitionGrid(number_of_x_blocks=None, number_of_y_blocks=None, cell_width=500, cell_height=500, latitude=30)
+gd.GetPoiTripRate(trip_rate_folder = "./data_folder", trip_purpose=1)
+gd.GetNodeDemand()
+gd.ProduceAccessMatrix(latitude=30,accessibility_folder=None)
+gd.RunGravityModel(trip_purpose=1, a=None, b=None, c=None)
+gd.GenerateAgentBasedDemand()
+```
+
+## Visualization
+Open [QGIS](https://www.qgis.org/) and add Delimited Text Layer of the output files.
+
+## User guide
+Users can check the [user guide](https://github.com/asu-trans-ai-lab/Grid2Demand/blob/main/README.md) for a detailed introduction of grid2demand.
