@@ -1,0 +1,3 @@
+[console_scripts]
+rifl = rifl.cli:main
+

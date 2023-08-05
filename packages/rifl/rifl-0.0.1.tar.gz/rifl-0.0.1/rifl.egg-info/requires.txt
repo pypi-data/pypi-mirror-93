@@ -1,0 +1,9 @@
+beautifulsoup4
+biopython
+click
+pandas
+peewee
+pyyaml
+requests
+numpy
+scipy
