@@ -1,0 +1,13 @@
+shetar/__init__.py,sha256=7NGFtOkoCJWQZhWlI0By8A92NiPvuakCb08KkYaCJyI,337
+shetar/_shape_utilities.py,sha256=SMMSqSy9ZQR2bT_mW1nLVZ0x0ORvoYRc_Ec6cdL82Uw,3879
+shetar/_version.py,sha256=80PQTd8bmW4ZApuAMcd7zaDwAbP28kFpn9sjgbAs3LU,200
+shetar/bases.py,sha256=LzmzV_XadE9o_xcqddy7lSpo6tYOB3Rzbeoi8iMGIDU,15820
+shetar/coordinates.py,sha256=C4VvV4VnCzwgBSb4lh_Rb_oANI6HG3BPs3dhCVqZtFA,5127
+shetar/expansions.py,sha256=Vnw-Lv_YvBqAK0e3gjBZHdhwnTayY9RXPpBkinGqW-s,12067
+shetar/rotations.py,sha256=InsRSahAIaoLXw1v0Yf5X7oI8uPWrTQamBXJUlmSp6A,12839
+shetar/translations.py,sha256=GjwyHV6STzd18VPzprA2KK9P86bZ0FxQw3M3wMeoQeQ,17370
+shetar-0.1.0.dist-info/LICENSE,sha256=qXpOIL-iaFn41dDgAa8346_708CALXy_E0-ZZbsHZ4I,1123
+shetar-0.1.0.dist-info/METADATA,sha256=mCp91gbDhTnwL6lO9GpWc8sfaKYbqWuVgPQ_1cJ9Zkk,814
+shetar-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+shetar-0.1.0.dist-info/top_level.txt,sha256=5vHRKoB7B1pp99Mm67L2WHXvDEBUz2J33Wo7PYKf570,7
+shetar-0.1.0.dist-info/RECORD,,
