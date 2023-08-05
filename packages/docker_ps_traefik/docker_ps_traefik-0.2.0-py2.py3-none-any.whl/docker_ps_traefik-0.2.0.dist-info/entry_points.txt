@@ -1,0 +1,3 @@
+[console_scripts]
+docker-ps-traefik=docker_ps_traefik:main
+
