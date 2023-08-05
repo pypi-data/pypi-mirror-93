@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package grebbleFlow.v1;
+option go_package = "gitlab.com/grebble/backend/go-mono/pkg/grpc/generated/v1";
+
+service Processor{
+ rpc Execute(FlowExecuteRequest) returns (stream FlowExecuteResponse) {}
+
+}
+
+message FlowExecuteRequest{
+ string flowName = 1;
+ string content = 2;
+ string attributes = 3;
+}
+
+message FlowExecuteResponse{
+ string content = 1;
+ string attributes = 2;
+ bool streamEnd = 3;
+}
