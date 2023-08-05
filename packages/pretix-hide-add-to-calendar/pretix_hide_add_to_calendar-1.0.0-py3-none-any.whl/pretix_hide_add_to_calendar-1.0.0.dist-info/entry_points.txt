@@ -1,0 +1,3 @@
+
+[pretix.plugin]
+pretix_hide_add_to_calendar=pretix_hide_add_to_calendar:PretixPluginMeta
