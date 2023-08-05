@@ -1,0 +1,3 @@
+[libsgm]
+python_libsgm = libsgm_python.sgm_python:run_sgm
+
