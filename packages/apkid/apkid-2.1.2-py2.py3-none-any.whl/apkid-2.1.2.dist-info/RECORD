@@ -1,0 +1,14 @@
+apkid/__init__.py,sha256=5LdiScz68yVCAK5RbrCdo6kiKXz8FszXTrEGvhxhtbw,1093
+apkid/apkid.py,sha256=05RLxqUcLCdLUdQcRj8svfh2zUw8Rl0eQNvYmf2bObY,9828
+apkid/main.py,sha256=ktVHFA0uy3pmCXYmQYojnIGNSfnLeT5VJJg0rYjKCZo,3592
+apkid/output.py,sha256=Ud8Ct4mQx-2J4HMP710o8XDgoBdRWxWF8NSe3caWNUY,5824
+apkid/rules.py,sha256=q1TR6nOEQ2-xVeWhJ8cAdBLrT0kkraPGwj8YL64mBNo,2599
+apkid/rules/rules.yarc,sha256=Evdmq7FHYEhm9gg275N7JKtGZ7LKhUzuwG-3aH4JLUM,2487384
+apkid-2.1.2.dist-info/AUTHORS.txt,sha256=nYZIDTpzju2yO7XNcKXDwuB7VJ2R_yDznp6m7sm7UOw,117
+apkid-2.1.2.dist-info/LICENSE.COMMERCIAL,sha256=wWMqVMnrwvfRNgcr93-tafSglR6SIjyg7EF0adR-_YE,351
+apkid-2.1.2.dist-info/LICENSE.GPL,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+apkid-2.1.2.dist-info/METADATA,sha256=0UGRvYYsEMF9jNfKTdUrSA9J5K4VUtyx3CdRuvEPEj8,6961
+apkid-2.1.2.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+apkid-2.1.2.dist-info/entry_points.txt,sha256=Drtz9Px0dYiLzgSHJTGCWIVN0jxAsypgK57rdnClXXw,43
+apkid-2.1.2.dist-info/top_level.txt,sha256=eShRxUsPLo_Vng45cMFMx_1rtsaJTRb9L3blN7TAgVA,6
+apkid-2.1.2.dist-info/RECORD,,
