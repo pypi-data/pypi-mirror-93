@@ -1,0 +1,6 @@
+requests
+ratelimit
+click
+pytest
+setuptools
+plotly
