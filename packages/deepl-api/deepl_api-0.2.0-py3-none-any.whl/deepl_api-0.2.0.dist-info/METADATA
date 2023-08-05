@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: deepl-api
+Version: 0.2.0
+Summary: Bindings and a commandline tools for the DeepL REST API (https://www.deepl.com/docs-api/)
+Home-page: https://github.com/mgruner/deepl-api-py/
+License: MIT OR Apache-2.0
+Keywords: deepl,api,translation,ai,machine-learning
+Author: Martin Gruner
+Author-email: mg.pub@gmx.net
+Requires-Python: >=3.7,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Project-URL: Documentation, https://mgruner.github.io/deepl-api-py-docs/deepl_api/index.html
+Project-URL: Repository, https://github.com/mgruner/deepl-api-py/
+Description-Content-Type: text/markdown
+
+# deepl-api-py
+
+This repository contains a [Python](https://www.python.org/) implementation of the [DeepL REST API](https://www.deepl.com/docs-api/).
+
+## Contents
+
+- A [Python package](https://mgruner.github.io/deepl-api-py-docs/deepl_api/index.html) for easy integration into Python applications.
+- The `deepl` [unix-style commandline application](https://mgruner.github.io/deepl-api-py-docs/deepl_api/cli.html) for integration into existing toolchains without any programming effort.
+- Unit and integration tests.
+
+Please refer to the linked documentation for instructions on how to get started with the API and/or the CLI tool.
+
+## Features
+
+- Query your account usage & limits information.
+- Fetch the list of available source and target languages provided by DeepL.
+- Translate text.
+
+## Not Implemented
+
+- Support for the [(beta) document translation endpoint](https://www.deepl.com/docs-api/translating-documents/).
+- Support for the [XML handling flags](https://www.deepl.com/docs-api/translating-text/) in the translation endpoint.

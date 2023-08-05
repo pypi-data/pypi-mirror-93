@@ -1,0 +1,3 @@
+[console_scripts]
+deepl=deepl_api.cli:run
+
