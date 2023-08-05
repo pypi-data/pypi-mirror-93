@@ -1,0 +1,6 @@
+README.md
+setup.py
+siamese_bde.egg-info/PKG-INFO
+siamese_bde.egg-info/SOURCES.txt
+siamese_bde.egg-info/dependency_links.txt
+siamese_bde.egg-info/top_level.txt
