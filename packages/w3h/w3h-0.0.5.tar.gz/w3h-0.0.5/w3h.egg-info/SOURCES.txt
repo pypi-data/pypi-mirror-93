@@ -1,0 +1,6 @@
+setup.py
+w3h/__init__.py
+w3h.egg-info/PKG-INFO
+w3h.egg-info/SOURCES.txt
+w3h.egg-info/dependency_links.txt
+w3h.egg-info/top_level.txt
