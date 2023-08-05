@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: vespy
+Version: 0.0.13
+Summary: A small utility package
+Home-page: https://github.com/
+Author: Emil Haldrup Eriksen
+Author-email: emil.h.eriksen@gmail.com
+License: MIT
+Description: # vespy
+        
+        Repository for various Vestas utility functions. It can be installed via pypi,
+        
+            pip install vespy
+        
+        ## SSLError
+        
+        If you encounter an SSLError from within Vestas firewalls, chances are that you haven't added the proper certificates. With vespy, you can do it like this
+        
+            vespy --fix-ssl
+        
+        Alternatively, you can invoke the fix from within python (e.g. in your own library),
+        
+            from vespy import fix_ssl_error
+            fix_ssl_error()
+        
+        
+        
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
