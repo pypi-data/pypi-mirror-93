@@ -1,0 +1,3 @@
+[console_scripts]
+ecp-cookie-init = ecp_cookie_init:ecp_cookie_init
+
