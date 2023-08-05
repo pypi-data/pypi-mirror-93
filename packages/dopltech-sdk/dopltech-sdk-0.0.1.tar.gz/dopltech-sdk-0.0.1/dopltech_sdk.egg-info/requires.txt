@@ -1,0 +1,3 @@
+dopltech-api-protos
+grpcio
+grpcio-tools
