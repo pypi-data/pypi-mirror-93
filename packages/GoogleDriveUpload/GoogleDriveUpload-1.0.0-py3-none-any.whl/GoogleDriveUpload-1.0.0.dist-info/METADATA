@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: GoogleDriveUpload
+Version: 1.0.0
+Summary: File or Folder Upload to Google Drice.
+Home-page: https://github.com/yoshida121/GoogleDriveUpload
+Author: yoshida
+Author-email: yoshida.pypi@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pydrive
+
+
+Upload files and folders from Python to Google Drive.
+This library allows recursive folder search.
+From now on, it will support file search and file download of Google Drive.
+
+
