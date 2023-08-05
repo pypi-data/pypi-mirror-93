@@ -1,0 +1,9 @@
+pandas==1.0.1
+matplotlib
+plotly
+statsmodels
+python-slugify
+pyaml
+numpy==1.18.1
+scikit-bio
+scikit-learn==0.21.3
