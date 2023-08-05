@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: docker_ps_traefik
+Version: 0.2.1
+Summary: %(0)s - Query Traefik to figure out the state of Docker services
+Home-page: https://gitlab.com/epfl-idevfsd/docker_ps_traefik
+Author: EPFL IDEV-FSD team
+Author-email: idevfsd@groupes.epfl.ch
