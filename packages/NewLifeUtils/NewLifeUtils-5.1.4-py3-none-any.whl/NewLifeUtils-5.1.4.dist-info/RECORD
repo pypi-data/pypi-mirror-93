@@ -1,0 +1,16 @@
+NewLifeUtils/ColorModule.py,sha256=XS15N5hihsB-4FT5sGPxf-jbJRFg2Tbm6MlMcP-5GWg,7161
+NewLifeUtils/CustomShellModule.py,sha256=i9ehmp9pa2N3RObJSjqy5AZlLyiAH_8--HJgKielHXI,11829
+NewLifeUtils/DatabaseManageModule.py,sha256=_rr4DSlCllI5YCq345VuAk9CZsuseUjMGxMzid3DLSY,36
+NewLifeUtils/ExceptModule.py,sha256=XLyxjumgXmsVBPQ_7ehPn-gkzNUKON82tiapN1-In44,2194
+NewLifeUtils/FileModule.py,sha256=D6ZbnUYDgrMiywlAzLx_9W1uEKseMLhfw08msFho_ho,2069
+NewLifeUtils/LoggerModule.py,sha256=FhKIROnUCMv4DHGz9i3AFIQlE5-CEhshtox7y40HueU,23266
+NewLifeUtils/RequestModule.py,sha256=G4zJff6fvUeT3KvOUNQH3eKKj2K6B5-TcKFRJ7JrWpo,470
+NewLifeUtils/StringUtilModule.py,sha256=_tjAucV-WRz3ZWh92m8u2cwsr5cV1tLz9g0GurBT5E0,1920
+NewLifeUtils/TableBuildModule.py,sha256=fgnXYz-UNRZT2AuF_fTAdI_xrGmSl7w7KJPybDl-FAc,7413
+NewLifeUtils/UtilsModule.py,sha256=b2WciDbVyughojbTdd1CKSdUVt8XA6_vJ2xP2kNFlpY,3515
+NewLifeUtils/__init__.py,sha256=yrFwZJ1gfIwiyznXTpTM2AZRlRW7t8MQGHZU0zwyBIE,23
+NewLifeUtils-5.1.4.dist-info/LICENSE,sha256=o9oW164WIh4jH2kg3YdhTTSa1qetreseML3AA4WS7lY,1084
+NewLifeUtils-5.1.4.dist-info/METADATA,sha256=xi9QOg10Clcm9nmTxpWjvRw4Mlj3Le3zRWjq9p4SHV4,4344
+NewLifeUtils-5.1.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+NewLifeUtils-5.1.4.dist-info/top_level.txt,sha256=0TATvz5yvY1TeELoQiz2gYkAGgA728U0xOdUTzIiJT8,13
+NewLifeUtils-5.1.4.dist-info/RECORD,,
