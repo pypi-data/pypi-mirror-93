@@ -1,0 +1,7 @@
+requests
+knack
+msal
+alive_progress
+pyinquirer
+urwid
+blinker
