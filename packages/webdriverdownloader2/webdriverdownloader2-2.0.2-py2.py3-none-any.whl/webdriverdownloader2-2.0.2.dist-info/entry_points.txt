@@ -1,0 +1,3 @@
+[console_scripts]
+webdriverdownloader2 = webdriverdownloader2.cli:main
+
