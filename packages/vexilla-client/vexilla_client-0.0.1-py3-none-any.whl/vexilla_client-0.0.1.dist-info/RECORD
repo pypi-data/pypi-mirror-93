@@ -1,0 +1,8 @@
+vexilla_client/__init__.py,sha256=dxpC4PlEp6t3rD9AhJuK5KmdXZNWAJCeSanTh-ICsdM,60
+vexilla_client/client.py,sha256=7a3vG9fk_UPw8bqLcAB6Q_Jj50XNbjAMfSIao1DRJd4,1171
+vexilla_client/hasher.py,sha256=HVcQ0rWKRvdfwRIL98dos7xx-q2ILQFpMTJJ85rkVsE,278
+vexilla_client-0.0.1.dist-info/LICENSE,sha256=4I9AkYJoGb17wtWJlywgEdgmSOWjtmerM58Pu0WHlDs,1046
+vexilla_client-0.0.1.dist-info/METADATA,sha256=LHe09EB9sZ-YU1vovVsyjgP30YzxNcW66uQqewxJJ00,473
+vexilla_client-0.0.1.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+vexilla_client-0.0.1.dist-info/top_level.txt,sha256=gya6EmHhvNoqTv4INv72kEK08-RZ2CktK0_kmoMnCQg,15
+vexilla_client-0.0.1.dist-info/RECORD,,
