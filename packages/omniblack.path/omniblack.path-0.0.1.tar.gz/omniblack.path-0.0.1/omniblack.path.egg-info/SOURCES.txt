@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+omniblack.path.egg-info/PKG-INFO
+omniblack.path.egg-info/SOURCES.txt
+omniblack.path.egg-info/dependency_links.txt
+omniblack.path.egg-info/not-zip-safe
+omniblack.path.egg-info/requires.txt
+omniblack.path.egg-info/top_level.txt
+omniblack/path/__init__.py
+omniblack/path/path.py
