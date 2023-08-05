@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+config_reader/Config.py
+config_reader/__init__.py
+config_reader_ryazantseff.egg-info/PKG-INFO
+config_reader_ryazantseff.egg-info/SOURCES.txt
+config_reader_ryazantseff.egg-info/dependency_links.txt
+config_reader_ryazantseff.egg-info/requires.txt
+config_reader_ryazantseff.egg-info/top_level.txt
+tests/__init__.py
