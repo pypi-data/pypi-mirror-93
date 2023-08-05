@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: drivelib
+Version: 0.3.0
+Summary: Easy access to the most common Google Drive API calls
+Home-page: https://github.com/Lykos153/python-drivelib
+Author: Silvio Ankermann
+Author-email: silvio@booq.org
+License: GPLv3
+Description: # python-drivelib
+        Drivelib makes GoogleDrive easily accessible from Python. It was written because [PyDrive](https://github.com/gsuitedevs/PyDrive) was lacking some important features and its development seems to have completely stopped.
+        
+        What drivelib already has which PyDrive hasn't:
+        * *Real* resumable file transfer. Uploads can be resumed within one week after starting them.
+        * *Real* chunked file transfer. This makes implementing progress feedback and bandwidth control possible
+        * Much easier interface
+        * Support for Google APIv3
+        
+        Drivelib aims to provide a [PathLike](https://docs.python.org/3/library/pathlib.html) interface for Google Drive. This is not yet implemented, though.
+        
+        **Warning:** This library is still under development and cannot yet be considered stable. The API may change any time.
+        
+Keywords: Google Drive GoogleDrive API
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Provides-Extra: test
