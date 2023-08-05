@@ -1,0 +1,89 @@
+# SliceVision: A vision library for performing sliced inference on large images/small objects
+
+<img width="700" alt="teaser" src="./demo/sliced_inference.gif">
+
+## Overview
+
+Object detection and instance segmentation are by far the most important fields of applications in Computer Vision. However, detection of small objects and inference on large images are still major issues in practical usage. Here comes the SliceVision to help developers overcome these real-world problems.
+
+## Getting started
+
+### Blogpost
+
+Check the [official SliceVision blog post](https://medium.com/@fcakyon/slicevision-a-vision-library-for-performing-sliced-inference-on-large-images-small-objects-c8b086af3b80).
+
+
+### Installation
+
+- Install slicevision using conda for Linux, Mac and Windows (preferred):
+
+```console
+conda install -c obss slicevision
+```
+
+- Install slicevision using pip for Linux and Mac:
+
+```console
+pip install slicevision
+```
+
+- Install your desired version of pytorch and torchvision:
+```console
+pip install torch torchvision
+```
+
+- Install your desired detection framework (such as mmdet):
+```console
+pip install mmdet
+```
+
+## Usage
+
+- Sliced inference:
+```python
+result = get_sliced_prediction(
+    image,
+    detection_model,
+    slice_height = 256,
+    slice_width = 256,
+    overlap_height_ratio = 0.2,
+    overlap_width_ratio = 0.2
+)
+
+```
+Refer to [inference notebook](demo/inference.ipynb) for detailed usage.
+
+- Slice an image:
+```python
+from slicevision.slicing import slice_image
+
+slice_image_result, num_total_invalid_segmentation = slice_image(
+    image=image_path,
+    output_file_name=output_file_name,
+    output_dir=output_dir,
+    slice_height=256,
+    slice_width=256,
+    overlap_height_ratio=0.2,
+    overlap_width_ratio=0.2,
+)
+```
+
+- Slice a coco formatted dataset:
+```python
+from slicevision.slicing import slice_coco
+
+coco_dict, coco_path = slice_coco(
+    coco_annotation_file_path=coco_annotation_file_path,
+    image_dir=image_dir,
+    slice_height=256,
+    slice_width=256,
+    overlap_height_ratio=0.2,
+    overlap_width_ratio=0.2,
+)
+```
+
+## Adding new detection framework support
+
+SliceVision library currently only supports [MMDetection models](https://github.com/open-mmlab/mmdetection/blob/master/docs/model_zoo.md). However it is easy to add new frameworks.
+
+All you need to do is, creating a new class in [model.py](slicevision/model.py) that implements [DetectionModel class](https://dev.obss.com.tr/bitbucket/projects/ML/repos/ml/browse/coco-slicing/cocoslicing/model.py?at=refs%2Fheads%2Fcoco-slicing#10). You can take the [MMDetection wrapper](https://dev.obss.com.tr/bitbucket/projects/ML/repos/ml/browse/coco-slicing/cocoslicing/model.py?at=refs%2Fheads%2Fcoco-slicing#10) as a reference.

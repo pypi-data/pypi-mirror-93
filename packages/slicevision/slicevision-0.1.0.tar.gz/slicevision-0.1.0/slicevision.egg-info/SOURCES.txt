@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+slicevision/__init__.py
+slicevision/annotation.py
+slicevision/model.py
+slicevision/predict.py
+slicevision/prediction.py
+slicevision/slicing.py
+slicevision.egg-info/PKG-INFO
+slicevision.egg-info/SOURCES.txt
+slicevision.egg-info/dependency_links.txt
+slicevision.egg-info/requires.txt
+slicevision.egg-info/top_level.txt
