@@ -1,0 +1,432 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>src.cmfsapy.dimension package &mdash; cmFSApy 0.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> cmFSApy
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">src.cmfsapy.dimension package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-src.cmfsapy.dimension.cmfsa">src.cmfsapy.dimension.cmfsa module</a></li>
+<li><a class="reference internal" href="#module-src.cmfsapy.dimension.correction">src.cmfsapy.dimension.correction module</a></li>
+<li><a class="reference internal" href="#module-src.cmfsapy.dimension.fsa">src.cmfsapy.dimension.fsa module</a></li>
+<li><a class="reference internal" href="#module-src.cmfsapy.dimension">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">cmFSApy</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>src.cmfsapy.dimension package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/src.cmfsapy.dimension.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="src-cmfsapy-dimension-package">
+<h1>src.cmfsapy.dimension package<a class="headerlink" href="#src-cmfsapy-dimension-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-src.cmfsapy.dimension.cmfsa">
+<span id="src-cmfsapy-dimension-cmfsa-module"></span><h2>src.cmfsapy.dimension.cmfsa module<a class="headerlink" href="#module-src.cmfsapy.dimension.cmfsa" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="src.cmfsapy.dimension.cmfsa.calibrate">
+<code class="sig-prename descclassname">src.cmfsapy.dimension.cmfsa.</code><code class="sig-name descname">calibrate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n</span><span class="o">=</span><span class="default_value">2500</span></em>, <em class="sig-param"><span class="n">myk</span><span class="o">=</span><span class="default_value">20</span></em>, <em class="sig-param"><span class="n">emb_dims</span><span class="o">=</span><span class="default_value">array([2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80])</span></em>, <em class="sig-param"><span class="n">N_realiz</span><span class="o">=</span><span class="default_value">100</span></em>, <em class="sig-param"><span class="n">powers</span><span class="o">=</span><span class="default_value">[- 1, 1, 2, 3]</span></em>, <em class="sig-param"><span class="n">box</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_data</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">save_data</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.cmfsapy.dimension.cmfsa.calibrate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes regression coefs on calibration dataset with known intrinsic dimensionality</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> (<em>int</em>) – sample size per realization</p></li>
+<li><p><strong>myk</strong> (<em>int</em>) – maximal neighborhood size</p></li>
+<li><p><strong>of int emb_dims</strong> (<em>numpy.ndarray</em>) – embedding dimensions to estimate dimension</p></li>
+<li><p><strong>N_realiz</strong> (<em>int</em>) – number of realizations per embedding dimension</p></li>
+<li><p><strong>of in powers</strong> (<em>list</em>) – powers to be used in the polynomial basis</p></li>
+<li><p><strong>or float box</strong> (<em>None</em>) – box size for periodic boundary (default=None)</p></li>
+<li><p><strong>or str load_data</strong> (<em>bool</em>) – if a string, then took as path to data</p></li>
+<li><p><strong>or str save_data</strong> (<em>bool</em>) – if a string then took as path to save</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>regression coefficients</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.cmfsapy.dimension.cmfsa.cmfsa">
+<code class="sig-prename descclassname">src.cmfsapy.dimension.cmfsa.</code><code class="sig-name descname">cmfsa</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">k</span></em>, <em class="sig-param"><span class="n">powers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alphas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boxsize</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.cmfsapy.dimension.cmfsa.cmfsa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes corrigated dimension estimations on dataset
+&#64;todo: Hard-wire default values from the article</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>of float X</strong> (<em>numpy.ndarray</em>) – data</p></li>
+<li><p><strong>k</strong> (<em>int</em>) – </p></li>
+<li><p><strong>of float powers</strong> (<em>list</em>) – powers</p></li>
+<li><p><strong>of float alphas</strong> (<em>list</em>) – regression coeffitients</p></li>
+<li><p><strong>boxsize</strong> (<em>float</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.cmfsapy.dimension.correction">
+<span id="src-cmfsapy-dimension-correction-module"></span><h2>src.cmfsapy.dimension.correction module<a class="headerlink" href="#module-src.cmfsapy.dimension.correction" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="src.cmfsapy.dimension.correction.compute_mFSA_correction_coef">
+<code class="sig-prename descclassname">src.cmfsapy.dimension.correction.</code><code class="sig-name descname">compute_mFSA_correction_coef</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">d</span></em>, <em class="sig-param"><span class="n">E</span></em>, <em class="sig-param"><span class="n">powers</span><span class="o">=</span><span class="default_value">[1, 2]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.cmfsapy.dimension.correction.compute_mFSA_correction_coef" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the regression coefficients with Orthogonal Distance Regression</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>of float d</strong> (<em>numpy.ndarray</em>) – dimension values</p></li>
+<li><p><strong>of float E</strong> (<em>numpy.ndarray</em>) – relative error</p></li>
+<li><p><strong>of float powers</strong> (<em>numpy.ndarray</em>) – the powers of the polynomial to include in the regression</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>regression coefficients</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray of float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.cmfsapy.dimension.correction.correct_estimates">
+<code class="sig-prename descclassname">src.cmfsapy.dimension.correction.</code><code class="sig-name descname">correct_estimates</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">d</span></em>, <em class="sig-param"><span class="n">alpha</span></em>, <em class="sig-param"><span class="n">powers</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.cmfsapy.dimension.correction.correct_estimates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Correct mFSA estimates given rergression coefficients and the coresponding powers
+of the polynomial</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>d</strong> (<em>float</em>) – measured mFSA value(s)</p></li>
+<li><p><strong>of float alpha</strong> (<em>numpy.ndarray</em>) – regression coefs</p></li>
+<li><p><strong>of float powers</strong> (<em>numpy.ndarray</em>) – powers of the polynomial</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>corrigated-mFSA value(s)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.cmfsapy.dimension.correction.correct_mFSA">
+<code class="sig-prename descclassname">src.cmfsapy.dimension.correction.</code><code class="sig-name descname">correct_mFSA</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">d</span></em>, <em class="sig-param"><span class="n">E</span></em>, <em class="sig-param"><span class="n">powers</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.cmfsapy.dimension.correction.correct_mFSA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Correct mFSA values given the relative error of the measurements fit</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>of float d</strong> (<em>numpy.ndarray</em>) – mFSA values</p></li>
+<li><p><strong>of float E</strong> (<em>numpy.ndarray</em>) – relative error of mFSA values</p></li>
+<li><p><strong>of float powers</strong> (<em>numpy.ndarray</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>corrected estimates</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray of float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.cmfsapy.dimension.correction.polynom_func">
+<code class="sig-prename descclassname">src.cmfsapy.dimension.correction.</code><code class="sig-name descname">polynom_func</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">p</span></em>, <em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">powers</span><span class="o">=</span><span class="default_value">[1, 2, 3]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.cmfsapy.dimension.correction.polynom_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the value of polynomial expression with given mixing coefficients and powers</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>of float p</strong> (<em>list</em>) – mixing coefficients (length has to match the length of powers)</p></li>
+<li><p><strong>or numpy.ndarray of float x</strong> (<em>float</em>) – the value of the variable</p></li>
+<li><p><strong>of float powers</strong> (<em>list</em>) – the powers of (length has to match the length of p)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the value of the polynomial at the place x</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float or numpy.ndarray of float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.cmfsapy.dimension.fsa">
+<span id="src-cmfsapy-dimension-fsa-module"></span><h2>src.cmfsapy.dimension.fsa module<a class="headerlink" href="#module-src.cmfsapy.dimension.fsa" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="src.cmfsapy.dimension.fsa.fsa">
+<code class="sig-prename descclassname">src.cmfsapy.dimension.fsa.</code><code class="sig-name descname">fsa</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">k</span></em>, <em class="sig-param"><span class="n">boxsize</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.cmfsapy.dimension.fsa.fsa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measure local Szepesvari-Farahmand dimension, distances are computed by the cKDTree algoritm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>arraylike</em>) – data series [n x dim] shape</p></li>
+<li><p><strong>k</strong> – maximum k value</p></li>
+<li><p><strong>boxsize</strong> – apply d-toroidal distance computation with edge-size =boxsize, see ckdtree class for more</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>local estimates, distances, indicees</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.cmfsapy.dimension.fsa.get_dists_inds_ck">
+<code class="sig-prename descclassname">src.cmfsapy.dimension.fsa.</code><code class="sig-name descname">get_dists_inds_ck</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">k</span></em>, <em class="sig-param"><span class="n">boxsize</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.cmfsapy.dimension.fsa.get_dists_inds_ck" title="Permalink to this definition">¶</a></dt>
+<dd><p>computes the kNN distances and indices</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>numpy.ndarray</em>) – 2D array with data shape: (ndata, n_vars)</p></li>
+<li><p><strong>k</strong> (<em>int</em>) – neighborhood size</p></li>
+<li><p><strong>boxsize</strong> (<em>float</em>) – circular boundary condition to [0, boxsice] interval for all input dimensions if not None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>KNN distances and indices</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.cmfsapy.dimension.fsa.ml_dims">
+<code class="sig-prename descclassname">src.cmfsapy.dimension.fsa.</code><code class="sig-name descname">ml_dims</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">k2</span></em>, <em class="sig-param"><span class="n">k1</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.cmfsapy.dimension.fsa.ml_dims" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum likelihood estimator af intrinsic dimension (Levina-Bickel)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.cmfsapy.dimension.fsa.ml_estimator">
+<code class="sig-prename descclassname">src.cmfsapy.dimension.fsa.</code><code class="sig-name descname">ml_estimator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">normed_dists</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.cmfsapy.dimension.fsa.ml_estimator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="src.cmfsapy.dimension.fsa.szepes_ml">
+<code class="sig-prename descclassname">src.cmfsapy.dimension.fsa.</code><code class="sig-name descname">szepes_ml</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">local_d</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.cmfsapy.dimension.fsa.szepes_ml" title="Permalink to this definition">¶</a></dt>
+<dd><p>maximum likelihood estimator from local FSA estimates (for k=1)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>of float local_d</strong> (<em>numpy.ndarray</em>) – local FSA estimates</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>global ML-FSA estimate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="src.cmfsapy.dimension.fsa.szepesvari_dimensionality">
+<code class="sig-prename descclassname">src.cmfsapy.dimension.fsa.</code><code class="sig-name descname">szepesvari_dimensionality</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dists</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.cmfsapy.dimension.fsa.szepesvari_dimensionality" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute szepesvari dimensions from kNN distances</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dists</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.cmfsapy.dimension">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.cmfsapy.dimension" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Zsigmond Benko.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
