@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: xscaffold
+Version: 1.2.0
+Summary: Used to scaffold a project.
+Home-page: https://github.com/azweb76/x-scaffold
+Author: Dan Clayton
+Author-email: dan@azwebmaster.com
+License: MIT
+Keywords: scaffold
+Platform: UNKNOWN
+Requires-Dist: PyYaml
+Requires-Dist: jinja2
+
+UNKNOWN
+
+

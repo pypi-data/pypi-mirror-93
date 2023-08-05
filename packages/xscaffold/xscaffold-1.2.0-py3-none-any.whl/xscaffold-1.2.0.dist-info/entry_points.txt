@@ -1,0 +1,3 @@
+[console_scripts]
+xscaffold = xscaffold.xscaffold:main
+
