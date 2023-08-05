@@ -1,0 +1,17 @@
+README.md
+setup.py
+supersolids/Schroedinger.py
+supersolids/__init__.py
+supersolids/constants.py
+supersolids/cut_1d.py
+supersolids/density_in_trap.py
+supersolids/functions.py
+supersolids/main.py
+supersolids/multi_core.py
+supersolids/run_time.py
+supersolids/simulate_case.py
+supersolids.egg-info/PKG-INFO
+supersolids.egg-info/SOURCES.txt
+supersolids.egg-info/dependency_links.txt
+supersolids.egg-info/requires.txt
+supersolids.egg-info/top_level.txt
