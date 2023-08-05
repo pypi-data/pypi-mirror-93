@@ -1,0 +1,9 @@
+README.md
+setup.py
+appsflyer/__init__.py
+appsflyer.egg-info/PKG-INFO
+appsflyer.egg-info/SOURCES.txt
+appsflyer.egg-info/dependency_links.txt
+appsflyer.egg-info/requires.txt
+appsflyer.egg-info/top_level.txt
+appsflyer/rest/__init__.py
