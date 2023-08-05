@@ -1,0 +1,9 @@
+tensorflow>=2.0.0
+h5py
+nltk
+pyhocon
+scipy
+scikit-learn
+torch
+transformers<=3.5.1
+KafNafParserPy

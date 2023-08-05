@@ -1,0 +1,2 @@
+e2edutch/coref_kernels.so
+e2edutch/lib/coref_kernels.so
