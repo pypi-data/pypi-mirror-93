@@ -1,0 +1,5 @@
+pexpect
+psutil
+
+[rapidjson]
+python-rapidjson
