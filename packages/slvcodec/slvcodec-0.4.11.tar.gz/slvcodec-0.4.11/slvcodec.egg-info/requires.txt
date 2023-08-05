@@ -1,0 +1,6 @@
+cocotb>=1.4.0rc1
+fusesoc
+jinja2>=2.8
+pytest
+pyyaml
+vunit-hdl
