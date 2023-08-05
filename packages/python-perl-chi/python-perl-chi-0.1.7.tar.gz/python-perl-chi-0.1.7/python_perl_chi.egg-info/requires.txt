@@ -1,0 +1,5 @@
+argparse
+data-printer
+redis-py-cluster
+redis
+pymemcache
