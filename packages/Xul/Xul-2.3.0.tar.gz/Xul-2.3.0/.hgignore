@@ -1,0 +1,9 @@
+# http://www.selenic.com/mercurial/hg.1.html#patterns
+syntax: glob
+*.pyc
+xml/
+aanteks/
+*.egg-info/
+build/
+dist/
+docs/_build/

@@ -1,0 +1,4 @@
+lxml>=2.0
+
+[syntax]
+Pygments>=2.0
