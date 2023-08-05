@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: onigiri-aw
+Version: 0.0.2
+Summary: yinhua-airworks-api sdk
+Home-page: UNKNOWN
+Author: valuesimplex
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: requests
+
+# python sdk for yinhua indicator
+
+
