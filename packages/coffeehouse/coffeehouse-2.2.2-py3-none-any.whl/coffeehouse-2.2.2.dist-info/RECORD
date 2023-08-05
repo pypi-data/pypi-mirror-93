@@ -1,0 +1,11 @@
+coffeehouse/__init__.py,sha256=4S8vpy6n8ZXL65-Wpf6w0qy71KM2NYbOXryP1vS45Cs,494
+coffeehouse/api.py,sha256=K_b0xQJEp0iWMmjZ9Y-5Q3_R0woxg-RRugcl9Q2TsTk,2042
+coffeehouse/exception.py,sha256=y12ZuMH5R42n7grRLjhkoyI2WB087pwR0kpDzS8llJo,2010
+coffeehouse/lydia/__init__.py,sha256=A5JsSq14sQjGLC9JmRiADH_wOcy1WgSuPsWZs8SYEgM,204
+coffeehouse/lydia/lydia_ai.py,sha256=mL3q1AQaNL5G71G473VBrWSiTQy8l3uiuZ4AsId0WBQ,1696
+coffeehouse/lydia/session.py,sha256=TZUNKfQCkCFWdsf8mHPFygbI4AZDuXC3w_hqpMMbkZk,920
+coffeehouse-2.2.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+coffeehouse-2.2.2.dist-info/METADATA,sha256=MVUY4t82LzZwaYAkfQFOkqVksnL9dZObMbtdrkP-E6s,1666
+coffeehouse-2.2.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+coffeehouse-2.2.2.dist-info/top_level.txt,sha256=RMJ43lDq9h1qF89RAMmXuqaaILuIN9QdxsfKUGdK8BU,12
+coffeehouse-2.2.2.dist-info/RECORD,,
