@@ -1,0 +1,10 @@
+wiphy/__init__.py,sha256=2Jr29rlTxRonMIrC7OH8rbqjJkftQcMMRWlWQnwktCI,112
+wiphy/util/inds/M=2_K=1_Q=2_minh=2_ineq=0.txt,sha256=mzjShLrk3Cblk6sNXLUNhGwzKKjARnKRqKRzzxXBYVs,6
+wiphy/util/inds/M=4_K=1_Q=4_minh=2_ineq=0.txt,sha256=YE1yog3B_zbsltgSG4ugSBhbSid-gZNjZk6DVddBAyE,12
+wiphy/util/inds/M=4_K=2_Q=4_minh=2_ineq=0.txt,sha256=PHZhXgWlfu4zsO3L4nNChHpNXI5rmKgNNjkQJhLUtNc,16
+wiphy/util/inds/M=4_K=3_Q=4_minh=2_ineq=0.txt,sha256=P-DykTMao6M8o4NkRKlza-gY2BVn2xWx_VYB97YSP_c,24
+wiphy-0.9.1.dist-info/LICENSE,sha256=euFXOWctIGVWsap14fZh6HBjFkYWiTXAAmg9zEVbMLc,1172
+wiphy-0.9.1.dist-info/METADATA,sha256=1I1CrXWLvWAt0b68x6MtEYra3M-VZ169wwxAQ-_NubA,4225
+wiphy-0.9.1.dist-info/WHEEL,sha256=D1Wh14kWDxPnrM-5t_6UCB-UuQNrEODtRa3vF4OsvQY,97
+wiphy-0.9.1.dist-info/top_level.txt,sha256=6xWk8NFsTovA6BWOnHWPwG2CF5FyXYHMHY3JG0UDfVY,6
+wiphy-0.9.1.dist-info/RECORD,,
