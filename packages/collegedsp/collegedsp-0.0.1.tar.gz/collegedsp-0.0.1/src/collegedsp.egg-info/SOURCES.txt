@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/main.py
+src/collegedsp.egg-info/PKG-INFO
+src/collegedsp.egg-info/SOURCES.txt
+src/collegedsp.egg-info/dependency_links.txt
+src/collegedsp.egg-info/requires.txt
+src/collegedsp.egg-info/top_level.txt
