@@ -1,0 +1,6 @@
+README.md
+setup.py
+dados_pessoais.egg-info/PKG-INFO
+dados_pessoais.egg-info/SOURCES.txt
+dados_pessoais.egg-info/dependency_links.txt
+dados_pessoais.egg-info/top_level.txt
