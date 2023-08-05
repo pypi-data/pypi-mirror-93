@@ -1,0 +1,8 @@
+README.md
+setup.py
+euler/__init__.py
+project_euler_helpers.egg-info/PKG-INFO
+project_euler_helpers.egg-info/SOURCES.txt
+project_euler_helpers.egg-info/dependency_links.txt
+project_euler_helpers.egg-info/not-zip-safe
+project_euler_helpers.egg-info/top_level.txt
