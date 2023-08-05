@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+vectrix/__init__.py
+vectrix/assets.py
+vectrix/events.py
+vectrix/issues.py
+vectrix/metadata.py
+vectrix/vectrix.py
+vectrix.egg-info/PKG-INFO
+vectrix.egg-info/SOURCES.txt
+vectrix.egg-info/dependency_links.txt
+vectrix.egg-info/requires.txt
+vectrix.egg-info/top_level.txt
