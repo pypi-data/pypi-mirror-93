@@ -1,0 +1,11 @@
+hotviz/__init__.py,sha256=A558cYXlNrkjF8ag4mmGgFf34ZQoL5aNZLRZm65kf0Q,395
+hotviz/hot_text.py,sha256=5bg1d0gkcP6MMpSIKyYr3P7vQgGFIDzhoE3YiJ6h1Ns,9255
+hotviz/hot_tree.py,sha256=W5kg1OTbBVxKRQ1trO2kV5SFw31UarcVe-FKCTFcDyQ,15556
+hotviz/example/__init__.py,sha256=z2AQmTpHJRaKbNYUXi-hXI_SiJxu2xDJn5lvRZBpuYs,171
+hotviz/example/span_data.py,sha256=MycE7wSpmN32VqCyiEh4wqhwP7mbA0ib9pqnbI1oqRc,11778
+hotviz/example/tree_data.py,sha256=x-O4NH-xSYzCunF8obskR3Tljh3uOm67C1bSROgWW-s,3752
+hotviz-0.0.8.dist-info/LICENSE,sha256=RoLIl8S5i_u-2jLAhIX7DU64Pys9bpmiZBE4YNCKI2c,1063
+hotviz-0.0.8.dist-info/METADATA,sha256=FEEq4qtWh47orIkCZZG5ETDy91N4BfCXmpORqWeiEVg,457
+hotviz-0.0.8.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+hotviz-0.0.8.dist-info/top_level.txt,sha256=nUEpgPOp2pbmU7-57G5vxilYiE-9IoAZoi0dQYfmbd0,7
+hotviz-0.0.8.dist-info/RECORD,,
