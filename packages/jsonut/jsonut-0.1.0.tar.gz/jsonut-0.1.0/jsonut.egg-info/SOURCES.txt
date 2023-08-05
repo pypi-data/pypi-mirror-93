@@ -1,0 +1,9 @@
+README.md
+setup.py
+jsonut/__init__.py
+jsonut.egg-info/PKG-INFO
+jsonut.egg-info/SOURCES.txt
+jsonut.egg-info/dependency_links.txt
+jsonut.egg-info/top_level.txt
+tests/__init__.py
+tests/test.py
