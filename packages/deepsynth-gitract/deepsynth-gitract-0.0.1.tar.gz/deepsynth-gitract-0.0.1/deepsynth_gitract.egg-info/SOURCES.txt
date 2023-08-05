@@ -1,0 +1,9 @@
+README.md
+setup.py
+deepsynth_gitract/__init__.py
+deepsynth_gitract/deepsynth_gitract.py
+deepsynth_gitract.egg-info/PKG-INFO
+deepsynth_gitract.egg-info/SOURCES.txt
+deepsynth_gitract.egg-info/dependency_links.txt
+deepsynth_gitract.egg-info/requires.txt
+deepsynth_gitract.egg-info/top_level.txt
