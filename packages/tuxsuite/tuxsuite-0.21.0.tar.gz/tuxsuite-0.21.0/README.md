@@ -1,0 +1,773 @@
+<div align="center">
+  <img src="https://gitlab.com/Linaro/tuxsuite/raw/master/tuxsuite_logo.png" alt="TuxSuite Logo" width="50%" />
+</div>
+
+[![Pipeline Status](https://gitlab.com/Linaro/tuxsuite/badges/master/pipeline.svg)](https://gitlab.com/Linaro/tuxsuite/pipelines)
+[![coverage report](https://gitlab.com/Linaro/tuxsuite/badges/master/coverage.svg)](https://gitlab.com/Linaro/tuxsuite/commits/master)
+[![PyPI version](https://badge.fury.io/py/tuxsuite.svg)](https://pypi.org/project/tuxsuite/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/tuxsuite/tuxsuite.svg)](https://hub.docker.com/r/tuxsuite/tuxsuite)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![PyPI - License](https://img.shields.io/pypi/l/tuxsuite)](https://gitlab.com/Linaro/tuxsuite/blob/master/LICENSE)
+
+[TuxSuite](https://tuxsuite.com), by Linaro, is a suite of tools and services
+to help with Linux kernel development.
+
+![tuxsuite screencast](https://people.linaro.org/~dan.rue/tuxbuild/demo.gif
+"tuxsuite screencast")
+
+To request access, email us at tuxsuite@linaro.org or fill out our [access
+request form](https://forms.gle/3NaW5fuNykGstsMq6).
+
+[[_TOC_]]
+
+# Services and their Status
+
+Service | subcommands | Status
+--------|-------------|-------
+TuxBuild | `build`, `build-set` | Production
+
+# Install and Configure
+
+## Install using pip
+
+TuxSuite requires Python version 3.6 or greater, and is available using pip.
+
+To install tuxsuite on your system globally:
+
+```
+sudo pip3 install -U tuxsuite
+```
+
+To install tuxsuite to your home directory at ~/.local/bin:
+
+```
+pip3 install -U --user tuxsuite
+```
+
+To upgrade tuxsuite to the latest version, run the same command you ran to
+install it.
+
+## Install using docker
+
+tuxsuite is also available as a docker container at
+[tuxsuite/tuxsuite](https://hub.docker.com/r/tuxsuite/tuxsuite).
+
+For example, to run tuxsuite via docker:
+
+```
+docker run tuxsuite/tuxsuite tuxsuite build --help
+```
+
+## Setup Config
+
+The Authentication token needs to be stored in `~/.config/tuxsuite/config.ini`.
+The minimal format of the ini file is given below:
+
+```
+$ cat ~/.config/tuxsuite/config.ini
+[default]
+token=vXXXXXXXYYYYYYYYYZZZZZZZZZZZZZZZZZZZg
+```
+
+Alternatively, the `TUXSUITE_TOKEN` environment variable may be provided.
+
+If you do not have a tuxsuite token, please reach out to us at
+tuxsuite@linaro.org.
+
+# Examples
+
+## tuxsuite build
+
+Submit a build request using the tuxsuite command line interface. This will
+wait for the build to complete before returning by default.
+
+```
+tuxsuite build --git-repo 'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git' --git-ref master --target-arch arm64 --kconfig defconfig --toolchain gcc-9
+```
+
+## tuxsuite build-set
+
+Create a tuxsuite config file with a basic set of build combinations defined.
+
+```
+cat <<EOF > basic.yaml
+sets:
+  - name: basic
+    builds:
+      - {target_arch: arm,    toolchain: gcc-9,    kconfig: multi_v7_defconfig}
+      - {target_arch: arm,    toolchain: gcc-10,   kconfig: multi_v7_defconfig}
+      - {target_arch: arm,    toolchain: clang-10, kconfig: multi_v7_defconfig}
+      - {target_arch: arm64,  toolchain: gcc-9,    kconfig: defconfig}
+      - {target_arch: arm64,  toolchain: gcc-10,   kconfig: defconfig}
+      - {target_arch: arm64,  toolchain: clang-10, kconfig: defconfig}
+      - {target_arch: i386,   toolchain: gcc-9,    kconfig: defconfig}
+      - {target_arch: i386,   toolchain: gcc-10,   kconfig: defconfig}
+      - {target_arch: x86_64, toolchain: gcc-9,    kconfig: defconfig}
+      - {target_arch: x86_64, toolchain: gcc-10,   kconfig: defconfig}
+      - {target_arch: x86_64, toolchain: clang-10, kconfig: defconfig}
+      - {target_arch: arc,    toolchain: gcc-10,   kconfig: hsdk_defconfig}
+      - {target_arch: riscv,  toolchain: gcc-10,   kconfig: defconfig}
+      - {target_arch: mips,   toolchain: gcc-10,   kconfig: ci20_defconfig}
+EOF
+# Build the build set defined in the config file named 'basic.yaml'
+tuxsuite build-set --git-repo 'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git' --git-ref master --tux-config basic.yaml --set-name basic
+```
+
+All the parameters can be specified in the build-set itself and invoke tuxsuite "tuxsuite build-set  --tux-config \<basic\>.yaml --set-name \<set-name\>"
+
+## Curated Build Sets
+
+Build sets can also be built with a URL to a build set definition. TuxSuite
+includes a curated example set of builds as a starting point at
+[examples/buildsets.yaml](examples/buildsets.yaml).
+
+To build the `tinyconfigs` set from
+[examples/buildsets.yaml](examples/buildsets.yaml), run the following.
+
+```
+tuxsuite build-set --git-repo 'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git' --git-ref master --tux-config https://gitlab.com/Linaro/tuxsuite/-/raw/master/examples/buildsets.yaml --set-name tinyconfigs
+```
+
+## Precedence with build-set
+
+If you pass an argument to cli and have it in the build-set as well then the value
+from build-set gets precedence over the one from cli.
+
+## Passing environment variable in build-set
+
+In order to pass environment variables in build-set use the following
+syntax in the tuxsuite config yaml file:
+
+```
+sets:
+  - name: basic
+    builds:
+      - target_arch: arm64
+        toolchain: gcc-8
+        kconfig: allnoconfig
+        environment:
+          KCONFIG_ALLCONFIG: arch/arm64/configs/defconfig
+```
+
+See [environment](#environment) section to know more about environment
+variables.
+
+## Passing make variables in build-set
+
+In order to pass make variables in build-set use the following
+syntax in the tuxsuite config yaml file:
+
+```
+sets:
+  - name: basic
+    builds:
+      - target_arch: arm64
+        toolchain: gcc-8
+        kconfig: allnoconfig
+        make_variables:
+          W: "1"
+          LLVM: "1"
+```
+
+See [make variables](#make-variables) section to know more about make
+variables.
+
+## Passing git_repo in build-set
+
+In order to pass git_repo in build-set use the following
+syntax in the tuxsuite config yaml file:
+
+```
+sets:
+  - name: basic
+    builds:
+      - target_arch: arm64
+        toolchain: gcc-8
+        git_repo: "https://github.com/torvalds/linux.git"
+```
+
+## Passing git_ref in build-set
+
+In order to pass git_ref in build-set use the following
+syntax in the tuxsuite config yaml file:
+
+```
+sets:
+  - name: basic
+    builds:
+      - target_arch: arm64
+        toolchain: gcc-8
+        git_ref: "master"
+```
+
+## Passing build_name in build-set
+
+In order to pass build_name in build-set use the following
+syntax in the tuxsuite config yaml file:
+
+```
+sets:
+  - name: basic
+    builds:
+      - target_arch: arm64
+        toolchain: gcc-8
+        kconfig: allnoconfig
+        build_name: "build_name"
+```
+
+See [build_name](#build_name) section to know more about build_name
+
+## Passing make targets in build-set
+
+In order to pass make targets in build-set use the following syntax in
+the tuxsuite config yaml file:
+
+```
+sets:
+  - name: basic
+    builds:
+      - target_arch: arm64
+        toolchain: gcc-8
+        kconfig: allnoconfig
+        targets:
+          - config
+          - dtbs
+```
+
+See [targets](#targets) section to know more about make targets.
+
+# Architecture and Toolchain Matrix
+
+The following combinations of architecture and toolchain are supported.
+
+|               | arc | arm | arm64 | i386 | mips | parisc | powerpc | riscv | s390 | sh  | sparc | x86_64 |
+| ------------- | --- | --- | ----- | ---- | ---- | ------ | ------- | ----- | ---- | --- | ----- | ------ |
+| clang-10      | no  | yes | yes   | yes  | yes  | no     | yes     | yes   | yes  | no  | yes   | yes    |
+| clang-11      | no  | yes | yes   | yes  | yes  | no     | yes     | yes   | yes  | no  | yes   | yes    |
+| clang-nightly | no  | yes | yes   | yes  | yes  | no     | yes     | yes   | yes  | no  | yes   | yes    |
+| gcc-10        | no  | yes | yes   | yes  | yes  | yes    | yes     | yes   | yes  | yes | yes   | yes    |
+| gcc-8         | yes | yes | yes   | yes  | yes  | yes    | yes     | yes   | yes  | yes | yes   | yes    |
+| gcc-9         | yes | yes | yes   | yes  | yes  | yes    | yes     | yes   | yes  | yes | yes   | yes    |
+
+# Argument Reference
+
+## target_arch
+
+target_arch supports `arc`, `arm`, `arm64`, `i386`, `mips`, `parisc`,
+`powerpc`, `riscv`, `s390`, `sh`, `sparc`, `x86_64`.
+
+## toolchain
+
+toolchain supports `gcc-8`, `gcc-9`, `gcc-10`, `clang-10`, `clang-11`,
+`clang-nightly`.
+
+## kconfig
+
+The kconfig argument is a string or a list of strings that are used to define
+what kernel config to use.
+
+The first argument must be a defconfig argumnet that ends in "config", such as
+"defconfig" or "allmodconfig".
+
+Subsequent arguments may be specified to enable/disable individual config
+options, an config fragment that exists in tree at `kernel/configs/`, or a url
+to an externally hosted config fragment.
+
+All config options and fragments specified will be merged in the order that
+they are specified.
+
+### kconfig Examples
+
+Simple defconfig build:
+
+- `tuxsuite --kconfig defconfig ...`
+- yaml (string): `kconfig: defconfig`
+- yaml (list): `kconfig: [defconfig]`
+
+Enable or disable individual options:
+
+- `tuxsuite --kconfig defconfig --kconfig "CONFIG_COMPILE_TEST=y" --kconfig
+  "CONFIG_PROFILE_ALL_BRANCHES=n"`
+- yaml: `kconfig: [defconfig, "CONFIG_COMPILE_TEST=y",
+  "CONFIG_PROFILE_ALL_BRANCHES=n"]`
+
+Using external fragment files:
+
+- `tuxsuite --kconfig defconfig --kconfig
+  "https://gist.githubusercontent.com/danrue/9e1e4d90149daadd5199256cc18a0499/raw/752138764ec039e4593185bfff888250a3d7692f/gistfile1.txt"`
+- yaml: `kconfig: [defconfig,
+  "https://gist.githubusercontent.com/danrue/9e1e4d90149daadd5199256cc18a0499/raw/752138764ec039e4593185bfff888250a3d7692f/gistfile1.txt"]`
+
+Using in-tree fragment files. The file referenced needs to exist in
+`kernel/configs/`:
+
+- `tuxsuite --kconfig defconfig --kconfig "kvm_guest.config"`
+- yaml: `kconfig: [defconfig, "kvm_guest.config"]`
+
+All of these options can be combined. They will be merged in the order they are
+specified:
+
+- `tuxsuite --kconfig allnoconfig --kconfig "kvm_guest.config" --kconfig
+  "https://gist.githubusercontent.com/danrue/9e1e4d90149daadd5199256cc18a0499/raw/752138764ec039e4593185bfff888250a3d7692f/gistfile1.txt"
+  --kconfig CONFIG_COMPILE_TEST=y --kconfig "CONFIG_PROFILE_ALL_BRANCHES=n"`
+- yaml:
+
+```yaml
+kconfig:
+  - allnoconfig
+  - kvm_guest.configs
+  - https://gist.githubusercontent.com/danrue/9e1e4d90149daadd5199256cc18a0499/raw/752138764ec039e4593185bfff888250a3d7692f/gistfile1.txt
+  - CONFIG_COMPILE_TEST=y
+  - CONFIG_PROFILE_ALL_BRANCHES=n
+```
+
+## json-out
+
+The `--json-out \<filename.json\>` command-line option accepts a filesystem path,
+where it will write a status file in json format at the end of a build or a
+build-set. The file will contain, for example:
+
+```json
+{
+    "build_key": "_YNU6WjSnKv_Akdajrnhyw",
+    "build_status": "pass",
+    "download_url": "https://builds.tuxbuild.com/_YNU6WjSnKv_Akdajrnhyw/",
+    "errors_count": 0,
+    "git_describe": "v5.6-rc6-9-gac309e7744be",
+    "git_sha": "ac309e7744bee222df6de0122facaf2d9706fa70",
+    "git_short_log": "ac309e7744be (\"Merge branch 'for-linus' of git://git.kernel.org/pub/scm/linux/kernel/git/hid/hid\")",
+    "status_message": "build completed",
+    "tuxbuild_status": "complete",
+    "warnings_count": 0
+}
+```
+
+The --json-out result of a build set will contain a list of entries.
+
+## build_name
+
+The build_name argument is a user defined string used as an identifier for the build.
+
+example:
+
+- `tuxsuite --build-name "test_build_name"`
+
+## quiet mode
+
+Passing `-q`/`--quiet` to `build` or `build-set` will cause tuxsuite to
+produce minimal output. In particular:
+
+- Only the final build artifacts URLs will be printed to `stdout`.
+- No progress information will be printed while waiting for the builds to finish.
+- Warnings and errors, including build failures, will be printed to `stderr`.
+
+```
+$ tuxsuite build --quiet --git-repo 'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git' --git-ref master --target-arch arm64 --kconfig defconfig --toolchain gcc-9
+https://builds.tuxbuild.com/_YNU6WjSnKv_Akdajrnhyw/
+```
+
+This is handy for use in automation/CI scripts.
+
+## environment
+
+The environment argument accepts a key value pair that is used to pass
+the environment variables that will be set during the build.
+
+Passing `-e`/`--enviroment` to `build` or `build-set` will set the
+environment variables during build time. There could be multiple
+environment variables passed via this argument.
+
+There is a minimal set of environment variables that are
+supported. Arbitrary environment variables cannot be supplied, except
+for the ones listed below:
+
+- KCONFIG_ALLCONFIG
+
+Example:
+
+```
+tuxsuite build --git-repo https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git --git-ref master --target-arch arm --toolchain clang-10 --kconfig
+tinyconfig --environment KCONFIG_ALLCONFIG=arch/arm64/configs/defconfig
+```
+
+## make variables
+
+The make variables argument accepts a key value pair that is used to
+pass the make variables that will be set during the build.
+
+There could be multiple make variables passed via this argument. There
+is a minimal set of make variables that are supported. Arbitrary make
+variables cannot be supplied, except for the ones listed below:
+
+- W
+- LLVM
+- LLVM_IAS
+- LD
+- AR
+- NM
+- STRIP
+- OBJCOPY
+- OBJDUMP
+- READELF
+- HOSTAR
+- HOSTLD
+
+Example:
+
+```
+tuxsuite build --git-repo https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git --git-ref master --target-arch arm --toolchain clang-10 --kconfig
+tinyconfig W=1 LLVM=1
+```
+
+## targets
+
+The targets argument accepts a list of strings that are used as the
+make target during the build. Only those targets (if specified) and
+its pre-req targets will be built during the build run.
+
+There is a minimal set of targets that are supported. Arbitrary
+targets cannot be supplied, except for the ones listed below:
+
+1. config
+1. debugkernel
+1. dtbs
+1. kernel
+1. modules
+1. xipkernel
+
+Example:
+
+```
+tuxsuite build --git-repo https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git --git-ref master --target-arch arm --toolchain clang-10 --kconfig
+tinyconfig config modules
+```
+
+## Specifying which tree to build
+
+For both `build` and `build-set`, you can specify the tree to build in the
+following ways:
+
+- `--git-repo=REPO` and `--git-ref=REF`.
+- `--git-repo=REPO` and `--git-SHA=SHA`.
+- `--git-head`.
+
+`REPO` needs to be a publically-accessible git repository URL. `REF` needs to
+be a ref name, i.e. the name of a valid branch or tag in `REPO`. `SHA` needs to
+be the SHA1 identifier of a git commit that exists in `REPO`.
+
+`--git-head` can be used to build the tip of the git repository in the current
+directory, in which case tuxsuite will do the follwing:
+
+- determine the remote to be used from the `tuxsuite.remote` git configuration
+  variable, or `origin` if that variable is not set.
+- transform the remote URL into a public URL, if not already one.
+- push HEAD to that remote as `refs/tuxsuite/$SHA`.
+- trigger the builds using its publically-accessible URL + the commit SHA for
+  `HEAD`.
+
+# Using the API
+
+The API examples below assume an environmental variable named TUXSUITE_TOKEN
+exists and contains a valid token. The following is not a valid token, but it
+is an example of what it looks like. If you do not have a valid token, please
+reach out to us at tuxsuite@linaro.org.
+
+```
+export TUXSUITE_TOKEN="gFkCz8wRHEA4BILyY4CtDfokKT5jPq1x413oGXvq3487ZAsZg9e_LJc4VUFrlahFRvp5kaKsnxZdnP7YdF4D-w"
+```
+
+Additionally, tuxsuite's default API endpoint is at
+`https://api.tuxbuild.com/v1`
+
+## Submit build with curl
+
+The /build API endpoint takes the same arguments as the tuxsuite cli, formatted
+as a list of json objects.
+
+```sh
+$ curl -X POST --header "Authorization: $TUXSUITE_TOKEN" \
+    --header "Content-Type: application/json"  \
+    --data '[{"git_repo": "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git", "git_ref": "master", "target_arch": "arm64", "kconfig": "defconfig", "toolchain": "gcc-9" }]' \
+    https://api.tuxbuild.com/v1/build
+[{"git_repo": "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git", "git_ref": "master", "target_arch": "arm64", "toolchain": "gcc-9", "kconfig": ["defconfig"], "client_token: "", "build_key": "PfHHehT4WzqbGCWFLOZ-Cg", "download_url": "https://builds.tuxbuild.com/PfHHehT4WzqbGCWFLOZ-Cg/"}]
+```
+
+The result of the POST is a json data structure describing the build. Printed with `jq`, it looks like the following:
+
+```json
+[
+  {
+    "git_repo": "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git",
+    "git_ref": "master",
+    "target_arch": "arm64",
+    "toolchain": "gcc-9",
+    "kconfig": [
+      "defconfig"
+    ],
+    "client_token": "",
+    "build_key": "4rolWYpvqW70LYGx9TIRcA",
+    "download_url": "https://builds.tuxbuild.com/4rolWYpvqW70LYGx9TIRcA/"
+  }
+]
+```
+
+Use /status to monitor the status of the build.
+
+## Submit build set with curl
+
+Using the same build endpoint, multiple builds can be requested. For example,
+build mainline with arm64 and arm.
+
+```sh
+$ curl -X POST --header "Authorization: $TUXSUITE_TOKEN" \
+    --header "Content-Type: application/json"  \
+    --data '[{"git_repo": "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git", "git_ref": "master", "target_arch": "arm64", "kconfig": "defconfig", "toolchain": "gcc-9" }, {"git_repo": "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git", "git_ref": "master", "target_arch": "arm", "kconfig": "defconfig", "toolchain": "gcc-9" }]' \
+    https://api.tuxbuild.com/v1/build
+```
+
+Once again, it will return a json list.
+
+```json
+[
+  {
+    "git_repo": "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git",
+    "git_ref": "master",
+    "target_arch": "arm64",
+    "toolchain": "gcc-9",
+    "kconfig": [
+      "defconfig"
+    ],
+    "client_token": "",
+    "build_key": "H8ITBrgWFjJ_NiriZFteEw",
+    "download_url": "https://builds.tuxbuild.com/H8ITBrgWFjJ_NiriZFteEw/"
+  },
+  {
+    "git_repo": "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git",
+    "git_ref": "master",
+    "target_arch": "arm",
+    "toolchain": "gcc-9",
+    "kconfig": [
+      "defconfig"
+    ],
+    "client_token": "",
+    "build_key": "yn1vuBZZF0nE2F-Vap7y-A",
+    "download_url": "https://builds.tuxbuild.com/yn1vuBZZF0nE2F-Vap7y-A/"
+  }
+]
+```
+
+Use /status to monitor the status of the builds.
+
+## Check build status with curl
+
+The status API endpoint will return the current status of a given build_key.
+
+```sh
+curl -s --header "Authorization: $TUXSUITE_TOKEN" --header "Content-Type: application/json" https://api.tuxbuild.com/v1/status/4rolWYpvqW70LYGx9TIRcA
+```
+
+It will return a json object such as the following:
+
+```json
+{
+  "build_key": "4rolWYpvqW70LYGx9TIRcA",
+  "tuxbuild_status": "building",
+  "client_token": "",
+  "build_status": "building",
+  "git_sha": "d3dca69085e94e52a1d61a34b8e5f73a9f3d7eed",
+  "git_describe": "v5.6-rc5-270-gd3dca69085e9",
+  "git_short_log": "d3dca69085e9 (\"Merge branch 'i2c/for-current' of git://git.kernel.org/pub/scm/linux/kernel/git/wsa/linux\")",
+  "warnings_count": null,
+  "errors_count": null,
+  "download_url": "https://builds.tuxbuild.com/4rolWYpvqW70LYGx9TIRcA/",
+  "status_message": " "
+}
+```
+
+For a full desciription of the status fields, see the [Build Status](#build-status) section.
+
+## Build Status
+
+The status API call and status.json file provide the following fields.
+
+### build_key
+
+(string) The generated build key for the given build.
+
+### build_status
+
+(string) A single word describing the current status of the build, which
+changes as the build proceeds and ends up with one of the terminal statuses.
+
+`queued` - A build is queued until a server and source code are available to
+perform the build.
+
+`building` - A build is building while the build is actually being performed.
+
+`pass` - A build completed without errors.
+
+`fail` - A build has completed with one or more errors.
+
+`error` - Something went wrong. See `status_message` for a description
+of the error.
+
+```mermaid
+graph TD
+  A[queued] --> B(building)
+  B --> C(pass)
+  B --> D(fail)
+  B --> E(error)
+```
+
+### client_token
+
+(string) user-defined string (characters [a-z0-9-]) which is echoed back as a
+status field. The tuxsuite client uses this to uniquely identify which build is
+which in a build-set.
+
+### download_url
+
+(string) URL to the build artifact location.
+
+### errors_count
+
+(integer) Count of errors in build. A build with a count > 0 is considered a
+failed build.
+
+### git_describe
+
+(string) The result of running `git describe`.
+
+### git_sha
+
+(string) The full 40-character sha of the build.
+
+### git_short_log
+
+(string) A short string describing the git sha.
+
+### status_message
+
+(string) In the event that `tuxbuild_status` is "error", `status_message` will
+contain an error description. In the event of a completed build, `status
+message` will contain 'build completed'.
+
+### tuxbuild_status
+
+(string) A single word describing the tuxsuite/infrastructure status of the
+build, irrespective of the actual contents and results of the build.
+
+`queued` - A build is queued until a server and source code are available to
+perform the build.
+
+`building` - A build is building while the build is actually being performed.
+
+`complete` - There is nothing left to do.
+
+`error` - Something went wrong. See `status_message` for a description of the
+error.
+
+```mermaid
+graph TD
+  A[queued] --> B(building)
+  B --> C(complete)
+  B --> E(error)
+```
+
+### warnings_count
+
+(integer) Count of warnings in build.
+
+# Python client API
+
+The tuxsuite client can also be used from Python programs. The authentication
+token needs to be in place in `~/.config/tuxsuite/config.ini`, or via the
+`$TUXSUITE_TOKEN` environment variable.
+
+## Single builds
+
+```python
+import tuxsuite
+
+params = {
+    "git_repo": "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git",
+    "git_ref": "master",
+    "target_arch": "arm64",
+    "toolchain": "gcc-9",
+    "kconfig": [
+      "defconfig"
+    ],
+}
+
+# fire and forget
+build = tuxsuite.Build(**params)
+build.build()
+
+# submit a build and wait for it to finish, quietly
+build = tuxsuite.Build(**params)
+build.build()
+state = build.wait()
+print(f"{state.icon} #{build}: #{state.message}")
+
+# submit build and watch its progress
+build = tuxsuite.Build(**params)
+build.build()
+for state in build.watch():
+  print(f"{state.icon} #{build}: #{state.message}")
+```
+
+## Build sets
+
+Build sets have a very similar api as individual builds, except that 1) the
+majority of the parameters comes from the build set configured in
+`~/.config/tuxsuite/builds.yaml` and 2) `wait()` will return a list of build
+states. `watch()` works similarly but you get updates for all the builds as
+soon as they change state.
+
+```python
+params = {
+    "git_repo": "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git",
+    "git_ref": "master",
+}
+set_name = "my-build-set"
+
+# fire and forget
+build_set = tuxsuite.BuildSet(set_name, **params)
+build_set.build()
+
+# submit a build set, quietly wait for all of them to finish, then print their
+# results
+build_set = tuxsuite.BuildSet(set_name, **params)
+build_set.build()
+results = build_set.wait():
+for state in results:
+  print(f"{state.icon} #{state.build}: #{state.message}")
+
+# submit build set and watch progress by printing each status update as it
+# arrives
+build_set = tuxsuite.BuildSet(set_name, **params)
+build_set.build()
+for state in build_set.watch():
+  print(f"{state.icon} #{state.build}: #{state.message}")
+```
+
+# Projects and Developers using tuxsuite
+
+- [LKFT](https://lkft.linaro.org/) - Linaro's Linux Kernel Functional Testing
+  uses tuxsuite with
+  [gitlab-ci](https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/)
+  to continuously build upstream Linux kernels. The kernels are then
+  functionally tested on a variety of hardware using
+  [LAVA](https://www.lavasoftware.org/).
+- Lee Jones uses a [GitLab CI
+  pipeline](https://gitlab.com/Linaro/lkft/users/lee.jones/lag-linaro-linux/-/pipelines)
+  to validate his 3.18 kernel maintainership. The gitlab pipeline, tuxsuite
+  config, and README.md documenting its setup are defined in the
+  [kernel-pipeline](https://gitlab.com/Linaro/lkft/users/lee.jones/kernel-pipeline)
+  repository.
+
+# Support
+
+If you have any questions or concerns, please email them to
+tuxsuite@linaro.org. Please include the build ID with any build-specific
+questions.

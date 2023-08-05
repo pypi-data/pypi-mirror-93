@@ -1,0 +1,7 @@
+__pycache__/
+tuxsuite.egg-info/
+.coverage
+.eggs/
+build/
+dist/
+env/
