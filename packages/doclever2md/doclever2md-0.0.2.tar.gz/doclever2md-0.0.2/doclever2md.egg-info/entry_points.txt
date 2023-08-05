@@ -1,0 +1,3 @@
+[console_scripts]
+doclever2md = doclever2md.main:main
+
