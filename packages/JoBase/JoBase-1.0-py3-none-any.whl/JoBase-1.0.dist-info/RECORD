@@ -1,0 +1,17 @@
+JoBase/__init__.py,sha256=nT3TKCmAoBERKv5haYx9s1zjhvNIjQAT9BnFfKYH-XE,2663
+JoBase/collision.py,sha256=iEqWOchj9mBQAC_NS4YSoiAygxSN_eSPSjY2PQvKEgY,2439
+JoBase/data.py,sha256=JUTdpITLok0whltEALcZrjnfL0g71a21codRpewAoGg,4241
+JoBase/draw.py,sha256=Rjj4QQedhbb8qd5phc3yTod0uaeVOI8tP5UBgLBaE0Q,47914
+JoBase/engine.py,sha256=qTxOF6f3cO79Fw56GKpKpkDQuGt62qCk1K7T_CTu7Lc,14624
+JoBase/math.py,sha256=To2LcM8JrM60z86jxMYIs59gRu7hRa9CN0sBTbe8pvI,953
+JoBase/point.py,sha256=FkjVJkbfRWW9kBat5WlJsYFD4yY4S5Gdhn1FSkWuIxQ,2752
+JoBase/setup.py,sha256=Utjzp5smhkuzPkHENfoze8VGM-N-99Ue4yAANI9ex80,9376
+JoBase/examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+JoBase/examples/car_physics.py,sha256=Nn-9Aw4zCDivnaQjmZylZv6QH5_K0_Di0DyLDs2cjXA,3221
+JoBase/examples/joint_physics.py,sha256=p4EZkZE_fKo2k8W8TG38gPjoAoZzpM55qhqSgWEMY-s,5556
+JoBase-1.0.dist-info/COPYING.txt,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+JoBase-1.0.dist-info/LICENSE.txt,sha256=f6MIUCjHwcdaMfd9rryL4_mtlX169mgDiZDydjs1oY4,665
+JoBase-1.0.dist-info/METADATA,sha256=Tr96n1P75zVN6H_UibtS5MOsihBw6FcqSckkT_8mP40,1106
+JoBase-1.0.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+JoBase-1.0.dist-info/top_level.txt,sha256=gFgl35vrm_xlXMKRPzxl4sozSJ7rbW9rWcSuOV81LLQ,7
+JoBase-1.0.dist-info/RECORD,,
