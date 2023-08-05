@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: cli-mailer
+Version: 0.1.1
+Summary: A command Line mailer
+Home-page: https://github.com/Pratyush-Saxena/CLI_Mailer
+Author: Pratyush Saxena
+Author-email: saxena18prats@gmail.com
+License: UNKNOWN
+Description: # CLI_Mailer
+        This is a python package that let's you send mail over command line interface.
+        ### USAGE 
+        1. Install the Package
+        ```bash
+        pip install cli-mailer
+        ```
+        2. Now run the script (from anywhere)
+        ```bash
+        cli-mailer
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
