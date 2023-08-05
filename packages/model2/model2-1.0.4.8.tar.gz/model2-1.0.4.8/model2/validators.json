@@ -1,0 +1,42 @@
+[
+    {
+        "action": "RoleAction",
+        "methods": [{
+                "name": "get",
+                "schema": {
+                    "type": "object",
+                    "required": [
+                      "name"
+                    ],
+                    "properties": {
+                        "price": {"type": "number", "error_message": "请输入数字"},
+                        "name": {
+                          "type": "string",
+                          "enum": [
+                            "shaofei",
+                            "upuptop",
+                            "pyfysf"
+                          ]
+                        }
+                    }
+                }
+            },
+            {
+                "name": "post",
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "price": {"type": "number", "error_message": "请输入数字"},
+                        "name": {
+                          "type": "string",
+                          "enum": [
+                            "shaofei",
+                            "upuptop",
+                            "pyfysf"
+                          ]
+                        }
+                    }
+                }
+            }]
+    }
+]
