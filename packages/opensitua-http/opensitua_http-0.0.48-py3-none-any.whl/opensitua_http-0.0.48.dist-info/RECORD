@@ -1,0 +1,11 @@
+opensitua_http/__init__.py,sha256=S42SL8YXcda9FKIARImd8xXNAC4o6NxBLiMa7qcRXik,1121
+opensitua_http/filesystem.py,sha256=51ZbHhovBOM-R2TMKB2NcCJDO0KdByH5vMI3B6BmsDg,9216
+opensitua_http/http.py,sha256=CevTMLnYBUmHSKx7sL7MxS7PjcFc6eQhM6uFFGMekzc,11551
+opensitua_http/mapfile.py,sha256=6Hfjz1ARz7pqvyB75eUlpyrg0UPU2t7bNiON97eMJZQ,30496
+opensitua_http/stime.py,sha256=41gl2ER9fL3uUJo8z8YhCjNNZfUko8-sKe9HssqzWyM,1626
+opensitua_http/strings.py,sha256=EU2s4KHcntohEZHjFtfzueBPmlU4y-DXAspnQY_D_LI,8175
+opensitua_http-0.0.48.dist-info/LICENSE,sha256=djyKbJMN4U8g5Xuc34qSLM6hoBP4OLVITS8OfKi7uq4,1091
+opensitua_http-0.0.48.dist-info/METADATA,sha256=tgd9L8LdqEFmiDu_AF00BWOiyW3nVlvXQJYGn_KFRHk,456
+opensitua_http-0.0.48.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+opensitua_http-0.0.48.dist-info/top_level.txt,sha256=zbz-an0v5QCmwp29UqMBf53ey8Fnp0WKQNm9RE94-gA,15
+opensitua_http-0.0.48.dist-info/RECORD,,
