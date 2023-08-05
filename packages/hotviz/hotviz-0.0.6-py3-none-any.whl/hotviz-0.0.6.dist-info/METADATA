@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: hotviz
+Version: 0.0.6
+Summary: A visulizations lib for python
+Home-page: https://github.com/AxlAlm/hotviz
+Author: Axel Almquist
+Author-email: axel@almquist.io
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: numpy (==1.18.1)
+Requires-Dist: plotly (==4.9.0)
+Requires-Dist: python-igraph (==0.8.3)
+Requires-Dist: imgkit (==1.0.2)
+
+UNKNOWN
+
+
