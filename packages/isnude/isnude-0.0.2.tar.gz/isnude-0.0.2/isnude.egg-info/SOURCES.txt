@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+isnude/__init__.py
+isnude.egg-info/PKG-INFO
+isnude.egg-info/SOURCES.txt
+isnude.egg-info/dependency_links.txt
+isnude.egg-info/entry_points.txt
+isnude.egg-info/requires.txt
+isnude.egg-info/top_level.txt
+isnude/files/retrained_graph.pb
