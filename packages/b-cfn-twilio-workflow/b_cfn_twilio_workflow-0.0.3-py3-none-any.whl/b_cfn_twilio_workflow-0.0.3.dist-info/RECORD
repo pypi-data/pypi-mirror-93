@@ -1,0 +1,12 @@
+b_cfn_twilio_workflow/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+b_cfn_twilio_workflow/function.py,sha256=KSBYQcM6Mla80yURKxiYEKsRyBjDwkaesvMxHf0Nca8,1507
+b_cfn_twilio_workflow/resource.py,sha256=V0Axi5uPmSwNcYxwF7h_eWq7nUeqGTwcyuqejhJLsrQ,2526
+b_cfn_twilio_workflow/source/__init__.py,sha256=E_31_HPFuRCgvpfcAzPp3kshXaXEXbhtlIadfoW4Kck,61
+b_cfn_twilio_workflow/source/action.py,sha256=IUPUCF6-TIrWHe9rIzYCeHWMZ86_IMNDsfhLvbTWOrQ,4458
+b_cfn_twilio_workflow/source/cfnresponse.py,sha256=8gAms2F0mJUFatVBmvsxWU1okoXSR76q15GWOuwq0us,3112
+b_cfn_twilio_workflow/source/index.py,sha256=kVmCiuG6n9r_fwPPFkhkhzevw5wOMNOV1JVcuEDx1g8,2181
+b_cfn_twilio_workflow-0.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+b_cfn_twilio_workflow-0.0.3.dist-info/METADATA,sha256=MN1U5HN-5WI3Bjuc6XHX1aXIjO4fAK4iFJ4jxHPyjlY,782
+b_cfn_twilio_workflow-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+b_cfn_twilio_workflow-0.0.3.dist-info/top_level.txt,sha256=jHsJ4GO_A1IveVtfVxSGD2qitNfGOIb3TbxaxN1QGC0,22
+b_cfn_twilio_workflow-0.0.3.dist-info/RECORD,,
