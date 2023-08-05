@@ -1,0 +1,37 @@
+- project:
+    templates:
+      - check-requirements
+      - openstack-python3-ussuri-jobs
+      - publish-openstack-docs-pti
+      - release-notes-jobs-python3
+    check:
+      jobs:
+        - tripleo-ci-centos-8-content-provider
+        - tripleo-ci-centos-8-scenario004-standalone:
+            vars: &scenario004_vars
+              consumer_job: true
+              build_container_images: false
+              tags:
+                - standalone
+            dependencies:
+              - openstack-tox-pep8
+              - openstack-tox-py36
+              - openstack-tox-py37
+              - tripleo-ci-centos-8-content-provider
+            irrelevant-files: &standalone_ignored
+              - ^.*\.md$
+              - ^.*\.rst$
+              - ^doc/.*$
+              - ^docs/.*$
+              - ^releasenotes/.*$
+              - ^test-requirements.txt$
+              - tox.ini
+    gate:
+      queue: tripleo
+      jobs:
+        - tripleo-ci-centos-8-content-provider
+        - tripleo-ci-centos-8-scenario004-standalone:
+            vars: *scenario004_vars
+            irrelevant-files: *standalone_ignored
+            dependencies:
+              - tripleo-ci-centos-8-content-provider
