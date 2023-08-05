@@ -1,0 +1,13 @@
+README.md
+setup.py
+pyfseconomy/__init__.py
+pyfseconomy/aircraft.py
+pyfseconomy/airports.py
+pyfseconomy/client.py
+pyfseconomy/icaodata.csv
+pyfseconomy/utils.py
+pyfseconomy.egg-info/PKG-INFO
+pyfseconomy.egg-info/SOURCES.txt
+pyfseconomy.egg-info/dependency_links.txt
+pyfseconomy.egg-info/requires.txt
+pyfseconomy.egg-info/top_level.txt
