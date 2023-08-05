@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: cmfsapy
+Version: 0.0.0
+Summary: Python implementation of the corrigated median Farahmand-Szepesvari-Audibert dimension estimator.
+Home-page: UNKNOWN
+Author: Zsigmond Benko
+Author-email: benko.zsigmond@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: tqdm
+
+Python implementation of the corrigated median Farahmand-Szepesvari-Audibert dimension estimator.
+
+
+Installation
+------------
+
+For basic usage of the package install it from PyPI:
+
+.. code-block:: bash
+
+   $ pip install cmfsapy
+
+Or to get more examples and the latest version, clone this repo and install it from source!
+Navigate to the repository root folder and run:
+
+.. code-block:: bash
+
+   $ pip install .
+
+`[examples] <https://github.com/phrenico/cmfsapy/tree/main/examples>`_
+
