@@ -1,0 +1,8 @@
+README.md
+setup.py
+ashnazg/__init__.py
+ashnazg/fairy.py
+ashnazg.egg-info/PKG-INFO
+ashnazg.egg-info/SOURCES.txt
+ashnazg.egg-info/dependency_links.txt
+ashnazg.egg-info/top_level.txt

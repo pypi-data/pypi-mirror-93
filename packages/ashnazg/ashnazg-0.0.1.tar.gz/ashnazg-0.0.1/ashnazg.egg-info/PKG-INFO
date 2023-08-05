@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ashnazg
+Version: 0.0.1
+Summary: A package for handling data in a FAIR way
+Home-page: https://ashnazg.com/docs/lib/fairy/
+Author: Xander
+Author-email: xander@ashnazg.com
+License: UNKNOWN
+Description: The ashnazg package is my first foray into pypi package maintenance.
+        (And my first project in python since the invention of python3, so PRs and comments to help me improve my idiomatic pythoness are appreciated.)
+        
+        The sub module fairy is a tool for reading and writing FAIR data sets.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
