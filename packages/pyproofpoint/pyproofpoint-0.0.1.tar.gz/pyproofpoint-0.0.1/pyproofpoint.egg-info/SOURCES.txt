@@ -1,0 +1,11 @@
+.gitignore
+LICENSE
+README.md
+setup.py
+pyproofpoint/__init__.py
+pyproofpoint/proofpoint.py
+pyproofpoint.egg-info/PKG-INFO
+pyproofpoint.egg-info/SOURCES.txt
+pyproofpoint.egg-info/dependency_links.txt
+pyproofpoint.egg-info/requires.txt
+pyproofpoint.egg-info/top_level.txt
