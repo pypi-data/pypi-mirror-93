@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: matplotlib-surface-plotting
+Version: 0.2
+Summary: UNKNOWN
+Home-page: https://github.com/kwagstyl/matplotlib_surface_plotting
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: nibabel
+Requires-Dist: matplotlib (>=3.3.2)
+
+UNKNOWN
+
+
