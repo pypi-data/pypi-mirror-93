@@ -1,0 +1,8 @@
+cifar10/__init__.py,sha256=miyT5ebPkwrdFkvop7lTHEBshQiEITd3wUjAql2A7d0,53
+cifar10/cifar10.py,sha256=NJaf6HQEXWlVpsKL1OlucU_B6UmJM_rI4A_KWC8yWw4,3735
+cifar10/download.py,sha256=pJQjE4nKwf1eFmQeXVQvDxEE8b4yeR8-YvTjyq7gN3Y,973
+cifar10-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+cifar10-1.0.0.dist-info/METADATA,sha256=XJulitpgRdIsH1MJ7AvFmft08mCC1Mj7viJ0RAV5aFc,1932
+cifar10-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cifar10-1.0.0.dist-info/top_level.txt,sha256=rpvlYr1X2Pi9LyX24PM-zvSivI43ARZT847S-5l5JEc,8
+cifar10-1.0.0.dist-info/RECORD,,
