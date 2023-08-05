@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: prospect
+Version: 0.0.1
+Summary: Archaeological survey simulation
+Home-page: UNKNOWN
+Author: Jacob Deppen
+Author-email: prospect.python@gmail.com
+License: UNKNOWN
+Keywords: archaeology survey simulation gis fieldwork
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Topic :: Other/Nonlisted Topic
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: geopandas
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
