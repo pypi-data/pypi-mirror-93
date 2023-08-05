@@ -1,0 +1,10 @@
+README.md
+build.py
+setup.py
+EasyTensorBoard.egg-info/PKG-INFO
+EasyTensorBoard.egg-info/SOURCES.txt
+EasyTensorBoard.egg-info/dependency_links.txt
+EasyTensorBoard.egg-info/requires.txt
+EasyTensorBoard.egg-info/top_level.txt
+easytensorboard/EasyTensorBoard.py
+easytensorboard/__init__.py
