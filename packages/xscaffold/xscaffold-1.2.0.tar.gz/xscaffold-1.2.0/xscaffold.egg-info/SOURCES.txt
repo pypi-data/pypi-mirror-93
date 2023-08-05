@@ -1,0 +1,10 @@
+README.md
+setup.py
+xscaffold/__init__.py
+xscaffold/xscaffold.py
+xscaffold.egg-info/PKG-INFO
+xscaffold.egg-info/SOURCES.txt
+xscaffold.egg-info/dependency_links.txt
+xscaffold.egg-info/entry_points.txt
+xscaffold.egg-info/requires.txt
+xscaffold.egg-info/top_level.txt
