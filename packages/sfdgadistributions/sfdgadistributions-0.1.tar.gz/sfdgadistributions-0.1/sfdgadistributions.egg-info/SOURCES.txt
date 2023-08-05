@@ -1,0 +1,10 @@
+setup.py
+sfdgadistributions/Binomialdistribution.py
+sfdgadistributions/Gaussiandistribution.py
+sfdgadistributions/Generaldistribution.py
+sfdgadistributions/__init__.py
+sfdgadistributions.egg-info/PKG-INFO
+sfdgadistributions.egg-info/SOURCES.txt
+sfdgadistributions.egg-info/dependency_links.txt
+sfdgadistributions.egg-info/not-zip-safe
+sfdgadistributions.egg-info/top_level.txt
