@@ -1,0 +1,9 @@
+py4xs
+numpy
+pandas
+python-barcode
+matplotlib
+pillow
+blabel
+openpyxl>=3
+xlrd
