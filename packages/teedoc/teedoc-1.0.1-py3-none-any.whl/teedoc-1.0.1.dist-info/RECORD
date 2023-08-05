@@ -1,0 +1,11 @@
+teedoc/__init__.py,sha256=-i95OJDw1xJhXzUxFvE1GRgN_YHbH0VZbDoheEe_JmM,72
+teedoc/logger.py,sha256=0o0mzGtyhskM2QPsDt8JFJ3PQIyZ-yZw89YN3lGN-WM,3098
+teedoc/plugin.py,sha256=2D3m7evPdmZW0GDP-S08C6R7gHyIlbzENSboq5fMipY,1665
+teedoc/teedoc_debug.py,sha256=1VXc_NLLfgTFbXXkcFTCINSzzuMtnnnlXnbXYPFUITk,244
+teedoc/teedoc_main.py,sha256=u7FW5tDTI3zY54zKa3VAG8kG9Mx_mpXPMS7LJ7bFNo8,29659
+teedoc-1.0.1.dist-info/LICENSE,sha256=itfTUbYSK2wDTmMTQSt_NJRKp97sgfjl_JbehrFi7sc,1085
+teedoc-1.0.1.dist-info/METADATA,sha256=n0h7jv9vixRMNj39j-iygJfFZTQ0EGq83NvDEJlYjMw,940
+teedoc-1.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+teedoc-1.0.1.dist-info/entry_points.txt,sha256=Zbed8ceNWcqu5eCI_KKkZ3YOCmqk319xNJKekr4sqO4,52
+teedoc-1.0.1.dist-info/top_level.txt,sha256=Bd10COFlJgMQtOjkCYyBh40-dNAvkJjNsW_xF5NBRrE,7
+teedoc-1.0.1.dist-info/RECORD,,
