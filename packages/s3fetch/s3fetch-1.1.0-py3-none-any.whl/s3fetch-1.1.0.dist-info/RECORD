@@ -1,0 +1,8 @@
+s3fetch/__init__.py,sha256=Ywl4Myi9DjVwMWxbCJthgrgKJulho8bj-7Ggx8nypCg,2322
+s3fetch/command.py,sha256=7p6XVsqtlw94wl5KBq2cXB1l7LpmA1UNmALU70vlfpE,12272
+s3fetch/exceptions.py,sha256=AOExPqE_KLo5goHpXfZt_JRjjW2VMeUYOai4AuJnwiE,338
+s3fetch-1.1.0.dist-info/entry_points.txt,sha256=xKQJo0MOeG9AsXX33KZzD6NTgc-Q_UOtIFeL6BomzCc,39
+s3fetch-1.1.0.dist-info/LICENSE,sha256=c1U7Qpa0fzcLjVk5c-mz87YV_6-OPzcZh-Vg78Fi57A,1070
+s3fetch-1.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+s3fetch-1.1.0.dist-info/METADATA,sha256=a9Apsd8FOOdqoBUE-hwbes-WMAOkoW6sO0jo8BZOmjU,5281
+s3fetch-1.1.0.dist-info/RECORD,,
