@@ -1,0 +1,16 @@
+boring/__init__.py,sha256=6Ro-f2OdQuouxe9DUBUyyf1PZ6nI5_TAHR30To3nT14,103
+boring/__main__.py,sha256=K6HRZWjRW88cGkYxapw_ut2_gAKk1e8v8jqk6BFotwA,86
+boring/cli.py,sha256=h3igr6FeyODltSuGlT1PXQxF3Pmkycs1-9J9K0B5k6k,141
+boring/config.py,sha256=2xBHDaoC2-GLjNGdguDxJBARXt2g3oJs427ZmB7gA24,84
+boring/exception.py,sha256=OCG8h7gjyPZ8XiXmxPOBbMhjRPot4q-Hvc_0CAPqkXA,1331
+boring/http.py,sha256=v3qGkA5SLRGF4fVZ03wS8TPQ0DJkQhzA1YeESt4PWGk,10126
+boring/server.py,sha256=a0C7OqBjJDUVLFSnuMA_Gl0n0t5a-xhEPpu8FEdMKps,9015
+boring/statics.py,sha256=uLidLp5QDvF_UJLM6l_1QYHBPpPkdDcZioECgs5ghL0,812
+boring/utils.py,sha256=ZeX0X1iuea5GCePKFaJGNn3FH24Pz1sxtC1tV-kcdNY,37
+boring/wsgi.py,sha256=YbGJb2w1bNI6VhdoM_XHG_NHl8ap9EEcaUE1DrWC-zI,3564
+boring-0.0.3.dist-info/LICENSE,sha256=nIhwJNy-jtwiUd50KEu40XVLFS4Oh_ju6lh3x8g1GNo,1072
+boring-0.0.3.dist-info/METADATA,sha256=jySCfctdgy95VdynHzL2Qvoy8QcAb4YCYtTaBvTpyB8,1814
+boring-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+boring-0.0.3.dist-info/entry_points.txt,sha256=t5sX7PCS3iAyfpJNf1gwHNqsuz-asMCHX9F3-q-wPIs,77
+boring-0.0.3.dist-info/top_level.txt,sha256=WgvXweFjij11OSF_7-Zjh7lbW8ZSg9ffaIMhnEGuH4Q,7
+boring-0.0.3.dist-info/RECORD,,

@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: boring
+Version: 0.0.3
+Summary: A small HTTP web server for wsgi compatible apps
+Home-page: https://github.com/horlarwumhe/boring
+Author: Horlarwumhe
+Author-email: amachiever4real@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+
+###### Boring
+
+A simple [HTTP](https://en.m.wikipedia.org/wiki/Hypertext_Transfer_Protocol) webserver for [WSGI]( https://en.m.wikipedia.org/wiki/Web_Server_Gateway_Interface) compatible web app, 
+support any wsgi web framework , django,flask, bottle and others. it is fairly fast .........
+
+
+##### installation
+
+boring has no dependency except python standard library, so it can be installed by cloning this repository , then run python setup.py install , or install from `pypi` with `pip`
+
+#### Starting the server
+
+`boring myapp:app` or `python -m boring myapp:app`
+
+assuming there is myapp.py in the current directory and and a callable object `app` in myapp.py
+
+using boring with django
+`boring yourproject.wsgi` or `python -m boring yourproject.wsgi`
+
+#### command line options
+	-b  <addr>   bind to the addr , default 0.0.0.0
+
+	-p <port>    port number to use , default 8000
+
+	--reload     to enable auto reload when any files change, default to false
+
+	-v           show version
+
+
+#### Boring in action
+
+[test-boring.herokuapp.com](http://test-boring.herokuapp.com) , is flask webapp copied from [miguelgrinberg blog](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world) running boring as http server
+
+[firdawss.herokuapp.com](http://firdawss.herokuapp.com) a django powered site running boring as the webserver
+
+
+
