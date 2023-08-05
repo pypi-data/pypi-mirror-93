@@ -1,0 +1,10 @@
+apimd/__init__.py,sha256=wOfSQsv0XYZmMU-d-DcjcbRRd_SqCbSXYGRL7i45hUY,275
+apimd/__main__.py,sha256=03mwrl0CJC18EgUxwt5jmbcYysRXN4Hg9XsjEa2UQwA,1560
+apimd/compiler.py,sha256=Qqk6apKg0I4DlP400JaPVL5taoXn4h7bhh5oWc-umwY,15672
+apimd/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apimd-1.2.0.dist-info/LICENSE,sha256=SkGIumYWJYk1vwdaaVBe_gzMzk56UdwJnz93cZ30fZ0,1061
+apimd-1.2.0.dist-info/METADATA,sha256=kLqT2ezkn83GeN_BlCEYu1j5bD1VjYu5RlPOIsO5g2E,3398
+apimd-1.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+apimd-1.2.0.dist-info/entry_points.txt,sha256=4OAMfxfPzAazV1-ljHF9zFvnA7w7a4j-9qEw5Z198CY,47
+apimd-1.2.0.dist-info/top_level.txt,sha256=gNrVDOfyz09yAAzyaXsLwovC7156qO2htS0hXUgJkDE,6
+apimd-1.2.0.dist-info/RECORD,,
