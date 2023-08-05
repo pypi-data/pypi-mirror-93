@@ -1,0 +1,10 @@
+setup.py
+dsnd_probability_jvil/Binomialdistribution.py
+dsnd_probability_jvil/Gaussiandistribution.py
+dsnd_probability_jvil/Generaldistribution.py
+dsnd_probability_jvil/__init__.py
+dsnd_probability_jvil.egg-info/PKG-INFO
+dsnd_probability_jvil.egg-info/SOURCES.txt
+dsnd_probability_jvil.egg-info/dependency_links.txt
+dsnd_probability_jvil.egg-info/not-zip-safe
+dsnd_probability_jvil.egg-info/top_level.txt
