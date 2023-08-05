@@ -1,0 +1,9 @@
+dpl_geodb/__init__.py,sha256=WA6o4Rn1kVgT0F9hy0JxqYENKEQ7CGXvr8r1MmKtm5c,53
+dpl_geodb/db_settings.txt,sha256=n9NVy89gfGSGAttDI7pM816iYwFGV8famy9UOwosUOw,170
+dpl_geodb/geo_ops.py,sha256=22mWOHwdOm-2L6-HuA2sHM4LVKa8x8wMGlOEfH_et8o,4137
+dpl_geodb/picture_reference.py,sha256=Bp-WchKCyAHp4EGCAVALvKnnbv5BbiV7qAeyTZZri-k,1125
+geotagging_alexr96-0.0.21.dist-info/LICENCE,sha256=8FENO50SI8Rej90rSScOyHNP_0kcf30blI7nAWLhzv8,1210
+geotagging_alexr96-0.0.21.dist-info/METADATA,sha256=hajoLDOS21HaJCFUNVafO1Lg7M3vGu_WG-u6JKEf3pY,1527
+geotagging_alexr96-0.0.21.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+geotagging_alexr96-0.0.21.dist-info/top_level.txt,sha256=WMWkYwrO7T1xs48EngnhE1tzId6PdliylAic7ztrZ68,10
+geotagging_alexr96-0.0.21.dist-info/RECORD,,
