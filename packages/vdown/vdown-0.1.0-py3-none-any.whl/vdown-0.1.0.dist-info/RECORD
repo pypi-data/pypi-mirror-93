@@ -1,0 +1,11 @@
+vdown/__init__.py,sha256=YEvk3z1aAyR2wMWhZikRRCIXW0u7kNRtz8_xiZ5uBBo,74
+vdown/cmd.py,sha256=PWt_P8oWP3ezYe5QnTC7AsI_bRAcIZ3Zx9zdcMAt4LI,2092
+vdown/down.py,sha256=0S9ufMe-DpUVwOuwtvAgtlpXscUbh1529ptT-H2i794,2327
+vdown/m3u8.py,sha256=7ss6kgPbOsXRWfNpVy1PwdC2qt-g61zFJe6R_HMvw7o,6315
+vdown/util.py,sha256=dC6EopDygNDBjQK6sc-Ws2awfQz9WkeoX1vacQScwVs,523
+vdown/youtube.py,sha256=O0WL4_zTjdUmipwS_3_9yaZ9AOmvCXFyC_2dfi-zEYU,6970
+vdown-0.1.0.dist-info/METADATA,sha256=NlO96ADoLPYUmZzc7BQvYAb-FLvskikQs4SAGaHPQy8,908
+vdown-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+vdown-0.1.0.dist-info/entry_points.txt,sha256=Ep29iyy9Ncg_Z1rLE1Xa6YyovFJug0NR_HdJDs0_xqc,42
+vdown-0.1.0.dist-info/top_level.txt,sha256=vfSgi3Hy4eY-FhIGidxtuvCOzsqkBnYzTq5-0-1r45g,6
+vdown-0.1.0.dist-info/RECORD,,
