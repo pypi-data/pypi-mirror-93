@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: rifl
+Version: 0.0.1
+Summary: rifl is a data filtration library for MS-proteomics experiments.
+Home-page: https://github.com/radusuciu/rifl
+Author: Radu Suciu
+Author-email: radusuciu@gmail.com
+License: MIT License
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.6.2
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4
+Requires-Dist: biopython
+Requires-Dist: click
+Requires-Dist: pandas
+Requires-Dist: peewee
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+# RIFL (ReDiMe and isoTOP Filter Library)
+
+## Term definitions
+
+Experiment: results from a single run on a mass spectrometry intrument
+Dataset: a set of experimental replicates 
+
+## Example usage
+
+
+
