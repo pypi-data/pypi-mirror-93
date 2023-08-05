@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: UKFastAPI
+Version: 0.0.1
+Summary: Python interface for the UKFast API.
+Home-page: https://github.com/ukfast/sdk-python
+Author: UKFast
+Author-email: support@ukfast.co.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: certifi
+Requires-Dist: chardet
+Requires-Dist: requests
+Requires-Dist: urllib3
+
+UNKNOWN
+
+
