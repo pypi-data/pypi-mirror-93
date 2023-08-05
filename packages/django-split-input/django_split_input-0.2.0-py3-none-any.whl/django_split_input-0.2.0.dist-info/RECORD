@@ -1,0 +1,11 @@
+django_split_input/__init__.py,sha256=YEf8C-rwVGC7Zj7e2N48Ey0QtRNlOh40NUDLn0SfUug,32
+django_split_input/apps.py,sha256=N3qsMUXx9SYYdqjL1Qijd9xxnH-Zl6fUTGTaA0r3jto,109
+django_split_input/static/django_split_input/css/input.css,sha256=idYFPbotyLG6XUuXgx8P9Opo7juY6bloAqTr1bLhlkk,176
+django_split_input/static/django_split_input/css/input.css.map,sha256=LzAqTXWdy0S5rOOZwCJI66IzKGIdDzXXzJq5FEIJX3k,198
+django_split_input/static/django_split_input/css/input.scss,sha256=q4LnUwA4JHdN9DJqDWTGzKSABlljp2ZdjCsu2p2S9lI,136
+django_split_input/static/django_split_input/js/input.js,sha256=FDP_8ETCbl7D5vmwCr8js-h8nI4QXbWPMNtUXv9NlHY,721
+django_split_input/templates/django_split_input/widget.html,sha256=dcW7HGKsBcdy3RJVvHnzSIyyDtNH57BiIaOWrO1dPn8,162
+django_split_input/widgets.py,sha256=bRE0mQPHLc5JMBkixqoUlqRLyvSYLUK_r-J5abP_gnw,1992
+django_split_input-0.2.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+django_split_input-0.2.0.dist-info/METADATA,sha256=x5HKDWWBiXf7-m7W78B3AG_2dZ1E-QpNDf51yM2XzwA,1898
+django_split_input-0.2.0.dist-info/RECORD,,
