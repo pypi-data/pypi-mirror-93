@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: klickbrick-codeangler
+Version: 0.1.3
+Summary: 
+Home-page: https://github.com/codeangler/liveproject-cli-python
+Author: caseyburnett
+Author-email: casey.burnett@davita.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: behave (>=1.2.6,<2.0.0)
