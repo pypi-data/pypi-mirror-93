@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/sentry_check.py
+src/sentry_flake8.egg-info/PKG-INFO
+src/sentry_flake8.egg-info/SOURCES.txt
+src/sentry_flake8.egg-info/dependency_links.txt
+src/sentry_flake8.egg-info/entry_points.txt
+src/sentry_flake8.egg-info/requires.txt
+src/sentry_flake8.egg-info/top_level.txt
