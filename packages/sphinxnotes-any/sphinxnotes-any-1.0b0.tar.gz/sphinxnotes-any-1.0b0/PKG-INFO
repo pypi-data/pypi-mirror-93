@@ -1,0 +1,30 @@
+Metadata-Version: 1.2
+Name: sphinxnotes-any
+Version: 1.0b0
+Summary: Sphinx Domain for describing Anything
+Home-page: https://github.com/sphinx-notes/any
+Author: Shengyu Zhang
+License: ('BSD',)
+Download-URL: http://pypi.python.org/pypi/sphinxnotes-any
+Project-URL: Documentation, https://any.github.io/any
+Project-URL: Source, https://github.com/sphinx-notes/any
+Project-URL: Tracker, https://github.com/sphinx-notes/any/issues
+Description: =====================================
+        Sphinx Domains for Descibing Anything
+        =====================================
+        
+        Please refer to https://sphinx-notes.github.io/any/ for documentation.
+        
+Keywords: documentation,sphinx,extension
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Documentation
+Classifier: Topic :: Utilities
+Requires-Python: >=3
