@@ -1,0 +1,5 @@
+django-filter
+django-model-utils
+XBlock>=1.2.2
+Django<2.0,>=1.11
+edx-opaque-keys
