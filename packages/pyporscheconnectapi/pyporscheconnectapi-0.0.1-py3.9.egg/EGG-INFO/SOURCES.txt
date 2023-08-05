@@ -1,0 +1,10 @@
+README.md
+setup.py
+pyporscheconnectapi/__init__.py
+pyporscheconnectapi/connection.py
+pyporscheconnectapi/exceptions.py
+pyporscheconnectapi.egg-info/PKG-INFO
+pyporscheconnectapi.egg-info/SOURCES.txt
+pyporscheconnectapi.egg-info/dependency_links.txt
+pyporscheconnectapi.egg-info/requires.txt
+pyporscheconnectapi.egg-info/top_level.txt
