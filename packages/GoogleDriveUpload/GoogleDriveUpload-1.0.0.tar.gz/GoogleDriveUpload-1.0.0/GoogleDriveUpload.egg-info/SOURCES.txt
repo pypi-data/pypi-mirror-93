@@ -1,0 +1,7 @@
+MANIFEST.in
+setup.py
+GoogleDriveUpload.egg-info/PKG-INFO
+GoogleDriveUpload.egg-info/SOURCES.txt
+GoogleDriveUpload.egg-info/dependency_links.txt
+GoogleDriveUpload.egg-info/requires.txt
+GoogleDriveUpload.egg-info/top_level.txt
