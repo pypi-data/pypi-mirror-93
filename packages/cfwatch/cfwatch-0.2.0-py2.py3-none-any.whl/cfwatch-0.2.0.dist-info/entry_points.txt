@@ -1,0 +1,3 @@
+[console_scripts]
+cfwatch = cfwatch:main
+
