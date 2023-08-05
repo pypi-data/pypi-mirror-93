@@ -1,0 +1,120 @@
+# Areix IO (Alpha Test)
+
+## Installation
+Create a virtual environment 
+```
+virtualenv venv --python=python3
+```
+Activate the virtual environment 
+```python
+# Macbook / Linus
+source venv/bin/activate 
+
+# Windows
+venv/Scripts/activate
+```
+Deactivate
+```
+deactivate
+```
+Install Areix-IO package
+```
+pip install Areix-IO
+```
+
+
+## Usage
+```python
+import areix_io as aio
+
+class MyStrategy(aio.Strategy):
+    def initialize(self):
+        self.info('initialize')
+        self._first = True
+        for k,df in self.ctx.feed.items():
+            df['ma5'] = df.close.rolling(5).mean()
+            df['ma10'] = df.close.rolling(10).mean()
+            df['ma20'] = df.close.rolling(20).mean()
+    
+    def before_trade(self, order):
+        return True
+
+    def on_order_ok(self, order):
+        # self.debug('submit order successfully:')
+        # self.debug(order)
+        pass
+
+    def on_market_start(self):
+        # self.info('=======Strategy=======on_market_start')
+        pass
+
+    def on_market_close(self):
+        # self.info('========Strategy======on_market_close======')
+        pass
+
+    def finish(self):
+        self.info('finish')
+
+    def on_bar(self, tick):
+        tick_data = self.ctx.tick_data
+        hist_data = self.ctx.hist_data
+
+        for code, hist in tick_data.items():
+
+            if hist['ma5'] > 1.03 * hist['ma20']:
+                self.ctx.broker.order_lotsize(code, lots=1, side='BY')
+                self.info(f"Buy {tick_data[code]['lot_size']} {code} @ {tick_data[code]['close']} at {tick}")
+
+
+            if hist['ma5'] < 0.98 * hist['ma20'] and code in self.ctx.position:
+                self.ctx.broker.order_lotsize(code, lots=1, side='SL')
+                self.info(f"Sell {tick_data[code]['lot_size']} {code} @ {tick_data[code]['close']} at {tick}")
+```
+Run your strategy:
+```python
+aio.set_token('xxxxxx') # Only need to run once
+base = aio.create_report_folder()
+start_date = '2020-10-13'
+end_date = '2021-01-21'
+
+sdf = aio.StockDataFeed(
+    symbols=['0700.HK', '0005.HK', '^HSI'], 
+    start_date=start_date, 
+    end_date=end_date,  
+    # period= '1y', 
+    interval='1d', 
+    order_ascending=True, 
+    store_path=base
+)
+feed, idx = sdf.fetch_data()
+benchmark = feed.pop('^HSI')
+
+mytest = aio.BackTest(
+    feed, 
+    MyStrategy, 
+    commission_rate=0.0017, 
+    min_commission=40, 
+    trade_at='close', 
+    benchmark=benchmark, 
+    cash=1000000, 
+    tradedays=idx, 
+    store_path=base
+)
+
+mytest.start()
+```
+Retrieve statistic results:
+```python
+prefix = 'v1'
+mytest.ctx.statistic.data.to_csv(f'{prefix}data.csv')
+
+mytest.export_json(f'{prefix}trade_records.json', mytest.ctx.trade_records)
+mytest.export_json(f'{prefix}pnls.json', mytest.ctx.pnls)
+mytest.export_csv(f'{prefix}pnls.csv', mytest.ctx.pnls)
+mytest.export_json(f'{prefix}portfolio.json',  mytest.ctx.statistic.all_stats())
+
+print(mytest.ctx.statistic.stats(pprint=True, annualization=252, risk_free=0.0442))
+
+mytest.plot(f'{base}/{prefix}report.png', interactive=False)
+mytest.plot(f'{base}/{prefix}report.html', interactive=True)
+```
