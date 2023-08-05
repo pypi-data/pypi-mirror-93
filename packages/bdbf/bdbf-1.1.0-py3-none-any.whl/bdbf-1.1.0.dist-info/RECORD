@@ -1,0 +1,11 @@
+bdbf/__init__.py,sha256=lo5re8fEMxV73KqesbIfHq5KGqrlOOZ1k4hrezOlN9U,190
+bdbf/bdbf.py,sha256=Qkj43e5TUjHOQEUaIqJaEz4ygXgVa-bNOBcegN8d308,2085
+bdbf/exceptions.py,sha256=wDpUjU03WZTp7Jl1QYsH7ZCX3oKSbdH2tgThHWku1Lg,160
+bdbf/functions.py,sha256=sb1T5mOYA6IHL86DGSvKOMst_nDDCIzIpw61V1_rTZ4,3611
+bdbf/main.py,sha256=Oy9eVtTjZPL_QWWSVm8v370VuplQL_1p274dMa4cWFI,12299
+src/bdbf.py,sha256=Qkj43e5TUjHOQEUaIqJaEz4ygXgVa-bNOBcegN8d308,2085
+bdbf-1.1.0.dist-info/LICENSE,sha256=_5XHGRuaHeiTtWmkqM6i-d1mP9FSmuruXfWm3y_fc-0,1086
+bdbf-1.1.0.dist-info/METADATA,sha256=-Yv8b96_GfQ0qfOoEge_FijXn61XPAXjsTGROutb0Vg,824
+bdbf-1.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bdbf-1.1.0.dist-info/top_level.txt,sha256=Nokvz5reR9-ayBgEuqTWV1XG6dHYW6R1IYeDxoSZIlc,5
+bdbf-1.1.0.dist-info/RECORD,,
