@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: doclever2md
+Version: 1.0.0
+Summary: a tool which can convert doclever json to cangjingge style markdown
+Home-page: https://andy-cheung.me
+Author: skyleft
+Author-email: skyleft123@gmail.com
+License: MIT License
+Description: UNKNOWN
+Keywords: doclever,markdown
+Platform: any
