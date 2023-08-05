@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: polish-tax-calculator
+Version: 0.5
+Summary: Kalulator podatkowy dla działalności gospodarczej w formie CLI
+Home-page: UNKNOWN
+Author: Kamil Hark
+License: MIT
+Description: 
+        #### Użycie
+        
+        ```shell
+        ptc --help
+        ```
+        
+        #### przykład 1. opcje domyślne: pełen zus, podatek liniowy, bez składki chorobowej
+        ```shell
+        ptc 5000 
+        ```
+        
+        #### przykład 2: obniżony zus, ryczałt 5%, składka chorobowa, więcej szczegółów (-v)
+        ```shell
+        ptc -t income -z reduced -si -itr 5 -v 5500 
+        ```
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
