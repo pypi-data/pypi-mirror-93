@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: vatglobaldevopsinterview
+Version: 0.1.0
+Summary: 
+Author: Christo Goosen
+Author-email: christogoosen@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Django (==3.1.5)
+Requires-Dist: Jinja2 (==2.11.2)
+Requires-Dist: Markdown (==3.3.3)
+Requires-Dist: MarkupSafe (==1.1.1)
+Requires-Dist: arrow (==0.17.0)
+Requires-Dist: asgiref (==3.3.1)
+Requires-Dist: blessed (==1.17.12)
+Requires-Dist: certifi (==2020.12.5)
+Requires-Dist: chardet (==4.0.0)
+Requires-Dist: coreapi (==2.3.3)
+Requires-Dist: coreschema (==0.0.4)
+Requires-Dist: django (>=3.1.5,<4.0.0)
+Requires-Dist: django-cors-headers (==3.7.0)
+Requires-Dist: django-filter (==2.4.0)
+Requires-Dist: django-picklefield (==3.0.1)
+Requires-Dist: django-q (==1.3.4)
+Requires-Dist: django-rest (==0.8.6)
+Requires-Dist: djangorestframework (==3.12.2)
+Requires-Dist: djangorestframework-camel-case (==1.2.0)
+Requires-Dist: drf-yasg (==1.20.0)
+Requires-Dist: idna (==2.10)
+Requires-Dist: inflection (==0.5.1)
+Requires-Dist: itypes (==1.2.0)
+Requires-Dist: markdown (>=3.3.3,<4.0.0)
+Requires-Dist: names (==0.3.0)
+Requires-Dist: packaging (==20.8)
+Requires-Dist: psutil (==5.8.0)
+Requires-Dist: pyparsing (==2.4.7)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pytz (==2020.5)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: ruamel.yaml (==0.16.12)
+Requires-Dist: ruamel.yaml.clib (==0.2.2)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: sqlparse (==0.4.1)
+Requires-Dist: uritemplate (==3.0.1)
+Requires-Dist: urllib3 (==1.26.2)
+Requires-Dist: wcwidth (==0.2.5)
