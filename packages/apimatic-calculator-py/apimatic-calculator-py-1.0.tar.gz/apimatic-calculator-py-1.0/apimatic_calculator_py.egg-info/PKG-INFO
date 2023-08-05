@@ -1,0 +1,221 @@
+Metadata-Version: 2.1
+Name: apimatic-calculator-py
+Version: 1.0
+Summary: Calculator API built with APIMATIC
+Home-page: https://apimatic.io
+Author: Nida
+Author-email: nida.zamir@apimatic.io
+License: UNKNOWN
+Description: # Getting Started with MyCalculator
+        
+        ## Getting Started
+        
+        ### Introduction
+        
+        Calculator API built with APIMATIC
+        
+        ### Install the Package
+        
+        The package is compatible with Python versions `2 >=2.7.9` and `3 >=3.4`.
+        Install the package from PyPi using the following pip command:
+        
+        ```python
+        pip install apimatic-calculator-py==1.0
+        ```
+        
+        You can also view the package at:
+        https://pypi.python.org/pypi/apimatic-calculator-py
+        
+        ### Initialize the API Client
+        
+        The following parameters are configurable for the API Client:
+        
+        | Parameter | Type | Description |
+        |  --- | --- | --- |
+        | `timeout` | `float` | The value to use for connection timeout. <br> **Default: 60** |
+        | `max_retries` | `int` | The number of times to retry an endpoint call if it fails. <br> **Default: 3** |
+        | `backoff_factor` | `float` | A backoff factor to apply between attempts after the second try. <br> **Default: 0** |
+        
+        The API client can be initialized as follows:
+        
+        ```python
+        from mycalculator.mycalculator_client import MycalculatorClient
+        
+        client = MycalculatorClient()
+        ```
+        
+        ### Test the SDK
+        
+        You can test the generated SDK and the server with test cases. `unittest` is used as the testing framework and `nose` is used as the test runner. You can run the tests as follows:
+        
+        Navigate to the root directory of the SDK and run the following commands
+        
+        ```
+        pip install -r test-requirements.txt
+        nosetests
+        ```
+        
+        ## Client Class Documentation
+        
+        ### MyCalculatorClient
+        
+        The gateway for the SDK. This class acts as a factory for the Controllers and also holds the configuration of the SDK.
+        
+        ### Controllers
+        
+        | Name | Description |
+        |  --- | --- |
+        | simple_calculator | Provides access to SimpleCalculatorController |
+        
+        ## API Reference
+        
+        ### List of APIs
+        
+        * [Simple Calculator](#simple-calculator)
+        
+        ### Simple Calculator
+        
+        #### Overview
+        
+        ##### Get instance
+        
+        An instance of the `SimpleCalculatorController` class can be accessed from the API Client.
+        
+        ```
+        simple_calculator_controller = client.simple_calculator
+        ```
+        
+        #### Get Calculate
+        
+        Calculates the result for the specified operation and variables.
+        
+        :information_source: **Note** This endpoint does not require authentication.
+        
+        ```python
+        def get_calculate(self,
+                         operation,
+                         x,
+                         y)
+        ```
+        
+        ##### Parameters
+        
+        | Parameter | Type | Tags | Description |
+        |  --- | --- | --- | --- |
+        | `operation` | [`OperationEnum`](#operation) | Template, Required | The operator to be applied on the provided variables. |
+        | `x` | `float` | Query, Required | The LHS value |
+        | `y` | `float` | Query, Required | The RHS value |
+        
+        ##### Response Type
+        
+        `float`
+        
+        ##### Example Usage
+        
+        ```python
+        operation = OperationEnum.SUM
+        x = 222.14
+        y = 165.14
+        
+        result = simple_calculator_controller.get_calculate(operation, x, y)
+        ```
+        
+        ##### Example Response
+        
+        ```
+        2.5
+        ```
+        
+        ## Model Reference
+        
+        ### Enumerations
+        
+        * [Operation Type](#operation-type)
+        * [Operation](#operation)
+        
+        #### Operation Type
+        
+        Operations types include: SUM, SUBTRACT, DIVIDE, MULTIPLY
+        
+        ##### Class Name
+        
+        `OperationTypeEnum`
+        
+        ##### Fields
+        
+        | Name | Description |
+        |  --- | --- |
+        | `SUM` | Adds the specified variables. |
+        | `SUBTRACT` | Subtracts the specified variables. |
+        | `MULTIPLY` | Multiplies the specified variables. |
+        | `DIVIDE` | Divides the specified variables. |
+        
+        #### Operation
+        
+        ##### Class Name
+        
+        `OperationEnum`
+        
+        ##### Fields
+        
+        | Name | Description |
+        |  --- | --- |
+        | `SUM` | Adds the specified variables. |
+        | `SUBTRACT` | Subtracts the specified variables. |
+        | `MULTIPLY` | Multiplies the specified variables. |
+        | `DIVIDE` | Divides the specified variables. |
+        
+        ## Utility Classes Documentation
+        
+        ### ApiHelper
+        
+        A utility class for processing API Calls. Also contains classes for supporting standard datetime formats.
+        
+        #### Methods
+        
+        | Name | Description |
+        |  --- | --- |
+        | json_deserialize | Deserializes a JSON string to a Python dictionary. |
+        
+        #### Classes
+        
+        | Name | Description |
+        |  --- | --- |
+        | HttpDateTime | A wrapper for datetime to support HTTP date format. |
+        | UnixDateTime | A wrapper for datetime to support Unix date format. |
+        | RFC3339DateTime | A wrapper for datetime to support RFC3339 format. |
+        
+        ## Common Code Documentation
+        
+        ### HttpResponse
+        
+        Http response received.
+        
+        #### Parameters
+        
+        | Name | Type | Description |
+        |  --- | --- | --- |
+        | status_code | int | The status code returned by the server. |
+        | reason_phrase | str | The reason phrase returned by the server. |
+        | headers | dict | Response headers. |
+        | text | str | Response body. |
+        | request | HttpRequest | The request that resulted in this response. |
+        
+        ### HttpRequest
+        
+        Represents a single Http Request.
+        
+        #### Parameters
+        
+        | Name | Type | Tag | Description |
+        |  --- | --- | --- | --- |
+        | http_method | HttpMethodEnum |  | The HTTP method of the request. |
+        | query_url | str |  | The endpoint URL for the API request. |
+        | headers | dict | optional | Request headers. |
+        | query_parameters | dict | optional | Query parameters to add in the URL. |
+        | parameters | dict &#124; str | optional | Request body, either as a serialized string or else a list of parameters to form encode. |
+        | files | dict | optional | Files to be sent with the request. |
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
