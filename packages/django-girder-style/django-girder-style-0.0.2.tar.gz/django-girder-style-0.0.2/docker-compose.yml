@@ -1,0 +1,21 @@
+version: '3'
+services:
+  django:
+    build:
+      context: .
+      dockerfile: ./dev/django.Dockerfile
+    command: ["./dev/manage.py", "runserver", "0.0.0.0:8000"]
+    # Log printing via Rich is enhanced by a TTY
+    tty: true
+    volumes:
+      - .:/opt/django-project
+    ports:
+      - 8000:8000
+
+  tailwind:
+    build:
+      context: .
+      dockerfile: ./dev/django.Dockerfile
+    command: ["./dev/manage.py", "tailwind", "start"]
+    volumes:
+      - .:/opt/django-project
