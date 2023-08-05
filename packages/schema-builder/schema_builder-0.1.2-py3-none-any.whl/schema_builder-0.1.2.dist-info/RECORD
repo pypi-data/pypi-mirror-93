@@ -1,0 +1,7 @@
+schema_builder/__init__.py,sha256=ec_qROkO4e0WkffB_jjBbxXwYgWANPPRCThQV3K4VQQ,2767
+schema_builder/builder_ddl.py,sha256=OEEKlEK5aNbPQE_8NKl3SaaOZAsrLxFZv1zqnMbcY1s,911
+schema_builder/builder_table_list.py,sha256=g7FeYX-__-HdWrmr3nORM3HZKv5Fp3th54zaMwur25k,293
+schema_builder-0.1.2.dist-info/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+schema_builder-0.1.2.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+schema_builder-0.1.2.dist-info/METADATA,sha256=5Zl6WTQSrxe5rnJkhevGE7n8lk_b0ActR9E_qPq9q30,356
+schema_builder-0.1.2.dist-info/RECORD,,
