@@ -1,0 +1,17 @@
+DATASET = [
+    'id',
+    'dataset',
+    'resource',
+    'base',
+    'model',
+    'property',
+    'source',
+    'prepare',
+    'type',
+    'ref',
+    'level',
+    'access',
+    'uri',
+    'title',
+    'description',
+]
