@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: Flask-PAM-Reloaded
+Version: 0.1.2
+Summary: Flask authentication using PAM
+Home-page: https://github.com/yangzhaofeng/Flask-PAM
+Author: Kacper Kołodziej, Steven Yang
+Author-email: yangzhaofengsteven@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Flask (>=0.10.1)
+Requires-Dist: python-jose (>=0.6.1)
+Requires-Dist: simplepam (>=0.1.5)
+
+UNKNOWN
+
+
