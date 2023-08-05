@@ -1,0 +1,128 @@
+Metadata-Version: 2.1
+Name: Xul
+Version: 2.3.0
+Summary: XML (XPath, XSD, XSLT) Utilities
+Home-page: https://xul.readthedocs.io/
+Author: Peter Adrichem
+Author-email: Peter.Adrichem@gmail.com
+License: MIT
+Project-URL: Source, https://bitbucket.org/peteradrichem/xul
+Project-URL: Documentation, https://xul.readthedocs.io/
+Keywords: xml,xpath,xslt,xsd,dtd,xml schema,relax ng,rng
+Platform: CPython
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Text Processing :: Markup :: XML
+Classifier: Topic :: Utilities
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*
+Description-Content-Type: text/x-rst
+Requires-Dist: lxml (>=2.0)
+Provides-Extra: syntax
+Requires-Dist: Pygments (>=2.0) ; extra == 'syntax'
+
+====================
+Xul -- XML Utilities
+====================
+
+.. image:: https://img.shields.io/pypi/pyversions/xul.svg
+   :target: https://pypi.org/project/Xul/
+   :alt: Python versions
+
+.. image:: https://readthedocs.org/projects/xul/badge/?version=latest
+   :target: https://xul.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
+
+.. image:: https://img.shields.io/pypi/v/xul
+   :target: https://pypi.org/project/Xul/
+   :alt: PyPI version
+
+Xul is a set of XML scripts written in Python.
+Documentation can be found on `Read The Docs`_.
+
+
+Xul scripts
+===========
+
+- ``ppx``: pretty print XML
+- ``xp``: select nodes in XML source
+- ``transform``: transform XML with XSLT
+- ``validate``: validate an XML source
+
+Installation
+------------
+The Xul command line scripts can be installed with **pip**:
+
+.. code:: text
+
+        $ pip install Xul
+
+Install Pygments_ for XML syntax highlighting (optional).
+
+.. code:: text
+
+        $ pip install Pygments
+
+Dependencies
+------------
+Xul uses the excellent lxml_ XML toolkit, a Pythonic binding for the C libraries
+libxml2_ and libxslt_.
+
+Options
+-------
+List the command-line options of a Xul script with ``--help``.
+For example:
+
+.. code::
+
+   $ ppx --help
+
+   usage: ppx [-h] [-V] [-n] [-o] [xml_source [xml_source ...]]
+
+   Pretty Print XML source in human readable form.
+
+   positional arguments:
+   xml_source            XML source (file, <stdin>, http://...)
+
+   optional arguments:
+   -h, --help            show this help message and exit
+   -V, --version         show program's version number and exit
+   -n, --no-syntax       no syntax highlighting
+   -o, --omit-declaration
+                         omit the XML declaration
+
+Documentation
+=============
+The Xul documentation can be found on `Read The Docs`_.
+
+W3C standards
+-------------
+- `Extensible Markup Language (XML) 1.0 <http://www.w3.org/TR/xml/>`_
+- `XML Schema 1.0 <http://www.w3.org/XML/Schema>`_
+- `XSL Transformations (XSLT) 1.0 <http://www.w3.org/TR/xslt/>`_
+- `XML Path Language (XPath) 1.0 <http://www.w3.org/TR/xpath/>`_
+- `Namespaces in XML 1.0 <http://www.w3.org/TR/xml-names/>`_
+
+Related
+-------
+- `Extensions to XSLT (EXSLT) <http://exslt.org/>`_
+- `RELAX NG <https://relaxng.org/>`_
+
+
+.. _Read The Docs: https://xul.readthedocs.io/
+.. _lxml: http://lxml.de/
+.. _libxml2: http://www.xmlsoft.org/
+.. _libxslt: http://xmlsoft.org/libxslt/
+.. _Pygments: https://pygments.org/
+
+
