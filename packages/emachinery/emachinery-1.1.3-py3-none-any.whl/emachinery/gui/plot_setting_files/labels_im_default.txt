@@ -1,0 +1,5 @@
+Speed [rpm]
+D-axis Current [A]
+Q-axis Current [A]
+Voltage [V]
+Position [rad]
