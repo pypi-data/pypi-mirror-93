@@ -1,0 +1,7 @@
+utils/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+utils/converter_utils.py,sha256=UAcfrl7whlkjOVRjyK7FEleFtiX0kqXkpS49SCGlsJg,24388
+utils/excel_template_constants.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+excel2sbol-0.0.0.dist-info/METADATA,sha256=1zNurS_ECn6scl-Luh-Jk11I4CKKNEbjQO7U9VdAdFc,520
+excel2sbol-0.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+excel2sbol-0.0.0.dist-info/top_level.txt,sha256=BXdhaaHBJTl5WDScj-NdcpdW6F1g7hNN3YP0CLPxk-0,6
+excel2sbol-0.0.0.dist-info/RECORD,,
