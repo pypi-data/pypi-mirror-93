@@ -1,0 +1,15 @@
+supersolids/Schroedinger.py,sha256=05q1gO1RbbfMfvV79xF9yCDjB5CYzpERHwfsfr-E8yI,16753
+supersolids/__init__.py,sha256=OupGM70M5EJC85EVGNV2juNkQKWYmLXEYVGdMxS8WgQ,187
+supersolids/constants.py,sha256=BgfM85YIb4Vk8CwAY8acjEpvJTzwqsbSeGT3B_nFSrc,872
+supersolids/cut_1d.py,sha256=an1nwsMSL0FX9i0jkCgw_cGWal_AwliUXv-ksCB1MLw,3416
+supersolids/density_in_trap.py,sha256=y_fLHO7HPhCnkcapXLzP5ZPOvDKe9cNJz1cJMnDqAu4,1885
+supersolids/functions.py,sha256=ljTy2XMWkMoT7eXN_t9Twid8m3ITRAbp2wzarYs1_WM,17663
+supersolids/main.py,sha256=OJEyw-b6o358nty22NHm8vCDuCGYo0TR9VQBa_PtnzU,6556
+supersolids/multi_core.py,sha256=X_WlxjPQ6QF8W-0UxSf2g1p5maxkVnCUu4EVnsqMKtM,5895
+supersolids/run_time.py,sha256=NiLSYtctJNiO7rK6vQUB5kDqgd-3GZ-z3VTlwmJzdEw,625
+supersolids/simulate_case.py,sha256=_VobrcEgddUcwujJQvECGi75465jfJVR8Zl7BnknPKE,4194
+supersolids-0.1.25.dist-info/LICENSE,sha256=NESncjwUZu1ikpUAlYrL_3dJoFZMf8wT34W-QhEWMvU,1068
+supersolids-0.1.25.dist-info/METADATA,sha256=s7IuJx1dv_P9EyhLy-GPh1pkeV7NFloDVlIuTcj9oW8,3767
+supersolids-0.1.25.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+supersolids-0.1.25.dist-info/top_level.txt,sha256=jC7Ij_GwlHaPizNi7ZBShFrwzNJwrBrpf7rpBFcf5HA,13
+supersolids-0.1.25.dist-info/RECORD,,
