@@ -1,0 +1,3 @@
+[console_scripts]
+jwa=jwa.__init__:card
+
