@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/cstehelloworld.py
+src/cste_helloworld.egg-info/PKG-INFO
+src/cste_helloworld.egg-info/SOURCES.txt
+src/cste_helloworld.egg-info/dependency_links.txt
+src/cste_helloworld.egg-info/requires.txt
+src/cste_helloworld.egg-info/top_level.txt
