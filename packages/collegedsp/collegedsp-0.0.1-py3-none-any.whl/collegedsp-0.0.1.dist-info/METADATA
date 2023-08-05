@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: collegedsp
+Version: 0.0.1
+Summary: Digital Signal Processing Module
+Home-page: https://github.com/Ayush-Khamrui/dsprocessing.git
+Author: Ayush Khamrui
+Author-email: ayushkhamrui@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (~=1.18.0)
+Requires-Dist: matplotlib (~=3.1.2)
+Provides-Extra: dev
+Requires-Dist: pytest (>=3.7) ; extra == 'dev'
+
+# collegedsp
+
+
