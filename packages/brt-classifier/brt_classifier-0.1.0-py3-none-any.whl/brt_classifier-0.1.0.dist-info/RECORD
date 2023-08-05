@@ -1,0 +1,15 @@
+brt_classifier/__init__.py,sha256=KJn2Ek1tZ1zhAwvyRU4BvwEMxHJnRqGj7o9nI4-lqCw,186
+brt_classifier/__main__.py,sha256=Xb5VlLuyD2wPgO2wxVZLMOzfQxdHFGdy3MCwIFeh52M,653
+brt_classifier/classify.py,sha256=2PmrL1I3SsM_kFLmt0uCLT_Uh3ACEu9MZzPCCiqLoDY,2172
+brt_classifier/generateProblems.py,sha256=SMJptgglCjJMr_bxCl-8gZjJMhEZEcmUTyxBp8SpaNA,3306
+brt_classifier/getProblem.py,sha256=g4My0-A0pAT4XGnTvo-m7KA-i232uKf8wGcmQoX7WK4,1065
+brt_classifier/statistics.py,sha256=AAvgtywEvdv-6kbl_vfwZiV5hhXKegKA7euACkmuYYk,3072
+brt_classifier/util.py,sha256=sbxGbgbOhDxlw16TPEtoNLs8A4KmW4mROnorPNLOSNQ,225
+brt_classifier/problems/2labels.json,sha256=O0aqNaMZ8y9_KFwQQKlDC0eZVPk_m2ANpVNmkznUH8w,5144
+brt_classifier/problems/3labels.json,sha256=xKuiK3sJkySjF7h_z1_nZvUCu-4_o6o0q6SJSuY_KH0,11636291
+brt_classifier-0.1.0.data/data/data/2labels.json,sha256=O0aqNaMZ8y9_KFwQQKlDC0eZVPk_m2ANpVNmkznUH8w,5144
+brt_classifier-0.1.0.data/data/data/3labels.json,sha256=xKuiK3sJkySjF7h_z1_nZvUCu-4_o6o0q6SJSuY_KH0,11636291
+brt_classifier-0.1.0.dist-info/METADATA,sha256=VI30s4mL7GxkbCagZLYcLxuz6TvUQSjEdXoI4nt6wO8,3522
+brt_classifier-0.1.0.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+brt_classifier-0.1.0.dist-info/top_level.txt,sha256=ZzCbnX2hU2TcaT4smdUdjnNx_lobWTboyBm9eY--xmY,15
+brt_classifier-0.1.0.dist-info/RECORD,,
