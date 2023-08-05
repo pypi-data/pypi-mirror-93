@@ -1,0 +1,17 @@
+dsp_ingest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dsp_ingest/__main__.py,sha256=KzwaTRpGx-yJjbOQmAKVgFfD7oOS_fWcrpbOuoYiaok,81
+dsp_ingest/ingest.py,sha256=emQvVpQD2-xZu4uye94l1kREFDatJY6CJCqSKsGdE5o,1737
+dsp_ingest/follow_logs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dsp_ingest/follow_logs/post_events.py,sha256=GOIFzly0KSRutWNgo-5U43XAjWJBA-_RZetflOZ3Xn4,1025
+dsp_ingest/get_args/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dsp_ingest/get_args/cli.py,sha256=gbhfFo4flg2mT3vugPcScNlsajU08m-kvlFejVTtLf8,3096
+dsp_ingest/log_gen/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dsp_ingest/log_gen/parse_configs.py,sha256=CUsS7cHoj4VlWgbzrdMsDmIc9j9KKaClEtcWjGcNYYI,333
+dsp_ingest/purge_logs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dsp_ingest/purge_logs/purge.py,sha256=CL2IxtFL5CJc67VVNg7JqL_5EiEv0clurtzkrx3HTzI,318
+dsp_ingest/validate_args/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dsp_ingest/validate_args/validate.py,sha256=-1nzkBRaKHjEpwBRYFUuw4eSba_OGBZW9LwwjIorkig,441
+dspingest-1.0.0.dist-info/METADATA,sha256=D4q2gCHx5zx6EJpK_k9NsebP2MDUaWUSf_VjPqs8Uxo,336
+dspingest-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dspingest-1.0.0.dist-info/top_level.txt,sha256=pysuVFH1Ab6aLvG84zwwU_tyeEsm1xEyB-rLj3TrmmM,11
+dspingest-1.0.0.dist-info/RECORD,,

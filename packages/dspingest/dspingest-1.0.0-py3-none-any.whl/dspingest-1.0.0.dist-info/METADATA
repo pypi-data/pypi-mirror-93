@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: dspingest
+Version: 1.0.0
+Summary: dspingest is a python package which uses multi-programming and log-generator modules to generate log files and stream them to a DSP instance.
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: log-generator
+
+UNKNOWN
+
+
