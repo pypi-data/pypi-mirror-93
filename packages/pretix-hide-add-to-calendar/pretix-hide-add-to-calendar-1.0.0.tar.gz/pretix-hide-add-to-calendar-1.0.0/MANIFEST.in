@@ -1,0 +1,5 @@
+recursive-include pretix_hide_add_to_calendar/static *
+recursive-include pretix_hide_add_to_calendar/templates *
+recursive-include pretix_hide_add_to_calendar/locale *
+include LICENSE
+exclude .gitlab-ci.yml

@@ -1,0 +1,1 @@
+pretix_hide_add_to_calendar
