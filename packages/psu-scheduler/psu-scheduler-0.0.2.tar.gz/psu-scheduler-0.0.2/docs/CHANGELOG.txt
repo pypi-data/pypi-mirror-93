@@ -1,0 +1,5 @@
+=== 0.0.2 ===
+- Endpoint definitions in their own model
+
+=== 0.0.1 ===
+- Initial Release
