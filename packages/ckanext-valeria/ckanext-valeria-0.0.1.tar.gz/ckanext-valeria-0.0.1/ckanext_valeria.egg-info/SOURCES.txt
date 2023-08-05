@@ -1,0 +1,12 @@
+README.md
+setup.py
+ckanext/__init__.py
+ckanext/valeria/__init__.py
+ckanext/valeria/plugin.py
+ckanext_valeria.egg-info/PKG-INFO
+ckanext_valeria.egg-info/SOURCES.txt
+ckanext_valeria.egg-info/dependency_links.txt
+ckanext_valeria.egg-info/entry_points.txt
+ckanext_valeria.egg-info/namespace_packages.txt
+ckanext_valeria.egg-info/not-zip-safe
+ckanext_valeria.egg-info/top_level.txt
