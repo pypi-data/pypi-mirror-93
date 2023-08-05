@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pylodica
+Version: 0.0.2
+Summary: A Python framework for for creating music algorithmically
+Home-page: https://github.com/evantkchong/pylodica
+Author: Evan Chong
+Author-email: evan.tkchong@gmail.com
+License: UNKNOWN
+Description: # Pylodica
+        A Python framework for for creating music algorithmically
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

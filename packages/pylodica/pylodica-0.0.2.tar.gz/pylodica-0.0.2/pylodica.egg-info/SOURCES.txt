@@ -1,0 +1,9 @@
+README.md
+setup.py
+pylodica/__init__.py
+pylodica/__main__.py
+pylodica/core.py
+pylodica.egg-info/PKG-INFO
+pylodica.egg-info/SOURCES.txt
+pylodica.egg-info/dependency_links.txt
+pylodica.egg-info/top_level.txt
