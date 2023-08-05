@@ -1,0 +1,24 @@
+# Required for building
+cmake >= 3.12
+scikit-build >= 0.10.0
+setuptools
+wheel
+numpy
+
+# Recommended
+pytest
+
+# For building documentation
+sphinx>=2.0
+breathe>=4.13.0
+exhale
+pandoc
+sphinx-issues
+nbsphinx
+jupyter_sphinx
+
+# Required to run FEniCS notebooks
+# dolfin
+
+# Visualization in docs
+threevis
