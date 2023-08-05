@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: genhr
+Version: 0.1.1
+Summary: Create zipped test files to upload to HackerRank
+Author: Thomas Breydo
+Author-email: tbreydo@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
