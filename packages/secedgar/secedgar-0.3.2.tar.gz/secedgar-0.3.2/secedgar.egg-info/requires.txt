@@ -1,0 +1,15 @@
+beautifulsoup4
+aiohttp
+async_timeout<4.0,>=3.0
+urllib3
+requests
+lxml
+
+[cli]
+beautifulsoup4
+aiohttp
+async_timeout<4.0,>=3.0
+urllib3
+requests
+lxml
+Click
