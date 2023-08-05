@@ -1,0 +1,11 @@
+upoly/__init__.py,sha256=JIy42BPqNSGe9Ua7x8jjG_eFwAKGoWfstQYQPL-78Zk,126
+upoly/constants.py,sha256=F2zDS6hbqSsKBIxCX80EGTaPfyJ08w9EHHxY_SnUjzk,147
+upoly/models.py,sha256=wp2_5fgvWS5hnc86MtN1JjrQvnx-Vb6xe243IuHuog4,974
+upoly/polygon_plus.py,sha256=YFcQQyRO531b9N5MV0q8b9jU6wJq2gYLFdnAPkVlhng,11491
+upoly/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+upoly/settings.py,sha256=RHhj5RuD_qY172lNuGewwIERUqEaVNSJ88d4KelGR6s,794
+upoly/utility.py,sha256=QeccRAZgXk0_aY0QjOayIKHJoNkN_p9YWpvzl6gcPCQ,991
+upoly-0.1.20.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+upoly-0.1.20.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+upoly-0.1.20.dist-info/METADATA,sha256=OtJcmkmTySjBv1X61LYx7z__gqJwgCWRzb7ZfLxjSR8,4595
+upoly-0.1.20.dist-info/RECORD,,
