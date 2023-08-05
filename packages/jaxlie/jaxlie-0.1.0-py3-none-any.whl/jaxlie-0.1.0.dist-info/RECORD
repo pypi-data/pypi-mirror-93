@@ -1,0 +1,15 @@
+jaxlie/__init__.py,sha256=tySaEIboxp-dmqHxYecjwuhA2Ig6k4bfl8UqjjWlDwo,340
+jaxlie/_base.py,sha256=nkCf4IfOGxmWl_4ov7ruZG2G3ndDcNxo0c46L2NCOhE,4560
+jaxlie/_se2.py,sha256=Ij2oJ3eBW2DLBM-i5ROAR7stFTsNFcmS_ynZT1Y6TEw,6125
+jaxlie/_se3.py,sha256=R_5pdAOZQwc0f30wVF8jyjTMAYClckKalP44W_Nqvlk,5808
+jaxlie/_so2.py,sha256=xQawTdLq4UIwtlU8kZyU87nsE2QEsinl96XgsBJAI_E,2856
+jaxlie/_so3.py,sha256=3PguoK8YMQlnu8tOdt0pg77mFP0tzkogv2eVEbwmRW4,9416
+jaxlie/_utils.py,sha256=qJpdTRabcRy1ljzI2GmL66Gn9XMRNxrmoTGEO2AgASY,3073
+jaxlie/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jaxlie/manifold/__init__.py,sha256=BqSo4nmHhRweAnvVw0qKT0tyvhIysKw5H-SjPqPBQF0,167
+jaxlie/manifold/_manifold_helpers.py,sha256=IM-i3zcnr5HXgO7PMaz4JuBU57nbALGg6nvbYYDVhZk,3720
+jaxlie/types/__init__.py,sha256=w4wTSgoPbPHNwOCBlbJpkoIoWtR-2GhnuHHT0z-ndpM,613
+jaxlie-0.1.0.dist-info/METADATA,sha256=OZD65u_vEPkgnnHudELVfY7VjbZBbHObyy2g7F_YXTk,4899
+jaxlie-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jaxlie-0.1.0.dist-info/top_level.txt,sha256=y3UyL_6RGk9fZRrwvakMHPKNf_ny_YUmyTCNHDyi73s,7
+jaxlie-0.1.0.dist-info/RECORD,,
