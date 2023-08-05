@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: futu
+Version: 0.0.1
+Summary: Python package for doing science.
+Home-page: https://github.com/kezhang0729@gmail.com/futu
+Author: Ke Zhang
+Author-email: kezhang0729@gmail.com
+License: BSD (3-clause)
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+
+====
+futu
+====
+
+.. image:: https://img.shields.io/travis/kezhang0729@gmail.com/futu.svg
+        :target: https://travis-ci.org/kezhang0729@gmail.com/futu
+
+.. image:: https://img.shields.io/pypi/v/futu.svg
+        :target: https://pypi.python.org/pypi/futu
+
+
+Python package for doing science.
+
+* Free software: 3-clause BSD license
+* Documentation: (COMING SOON!) https://kezhang0729@gmail.com.github.io/futu.
+
+Features
+--------
+
+* TODO
+
+
