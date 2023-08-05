@@ -1,0 +1,13 @@
+ckanext_valeria-0.0.4-py3.8-nspkg.pth,sha256=VaH--vNo0_vzXvZAeqyq-Bg6m47pBBRlxwvBj0KQxe0,544
+ckanext/valeria/__init__.py,sha256=_-OfZODx71R6HwfMfDHZdVSvDSK47mdhPA_FT3Mtvxc,41
+ckanext/valeria/plugin.py,sha256=t7aSDgMs8G6297CqKKvaHoU2ZfeZdtzN2uaHbJ5o-jo,683
+ckanext/valeria/public/valeria_theme.css,sha256=jf1fyIE6vHvUREd1UAkySIDNTmGrBNOgKL9FCama7xA,1367
+ckanext/valeria/templates/base.html,sha256=8sh377-mCuE7_56a1Tn7lnt7viXq2EYIE9jSHFJBJPA,123
+ckanext/valeria/templates/footer.html,sha256=A0f8WpRT2Ijs_OwK6xF0RxwTb29pIH2tbvq2J2k7mzo,891
+ckanext_valeria-0.0.4.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+ckanext_valeria-0.0.4.dist-info/METADATA,sha256=f65ADwxDmMAXi2h20hHQKlzqo9Ib8QTkUUGwFrteCPo,263
+ckanext_valeria-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ckanext_valeria-0.0.4.dist-info/entry_points.txt,sha256=3RyzGHt0kf9yb_xWoHwdvudvielHgH76cWR2KKDMpDw,153
+ckanext_valeria-0.0.4.dist-info/namespace_packages.txt,sha256=5yjNwq-s42weaiMMUuA5lZ45g99ANsfcRBCvac1JMS4,8
+ckanext_valeria-0.0.4.dist-info/top_level.txt,sha256=5yjNwq-s42weaiMMUuA5lZ45g99ANsfcRBCvac1JMS4,8
+ckanext_valeria-0.0.4.dist-info/RECORD,,
