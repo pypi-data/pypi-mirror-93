@@ -1,0 +1,4 @@
+asyncio
+typing
+aiohttp[speedups]
+python-dotenv
