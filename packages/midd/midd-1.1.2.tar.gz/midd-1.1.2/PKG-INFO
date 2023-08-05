@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: midd
+Version: 1.1.2
+Summary: The magic image duplicate detector works as its name suggests: it shows you potential duplicates of your images.
+Home-page: https://github.com/renatoliveira/midd
+Author: Renato Oliveira
+Author-email: renatoliveira@pm.me
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Requires-Python: >=3.6

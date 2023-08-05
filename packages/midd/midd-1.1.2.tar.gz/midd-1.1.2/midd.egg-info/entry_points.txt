@@ -1,0 +1,3 @@
+[console_scripts]
+midd = midd.main:run
+
