@@ -1,0 +1,12 @@
+cryptobaker/__init__.py,sha256=JNTShrQWE-GpRIvxVqC8h0z4p4nzMzBQT_b_HnZXWOw,2320
+cryptobaker/recipes/__init__.py,sha256=Rk51-7cuEdn2g-NI0Au4WBE-xaZjhS1fbBkDj7N_aXY,96
+cryptobaker/recipes/encoding.py,sha256=zeXsDgxlHqQVUHmN96Xq-bWyp8x51fPfxg0ooiRJvzA,6321
+cryptobaker/recipes/encryption.py,sha256=2BIRW0o_d8F7gg10DdKXuehuvNtLp5WrGJqeUReMog8,1491
+cryptobaker/recipes/errors.py,sha256=CZk2x_rG8gz9jvMdRBo9KvN_6NQSDCzfYJYmob4lhuU,49
+cryptobaker/recipes/hashing.py,sha256=ZGTqxS_NbTCJEw2gfD0KOb2_aJiB-it8m4zU7LZ6ppo,593
+cryptobaker/recipes/manip.py,sha256=yL_iuV1loJVIlh7T5yrKe-0A1N6mpiFDaZP3ChTLzVI,2142
+cryptobaker/recipes/util.py,sha256=4UppC2hHjoJb1Tvn2VENmx2nGbxft0VSmauZQX0Y0K8,425
+CryptoBaker-0.8.0.dist-info/METADATA,sha256=3Ijm1TaX3tzVid3wShQYb_yfeqQy3cSJ5Vb313CdWlc,2579
+CryptoBaker-0.8.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+CryptoBaker-0.8.0.dist-info/top_level.txt,sha256=4bUigxBeN3eiZsqkfxJd1oB_pGxh3UBBKsC38l0SxiE,12
+CryptoBaker-0.8.0.dist-info/RECORD,,
