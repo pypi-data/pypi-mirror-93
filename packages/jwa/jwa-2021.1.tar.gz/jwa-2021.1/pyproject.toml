@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "jwa"
+version = "2021.1"
+description = "pipx run jwa"
+authors = ["Julian Wachholz <julian@wachholz.ch>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+jwa = "jwa.__init__:card"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

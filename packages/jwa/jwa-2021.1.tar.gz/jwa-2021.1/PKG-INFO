@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: jwa
+Version: 2021.1
+Summary: pipx run jwa
+Author: Julian Wachholz
+Author-email: julian@wachholz.ch
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
