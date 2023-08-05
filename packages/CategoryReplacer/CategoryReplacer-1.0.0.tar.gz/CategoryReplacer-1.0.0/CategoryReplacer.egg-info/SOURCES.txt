@@ -1,0 +1,7 @@
+MANIFEST.in
+setup.py
+CategoryReplacer.egg-info/PKG-INFO
+CategoryReplacer.egg-info/SOURCES.txt
+CategoryReplacer.egg-info/dependency_links.txt
+CategoryReplacer.egg-info/requires.txt
+CategoryReplacer.egg-info/top_level.txt
