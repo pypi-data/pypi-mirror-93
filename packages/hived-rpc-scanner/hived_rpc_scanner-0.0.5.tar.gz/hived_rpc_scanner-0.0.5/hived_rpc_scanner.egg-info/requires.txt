@@ -1,0 +1,3 @@
+prettytable==2.0.0
+httpx
+emoji
