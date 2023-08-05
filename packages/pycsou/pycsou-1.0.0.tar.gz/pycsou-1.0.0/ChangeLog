@@ -1,0 +1,47 @@
+CHANGES
+=======
+
+v1.0.0
+------
+
+* Modified .gitignore
+* Documentation complete
+* Package refactoring
+* Updated documentation structure and algorithms completed
+* Modify requirements
+* Correction of a bug with NullOperator and removes example folder
+* Correction of a bug with NullOperator and removes example folder
+* Removed folder opt/
+* Documentation for pycsou.core.solver is completed (examples/tests still missing)
+* Documentation for pycsou.util.misc is completed
+* Documentation for pycsou.core.functional is completed
+* Documentation for pycsou.core.linop is completed
+* Documentation for pycsou.core.map is completed
+* Help for map
+* Small changes
+* Primal Dual Splitting Algorithm Implemented and test routines added
+* Joblib added to requirements
+* MappedDistanceMatrix Operator implemented. All sampling operators implemented
+* Dense Generalised Vandermonde operator added
+* NNSampling operator implemented
+* Downsampling operator is now implemented as a Masking operator
+* Downsampling operator implemented
+* Implementation of SubSampling and Masking operators
+* Implementation of graph differential operators completed. Documentation updated
+* Implementation of euclidean differential operators completed
+* Partial implementation of most common discrete differential operators
+* Implementation of convolution and smoothing operators for 1D, 2D, and graph signals
+* Updated documentation and tests
+* Modified .gitignore
+* Documentation for penalty fonctionals completed
+* Files for sphinx documentation and automatic install
+* Partial documentation of penalty.py
+* Implementation of most common loss and penalty functionals
+* Removed .DS\_Store and .idea from .gitignore
+* Abstract classes for cost functionals implemented
+* Classes for stacked (vertical and horizontal) maps and linear operators added
+* Update README.md
+* Update README.md
+* Initial commit: classes Map and LinearOperator and their subclasses implemented. Vertical stack of Maps and LinearOperators needs to be impelemented
+* Update README.md
+* Initial commit
