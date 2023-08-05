@@ -1,0 +1,14 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "django_async_stream"
+author = "svinerus"
+author-email = "svinerus@gmail.com"
+home-page = "https://github.com/svinerus/django-async-stream"
+description-file = "README.md"
+requires-python = ">=3.7"
+dist-name = "django-async-stream"
+keywords = "django, async, stream, streamhttp, streaminghttp, StreamingHttpResponse, ASGI, AsyncStreamingHttpResponse"
+requires = ["django"]

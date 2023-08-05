@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: django-async-stream
+Version: 0.3
+Summary: Django extension that allow using asynchronous generators in StreamingHttpResponse
+Home-page: https://github.com/svinerus/django-async-stream
+Author: svinerus
+Author-email: svinerus@gmail.com

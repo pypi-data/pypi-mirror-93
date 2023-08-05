@@ -1,0 +1,51 @@
+# Django-Async-Stream 
+
+Django extension that allow using asynchronous generators in StreamingHttpResponse
+
+
+## Usage
+
+django-async-stream provides `AsyncStreamingHttpResponse` class, that you can use instead of `StreamingHttpResponse`
+
+**But** for this to work, you need to override one method in the ASGIHandler.
+
+
+`asgi.py`, one of the possible options
+```python
+# django default file content
+import os
+
+from django.core.asgi import get_asgi_application
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'projectname.settings')
+
+application = get_asgi_application()
+
+#  PATCH BELOW
+import django_async_stream
+django_async_stream.patch_application(application)
+
+```
+
+`views.py`
+```python
+import asyncio
+
+from django_async_stream import AsyncStreamingHttpResponse
+
+
+async def my_view(request):
+    return AsyncStreamingHttpResponse(_my_async_generator())
+
+
+async def _my_async_generator():
+    for i in range(10):
+        yield i
+        await asyncio.sleep(2)
+
+```
+
+## Installation
+
+ `pip install django-async-stream`
+
