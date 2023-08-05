@@ -1,0 +1,16 @@
+altgraph<1,>=0
+autopep8<2,>=1
+beautifulsoup4<5,>=4
+certifi<2021,>=2020
+chardet<4,>=3
+hexonet.apiconnector<4,>=3
+idna<3,>=2
+numpy<2,>=1
+pep8<2,>=1
+Pillow<8,>=7
+pycodestyle<3,>=2
+PyQt5<6,>=5
+PyQt5-sip<13,>=12
+requests<3,>=2
+soupsieve<3,>=2
+tabulate<1urllib3>=1,<2twine>=3,<4,>=0
