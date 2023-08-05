@@ -1,0 +1,51 @@
+{% extends "admin/background_pages/base.html" %}
+
+{% load bulb_static static compress %}
+
+{% block title %}Releases{% endblock title %}
+
+{% block head %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    {% if DEBUG %}
+        {% if not BULB_REQUIRES_INITIAL_PATHS %}
+            {% compress css %}
+                <link rel="stylesheet" type="text/x-scss" href="{% static "releases/css/style/releases_page.scss" %}"/>
+            {% endcompress %}
+
+        {% else %}
+            <link rel="stylesheet" type="text/x-scss" href="{% static 'releases/css/style/releases_page.scss' %}"/>
+
+        {% endif %}
+
+    {% elif not DEBUG %}
+        {% if BULB_BUNDLED_FILES_VERSION != None %}
+            {% with url='releases/bundle_releases_page&V='|add:BULB_BUNDLED_FILES_VERSION|add:'.css' %}
+                <link rel="stylesheet" href="{% static_bundled_src url %}"/>
+            {% endwith %}
+
+        {% else %}
+            <link rel="stylesheet" href="{% static_bundled_src "releases/bundle_releases_page.css" %}"/>
+
+        {% endif %}
+
+    {% endif %}
+{% endblock head %}
+
+{% block administration_part_name %}
+    <i class="material-icons">keyboard_arrow_right</i>
+
+    <a class="nav-link" href="{% url "releases" %}">Releases</a>
+{% endblock administration_part_name %}
+
+{% block content %}
+    <h2>Bulb's releases</h2>
+
+    <div id="logo-div">
+        <img src="{% static 'releases/cropped_and_compressed_logo.jpg' %}"/>
+    </div>
+
+    <div id="releases">{{ releases|safe }}</div>
+{% endblock content %}
+
+{% block scripts %}{% endblock scripts %}
