@@ -1,0 +1,47 @@
+augs:
+  LR: 0.5
+  UD: 0.5
+  brightness: 0.25
+  contrast: 0.1
+  crop_size: null
+  degrees: 10
+  grayscale: 0.0
+  normalization:
+    N: 497156096
+    mean:
+    - 0.7716035702853864
+    - 0.7716157758415796
+    - 0.7715975667501956
+    std:
+    - 0.3278765568724619
+    - 0.32786832900157425
+    - 0.3278802367044948
+  pad: null
+  random_resize: false
+  resize: null
+compute:
+  batch_size: 32
+  distributed: false
+  gpu_id: 0
+  num_workers: 8
+project:
+  class_names:
+  - background
+  - grooming
+  - head_dip
+  - protected_stretch
+  - rearing
+  - unprotected_stretch
+  config_file: project_config.yaml
+  data_path: DATA
+  labeler: Jin
+  model_path: models
+  name: bohacek_EPM
+  path: /mnt/VIDEOS2/bohacek_EPM_deepethogram
+sequence:
+  filter_length: 15
+split:
+  file: null
+  reload: true
+train:
+  loss_weight_exp: 0.5
