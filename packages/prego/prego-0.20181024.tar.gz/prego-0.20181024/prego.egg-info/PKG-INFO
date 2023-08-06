@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: prego
+Version: 0.20181024
+Summary: System test framework over POSIX shells
+Home-page: https://bitbucket.org/arco_group/prego
+Author: David Villa Alises
+Author-email: David.Villa@gmail.com
+License: GPLv3
+Description: This prego implementation is based on Python-2.7 and it's now **DEPRECATED**. Please consider moving to prego3 (https://bitbucket.org/DavidVilla/prego3).
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Provides: prego
