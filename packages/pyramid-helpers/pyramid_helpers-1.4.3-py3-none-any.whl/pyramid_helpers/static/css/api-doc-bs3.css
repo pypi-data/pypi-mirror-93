@@ -1,0 +1,108 @@
+:root {
+    --bg-color-method-delete: #dd4b39;
+    --bg-color-method-get: #00c0ef;
+    --bg-color-method-post: #00a65a;
+    --bg-color-method-put: #f39c12;
+    --bg-color-method-unknown: #d2d6de;
+
+    --color-method-delete: #a94442;
+    --color-method-get: #31708f;
+    --color-method-post: #3c763d;
+    --color-method-put: #8a6d3b;
+    --color-method-unknown: #777;
+}
+
+/* Hack to fix wobbling effect on spinner icon
+   https://github.com/FortAwesome/Font-Awesome/issues/671#issuecomment-249591495 */
+button .fa-spin {
+    line-height: normal;
+}
+
+/* Pygments codehilite https://pythonhosted.org/Markdown/extensions/code_hilite.html */
+.hll{background-color:#ffc}.c{color:#408080;font-style:italic}.err{border:1px solid #f00}.k{color:#008000;font-weight:bold}.o{color:#666}.ch{color:#408080;font-style:italic}.cm{color:#408080;font-style:italic}.cp{color:#bc7a00}.cpf{color:#408080;font-style:italic}.c1{color:#408080;font-style:italic}.cs{color:#408080;font-style:italic}.gd{color:#a00000}.ge{font-style:italic}.gr{color:#f00}.gh{color:#000080;font-weight:bold}.gi{color:#00a000}.go{color:#888}.gp{color:#000080;font-weight:bold}.gs{font-weight:bold}.gu{color:#800080;font-weight:bold}.gt{color:#04d}.kc{color:#008000;font-weight:bold}.kd{color:#008000;font-weight:bold}.kn{color:#008000;font-weight:bold}.kp{color:#008000}.kr{color:#008000;font-weight:bold}.kt{color:#b00040}.m{color:#666}.s{color:#ba2121}.na{color:#7d9029}.nb{color:#008000}.nc{color:#00f;font-weight:bold}.no{color:#800}.nd{color:#a2f}.ni{color:#999;font-weight:bold}.ne{color:#d2413a;font-weight:bold}.nf{color:#00f}.nl{color:#a0a000}.nn{color:#00f;font-weight:bold}.nt{color:#008000;font-weight:bold}.nv{color:#19177c}.ow{color:#a2f;font-weight:bold}.w{color:#bbb}.mb{color:#666}.mf{color:#666}.mh{color:#666}.mi{color:#666}.mo{color:#666}.sb{color:#ba2121}.sc{color:#ba2121}.sd{color:#ba2121;font-style:italic}.s2{color:#ba2121}.se{color:#b62;font-weight:bold}.sh{color:#ba2121}.si{color:#b68;font-weight:bold}.sx{color:#008000}.sr{color:#b68}.s1{color:#ba2121}.ss{color:#19177c}.bp{color:#008000}.vc{color:#19177c}.vg{color:#19177c}.vi{color:#19177c}.il{color:#666}
+
+/* Response modal always full height */
+#response-modal .modal-body, #help-modal .modal-body {
+    height: calc(100vh - 200px);
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+/* JSON syntax highlighting */
+#response-modal .string { color: green; }
+#response-modal .number { color: darkorange; }
+#response-modal .boolean { color: blue; }
+#response-modal .null { color: magenta; }
+#response-modal .key { color: red; }
+
+.module-title {
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+}
+
+.panel-heading {
+    padding: 0;
+}
+
+.panel-body table td {
+    vertical-align: middle !important;
+}
+
+.service-title {
+    display: flex;
+    cursor: pointer;
+}
+
+.service-method {
+    font-size: 100%;
+    min-width: 80px;
+    margin: 0 8px 0 0;
+    padding: 8px;
+    border-radius: 0;
+}
+.service-method-delete { background-color: var(--bg-color-method-delete); }
+.service-method-get { background-color: var(--bg-color-method-get); }
+.service-method-post { background-color: var(--bg-color-method-post); }
+.service-method-put { background-color: var(--bg-color-method-put); }
+.service-method-unknown { background-color: var(--bg-color-method-unknown); }
+
+.service-path, .service-description {
+    padding: 8px;
+}
+
+.service-description {
+    margin-left: auto;
+}
+.service-description-delete { color: var(--color-method-delete); }
+.service-description-get { color: var(--color-method-get); }
+.service-description-post { color: var(--color-method-post); }
+.service-description-put { color: var(--color-method-put); }
+.service-description-unknown { color: var(--color-method-unknown); }
+
+.service-doc-unknown { border-left-color: var(--bg-color-method-unknown); background: rgba(210, 214, 222, 0.2); }
+.service-doc-unknown h4 { color: var(--bg-color-method-unknown); }
+.service-doc-post { border-left-color: var(--bg-color-method-post); background: rgba(60, 118, 61, 0.2); }
+.service-doc-post h4 { color: var(--bg-color-method-post); }
+.service-doc-delete { border-left-color: var(--bg-color-method-delete); background: rgba(206, 72, 68, 0.2); }
+.service-doc-delete h4 { color: var(--bg-color-method-delete); }
+.service-doc-put { border-left-color: var(--bg-color-method-put); background: rgba(170, 103, 8, 0.2); }
+.service-doc-put h4 { color: var(--bg-color-method-put); }
+.service-doc-get { border-left-color: var(--bg-color-method-get); background: rgba(27, 128, 158, 0.2); }
+.service-doc-get h4 { color: var(--bg-color-method-get); }
+
+.service-panel-body-unknown { border-top: 1px solid var(--bg-color-method-unknown) !important; }
+.service-panel-body-post { border-top: 1px solid var(--bg-color-method-post) !important; }
+.service-panel-body-delete { border-top: 1px solid var(--bg-color-method-delete) !important; }
+.service-panel-body-put { border-top: 1px solid var(--bg-color-method-put) !important; }
+.service-panel-body-get { border-top: 1px solid var(--bg-color-method-get) !important; }
+
+/* Form input error */
+.input-error {
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 2px 2px 2px 12px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
+}
