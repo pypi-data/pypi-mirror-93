@@ -1,0 +1,4 @@
+[console_scripts]
+apstraGo-auto = apstraGo.apstraGoAuto:main
+apstraGo-yaml = apstraGo.apstraGoYaml:main
+
