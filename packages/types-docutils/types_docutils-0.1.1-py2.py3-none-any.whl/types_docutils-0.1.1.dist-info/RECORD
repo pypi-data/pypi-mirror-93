@@ -1,0 +1,13 @@
+docutils-stubs/METADATA.toml,sha256=Aifch5_aFA1_C4H8rzPLSYRxUTrlebLMBCN5vw2TWu4,16
+docutils-stubs/__init__.pyi,sha256=3fBxcSppJr6EOEcUojvflG3Eegg7lv2Qp0dNQQILrP4,63
+docutils-stubs/examples.pyi,sha256=3DheJVl7ojvJt4_YF7b1hRFNExi-vO9IWxtfojfi0uo,80
+docutils-stubs/nodes.pyi,sha256=yxmAtZCJ_mCnQ6pH3u3qACugJ_Tpis4DrrkGGTyIcTk,203
+docutils-stubs/parsers/__init__.pyi,sha256=3fBxcSppJr6EOEcUojvflG3Eegg7lv2Qp0dNQQILrP4,63
+docutils-stubs/parsers/rst/__init__.pyi,sha256=3fBxcSppJr6EOEcUojvflG3Eegg7lv2Qp0dNQQILrP4,63
+docutils-stubs/parsers/rst/nodes.pyi,sha256=3fBxcSppJr6EOEcUojvflG3Eegg7lv2Qp0dNQQILrP4,63
+docutils-stubs/parsers/rst/roles.pyi,sha256=7P4PG1OuDMfSK1DnTQzcOtAeQVqUViHtNXrn3G8hjCo,418
+docutils-stubs/parsers/rst/states.pyi,sha256=qb0d-B857-wAVpdJ7vT06HNQRkpaTDj1YXl3cOWzqVs,115
+types_docutils-0.1.1.dist-info/METADATA,sha256=7lapsRvOYQCWMly-oeplPotbEcZDWktYspV1TsJpjZ0,798
+types_docutils-0.1.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+types_docutils-0.1.1.dist-info/top_level.txt,sha256=vyDyMMYiYP7uyeu9ONI9__Hbi6PC8LVhc5k3RJpRGPU,15
+types_docutils-0.1.1.dist-info/RECORD,,
