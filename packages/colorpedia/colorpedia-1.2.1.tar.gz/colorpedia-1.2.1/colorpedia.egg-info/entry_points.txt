@@ -1,0 +1,4 @@
+[console_scripts]
+color = colorpedia.cli:entry_point_color
+colorpedia = colorpedia.cli:entry_point_colorpedia
+
