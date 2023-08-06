@@ -1,0 +1,3 @@
+[console_scripts]
+sra-quick-submit = sra_quick_submit_package.sra_quick_submit:main
+
