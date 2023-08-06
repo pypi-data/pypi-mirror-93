@@ -1,0 +1,16 @@
+README.md
+predict_phytolrr.py
+setup.py
+phytolrr_predictor/__init__.py
+phytolrr_predictor/resources/__init__.py
+phytolrr_predictor/resources/results.html
+phytolrr_predictor/tools/__init__.py
+phytolrr_predictor/tools/exception.py
+phytolrr_predictor/tools/motifs.py
+phytolrr_predictor/tools/pssm_matrix.py
+predict_phytolrr.egg-info/PKG-INFO
+predict_phytolrr.egg-info/SOURCES.txt
+predict_phytolrr.egg-info/dependency_links.txt
+predict_phytolrr.egg-info/entry_points.txt
+predict_phytolrr.egg-info/requires.txt
+predict_phytolrr.egg-info/top_level.txt

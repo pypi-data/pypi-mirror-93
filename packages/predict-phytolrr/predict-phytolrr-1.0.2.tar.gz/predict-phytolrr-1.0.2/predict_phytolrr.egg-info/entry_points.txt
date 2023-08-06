@@ -1,0 +1,3 @@
+[console_scripts]
+predict-phytolrr = predict_phytolrr:main
+
