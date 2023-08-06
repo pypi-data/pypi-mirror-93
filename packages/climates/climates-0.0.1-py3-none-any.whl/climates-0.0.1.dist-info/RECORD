@@ -1,0 +1,10 @@
+climates/__init__.py,sha256=h0tUquiV51ocoM9HluDQAGVLOWiLMTkEn5Z_U5CrJ_o,3697
+climates/conftest.py,sha256=bAc2eSGRq3TKWSKUvDUTEi3gzsZNQXXNy7pvPepNhUQ,677
+climates/parameters.py,sha256=TixzWmyPTGTI4XizqcisyQJ8pR3w9km7wvOoRcxdQvI,2138
+climates/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+climates/test_climates.py,sha256=Iu4NNi9SbDTQUvXKBRlvfsJo0IAMu-_Z977i-0YTzNc,5473
+climates-0.0.1.dist-info/LICENSE,sha256=AhY914M1l8Aqnwep5HbIxwT5332V1xGSY8kfSIbsJUg,1123
+climates-0.0.1.dist-info/METADATA,sha256=0-ig3jc3qUACmYIlKcsgnpgqAiE3jyECLKBpC2njuHg,921
+climates-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+climates-0.0.1.dist-info/top_level.txt,sha256=eTqpsU37al0AN5QvXSM8twSiIEFFkzVWHkC5mRHY4Es,9
+climates-0.0.1.dist-info/RECORD,,
