@@ -1,0 +1,6 @@
+README.md
+setup.py
+vuies.egg-info/PKG-INFO
+vuies.egg-info/SOURCES.txt
+vuies.egg-info/dependency_links.txt
+vuies.egg-info/top_level.txt
