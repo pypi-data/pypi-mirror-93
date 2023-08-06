@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: ani_cache
+Version: 0.0.1
+Summary: Cache-aware ANI calculations.
+Home-page: http://pypi.python.org/pypi/ani_cache/
+Author: Donovan Parks
+Author-email: donovan.parks@gmail.com
+License: GPL3
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
