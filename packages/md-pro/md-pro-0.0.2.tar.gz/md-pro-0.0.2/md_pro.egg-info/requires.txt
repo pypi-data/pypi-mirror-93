@@ -1,0 +1,9 @@
+scipy
+numpy
+matplotlib
+argparse
+logging
+igraph
+pycairo
+plotly
+pandas
