@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: soybean
+Version: 0.0.1
+Summary: A tiny message-queue application framwork
+Home-page: https://github.com/lcgong/soybean
+Author: Chenggong Lyu
+Author-email: lcgong@gmail.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Utilities
