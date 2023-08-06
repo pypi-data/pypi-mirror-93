@@ -1,0 +1,26 @@
+future>=0.16.0
+six>=1.10.0
+Click<8.0,>=7.0
+pyyaml<6.0,>=3.12
+
+[:python_version < "3.4"]
+pathlib2==2.3.3
+
+[linter]
+flake8
+flake8-builtins
+flake8-pep3101
+flake8-print
+flake8-quotes
+
+[linter:python_version > "3.5"]
+flake8-broken-line
+flake8-bugbear
+flake8-comprehensions
+flake8-eradicate
+
+[tests]
+pyfakefs
+pytest
+pytest-cov
+coverage

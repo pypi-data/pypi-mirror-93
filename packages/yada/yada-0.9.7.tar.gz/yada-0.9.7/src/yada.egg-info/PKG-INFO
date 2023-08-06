@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: yada
+Version: 0.9.7
+Summary: Yet another dotfile aggregator
+Home-page: https://github.com/apetresc/yada
+Author: Adrian Petrescu
+Author-email: adrian@apetre.sc
+License: UNKNOWN
+Description: 
+        # YADA
+        
+        [![Build Status](https://travis-ci.com/apetresc/yada.svg?branch=master)](https://travis-ci.com/apetresc/yada)
+        [![PyPI version](https://badge.fury.io/py/yada.svg)](https://badge.fury.io/py/yada)
+        
+        Yet Another Dotfile Aggregator
+        
+Platform: UNKNOWN
+Requires-Python: >=2.7.15, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*
+Description-Content-Type: text/markdown
+Provides-Extra: tests
+Provides-Extra: linter
