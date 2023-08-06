@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: PBC4cip
+Version: 0.0.0.1
+Summary: PBC4cip classifier for class imbalence problems
+Home-page: https://github.com/octavioloyola/PBC4cip
+Author: Ernesto Ramírez Sáyago, Miguel Angel Medina Pérez
+Author-email: A00513925@itesm.mx, migue@tec.mx
+License: UNKNOWN
+Description: # PBC4cip
+        PBC4cip is a machine learning package used to handle class imbalanced prediction problems.
+        
+        ## Built With
+        
+        * [Pandas](https://pandas.pydata.org) - DataFrame framework
+        * [tqdm](https://tqdm.github.io/) - Progress bar helper
+        * [Numpy](https://numpy.org) - Numpy Library
+        
+        ## Getting Started
+        To have an idea on how to run the program just see the example located in src/TestProg.py
+        The main idea is to run either src/TestProg.py or src/PBC4cip.CLI.py
+        
+        There are various command line arguments that can be passed to the program, these can be found by running python src/PBC4cip.CLI.py --help.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
