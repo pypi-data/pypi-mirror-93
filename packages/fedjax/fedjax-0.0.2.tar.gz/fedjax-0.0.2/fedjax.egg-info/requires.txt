@@ -1,0 +1,6 @@
+dm-haiku
+frozendict
+jax
+jaxlib
+optax
+tensorflow-federated
