@@ -1,0 +1,12 @@
+common_wrangler/__init__.py,sha256=TxWDoDQBnq47-529DAk-0u2u_Yd0BNcSQ_Dmruy-Quk,435
+common_wrangler/_version.py,sha256=X1gQemeIC9-7KIBZqCnHG3w5xI88FBZu6v1ebmlVOAU,499
+common_wrangler/add2dict.py,sha256=IxhV0yJass_qm48Cejr_Owc-oyUjNW6lp9b_oUrDwv0,2796
+common_wrangler/common.py,sha256=sCsL0e6TnQTP8PldAtItQN2RZ-cLuwuom3FlMU5vh18,67341
+common_wrangler/fill_tpl.py,sha256=5lMZtZ9fTE_3E1uPxb1c0R16KLRr1F7oSHxjneZ5VPk,11704
+common_wrangler/rename_files.py,sha256=_w1cmKPTmKEyBiA6OQ2RbTWqQWeJoVoRaoR8grAcSkc,5499
+common_wrangler-0.3.6.7.dist-info/LICENSE,sha256=iazapdXUeYu60pmFMxYkZrWrUOhYXy3Hc4qwB1_pMcw,1064
+common_wrangler-0.3.6.7.dist-info/METADATA,sha256=pO2UpwlvhVdaHgIdWwej131uvFJv_3r6-6P-v8Okzfw,470
+common_wrangler-0.3.6.7.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+common_wrangler-0.3.6.7.dist-info/entry_points.txt,sha256=yhjGvO3t0De8TP1AbjMYqzkj7R5Xq2jUycxJnXFycMA,150
+common_wrangler-0.3.6.7.dist-info/top_level.txt,sha256=Hj9jdq0IDLmQvku3Z51VVh4hv6msijsWsJZU1iSKbgU,16
+common_wrangler-0.3.6.7.dist-info/RECORD,,
