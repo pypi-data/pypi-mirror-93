@@ -1,0 +1,9 @@
+README.md
+setup.py
+Pymenta.egg-info/PKG-INFO
+Pymenta.egg-info/SOURCES.txt
+Pymenta.egg-info/dependency_links.txt
+Pymenta.egg-info/requires.txt
+Pymenta.egg-info/top_level.txt
+pymenta/Ambiente.py
+pymenta/__init__.py
