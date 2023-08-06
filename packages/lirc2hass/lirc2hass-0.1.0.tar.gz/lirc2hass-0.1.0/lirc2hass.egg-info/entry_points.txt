@@ -1,0 +1,3 @@
+[console_scripts]
+lirc2hass = lirc2hass.lirc2hass:main
+

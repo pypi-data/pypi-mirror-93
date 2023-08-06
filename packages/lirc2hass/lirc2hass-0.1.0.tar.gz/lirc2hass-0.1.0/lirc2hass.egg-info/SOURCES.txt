@@ -1,0 +1,10 @@
+README.md
+setup.py
+lirc2hass/__init__.py
+lirc2hass/lirc2hass.py
+lirc2hass.egg-info/PKG-INFO
+lirc2hass.egg-info/SOURCES.txt
+lirc2hass.egg-info/dependency_links.txt
+lirc2hass.egg-info/entry_points.txt
+lirc2hass.egg-info/requires.txt
+lirc2hass.egg-info/top_level.txt
