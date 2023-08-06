@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: dockerll
+Version: 0.1.0
+Summary: Docker layer labeler - put tags on the intermediary stages of a multistage docker build
+License: MIT
+Author: Mardoqueu Pimentel
+Author-email: mardoqueu.pimentel@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=7.1.2,<8.0.0)

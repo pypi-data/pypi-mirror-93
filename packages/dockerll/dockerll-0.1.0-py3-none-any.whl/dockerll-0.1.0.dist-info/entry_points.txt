@@ -1,0 +1,3 @@
+[console_scripts]
+dockerll=dockerll.__main__:run
+
