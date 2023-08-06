@@ -1,0 +1,8 @@
+gwapi/__init__.py,sha256=5TVDdg56zvQeLrDd_RAX13qyy8vV0655t9qRCoSslYI,40
+gwapi/auth.py,sha256=1nCyezjMfg-MUe_N_CpSpqMD3XkzjWq6cRyVooaVZ2M,1171
+gwapi/data.py,sha256=vi8HInHhajvja9No5l4oDbcNW01t2wyrhDbn5fbw3QY,1759
+gwapi_genwch-0.0.4.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+gwapi_genwch-0.0.4.dist-info/METADATA,sha256=oFCDC9JwDfJ-vOlg2mVBcQMh4pSxOe-XZNjjrgUd-WU,1080
+gwapi_genwch-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+gwapi_genwch-0.0.4.dist-info/top_level.txt,sha256=0oUgXTdlRfyRvUCLzDfR6-tG2zE4BrAbgJoQkwiau7k,6
+gwapi_genwch-0.0.4.dist-info/RECORD,,
