@@ -1,0 +1,4 @@
+pyshacl==0.14.2
+rdflib==5.0.0
+rdflib-jsonld==0.5.0
+wxPython==4.1.1
