@@ -1,0 +1,17 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+mysdk/__init__.py
+mysdk/apihelper.py
+mysdk/urls.py
+mysdk/utils.py
+mysdk/version.py
+pyMyShareSDK.egg-info/PKG-INFO
+pyMyShareSDK.egg-info/SOURCES.txt
+pyMyShareSDK.egg-info/dependency_links.txt
+pyMyShareSDK.egg-info/requires.txt
+pyMyShareSDK.egg-info/top_level.txt
+tests/__init__.py
+tests/test_testing.py
