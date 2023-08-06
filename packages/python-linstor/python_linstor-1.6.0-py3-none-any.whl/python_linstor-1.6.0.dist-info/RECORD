@@ -1,0 +1,17 @@
+linstor/__init__.py,sha256=g6BoDq2vTyRqyG17TXF1yt-xkR5TnhCFZIVJOljdlrI,646
+linstor/config.py,sha256=Xw5zInRN302NT8bcZ4w6Cab85kdp3gHAFBIXJ5qYKU4,2057
+linstor/errors.py,sha256=BQk0WXeZ3f5iXGQ0P6lc4ThwrBgLSsFI0N7Wm9I5eTc,1839
+linstor/kv.py,sha256=zPonJO5FI57xgwKDIq_166GbE_mLJQizlPzqMVlg0lc,7831
+linstor/linstorapi.py,sha256=T2HaMxIxWbh_DWP3eL9iIvR54cSnQu0cv3UVEtQfPh8,124337
+linstor/properties.py,sha256=Cozde1tui67mWHJUZmWC26hwwvz8RbV8YmLiDk5lMAQ,171998
+linstor/resource.py,sha256=vwPDsPu6x-m9o_qnRu_XW--ZzPyGaDW1t-9Fg4aez5k,32742
+linstor/resourcegroup.py,sha256=yrZTDy3i3zLcjsNIyv5QZVoP_iILvnqHsPwxa2lI3uU,10800
+linstor/responses.py,sha256=Tx6jKeRuAUp36Vf7S4aoJ1KPMkHpC1zJPj64eUuf8fE,55346
+linstor/sharedconsts.py,sha256=SlZ4YEOVjFuUrbO48WsqUrOlJpKre6t3n_U5EXsZiCs,40112
+linstor/size_calc.py,sha256=f8SghpES-02Ana4dSuELVfkH-mCPKXXQTi3XKut-qSM,6242
+linstor/version.py,sha256=GXL-pi95MCVByDlCjcR2QRfd6VmTmu5Erp222m3SkMU,18
+python_linstor-1.6.0.dist-info/COPYING,sha256=xh8S2nza1Sa9y-1HpMCmA-YNu_2vi2aTPNCI6RMsMD8,32472
+python_linstor-1.6.0.dist-info/METADATA,sha256=YXeYc_6hIYOoc9Ic8BAxeFEQUaAyc4fCOa5iULr2HbA,494
+python_linstor-1.6.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+python_linstor-1.6.0.dist-info/top_level.txt,sha256=LUX3erSDCN0AQQucmLHCMmzCudBnfBWILEwmm27-rI0,8
+python_linstor-1.6.0.dist-info/RECORD,,
