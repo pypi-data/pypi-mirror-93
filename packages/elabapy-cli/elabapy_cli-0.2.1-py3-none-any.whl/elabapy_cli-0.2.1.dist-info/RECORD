@@ -1,0 +1,17 @@
+elabapy_cli/__init__.py,sha256=Mwv9V44av_NxsJeIvbPTvxpucucmaGTHTZ_jQPBkx9k,829
+elabapy_cli/main.py,sha256=vqZMNxha6TebKgr_2HwgCPnAQkFDqrsPze4JfkEvY4M,1114
+elabapy_cli/version.py,sha256=zXdIili2dlRKEfu9MbRhfjWzXdws4ojHb2hL6Xgdmgw,803
+elabapy_cli/cli/__init__.py,sha256=Mgrnyc1Hwgd7GUwB8lFCCkQ2-jrL4G7t1nnMWA3ZCqg,779
+elabapy_cli/cli/backups.py,sha256=pxXXadn-04rZWBWSnHR9M9xsQW-ep_ouv8oOOWGq3J4,1549
+elabapy_cli/cli/decorator.py,sha256=PyUBZzQP8UrZPb8--UNIUfZRoa6VnymLQ1DPjNA3akc,2622
+elabapy_cli/cli/events.py,sha256=EShK-jUvxeUhERcnnbzQ9vaoct8IZfvXIK1fKdCoFZI,2047
+elabapy_cli/cli/experiments.py,sha256=iP5TklKQOFQbjNttLJH8vTp-OBbxhlXUsE1MjhMXjrg,5188
+elabapy_cli/cli/items.py,sha256=jgDNZ305OIGeljxBA7Jp9N3R4qi7rqpT-lQkJicfmGA,4282
+elabapy_cli/lib/__init__.py,sha256=I1zjnRSYRTri_mtf0CuyOXxbJEdRiiDgp_wiqcNgGgM,779
+elabapy_cli/lib/climanager.py,sha256=ae3LVd7gyBOMxKrteYxxtRoJ8F7g5cFQCX2ydS_9fKw,14843
+elabapy_cli-0.2.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+elabapy_cli-0.2.1.dist-info/METADATA,sha256=N_A4PffawbzKRQqkdZwqFU45CZv9iEWOJnMeG-SxoV4,4001
+elabapy_cli-0.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+elabapy_cli-0.2.1.dist-info/entry_points.txt,sha256=Xh59IH0vLCH8KYuZKTiVGY8JllJk4RmjPzH5tWOcC3I,54
+elabapy_cli-0.2.1.dist-info/top_level.txt,sha256=9xDvRxavXw_wYwdlordeZZD0WSvayRr0z2BDCC7qODo,12
+elabapy_cli-0.2.1.dist-info/RECORD,,
