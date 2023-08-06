@@ -1,0 +1,37 @@
+{% extends "admin/change_list.html" %}
+
+{% load i18n %}
+
+{% block content_title %}
+    <h1> {% trans 'System Monitor' %} </h1>
+{% endblock %}
+
+{% block result_list %}
+
+<div id="content-main">
+    <div class="results">
+        <div>
+            <h2> {% trans 'Host information' %} </h2>
+            <dl>
+                {% for info in static_overview %}
+                    <dt>{{ info.name }}:</dt>
+                    <dd>{{ info.value }}</dd>
+                {% endfor %}
+            </dl>
+        </div>
+        <h2> {% trans 'Status' %} </h2>
+        <p>
+            Time to Update: 
+            <button class="button interval" type="button" data-value="1000"> 1s</button>
+            <button class="button interval" type="button" data-value="2000" disabled> 2s</button>
+            <button class="button interval" type="button" data-value="5000"> 5s</button>
+            -
+            <button class="button interval" type="button" data-value="10000">10s</button>
+            <button class="button interval" type="button" data-value="30000">30s</button>
+            <button class="button interval" type="button" data-value="60000">60s</button>
+        </p>
+        <div id="overview"></div>
+    </div>
+</div>
+
+{% endblock %}

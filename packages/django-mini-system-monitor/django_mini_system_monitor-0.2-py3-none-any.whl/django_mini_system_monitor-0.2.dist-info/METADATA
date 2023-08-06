@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: django-mini-system-monitor
+Version: 0.2
+Summary: System Status in Django Admin
+Home-page: https://github.com/dannluciano/django-mini-system-monitor
+Author: Dann Luciano
+Author-email: dannluciano@ifpi.edu.br
+License: BSD
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3
+Requires-Dist: Django (>=3)
+Requires-Dist: psutil (>=5.8)
+
+UNKNOWN
+
+
