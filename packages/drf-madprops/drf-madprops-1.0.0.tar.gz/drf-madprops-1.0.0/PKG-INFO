@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: drf-madprops
+Version: 1.0.0
+Summary: DRF library to operate resource's properties as a dictionary
+Home-page: https://github.com/yola/drf-madprops
+Author: Yola
+Author-email: engineers@yola.com
+License: MIT (Expat)
+Description: UNKNOWN
+Platform: UNKNOWN
