@@ -1,0 +1,4 @@
+[console_scripts]
+nutcracker=nutcracker.runner:app
+smush=nutcracker.smush.runner:app
+
