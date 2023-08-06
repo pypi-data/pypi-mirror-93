@@ -1,0 +1,14 @@
+matplotcheck/__init__.py,sha256=UBoPNQRWmJNnAcaqdWJUx0EqujPo3RM-AD3FMlRQaI4,88
+matplotcheck/autograde.py,sha256=XKTwjR4RZ_eHaib6pWJPUECrP48Wdf9RExCUXgWQYlE,3003
+matplotcheck/base.py,sha256=F4IUqvAEr60RloJUDx8bT-1TrrZkRqxZSZNuXhG-dNU,50839
+matplotcheck/cases.py,sha256=-dVRNL8FT_UlBxCOLoX0eLcgjakMGlztusm_o39gB1w,32399
+matplotcheck/folium.py,sha256=CrFAxbz8xEbmA0E4ljpePAoQUO03mGWPWmX3IPh4-3U,1172
+matplotcheck/notebook.py,sha256=eTsPUuPPsuEnft0vMcegeeIvzksX8TIPtBD9dELtruM,2781
+matplotcheck/raster.py,sha256=mD_LxOmywSlw75j5RmVPHTUC5Xn6X3mD3-3Qu5uAtq4,8875
+matplotcheck/timeseries.py,sha256=4Ddda9NPAp6psxPR4xnY7wSWdlTL-z6cTRTur7KHmNs,7351
+matplotcheck/vector.py,sha256=BIBSEBVpGYJOlh9kdP1-QLMlyBK8lCtRDm9Jiu9dxcw,20618
+matplotcheck-0.1.4.dist-info/LICENSE,sha256=2REFx6jA-so9etzAsloXfu4BO-idKoDBpZ82gpHxg4w,1508
+matplotcheck-0.1.4.dist-info/METADATA,sha256=-ksUKhpumacJAJ2xtqDbgxdeP6ZlnlrhFcU7zMhKv14,6711
+matplotcheck-0.1.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+matplotcheck-0.1.4.dist-info/top_level.txt,sha256=Y4zHCKwyzlHsnlEGnlmpWvR36kB981K1dt7elLJd0os,13
+matplotcheck-0.1.4.dist-info/RECORD,,
