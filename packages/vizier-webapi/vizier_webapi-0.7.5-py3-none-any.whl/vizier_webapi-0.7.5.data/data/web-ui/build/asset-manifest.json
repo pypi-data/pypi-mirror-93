@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/vizier-db/api/v1/web-ui/static/css/main.aa7ef7bd.chunk.css",
+    "main.js": "/vizier-db/api/v1/web-ui/static/js/main.9f2f85d1.chunk.js",
+    "main.js.map": "/vizier-db/api/v1/web-ui/static/js/main.9f2f85d1.chunk.js.map",
+    "runtime-main.js": "/vizier-db/api/v1/web-ui/static/js/runtime-main.fc3be881.js",
+    "runtime-main.js.map": "/vizier-db/api/v1/web-ui/static/js/runtime-main.fc3be881.js.map",
+    "static/css/2.c8bcaf1d.chunk.css": "/vizier-db/api/v1/web-ui/static/css/2.c8bcaf1d.chunk.css",
+    "static/js/2.0f2cb59f.chunk.js": "/vizier-db/api/v1/web-ui/static/js/2.0f2cb59f.chunk.js",
+    "static/js/2.0f2cb59f.chunk.js.map": "/vizier-db/api/v1/web-ui/static/js/2.0f2cb59f.chunk.js.map",
+    "index.html": "/vizier-db/api/v1/web-ui/index.html",
+    "static/css/2.c8bcaf1d.chunk.css.map": "/vizier-db/api/v1/web-ui/static/css/2.c8bcaf1d.chunk.css.map",
+    "static/css/main.aa7ef7bd.chunk.css.map": "/vizier-db/api/v1/web-ui/static/css/main.aa7ef7bd.chunk.css.map",
+    "static/js/2.0f2cb59f.chunk.js.LICENSE.txt": "/vizier-db/api/v1/web-ui/static/js/2.0f2cb59f.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/vizier-db/api/v1/web-ui/static/media/outline-icons.ddae9b1b.woff",
+    "static/media/font-awesome.css": "/vizier-db/api/v1/web-ui/static/media/fontawesome-webfont.f691f37e.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fc3be881.js",
+    "static/css/2.c8bcaf1d.chunk.css",
+    "static/js/2.0f2cb59f.chunk.js",
+    "static/css/main.aa7ef7bd.chunk.css",
+    "static/js/main.9f2f85d1.chunk.js"
+  ]
+}
