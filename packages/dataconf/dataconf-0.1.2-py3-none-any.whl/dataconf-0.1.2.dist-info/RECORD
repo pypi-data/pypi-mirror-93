@@ -1,0 +1,10 @@
+dataconf/__init__.py,sha256=Dtt9PZmmQv83TiJfT1vmesrg3aJSFebjQ-hgBJ15x10,176
+dataconf/cli.py,sha256=FC3gBBT9ah50ZXbYfCKudKCfobLvF8nVD0Y56XXEPM8,871
+dataconf/exceptions.py,sha256=7YquQdBbCg9wgEylpsuocsjgJfrtFCUvVP8Xu5zOHrk,101
+dataconf/utils.py,sha256=qAwIUUsQHePWpF5Fb9Gpn7EKAGAax2PpJ7VjL5ou4q4,4775
+pyproject.toml,sha256=03KKmFMCFGcEAGA5NK2T80GUftTn750OMwsjrFSf9WY,737
+dataconf-0.1.2.dist-info/entry_points.txt,sha256=i-DcX_7g0IYtV8DVVD8liJLBVrH4x1NOpIEfEShIGyw,45
+dataconf-0.1.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dataconf-0.1.2.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+dataconf-0.1.2.dist-info/METADATA,sha256=5E2xuAKgbY8En7Yveo4u6qY-02byMhtT59E2HWnMEqM,2555
+dataconf-0.1.2.dist-info/RECORD,,
