@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: asan
+Version: 0.0.1
+Summary: The AWS Swiss Army Knife is a small tool that helps with various small tasks
+Home-page: https://gitlab.com/edthamm/aws-swiss-army-knife
+License: MIT
+Keywords: aws,devops,tooling
+Author: Eduard Thamm
+Author-email: eduard.thamm@thammit.at
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Dist: boto3 (>=1.16.63,<2.0.0)
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: tabulate (>=0.8.7,<0.9.0)
+Project-URL: Repository, https://gitlab.com/edthamm/aws-swiss-army-knife
+Description-Content-Type: text/x-rst
+
+AWS Swiss Army Knife
+====================
+
+This is a small tool for common aws tasks.
+
+There will be multiple sections here
+
