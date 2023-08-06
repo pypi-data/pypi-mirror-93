@@ -1,0 +1,11 @@
+README.md
+setup.py
+rccnlp/__init__.py
+rccnlp/sentiment.py
+rccnlp.egg-info/PKG-INFO
+rccnlp.egg-info/SOURCES.txt
+rccnlp.egg-info/dependency_links.txt
+rccnlp.egg-info/requires.txt
+rccnlp.egg-info/top_level.txt
+rccnlp/dic/pn_noun.json
+rccnlp/dic/pn_wago.json
