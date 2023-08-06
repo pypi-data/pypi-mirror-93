@@ -1,0 +1,3 @@
+[console_scripts]
+marburg_biobank_make_desktop_link = marburg_biobank.jupyter_venv_on_desktop:main
+
