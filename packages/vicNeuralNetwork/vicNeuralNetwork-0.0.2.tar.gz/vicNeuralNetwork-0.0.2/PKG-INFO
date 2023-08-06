@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: vicNeuralNetwork
+Version: 0.0.2
+Summary: This is self-defined neural network framework for self-learning
+Home-page: UNKNOWN
+Author: Victor
+Author-email: 25333456@qq.com
+License: UNKNOWN
+Description: ## About
+        
+        This is a self-designed deep learning framework created by victor @Hangzhou
+        
+        
+        ## Features
+        + Define Dynamic Computing Graph
+        + Define Neural Network Operator
+        + define Linear, Sigmoid, L2_loss
+        + Auto_Diff Computing
+        + Auto-Feedforward and Backward
+        
+        ## Remain
+        + Classificaiton
+        + Cross-Entropy
+        + CNN, RNN
+        
+        # Connection
+        whatchat:alwayslearn
+        Mail:2534535@qq.com
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

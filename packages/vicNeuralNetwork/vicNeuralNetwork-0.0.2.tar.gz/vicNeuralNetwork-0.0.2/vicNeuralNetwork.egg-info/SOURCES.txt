@@ -1,0 +1,11 @@
+README.md
+setup.py
+neural_network/__init__.py
+neural_network/nn/__init__.py
+neural_network/nn/core.py
+neural_network/utils/__init__.py
+neural_network/utils/utillties.py
+vicNeuralNetwork.egg-info/PKG-INFO
+vicNeuralNetwork.egg-info/SOURCES.txt
+vicNeuralNetwork.egg-info/dependency_links.txt
+vicNeuralNetwork.egg-info/top_level.txt
