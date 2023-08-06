@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: electrumX
+Version: 1.16.0
+Summary: ElectrumX Server
+Home-page: https://github.com/kyuupichan/electrumx
+Author: Neil Booth
+Author-email: kyuupichan@gmail.com
+License: MIT Licence
+Download-URL: https://github.com/kyuupichan/electrumX/archive/1.16.0.tar.gz
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: AsyncIO
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Database
+Classifier: Topic :: Internet
+Requires-Python: >=3.8
+Requires-Dist: aiorpcX[ws] (<0.20,>=0.19)
+Requires-Dist: attrs
+Requires-Dist: plyvel
+Requires-Dist: pylru
+Requires-Dist: aiohttp (<4.0,>=3.3)
+Provides-Extra: rocksdb
+Requires-Dist: python-rocksdb (>=0.6.9) ; extra == 'rocksdb'
+Provides-Extra: uvloop
+Requires-Dist: uvloop (>=0.14) ; extra == 'uvloop'
+
+Server implementation for the Electrum protocol
+
+
