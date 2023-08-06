@@ -1,0 +1,9 @@
+apppath
+numpy
+six
+sorcery
+asttokens
+snoop
+pytest
+cloudpickle
+wrapt
