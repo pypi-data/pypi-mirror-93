@@ -1,0 +1,4 @@
+gwcomm-genwch
+Werkzeug==0.16.1
+pandas
+pyarrow==0.16.0
