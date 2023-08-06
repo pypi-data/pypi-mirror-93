@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: cubicweb-counters
+Version: 0.1.1
+Summary: sequence/counter classes
+Home-page: http://www.cubicweb.org/project/cubicweb-counters
+Author: LOGILAB S.A. (Paris, FRANCE)
+Author-email: contact@logilab.fr
+License: LGPL
+Platform: UNKNOWN
+Requires-Dist: cubicweb (<3.27,>=3.24.0)
+
+Summary
+-------
+sequence/counter classes
+
+
