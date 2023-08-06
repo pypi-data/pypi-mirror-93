@@ -1,0 +1,4 @@
+requests>=2.4
+dnspython>=2.0
+beautifulsoup4
+pyxdg

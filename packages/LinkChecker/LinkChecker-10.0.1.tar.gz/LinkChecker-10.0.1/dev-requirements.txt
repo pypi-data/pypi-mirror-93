@@ -1,0 +1,8 @@
+# for testing:
+miniboa
+parameterized
+pdfminer
+pyftpdlib
+pyopenssl
+pytest
+pytest-xdist
