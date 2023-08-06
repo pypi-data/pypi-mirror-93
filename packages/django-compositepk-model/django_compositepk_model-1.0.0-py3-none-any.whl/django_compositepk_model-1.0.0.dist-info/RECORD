@@ -1,0 +1,10 @@
+cpkmodel/__init__.py,sha256=6h2Q3Li90uB8WaLChC7Pwb7JaTRADM29YxPS2emloJY,302
+cpkmodel/compositekey.py,sha256=6a0ZCEaUJAidEznpyl1-5usQ202LG6RUvRyuWBLhxEo,1286
+cpkmodel/constants.py,sha256=_cOtoi83X1XyPUJX0GUxCdPJ72uOkjLeifDy6MWn_YE,160
+cpkmodel/cpkmodel.py,sha256=c7HC88Td_tUG0WsSYWY56_eJNToRkWBbCl3LAOJpZKU,4281
+cpkmodel/cpkquery.py,sha256=da5L6BJvVZ0EPwLmG6vIQWkRBh028GfWEngSJg--x8o,6405
+django_compositepk_model-1.0.0.dist-info/LICENSE,sha256=sYsaA92CzSANUfCJr9KIDHLdA18hZeAZyoz2VyvfglE,1086
+django_compositepk_model-1.0.0.dist-info/METADATA,sha256=4oiv6MB5lOlukqYq442QG7m3DMhxFW01DWgw4Xw-iO4,3545
+django_compositepk_model-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_compositepk_model-1.0.0.dist-info/top_level.txt,sha256=1hEo3JNcd95fv4Y71w8dE0DaP_NlxfrrOrbck2qSGjc,9
+django_compositepk_model-1.0.0.dist-info/RECORD,,
