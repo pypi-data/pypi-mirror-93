@@ -1,0 +1,15 @@
+mda/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+mda/analysis.py,sha256=jQH35cSVXrorlsCL7fhHdpWI2zORScCONG8xSGmV6tk,15052
+mda/cli.py,sha256=OdlaiSaqnpmu2zbeyj9uGM53fdtOBxq7OdAknwiTZ6I,630
+mda/elements.py,sha256=yE3Uqr32JBc4chptXg0JlkAhf1Zs5XeU4D1j-g9kw1w,3300
+mda/input.py,sha256=-S9yPLx0dtBKNUu5LFMGC0aXQuFvHJhcrjwZlCOKj54,3453
+mda/log.py,sha256=yU3NQt-bwTii19m346cVViFgErcfhSN9TQI60IHiRO0,261
+mda/order.py,sha256=gVQpUWfzlQ3Kr65_Nug1RmB1h2nNJOG-kccA6E_tk_Y,3842
+mda/paper.py,sha256=4v8zRKV7l_Lgi3cbh_xmbIYObGxLgZbFJdQAPa0-ssc,4286
+mda/util.py,sha256=ic-aoSZRDAm3xaTYF0EiHS75zb3OJXjJmAP79NPzYZ8,2688
+mda-0.0.3.dist-info/LICENSE,sha256=bsXUVjHEuOTGdZruj3lGe8mHZY594dtptWMtUxnQJFE,1062
+mda-0.0.3.dist-info/METADATA,sha256=5tGmrlPty-94EYPq-2Q8u7Xdkv8lLpEpKneTKwOljAA,2026
+mda-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mda-0.0.3.dist-info/entry_points.txt,sha256=drcRvY5bAfP3aIJJViwDsSKgjAaFXaTG7gL7su6GqJ8,37
+mda-0.0.3.dist-info/top_level.txt,sha256=Okhoh-C3IqbI_IlDgI7aYj-D6DuBhvhQSkhV3pN0klc,4
+mda-0.0.3.dist-info/RECORD,,
