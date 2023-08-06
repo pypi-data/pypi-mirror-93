@@ -1,0 +1,12 @@
+Cython
+Pillow
+cached-property
+forwardable
+imageio
+matplotlib
+msgpack
+numpy
+pulp
+ripser
+scikit-learn
+scipy
