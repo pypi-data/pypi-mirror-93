@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: drfi
+Version: 0.0.1
+Summary: DRFI remove background filter for thumbor
+Home-page: UNKNOWN
+Author: Hop Bui
+Author-email: vanhop3499@gmail.com
+License: UNKNOWN
+Description: Install DRFI model as a filter to remove background to use in thumbor
+Keywords: drfi thumbor
+Platform: UNKNOWN
