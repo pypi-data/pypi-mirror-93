@@ -1,0 +1,5 @@
+matching_network/__init__.py,sha256=xuY5MTHsoOabhjTsEjSs9TCo4Qx1S1_yaWCyvvCtSa0,321
+matching_network/main.py,sha256=L1CaINcbba74bkpwr5pXGpRv2FIsUSiqW7NvHn1VcEg,10248
+matching_network-0.0.6.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+matching_network-0.0.6.dist-info/METADATA,sha256=lPWTUJ2SWs3GZicQ1ui3SCdWfH-K_xsX7WwUbLKnXTg,2066
+matching_network-0.0.6.dist-info/RECORD,,
