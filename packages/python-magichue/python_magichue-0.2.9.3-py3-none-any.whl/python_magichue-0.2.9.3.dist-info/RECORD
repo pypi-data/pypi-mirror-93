@@ -1,0 +1,12 @@
+magichue/__init__.py,sha256=Eo05nRI8wKaks6XLVKfqbW-zyfs-fz8DTOdcKohAgsA,155
+magichue/bulb_types.py,sha256=TMd4pAVGCb9c1D2xAeuCqSoNhZXqoMtIJjJ3mKp4Cw8,289
+magichue/commands.py,sha256=mQ4JDyV_Uw9nJmZcXsl-oDdLhZwYo-IKxEjzjJuHy4Q,482
+magichue/discover.py,sha256=SQY4C9TTOFvE4B8CJcrZMzux31-x0no0CHAgbju3KAk,774
+magichue/magichue.py,sha256=NPfXGTFXlPaAYIVxOJi6MCyte87PPiny5LH1t4_aaQ4,11368
+magichue/modes.py,sha256=A3Mv6lRyPQgP1DcZdjLKABjbs1cPyatUXWUEtIxkQJg,5497
+magichue/utils.py,sha256=FSJd0wL2z25kXctyDY8ELC7hX8KFZ0_lWrk0axOaR_w,592
+python_magichue-0.2.9.3.dist-info/LICENSE,sha256=uxiTjzijzyyOoD5dF1JxGI196ED6g9F7Hq2nmYODxak,1064
+python_magichue-0.2.9.3.dist-info/METADATA,sha256=eEvYZ_jYY5Wws1L2J02aZesO9Sq3zdyhoh8UgMPCXpk,4493
+python_magichue-0.2.9.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+python_magichue-0.2.9.3.dist-info/top_level.txt,sha256=4H7tCkTfsL7rYzJxTaHU-Ko_7MWAtuKRMfd9XBxHr2U,9
+python_magichue-0.2.9.3.dist-info/RECORD,,
