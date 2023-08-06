@@ -1,0 +1,6 @@
+requests
+pdfminer==20181108
+pandas
+networkx
+matplotlib
+tqdm
