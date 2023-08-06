@@ -1,0 +1,3 @@
+[console_scripts]
+jobio = jobio.cli.cli:run
+
