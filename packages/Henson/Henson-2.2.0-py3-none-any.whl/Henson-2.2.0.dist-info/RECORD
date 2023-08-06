@@ -1,0 +1,17 @@
+Henson-2.2.0.dist-info/DESCRIPTION.rst,sha256=2fJxIHOdgakXTjXR_fWChYLoWXxLSUvbdK20rpFmkJ0,602
+Henson-2.2.0.dist-info/METADATA,sha256=33iNqoVD225VGUmPKy-WtNZ4vcfNZi346yH1kwinKe4,1642
+Henson-2.2.0.dist-info/RECORD,,
+Henson-2.2.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+Henson-2.2.0.dist-info/entry_points.txt,sha256=36jzWofEu9luQltVcErNTLoHr7_9j0Mzp8UxvRgITbI,62
+Henson-2.2.0.dist-info/metadata.json,sha256=MI3D6hV9tkdcsPVS1Ow1Y-ykzGkfEOMNIMBPp6yF9VQ,1313
+Henson-2.2.0.dist-info/top_level.txt,sha256=2iBkMBjFEgVPrI3-rdxtHa0VnNYSI0XwOHwTawLyUpw,7
+henson/__init__.py,sha256=KgncEUZAwAB58nuvG1FvqpZhRAa3FILYS4kL-kSmKnE,604
+henson/__main__.py,sha256=swWNK2GwrALMaG0Mw3jz5DJQ4q5m9jpTJuqa19-dsy8,121
+henson/base.py,sha256=MLcN6ohL2MU4hbjsxGbPiGkhizMKUylyOKWKTazGOxM,17864
+henson/cli.py,sha256=a1fFQ7FEpJDB-rayDm1xAhqajgQ7mXpbEyobfkuO_1g,14493
+henson/config.py,sha256=wgTXFrB8clUYtcmYVjxBpVYe_F3_jmEilTJGkidEDug,940
+henson/exceptions.py,sha256=gEyCnMVfPQenNnee-TRFAidqMWRbMKXYEG6PRMgo6k0,934
+henson/extensions.py,sha256=rVYQAOXkulU61zZXWlvy_fFYwvu5Ks1v0UoBrrdoSWA,3179
+henson/contrib/__init__.py,sha256=VBO_pZUAcOHQQMJfNP_JMNDSAAUaJJSI49JW0Ih2Dxg,33
+henson/contrib/retry/__init__.py,sha256=5jhVXjR0ZKVQR3j92tp69l08VkqCboAUy2ocCn3IVW8,5730
+henson/contrib/sphinx/__init__.py,sha256=PnFOdnpQ8PNmTbygRf9ofVv3eYrW6kU5EoSdqhHjbLQ,1810
