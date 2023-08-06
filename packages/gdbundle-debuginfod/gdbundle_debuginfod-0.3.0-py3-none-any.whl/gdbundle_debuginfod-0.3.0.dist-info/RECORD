@@ -1,0 +1,10 @@
+gdbundle_debuginfod/__init__.py,sha256=3wVEs2QD_7OcTlD97cZdCeizd2hUbJJ0GeIO8wQIjrk,22
+gdbundle_debuginfod/gdb_loader.py,sha256=7mCc8E37KmWfoK4sT19PP8XvkM28tFAb-zmlyLtLfOk,324
+gdbundle_debuginfod/lldb_loader.py,sha256=e31bIKwHc4RSVpSTpmvaCzD2CcJu9nIDgWtOzIaqIEo,307
+gdbundle_debuginfod/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gdbundle_debuginfod/scripts/dbgd_plugin.py,sha256=JdxOvCbs4Gpp6GC_coRnpGt-EnGnwPrRv4_aeZB5ki0,3029
+gdbundle_debuginfod/scripts/debuginfod_gdb.py,sha256=17fYoxv3DvXbM20Bs58QzHYuSXF_LIPs7KBSprfN-PY,3532
+gdbundle_debuginfod/scripts/debuginfod_lldb.py,sha256=0aTpe_rzdBA4bExpex_fCdhTDH0MG2yxpZ5m6oTJorY,4230
+gdbundle_debuginfod-0.3.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+gdbundle_debuginfod-0.3.0.dist-info/METADATA,sha256=R9b9wDvSyvU_f0upgAWw9eEZtNg2vjBskfkrn50evxs,2619
+gdbundle_debuginfod-0.3.0.dist-info/RECORD,,
