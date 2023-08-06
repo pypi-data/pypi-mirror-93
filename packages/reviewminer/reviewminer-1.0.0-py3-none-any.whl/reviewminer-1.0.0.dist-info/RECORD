@@ -1,0 +1,10 @@
+reviewminer/__init__.py,sha256=MnJv9EslrUWMcYEAV3zfQvQu--oNdk-KTpUqRXCbajg,68
+reviewminer/aspect_opinion.py,sha256=kOtg1pEn3kNRtXW-fYGtg0_RIjtqAjLh8-Dvbbl1Pik,19501
+reviewminer/basic.py,sha256=bE9zgLgqrhra3njIXEI-l7X1_9w5oLopj97Rmd0D-_k,2842
+reviewminer/core.py,sha256=dKpekYQZLjDtweKuaK15OEVhf4OpVHpu8_IJpU7fpMs,2098
+reviewminer/sentiment.py,sha256=quAojCsnSVGiTW04vQHe9kdPZ-y23sxeBLloNbK4Bss,8118
+reviewminer-1.0.0.dist-info/LICENSE,sha256=6SeUeQbSgLptyMkvXSGCjE7OYayLbrdvC3K3EMLzaOA,1071
+reviewminer-1.0.0.dist-info/METADATA,sha256=KlVPaB_Hqug0mDHujyDhFBEIlYsr2pJGSaY7RhOVEHU,1034
+reviewminer-1.0.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+reviewminer-1.0.0.dist-info/top_level.txt,sha256=aQOZNifxLUInrSucS6aWsRRLQBgTu0KxEOIGzsmBe50,12
+reviewminer-1.0.0.dist-info/RECORD,,
