@@ -1,0 +1,11 @@
+README.md
+setup.py
+supershape/__init__.py
+supershape/__main__.py
+supershape/blender.py
+supershape/supershape.py
+supershape.egg-info/PKG-INFO
+supershape.egg-info/SOURCES.txt
+supershape.egg-info/dependency_links.txt
+supershape.egg-info/requires.txt
+supershape.egg-info/top_level.txt
