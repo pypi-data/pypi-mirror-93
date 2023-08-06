@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: shadems
+Version: 0.5.0
+Summary: Rapid Measurement Set plotting with dask-ms and datashader
+Home-page: https://github.com/ratt-ru/shadeMS
+Author: Ian Heywood & RATT
+Author-email: ian.heywood@physics.ox.ac.uk
+License: ['GNU GPL v2']
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Requires-Python: >=3.6
+Provides-Extra: testing
