@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: django-vue-helper
+Version: 0.1.4
+Summary: 
+License: MIT
+Author: Tim Kamanin
+Author-email: tim@timonweb.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: django (>=2.2,<=3.2)
