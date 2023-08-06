@@ -1,0 +1,6 @@
+README.md
+setup.py
+nlptur.egg-info/PKG-INFO
+nlptur.egg-info/SOURCES.txt
+nlptur.egg-info/dependency_links.txt
+nlptur.egg-info/top_level.txt
