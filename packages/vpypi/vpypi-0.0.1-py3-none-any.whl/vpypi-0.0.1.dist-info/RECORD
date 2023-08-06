@@ -1,0 +1,8 @@
+vpypi/__init__.py,sha256=VwEtLVhM3QeVYIpcOZRM-dvhOzgI8ZZh3lFyKy-gOck,103
+vpypi/__main__.py,sha256=ZPGytkQ2AZkJkbvPNhYmk7XH9lL6WO4K9U96G9-rQwM,43
+vpypi/_cli.py,sha256=CjU1lJkT3bykZxXJnUY0LGMzXl6rcNzenLUrtIvn3XY,1057
+vpypi/_core.py,sha256=VBh8acS5fMXJ_dJmYRCTxs_b6G5qAgcuCrBTA5JixjM,2721
+vpypi-0.0.1.dist-info/LICENSE,sha256=BxTjazc45bB8y7OjiHDFHxzhbTG7IPPE4z1TmHMw-gQ,1046
+vpypi-0.0.1.dist-info/WHEEL,sha256=CqyTrkghQBNsEzLD3HbCSEIJ_fY58-XpoU29dUzwHSk,81
+vpypi-0.0.1.dist-info/METADATA,sha256=F99C5tn5howxzIEC8QJ6nTJW9vnZD0cBf9mqoP0eg_k,1490
+vpypi-0.0.1.dist-info/RECORD,,

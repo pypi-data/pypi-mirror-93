@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: vpypi
+Version: 0.0.1
+Summary: vpypi is a CLI tool to verify GPG signature for Python packages on PyPI.
+Home-page: https://github.com/orsinium-labs/vpypi
+License: MIT
+Keywords: pypi,gpg,gnupg
+Author: Gram
+Author-email: gram@orsinium.dev
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Requires-Dist: requests
+Requires-Dist: python-gnupg
+Requires-Dist: isort ; extra == "test"
+Requires-Dist: mypy ; extra == "test"
+Requires-Dist: pytest ; extra == "test"
+Provides-Extra: test
+
+# vpypi
+
+**vpypi** is a CLI tool to verify [GPG](https://gnupg.org/) signature for Python packages on [PyPI](http://pypi.org/).
+
+## Installation
+
+```bash
+python3 -m pip install --user vpypi
+```
+
+## Usage
+
+```bash
+$ python3.9 -m vpypi flask==1.1.1
+{
+  "created": "2019-07-08",
+  "fingerprint": "AD253D8661D175D001F462D77A1C87E3F5BC42A8",
+  "key_id": "7A1C87E3F5BC42A8",
+  "name": "Flask-1.1.1-py2.py3-none-any.whl",
+  "status": "signature valid",
+  "username": "David Lord <davidism@gmail.com>"
+}
+{
+  "created": "2019-07-08",
+  "fingerprint": "AD253D8661D175D001F462D77A1C87E3F5BC42A8",
+  "key_id": "7A1C87E3F5BC42A8",
+  "name": "Flask-1.1.1.tar.gz",
+  "status": "signature valid",
+  "username": "David Lord <davidism@gmail.com>"
+}
+```
+
