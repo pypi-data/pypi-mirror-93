@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: warpcore
+Version: 1.0.1
+Summary: Streamlined multi-threaded process acceleration
+Home-page: https://github.com/BlackburnHax/warpcore
+Author: Brandon Blackburn
+Author-email: contact@bhax.net
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+# warpcore
+> Streamlined multi-threaded process acceleration
+
+When working with software that needs to be performant, itâ€™s challenging to deal with all the pitfalls of multi-threading while balancing code stability.
+
+Smoothing out the bumps in the road to multi-threading is the primary goal of the project. Itâ€™s just that simple.
+
+
+## Installation
+
+OS X, Linux & Windows:
+
+```sh
+pip install warpcore
+```
+
+
+## Usage Examples
+
+Please refer to [example0.py](https://github.com/BlackburnHax/warpcore/blob/main/docs/example0.py) and [example1.py](https://github.com/BlackburnHax/warpcore/blob/main/docs/example1.py) for basic and more advanced usage examples respectively.
+## Meta
+
+Brandon Blackburn â€“ [PGP Encrypted Chat @ Keybase](https://keybase.io/blackburnhax/chat)
+
+Distributed under the Apache 2.0 license. See ``LICENSE`` for more information.
+
+_TL;DR:_
+For a human-readable & fast explanation of the Apache 2.0 license visit:  http://www.tldrlegal.com/l/apache2
+
+
+[https://github.com/BlackburnHax/uiblack](https://github.com/BlackburnHax/uiblack)
+
