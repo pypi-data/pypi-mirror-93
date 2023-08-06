@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+mostoop/__init__.py
+mostoop/newschool.py
+mostoop/school.py
+mostoop.egg-info/PKG-INFO
+mostoop.egg-info/SOURCES.txt
+mostoop.egg-info/dependency_links.txt
+mostoop.egg-info/top_level.txt
