@@ -1,0 +1,9 @@
+README.md
+setup.py
+flexfiles/__init__.py
+flexfiles/filehandler.py
+flexfiles.egg-info/PKG-INFO
+flexfiles.egg-info/SOURCES.txt
+flexfiles.egg-info/dependency_links.txt
+flexfiles.egg-info/requires.txt
+flexfiles.egg-info/top_level.txt
