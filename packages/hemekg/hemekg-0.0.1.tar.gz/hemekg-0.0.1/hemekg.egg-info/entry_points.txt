@@ -1,0 +1,3 @@
+[console_scripts]
+hemekg = hemekg:main
+
