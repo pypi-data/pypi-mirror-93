@@ -1,0 +1,7 @@
+biolinkml >= 1.6.0
+pyyaml
+requests
+obonet
+biopython
+bcbio-gff>=0.6.6
+click

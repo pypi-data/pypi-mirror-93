@@ -1,0 +1,47 @@
+{
+    "input_contig_num": 114113,
+    "too_short_contig_num": 107191,
+    "lowDepth_contig_num": 0,
+    "unbinned_contig_num": 6408,
+    "binned_contig_num": 514,
+    "mags_list": [
+        {
+            "bin_name": "bins.1",
+            "number_of_contig": 156,
+            "completeness": 17.15,
+            "contamination": 0.0,
+            "gene_count": 799,
+            "bin_quality": "LQ",
+            "num_16s": 0,
+            "num_5s": 0,
+            "num_23s": 0,
+            "num_tRNA": 5,
+            "gtdbtk_domain": null,
+            "gtdbtk_phylum": null,
+            "gtdbtk_class": null,
+            "gtdbtk_order": null,
+            "gtdbtk_family": null,
+            "gtdbtk_genus": null,
+            "gtdbtk_species": null
+        },
+        {
+            "bin_name": "bins.2",
+            "number_of_contig": 358,
+            "completeness": 69.62,
+            "contamination": 1.43,
+            "gene_count": 2378,
+            "bin_quality": "MQ",
+            "num_16s": 0,
+            "num_5s": 0,
+            "num_23s": 0,
+            "num_tRNA": 32,
+            "gtdbtk_domain": "Bacteria",
+            "gtdbtk_phylum": "Proteobacteria",
+            "gtdbtk_class": "Alphaproteobacteria",
+            "gtdbtk_order": "Sphingomonadales",
+            "gtdbtk_family": "Sphingomonadaceae",
+            "gtdbtk_genus": "Novosphingobium",
+            "gtdbtk_species": null
+        }
+    ]
+}

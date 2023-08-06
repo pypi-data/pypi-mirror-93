@@ -1,0 +1,3 @@
+[console_scripts]
+nmdc = nmdc.scripts.__main__:nmdccli
+
