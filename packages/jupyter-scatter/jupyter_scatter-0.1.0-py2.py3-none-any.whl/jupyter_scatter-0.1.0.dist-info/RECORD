@@ -1,0 +1,10 @@
+jscatter/__init__.py,sha256=VIFo8vPaLJ29rSC26aTJ_sP-mzPv6gtSOwfHXWK1x9M,1676
+jscatter/_version.py,sha256=_xMnchjpvz9KIQ8W4fIrb3-KRz65MCzR153kgnbC_5o,433
+jscatter/jscatter.py,sha256=ZLUCX8QUdy376FYUTTYjqCvrST2qTNlaLb3sC-lqoS4,23893
+jscatter/jscatter_test.py,sha256=irhfB1-Ag2VOenlNgvSIATefpXHh9L_Nv--EOq8btpA,33
+jscatter/utils.py,sha256=-TStw1KCLEY0Ow-OnynAKBa-n5yoal5bQdRMVW_il0I,550
+jupyter_scatter-0.1.0.dist-info/LICENSE,sha256=Jq9dFhy3XQAdnGyUnZ32GqdUK3y5ZKlgxINM0MU9Cbk,11344
+jupyter_scatter-0.1.0.dist-info/METADATA,sha256=cUZaOJV0GdKezOW2-UTcRTbhhX5lKWL0OVdNzy1I5Hc,2591
+jupyter_scatter-0.1.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+jupyter_scatter-0.1.0.dist-info/top_level.txt,sha256=CT2Aj_Ea1I24QaLCT5hWc7ftYnInRFPaHFCyRrMgiEY,9
+jupyter_scatter-0.1.0.dist-info/RECORD,,
