@@ -1,0 +1,10 @@
+ridgeplot/__init__.py,sha256=QrwsQTjZTve8CuVcM6tgJnmn330ykl-BU14bvdjkuHE,137
+ridgeplot/_colors.py,sha256=EQAyfvII941QlwEaPVxLScy8UddJxTPQaTi-uPtVnUQ,2385
+ridgeplot/_kde.py,sha256=QArmvtQ7ftGdMDDBjdDb5kEIgAG6oj5xGlj1WbfGJ88,2500
+ridgeplot/_ridgeplot.py,sha256=TfzTEjpgh7rjhhAzWm3XfUOOwsPJO89In5NeqZsh1Ho,13018
+ridgeplot/_utils.py,sha256=hkcTnCQvibgolo8h0TBWrk-NkDeM5KST8LWXui-GZb4,838
+ridgeplot/_violin.py,sha256=0FtZSvmRh-I3pVtwguNEz1hTIAGckKzo-vONFhwG9jU,2048
+ridgeplot/colors.json,sha256=MjfgysR4ZCSTUSeNpFSZh5gKhThptpAXwH5L79nq8-w,70665
+ridgeplot-0.1.7.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+ridgeplot-0.1.7.dist-info/METADATA,sha256=dFKvTjO4aVi_xi70ufJ7Q8FVAO5v1VMoO2ia9M8yaOo,4313
+ridgeplot-0.1.7.dist-info/RECORD,,
