@@ -1,0 +1,6 @@
+scikit-learn
+numpy
+deepdish
+astropy
+goes-solar-retriever
+matplotlib

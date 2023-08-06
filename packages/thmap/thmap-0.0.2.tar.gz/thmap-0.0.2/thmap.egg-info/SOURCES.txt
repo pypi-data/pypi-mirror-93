@@ -1,0 +1,10 @@
+README.md
+setup.py
+thmap/__init__.py
+thmap/classify.py
+thmap/io.py
+thmap.egg-info/PKG-INFO
+thmap.egg-info/SOURCES.txt
+thmap.egg-info/dependency_links.txt
+thmap.egg-info/requires.txt
+thmap.egg-info/top_level.txt
