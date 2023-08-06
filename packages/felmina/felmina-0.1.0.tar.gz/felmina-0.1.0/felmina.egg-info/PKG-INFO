@@ -1,0 +1,33 @@
+Metadata-Version: 1.2
+Name: felmina
+Version: 0.1.0
+Summary: A tool for knowledge graph management based solely on Elasticsearch
+Home-page: https://github.com/jadbin/felmina
+Author: jadbin
+Author-email: jadbin.com@hotmail.com
+License: MIT
+Description: =======
+        felmina
+        =======
+        
+        .. image:: https://travis-ci.org/jadbin/felmina.svg?branch=master
+            :target: https://travis-ci.org/jadbin/felmina
+        
+        .. image:: https://coveralls.io/repos/github/jadbin/felmina/badge.svg?branch=master
+            :target: https://coveralls.io/github/jadbin/felmina?branch=master
+        
+        .. image:: https://img.shields.io/github/license/jadbin/felmina
+            :target: https://github.com/jadbin/felmina/blob/master/LICENSE
+        
+        Overview
+        ========
+        
+        基于Elasticsearch的知识库管理工具。
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
