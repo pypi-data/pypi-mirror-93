@@ -1,0 +1,13 @@
+zuul_client-0.0.4.dist-info/DESCRIPTION.rst,sha256=3edy-qJyoDKIDwWWM6ZEe58qF2Y8utBt8YpjknRUivU,1668
+zuul_client-0.0.4.dist-info/METADATA,sha256=n3UADW6wnP1w2yY7nWkkplPDtlGL-WuMn8bM6-EqQOk,3519
+zuul_client-0.0.4.dist-info/RECORD,,
+zuul_client-0.0.4.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+zuul_client-0.0.4.dist-info/entry_points.txt,sha256=pBHZ_Z_MaLtG8LO-897z_Ixl_2Lqfk3jsbp7FCppnNw,53
+zuul_client-0.0.4.dist-info/metadata.json,sha256=aMJZupBftwOjryfMEUfoZ15OU3BrQKqvNRUWbCWfP3g,1800
+zuul_client-0.0.4.dist-info/pbr.json,sha256=8kTzS8nkyfa5FGBNnPL9FEyusxvLfyqKyI-jhrq0_Ks,46
+zuul_client-0.0.4.dist-info/top_level.txt,sha256=NwuewWfsHk4xMZqlEJhO4iDpxEc5KdreW-oXqtz5CHI,11
+zuulclient/__init__.py,sha256=f6BxgkyYt4C_ApVDYOgEkoj8k3XIAcgzCc0TRWkpPos,577
+zuulclient/version.py,sha256=i0RvsR8VuroHbRiKgZhcPQzVml0rrcyZ13rAWXFygJ8,1021
+zuulclient/api/__init__.py,sha256=PfZoc_TCt2L3MGc0TPYdXblEyosUH2JaZVONNtDiTFI,7763
+zuulclient/cmd/__init__.py,sha256=J2JaltbU4MCth5alXyxrzKtbIBR6BI0Kb3KISCS7rEk,24169
+zuulclient/utils/__init__.py,sha256=x5PtYEmXZJXgj1FSMWHvscSLzYHdZvu-c_7onjJH9CI,3609
