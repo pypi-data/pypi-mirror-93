@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+m1keycalculator/__init__.py
+m1keycalcultor.egg-info/PKG-INFO
+m1keycalcultor.egg-info/SOURCES.txt
+m1keycalcultor.egg-info/dependency_links.txt
+m1keycalcultor.egg-info/top_level.txt
