@@ -1,0 +1,4 @@
+#!/bin/bash
+# trigger script.
+cd instVirt && ./teach.py
+
