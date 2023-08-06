@@ -1,0 +1,8 @@
+pydicom
+pynetdicom
+dicom2nifti
+requests
+nibabel
+clint
+imageio
+joblib
