@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+automatic_pypi_release/__init__.py
+automatic_pypi_release/_version.py
+automatic_pypi_release.egg-info/PKG-INFO
+automatic_pypi_release.egg-info/SOURCES.txt
+automatic_pypi_release.egg-info/dependency_links.txt
+automatic_pypi_release.egg-info/top_level.txt
