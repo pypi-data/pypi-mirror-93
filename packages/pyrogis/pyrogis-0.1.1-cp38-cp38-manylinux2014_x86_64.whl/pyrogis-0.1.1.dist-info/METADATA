@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pyrogis
+Version: 0.1.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Pillow (>=8.0.1)
+Requires-Dist: numpy (>=1.19.4)
+
+UNKNOWN
+
+
