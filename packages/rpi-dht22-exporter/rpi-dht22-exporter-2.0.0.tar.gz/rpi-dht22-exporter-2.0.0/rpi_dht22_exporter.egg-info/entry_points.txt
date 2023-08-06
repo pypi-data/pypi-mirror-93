@@ -1,0 +1,3 @@
+[console_scripts]
+rpi-dht22-exporter = rpi_dht22_exporter.main:main
+
