@@ -1,0 +1,8 @@
+cdk_keycloak/__init__.py,sha256=bp07b0NEzzdQilfNr3WF5DCA5ZFUJcExfE5ciuLMuW4,25862
+cdk_keycloak/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cdk_keycloak/_jsii/__init__.py,sha256=bUuvkYV89GS804-p0VLePqefGi0cEYe7dp2TmCkN08s,679
+cdk_keycloak/_jsii/cdk-keycloak@0.0.16.jsii.tgz,sha256=0kbfsJdyMOVAwUtWSzK1SuywNBQrG-iF-IroAU1X1hE,58535
+cdk_keycloak-0.0.16.dist-info/METADATA,sha256=i0gadBh0IB2fHKIDPHyDozA7cHWEsoA7idWcprraSow,4035
+cdk_keycloak-0.0.16.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cdk_keycloak-0.0.16.dist-info/top_level.txt,sha256=OiPmisgaBX487Qm-Vbm0cXDkquuEv9oWZ4EQ2NvZCFQ,13
+cdk_keycloak-0.0.16.dist-info/RECORD,,
