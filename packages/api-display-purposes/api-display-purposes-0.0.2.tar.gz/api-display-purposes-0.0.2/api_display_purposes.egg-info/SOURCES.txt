@@ -1,0 +1,8 @@
+README.md
+setup.py
+api_display_purposes.egg-info/PKG-INFO
+api_display_purposes.egg-info/SOURCES.txt
+api_display_purposes.egg-info/dependency_links.txt
+api_display_purposes.egg-info/top_level.txt
+apidisplaypurposes/__init__.py
+apidisplaypurposes/displaypurposes.py
