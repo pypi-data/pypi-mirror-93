@@ -1,0 +1,3 @@
+[console_scripts]
+aliexpress-cli=aliexpress.scripts.cli:main
+
