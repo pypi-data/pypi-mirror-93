@@ -1,0 +1,6 @@
+setup.py
+a_calver_test/__init__.py
+a_calver_test.egg-info/PKG-INFO
+a_calver_test.egg-info/SOURCES.txt
+a_calver_test.egg-info/dependency_links.txt
+a_calver_test.egg-info/top_level.txt
