@@ -1,0 +1,6 @@
+h5py
+pandas
+pytest
+tables
+pyyaml
+qoqo_calculator_py03>=0.1.4
