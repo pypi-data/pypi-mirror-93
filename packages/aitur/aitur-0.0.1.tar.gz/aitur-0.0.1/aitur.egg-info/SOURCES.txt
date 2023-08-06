@@ -1,0 +1,6 @@
+README.md
+setup.py
+aitur.egg-info/PKG-INFO
+aitur.egg-info/SOURCES.txt
+aitur.egg-info/dependency_links.txt
+aitur.egg-info/top_level.txt
