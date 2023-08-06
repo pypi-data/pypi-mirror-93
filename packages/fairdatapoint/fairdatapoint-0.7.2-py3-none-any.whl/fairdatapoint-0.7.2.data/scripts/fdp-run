@@ -1,0 +1,23 @@
+#!python
+"""FDP run.
+
+Usage:
+  fdp-run <host> <port> [--db=<sparql-endpoint>] [--debug=<debug>]
+  fdp-run (-h | --help | --version)
+
+Options:
+  -h --help                   Show this screen and exit
+  --version                   Show FDP version
+  --db=<sparql-endpoint>      Set a SPARQL endpoint URL. If not set, using memory store.
+  --debug=<debug>             Debug mode [default: False]
+"""
+from docopt import docopt
+from fdp import __version__
+from fdp.fdp import create_app
+from flask import Flask
+
+args = docopt(__doc__, version='FDP run ' + __version__)
+Flask.run(create_app(host=args['<host>'], port=args['<port>'], graph_endpoint=args['--db']),
+    host = args['<host>'],
+    port = args['<port>'],
+    debug = args['--debug'])
