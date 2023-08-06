@@ -1,0 +1,13 @@
+pep272_encryption/__init__.py,sha256=wtaawxh-MbfxZatsUKd5HRgZT3gxayufVG4KYCYXLKs,13309
+pep272_encryption/__init__.pyi,sha256=mSGTabuf_4K0WWcfPabma1V37n_7z-x1NsA2J3hOYEU,1602
+pep272_encryption/_fast_xor.pyd,sha256=WX75FLpn7-2ddAou-0YFuOgmxyPHIo3k1cpHE0Wo6t0,9216
+pep272_encryption/_fast_xor.pyi,sha256=96j8gZbUBcdRECr2QPYZjqanX3F9PI0Gv9QD0pteaCM,96
+pep272_encryption/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pep272_encryption/util.py,sha256=U6FO5cOzKx1oFmYXp3sr59I4IHibMl7V3hqJCT3zf3Y,8364
+pep272_encryption/util.pyi,sha256=SUuGRWkiCUbRNM703EoiPZIgtbWTw5IQABuF94RD08A,1120
+pep272_encryption/version.py,sha256=jEMRWdtQibhErgINv9sLWbKmzFUSXEWhKgGBvw4oWqA,526
+pep272_encryption-0.4.dist-info/LICENSE,sha256=DB9M66UrjKJwaDTqjkUl2yQg90eoPIKU3Crx9lRkwV4,6411
+pep272_encryption-0.4.dist-info/METADATA,sha256=XXYPP7sAw4EL-5us-cBCTRGQTlbWE7ptga3t6ybjEVU,2991
+pep272_encryption-0.4.dist-info/WHEEL,sha256=jNaUqLojDkr0iPoz0sWwm5qfLqe3H_nKLOQRwwQCfjw,96
+pep272_encryption-0.4.dist-info/top_level.txt,sha256=6XCY09QrdUzoHfjkeAQRFGyASOQS5hrujIKs5FnhMg4,18
+pep272_encryption-0.4.dist-info/RECORD,,
