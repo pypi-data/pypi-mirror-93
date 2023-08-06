@@ -1,0 +1,8 @@
+README.rst
+pyproject.toml
+setup.py
+ibans/ibans.egg-info/PKG-INFO
+ibans/ibans.egg-info/SOURCES.txt
+ibans/ibans.egg-info/dependency_links.txt
+ibans/ibans.egg-info/requires.txt
+ibans/ibans.egg-info/top_level.txt
