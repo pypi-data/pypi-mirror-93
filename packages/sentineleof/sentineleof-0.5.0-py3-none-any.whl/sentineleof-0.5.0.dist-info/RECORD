@@ -1,0 +1,15 @@
+eof/__init__.py,sha256=cHXr3Efc7z26106OgRoocKlhvZ-Kz-qOvwGywU68x6o,45
+eof/__main__.py,sha256=I47eDJPpNER_0RKDnyAT2Tu9oZdMs0_Ge3i041r_YUo,76
+eof/cli.py,sha256=yVM8gGDQ2pWtqIKffmfexn-J8YCxqWWaMb8mXn5XtnE,1609
+eof/download.py,sha256=-mDqGSJNRa15p-xHckSHh--mWQ05gFT4KBlyhH0Y9GI,9813
+eof/log.py,sha256=WwXzP-1YsT1u680lu8hR16Ds0PyetPRKgMfV0HtsJhg,426
+eof/parsing.py,sha256=5X7ldEpqlcQ9WI1Dt25y2Rhjp9S3sxs_E76x6yL1riQ,1991
+eof/products.py,sha256=CnGK-Nukr1uZ5Zja0cL89gRMfuFwH3QC_buTEg-l13Q,14185
+eof/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eof/tests/test_eof.py,sha256=YZFHUxyAgDFPeEfjnnJWezv-fx64Xw5yWhBJCsjKPf0,6284
+sentineleof-0.5.0.dist-info/LICENSE.txt,sha256=btzorukjMu4zkpKByBfDN3ufGpCRMzrGaJVjMR0YkKw,1079
+sentineleof-0.5.0.dist-info/METADATA,sha256=vqTedY8dP_iJOb2FUS2RFXqzlCEJGxe4Rq4gtJidVRE,3145
+sentineleof-0.5.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sentineleof-0.5.0.dist-info/entry_points.txt,sha256=LV4yLl3pmoKApFVQC7Wxe0_418l118FhNmSPsCd_Uoo,37
+sentineleof-0.5.0.dist-info/top_level.txt,sha256=9GzNEzQ0FNznuaVFjlDFm0f_7e5EGHjkpddujcB5qqY,4
+sentineleof-0.5.0.dist-info/RECORD,,
