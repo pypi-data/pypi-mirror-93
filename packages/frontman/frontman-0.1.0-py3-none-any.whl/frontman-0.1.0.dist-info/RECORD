@@ -1,0 +1,10 @@
+frontman/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+frontman/__main__.py,sha256=q8Zx_WnUspr7JtQRPZ0OuONgwEftiDkYRY-Mqky6Es0,48
+frontman/main.py,sha256=YRAC5iPBcG2mFW5g03LKOEDG2_op8PDiOQTnVxMWVP8,1971
+frontman/process.py,sha256=SvdWgL60Yd2yKECJ0iyL0ZZttueixhzrsEZd0dh91dc,2792
+frontman/provider.py,sha256=U5tFRgBhyNqjfqCXsW-yydmfYdWBASN6zVUQsThMrHU,1105
+frontman/schema.py,sha256=IW2VuYiJf0V3da6LfbxxNYPzmukb3QrAQa-K8Kx2WuY,570
+frontman-0.1.0.dist-info/entry_points.txt,sha256=VE-fICySdTl985eRCaEQDKcV6rRHVWpgiwrBXqqN0v4,46
+frontman-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+frontman-0.1.0.dist-info/METADATA,sha256=s5wSZYVMCHnCPE_kj3V2WyLIXfh1Inaz9vQ9wbUBSos,1949
+frontman-0.1.0.dist-info/RECORD,,
