@@ -1,0 +1,6 @@
+setup.py
+essential/__init__.py
+essential.egg-info/PKG-INFO
+essential.egg-info/SOURCES.txt
+essential.egg-info/dependency_links.txt
+essential.egg-info/top_level.txt
