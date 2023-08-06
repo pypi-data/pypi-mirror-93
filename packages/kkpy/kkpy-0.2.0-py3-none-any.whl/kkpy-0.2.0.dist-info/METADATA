@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: kkpy
+Version: 0.2.0
+Summary: My python package
+Home-page: https://github.com/Kwonil-Kim/kkpy
+Author: Kwonil Kim
+Author-email: kwonil.kim.0@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: Cartopy
+Requires-Dist: wradlib
+Requires-Dist: arm-pyart
+Requires-Dist: matplotlib
+Requires-Dist: haversine
+Requires-Dist: scipy
+Requires-Dist: dask
+Requires-Dist: pandas
+Requires-Dist: netCDF4
+Requires-Dist: geopandas
+Requires-Dist: descartes
+Requires-Dist: xarray
+Requires-Dist: bottleneck
+Requires-Dist: scikit-image
+
+README.md
+
+
