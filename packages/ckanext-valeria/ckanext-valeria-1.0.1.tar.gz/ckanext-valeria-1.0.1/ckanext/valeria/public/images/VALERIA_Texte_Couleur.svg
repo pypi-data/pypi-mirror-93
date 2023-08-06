@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 288 33.2" xml:space="preserve">
+<g>
+
+		<radialGradient id="Tracé_1988_1_" cx="346.8974" cy="536.388" r="257.0482" gradientTransform="matrix(1.251 0 0 -1.251 -81.008 809.153)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFDE00"/>
+		<stop  offset="7.200000e-02" style="stop-color:#C2A600"/>
+		<stop  offset="0.145" style="stop-color:#8E7500"/>
+		<stop  offset="0.215" style="stop-color:#644D00"/>
+		<stop  offset="0.283" style="stop-color:#422E00"/>
+		<stop  offset="0.347" style="stop-color:#2B1800"/>
+		<stop  offset="0.407" style="stop-color:#1C0B00"/>
+		<stop  offset="0.458" style="stop-color:#180700"/>
+	</radialGradient>
+	<path id="Tracé_1988" fill="url(#Tracé_1988_1_)" d="M204.7,4.5c-1.8-1.8-4.3-2.8-6.9-2.7h-14.2v4.8h14.1c1.2,0,2.4,0.5,3.2,1.3
+		c0,0,0,0,0.1,0.1c0.1,0.1,0.1,0.2,0.2,0.2c0,0.1,0.1,0.1,0.1,0.2s0.1,0.1,0.1,0.2c0.1,0.1,0.1,0.2,0.2,0.3c0,0,0,0.1,0.1,0.1
+		c0.7,1.5,0.7,3.3,0,4.8c0,0,0,0.1-0.1,0.1c-0.1,0.1-0.1,0.2-0.2,0.3c0,0.1-0.1,0.1-0.1,0.2c0,0.1-0.1,0.1-0.1,0.2
+		c-0.1,0.1-0.1,0.2-0.2,0.3c0,0,0,0-0.1,0.1c-0.8,0.9-2,1.3-3.2,1.3h-6.8l2.2,4.8l0.1,0.3l2,4.6l2.7,5.8h5.7l-5.2-10.7
+		c2.4-0.1,4.6-1.1,6.3-2.7c1.9-1.7,2.9-4.2,2.8-6.7c0,0,0-0.1,0-0.1s0-0.1,0-0.1C207.6,8.7,206.5,6.2,204.7,4.5z"/>
+
+		<radialGradient id="Tracé_1989_1_" cx="183.0621" cy="616.9227" r="296.7564" gradientTransform="matrix(1.083 0 0 -1.083 -39.533 690.4089)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFDE00"/>
+		<stop  offset="7.200000e-02" style="stop-color:#C2A600"/>
+		<stop  offset="0.145" style="stop-color:#8E7500"/>
+		<stop  offset="0.215" style="stop-color:#644D00"/>
+		<stop  offset="0.283" style="stop-color:#422E00"/>
+		<stop  offset="0.347" style="stop-color:#2B1800"/>
+		<stop  offset="0.407" style="stop-color:#1C0B00"/>
+		<stop  offset="0.458" style="stop-color:#180700"/>
+	</radialGradient>
+	<path id="Tracé_1989" fill="url(#Tracé_1989_1_)" d="M14.4,21.7l-8.7-20H0l14.4,31.2L28.8,1.7h-5.7L14.4,21.7z"/>
+
+		<radialGradient id="Tracé_1990_1_" cx="197.768" cy="628.7736" r="303.0412" gradientTransform="matrix(1.061 0 0 -1.061 -43.28 673.658)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFDE00"/>
+		<stop  offset="7.200000e-02" style="stop-color:#C2A600"/>
+		<stop  offset="0.145" style="stop-color:#8E7500"/>
+		<stop  offset="0.215" style="stop-color:#644D00"/>
+		<stop  offset="0.283" style="stop-color:#422E00"/>
+		<stop  offset="0.347" style="stop-color:#2B1800"/>
+		<stop  offset="0.407" style="stop-color:#1C0B00"/>
+		<stop  offset="0.458" style="stop-color:#180700"/>
+	</radialGradient>
+	<path id="Tracé_1990" fill="url(#Tracé_1990_1_)" d="M46.1,31.6h5.7l2.7-5.8l2-4.6l4.4-9.7l4.4,9.7l2,4.6l2.7,5.8h5.7L60.9,0.3
+		L46.1,31.6z"/>
+
+		<radialGradient id="Tracé_1991_1_" cx="272.1157" cy="628.7723" r="303.0412" gradientTransform="matrix(1.061 0 0 -1.061 -72.966 673.658)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFDE00"/>
+		<stop  offset="7.200000e-02" style="stop-color:#C2A600"/>
+		<stop  offset="0.145" style="stop-color:#8E7500"/>
+		<stop  offset="0.215" style="stop-color:#644D00"/>
+		<stop  offset="0.283" style="stop-color:#422E00"/>
+		<stop  offset="0.347" style="stop-color:#2B1800"/>
+		<stop  offset="0.407" style="stop-color:#1C0B00"/>
+		<stop  offset="0.458" style="stop-color:#180700"/>
+	</radialGradient>
+	<path id="Tracé_1991" fill="url(#Tracé_1991_1_)" d="M273.2,0.3l-14.8,31.4h5.7l2.7-5.8l2-4.6l4.4-9.7l4.4,9.7l2,4.6l2.7,5.8h5.7
+		L273.2,0.3z"/>
+
+		<radialGradient id="Tracé_1992_1_" cx="353.271" cy="412.3671" r="209.7693" gradientTransform="matrix(1.533 0 0 -1.533 -134.349 965.22)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFDE00"/>
+		<stop  offset="7.200000e-02" style="stop-color:#C2A600"/>
+		<stop  offset="0.145" style="stop-color:#8E7500"/>
+		<stop  offset="0.215" style="stop-color:#644D00"/>
+		<stop  offset="0.283" style="stop-color:#422E00"/>
+		<stop  offset="0.347" style="stop-color:#2B1800"/>
+		<stop  offset="0.407" style="stop-color:#1C0B00"/>
+		<stop  offset="0.458" style="stop-color:#180700"/>
+	</radialGradient>
+	<path id="Tracé_1992" fill="url(#Tracé_1992_1_)" d="M100.9,1.7h-5.2v29.9h19.5v-4.8h-14.3L100.9,1.7z"/>
+
+		<radialGradient id="Rectangle_7323_1_" cx="-51.8125" cy="822.1555" r="57.647" gradientTransform="matrix(5.577 0 0 -5.577 438.582 4549.8911)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFDE00"/>
+		<stop  offset="7.200000e-02" style="stop-color:#C2A600"/>
+		<stop  offset="0.145" style="stop-color:#8E7500"/>
+		<stop  offset="0.215" style="stop-color:#644D00"/>
+		<stop  offset="0.283" style="stop-color:#422E00"/>
+		<stop  offset="0.347" style="stop-color:#2B1800"/>
+		<stop  offset="0.407" style="stop-color:#1C0B00"/>
+		<stop  offset="0.458" style="stop-color:#180700"/>
+	</radialGradient>
+	<rect id="Rectangle_7323" x="230.2" y="1.7" fill="url(#Rectangle_7323_1_)" width="5.4" height="29.9"/>
+
+		<radialGradient id="Rectangle_7325_1_" cx="186.8227" cy="885.8566" r="1513.5791" gradientTransform="matrix(0.213 0 0 -0.213 109.341 153.39)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFDE00"/>
+		<stop  offset="7.200000e-02" style="stop-color:#C2A600"/>
+		<stop  offset="0.145" style="stop-color:#8E7500"/>
+		<stop  offset="0.215" style="stop-color:#644D00"/>
+		<stop  offset="0.283" style="stop-color:#422E00"/>
+		<stop  offset="0.347" style="stop-color:#2B1800"/>
+		<stop  offset="0.407" style="stop-color:#1C0B00"/>
+		<stop  offset="0.458" style="stop-color:#180700"/>
+	</radialGradient>
+	<rect id="Rectangle_7325" x="138.1" y="26.8" fill="url(#Rectangle_7325_1_)" width="22.7" height="4.8"/>
+
+		<radialGradient id="Rectangle_7324_1_" cx="191.0881" cy="868.4072" r="1550.3641" gradientTransform="matrix(0.208 0 0 -0.208 109.384 145.351)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFDE00"/>
+		<stop  offset="7.200000e-02" style="stop-color:#C2A600"/>
+		<stop  offset="0.145" style="stop-color:#8E7500"/>
+		<stop  offset="0.215" style="stop-color:#644D00"/>
+		<stop  offset="0.283" style="stop-color:#422E00"/>
+		<stop  offset="0.347" style="stop-color:#2B1800"/>
+		<stop  offset="0.407" style="stop-color:#1C0B00"/>
+		<stop  offset="0.458" style="stop-color:#180700"/>
+	</radialGradient>
+	<rect id="Rectangle_7324" x="138.1" y="1.7" fill="url(#Rectangle_7324_1_)" width="22.7" height="4.7"/>
+
+		<radialGradient id="Rectangle_7326_1_" cx="186.8227" cy="876.5746" r="1514.4106" gradientTransform="matrix(0.213 0 0 -0.213 109.341 151.417)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFDE00"/>
+		<stop  offset="7.200000e-02" style="stop-color:#C2A600"/>
+		<stop  offset="0.145" style="stop-color:#8E7500"/>
+		<stop  offset="0.215" style="stop-color:#644D00"/>
+		<stop  offset="0.283" style="stop-color:#422E00"/>
+		<stop  offset="0.347" style="stop-color:#2B1800"/>
+		<stop  offset="0.407" style="stop-color:#1C0B00"/>
+		<stop  offset="0.458" style="stop-color:#180700"/>
+	</radialGradient>
+	<rect id="Rectangle_7326" x="138.1" y="14.3" fill="url(#Rectangle_7326_1_)" width="22.7" height="4.8"/>
+</g>
+</svg>

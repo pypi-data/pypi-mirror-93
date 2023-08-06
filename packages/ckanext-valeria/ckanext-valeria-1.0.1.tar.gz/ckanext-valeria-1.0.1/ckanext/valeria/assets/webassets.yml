@@ -1,0 +1,9 @@
+style-css:
+  contents:
+    - style.css
+  output: webassets/%(version)s_style-css.css
+  filters: cssrewrite
+  extra:
+    preload:
+      - vendor/select2-css
+      - vendor/jquery
