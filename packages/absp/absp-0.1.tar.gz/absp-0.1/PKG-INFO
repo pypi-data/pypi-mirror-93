@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: absp
+Version: 0.1
+Summary: module test
+Home-page: UNKNOWN
+Author: ishan oshada
+Author-email: <ic31908@gmail.com>
+License: UNKNOWN
+Description: 
+        welcome to my module 
+        
+        
+Keywords: welcome
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
