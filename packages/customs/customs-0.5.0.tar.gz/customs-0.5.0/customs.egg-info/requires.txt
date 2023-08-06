@@ -1,0 +1,10 @@
+flask
+python-jose[cryptography]
+requests
+requests_oauthlib
+
+[test]
+pytest
+pytest-cov
+mypy
+flake8
