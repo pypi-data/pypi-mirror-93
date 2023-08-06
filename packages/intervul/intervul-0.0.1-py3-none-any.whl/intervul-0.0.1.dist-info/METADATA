@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: intervul
+Version: 0.0.1
+Summary: Interfaces for inhouse FEM
+Home-page: https://github.com/mpacheco62/intervul
+Author: Matias Pacheco
+Author-email: Matias.Pacheco.A@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: scipy
+
+# Intervul Package
+
+This is a simple interface for a inhouse FEM package. 
+
+
