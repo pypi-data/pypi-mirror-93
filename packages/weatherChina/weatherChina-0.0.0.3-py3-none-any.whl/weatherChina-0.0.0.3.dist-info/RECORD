@@ -1,0 +1,12 @@
+weatherCN/__init__.py,sha256=uLFi304Oz0rz9uBC7d_c6XD3raWrF2kKYf7qICOUbPU,109
+weatherCN/app.py,sha256=j3dxuyp9xxky7vDwJhGp2ah0uqrdoizMxJqu--XmB2Q,2899
+weatherCN/data/city.json,sha256=9sswPsy54x1TbIGWVLC0iYFsc0WIWxbXvxyPn730rsk,312221
+weatherChina/__init__.py,sha256=uLFi304Oz0rz9uBC7d_c6XD3raWrF2kKYf7qICOUbPU,109
+weatherChina/app.py,sha256=j3dxuyp9xxky7vDwJhGp2ah0uqrdoizMxJqu--XmB2Q,2899
+weatherChina/data/city.json,sha256=9sswPsy54x1TbIGWVLC0iYFsc0WIWxbXvxyPn730rsk,312221
+weatherChina-0.0.0.3.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+weatherChina-0.0.0.3.dist-info/METADATA,sha256=OLPS04IldkAnEASyhGtRzrJWVWnzZUUv1RCDcTNgoeo,1649
+weatherChina-0.0.0.3.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+weatherChina-0.0.0.3.dist-info/entry_points.txt,sha256=BH6x939kUiDqhQgf-etXGP7QSLOMTbN8iHOVMjpTEXk,65
+weatherChina-0.0.0.3.dist-info/top_level.txt,sha256=Y1wLLgRMXTXYqo-SNTRisViIQRnLxhxEVX4xt4IU3qM,13
+weatherChina-0.0.0.3.dist-info/RECORD,,
