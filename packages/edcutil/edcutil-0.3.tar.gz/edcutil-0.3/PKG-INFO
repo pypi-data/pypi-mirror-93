@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: edcutil
+Version: 0.3
+Summary: edc util
+Home-page: https://github.com/vijay5687/edcutil
+Author: vinay kumar
+Author-email: kvinni17@gmail.com
+License: MIT
+Download-URL: https://github.com/vijay5687/edcutil/archive/0.3.tar.gz
+Description: UNKNOWN
+Keywords: SOME,MEANINGFULL,KEYWORDS
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
