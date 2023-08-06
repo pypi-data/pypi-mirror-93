@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: bingwp
+Version: 0.1.6
+Summary: download bing.ioliu.cn wallpaper
+Home-page: https://github.com/Greatwallcorner/BingWallpaperDownload-ioliu/
+Author: heatdesert
+Author-email: wall.corner@outlook.com
+License: MIT
+Keywords: bing wallpaper download
+Platform: any
+Description-Content-Type: text/markdown
+Requires-Dist: bs4
+
+# How to use 
+
+
