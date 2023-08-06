@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: my-tools
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: jbh
+Author-email: c1193302518@outlook.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
