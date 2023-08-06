@@ -1,0 +1,17 @@
+sstp_server-0.6.0.dist-info/RECORD,,
+sstp_server-0.6.0.dist-info/top_level.txt,sha256=wG84BKYsBP8D1BJYosRcKhX4ClbOSh0yQFz4hEpo01o,6
+sstp_server-0.6.0.dist-info/entry_points.txt,sha256=CNjSVqmBjyPYkTsmKsbBQLD-zmwzD4_CZ5u1x2IK-jU,49
+sstp_server-0.6.0.dist-info/WHEEL,sha256=ieuC8Vv7a4Lxq8jfQJ-x1beMvjYNP_LKilYokdMTB0U,108
+sstp_server-0.6.0.dist-info/METADATA,sha256=JbR1Bjt7gl0WG4eoEe7kXOjiq48W2YtzetvM5czSslI,2633
+sstp_server-0.6.0.dist-info/LICENSE,sha256=Z3RGQr_gRpjuBOfT24mwqF1uvYhE3QFNWUEDsJIyJ2s,1083
+sstpd/utils.py,sha256=PT34LHtbx1TNkp3AYnNmxolKdRqh50I0WIARZHfkWkU,201
+sstpd/sstp.py,sha256=zo8is2eochmhpu7JgnzSZMX_WqN90VGfPPir-DVe_fw,24610
+sstpd/proxy_protocol.py,sha256=ZJTbSkytCqHEABtL7HATRefnL3eQmr3RRbjI20I5kP8,2789
+sstpd/ppp.py,sha256=TWNnIk2uSnB6Z7k5Zsl6DzHWpaKDlIPSfLS1be1aYE4,7572
+sstpd/packets.py,sha256=9Qb_7q6S5RDglsFi6zcfp-7CVNYcgTvI-F4nwPrG4-M,941
+sstpd/constants.py,sha256=S4xGGcgBfQcJQdnLpV33aaYj6O0gWMLmlcGliKm2GdQ,2047
+sstpd/codec.cpython-39-x86_64-linux-gnu.so,sha256=yNR-C6VThJenxFTTIGRy5DYKnWYZjmQNCqx7vbvPv0U,33552
+sstpd/certtool.py,sha256=w2I-7YtPQf0zxhmC8vOUn1RVg-gyGMHo-DMr4ySl0wQ,820
+sstpd/address.py,sha256=PNE5k3uKNztKRx5hj7PEybcMuQNDuka9d3jvwWUtYtc,2310
+sstpd/__main__.py,sha256=xKBioeJnIZOGQgSC4WHpVcmUJMDwZbPcZdX9DtvFq8w,6743
+sstpd/__init__.py,sha256=-E6ptDccGthyRThphnwT7epPRb_jed2yQuktBJNNi7Q,170
