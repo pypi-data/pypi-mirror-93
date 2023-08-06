@@ -1,0 +1,6 @@
+[console_scripts]
+hdob = hdob.hdob:main
+
+[gui_scripts]
+hdob = hdob.hdob:main
+

@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: hdob
+Version: 1.0.0
+Summary: Hex, Decimal, Octal, Binary converter
+Home-page: https://github.com/housechou/hdob
+Author: House.Chou
+Author-email: hoare.tw@gmail.com
+License: UNKNOWN
+Keywords: GUI UI tkinter Converter
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+# hdob - The Hex, Decimal, Octal, Binary converter
+
+![](https://raw.githubusercontent.com/housechou/hdob/master/images/screenshot.png)
+
+## System Requirement
+Python3
+
+## Install
+```bash
+python3 -m pip install --user hdob
+```
+
+## Run
+```bash
+hdob
+```
+
+
