@@ -1,0 +1,9 @@
+README.md
+setup.py
+BCalc.egg-info/PKG-INFO
+BCalc.egg-info/SOURCES.txt
+BCalc.egg-info/dependency_links.txt
+BCalc.egg-info/top_level.txt
+BCalc.egg-info/zip-safe
+MyModule/__init__.py
+MyModule/bcalc.py
