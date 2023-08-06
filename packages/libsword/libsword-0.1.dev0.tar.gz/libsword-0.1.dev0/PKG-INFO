@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: libsword
+Version: 0.1.dev0
+Summary: Python bindings for the SWORD library, extracted from that source
+Home-page: https://www.crosswire.org/sword/
+Author: Greg Hellings
+Author-email: greg.hellings@gmail.com
+Maintainer: Greg Hellings
+Maintainer-email: greg.hellings@gmail.com
+License: GPLv2
+Project-URL: Bug Tracker, https://github.com/greg-hellings/libsword/issues
+Project-URL: Release Management, https://github.com/greg-hellings/libsword/releases
+Project-URL: CI, https://github.com/greg-hellings/libsword/actions
+Project-URL: Source Code, https://github.com/greg-hellings/libsword
+Description: This is an extracted form of the [Sword](https://www.crosswire.org/sword) bindings.
+        
+        If you are building Sword from source, you can just define `-DSWORD_PYTHON_3:BOOL=TRUE` to your CMake bindings
+        and build this library directly from there. If you want to pull this package directly into a set of Python
+        dependencies, then you can point here. I will try my best to maintain keeping this up-to-date.
+        
+Keywords: python,sword,crosswire
+Platform: UNKNOWN
+Classifier: Development Status :: 6 - Mature
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Testing
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
