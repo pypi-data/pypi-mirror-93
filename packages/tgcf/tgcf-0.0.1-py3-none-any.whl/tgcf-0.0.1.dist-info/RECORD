@@ -1,0 +1,10 @@
+tgcf/__init__.py,sha256=hTZpIaixKzVbjMTKIpr2ECm4Ev_HMI4rpkIc7uQscbU,182
+tgcf/cli.py,sha256=SJfmk3RWcIyMEBK6a78NRWCEysDp5GZfEA0Bz1AckZ0,288
+tgcf/forwarder.py,sha256=yrSB3e13ohMNSml1Xb-cucdzaVcsw0aXGEyOALHuaJk,2861
+tgcf/settings.py,sha256=icolwqiGRkJUhDqmaY4hTCPngw2yYT4w4yrLUHWo74o,1226
+tgcf-0.0.1.dist-info/LICENSE,sha256=GpsSQnpgiF-NkahDuT5nd228eZKU_kC6gyk9QXbY6KQ,1067
+tgcf-0.0.1.dist-info/METADATA,sha256=0C7Y48idlef08Y5b1Slk1AY9i-TTbEbb-BWFcxDVciI,4727
+tgcf-0.0.1.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+tgcf-0.0.1.dist-info/entry_points.txt,sha256=iTb1m6E7EGuCA49aHC2NeaiDGYRHFM6ubWIdk5vhNSk,39
+tgcf-0.0.1.dist-info/top_level.txt,sha256=THiTQdEz08ZJjlEzQEqlbhM5EDqleklBcmQ2SiMsfeE,5
+tgcf-0.0.1.dist-info/RECORD,,
