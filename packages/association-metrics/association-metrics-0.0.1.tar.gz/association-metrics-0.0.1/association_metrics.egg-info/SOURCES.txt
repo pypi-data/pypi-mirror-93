@@ -1,0 +1,9 @@
+README.md
+setup.py
+association_metrics/__init__.py
+association_metrics/categorical.py
+association_metrics/pairwise.py
+association_metrics.egg-info/PKG-INFO
+association_metrics.egg-info/SOURCES.txt
+association_metrics.egg-info/dependency_links.txt
+association_metrics.egg-info/top_level.txt
