@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: Pymenta
+Version: 0.1.0
+Summary: Thid package is under Apache License
+Home-page: https://github.com/daviduarte/pymenta
+Author: Davi Duarte
+Author-email: davi.duarte@unesp.br
+License: Apache License 2.0
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+##
+README
+##
+
