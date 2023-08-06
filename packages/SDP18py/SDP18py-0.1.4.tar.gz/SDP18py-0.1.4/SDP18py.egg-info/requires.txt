@@ -1,0 +1,10 @@
+numpy
+pandas
+pareto
+time
+copy
+tkinter
+csv
+matplotlib
+datetime
+threading
