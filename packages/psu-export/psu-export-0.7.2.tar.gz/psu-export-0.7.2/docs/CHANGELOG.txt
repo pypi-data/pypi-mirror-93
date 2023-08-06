@@ -1,0 +1,2 @@
+=== 0.7.2 ===
+- First version that is able to be scheduled to run from AWS Health Check

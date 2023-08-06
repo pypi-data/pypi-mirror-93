@@ -1,0 +1,4 @@
+Django>=2.1.12,<3.0
+psu-base>=2.1.9
+pandas>=1.2.1
+psu-scheduler>=0.0.7
