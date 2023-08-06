@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: pystatping
+Version: 0.1.5
+Summary: Statping API client library
+Home-page: https://github.com/danielpalstra/pystatping
+Author: Daniel Palstra
+Author-email: daniel@danielpalstra.com
+License: Apache Software License 2.0
+Keywords: pystatping
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Requires-Dist: requests (<3.0,>=2.25.0)
+
+==========
+pystatping
+==========
+
+
+.. image:: https://img.shields.io/pypi/v/pystatping.svg
+        :target: https://pypi.python.org/pypi/pystatping
+
+.. image:: https://img.shields.io/travis/danielpalstra/pystatping.svg
+        :target: https://travis-ci.com/danielpalstra/pystatping
+
+.. image:: https://readthedocs.org/projects/pystatping/badge/?version=latest
+        :target: https://pystatping.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+
+
+Statping API client library
+
+
+* Free software: Apache Software License 2.0
+* Documentation: https://pystatping.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2021-02-01)
+------------------
+
+* First release on PyPI.
+
+
