@@ -1,0 +1,11 @@
+README.md
+setup.py
+KubunConfector.egg-info/PKG-INFO
+KubunConfector.egg-info/SOURCES.txt
+KubunConfector.egg-info/dependency_links.txt
+KubunConfector.egg-info/requires.txt
+KubunConfector.egg-info/top_level.txt
+kubunconfector/__init__.py
+kubunconfector/kubuntypes.py
+kubunconfector/misc.py
+kubunconfector/ziptray.py
