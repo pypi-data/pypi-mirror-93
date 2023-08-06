@@ -1,0 +1,7 @@
+vtb-django-utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vtb-django-utils/drf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vtb-django-utils/drf/max_limit_offset_pagination.py,sha256=cry54wWrGO0FRbV3i9ePwKhvT-iByeFItNl_lY1YzRY,1163
+vtb_django_utils-1.0.0.dist-info/METADATA,sha256=d7Rj0zQQMYM1z24n8NgeRTWi497oz-x8WClesBvtF7E,445
+vtb_django_utils-1.0.0.dist-info/WHEEL,sha256=D1Wh14kWDxPnrM-5t_6UCB-UuQNrEODtRa3vF4OsvQY,97
+vtb_django_utils-1.0.0.dist-info/top_level.txt,sha256=USSPAz3RDj6TIvd5XnLqM_plBFPbxoBlGiBTjywGNR4,17
+vtb_django_utils-1.0.0.dist-info/RECORD,,
