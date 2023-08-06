@@ -1,0 +1,5 @@
+---
+fixes:
+  - |
+    Fix a bug in the encrypt subcommand that prevented large secrets from
+    being encoded properly.
