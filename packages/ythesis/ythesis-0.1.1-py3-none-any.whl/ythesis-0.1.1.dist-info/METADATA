@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ythesis
+Version: 0.1.1
+Summary: provides thesis entities
+Home-page: https://gitlab.com/yassu/ythesis
+License: Apache-2.0
+Keywords: thesis
+Author: yassu
+Author-email: yasu0320.dev@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://gitlab.com/yassu/ythesis
+Description-Content-Type: text/markdown
+
+ythesis
+================================================================================
+
