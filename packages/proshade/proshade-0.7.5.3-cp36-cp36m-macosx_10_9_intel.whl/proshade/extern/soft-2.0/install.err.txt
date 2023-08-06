@@ -1,0 +1,5 @@
+ar: creating archive libsoft1.a
+/Library/Developer/CommandLineTools/usr/bin/ranlib: file: libsoft1.a(wrap_s2_rotate_fftw.o) has no symbols
+/Library/Developer/CommandLineTools/usr/bin/ranlib: file: libsoft1.a(wrap_soft_fftw_cor2.o) has no symbols
+/Library/Developer/CommandLineTools/usr/bin/ranlib: file: libsoft1.a(wrap_s2_rotate_fftw.o) has no symbols
+/Library/Developer/CommandLineTools/usr/bin/ranlib: file: libsoft1.a(wrap_soft_fftw_cor2.o) has no symbols
