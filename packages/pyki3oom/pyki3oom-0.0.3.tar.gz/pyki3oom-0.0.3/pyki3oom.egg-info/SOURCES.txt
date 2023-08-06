@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+pyki3oom/__init__.py
+pyki3oom/ki3oom.py
+pyki3oom/parser.py
+pyki3oom.egg-info/PKG-INFO
+pyki3oom.egg-info/SOURCES.txt
+pyki3oom.egg-info/dependency_links.txt
+pyki3oom.egg-info/not-zip-safe
+pyki3oom.egg-info/requires.txt
+pyki3oom.egg-info/top_level.txt
