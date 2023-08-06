@@ -1,0 +1,5 @@
+gitpython
+paramiko
+python-etcd3
+redis
+sqlitedict
