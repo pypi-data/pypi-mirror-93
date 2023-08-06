@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: mjoln
+Version: 0.0.1
+Summary: Environmentally Friendly File Handling
+Home-page: UNKNOWN
+Author: Vemund Halmø Aarstrand
+Author-email: vemundaa@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
