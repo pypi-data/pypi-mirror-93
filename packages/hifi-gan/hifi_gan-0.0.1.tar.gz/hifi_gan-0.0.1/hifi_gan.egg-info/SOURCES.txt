@@ -1,0 +1,13 @@
+README.md
+setup.py
+hifi_gan/env.py
+hifi_gan/inference.py
+hifi_gan/inference_e2e.py
+hifi_gan/meldataset.py
+hifi_gan/models.py
+hifi_gan/train.py
+hifi_gan/utils.py
+hifi_gan.egg-info/PKG-INFO
+hifi_gan.egg-info/SOURCES.txt
+hifi_gan.egg-info/dependency_links.txt
+hifi_gan.egg-info/top_level.txt
