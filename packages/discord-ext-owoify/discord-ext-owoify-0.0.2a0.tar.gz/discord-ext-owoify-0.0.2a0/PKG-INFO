@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: discord-ext-owoify
+Version: 0.0.2a0
+Summary: An extension module to owoify text
+Home-page: https://github.com/GreenDiscorx/discord-ext-owoify
+Author: Green
+License: MIT
+Download-URL: https://github.com/GreenDiscord/discord-ext-owoify/archive/v0.0.2-a.tar.gz
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5.3
