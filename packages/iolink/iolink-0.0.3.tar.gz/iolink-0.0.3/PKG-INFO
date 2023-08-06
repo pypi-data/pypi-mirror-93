@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: iolink
+Version: 0.0.3
+Summary: IO-Link Adapter Interface
+Home-page: https://github.com/trinamic/iolink
+Author: Maxim-Trinamic Software Team
+Author-email: pypi.trinamic@maximintegrated.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
