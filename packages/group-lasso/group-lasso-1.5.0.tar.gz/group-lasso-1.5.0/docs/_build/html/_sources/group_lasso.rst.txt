@@ -1,0 +1,21 @@
+group\_lasso package
+====================
+
+Submodules
+----------
+
+group\_lasso.utils module
+-------------------------
+
+.. automodule:: group_lasso.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: group_lasso
+   :members:
+   :undoc-members:
+   :show-inheritance:

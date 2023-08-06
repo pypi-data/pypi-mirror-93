@@ -1,0 +1,7 @@
+group_lasso
+===========
+
+.. toctree::
+   :maxdepth: 4
+
+   group_lasso
