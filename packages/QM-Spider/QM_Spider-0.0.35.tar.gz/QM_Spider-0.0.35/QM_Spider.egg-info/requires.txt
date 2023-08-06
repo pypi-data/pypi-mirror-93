@@ -1,0 +1,8 @@
+requests
+datetime
+pandas
+numpy
+scipy
+pyecharts
+zmail
+multiprocess
