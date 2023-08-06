@@ -1,0 +1,11 @@
+fava_envelope/__init__.py,sha256=M-pYHF_y0clbdJP9pczQaWEM_6jenIWuBUIU8tk1RJo,2605
+fava_envelope/modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fava_envelope/modules/beancount_envelope.py,sha256=5-GtiPbW1tZVR4Hwri0KY2VCa20is_Vd3qCBG5wUvHQ,10692
+fava_envelope/modules/main.py,sha256=DuwEUrmxqLPx09SiYtb9_ho5r7RhK7afrJnkYgcHQwM,781
+fava_envelope/templates/EnvelopeBudget.html,sha256=bSKeCCjZJ2mOLswKFmbQHb9beNhAsdi92K-ftCVszw8,767
+fava_envelope/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fava_envelope/templates/_budget_table.html,sha256=gKkJznCMV2_3TTZ1se2Bihjx6612BKZxlGJRhLmNLxk,2662
+fava_envelope-0.5.1.dist-info/LICENSE,sha256=ac9QdR1zxU3o2pj2Pm8pPdg28ZLaQabBx_wIcfKDZgs,1068
+fava_envelope-0.5.1.dist-info/WHEEL,sha256=Q99itqWYDhV793oHzqzi24q7L7Kdiz6cb55YDfTXphE,84
+fava_envelope-0.5.1.dist-info/METADATA,sha256=N7SEdJMwQcmnPPrgGfaqT54-ShT0U_7Qe51wTf0wO30,911
+fava_envelope-0.5.1.dist-info/RECORD,,
