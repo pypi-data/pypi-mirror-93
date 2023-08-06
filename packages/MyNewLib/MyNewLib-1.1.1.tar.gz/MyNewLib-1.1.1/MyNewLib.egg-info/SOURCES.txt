@@ -1,0 +1,10 @@
+setup.py
+MyNewLib.egg-info/PKG-INFO
+MyNewLib.egg-info/SOURCES.txt
+MyNewLib.egg-info/dependency_links.txt
+MyNewLib.egg-info/top_level.txt
+New Lib/Part1.py
+New Lib/Part2.py
+New Lib/__init__.py
+myPkg/__init__.py
+myPkg/myModule3.py
