@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/bddk.py
+src/bddk.egg-info/PKG-INFO
+src/bddk.egg-info/SOURCES.txt
+src/bddk.egg-info/dependency_links.txt
+src/bddk.egg-info/requires.txt
+src/bddk.egg-info/top_level.txt
