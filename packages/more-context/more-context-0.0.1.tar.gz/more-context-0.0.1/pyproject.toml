@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "more-context"
+version = "0.0.1"
+description = "More Context"
+authors = ["David Sternlicht <d1618033@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/d1618033/more-context"
+repository = "https://github.com/d1618033/more-context"
+classifiers = [
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+mypy = "*"
+black = "*"
+pytest-cov = "*"
+pylint = "^2.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

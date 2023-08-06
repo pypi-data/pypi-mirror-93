@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: more-context
+Version: 0.0.1
+Summary: More Context
+Home-page: https://github.com/d1618033/more-context
+License: MIT
+Author: David Sternlicht
+Author-email: d1618033@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/d1618033/more-context
+Description-Content-Type: text/markdown
+
+# More Context
+
+Context utilities
+
+## Installation
+
+    pip install more-context
+
+
+## Usage
+
+### Safe Context Manager
+
+Like `@contextmanager`, but safe.
+
+Code like this:
+
+```python
+@safe_context_manager
+def my_ctx():
+    lock = lock_resource()
+    yield
+    lock.delete()
+```
+
+Is equivalent to:
+
+```python
+@contextmanager
+def my_ctx():
+    lock = lock_resource()
+    try:
+        yield
+    finally:
+        lock.delete()
+```
+
