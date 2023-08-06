@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pydict2json/__init__.py
+pydict2json/__main__.py
+pydict2json.egg-info/PKG-INFO
+pydict2json.egg-info/SOURCES.txt
+pydict2json.egg-info/dependency_links.txt
+pydict2json.egg-info/entry_points.txt
+pydict2json.egg-info/requires.txt
+pydict2json.egg-info/top_level.txt
