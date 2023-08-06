@@ -1,0 +1,15 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+src/Bezier.py
+src/Core.py
+src/Kinematics.py
+src/Mathematics.py
+src/cubituskinematics.py
+src/cubituskinematics.egg-info/PKG-INFO
+src/cubituskinematics.egg-info/SOURCES.txt
+src/cubituskinematics.egg-info/dependency_links.txt
+src/cubituskinematics.egg-info/requires.txt
+src/cubituskinematics.egg-info/top_level.txt
