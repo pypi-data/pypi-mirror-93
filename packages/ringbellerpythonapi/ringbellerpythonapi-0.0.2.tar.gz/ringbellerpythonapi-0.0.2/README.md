@@ -1,0 +1,70 @@
+# Ringbeller IoT Python API
+
+
+### 1. Solution
+The package builds a Python wrapper around the C++ Modem Library.
+The native C++ library is built with make to produce a shared library (.so)
+The shared library is loaded in Python with ctypes.
+
+### 2. Sources
+The original C++ Modem Library is copied in ringbellerpythonapi/src/modem.
+Main package file ringbellerpythonapi.py exports all functions supported by the C++ Modem Library.
+
+### 3. Prerequisite: WiringPi
+The WiringPi library is required by the C++ Modem Library for low-level hardware communication.
+To install the library:
+1. Go to https://github.com/WiringPi/WiringPi
+2. Download ZIP archive
+3. Unzip archive: unzip WiringPi-final_official_2.50.zip
+4. Compile and install library:
+cd WiringPi-final_official_2.50
+./build
+
+### 4. Build C++ Modem Shared Library
+> cd ringbellerpythonapi
+> cd src
+> make
+
+### 5. Testing
+Test scripts are placed in folder /tests
+The following script attempts to turn ON and OFF the modem (debugging logs enabled):
+
+> cd tests
+> python3 testpower.py <mode>
+
+where:
+<mode> = 1 for SIMULATED mode or = 0 for HARDWARE mode (e.g. 1)
+
+### 6. API Functions
+initialize(verbose, debug, serial_port, audio_device): Initialize modem.
+on(): Turn on the modem
+off(): Turn off the modem
+restart(): Restart the modem
+connect(): Connect to modem
+disconnect(): Disconnect from modem
+configure(): Configure modem
+send_sms(number, message): Send SMS message
+receive_sms(): Receive SMS message
+place_voice_call(number): Place call
+receive_voice_call(): Receive call
+get_call_status(): Get call status
+end_call(): Hang up active voice call
+begin_audio_playback(playback_file): Begin playing audio to voice call
+wait_for_audio_playback(): Wait for voice-call audio-playback to end
+end_audio_playback(): End playing audio to voice call
+begin_audio_recording(record_file): Begin recording audio from voice call
+end_audio_recording(): End recording audio from voice call
+send_mms(recipient, cc, bcc, title, attachment, protocol, apn, username, password, authentication, mmsc, proxy, port): Send MMS message
+get_keypad_input(length, audio_file): Get keypad input (IVR)
+
+### 7. Logging
+The logging options are provided when calling the "initialize" API function.
+The package supports following logging options:
+1. verbose: log level from 0 to 4
+	0 - no logging
+	1 - errors displayed
+	2 - info and errors displayed
+	3 - info, errors and warnings displayed
+	4 - all messages displayed (info, errors, warnings and debug messages)
+2. debug: specify 1 to enable debug simulation
+

@@ -1,0 +1,7 @@
+include ringbellerpythonapi/src/*
+include ringbellerpythonapi/src/lib/*
+include ringbellerpythonapi/src/modem/*
+include ringbellerpythonapi/src/modem/inc/*
+include ringbellerpythonapi/src/modem/lib/*
+include ringbellerpythonapi/src/modem/src/*
+include ringbellerpythonapi/src/wrapper/*
