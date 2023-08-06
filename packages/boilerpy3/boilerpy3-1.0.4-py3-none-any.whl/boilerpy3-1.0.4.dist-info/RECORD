@@ -1,0 +1,12 @@
+boilerpy3/__init__.py,sha256=RIUJsVlL-C2beaIrn0o4n_jAWUkfsBoArOIzYzzkuPI,276
+boilerpy3/document.py,sha256=kzXGLEDt4MmXj2WdvtgCfdhu105feW1ss9YiirUxWTw,7949
+boilerpy3/exceptions.py,sha256=e3gRHiliClygyVZbyPiUf1ERNQsN9VAY4fvq9XoTNoQ,47
+boilerpy3/extractors.py,sha256=Ii3f5yqGdd6onGj7YVU3whQxg7I9UKX5SFqGh5oycRE,9069
+boilerpy3/filters.py,sha256=GKIHCVEPk0QueIajh0IicxBtGI1L82psdH5oSVm7RvI,38676
+boilerpy3/marker.py,sha256=1RhDU2TOv0e5p_s3TzjbATd4M4sE9O3GdQt_QW0r134,3650
+boilerpy3/parser.py,sha256=H74FTXBKQeQBec9-FWEAr5hnwlmx9Nx3aIU7WwkkKd8,24047
+boilerpy3-1.0.4.dist-info/LICENSE,sha256=Y08VBP-u4B4wWkbPOSeUxEES50VpNCvw1oiXvaYqZDc,554
+boilerpy3-1.0.4.dist-info/METADATA,sha256=8LR6w16YcsEz7uR3cpGWrNiELDrAgAH32EUGACz8K5k,4627
+boilerpy3-1.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+boilerpy3-1.0.4.dist-info/top_level.txt,sha256=6b2Jl5Z8S5bvSsbAvpwBFkpftulLldPMt4Hon33brrM,10
+boilerpy3-1.0.4.dist-info/RECORD,,
