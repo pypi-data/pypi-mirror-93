@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: pyomo-symmetry
+Version: 0.0.3
+Summary: A (work in progress) module to find the symmetry groups of a pyomo model using a novel algorithm
+Home-page: https://github.com/michaelRadigan/pyomo-symmetry
+Author: Michael Radigan
+Author-email: michael@radigan.co.uk
+License: Apache2.0
+Description: UNKNOWN
+Platform: UNKNOWN
