@@ -1,0 +1,10 @@
+Change Log
+----------
+
+0.0.1 (02/01/2021)
+------------------
+- Fix release of this package (fixed module dependencies)
+
+0.0.1 (02/01/2021)
+------------------
+- First Release of this package (no minor/major changes made yet)
