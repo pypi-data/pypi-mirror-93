@@ -1,0 +1,12 @@
+matplotlib
+tensorflow
+numpy
+argparse
+pandas
+requests
+geopandas
+scipy
+seaborn
+wget
+shapely
+osmnx==1.0.1
