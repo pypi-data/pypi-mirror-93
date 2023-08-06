@@ -1,0 +1,3 @@
+[console_scripts]
+elective = elective:main
+
