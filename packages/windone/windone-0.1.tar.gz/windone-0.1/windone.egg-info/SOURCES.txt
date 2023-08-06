@@ -1,0 +1,7 @@
+README.md
+setup.py
+windone/__init__.py
+windone.egg-info/PKG-INFO
+windone.egg-info/SOURCES.txt
+windone.egg-info/dependency_links.txt
+windone.egg-info/top_level.txt
