@@ -1,0 +1,16 @@
+scrapli>=2021.01.30a1
+lxml<5.0.0,>=4.5.1
+
+[asyncssh]
+scrapli[asyncssh]>=2021.01.30a1
+
+[full]
+scrapli[paramiko]>=2021.01.30a1
+scrapli[ssh2]>=2021.01.30a1
+scrapli[asyncssh]>=2021.01.30a1
+
+[paramiko]
+scrapli[paramiko]>=2021.01.30a1
+
+[ssh2]
+scrapli[ssh2]>=2021.01.30a1
