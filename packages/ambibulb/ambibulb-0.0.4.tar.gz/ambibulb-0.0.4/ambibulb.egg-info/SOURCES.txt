@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+ambibulb/__init__.py
+ambibulb/__main__.py
+ambibulb.egg-info/PKG-INFO
+ambibulb.egg-info/SOURCES.txt
+ambibulb.egg-info/dependency_links.txt
+ambibulb.egg-info/entry_points.txt
+ambibulb.egg-info/requires.txt
+ambibulb.egg-info/top_level.txt
+conf/osram-led-bulb.conf
+snapshot_bcm/cffi_build.py
+snapshot_bcm/snapshot_bcm.c
+snapshot_bcm/snapshot_bcm.h
