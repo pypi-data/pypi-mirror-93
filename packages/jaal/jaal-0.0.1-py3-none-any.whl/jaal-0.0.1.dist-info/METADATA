@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: jaal
+Version: 0.0.1
+Summary: jaal - your interactive network visualizer dashboard
+Home-page: https://github.com/imohitmayank/jaal
+Author: Mohit Mayank
+Author-email: mohitmayank1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: dash
+Requires-Dist: visdcc
+Requires-Dist: pandas
+Requires-Dist: dash-core-components
+Requires-Dist: dash-html-components
+Requires-Dist: dash-bootstrap-components
+
+# jaal
+Interactive dashboard for all your Network needs 
+
+
