@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "pygments-graphql-lexer"
+version = "0.1.0"
+description = "GraphQL lexer for Pygments"
+authors = ["Gazorby <gazorby@pm.me>"]
+license = "BSD-3-Clause"
+packages = [
+    { include = "graphqllexer" },
+]
+[tool.poetry.dependencies]
+python = "^3.5"
+Pygments = "^2.7.2"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.plugins."pygments.lexers"]
+"graphqllexer" = "graphqllexer.lexer:GraphqlLexer"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
