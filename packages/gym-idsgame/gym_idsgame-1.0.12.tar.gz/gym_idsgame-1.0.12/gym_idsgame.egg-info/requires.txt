@@ -1,0 +1,14 @@
+gym
+pyglet
+numpy
+torch
+matplotlib
+seaborn
+tqdm
+opencv-python
+imageio
+jsonpickle
+tensorboard
+sklearn
+stable_baselines3
+torchvision
