@@ -1,0 +1,5 @@
+pybase64
+pycryptodome
+pillow
+pyperclip
+ttkthemes
