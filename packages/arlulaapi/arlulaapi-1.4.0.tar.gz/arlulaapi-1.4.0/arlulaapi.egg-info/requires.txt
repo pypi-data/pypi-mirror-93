@@ -1,0 +1,4 @@
+grequests
+requests
+pgeocode
+arlulacore==1.0.1
