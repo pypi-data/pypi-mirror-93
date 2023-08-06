@@ -1,0 +1,9 @@
+scipy
+numpy
+scikit-learn
+python-igraph
+statsmodels>=0.12.1
+umap-learn
+leidenalg
+scrublet
+csaps
