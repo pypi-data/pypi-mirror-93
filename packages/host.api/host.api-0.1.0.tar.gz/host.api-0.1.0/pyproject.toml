@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "host.api"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.scripts]
+webhost = 'host_api.main:webapp'
+
+[tool.poetry.dependencies]
+python = "^3.7"
+fastapi = "^0.63.0"
+typer = "^0.3.2"
+python-dotenv = "^0.15.0"
+python-jose = "^3.2.0"
+passlib = "^1.7.4"
+bcrypt = "^3.2.0"
+deta = "^0.7"
+uvicorn = "^0.13.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
