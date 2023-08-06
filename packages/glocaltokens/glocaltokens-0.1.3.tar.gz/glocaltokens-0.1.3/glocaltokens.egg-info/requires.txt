@@ -1,0 +1,5 @@
+gpsoauth
+grpcio
+grpcio-tools
+requests
+simplejson
