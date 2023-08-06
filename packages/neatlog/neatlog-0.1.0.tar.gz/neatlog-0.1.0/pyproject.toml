@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "neatlog"
+version = "0.1.0"
+description = "A neat logging configurator"
+authors = ["Steffen Brinkmann <s-b@mailbox.org>"]
+readme = "README.rst"
+repository = "https://gitlab.com/szs/neatlog/"
+documentation = "https://neatlog.readthedocs.io/en/latest/"
+keywords = ["logging"]
+
+
+[tool.poetry.dependencies]
+python = "^3.6.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
