@@ -1,0 +1,3 @@
+discord.py
+html5print
+requests
