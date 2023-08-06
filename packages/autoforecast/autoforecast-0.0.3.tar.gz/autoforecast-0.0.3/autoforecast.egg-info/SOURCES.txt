@@ -1,0 +1,9 @@
+README.md
+setup.py
+autoforecast/__init__.py
+autoforecast/main.py
+autoforecast/main_test.py
+autoforecast.egg-info/PKG-INFO
+autoforecast.egg-info/SOURCES.txt
+autoforecast.egg-info/dependency_links.txt
+autoforecast.egg-info/top_level.txt
