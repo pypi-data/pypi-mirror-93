@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: fcutils
+Version: 1.0.1
+Summary: bunch of utility functions
+Home-page: https://github.com/FedeClaudi/fcutils
+Author: Federico Claudi
+Author-email: federicoclaudi@protonmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: scipy
+Requires-Dist: pyyaml
+Requires-Dist: statsmodels
+
+UNKNOWN
+
+
