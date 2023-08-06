@@ -1,0 +1,8 @@
+sendle_lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sendle_lib/orders.py,sha256=PHAP6TDp9sOQmKgnxdpAeFdr3ZVtTZcEj-qFve9QA0Q,2499
+sendle_lib/quotes.py,sha256=nTpjQPaJXWaIvhFUNaJwErTj5nFMw543Ho3ilHnQbHo,1293
+sendle_lib/tracking.py,sha256=aT9ZRf_H3ujpGwfm4zNEpCqIjXJv8O1OUHLt7c70RfA,478
+sendle_lib/validation_error.py,sha256=qFZ9yQqDQbFBbW2lDa_0aFhSL3YFBzxTrXeSCbrcgcU,244
+carrier.sendle-2020.4.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+carrier.sendle-2020.4.1.dist-info/METADATA,sha256=lmTd8pWD-97SssTz9PxIov-q2ChpNhXpjxJKZsLWxNc,1142
+carrier.sendle-2020.4.1.dist-info/RECORD,,
