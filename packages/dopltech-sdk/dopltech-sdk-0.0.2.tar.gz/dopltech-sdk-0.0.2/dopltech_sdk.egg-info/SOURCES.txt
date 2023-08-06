@@ -1,0 +1,8 @@
+README.md
+setup.py
+dopltech/sdk/__init__.py
+dopltech_sdk.egg-info/PKG-INFO
+dopltech_sdk.egg-info/SOURCES.txt
+dopltech_sdk.egg-info/dependency_links.txt
+dopltech_sdk.egg-info/requires.txt
+dopltech_sdk.egg-info/top_level.txt
