@@ -1,0 +1,3 @@
+gevent>=21.1.2
+kubernetes~=12.0
+picotui~=1.1.2

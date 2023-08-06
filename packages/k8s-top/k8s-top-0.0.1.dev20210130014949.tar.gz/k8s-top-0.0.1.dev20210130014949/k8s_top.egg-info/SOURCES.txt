@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.py
+k8s_top.egg-info/PKG-INFO
+k8s_top.egg-info/SOURCES.txt
+k8s_top.egg-info/dependency_links.txt
+k8s_top.egg-info/namespace_packages.txt
+k8s_top.egg-info/requires.txt
+k8s_top.egg-info/top_level.txt
+k8s_top.egg-info/zip-safe
+k8stop/LICENSE
+k8stop/__init__.py
