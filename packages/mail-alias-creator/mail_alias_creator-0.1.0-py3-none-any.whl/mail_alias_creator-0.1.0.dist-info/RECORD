@@ -1,0 +1,16 @@
+mail_alias_creator/__init__.py,sha256=uiD05hpBjzkPLFiI_IPke3-d9q-WYH-ttdo52j8iVB0,126
+mail_alias_creator/entry_processors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mail_alias_creator/entry_processors/base.py,sha256=0KaMbkXBvzf4M4X-oZ_BzUc37tcLT-_zWP2GbyMrDBw,1857
+mail_alias_creator/entry_processors/external_address.py,sha256=E1FgM9_XinHLiyUGbSO2VpU2XVc_c5o7llmPPV6FVz0,836
+mail_alias_creator/entry_processors/group.py,sha256=a8ktbPzzhZ6BcLNphBWG2-j31-OqllL8iEbKTMAMLNM,1215
+mail_alias_creator/entry_processors/include_alias.py,sha256=hF1apSA-p8Lx2Ot7hB1SnDOgb3cZXVyRHWlFQmVolhw,1198
+mail_alias_creator/entry_processors/user.py,sha256=T0C-C4Fv5ZdKTmPd_Jr6C38Ddjis0f_CeosUAB2td1U,1004
+mail_alias_creator/interface.py,sha256=r15-ggyAG0B1x2a0l1MN3V5VDFsZVlfzfDLho8N8T3Y,669
+mail_alias_creator/ldap.py,sha256=at_wCCsJdbeGLd-wjpuUehQcJ7qpXWMZsVtJZYFqdgY,7329
+mail_alias_creator/main.py,sha256=sQVLMY7EbnGv4w2m2_rnMUih9H7hl9e8KZxTOe3QI_k,2482
+mail_alias_creator/process.py,sha256=HS0VhxEsjuj7UxceiXjyt7SxsKixkf6v3eBW1dCgwdY,6003
+mail_alias_creator-0.1.0.dist-info/entry_points.txt,sha256=Be5Fa4QEIjZwZnFNTEizJz50rFRPgeioz396FE7-aBk,67
+mail_alias_creator-0.1.0.dist-info/LICENSE,sha256=ZVmJYCV6tIcDkERyiHeruAPKQRoX5R80fBEeIxToHeE,1063
+mail_alias_creator-0.1.0.dist-info/WHEEL,sha256=Q99itqWYDhV793oHzqzi24q7L7Kdiz6cb55YDfTXphE,84
+mail_alias_creator-0.1.0.dist-info/METADATA,sha256=kaqDV6ymtS94WdZ6BKWLzY3geMOTPzZRJ8vjCc75q6Q,491
+mail_alias_creator-0.1.0.dist-info/RECORD,,
