@@ -1,0 +1,13 @@
+formelsammlung/__init__.py,sha256=Bzyqgdo9_--q4SZAiY2hgmKtOQ7y_qByNaZTErCAbK8,1387
+formelsammlung/env_exe_runner.py,sha256=Dq7-LWzAnmoixltBU4dYZav5y051Pin5N-eXF-cls-M,2899
+formelsammlung/envvar.py,sha256=LiqF-rzPOArHDMm_RRBfsYSGfr_PWW6Ths1j3urAfsw,4349
+formelsammlung/flask_sphinx_docs.py,sha256=0sRtG5P23CijQuPbmHKg1490ZdSxb1KLYQPDHj6_nNA,4375
+formelsammlung/nox_session.py,sha256=qFU2VNt3Ej3U5rpJSRLYYFoake1HpGOcO0LcnMNdkXk,4274
+formelsammlung/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+formelsammlung/strcalc.py,sha256=UZrTyCjXcBNvrV_3ArnM718LOmn3OIj6CxfGNKkBbS0,4932
+formelsammlung/venv_utils.py,sha256=L83g073sPFKZPWhe2BzcH0GztaN4rP7GemXfRfQkew0,4137
+formelsammlung-4.0.0.dist-info/entry_points.txt,sha256=7ybkHIfaMqQ7E8bd04gP7iU0zLj0t1gCDTsStrf3ZtQ,75
+formelsammlung-4.0.0.dist-info/LICENSE,sha256=TwTHBaJstqiDWqbgv3TzE-4yh3o07vZdPuqpiq9b71M,35149
+formelsammlung-4.0.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+formelsammlung-4.0.0.dist-info/METADATA,sha256=0LQQs184K0R_4nijm20pKH1rhBGIz8ydMXUk10JS8IU,16276
+formelsammlung-4.0.0.dist-info/RECORD,,
