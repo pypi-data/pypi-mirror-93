@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: menusys
+Version: 1.1.7
+Summary: Menu system to easily create a menu in CLI
+Home-page: https://menusys.readthedocs.io
+Author: Benjamin P. Trachtenberg
+Author-email: e_ben_75-python@yahoo.com
+License: The MIT License (MIT)
+Project-URL: Documentation, https://menusys.readthedocs.io/en/latest/
+Project-URL: Source, https://github.com/btr1975/menusys
+Project-URL: Tracker, https://github.com/btr1975/menusys/issues
+Description: # Python Script: menusys
+        
+        ### Written By: Benjamin P. Trachtenberg
+        ### If you have any questions e-mail me
+        
+        ### Contact Information:  e_ben_75-python@yahoo.com
+        
+        ### LinkedIn: [Ben Trachtenberg](https://www.linkedin.com/in/ben-trachtenberg-3a78496)
+        ### Docker Hub: [Docker Hub](https://hub.docker.com/r/btr1975)
+        ### PyPi Page for [menusys](https://pypi.python.org/pypi/menusys)
+        
+        ### Requirements
+        
+        * Nothing Specific besides Python 3.5 and above
+        
+        ### Installation
+        
+        * From source "setup.py install"
+        * From pip "pip install menusys"
+        
+        ### Languages
+        
+        * Python
+        
+        ### About
+        
+        This is a library used to have a CLI menu system.
+        
+        ### Functions included in v1.0.0
+        
+        * menu(menu_dictionary, menu_header, back_function=None)
+        * clear_screen()
+        
+        ### Functions added in v1.0.2
+        
+        * menu_multi_select(menu_dictionary, menu_header, back_function=None)
+        
+        ### Functions added in v1.0.3
+        
+        * make_menu_dict_from_dict(orig_dict, dict_key_for_display)
+        
+        ### Functions added in v1.0.4
+        
+        * make_menu_dict_from_list(orig_list)
+        
+        ### Functions added in v1.1.1
+        * word_wrap_string_and_print(string_to_wrap)
+        * chunk_up_string(string_to_chunk, size_of_chunk=100)
+        
+        ### Functions added in v1.1.2
+        * word_wrap_string(string_to_wrap)
+        
+Keywords: menu cli easy helper dictionary
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
