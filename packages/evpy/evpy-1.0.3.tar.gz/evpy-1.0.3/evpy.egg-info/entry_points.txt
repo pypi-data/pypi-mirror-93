@@ -1,0 +1,3 @@
+[console_scripts]
+evpy.motor_pred = evpy_.evpy:motor_pred
+
