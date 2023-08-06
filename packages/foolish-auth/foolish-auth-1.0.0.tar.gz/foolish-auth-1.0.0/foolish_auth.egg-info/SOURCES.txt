@@ -1,0 +1,11 @@
+README.md
+setup.py
+FoolishAuth/__init__.py
+FoolishAuth/authentication.py
+FoolishAuth/models.py
+FoolishAuth/settings.py
+foolish_auth.egg-info/PKG-INFO
+foolish_auth.egg-info/SOURCES.txt
+foolish_auth.egg-info/dependency_links.txt
+foolish_auth.egg-info/requires.txt
+foolish_auth.egg-info/top_level.txt
