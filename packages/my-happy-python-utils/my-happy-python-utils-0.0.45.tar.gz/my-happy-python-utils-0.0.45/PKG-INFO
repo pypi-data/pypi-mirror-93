@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: my-happy-python-utils
+Version: 0.0.45
+Summary: Python Utils is based on Python3.7.
+Home-page: https://github.com/ggservice007/my-happy-python-utils
+Author: ggservice007
+Author-email: ggservice007@126.com
+License: Apache 2
+Description: # my-happy-python-utils
+        
+        
+        
+        ## install
+        ```shell
+        python3.7 -m pip install -U my-happy-python-utils
+        
+        or
+        
+        python3.7 -m pip install -i https://pypi.org/simple/ -U my-happy-python-utils
+        
+        ```
+        
+        ## uninstall
+        ```shell
+        python3.7 -m pip uninstall my-happy-python-utils
+        ```
+        
+        
+        ## how to use
+        See the examples directory in the project.
+        
+Platform: UNKNOWN
+Requires-Python: >=3.7.7
+Description-Content-Type: text/markdown
