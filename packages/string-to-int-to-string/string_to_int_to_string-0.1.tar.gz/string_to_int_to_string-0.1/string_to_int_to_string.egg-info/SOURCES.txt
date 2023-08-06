@@ -1,0 +1,10 @@
+README.md
+setup.py
+string_to_int_to_string/__init__.py
+string_to_int_to_string/stits_main.py
+string_to_int_to_string/stits_utils.py
+string_to_int_to_string.egg-info/PKG-INFO
+string_to_int_to_string.egg-info/SOURCES.txt
+string_to_int_to_string.egg-info/dependency_links.txt
+string_to_int_to_string.egg-info/not-zip-safe
+string_to_int_to_string.egg-info/top_level.txt
