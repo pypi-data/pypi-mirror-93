@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: pymaid
+Version: 1.0.0a1
+Summary: A rpc framework based on gevent/protobuf
+Home-page: https://github.com/catstyle/pymaid
+Author: Catstyle
+Author-email: Catstyle.Lee@gmail.com
+License: GPLv3
+Keywords: asyncio network rpc framework
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Requires-Dist: protobuf (==3.14.0)
+Requires-Dist: orjson (==3.4.4)
+Requires-Dist: wsaccel (==0.6.3)
+Requires-Dist: uvloop (==0.14.0)
+Provides-Extra: backend
+Requires-Dist: requests (==2.21.0) ; extra == 'backend'
+Requires-Dist: PyYAML (==3.13) ; extra == 'backend'
+Requires-Dist: xmltodict (==0.12.0) ; extra == 'backend'
+
+pymaid
+======
+
+a rpc framework based on gevent and google protocol buffer
+
+
