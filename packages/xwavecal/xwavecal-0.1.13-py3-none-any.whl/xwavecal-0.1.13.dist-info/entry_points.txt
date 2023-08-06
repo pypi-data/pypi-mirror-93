@@ -1,0 +1,4 @@
+[console_scripts]
+xwavecal_reduce = xwavecal.main:reduce_data
+xwavecal_reduce_dir = xwavecal.main:run
+
