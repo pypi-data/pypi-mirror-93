@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: kess
+Version: 0.9.0
+Summary: 
+Author: majik
+Author-email: me@yamajik.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: fastapi (>=0.63.0,<0.64.0)
