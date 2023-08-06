@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+cricket_tops/cricdata.py
+cricket_tops.egg-info/PKG-INFO
+cricket_tops.egg-info/SOURCES.txt
+cricket_tops.egg-info/dependency_links.txt
+cricket_tops.egg-info/requires.txt
+cricket_tops.egg-info/top_level.txt
