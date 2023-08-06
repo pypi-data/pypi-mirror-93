@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: pytorchkeras
+Version: 0.0.1
+Summary: Its a Keras replica for Pytorch
+Home-page: https://github.com/malihamza/keras_pytorch
+Author: Ali Hamza
+Author-email: alihamzakhan94@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
