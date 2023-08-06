@@ -1,0 +1,10 @@
+include README.md
+recursive-include gallery/static *
+recursive-include gallery/templates *
+
+
+recursive-include restaurant_menu/static *
+recursive-include restaurant_menu/templates *
+
+
+recursive-include docs *
