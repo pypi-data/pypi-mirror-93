@@ -1,0 +1,34 @@
+
+ 
+ class SSHKey(Base):
+     __tablename__ = 'sshkeys'
+@@ -324,11 +367,25 @@ class DB:
+ def _init_schema(logger: gluetool.log.ContextAdapter, db: DB, server_config: Dict[str, Any]) -> None:
+     with db.get_session() as session:
+         for user_config in server_config.get('users', []):
+-            logger.info('Adding user "{}"'.format(user_config['name']))
++            role = UserRoles[user_config.get('role', UserRoles.USER.value).upper()]
+ 
+-            session.add(
+-                User(username=user_config['name'])
+-            )
++            logger.info('Adding user "{}" with role "{}"'.format(user_config['name'], role.name))
++
++            user = User.create(user_config['name'], role)
++            session.add(user)
++
++            admin_token, user.admin_token = User.generate_token()
++            provisioning_token, user.provisioning_token = User.generate_token()
++
++            logger.info('Default admin token for user "{}" is "{}"'.format(
++                user.username,
++                admin_token
++            ))
++
++            logger.info('Default provisioning token for user "{}" is "{}"'.format(
++                user.username,
++                provisioning_token
++            ))
+ 
+         for key_config in server_config.get('ssh-keys', []):
+             logger.info('Adding SSH key "{}", owner by {}'.format(
