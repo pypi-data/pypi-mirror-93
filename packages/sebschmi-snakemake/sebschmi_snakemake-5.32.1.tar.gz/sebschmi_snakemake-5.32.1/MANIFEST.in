@@ -1,0 +1,3 @@
+include versioneer.py
+include sebschmi_snakemake/_version.py
+include LICENSE.md
