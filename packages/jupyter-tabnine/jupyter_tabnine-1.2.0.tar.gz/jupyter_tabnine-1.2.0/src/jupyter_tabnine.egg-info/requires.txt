@@ -1,0 +1,4 @@
+ipython
+jupyter_core
+nbconvert
+notebook>=4.2

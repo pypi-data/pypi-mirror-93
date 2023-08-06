@@ -1,0 +1,17 @@
+LICENSE
+README.rst
+setup.cfg
+setup.py
+src/jupyter_tabnine/__init__.py
+src/jupyter_tabnine/handler.py
+src/jupyter_tabnine/tabnine.py
+src/jupyter_tabnine.egg-info/PKG-INFO
+src/jupyter_tabnine.egg-info/SOURCES.txt
+src/jupyter_tabnine.egg-info/dependency_links.txt
+src/jupyter_tabnine.egg-info/not-zip-safe
+src/jupyter_tabnine.egg-info/requires.txt
+src/jupyter_tabnine.egg-info/top_level.txt
+src/jupyter_tabnine/static/README.md
+src/jupyter_tabnine/static/main.css
+src/jupyter_tabnine/static/main.js
+src/jupyter_tabnine/static/tabnine.yaml
