@@ -1,0 +1,8 @@
+LICENSE.rst,sha256=2ScaeHk9pUtIhcs5yX_MDxfp7Igo8MrNhJqd_eayKn8,1077
+haapi/games/common/__init__.py,sha256=mDWardeCnNjCSDkAK52nInbasjDTys7CQxQ7-Oi7LFc,916
+haapi/games/common/gcp/__init__.py,sha256=RQeDzxQvAceOUhq32X7koWIb7rWhvHSBahtBFvtXe8A,724
+haapi/games/common/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+haapi.games.common-0.2.0.dist-info/LICENSE.rst,sha256=2ScaeHk9pUtIhcs5yX_MDxfp7Igo8MrNhJqd_eayKn8,1077
+haapi.games.common-0.2.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+haapi.games.common-0.2.0.dist-info/METADATA,sha256=JtEllkCmdQw_fXvRIliXu1y5SLwHAGbDu1l_fMczDxY,3642
+haapi.games.common-0.2.0.dist-info/RECORD,,
