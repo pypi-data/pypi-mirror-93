@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: mysqlsheet
+Version: 0.0.1
+Summary: Push Big XL sheet in MySQL database table
+Home-page: https://github.com/sachinchavan9/mysqlsheet
+Author: Sachin Chavan
+Author-email: sachinewx@gmail.com
+License: UNKNOWN
+Description: ```
+         ___ ___       _______ _______ ___      _______ __                __   
+        |   Y   .--.--|   _   |   _   |   |    |   _   |  |--.-----.-----|  |_ 
+        |.      |  |  |   1___|.  |   |.  |    |   1___|     |  -__|  -__|   _|
+        |. \_/  |___  |____   |.  |   |.  |___ |____   |__|__|_____|_____|____|
+        |:  |   |_____|:  1   |:  1   |:  1   ||:  1   |                       
+        |::.|:. |     |::.. . |::..   |::.. . ||::.. . |                       
+        `--- ---'     `-------`----|:.`-------'`-------'                       
+                                   `--'                                        
+        
+        [!] MySQL Sheet.
+        
+        ```
+Keywords: MySQL xlsheet xlsx BigFile
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Database
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
