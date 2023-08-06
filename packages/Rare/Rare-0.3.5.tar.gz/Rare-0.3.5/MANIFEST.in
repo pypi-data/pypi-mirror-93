@@ -1,0 +1,5 @@
+include Rare/Styles/dark.qss
+include Rare/Styles/RareStyle.css
+include README.md
+include Rare/languages/de.qm
+include Rare/Styles/Icons/loader.gif
