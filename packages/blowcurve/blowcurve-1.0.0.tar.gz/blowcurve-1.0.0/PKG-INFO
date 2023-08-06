@@ -1,0 +1,145 @@
+Metadata-Version: 2.1
+Name: blowcurve
+Version: 1.0.0
+Summary: Simple library for Blowfish / ECC encryption and digital signatures.
+Home-page: https://github.com/origamizyt/blowcurve
+Author: origamizyt
+Author-email: zhaoyitong18@163.com
+License: MIT
+Description: # Blowcurve Encryption Library
+        
+        Repository: https://www.github.com/origamizyt/blowcurve
+        
+        Simple library for Blowfish / ECC encryption and digital signatures.
+        
+        ## Installation
+        This library is available on PyPI.
+        ```
+        pip install blowcurve
+        ```
+        
+        Or you could also install from source code.
+        ```
+        python setup.py install
+        ```
+        
+        ## Usage
+        The `Blowcurve` class in package root provides all usage.
+        You can initialize it without any parameters to generate random keys: (In fact, this is the only way to create instances.)
+        ```py
+        >>> from blowcurve import Blowcurve
+        >>> bc1 = Blowcurve()
+        >>> bc2 = Blowcurve()
+        ```
+        
+        The `export` method allows you to export the key as DER hex string:
+        ```py
+        >>> bc1.export()
+        '3059301306072a8648ce3d020106082a8648ce3d030107034200041c873634bf4b14d555800e33482971ca55e5780e8c109c817adf185919060e414857851ee2bdff18cd76510b80c79f3b11380810e2be9a876765722ed9c7f465'
+        ```
+        
+        The `load` method performs ecdh key exchange with remote services:
+        ```py
+        >>> bc1.load(bc2.export())
+        >>> bc2.load(bc1.export())
+        ```
+        
+        No error means key exchange was successful.
+        
+        After key exchange, the `sign` and `encrypt` methods are enabled:
+        ```py
+        >>> signature = bc1.sign(b'data')
+        >>> bc2.verify(b'data', signature)
+        True
+        >>> data = b'mymessage'
+        >>> bc2.decrypt(bc1.encrypt(data))
+        b'message'
+        ```
+        
+        If no remote key was provided, a `MissingRemoteKey` exception will be raised:
+        ```py
+        >>> Blowcurve().encrypt(b'')
+        Traceback (most recent call last):
+          File "<stdin>", line 1, in <module>
+          File "__init__.py", line 41, in encrypt
+            ephemeral, key = self._pair.ephemeral()
+          File "keys.py", line 94, in ephemeral
+            raise MissingRemoteKey
+        blowcurve.keys.MissingRemoteKey: remote key not loaded yet.
+        >>> Blowcurve().verify(b'', b'')
+        Traceback (most recent call last):
+          File "<stdin>", line 1, in <module>
+          File "__init__.py", line 38, in verify
+            return self._pair.verify(data, signature)
+          File "keys.py", line 109, in verify
+            raise MissingRemoteKey
+        blowcurve.keys.MissingRemoteKey: remote key not loaded yet.
+        ```
+        
+        The `keys` module has API for basic signing and ecdh.
+        ```py
+        >>> from blowcurve.keys import ECKeys
+        >>> k1 = ECKeys()
+        >>> k2 = ECKeys()
+        >>> k1.load(k2.export())
+        >>> k2.load(k1.export())
+        >>> k1.secret() == k2.secret()
+        True
+        >>> k2.verify(b'data', k1.sign(b'data'))
+        True
+        ```
+        
+        The `crypt` module has API for encryption and padding.
+        ```py
+        >>> from blowcurve import crypt
+        >>> crypt.pkcs5_pad(b'data', 8)
+        b'data\x04\x04\x04\x04'
+        >>> crypt.pkcs5_pad(b'mymessage', 16)
+        b'mymessage\x07\x07\x07\x07\x07\x07\x07'
+        >>> crypt.pkcs5_unpad(b'data\x04\x04\x04\x04')
+        b'data'
+        >>> crypt.pkcs5_unpad(b'incorrect\x01\x02\x03')
+        Traceback (most recent call last):
+          File "<stdin>", line 1, in <module>
+          File "crypt.py", line 41, in pkcs5_unpad
+            raise IncorrectPadding
+        blowcurve.crypt.IncorrectPadding: incorrect padding
+        >>> data = crypt.encrypt(b'mykey', b'hello, world!')
+        >>> crypt.decrypt(b'mykey', data)
+        b'hello, world!'
+        >>> crypt.decrypt(b'other', data)
+        Traceback (most recent call last):
+          File "<stdin>", line 1, in <module>
+          File "crypt.py", line 71, in decrypt
+            return pkcs5_unpad(cipher.decrypt(data))
+          File "crypt.py", line 41, in pkcs5_unpad
+            raise IncorrectPadding
+        blowcurve.crypt.IncorrectPadding: incorrect padding
+        ```
+        
+        The cause of the exception above is because the incorrect key results in incorrect decrypted data, therefore causing an incorrect padding. (There is chance that this exception won't occur, but the result will still be malformed.)
+        
+        ## Testing
+        
+        The `test.py` file contains unittest test cases:
+        ```
+        $ python -m unittest --verbose blowcurve.test
+        testEncrypt (blowcurve.test.BlowcurveTestCase) ... ok
+        testSign (blowcurve.test.BlowcurveTestCase) ... ok
+        testEncrypt (blowcurve.test.CryptTestCase) ... ok
+        testPad (blowcurve.test.CryptTestCase) ... ok
+        testNoRemoteKey (blowcurve.test.KeysTestCase) ... ok
+        testSecret (blowcurve.test.KeysTestCase) ... ok
+        testSign (blowcurve.test.KeysTestCase) ... ok
+        
+        ----------------------------------------------------------------------
+        Ran 7 tests in 0.179s
+        
+        OK
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
