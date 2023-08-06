@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: iraclis
+Version: 1.5.1
+Summary: Analysis pipeline for HST/WFC3 spectroscopic observations of exoplanet transits and eclipses.
+Home-page: https://github.com/ucl-exoplanets/Iraclis
+Author: Angelos Tsiaras
+Author-email: aggelostsiaras@gmail.com
+License: Creative Commons Attribution 4.0 International License
+Description: Visit https://github.com/ucl-exoplanets/Iraclis for more details.
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 3.7
