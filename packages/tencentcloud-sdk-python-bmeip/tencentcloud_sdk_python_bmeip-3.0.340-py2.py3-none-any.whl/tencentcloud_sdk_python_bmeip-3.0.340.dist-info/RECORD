@@ -1,0 +1,9 @@
+tencentcloud/__init__.py,sha256=o3XRmF9MbdCQP--Maln_4iLTRNFM31B-7TPIfaMDUZA,630
+tencentcloud/bmeip/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/bmeip/v20180625/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/bmeip/v20180625/bmeip_client.py,sha256=tdCSon2wRPKzgKDTWWItB_ZD-jkgcWGqsxvrk0cLQJg,23590
+tencentcloud/bmeip/v20180625/models.py,sha256=tKHmgBDVWEDPGP995RxKlvITXfL1YlSsFH8PgBDMsEM,37337
+tencentcloud_sdk_python_bmeip-3.0.340.dist-info/METADATA,sha256=CgXA1NCV64fMHELSp-VT195K_ndURCdFaO0E_SocnFM,1442
+tencentcloud_sdk_python_bmeip-3.0.340.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+tencentcloud_sdk_python_bmeip-3.0.340.dist-info/top_level.txt,sha256=g-8OyzoqI6O6LiS85zkeNzhB-osEnRIPZMdyRd_0eL0,13
+tencentcloud_sdk_python_bmeip-3.0.340.dist-info/RECORD,,
