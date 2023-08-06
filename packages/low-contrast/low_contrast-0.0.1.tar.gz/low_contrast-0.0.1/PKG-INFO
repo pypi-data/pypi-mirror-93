@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: low_contrast
+Version: 0.0.1
+Summary: low-contrast
+Home-page: UNKNOWN
+Author: Amol Patil
+Author-email: <amolkumar.work@email.com>
+License: UNKNOWN
+Description: Package to detect images with lower contrast
+Keywords: python,first package
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
