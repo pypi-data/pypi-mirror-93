@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: moepy
+Version: 0.0.3
+Summary: Code and analysis used for calculating the merit order effect of renewables on price and carbon intensity of electricity markets
+Home-page: https://github.com/AyrtonB/Merit-Order-Effect
+Author: Ayrton Bourn
+Author-email: ayrtonbourn@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas (==1.2.0)
+Requires-Dist: numpy (==1.19.5)
+Requires-Dist: matplotlib (==3.3.3)
+Requires-Dist: seaborn (==0.11.1)
+Requires-Dist: lxml (==4.6.2)
+Requires-Dist: ipypb (==0.5.2)
+Requires-Dist: feautils (==0.0.2)
+Requires-Dist: dagster (==0.9.21)
+Requires-Dist: scikit-learn (==0.24.0)
+Requires-Dist: scipy (==1.6.0)
+
+# Merit-Order-Effect
+
+Code and analysis used for calculating the merit order effect of renewables on price and carbon intensity of electricity markets
+
+
