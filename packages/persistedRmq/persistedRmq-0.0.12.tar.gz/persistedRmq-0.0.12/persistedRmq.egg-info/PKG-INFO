@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: persistedRmq
+Version: 0.0.12
+Summary: A simple MQ based on Redis pubsub, but won't lose message
+Home-page: https://github.com/ipconfiger/persistedRmq
+Author: Alexander.Li
+Author-email: superpowerlee@gmail.com
+License: GNU General Public License v3.0
+Description: A simple MQ based on Redis pubsub, but won't lose message(Based on asyncio, only works on Python 3)
+        
+Keywords: MQ Redis Pubsub Persisted
+Platform: UNKNOWN
