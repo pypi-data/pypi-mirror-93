@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: ipa-tools
+Version: 0.0.1.dev0
+Summary: iPA client
+Home-page: https://github.com/reale/ipa-tools
+Author: Roberto Reale
+Author-email: roberto@reale.me
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: click
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: jsonschema ; extra == 'test'
+
+ipa-tools
+=========
+
+.. image:: logo_ipa.png
+   :target: https://indicepa.gov.it/
+
+A set of command-line tools to interact with the Italian [Public Administration Index (IPA)](https://indicepa.gov.it/).
+
+Preconditions
+-------------
+
+Retrieve an API key from the iPA website for free:
+
+https://www.indicepa.gov.it/documentale/n-webservices.php
+
+
