@@ -1,0 +1,13 @@
+iniparse
+configobj
+hydra-core
+python-decouple
+dynaconf
+mkdocs
+markdown
+pymdown-extensions
+parse_it
+packaging
+sphinx
+pdoc
+markdown2
