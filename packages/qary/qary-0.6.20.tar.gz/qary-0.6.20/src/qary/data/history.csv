@@ -1,0 +1,15 @@
+,user,bot,skill
+0,,"I'm going to ask you a few questions about python to set a baseline on your python knowledge.
+This way you can see how much you learn over time.
+So don't worry if you don't know the answers, you will soon!
+Ready?",
+1,yep,"Please answer ""yes"" or ""quit"" to exit",
+2,yes,"Rate your `python` skill from 0 to 5.
+0 if you've never heard of it as a programming language.
+You'd be a 5 if you are an internationally recognized expert who regularly writes blog posts.
+You could also be a 5 if you have written a book about Python.
+Another example of a 5 would be someone who has been the lead developer on a production python app for more than 1000 users.
+You'd be a 3 if you have created a github or gitlab repository with some python code that you've written from scratch yourself.
+You'd also be a 3 if you have a reputation of 1000 or more on Stack Exchange.
+You'd also be a 3 if you've ever given a lightning talk about anything python-related.",
+3,exit,,
