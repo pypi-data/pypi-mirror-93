@@ -1,0 +1,2 @@
+aiohttp
+graphql-core>=3
