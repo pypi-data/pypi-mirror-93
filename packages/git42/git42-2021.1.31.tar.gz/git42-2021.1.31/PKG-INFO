@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: git42
+Version: 2021.1.31
+Summary: git init, add, commit and push with one command
+Home-page: https://github.com/andrewp-as-is/git42
+License: Unlicense
+Description: <!--
+        https://readme42.com
+        -->
+        
+        
+        
+        [![](https://img.shields.io/badge/OS-Unix-blue.svg?longCache=True)]()
+        [![](https://img.shields.io/pypi/v/git42.svg?maxAge=3600)](https://pypi.org/project/git42/)
+        [![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
+        
+        ### Installation
+        ```bash
+        $ [sudo] pip install git42
+        ```
+        
+        ```bash
+        $ [sudo] npm i -g git42
+        ```
+        
+        #### Examples
+        ```bash
+        git42 path/to/repo1
+        git42 path/to/repo2 path/to/repo3
+        ```
+        
+        <p align="center">
+            <a href="https://readme42.com/">readme42.com</a>
+        </p>
+Keywords: git
+Platform: UNKNOWN
+Classifier: License :: Public Domain
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Unix Shell
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
