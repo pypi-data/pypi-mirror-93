@@ -1,0 +1,8 @@
+README.md
+setup.py
+pyremsql/__init__.py
+pyremsql.egg-info/PKG-INFO
+pyremsql.egg-info/SOURCES.txt
+pyremsql.egg-info/dependency_links.txt
+pyremsql.egg-info/requires.txt
+pyremsql.egg-info/top_level.txt

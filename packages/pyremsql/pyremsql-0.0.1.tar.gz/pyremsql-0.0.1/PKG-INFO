@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pyremsql
+Version: 0.0.1
+Summary: Python wrapper for RemoteSQLite API
+Home-page: https://github.com/XazkerBoy/RemoteSQLite
+Author: Xazker
+Author-email: xazkerboy@gmail.com
+License: GPL3
+Description: ## PyRemoteSQLite - Python wrapper for RemoteSQLite API
+        
+        ### Usage:
+        1. Install package via pip: `pip3 install pyremsql`
+        2. Import it: `import pyremsql`
+        3. Use available functions. For most of the functionality, check `test.py`
+Platform: UNKNOWN
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
