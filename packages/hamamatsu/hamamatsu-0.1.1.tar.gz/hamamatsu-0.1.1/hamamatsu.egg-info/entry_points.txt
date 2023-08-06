@@ -1,0 +1,16 @@
+[Lima_camera]
+Hamamatsu = hamamatsu.lima.camera
+
+[Lima_tango_camera]
+Hamamatsu = hamamatsu.lima.tango
+
+[console_scripts]
+hamamatsu-lima = hamamatsu.lima [lima]
+hamamatsu-simulator = hamamatsu.simulator [simulator]
+
+[limatb.cli.camera]
+Hamamatsu = hamamatsu.lima.cli:hamamatsu [lima]
+
+[limatb.cli.camera.scan]
+Hamamatsu = hamamatsu.lima.cli:scan [lima]
+

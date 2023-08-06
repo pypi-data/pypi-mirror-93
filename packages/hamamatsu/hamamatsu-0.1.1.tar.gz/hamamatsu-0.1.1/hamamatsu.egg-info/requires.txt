@@ -1,0 +1,14 @@
+
+[all]
+lima-toolbox>=1
+beautifultable>=1
+sinstruments>=1
+click>=7
+
+[lima]
+lima-toolbox>=1
+beautifultable>=1
+click>=7
+
+[simulator]
+sinstruments>=1
