@@ -1,0 +1,10 @@
+README.md
+setup.py
+scanit_cli/__init__.py
+scanit_cli/scanit.py
+scanit_cli.egg-info/PKG-INFO
+scanit_cli.egg-info/SOURCES.txt
+scanit_cli.egg-info/dependency_links.txt
+scanit_cli.egg-info/entry_points.txt
+scanit_cli.egg-info/requires.txt
+scanit_cli.egg-info/top_level.txt
