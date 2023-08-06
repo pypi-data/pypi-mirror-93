@@ -1,0 +1,11 @@
+jinja2
+dataclasses
+progressbar2
+chardet
+prettytable
+
+[dev]
+blessings
+pygments
+m2r
+pyfakefs

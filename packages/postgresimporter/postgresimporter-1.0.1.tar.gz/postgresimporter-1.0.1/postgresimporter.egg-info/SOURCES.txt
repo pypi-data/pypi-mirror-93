@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+postgresimporter/__init__.py
+postgresimporter/cli.py
+postgresimporter/csvcount.py
+postgresimporter/exec.py
+postgresimporter/import.py
+postgresimporter/main.py
+postgresimporter/utils.py
+postgresimporter.egg-info/PKG-INFO
+postgresimporter.egg-info/SOURCES.txt
+postgresimporter.egg-info/dependency_links.txt
+postgresimporter.egg-info/entry_points.txt
+postgresimporter.egg-info/requires.txt
+postgresimporter.egg-info/top_level.txt
