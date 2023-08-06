@@ -1,0 +1,13 @@
+xbrl_parser/__init__.py,sha256=klsrqh0WgjzslgbbLj1VBgqpJlShWFGdH4rUDmAZgrE,2489
+xbrl_parser/cache.py,sha256=HvCtWiJ-YTb-SjHJ4nuv5TT_7m2ROhjGNUftcUi8q98,4049
+xbrl_parser/instance.py,sha256=J1SFGDZLOyShrQsI3_bJPK2XLg1SJ7vdBluO2QadwIs,22587
+xbrl_parser/linkbase.py,sha256=ZKKjrWXluIEXVMa_Ek7ZaGK0f6oDMWh9eQ1tRSm03no,26152
+xbrl_parser/taxonomy.py,sha256=AcHK1WxzOqGdG7yeLZj5rS6CdgHDmS2ROEb6H9XZhcA,11115
+xbrl_parser/helper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xbrl_parser/helper/uri_resolver.py,sha256=QivO8RgcUPEG_g3CtNyR88-vrU0FXLO96rgf2y0VQSg,1609
+xbrl_parser/helper/xml_parser.py,sha256=A5s-ofw0iBo1zYhqGxNM_Kge248jjOuv0z0Y-3bc_Lo,865
+py_xbrl-0.1.0.dist-info/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+py_xbrl-0.1.0.dist-info/METADATA,sha256=160uEkrEjg-21OlxNHa4duXpcryil-7soh5IKgDyphk,15216
+py_xbrl-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+py_xbrl-0.1.0.dist-info/top_level.txt,sha256=_aWP0Lf373A4JV8vsOU_gKvfPmH_kGQiY_vYkp-gjFo,12
+py_xbrl-0.1.0.dist-info/RECORD,,
