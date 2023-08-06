@@ -1,0 +1,3 @@
+[console_scripts]
+key=keygen_api.main:app
+
