@@ -1,0 +1,10 @@
+README.md
+setup.py
+OdooLocust/OdooLocust.py
+OdooLocust/OdooTaskSet.py
+OdooLocust/__init__.py
+OdooLocust.egg-info/PKG-INFO
+OdooLocust.egg-info/SOURCES.txt
+OdooLocust.egg-info/dependency_links.txt
+OdooLocust.egg-info/requires.txt
+OdooLocust.egg-info/top_level.txt
