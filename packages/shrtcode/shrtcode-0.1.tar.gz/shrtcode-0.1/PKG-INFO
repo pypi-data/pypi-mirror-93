@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: shrtcode
+Version: 0.1
+Summary: A wrapper for the Shrtcode API made in python
+Home-page: https://github.com/Yukari-san/shrtcode-api-wrapper/
+Author: Yukari-san
+Author-email: luiz2005eduardo@gmail.com
+License: MIT
+Download-URL: https://github.com/Yukari-san/shrtcode-api-wrapper/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: wrapper,shrtcode,url_shortener,no_authentication
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
