@@ -1,0 +1,5 @@
+deposit_amount
+home_loan
+personal_loan
+vehicle_loan
+withdraw_amount
