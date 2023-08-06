@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pbpy
+Version: 1.0.0
+Summary: Wrapper per l'api di primebots.it
+Home-page: UNKNOWN
+Author: Giuseppe Pollio
+Author-email: polliog@protonmail.com
+License: MIT
+Download-URL: https://github.com/Polliog/primebots-py-wrapper
+Description: UNKNOWN
+Keywords: primebots,pbpy
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
