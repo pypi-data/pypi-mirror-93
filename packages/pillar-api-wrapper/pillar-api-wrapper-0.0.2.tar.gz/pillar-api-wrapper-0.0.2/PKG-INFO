@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pillar-api-wrapper
+Version: 0.0.2
+Summary: Python wrapper for our REST API.
+Home-page: https://github.com/pillargg/pillar-api-wrapper
+Author: PillarGG
+Author-email: opensource@pillar.gg
+License: UNKNOWN
+Description: # Pillar API Wrapper
+        
+        This is our internal API wrapper for Python. If you are not an employee of Pillar or its affiliates, feel free to browse the code and use this repo as either inspiration or a base for your own projects. Currently there is no plan to open our API up to the public, so for now this is an internal tool, but we at Pillar strive for an open source ecosystem and intend to open source many of our internal tooling.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
