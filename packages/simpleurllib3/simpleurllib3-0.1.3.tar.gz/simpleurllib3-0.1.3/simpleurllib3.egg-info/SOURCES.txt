@@ -1,0 +1,8 @@
+README.md
+setup.py
+simpleurllib3.py
+simpleurllib3.egg-info/PKG-INFO
+simpleurllib3.egg-info/SOURCES.txt
+simpleurllib3.egg-info/dependency_links.txt
+simpleurllib3.egg-info/requires.txt
+simpleurllib3.egg-info/top_level.txt
