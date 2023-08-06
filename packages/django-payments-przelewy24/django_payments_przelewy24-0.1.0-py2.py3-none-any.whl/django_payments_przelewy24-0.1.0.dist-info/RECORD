@@ -1,0 +1,11 @@
+payments_przelewy24/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+payments_przelewy24/api.py,sha256=vPZPV5_hPPEWoxyyowMuc2ZAspx0UoeSfxJFuk1sD-M,4404
+payments_przelewy24/config.py,sha256=Kphnrw2_OLNhhwjXLJQXSJkkHMs0djxH8zfp2eotk_A,1981
+payments_przelewy24/forms.py,sha256=qWTC3l_CooT6bSDkn0O_fV5hjrYfUVeyEGNw42EYWTg,2150
+payments_przelewy24/provider.py,sha256=EAkZUrhjugX0tTOblOCLVy7r7RCz_T6wtG789HUGfBs,2808
+django_payments_przelewy24-0.1.0.dist-info/AUTHORS.rst,sha256=-16TPr-W8w8OAeMX0kRNIYBmiWRX0tCJgsXSUQzl-60,179
+django_payments_przelewy24-0.1.0.dist-info/LICENSE,sha256=ydd8Dtk2piwPYzBkCH4XHS22__WZ1Y5bXfNb6GyUUV4,1089
+django_payments_przelewy24-0.1.0.dist-info/METADATA,sha256=BBqL6aH2JyA_64kKZ2vO2kso8C_g0xA_rFAmgvjJPT8,2749
+django_payments_przelewy24-0.1.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+django_payments_przelewy24-0.1.0.dist-info/top_level.txt,sha256=qu9eRMcziAcT7SvAgpk3rIIUhT6T1W9V9LfOvRre7pg,20
+django_payments_przelewy24-0.1.0.dist-info/RECORD,,
