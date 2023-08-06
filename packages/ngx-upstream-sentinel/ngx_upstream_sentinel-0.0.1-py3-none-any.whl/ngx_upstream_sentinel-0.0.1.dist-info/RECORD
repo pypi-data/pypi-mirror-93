@@ -1,0 +1,10 @@
+ngx_upstream_sentinel/README.rst,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ngx_upstream_sentinel/ngx_upstream_sentinel/__init__.py,sha256=BK84ULaiYDXWlRyUCKIMr07VaO54OsnhwZdVdQnA-fk,3147
+ngx_upstream_sentinel/poetry.lock,sha256=knWyeT_xZYwE8eUhDVR7UvsljfCZacNVMl7VRbtEA58,8496
+ngx_upstream_sentinel/pyproject.toml,sha256=Ouffe-kTAzQs8gjGvXc-14u-oIVMG1PzabxpGDbPv4k,420
+ngx_upstream_sentinel/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ngx_upstream_sentinel/tests/test_ngx_upstream_sentinel.py,sha256=k-PAT8QfvwiJ-XkQryfSyqdkVjr2sdf9Xo_EPHlsUeE,102
+ngx_upstream_sentinel-0.0.1.dist-info/LICENSE,sha256=FdK8dnvXk0I_9qAf4TCXwZdst5B5uL5JfbyPfVSHYR4,1080
+ngx_upstream_sentinel-0.0.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+ngx_upstream_sentinel-0.0.1.dist-info/METADATA,sha256=g6YrIm2_0LrRnX8NQgdVLEDulGRoQsQywzRDrELjV1o,423
+ngx_upstream_sentinel-0.0.1.dist-info/RECORD,,
