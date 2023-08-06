@@ -1,0 +1,8 @@
+README.md
+setup.py
+feature_classify/__init__.py
+feature_classify.egg-info/PKG-INFO
+feature_classify.egg-info/SOURCES.txt
+feature_classify.egg-info/dependency_links.txt
+feature_classify.egg-info/not-zip-safe
+feature_classify.egg-info/top_level.txt
