@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: example-pkg-bradmorg
+Version: 0.0.2
+Summary: A small example package
+Home-page: https://github.com/pypa/sampleproject
+Author: Example Author
+Author-email: author@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+
+# https://packaging.python.org/tutorials/packaging-projects/
+
+```
+touch LICENSE, README.md, setup.py
+```
+
+```
+python -m pip install --user --upgrade setuptools wheel twine
+python setup.py sdist bdist_wheel
+```
+
+```
+python -m twine upload --repository pypi dist/*
+```
+
+```
+pip install example-pkg-bradmorg
+```
+
