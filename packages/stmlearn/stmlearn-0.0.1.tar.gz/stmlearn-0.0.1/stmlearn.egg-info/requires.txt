@@ -1,0 +1,5 @@
+numpy
+scipy
+tabulate
+graphviz
+pygtrie
