@@ -1,0 +1,3 @@
+##pytabulate
+
+Note: this is an alpha release, this package allows you to understand your table datasets, providing different set of analytics, the main package function at the moment is get_probability_distribution(), calling this function and seeing its docstrings would reveal all the distributions of metadata of your dataset it would provide, this is still in its early stages of development as a package and doesn't have a publically available github page as we have a commercial consumption of the package at the moment, but in near future all the open source code for this and much more additional features will be introduced.
