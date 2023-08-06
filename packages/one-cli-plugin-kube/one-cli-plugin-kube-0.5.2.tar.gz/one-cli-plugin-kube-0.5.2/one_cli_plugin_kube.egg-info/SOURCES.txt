@@ -1,0 +1,7 @@
+README.md
+setup.py
+one_cli_plugin_kube.egg-info/PKG-INFO
+one_cli_plugin_kube.egg-info/SOURCES.txt
+one_cli_plugin_kube.egg-info/dependency_links.txt
+one_cli_plugin_kube.egg-info/top_level.txt
+plugin_kube/__init__.py
