@@ -1,0 +1,5 @@
+blake3>=0.1.8
+click>=7.1.2
+coolname>=1.1.0
+google-cloud-pubsub>=2.2.0
+twined==0.0.16
