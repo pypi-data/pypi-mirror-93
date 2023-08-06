@@ -1,0 +1,13 @@
+synapsemonitor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+synapsemonitor/__main__.py,sha256=gRbbLCPH8QwaAH2B8u582b4Yv37LoWYwCQ5K5NZBYac,4267
+synapsemonitor/monitor.py,sha256=iy5PnbtJ9i9v5ifZYjrXRWvMZEk9gUQLepfqQ7UjEAU,5730
+synapsemonitor/team_request_notifier.py,sha256=xVT3muNwydQqhLBk4sZLBG8rIds2pinKwDfo5sKpbwU,2424
+synapsemonitor/update_activity_feed.py,sha256=FuPSqXBcX9kcFnolyc6F1JgsYJIPP-vJcb4-PBwNbNY,6241
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_monitor.py,sha256=-MiqfCb5EOIKuNxkcogrFEbbMUni7beQJKjB8viGmMQ,5029
+synapsemonitor-0.0.1.dist-info/LICENSE,sha256=Qrcc9bq2nERnvCwUXZu2LQF5vSulg4HIufY8WLn-Ilg,11350
+synapsemonitor-0.0.1.dist-info/METADATA,sha256=yI0qvvqnpKmYu2peIWuc5I9d_TJsxyw6Df7rzYI3gKM,3198
+synapsemonitor-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+synapsemonitor-0.0.1.dist-info/entry_points.txt,sha256=Wzj9rcy7v_feTFAFmUnez6o7MRk6EjlzN9c9DRfsC4c,65
+synapsemonitor-0.0.1.dist-info/top_level.txt,sha256=vQUbCwLtpT6ZqPQY25f8VIkpiAf-z0_jiH6FX7oCKBo,20
+synapsemonitor-0.0.1.dist-info/RECORD,,
