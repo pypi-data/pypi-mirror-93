@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: serverhttp
+Version: 1.5
+Summary: A simple HTTP server
+Home-page: UNKNOWN
+Author: Allen
+Author-email: allen.haha@hotmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+A Simple HTTP Server.
+
+
