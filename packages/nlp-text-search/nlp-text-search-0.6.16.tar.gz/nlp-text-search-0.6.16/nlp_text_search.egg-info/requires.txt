@@ -1,0 +1,12 @@
+deeppavlov
+deprecation
+gensim
+fasttext
+keras<2.3
+lru-dict
+methodtools
+nltk
+numpy
+overrides
+theano
+setuptools
