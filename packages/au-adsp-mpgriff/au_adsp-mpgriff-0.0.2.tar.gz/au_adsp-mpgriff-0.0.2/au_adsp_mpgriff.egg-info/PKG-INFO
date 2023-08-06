@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: au-adsp-mpgriff
+Version: 0.0.2
+Summary: A small example package
+Home-page: https://github.com/mpgriff/au_adsp
+Author: matt griffiths
+Author-email: mpg@ece.au.dk
+License: UNKNOWN
+Description: replacement for matlab functions in Advance Digital Signal Processing
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
