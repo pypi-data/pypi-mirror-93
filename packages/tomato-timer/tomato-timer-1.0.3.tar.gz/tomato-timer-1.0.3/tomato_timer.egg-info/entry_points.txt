@@ -1,0 +1,3 @@
+[console_scripts]
+tomato = tomato:main
+
