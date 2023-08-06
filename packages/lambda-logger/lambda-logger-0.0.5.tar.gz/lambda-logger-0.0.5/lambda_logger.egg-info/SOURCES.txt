@@ -1,0 +1,16 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+lambda-logger/__init__.py
+lambda-logger/_nbdev.py
+lambda-logger/core.py
+lambda_logger.egg-info/PKG-INFO
+lambda_logger.egg-info/SOURCES.txt
+lambda_logger.egg-info/dependency_links.txt
+lambda_logger.egg-info/entry_points.txt
+lambda_logger.egg-info/not-zip-safe
+lambda_logger.egg-info/requires.txt
+lambda_logger.egg-info/top_level.txt
