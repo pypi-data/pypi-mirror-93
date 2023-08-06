@@ -1,0 +1,5 @@
+{% for record in queryset %}
+  <li {% for name, value in htmx_attrs.items %} {{ name }}="{{ value|stringformat:'s' }}"{% endfor %} @click="{text='{{record}}';value='{{record.uuid}}';isOpened=false;{{ widget_name }}AlpineClick('{{record}}', '{{record.uuid}}', $refs.{{ widget_name }}_select)}" value="{{record.uuid}}" role="option" class="text-gray-900 cursor-default select-none hover:cursor-pointer hover:bg-cyan-600 hover:text-cyan-100">
+    {% include option_template_name %}
+  </li>
+{% endfor %}

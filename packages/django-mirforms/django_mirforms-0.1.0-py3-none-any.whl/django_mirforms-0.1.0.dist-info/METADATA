@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: django-mirforms
+Version: 0.1.0
+Summary: A Django app contains custom html form inputs.
+Home-page: https://github.com/abidarelmehdi/django-mirforms
+License: MIT
+Author: Abidar El Mehdi
+Author-email: abidar.elmehdi@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django :: 2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries :: forms
+Requires-Dist: cryptocode (>=0.1,<0.2)
+Project-URL: Repository, https://github.com/abidarelmehdi/django-mirforms
+Description-Content-Type: text/markdown
+
+=====
+mirforms
+=====
+
+Mir forms is a Django app contains custom html form inputs.
+
+Quick start
+-----------
+
+1. Add "mirforms" to your INSTALLED_APPS setting like this::
+
+    INSTALLED_APPS = [
+        ...
+        'mirforms',
+    ]
+
+2. Include the mirforms URLconf in your project urls.py like this::
+
+    path('mirforms/', include('mirforms.urls')),

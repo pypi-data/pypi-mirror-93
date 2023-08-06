@@ -1,0 +1,17 @@
+mirforms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mirforms/apps.py,sha256=8Pjcum1ZDVvAPea4n5MWctL1CLingMCiMGPNMmu_2Y0,91
+mirforms/classes.py,sha256=0rtGlxGcDCJ2yaeFavHafdcWRL9j90T449W9fWjAeaU,282
+mirforms/fields.py,sha256=NIMDPulEadXMMrbY5-aTSfUIojUaw2i0c3-aOnuXDwk,1021
+mirforms/templates/mirforms/widgets/htmx_select/htmx_select.html,sha256=PvA95Asuk6d_pUiOsAaUzmvwUphsqlz_iR0HnaQNx8A,2223
+mirforms/templates/mirforms/widgets/htmx_select/htmx_select_attrs.html,sha256=ikDESK-DVWZR6MP7-PzunM3MVZ9KOGrsBkBz5yov2xo,205
+mirforms/templates/mirforms/widgets/htmx_select/htmx_select_option.html,sha256=h0dKbmkATE52CGnifz93qIqxgsLGsHob__AMlonlgf4,105
+mirforms/templates/mirforms/widgets/htmx_select/htmx_select_wrapper.html,sha256=sfZpgb-659_9c9DBPcgBRk6YnPQj6i31H4cj_rdFNDg,499
+mirforms/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+mirforms/urls.py,sha256=0DA6PsTYS8TFqjx0VJT2FOjGm28_g9neNbII9zsQB4g,199
+mirforms/utils.py,sha256=twC2seKPgfDgT4tnAlZrCW5tOAIO2rG5DLxytYjx9EA,295
+mirforms/views.py,sha256=N_syOZpk2bkPgHmAj_fbxs6ARg13aADjeNyclV3axMI,1860
+mirforms/widgets.py,sha256=FibrcB98JYzEUY1SnyKrMU9roKQtw3MQ5Zp1947_uiU,1330
+django_mirforms-0.1.0.dist-info/LICENSE,sha256=31ZeRPHPmr-U2ERc01WhTRa8Dz2aFk4jM5Grl5C_h_c,1071
+django_mirforms-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+django_mirforms-0.1.0.dist-info/METADATA,sha256=9TpkIYPn2Z8NJC92LIGSCGlEYReccsT11onr6fXkCN4,1421
+django_mirforms-0.1.0.dist-info/RECORD,,
