@@ -1,0 +1,13 @@
+psprint/__init__.py,sha256=Yko8XHyHEV4ma-2qP6yQIPISk2osLJYDl-WmvGjAl2o,2603
+psprint/__main__.py,sha256=vkOQsN1EuPTpYGR-qCTgBA6jEzhl6WHLvTG7J9soaPM,1370
+psprint/codes.yml,sha256=rEqlGtRuLRuB446Wr7QEebtJGJ1UVhQZ4Ww_R7krsRI,574
+psprint/errors.py,sha256=wu0P2bvvuecEcmH5yUkSNfAYMAiBPGcTZZiuzzh_I-8,1409
+psprint/mark_types.py,sha256=aH0tR_WnkL7cc3wVHm3IdvJ0zHn56pwcnOp2cws1IPQ,7900
+psprint/printer.py,sha256=4LsRbh5ZkzXQJhz0184xfr-sJy7LwYVrcHBwQQRSFOg,10941
+psprint/style.yml,sha256=lAHAxnWK4ORTGBCtZJxxuKlQ4buFiMKFGmFXGkWZYS8,509
+psprint/text_types.py,sha256=0LqExncb5SMwJcu71u2TH0j2Lk03G6xCasC-iYrU-_c,5112
+psprint-21.2.1.dist-info/LICENSE,sha256=pWgb-bBdsU2Gd2kwAXxketnm5W_2u8_fIeWEgojfrxs,7651
+psprint-21.2.1.dist-info/METADATA,sha256=CfRjeKGQZiydhWRV5BcB7gBmKh1moXUjU_l5h7NeVMo,1561
+psprint-21.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+psprint-21.2.1.dist-info/top_level.txt,sha256=acv0vA1iVmJEonvDWZJ5bVa21CFzRpiReMOzm30-kjE,8
+psprint-21.2.1.dist-info/RECORD,,
