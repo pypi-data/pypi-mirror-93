@@ -1,0 +1,97 @@
+#!/usr/bin/env python
+
+# Metarace : Cycle Race Abstractions
+# Copyright (C) 2012  Nathan Fraser
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# Create and export a report dfined by rows in a csv spreadsheet
+#
+#
+# Usage: report_tool meet_dir report_csv filename [provisional]
+#
+# meet_dir is a road or trackmeet directory, all other files will be
+# specified relative to this path.
+#
+import sys
+import os
+import logging
+import metarace
+import datetime
+from metarace import printing
+from metarace import roadmeet
+
+def datestamp():
+    d = datetime.datetime.now()
+    return unicode(d.isoformat(' '))
+
+def main():
+    """Run the csv report application."""
+    configpath = None
+    provisional = False
+    logging.basicConfig(level=logging.INFO)
+
+    # expand configpath on cmd line to realpath _before_ doing chdir
+    if len(sys.argv) < 4:
+        print('usage: report_tool meet_dir report_csv filename [provisional]\n')
+        sys.exit(1)
+    if len(sys.argv) > 4:
+        provisional = True
+
+    rdir = sys.argv[1]
+    configpath = os.path.realpath(rdir)
+    metarace.init()
+    os.chdir(configpath)
+
+    srcfile = sys.argv[2]
+    outfile = sys.argv[3]
+
+    # Now in 'meet', load road fakemeet to populate report
+    meet = roadmeet.fakemeet(None, None, configpath)
+    meet.loadconfig()
+
+    r = printing.printrep(template=meet.default_template(), path=configpath)
+    if provisional:
+        r.set_provisional(True)
+    #r.set_pagemarks(True)
+    meet.report_strings(r)
+
+    r.load_csv(srcfile)
+
+    #s = printing.bullet_text()
+    #s.lines.append([u'','Report generated: ' + datestamp()])
+    #r.add_section(s)
+
+    # linkbase / linktypes
+    lb = outfile
+    lt = [u'pdf', u'xls', u'json']
+
+    ofile = os.path.join(configpath, outfile + u'.pdf')
+    with open(ofile, u'wb') as f:
+        r.output_pdf(f)
+    ofile = os.path.join(configpath, outfile + u'.xls')
+    with open(ofile, u'wb') as f:
+        r.output_xls(f)
+    ofile = os.path.join(configpath, outfile + u'.txt')
+    with open(ofile, u'wb') as f:
+        r.output_text(f, linkbase=lb, linktypes=lt)
+    ofile = os.path.join(configpath, outfile + u'.html')
+    with open(ofile, u'wb') as f:
+        r.output_html(f, linkbase=lb, linktypes=lt)
+    ofile = os.path.join(configpath, outfile + u'.json')
+    with open(ofile, u'wb') as f:
+        r.output_json(f)
+
+if __name__ == '__main__':
+    main()

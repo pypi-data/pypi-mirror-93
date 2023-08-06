@@ -1,0 +1,508 @@
+#!/usr/bin/env python
+
+# Metarace : Cycle Race Abstractions
+# Copyright (C) 2012  Nathan Fraser
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+"""Update the metarace shared namebank database from a dump file.
+
+Dump file from tidyhq csv dump
+
+0	ID
+1	Groups	(csv includes state and club)
+2	First
+3	Last
+4	Gender
+5	Birthday
+6	Postcode
+7	UCI ID
+8	Para Class
+9	Mbr Level
+10	Mbr status
+11	Member ID
+
+"""
+
+from __future__ import print_function
+
+import os
+import sys
+import metarace
+import shelve
+import random
+import datetime
+import re
+from metarace import namebank
+from metarace import strops
+from metarace import ucsv
+from contextlib import nested, closing
+COLMAP = {
+	0: 0,		# Mbrno (ca member)
+	1:	None,	# csv club/groups
+	2: 1,		# First
+	3: 2,		# last
+	4: 7,		# gender
+	5: 6,		# DoB
+	6: 12,		# postcode
+	7: 11,		# UCI ID
+	8: 10,		# Para class
+	9: 4,		# MBR Type
+	10: 9,		# MBR Status
+	11: None,	# UID
+}
+
+
+STATES = [u'VIC',u'NSW',u'QLD',u'NT',u'WA',u'SA',u'TAS',u'ACT',u'SIN',u'GBR',u'MAS',u'AUS',u'NZL',u'GUM',u'USA',u'DEN',u'IRL']
+STATEMAP = {u'vic' : u'VIC',
+            u'new' : u'NSW',
+            u'nsw' : u'NSW',
+            u'tas' : u'TAS',
+            u'sou' : u'SA',
+            u'sa': u'SA',
+            u's.a': u'SA',
+            u'sa,': u'SA',
+            u'wes' : u'WA',
+            u'wa' : u'WA',
+            u'wa/' : u'WA',
+            u'nor' : u'NT',
+            u'nt': u'NT',
+            u'a.c' : u'ACT',
+            u'aus' : u'ACT',
+            u'act':u'ACT',
+            u'que' : u'QLD',
+            u'nz' : u'NZL',
+            u'aot' : u'NZL',
+            u'msw' : u'NSW',
+            u'hor' : u'VIC',
+            u'ns' : u'NSW',
+            u'qlo' : u'QLD',
+            u'ade' : u'SA',
+            u'vis' : u'VIC',
+            u'syd' : u'NSW',
+            u'sin' : u'SIN',
+            u'uni' : u'GBR',
+            u'ben' : u'VIC',
+            u'spa' : u'ESP'
+}
+CLUBDISCARDS = [
+        u' bicycle race club',
+        u' cycling club inc',
+        u' cycling club',
+        u' cycling network',
+        u' cycle club',
+	u' cyclists inc',
+        u' cycling & triathlon',
+        u' cycling & multisport',
+        u' cycle & triathlon',
+        u'cycling australia - ',
+	u' bc',
+	u' of sa',
+        u' club',
+        u' cc',
+        u' c c',
+	u' inc',
+]
+catchecka = set()
+
+STATEGROUPS = {
+  u'cycling victoria':u'VIC',
+  u'cycling south australia':u'SA',
+  u'cycling new south wales':u'NSW',
+  u'cycling queensland':u'QLD',
+  u'westcycle road and track':u'WA',
+  u'cycling northern territory':u'NT',
+  u'cycling tasmania':u'TAS',
+  u'cycling australian capital territory':u'ACT',
+}
+
+def cleandate(indate, ucicode=None):
+    ret = None
+    try:
+        dt = datetime.datetime.strptime(indate,u'%Y-%m-%d')
+        ret = dt.strftime(u'%Y-%m-%d')
+    except:
+        pass
+ 
+    if not ret:
+        try:
+            dt = datetime.datetime.strptime(indate,u'%d-%b-%Y')
+            ret = dt.strftime(u'%Y-%m-%d')
+        except:
+            pass
+
+    if not ret and ucicode is not None:
+        try:
+            ds = ucicode[3:]
+            if len(ds) == 8 and ds.isdigit():
+                ret = ds[0:4] + u'-' + ds[4:6] + u'-' + ds[6:8]
+        except:
+            pass
+    return unicode(ret) # enforce the unicode return
+
+NOTACLUB = {
+ u'2019 mtba uci id creation or rollover',
+ u'2019 mtba xco-dhi new uci id allocation',
+ u'csass member',
+ u'members',
+ u'active coaches',
+ u'australian cycling team',
+ u'bring a mate campaign',
+ u'cycling australia staff member',
+ u'active coaches',
+ u'non-ride monthly member',
+ u'race - one week',
+ u'race starter kit',
+ u'ride monthly member',
+ u'life member',
+ u'all coaches',
+ u'captains ride import 30102019',
+ u'cycling australia board member',
+ u'expired coaches',
+ u'failed payments',
+ u'flagged coaches',
+ u'supporters',
+ u'vics member',
+ u'2019-___old____ to be deleted_ she rides launceston mtb program - spring 2019',
+ u'2020-ballarat bike bonanza day',
+ u'un-grandfathered',
+}
+CLUBSWAP = {
+ u'Australian Time Trials Association': u'ATTA',
+ u'Mitchell Bicycle Users Group':u'Mitchell BUG',
+ u'Scotch College South Australia':u'Scotch College SA',
+ u'Audax Cycling': u'AUDAX',
+ u'St George Bicycle Users Group':u'St George BUG',
+ u'Northern Districts Wa': u'Northern Districts WA',
+ u'Bathurst And District Bicycle Users Group (Badbugs': u'BADBUGS',
+ u'Cancer Voices Sa':u'Cancer Voices SA',
+ u'St George Bug':u'St George BUG',
+ u'Bicycle Institute Of Sa': u'Bicycle Institute of SA',
+ u'Narbug':u'NARBUG',
+ u'Ffast': u'FFast',
+ u'Bmxa': u'BMXA',
+ u'Mtba': u'MTBA',
+ u'City Of Burnie': u'City of Burnie',
+ u'Club Cq':u'Club CQ',
+ u'Vikings Act': u'Vikings ACT',
+ u'Cairns Cardiac Cycling':u'Cairns Cardiac',
+ u'Track Cycling Wa':u'Track Cycling WA',
+ u'Gunnedah Ctc':u'Gunnedah CTC',
+ u'Orange Ctc':u'Orange CTC',
+ u'Atta Nsw':u'ATTA NSW',
+ u'Cycling Victoria Vics': 'Cycling Victoria VICS',
+ u'Casey Cardinia Hpv': u'Casey Cardinia HPV',
+ u'Cyclesport Wa Events':u'Cyclesport WA Events',
+ u'Fraser Coast Cycling':u'Fraser Coast',
+ u'Perth Mtb':u'Perth MTB',
+ u'Clarence Stc':u'Clarence St',
+ u'South Australia Policeorporated':u'South Australia Police',
+ u'Ma Cycling':u'MA Cycling',
+ u'Moree Services Ctc':u'Moree Services CTC',
+ u'Adf Cycling':u'ADF Cycling',
+ u'Bcri':u'BCRI',
+ u'Fra - Power On':u'FRA - Power On',
+ u'Uni':u'Uni Cycle',
+ u'Gears Wa Cycling':u'Gears WA Cycling',
+ u'Nrg Cycling':u'NRG Cycling',
+ u'Tamar Bicycle Users Group':u'Tamar BUG',
+ u'Anu Cycling':u'ANU Cycling',
+ u'Cycling New South Wales':u'Cycling NSW',
+ u'Ecu':u'ECU',
+ u'Adf':u'ADF',
+ u'Anu':u'ANU',
+ u"Cyc'D":u"Cyc'd",
+ u'University Of Queensland':u'University of QLD',
+ u"Rider'S":u"Riders",
+ u"Wollongong Women'S":u"Wollongong Women",
+ u'Triathlon Nsw':u'Triathlon NSW',
+ u'Hamilton Pine River Wheelers': u'Hamilton Pine River',
+ u'North Western Sydney (Nwscc)':u'North Western Sydney',
+}
+def cleanclub(rawclub):
+    ret = rawclub.lower()
+    for chk in CLUBDISCARDS:
+        if chk in ret:
+            ret = ret.replace(chk, u'')
+    ret = ret.replace(u'.',u'').title().strip()
+    if ret in CLUBSWAP:
+        ret = CLUBSWAP[ret]
+    return ret
+
+SPECIALCLUBS = {
+ u'2030':u'VIC'
+}
+STATECODES = {
+	1:u'ACT',
+	2:u'NSW',
+	3:u'VIC',
+	4:u'QLD',
+	5:u'SA',
+	6:u'WA',
+	7:u'TAS',
+	8:u'NT',
+}
+PARAS = {
+	u'B': u'Tandem',
+	u'H1': u'Handbike H1',
+	u'H2': u'Handbike H2',
+	u'H3': u'Handbike H3',
+	u'H4': u'Handbike H4',
+	u'H5': u'Handbike H5',
+	u'T1': u'Tricycle T1',
+	u'T2': u'Tricycle T2',
+	u'C1': u'Cycling C1',
+	u'C2': u'Cycling C2',
+	u'C3': u'Cycling C3',
+	u'C4': u'Cycling C4',
+	u'C5': u'Cycling C5',
+}
+FNRE=re.compile(r"\s*\-\s*\-*\s*")
+
+def cleanpara(incode):
+    ret = u''
+    if incode.upper() in PARAS:
+        ret = incode.upper()
+    return ret
+
+def code2state(incode, instate):
+    ret = u''
+    # first try lookup
+    if incode and incode.isdigit():
+        if incode in SPECIALCLUBS:
+            ret = SPECIALCLUBS[incode]
+        else:
+            stateno = int(incode)//1000
+            if stateno in STATECODES:
+                ret = STATECODES[stateno]
+    # then fall back on address
+    if ret == u'':
+        skey = u''
+        sv = instate.lower().split()
+        if len(sv) > 0:
+            skey = sv[0]
+        if len(skey) > 3:
+            skey = skey[0:3]
+        if skey in STATEMAP:
+            ret = STATEMAP[skey]
+        else:
+            ret = ret.upper()
+        if ret not in STATES:
+            #print(u'State Error: ' + ret)
+            ret = u''
+    return ret
+
+# TODO: Ignore license except for N/C, RACE, MAS, KIDZ and determine CAT
+#	by season age
+def cleancat(cat):
+    ret = cat	# default is no change
+    ckey = cat.lower()
+    if u'ride ' in ckey:
+        ret = u'N/C'
+    elif u'masters' in ckey:
+        ret = u'MAS'
+    elif u'kids' in ckey:
+        ret = u'KIDZ'
+    elif u'race' in ckey or u'uci - inter' in ckey:
+        ret = u'RACE'
+    else:
+        catchecka.add(ret)
+        ret = u'N/C'
+    catchecka.add(ret)
+    return ret
+
+if len(sys.argv) < 2:
+    print (u'Usage: ' + sys.argv[0] + u' namebank_file.csv [-r]')
+    sys.exit(1)
+
+if not os.path.isfile(sys.argv[1]):
+    print (u'Error: ' + sys.argv[1] + u' not a file.')
+    sys.exit(1)
+sfile = os.path.abspath(sys.argv[1])
+dbflag = 'c'
+if len(sys.argv) > 2 and sys.argv[2] == '-r':
+    dbflag = 'n'
+
+def cleanfirst(oldfirst):
+    return FNRE.sub(u'-', oldfirst).title()
+
+def cleangender(oldgender):
+    ret = u'M'
+    if oldgender.lower() == u'female':
+        ret = u'W'
+    return ret
+
+# Init
+metarace.init(withgtk=False)
+iocmap = namebank.get_ioc_codes()
+
+def nationfix(ncode):
+    ret = u'AUS'
+    nchk = ncode[0:3].upper()
+    if nchk in iocmap:
+        ret = nchk
+    return ret
+
+def club_decode(grplist):
+    club = u''
+    state = u''
+    gcv = grplist.split(u',')
+    for g in gcv:
+        g = g.strip()
+        gk = g.lower()
+        if gk in STATEGROUPS:
+            state = STATEGROUPS[gk]
+        elif u'race annual' in gk:
+            pass
+        elif u'international licence' in gk or u'tour down under' in gk or u'ride annual' in gk or u'-she rides ' in gk or u'monthly race member' in gk or u'captains ride import' in gk:
+            pass # not a clurb
+        elif gk in NOTACLUB:
+            pass # not a clurb
+        else:
+            if club == u'':
+                club = cleanclub(g)
+    return (club,state)
+
+# Open DB Handles and continue
+with nested(closing(shelve.open(os.path.join(metarace.DEFAULTS_PATH,
+                                             u'namebank'),
+                                flag=dbflag)),
+            closing(shelve.open(os.path.join(metarace.DEFAULTS_PATH,
+                                             u'nameindx'),
+                                flag='n'))
+           ) as (nb, idx):
+    print('Opened namebank: ' + str(len(nb)) + ' entries.')
+    licset = set()
+    nccount = 0
+    occount = 0
+    with open(sfile) as f:
+        print('Reading names from ' + sfile + '...')
+        cr = ucsv.UnicodeReader(f)
+        rcount = 0
+        for row in cr:
+            occount += 1
+            ir = [cell.translate(strops.PRINT_UTRANS).strip() for cell in row]
+            if len(ir) > 11 and u'embership' not in ir[10] and len(ir[0]) > 2:
+                # extract club from group field, but ignore state
+                (irclub,irstate) = club_decode(ir[1])
+
+                # extract license type if possible
+                irlvl = cleancat(ir[9])
+                if irlvl == 'N/C':
+                    nccount += 1
+
+                # check license status
+                irexp = ir[10].lower()
+                mbkey = ir[0]
+                if irexp != u'active':
+                    mbkey = mbkey.replace(u'CA',u'EXP')
+                    continue
+
+                # reformat license key and load rider record
+                olr = None
+                key = mbkey.encode('ascii','ignore')
+                if key in licset:
+                    olr = nb[key]
+                    key = 'd' + str(random.randint(50000,80000))
+                    #oldname = u' '.join([ir[2],ir[3],irclub,irlvl])
+                    #print(u'Dup: ' + olr[0] + u' ' + oldname
+                           #+ u' => ' + key)
+                licset.add(key)
+                rcount += 1
+                if nb.has_key(key):
+                    nr = nb[key]
+                else:
+                    nr = [mbkey, u'', u'', u'', u'', u'', u'', u'', u'', u'',u'',u'']
+
+                # filter and correct all input fields
+                nr[1] = cleanfirst(ir[2])   # titlecase first name
+                nr[2] = ir[3].upper()		# Last
+                nr[3] = irclub			# Club
+                nr[4] = irlvl			# N/C, RACE, MAS etc
+                nr[5] = irstate			# will not work in future
+                nr[6] = cleandate(ir[5])	# DoB
+                nr[7] = cleangender(ir[4])	# Gender
+                nr[8] = nationfix(u'AUS')	# Nation (fudged)
+                nr[9] = ir[6]			# Postcode (was expiry)
+                nr[10] = cleanpara(ir[8])	# Para
+                nr[11] = ir[7]			# UCI ID
+
+                # save back to database
+                if olr is None:
+                    nb[key] = nr
+                else:
+                    # check for differences
+                    same = True
+                    for i in range(0,11):
+                        if olr[i] != nr[i]:
+                            print('Got a real dupe: {}!={}'.format(olr[i], nr[i]))
+                            same = False
+                            break
+                    if not same:
+                        nb[key] = nr
+    print(u'Total members: {}\tNon-competitive: {}'.format(occount, nccount, rdupcnt))
+    nb.sync()
+    print(u'Category Set: ' + repr(sorted(catchecka)))
+    print(u'Closing namebank: ' + unicode(len(nb)) + u' entries.')
+    print(u'Re-creating index...')
+    tid = {}
+    nblen = len(nb)
+    cnt = 0
+    licbuckets = {}	# maps member nos to uids via index bucket
+    for r in nb:	# all unique rider ids
+        rno = nb[r][0].encode('ascii','ignore')	# license no of rider
+        if rno not in licbuckets:
+            licbuckets[rno] = [r]	# create new index entry
+        else:
+            licbuckets[rno].append(r)
+            
+        for llen in [3, 4]:
+            for nm in [nb[r][1], nb[r][2]]:
+                bucket = strops.search_name(nm)[0:llen]
+                if bucket not in tid:
+                    t = []
+                else:
+                    t = tid[bucket]
+                if r not in t:
+                    t.append(r)
+                tid[bucket] = t	# write back
+        cnt += 1
+        if cnt % 500 == 0:
+            print(u'Scanning {0}/{1}            '.format(cnt,nblen),
+                    end='\r',file=sys.stderr)
+    # add all the duplicate buckets to index
+    dupecnt = 0
+    for rno in licbuckets:
+        tid[rno] = licbuckets[rno]
+        if len(licbuckets[rno]) > 1:
+            dupecnt += 1
+    max = 0
+    sum = 0
+    cnt = 0
+    maxb = u''
+    for i in tid:
+        blen = len(tid[i])
+        idx[i] = tid[i]
+        if blen > 0:
+            if blen > max:
+                max = blen
+                maxb = i
+            sum += blen
+            cnt += 1
+    avg = sum / cnt
+    print(u'Added {0} Duplicate license nos.'.format(dupecnt))
+    print(u'Wrote {0} buckets, Max: {1} ({2} ids), Avg: {3} ids.'.format(
+               cnt, repr(maxb), max, avg))
+
+print(u'Done.')
