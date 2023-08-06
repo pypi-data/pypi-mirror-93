@@ -1,0 +1,3 @@
+[console_scripts]
+precommit-message-preservation = precommit_message_preservation:main
+
