@@ -1,0 +1,9 @@
+odio/__init__.py,sha256=6f3maV1wp8yqq3Kd9ufjBMNK2wnM_CxAZVN0Zm-Hes0,2549
+odio/_version.py,sha256=kcUcaQn9VAmEjHm7gZfoom8AjevvyO2-x1dbX7sJPiQ,418
+odio/common.py,sha256=X-E5jbrOK-pPUbPj7PuVI1ICJne3bfQKs3y0jPV-MA8,2212
+odio/v1_1/__init__.py,sha256=QjXFuyHLSmL6uLYcOT4n29KLy0fvA6UPvyEXenZCh58,12218
+odio/v1_2/__init__.py,sha256=iSm9gJ80MfX-uhFok9b6DZ6peVaSaA7_1Px73Ct3kaY,21389
+odio-0.0.19.dist-info/METADATA,sha256=zHIVoWwwtjn3OaJupNgRAoZ-A8hiCv1Phr9mOWl_ZqU,794
+odio-0.0.19.dist-info/RECORD,,
+odio-0.0.19.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+odio-0.0.19.dist-info/top_level.txt,sha256=0LYwh0GPF7ZaC-DlR3bTp6zpY8DsWu9ynLZ8sQxZvA4,5
