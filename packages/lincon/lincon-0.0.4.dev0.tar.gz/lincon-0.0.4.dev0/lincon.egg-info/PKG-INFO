@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: lincon
+Version: 0.0.4.dev0
+Summary: a QP solver with support for general linear equality and inequality constraints
+Home-page: https://mirca.github.io/lincon
+Author: Ze Vinicius
+Author-email: jvmirca@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.0
