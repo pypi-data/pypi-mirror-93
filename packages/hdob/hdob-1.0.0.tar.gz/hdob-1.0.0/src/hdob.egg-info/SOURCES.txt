@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/hdob/__init__.py
+src/hdob/hdob.py
+src/hdob.egg-info/PKG-INFO
+src/hdob.egg-info/SOURCES.txt
+src/hdob.egg-info/dependency_links.txt
+src/hdob.egg-info/entry_points.txt
+src/hdob.egg-info/top_level.txt
