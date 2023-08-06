@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "self-make"
+version = "0.1.0"
+description = ""
+authors = ["fandong <fandong@coding.net>"]
+
+[tool.poetry.dependencies]
+python = "^2.7"
+requests = "^2.25.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.6"
+
+[[tool.poetry.source]]
+name = "coding-pypi"
+url = "http://codingcorp-pypi.pkg.coding.10.94.97.61.nip.io/will/pypi/simple/"
+default = true
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
