@@ -1,0 +1,7 @@
+canpar_lib/CanparAddonsService.py,sha256=1Ue4PnZF8GNtNjKjX1D0QK62D-WwvtTCUx1RR2L5ozI,1122820
+canpar_lib/CanparRatingService.py,sha256=Y2zolS1macawsTgHuBlwQWzQCnx_tDM3OfZKa45L_9Y,570810
+canpar_lib/CanshipBusinessService.py,sha256=q3iC0PltsEOd6HRZvgcLw93ryLXPjN6gUY2S8LRr1kc,2061914
+canpar_lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+carrier.canpar-2020.10.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+carrier.canpar-2020.10.1.dist-info/METADATA,sha256=czvbRq8cjaxcWnJYz_gnbQMU7BITGm32HBgr78ePsBg,1247
+carrier.canpar-2020.10.1.dist-info/RECORD,,
