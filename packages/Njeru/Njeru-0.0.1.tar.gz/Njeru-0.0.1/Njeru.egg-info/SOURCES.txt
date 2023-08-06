@@ -1,0 +1,7 @@
+README.md
+setup.py
+Njeru.egg-info/PKG-INFO
+Njeru.egg-info/SOURCES.txt
+Njeru.egg-info/dependency_links.txt
+Njeru.egg-info/top_level.txt
+ehd/__init__.py
