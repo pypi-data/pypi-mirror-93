@@ -1,0 +1,9 @@
+github_stats_pages/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+github_stats_pages/repo_list.py,sha256=YXjj3RwTJKoI7AlUgtoyajz_OovUzDO_gJ0M58-AUKk,1567
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_repo_list.py,sha256=gDPldNUhVEnnydOikzz-TjuyD0mJM18wZQrJaQEcvSQ,400
+github_stats_pages-0.1.0.dist-info/LICENSE,sha256=9wtf09COT9cu89I-3ZcmaIMbyob9pXyJOUyRqZaQkiM,1064
+github_stats_pages-0.1.0.dist-info/METADATA,sha256=RnxXAvYVZTT2MBRvoxT444UuWNFaaa-0MKIHj1GEkIo,431
+github_stats_pages-0.1.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+github_stats_pages-0.1.0.dist-info/top_level.txt,sha256=tOjrB4KlUAgo6zJiyqfN53YtWpf8uZu-Jw1URCH1_z8,25
+github_stats_pages-0.1.0.dist-info/RECORD,,
