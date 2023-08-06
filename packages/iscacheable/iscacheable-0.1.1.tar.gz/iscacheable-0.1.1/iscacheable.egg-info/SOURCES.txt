@@ -1,0 +1,10 @@
+setup.py
+iscacheable/__init__.py
+iscacheable/__version__.py
+iscacheable/cli.py
+iscacheable.egg-info/PKG-INFO
+iscacheable.egg-info/SOURCES.txt
+iscacheable.egg-info/dependency_links.txt
+iscacheable.egg-info/entry_points.txt
+iscacheable.egg-info/requires.txt
+iscacheable.egg-info/top_level.txt
