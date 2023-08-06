@@ -1,0 +1,15 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+angel/__init__.py
+angel/tryout.py
+angel/data/jsons/all_norm_characters.json
+angel/data/jsons/annotators.json
+angel/data/jsons/model_folder.json
+angel_tag.egg-info/PKG-INFO
+angel_tag.egg-info/SOURCES.txt
+angel_tag.egg-info/dependency_links.txt
+angel_tag.egg-info/requires.txt
+angel_tag.egg-info/top_level.txt

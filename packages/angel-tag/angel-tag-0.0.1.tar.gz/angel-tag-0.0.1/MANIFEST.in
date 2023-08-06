@@ -1,0 +1,3 @@
+graft angel/data
+global-include *.txt *.md
+include angel/__init__.py

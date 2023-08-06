@@ -1,0 +1,5 @@
+tensorflow
+numpy
+gdown
+greek_normalisation
+gensim
