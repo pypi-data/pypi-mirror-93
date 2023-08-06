@@ -1,0 +1,14 @@
+rebulk>=3
+babelfish
+python-dateutil
+
+[dev]
+tox
+mkdocs
+mkdocs-material
+
+[test]
+pytest
+pytest-benchmark
+pylint
+PyYAML
