@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block page_title %}blender.org{% endblock page_title %}</title>
+    <meta name="description" content="{% block meta-description %}Home of the Blender project - Free and Open 3D Creation Software{% endblock meta-description %}">
+    <meta name="keywords" content="{% block meta-keywords %}blender,3d,animation,open source,free software{% endblock meta-keywords %}">
+    <meta name="author" content="{% block meta-author %}Blender Foundation{% endblock meta-author %}">
+    <meta name="theme-color" content="{% block meta-theme-color %}#ed8f31{% endblock meta-theme-color %}">
+
+    {% block head_opengraph %}
+    <meta property="og:site_name" content="blender.org">
+    <meta property="og:title" content="blender.org">
+    <meta property="og:description" content="Home of the Blender project - Free and Open 3D Creation Software">
+    <meta property="og:url" content="https://www.blender.org/">
+    <meta property="og:image" content="https://www.blender.org/wp-content/themes/bthree/assets_shared/images/blender_made_by_you.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://www.blender.org/">
+    <meta name="twitter:title" content="blender.org">
+    <meta name="twitter:description" content="Home of the Blender project - Free and Open 3D Creation Software">
+    <meta name="twitter:image" content="https://www.blender.org/wp-content/themes/bthree/assets_shared/images/blender_made_by_you.jpg">
+    {% endblock head_opengraph %}
+
+    {% load pipeline %}
+    {% load static %}
+
+    {% block head_favicon %}
+    <link rel="shortcut icon" href="{% static 'blender_basico/images/favicon.ico' %}">
+    {% endblock head_favicon %}
+
+    {% stylesheet 'main' %}
+
+    {% block head_extra %}
+    {% endblock head_extra %}
+  </head>
+  <body class="{% block body_classes %}{% endblock %}">
+    {% if messages %}{% for message in messages %}
+    <div role="alert" class="container alert alert-dismissible show text-center {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}
+      <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endfor %}{% endif %}
+
+    {% block body %}
+
+    {% block navbar %}
+    {% include 'blender_basico/_navbar.html' %}
+    {% endblock navbar %}
+
+    {% block header %}
+    <div class="featured">
+      <div class="container">
+        <div class="featured-content">
+          <h1>Blender Basico</h1>
+        </div>
+      </div>
+      <div class="featured-overlay"></div>
+    </div>
+    <nav role="navigation" class="navbar navbar-default navbar-secondary">
+      <div class="container">
+        <ul class="nav navbar-nav mr-auto">
+
+          {% block navbar_secondary %}
+          <li class="{% if request.path == '/' %}active{% endif %}"><a href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="{% if request.path == '/alerts' %}active{% endif %}"><a href="{% url 'index_with_alert' %}">Display Alerts</a>
+          </li>
+          {% endblock navbar_secondary %}
+
+          <li class="dropdown"><a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Login</a>
+            <div aria-labelledby="navbarDropdown" class="dropdown-menu"><a href="#" class="dropdown-item"><i class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M505.1 19.1C503.8 13 499 8.2 492.9 6.9 460.7 0 435.5 0 410.4 0 307.2 0 245.3 55.2 199.1 128H94.9c-18.2 0-34.8 10.3-42.9 26.5L2.6 253.3c-8 16 3.6 34.7 21.5 34.7h95.1c-5.9 12.8-11.9 25.5-18 37.7-3.1 6.2-1.9 13.6 3 18.5l63.6 63.6c4.9 4.9 12.3 6.1 18.5 3 12.2-6.1 24.9-12 37.7-17.9V488c0 17.8 18.8 29.4 34.7 21.5l98.7-49.4c16.3-8.1 26.5-24.8 26.5-42.9V312.8c72.6-46.3 128-108.4 128-211.1.1-25.2.1-50.4-6.8-82.6zM400 160c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48z"></path>
+                  </svg></i>Whoosh!</a>
+                  <div class="dropdown-divider"></div><a href="#" class="dropdown-item">My Presentations</a><a href="#" class="dropdown-item">My Festival Entries</a>
+                  <div class="dropdown-divider"></div><a href="#" class="dropdown-item"><i class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="M400 54.1c63 45 104 118.6 104 201.9 0 136.8-110.8 247.7-247.5 248C120 504.3 8.2 393 8 256.4 7.9 173.1 48.9 99.3 111.8 54.2c11.7-8.3 28-4.8 35 7.7L162.6 90c5.9 10.5 3.1 23.8-6.6 31-41.5 30.8-68 79.6-68 134.9-.1 92.3 74.5 168.1 168 168.1 91.6 0 168.6-74.2 168-169.1-.3-51.8-24.7-101.8-68.1-134-9.7-7.2-12.4-20.5-6.5-30.9l15.8-28.1c7-12.4 23.2-16.1 34.8-7.8zM296 264V24c0-13.3-10.7-24-24-24h-32c-13.3 0-24 10.7-24 24v240c0 13.3 10.7 24 24 24h32c13.3 0 24-10.7 24-24z"></path>
+                      </svg></i>Log out</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    {% endblock header %}
+
+    <main role="main" class="container-main">
+      {% block content %}
+      <div class="container py-3">
+        <div class="row flex">
+          <div class="col-md-4">
+            <div class="sidebar-nav">
+              <ul>
+                <li class="active"><a href="/"><i class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <path d="M248 104c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96zm0 144c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm0-240C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-49.7 0-95.1-18.3-130.1-48.4 14.9-23 40.4-38.6 69.6-39.5 20.8 6.4 40.6 9.6 60.5 9.6s39.7-3.1 60.5-9.6c29.2 1 54.7 16.5 69.6 39.5-35 30.1-80.4 48.4-130.1 48.4zm162.7-84.1c-24.4-31.4-62.1-51.9-105.1-51.9-10.2 0-26 9.6-57.6 9.6-31.5 0-47.4-9.6-57.6-9.6-42.9 0-80.6 20.5-105.1 51.9C61.9 339.2 48 299.2 48 256c0-110.3 89.7-200 200-200s200 89.7 200 200c0 43.2-13.9 83.2-37.3 115.9z"></path>
+                      </svg></i>My Blender ID</a></li>
+                      <li class=""><a href="/applications"><i class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                              <path d="M128 116V76c0-8.837 7.163-16 16-16h352c8.837 0 16 7.163 16 16v40c0 8.837-7.163 16-16 16H144c-8.837 0-16-7.163-16-16zm16 176h352c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H144c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h352c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H144c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zM16 144h64c8.837 0 16-7.163 16-16V64c0-8.837-7.163-16-16-16H16C7.163 48 0 55.163 0 64v64c0 8.837 7.163 16 16 16zm0 160h64c8.837 0 16-7.163 16-16v-64c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v64c0 8.837 7.163 16 16 16zm0 160h64c8.837 0 16-7.163 16-16v-64c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v64c0 8.837 7.163 16 16 16z"></path>
+                            </svg></i>Applications</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box p-3">
+              <h2 class="mx-0">Awesome in Space</h2>
+              <div class="lead">You forgot me on:
+                <ul>
+                  <li>Earth</li>
+                  <li>Oude Kerk</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box p-3">
+              <h2>Example Forms</h2>
+              <hr>
+              <form role="login" action="" method="POST">
+                <fieldset>
+                  <div class="row form-group">
+                    <div class="col mx-auto">
+                      <!-- Email input-->
+                      <div class="input-group">
+                        <input type="email" name="username" autofocus="" placeholder="Your email address" class="form-control" required="" id="id_username">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col mx-auto">
+                      <!-- Password input-->
+                      <div class="input-group"><input type="password" name="password" class="form-control" placeholder="Your password" required="" id="id_password"></div>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col mx-auto">
+                      <button class="btn-success" id="register">Sign in</button>
+                    </div>
+                  </div>
+                </fieldset>
+                <div>
+                  <a href="/register/">Create a new account</a>
+                  <a href="/password_reset/">Recover password</a>
+                </div>
+              </form>
+              
+              <h2>Edit Profile</h2>
+              <form action="" method="POST" enctype="multipart/form-data"><input type="hidden" name="csrfmiddlewaretoken" value="8L7CucfBMZId0OCy4kHD9ir5iiFZXKZR8oNGUW61CYM3t7kJ9RSqgjOnx3l0ujxf">
+                <fieldset>
+                  <div class="row">
+                    <div class="col-md-9">
+                      <div class="form-group ">
+                        <label class="control-label">Full Name</label><input type="text" name="full_name" value="Anna Sirota" maxlength="80" class="form-control" id="id_full_name">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">Email</label><input type="email" name="email" value="anka.sirota@gmail.com" maxlength="64" class="form-control" required="" id="id_email">
+                      </div>
+                      <!-- Nickname input-->
+                      <div class="form-group">
+                        <label class="control-label">Nickname</label><input type="text" name="nickname" value="AnnaSirota" maxlength="80" class="form-control" required="" id="id_nickname">
+                      </div>
+
+                      <!-- Avatar input-->
+                      <div class="custom-file my-3">
+                        <input class="custom-file-input" id="avatar-file-input" type="file" name="avatar">
+                        <label class="custom-file-label">Choose file</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="avatar-clear">
+                        <label class="form-check-label">Clear Avatar</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <button class="btn btn-filled-success" type="submit"><i class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path>
+                        </svg></i>Save Changes</button><a class="btn ml-auto" href="/">Discard Changes</a>
+                  </div>
+                  <div><a href="/change">Change Password</a><a class="ml-auto" href="/admin/bid_main/user/11869/change/">Edit Account in Admin</a></div>
+                </fieldset>
+              </form>
+              <form id="cancel_email_change" action="/confirm-email/cancel-change" method="POST"><input type="hidden" name="csrfmiddlewaretoken" value="8L7CucfBMZId0OCy4kHD9ir5iiFZXKZR8oNGUW61CYM3t7kJ9RSqgjOnx3l0ujxf"></form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      {% endblock content %}
+
+      {% block site_footer %}
+      {% endblock site_footer %}
+
+    </main>
+    {% endblock body %}
+
+    {% block extra_body %}
+    {% endblock %}
+
+    {% include 'blender_basico/_footer.html' %}
+
+    {% javascript 'vendor' %}
+    {% javascript 'tutti' %}
+
+    {% block javascript-extra %}
+    {% endblock javascript-extra %}
+  </body>
+</html>
