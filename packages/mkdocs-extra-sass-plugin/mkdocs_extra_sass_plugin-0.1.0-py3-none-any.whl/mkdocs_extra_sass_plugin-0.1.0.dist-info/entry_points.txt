@@ -1,0 +1,3 @@
+[mkdocs.plugins]
+extra-sass=mkdocs_extra_sass_plugin.plugin:ExtraSassPlugin
+
