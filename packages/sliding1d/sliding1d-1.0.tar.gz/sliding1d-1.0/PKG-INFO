@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: sliding1d
+Version: 1.0
+Summary: 1D sliding window calculation tools
+Home-page: https://github.com/gwappa/python-sliding1d
+Author: Keisuke Sehara
+Author-email: keisuke.sehara@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
