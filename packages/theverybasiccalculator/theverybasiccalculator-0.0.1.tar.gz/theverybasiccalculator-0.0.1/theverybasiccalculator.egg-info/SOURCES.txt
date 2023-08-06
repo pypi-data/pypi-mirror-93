@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+__init__.py
+setup.py
+theverybasiccalculator.egg-info/PKG-INFO
+theverybasiccalculator.egg-info/SOURCES.txt
+theverybasiccalculator.egg-info/dependency_links.txt
+theverybasiccalculator.egg-info/top_level.txt
