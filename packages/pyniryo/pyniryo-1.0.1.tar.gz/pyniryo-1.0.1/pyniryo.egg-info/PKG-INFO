@@ -1,0 +1,53 @@
+Metadata-Version: 1.2
+Name: pyniryo
+Version: 1.0.1
+Summary: Package to control Niryo Robot "Ned" through TCP
+Home-page: https://github.com/NiryoRobotics/pyniryo
+Author: Niryo
+Author-email: r.lux@niryo.com
+Maintainer: Rémi Lux
+Maintainer-email: r.lux@niryo.com
+License: GNU 3.0
+Description: pyniryo
+        =========
+        
+        .. contents:: **Table of Contents**
+            :backlinks: none
+        
+        Installation
+        ------------
+        
+        PyNiryo is distributed on `PyPI <https://pypi.org>`_ as a universal
+        wheel and is available on Linux/macOS and Windows and supports
+        Python 2.7/3.5+
+        
+        .. code-block:: bash
+        
+            $ pip install pyniryo
+        
+        Documentation
+        -----------------
+        
+        Full documentation is available at http://docs.niryo.com/dev/pyniryo
+        
+        License
+        -------
+        
+        PyNiryo is distributed under the terms of
+        `GNU General Public License v3.0 <https://choosealicense.com/licenses/gpl-3.0>`_
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Scientific/Engineering :: Human Machine Interfaces
