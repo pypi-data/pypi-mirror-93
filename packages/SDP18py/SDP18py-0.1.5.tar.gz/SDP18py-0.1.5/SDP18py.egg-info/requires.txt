@@ -1,0 +1,7 @@
+numpy
+pandas
+pareto
+tkinter
+csv
+matplotlib
+threading
