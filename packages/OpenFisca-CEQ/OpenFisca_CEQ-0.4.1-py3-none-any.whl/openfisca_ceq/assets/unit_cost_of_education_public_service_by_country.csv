@@ -1,0 +1,14 @@
+Country,"Harmonized category","Spending (billions FCFA)","Number of users (millions)","Unit cost (Thousands FCFA)","Adjusted Unit cost (Thousands FCFA)"
+Mali,"Basic Education",183,2.7,67.4,65.36
+Mali,"Secondary and Higher Education",73,0.5,140.7,121.7
+Mali,Total,256,3.2,79.2,75.29
+Senegal,Preschool,1.4,0,34.9
+Senegal,Primary,189.8,1.4,133.2
+Senegal,Secondary,141.2,0.8,168
+Senegal,Higher,103.8,0.1,1956.3
+Senegal,Total,436.2,2.4,184.9
+"Cote d'Ivoire",Preschool,22.2,0.1,276.8
+"Cote d'Ivoire",Primary,373.2,2.9,128
+"Cote d'Ivoire",Secondary,338,1,348.1
+"Cote d'Ivoire",Higher,171.1,0.1,1922.5
+"Cote d'Ivoire",Total,904.5,4.1,223.1

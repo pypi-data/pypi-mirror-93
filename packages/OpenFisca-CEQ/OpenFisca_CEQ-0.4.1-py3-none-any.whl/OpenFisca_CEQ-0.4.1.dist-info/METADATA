@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: OpenFisca-CEQ
+Version: 0.4.1
+Summary: OpenFisca tax and benefit system for CEQ
+Home-page: https://github.com/openfisca/openfisca-ceq
+Author: OpenFisca Team
+Author-email: contact@openfisca.fr
+License: http://www.fsf.org/licensing/licenses/agpl-3.0.html
+Keywords: benefit microsimulation social tax
+Platform: UNKNOWN
+Requires-Dist: OpenFisca-Survey-Manager (<1.0,>=0.40.1)
+Requires-Dist: OpenFisca-Core (<36.0,>=34.4.2)
+Requires-Dist: matplotlib (<4.0,>=3.2.1)
+Requires-Dist: pandas (>=0.24.1)
+Requires-Dist: python-slugify
+Requires-Dist: scipy
+Requires-Dist: xlrd (>=1.0.0)
+Requires-Dist: xlsxwriter
+Requires-Dist: xlwt (>=1.0.0)
+Provides-Extra: dev
+Requires-Dist: autopep8 (==1.5.4) ; extra == 'dev'
+Requires-Dist: flake8 (<3.9.0,>=3.8.0) ; extra == 'dev'
+Requires-Dist: flake8-print ; extra == 'dev'
+Requires-Dist: papermill ; extra == 'dev'
+Requires-Dist: pdbpp ; extra == 'dev'
+Requires-Dist: pytest (<7.0.0,>=5.0.0) ; extra == 'dev'
+Requires-Dist: requests (>=2.8) ; extra == 'dev'
+Requires-Dist: yamllint (<1.24,>=1.11.1) ; extra == 'dev'
+
+UNKNOWN
+
+
