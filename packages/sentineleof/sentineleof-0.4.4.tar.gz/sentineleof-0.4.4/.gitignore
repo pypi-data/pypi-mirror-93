@@ -1,0 +1,23 @@
+*.pyc
+*.swp
+*.vscode
+
+# Don't add huge DEM data files
+*.hgt
+*.dem
+*.dem.rsc
+
+# Directories for setup.py
+build
+dist
+*.egg-info
+.eggs
+
+*.log
+*.sql
+
+docs/_build
+.coverage
+
+# cython build product
+*cpython*.so
