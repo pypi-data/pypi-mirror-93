@@ -1,0 +1,10 @@
+jhubauthenticators/__init__.py,sha256=7nmGO3kBRqpEIw8IPq7k5X5wz6sKFaRxF4mB_0Du25k,121
+jhubauthenticators/_dummy_auth.py,sha256=OnGz4WkY_r5Pklaponq0ETYrtTfAEfSNOp6lZ2hIcSM,514
+jhubauthenticators/_jhub_header_auth.py,sha256=hLao0W_-Wxe2Om7npdCQW9YiiUXBbDDl6xq38TdPUKw,5486
+jhubauthenticators/_jhub_remote_auth.py,sha256=h1BVu26h9VnjmjyuHA36EgSk9CLGclQB5GbVjOC8qT8,7526
+jhubauthenticators/_jhub_shared.py,sha256=-2VF6wBOwsp_YLFZvePduCjtmuXT7kOns-8V9gv533w,7769
+jhub_authenticators-0.3.1.dist-info/LICENCE.txt,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+jhub_authenticators-0.3.1.dist-info/METADATA,sha256=nDRCxmnqxvRLl6NfzUtFwrfcCk8CBjC_QQag7K5FQxw,11093
+jhub_authenticators-0.3.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jhub_authenticators-0.3.1.dist-info/top_level.txt,sha256=pfQ0oYCocUxls1rElePKjaLRU1SdJS8STarNk5EYcY4,19
+jhub_authenticators-0.3.1.dist-info/RECORD,,
