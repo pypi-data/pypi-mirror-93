@@ -1,0 +1,10 @@
+README.md
+setup.py
+example_pkg/Client.py
+example_pkg/Server.py
+example_pkg/__init__.py
+example_pkg_AndyPythonCodes.egg-info/PKG-INFO
+example_pkg_AndyPythonCodes.egg-info/SOURCES.txt
+example_pkg_AndyPythonCodes.egg-info/dependency_links.txt
+example_pkg_AndyPythonCodes.egg-info/requires.txt
+example_pkg_AndyPythonCodes.egg-info/top_level.txt
