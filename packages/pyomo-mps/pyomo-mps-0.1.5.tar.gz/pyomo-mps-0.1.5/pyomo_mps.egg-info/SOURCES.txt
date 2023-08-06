@@ -1,0 +1,10 @@
+README.md
+setup.py
+pyomo_mps/__init__.py
+pyomo_mps/parse.py
+pyomo_mps/version.py
+pyomo_mps.egg-info/PKG-INFO
+pyomo_mps.egg-info/SOURCES.txt
+pyomo_mps.egg-info/dependency_links.txt
+pyomo_mps.egg-info/requires.txt
+pyomo_mps.egg-info/top_level.txt
