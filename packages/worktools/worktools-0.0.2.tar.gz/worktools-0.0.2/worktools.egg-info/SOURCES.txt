@@ -1,0 +1,13 @@
+README.md
+setup.py
+txt_process/__init__.py
+txt_process/debug.py
+txt_process/format_file.py
+txt_process/read_file.py
+txt_process/split_file.py
+txt_process/my_unittest/__init__.py
+txt_process/my_unittest/test_read_file.py
+worktools.egg-info/PKG-INFO
+worktools.egg-info/SOURCES.txt
+worktools.egg-info/dependency_links.txt
+worktools.egg-info/top_level.txt
