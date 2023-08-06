@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+m1keypkg/__init__.py
+m1keypkg.egg-info/PKG-INFO
+m1keypkg.egg-info/SOURCES.txt
+m1keypkg.egg-info/dependency_links.txt
+m1keypkg.egg-info/top_level.txt
