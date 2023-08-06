@@ -1,0 +1,14 @@
+README.md
+setup.py
+roverio/__init__.py
+roverio/file_extension.py
+roverio/scout.py
+roverio/secrets.py
+roverio/sequential_renamer.py
+roverio.egg-info/PKG-INFO
+roverio.egg-info/SOURCES.txt
+roverio.egg-info/dependency_links.txt
+roverio.egg-info/entry_points.txt
+roverio.egg-info/requires.txt
+roverio.egg-info/top_level.txt
+test/__init__.py
