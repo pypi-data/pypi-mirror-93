@@ -1,0 +1,7 @@
+README.md
+setup.py
+globvar/__init__.py
+globvar.egg-info/PKG-INFO
+globvar.egg-info/SOURCES.txt
+globvar.egg-info/dependency_links.txt
+globvar.egg-info/top_level.txt
