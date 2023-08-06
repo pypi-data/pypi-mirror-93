@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+precommit_message_preservation/__init__.py
+precommit_message_preservation/py.typed
+precommit_message_preservation.egg-info/PKG-INFO
+precommit_message_preservation.egg-info/SOURCES.txt
+precommit_message_preservation.egg-info/dependency_links.txt
+precommit_message_preservation.egg-info/entry_points.txt
+precommit_message_preservation.egg-info/requires.txt
+precommit_message_preservation.egg-info/top_level.txt
