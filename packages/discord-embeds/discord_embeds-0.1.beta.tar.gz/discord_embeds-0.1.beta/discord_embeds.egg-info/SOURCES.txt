@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+discord_embeds/__init__.py
+discord_embeds/emb.py
+discord_embeds.egg-info/PKG-INFO
+discord_embeds.egg-info/SOURCES.txt
+discord_embeds.egg-info/dependency_links.txt
+discord_embeds.egg-info/not-zip-safe
+discord_embeds.egg-info/top_level.txt
