@@ -1,0 +1,3 @@
+[console_scripts]
+elasticsearch-faker = elasticsearch_faker.__main__:cmd
+
