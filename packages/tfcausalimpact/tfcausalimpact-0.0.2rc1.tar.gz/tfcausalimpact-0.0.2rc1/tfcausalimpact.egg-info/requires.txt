@@ -1,0 +1,9 @@
+jinja2
+pandas
+tensorflow
+tensorflow-probability
+matplotlib
+
+[docs]
+ipython
+jupyter
