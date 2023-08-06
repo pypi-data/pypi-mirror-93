@@ -1,0 +1,11 @@
+aiorpcX[ws]<0.20,>=0.19
+attrs
+plyvel
+pylru
+aiohttp<4.0,>=3.3
+
+[rocksdb]
+python-rocksdb>=0.6.9
+
+[uvloop]
+uvloop>=0.14
