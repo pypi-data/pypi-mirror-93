@@ -1,0 +1,24 @@
+{% load static %}
+
+<style>
+#chart_div{{
+    width:60%;
+    height:500px;
+    margin:auto;
+}}
+</style>
+
+<script>
+var myUsers_Fields = []
+{% for field in user_fields %}
+    myUsers_Fields.push(["{{field.u|safe}}" , "{{field.f|safe}}", "{{field.c|safe}}"])
+{% endfor %}
+var myCol = '{{column|safe}}'
+</script>
+<script src="{% static 'Ferdowsi_Cal/js/gchart.js' %}"></script>
+<script src="{% static 'Ferdowsi_Cal/js/my_jquery.js' %}"></script>
+<script src="{% static 'Ferdowsi_Cal/js/diagram.js' %}"></script>
+
+
+<div id="chart_div"></div>
+

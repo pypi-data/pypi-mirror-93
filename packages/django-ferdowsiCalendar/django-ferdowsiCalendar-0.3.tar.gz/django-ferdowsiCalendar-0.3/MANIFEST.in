@@ -1,0 +1,4 @@
+include README.rst
+recursive-include Ferdowsi_Cal/static *
+recursive-include Ferdowsi_Cal/templates *
+recursive-include Ferdowsi_Cal/templatetags *

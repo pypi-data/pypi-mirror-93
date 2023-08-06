@@ -1,0 +1,101 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'Ferdowsi_Cal/css/persian_style.css' %}">
+<style>
+    *{{
+    --container_color:{{color}}
+    }}
+    .container td a:hover{{
+    cursor:pointer;
+    }}
+</style>
+
+<script>
+    var names = []
+    var contents = []
+    var days = []
+    var ids = []
+    var ev_users = []
+    {% for eve in events %}
+        names.push("{{eve.name|safe}}")
+        contents.push("{{eve.content|safe}}")
+        days.push("{{eve.day|safe}}")
+        ids.push("{{eve.id|safe}}")
+        ev_users.push("{{eve.ev_users|safe}}")
+    {% endfor %}
+    var today = {{today}}
+    var year = {{year}}
+    var month = {{month}}
+</script>
+<script src="{% static 'Ferdowsi_Cal/js/my_jquery.js' %}"></script>
+<script src="{% static 'Ferdowsi_Cal/js/persian_script.js' %}"></script>
+
+
+{% with weekDays="ش ی د س چ پ ج" %}
+<div id="container">
+    <div class="calendar_head">
+        <a class="leftArrow"  onclick="prev_month()">&#10094;</a>
+        <div id="YearMonth">
+            <h2>{{monthName}}</h2>
+            <h3>{{year}}</h3>
+        </div>
+        <a class="rightArrow"  onclick="next_month()">&#10095;</a>
+    </div>
+    <hr>
+
+    <table class = "persian_calendar">
+        <thead>
+            <tr>
+                {% for i in weekDays.split %}
+                    <th>{{i}}</th>
+                {% endfor %}
+            </tr>
+
+        </thead>
+        <tbody id="myTbody">
+        {% spaceless %}
+           {% for i in cal %}
+            <tr>
+                {% for j in i %}
+                    <td style="{% if j == today %}border:solid blue;{% endif %}">
+                        {% if j != 0 %}
+                        <a onclick="addEvent(this)">{{ j }}</a>
+                        {% endif %}
+                    </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        {% endspaceless %}
+        </tbody>
+    </table>
+
+
+    <div id="addEventDiv" style="display:none">
+        <div id="eventPlus">
+            <a onclick="hidePlus()">&#x2b;</a>
+            <div id="showEvent">
+            </div>
+            <a onclick="closeDiv()"><span>close</span></a>
+        </div>
+        <div id="addEventAndEvent" style="display:none">
+            <label for="eventName">Title</label>
+            <input type="text" id="eventName" autocomplete="off">
+            <label for="eventContent">Content</label>
+            <textarea id="eventContent" rows="4" autocomplete="off"></textarea>
+            <form id='chechboxes'>
+                <div>All<input type="checkbox" class='user' name="all" id="all" value='all' onchange='addUser(this);'></div>
+                {% for user in users %}
+                <div>{{user}}<input type="checkbox" class='user' value="{{user}}" onchange='addUser(this);'></div>
+                {% endfor %}
+                <br>
+            </form>
+            <p id="warning">Please enter title and content!</p>
+            <div>
+                <a id="eventSub" onclick="submitEvent()">Add</a>
+                <a id="cancel" onclick="closeDiv()">cancel</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endwith %}

@@ -1,0 +1,78 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'Ferdowsi_Cal/css/persian_style.css' %}">
+<style>
+    *{{
+    --container_color:{{color}}
+    }}
+</style>
+
+<script>
+    var names = []
+    var contents = []
+    var days = []
+    var ids = []
+    var ev_users = []
+    {% for eve in events %}
+        names.push("{{eve.name|safe}}")
+        contents.push("{{eve.content|safe}}")
+        days.push("{{eve.day|safe}}")
+        ids.push("{{eve.id|safe}}")
+        ev_users.push("{{eve.ev_users|safe}}")
+    {% endfor %}
+    var today = {{today}}
+    var year = {{year}}
+    var month = {{month}}
+</script>
+<script src="{% static 'Ferdowsi_Cal/js/my_jquery.js' %}"></script>
+<script src="{% static 'Ferdowsi_Cal/js/persian_script_user.js' %}"></script>
+
+
+{% with weekDays="ش ی د س چ پ ج" %}
+<div id="container">
+    <div class="calendar_head">
+        <a class="leftArrow"  onclick="prev_month_user()">&#10094;</a>
+        <div id="YearMonth">
+            <h2>{{monthName}}</h2>
+            <h3>{{year}}</h3>
+        </div>
+        <a class="rightArrow"  onclick="next_month_user()">&#10095;</a>
+    </div>
+    <hr>
+
+    <table class = "persian_calendar">
+        <thead>
+            <tr>
+                {% for i in weekDays.split %}
+                    <th>{{i}}</th>
+                {% endfor %}
+            </tr>
+
+        </thead>
+        <tbody id="myTbody">
+        {% spaceless %}
+           {% for i in cal %}
+            <tr>
+                {% for j in i %}
+                    <td style="{% if j == today %}border:solid blue;{% endif %}">
+                        {% if j != 0 %}
+                        <a>{{ j }}</a>
+                        {% endif %}
+                    </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        {% endspaceless %}
+        </tbody>
+    </table>
+
+
+    <div id="addEventDiv" style="display:none">
+        <div id="eventPlus">
+            <div id="showEvent">
+            </div>
+            <a onclick="closeDiv()"><span>close</span></a>
+        </div>
+    </div>
+</div>
+{% endwith %}

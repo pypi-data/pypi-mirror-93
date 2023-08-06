@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: django-ferdowsiCalendar
+Version: 0.3
+Summary: A simple Django app that contains gregorian and persian calendars
+Home-page: UNKNOWN
+Author: Hamed Molaei
+Author-email: nif.hamed@gmail.com
+License: BSD License
+Description: UNKNOWN
+Platform: UNKNOWN
