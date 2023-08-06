@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: valley-free
+Version: 0.2.0
+Summary: Valley-free AS path exploration library for Rust
+Keywords: bgp valley-free network simulation
+Author: Mingwei Zhang <mingwei@mwzhang.com>
+Author-Email: Mingwei Zhang <mingwei@mwzhang.com>
+License: MIT
