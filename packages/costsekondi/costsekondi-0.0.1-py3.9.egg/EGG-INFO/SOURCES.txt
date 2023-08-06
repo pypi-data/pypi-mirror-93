@@ -1,0 +1,11 @@
+README.md
+setup.py
+costsekondi/__init__.py
+costsekondi/__main__.py
+costsekondi/authenticate.py
+costsekondi.egg-info/PKG-INFO
+costsekondi.egg-info/SOURCES.txt
+costsekondi.egg-info/dependency_links.txt
+costsekondi.egg-info/entry_points.txt
+costsekondi.egg-info/requires.txt
+costsekondi.egg-info/top_level.txt
