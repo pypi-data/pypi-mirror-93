@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: django-backoffice
+Version: 0.0.1.dev0
+Summary: django backoffice admin theme
+Home-page: https://github.com/cizario/django-backoffice/
+Author: Nizar DELLELI
+Author-email: nizar.delleli@gmail.com
+License: BSD 3-Clause
+Download-URL: https://github.com/cizario/django-backoffice/
+Project-URL: Tracker, https://github.com/cizario/django-backoffice/issues
+Project-URL: Source, https://github.com/cizario/django-backoffice/
+Project-URL: Release notes, https://github.com/cizario/django-backoffice/releases
+Project-URL: Documentation, https://django-backoffice.readthedocs.io/en/latest/
+Description: Django BackOffice Theme
+        =======================
+        
+        Django BackOffice theme for django projects
+        
+        Under active development ..
+        
+Keywords: django backoffice theme
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst

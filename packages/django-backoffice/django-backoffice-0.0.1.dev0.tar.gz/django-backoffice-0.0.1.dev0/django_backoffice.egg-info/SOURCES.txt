@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+django_backoffice/__init__.py
+django_backoffice.egg-info/PKG-INFO
+django_backoffice.egg-info/SOURCES.txt
+django_backoffice.egg-info/dependency_links.txt
+django_backoffice.egg-info/not-zip-safe
+django_backoffice.egg-info/top_level.txt
