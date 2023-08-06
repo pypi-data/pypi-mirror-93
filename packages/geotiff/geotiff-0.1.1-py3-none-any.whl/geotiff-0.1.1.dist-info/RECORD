@@ -1,0 +1,9 @@
+geotiff/__init__.py,sha256=KwfgQ8XIAVS8RqN1VhbObJHB7uEaoUkAhRxbJWTcePg,8517
+geotiff/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geotiff/utils/crs_code_guess.py,sha256=be0fc2JV7ZCXaUKptE_eVR93eRfLFKr-F_XqsjVpQi8,1867
+geotiff/utils/geotiff_logging.py,sha256=Y5A6NYe2rC-0iFWPYVQCOE2qwWG8BhQSGK_w_qJ7RlE,445
+geotiff-0.1.1.dist-info/LICENSE,sha256=IMF9i4xIpgCADf0U-V1cuf9HBmqWQd3qtI3FSuyW4zE,26526
+geotiff-0.1.1.dist-info/METADATA,sha256=stWg7jGzQgBJVb_cHV3lmneu_otbufGoog2fhhXY-Jk,2340
+geotiff-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+geotiff-0.1.1.dist-info/top_level.txt,sha256=1JIt7WK9bF1qI-9kDo6xMaJv6bistWm5jUM17QSQIaw,8
+geotiff-0.1.1.dist-info/RECORD,,
