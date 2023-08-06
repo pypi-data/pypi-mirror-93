@@ -1,0 +1,5 @@
+fcp
+colored
+click
+termcolor
+loguru
