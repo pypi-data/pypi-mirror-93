@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: mudrex
+Version: 0.1.1
+Summary: Send external webhook signals to Mudrex platform.
+Home-page: https://github.com/surajiyer/mudrex
+Author: Suraj Iyer
+Author-email: me@surajiyer.com
+License: MIT
+Description: # Mudrex
+        Send external webhook signals to Mudrex platform.
+        
+        ## Dependencies
+        Mudrex requires:
+        * Python (>=3.7)
+        * requests
+        
+        ## Usage
+        
+        ```
+        from mudrex import WebhookSignal
+        signal = WebhookSignal(id=..., )
+        signal.long_entry()  # send long entry signal
+        signal.long_exit()  # send signal to exit long position
+        signal.short_entry()  # send short entry signal
+        signal.short_exit()  # send signal to exit short position
+        ```
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
