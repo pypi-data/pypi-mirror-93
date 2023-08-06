@@ -1,0 +1,8 @@
+click
+Django
+click-log
+pylint-django
+pylint
+code-annotations
+six
+pylint-celery
