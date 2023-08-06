@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: nextgentermux
+Version: 1.2
+Summary: An one tap termux setup tool
+Home-page: https://github.com/Ign0r3dH4x0r/NextGenTermux
+Author: Sowmik
+Author-email: xowmik@gmail.com
+License: gpl-3.0
+Download-URL: https://github.com/smsowmik/NextGenTermux/archive/1.1.tar.gz
+Description: UNKNOWN
+Keywords: Xowmik,Ign0r3dH4x0r,Termux
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Adaptive Technologies
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Unix Shell
