@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+economypackage/__init__.py
+economypackage/jrmodulemaths/__init__.py
+economypackage/jrmodulemaths/jrmymaths.py
+economypackage/jrmodulemaths/jrmymaths2.py
+jr_pypiexample.egg-info/PKG-INFO
+jr_pypiexample.egg-info/SOURCES.txt
+jr_pypiexample.egg-info/dependency_links.txt
+jr_pypiexample.egg-info/top_level.txt
