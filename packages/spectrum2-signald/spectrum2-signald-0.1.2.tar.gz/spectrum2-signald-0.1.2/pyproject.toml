@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "spectrum2-signald"
+version = "0.1.2"
+description = ""
+authors = ["Nicolas Cedilnik <nicoco@nicoco.fr>"]
+readme = "README.md"
+homepage = "https://gitlab.com/nicocool84/spectrum2_signald/"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pyspectrum2 = "^0.2.0"
+pysignald-async = "^0.1.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.4"
+pytest-asyncio = "*"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
