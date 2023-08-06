@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: foolish-auth
+Version: 1.0.0
+Summary: a authentication app for projects behind API gateway witch has authentication on API
+Home-page: https://github.com/lixujia/FoolishAuth
+Author: Xujia Li
+Author-email: lixujia.cn@gmail.com
+License: UNKNOWN
+Keywords: Django Authenticate Foolish
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: Django (>=3.1.0)
+Requires-Dist: djangorestframework (>=3.12.0)
+
+# Foolish Authentication App
+If use this APP as django rest framework authenticator, It only check the HTTP
+header for FOOLISH_AUTH.
+If the Header attribute is not None, it would create a in-memory user with
+the header attribute value as the username.
+
+
