@@ -1,0 +1,11 @@
+beautifulsoup4
+click
+flask
+flask-migrate
+flask-sqlalchemy
+furl
+html5lib
+measurement
+psycopg2-binary
+pyfunctional
+requests
