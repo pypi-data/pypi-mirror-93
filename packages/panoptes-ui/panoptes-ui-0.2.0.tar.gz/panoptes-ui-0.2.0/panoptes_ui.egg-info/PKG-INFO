@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: panoptes-ui
+Version: 0.2.0
+Summary: panoptes: monitor computational workflows in real time
+Home-page: https://github.com/panoptes-organization/panoptes
+Author: panoptes-organization
+Author-email: georgekostoulas@gmail.com, agardelakos@gmail.com, fgypas@gmail.com, gntalaperas@gmail.com, dimitris.afe@gmail.com, rekoumisd@gmail.com, vsochat@stanford.edu
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
