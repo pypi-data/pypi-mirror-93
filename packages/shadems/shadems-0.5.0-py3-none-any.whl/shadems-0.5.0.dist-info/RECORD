@@ -1,0 +1,15 @@
+shade_ms/__init__.py,sha256=4AlVHWjB45SqGvkBiYmbeaSSr7_14q8nhsAE34iAnZg,1092
+shade_ms/__main__.py,sha256=J1H8KSuprPXR41L56ZwqXUAJI-8q1uxWFFWfuo55vCc,20832
+shade_ms/dask_utils.py,sha256=NqUh0EmPtolwgpuLxolWz8epGn2ZGa95IsVY0xru5qk,8415
+shade_ms/data_mappers.py,sha256=afDAr6ksRims-Og2NMFvn6h0yTix71iWpJLA4-WdgO0,19026
+shade_ms/data_plots.py,sha256=L6eTz3EVhMmPzbny1TWz3-s31qqcUG-HbZnwjU2K4Q4,26277
+shade_ms/ds_ext.py,sha256=88xpEVkMEIbFJff4zxob-0aQue6YftGtRZjerewW9rs,6787
+shade_ms/main.py,sha256=pB9yA8cRsePg1_Cgq5NvS52mb1urS0xRHhZ7fhytfao,26242
+shade_ms/ms_info.py,sha256=dgH-DlOYqeQd8wwg52eLNM6mL1bGdfW-rlEKUz1pSpM,8045
+shade_ms/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shade_ms/tests/test_dask_utils.py,sha256=UlSjf3bZS9gcAhLGwWVYr0khzjG5tr1iI8teLOOnypM,3537
+shadems-0.5.0.data/scripts/shadems,sha256=U72bwSoTS7WQ6Z-O3txdch2kBBsmI0YtOOY3gdhdjE4,96
+shadems-0.5.0.dist-info/METADATA,sha256=sStYEu8QPxc1NI5m4FGNSZQlsdOnWzhakQU-CuSf4Lc,1030
+shadems-0.5.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+shadems-0.5.0.dist-info/top_level.txt,sha256=MuEHbbdtusqqEhF2x7lfXZv1qJsiJiqrvlMm5wxGf-A,9
+shadems-0.5.0.dist-info/RECORD,,
