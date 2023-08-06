@@ -1,0 +1,9 @@
+pymcprotocol/__init__.py,sha256=JSpqbiEhnFAvCnsREYaPYdrt2eo_HRS1j5P0ERVoWIM,253
+pymcprotocol/mcprotocolconst.py,sha256=CQ_3QAOQgQDW3jHfqGQSRgR7kSs7tzreT1GVALoYSjk,10301
+pymcprotocol/mcprotocolerror.py,sha256=MA4keMX5Z87M5-e6_5RATDEdCWRt-bxe_HdA3NwhIcc,758
+pymcprotocol/type3e.py,sha256=4kPxVSmW5KA34F7R-Ptq72q1LhlRCPJtClVP3SqPVpY,36193
+pymcprotocol/type4e.py,sha256=1_gJvl8motPyVLTDs05ZhdOOptoG2qu2PcRywPGFxoc,3479
+pymcprotocol-0.2.5.dist-info/LICENSE,sha256=ezrSQhk0ChLEgwOL_znjOwhz9E5KIPRT12MfIvBsX3M,1068
+pymcprotocol-0.2.5.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+pymcprotocol-0.2.5.dist-info/METADATA,sha256=AYKz1TebwNdQlv9Obi41VHzIe0Yi_wTG_KE-dI_w9eY,3558
+pymcprotocol-0.2.5.dist-info/RECORD,,
