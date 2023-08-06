@@ -1,0 +1,10 @@
+README.md
+setup.py
+spammsg/__init__.py
+spammsg/msg.py
+spammsg.egg-info/PKG-INFO
+spammsg.egg-info/SOURCES.txt
+spammsg.egg-info/dependency_links.txt
+spammsg.egg-info/not-zip-safe
+spammsg.egg-info/requires.txt
+spammsg.egg-info/top_level.txt
