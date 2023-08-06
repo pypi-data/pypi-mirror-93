@@ -1,0 +1,712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>momxml.backend &mdash; Genvalobs / momxml 1.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Genvalobs / momxml 1.7 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Genvalobs / momxml 1.7 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for momxml.backend</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">lofarobsxml.observationspecificationbase</span> <span class="kn">import</span> <span class="n">ObservationSpecificationBase</span>
+<span class="kn">from</span> <span class="nn">lofarobsxml.utilities</span> <span class="kn">import</span> <span class="n">lower_case</span><span class="p">,</span> <span class="n">AutoReprBaseClass</span><span class="p">,</span> <span class="n">indent</span>
+
+<span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">This module contains the helper classes that contain the miriad</span>
+<span class="sd">different setting of the correlator. The main class here is</span>
+<span class="sd">BackendProcessing, which contains pointers to the other classes:</span>
+<span class="sd">TiedArrayBeams and Stokes, when needed.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+
+<div class="viewcode-block" id="TiedArrayBeams"><a class="viewcode-back" href="../../momxml.html#momxml.backend.TiedArrayBeams">[docs]</a><span class="k">class</span> <span class="nc">TiedArrayBeams</span><span class="p">(</span><span class="n">AutoReprBaseClass</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Description of Tied Array Beam (TAB) settings.</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    flyseye : bool</span>
+<span class="sd">        If True, store data streams from each station individually.</span>
+
+<span class="sd">    beams_ra_dec_rad : None or list of pairs of float</span>
+<span class="sd">        The RA, Dec in rad of the phase centres of the TABs in J2000</span>
+<span class="sd">        coordinates.</span>
+
+<span class="sd">    nr_tab_rings : int</span>
+<span class="sd">        Alternatively, one can specify with how many rings one wants</span>
+<span class="sd">        to tile the beam.</span>
+<span class="sd">    </span>
+<span class="sd">    tab_ring_size : float</span>
+<span class="sd">        Distance between TAB rings in RADIANS.</span>
+
+<span class="sd">    beam_offsets : None</span>
+<span class="sd">        Previously, the offsets with repsoect to the phase</span>
+<span class="sd">        center. Option is invalid as of 2014-06-14, LOFAR 2.4. Use</span>
+<span class="sd">        beams_ra_dec_rad instead.</span>
+
+<span class="sd">    **Examples**</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; tab = TiedArrayBeams()</span>
+<span class="sd">    &gt;&gt;&gt; tab</span>
+<span class="sd">    TiedArrayBeams(beams_ra_dec_rad = None,</span>
+<span class="sd">                   flyseye          = False,</span>
+<span class="sd">                   nr_tab_rings     = 0,</span>
+<span class="sd">                   tab_ring_size    = 0)</span>
+<span class="sd">    &gt;&gt;&gt; print(tab.xml())</span>
+<span class="sd">    &lt;BLANKLINE&gt;</span>
+<span class="sd">    &lt;tiedArrayBeams&gt;</span>
+<span class="sd">      &lt;flyseye&gt;false&lt;/flyseye&gt;</span>
+<span class="sd">      &lt;nrTabRings&gt;0&lt;/nrTabRings&gt;</span>
+<span class="sd">      &lt;tabRingSize&gt;0.000000&lt;/tabRingSize&gt;</span>
+<span class="sd">      &lt;tiedArrayBeamList/&gt;</span>
+<span class="sd">    &lt;/tiedArrayBeams&gt;</span>
+
+<span class="sd">    &gt;&gt;&gt; tab_fe = TiedArrayBeams(flyseye      = True,</span>
+<span class="sd">    ...                         beam_offsets = [(0.0, 0.0), (0.1, -0.05)])</span>
+<span class="sd">    Traceback (most recent call last):</span>
+<span class="sd">    ...</span>
+<span class="sd">    ValueError: Relative beam_offsets not supported as of LOFAR 2.4 (2014-06-30) use beams_ra_dec_rad instead</span>
+<span class="sd">    </span>
+<span class="sd">    Whoops.... that was the old way of specifying. Let&#39;s try again now.</span>
+
+<span class="sd">    &gt;&gt;&gt; tab_fe = TiedArrayBeams(flyseye = True,</span>
+<span class="sd">    ...                         beams_ra_dec_rad = [(3.1, +0.5),</span>
+<span class="sd">    ...                                             (3.2, +0.54)])</span>
+<span class="sd">    &gt;&gt;&gt; tab_fe</span>
+<span class="sd">    TiedArrayBeams(beams_ra_dec_rad = [(3.1, 0.5), (3.2, 0.54)],</span>
+<span class="sd">                   flyseye          = True,</span>
+<span class="sd">                   nr_tab_rings     = 0,</span>
+<span class="sd">                   tab_ring_size    = 0)</span>
+<span class="sd">    &gt;&gt;&gt; print(tab_fe.xml())</span>
+<span class="sd">    &lt;BLANKLINE&gt;</span>
+<span class="sd">    &lt;tiedArrayBeams&gt;</span>
+<span class="sd">      &lt;flyseye&gt;true&lt;/flyseye&gt;</span>
+<span class="sd">      &lt;nrTabRings&gt;0&lt;/nrTabRings&gt;</span>
+<span class="sd">      &lt;tabRingSize&gt;0.000000&lt;/tabRingSize&gt;</span>
+<span class="sd">      &lt;tiedArrayBeamList&gt;</span>
+<span class="sd">        &lt;tiedArrayBeam&gt;&lt;coherent&gt;true&lt;/coherent&gt;&lt;angle1&gt;3.100000&lt;/angle1&gt;&lt;angle2&gt;0.500000&lt;/angle2&gt;&lt;/tiedArrayBeam&gt;</span>
+<span class="sd">        &lt;tiedArrayBeam&gt;&lt;coherent&gt;true&lt;/coherent&gt;&lt;angle1&gt;3.200000&lt;/angle1&gt;&lt;angle2&gt;0.540000&lt;/angle2&gt;&lt;/tiedArrayBeam&gt;</span>
+<span class="sd">      &lt;/tiedArrayBeamList&gt;</span>
+<span class="sd">    &lt;/tiedArrayBeams&gt;</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flyseye</span>    <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
+                 <span class="n">beam_offsets</span>     <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+                 <span class="n">beams_ra_dec_rad</span>  <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+                 <span class="n">nr_tab_rings</span>     <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                 <span class="n">tab_ring_size</span>    <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">flyseye</span> <span class="o">=</span> <span class="n">flyseye</span>
+        <span class="k">if</span> <span class="n">beam_offsets</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;Relative beam_offsets not supported as of LOFAR 2.4 (2014-06-30) use beams_ra_dec_rad instead&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">beams_ra_dec_rad</span> <span class="o">=</span> <span class="n">beams_ra_dec_rad</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nr_tab_rings</span> <span class="o">=</span> <span class="n">nr_tab_rings</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab_ring_size</span> <span class="o">=</span> <span class="n">tab_ring_size</span>
+
+
+    <span class="k">def</span> <span class="nf">xml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">project_name</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&lt;tiedArrayBeams&gt;</span>
+<span class="s1">  &lt;flyseye&gt;</span><span class="si">%s</span><span class="s1">&lt;/flyseye&gt;</span>
+<span class="s1">  &lt;nrTabRings&gt;</span><span class="si">%d</span><span class="s1">&lt;/nrTabRings&gt;</span>
+<span class="s1">  &lt;tabRingSize&gt;</span><span class="si">%f</span><span class="s1">&lt;/tabRingSize&gt;&#39;&#39;&#39;</span> <span class="o">%</span>
+                  <span class="p">(</span><span class="n">lower_case</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">flyseye</span><span class="p">),</span>
+                   <span class="bp">self</span><span class="o">.</span><span class="n">nr_tab_rings</span><span class="p">,</span>
+                   <span class="bp">self</span><span class="o">.</span><span class="n">tab_ring_size</span><span class="p">))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">beams_ra_dec_rad</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">beams_ra_dec_rad</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">output</span> <span class="o">+=</span> <span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">  &lt;tiedArrayBeamList&gt;</span>
+<span class="s1">    </span><span class="si">%s</span><span class="s1"></span>
+<span class="s1">  &lt;/tiedArrayBeamList&gt;&#39;&#39;&#39;</span> <span class="o">%</span>
+                       <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">    &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                           <span class="p">[</span><span class="s1">&#39;&lt;tiedArrayBeam&gt;&lt;coherent&gt;true&lt;/coherent&gt;&lt;angle1&gt;</span><span class="si">%f</span><span class="s1">&lt;/angle1&gt;&lt;angle2&gt;</span><span class="si">%f</span><span class="s1">&lt;/angle2&gt;&lt;/tiedArrayBeam&gt;&#39;</span>
+        <span class="o">%</span> <span class="p">(</span><span class="n">angle_1</span><span class="p">,</span> <span class="n">angle_2</span><span class="p">)</span>
+                            <span class="k">for</span> <span class="n">angle_1</span><span class="p">,</span> <span class="n">angle_2</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">beams_ra_dec_rad</span><span class="p">]))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">  &lt;tiedArrayBeamList/&gt;&#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">output</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&lt;/tiedArrayBeams&gt;&#39;</span></div>
+
+
+
+
+
+
+
+
+
+<div class="viewcode-block" id="Stokes"><a class="viewcode-back" href="../../momxml.html#momxml.backend.Stokes">[docs]</a><span class="k">class</span> <span class="nc">Stokes</span><span class="p">(</span><span class="n">AutoReprBaseClass</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Describes averaging and storage parameters for beam formed</span>
+<span class="sd">    observations. This class is not derived from</span>
+<span class="sd">    ObservationSpecificationBase because it is really only a helper to</span>
+<span class="sd">    BackendProcessing. Use instances of this class as parameters to</span>
+<span class="sd">    BackendProcessing for ``coherent_stokes_data`` and</span>
+<span class="sd">    ``incoherent_stokes_data``.</span>
+
+<span class="sd">    **Parameters**</span>
+<span class="sd">    </span>
+<span class="sd">    mode : string</span>
+<span class="sd">        Either &#39;coherent&#39; or &#39;incoherent&#39;.</span>
+
+<span class="sd">    subbands_per_file : int</span>
+<span class="sd">        Number of sub bands per output file / storage machine. Use 512</span>
+<span class="sd">        for low data rates, but decrease as necessary to keep the data</span>
+<span class="sd">        rate per file (locus node / storage machine) below about 300 MB /</span>
+<span class="sd">        s.</span>
+
+<span class="sd">    number_collapsed_channels : None or int</span>
+<span class="sd">        The number of output channels. If this is smaller than the</span>
+<span class="sd">        number of channels for the correlator, the output channels</span>
+<span class="sd">        will be averaged. None implies no averaging.</span>
+
+<span class="sd">    stokes_downsampling_steps : int</span>
+<span class="sd">        Number of time samples to average before writing to</span>
+<span class="sd">        disk. Default is 1 (no averaging).</span>
+
+<span class="sd">    polarizations : string</span>
+<span class="sd">       Either &#39;I&#39;, &#39;IQUV&#39;, or &#39;XXYY&#39;.</span>
+
+<span class="sd">    **Examples**</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; stk = Stokes(mode = &#39;coherent&#39;, polarizations = &#39;IQUV&#39;,</span>
+<span class="sd">    ...              stokes_downsampling_steps = 64)</span>
+<span class="sd">    &gt;&gt;&gt; stk</span>
+<span class="sd">    Stokes(mode                      = &#39;coherent&#39;,</span>
+<span class="sd">           number_collapsed_channels = None,</span>
+<span class="sd">           polarizations             = &#39;IQUV&#39;,</span>
+<span class="sd">           stokes_downsampling_steps = 64,</span>
+<span class="sd">           subbands_per_file         = 512)</span>
+<span class="sd">    &gt;&gt;&gt; print(stk.xml())</span>
+<span class="sd">    Traceback (most recent call last):</span>
+<span class="sd">    ...</span>
+<span class="sd">    ValueError: Stokes.xml(): number_collapsed_channels is not set.</span>
+<span class="sd">    &gt;&gt;&gt; stk = Stokes(mode = &#39;coherent&#39;, polarizations = &#39;IQUV&#39;,</span>
+<span class="sd">    ...              stokes_downsampling_steps = 64,</span>
+<span class="sd">    ...              number_collapsed_channels = 16)</span>
+<span class="sd">    &gt;&gt;&gt; stk</span>
+<span class="sd">    Stokes(mode                      = &#39;coherent&#39;,</span>
+<span class="sd">           number_collapsed_channels = 16,</span>
+<span class="sd">           polarizations             = &#39;IQUV&#39;,</span>
+<span class="sd">           stokes_downsampling_steps = 64,</span>
+<span class="sd">           subbands_per_file         = 512)</span>
+<span class="sd">    &gt;&gt;&gt; print(stk.xml())</span>
+<span class="sd">    &lt;subbandsPerFileCS&gt;512&lt;/subbandsPerFileCS&gt;</span>
+<span class="sd">    &lt;numberCollapsedChannelsCS&gt;16&lt;/numberCollapsedChannelsCS&gt;</span>
+<span class="sd">    &lt;stokesDownsamplingStepsCS&gt;64&lt;/stokesDownsamplingStepsCS&gt;</span>
+<span class="sd">    &lt;whichCS&gt;IQUV&lt;/whichCS&gt;</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">subbands_per_file</span> <span class="o">=</span> <span class="mi">512</span><span class="p">,</span>
+                 <span class="n">number_collapsed_channels</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+                 <span class="n">stokes_downsampling_steps</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                 <span class="n">polarizations</span> <span class="o">=</span> <span class="s1">&#39;I&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="n">mode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subbands_per_file</span> <span class="o">=</span> <span class="n">subbands_per_file</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">number_collapsed_channels</span> <span class="o">=</span> <span class="n">number_collapsed_channels</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stokes_downsampling_steps</span> <span class="o">=</span> <span class="n">stokes_downsampling_steps</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">polarizations</span> <span class="o">=</span> <span class="n">polarizations</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">validate</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="Stokes.validate"><a class="viewcode-back" href="../../momxml.html#momxml.backend.Stokes.validate">[docs]</a>    <span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Raises a ValueError for every problem found in the settings.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">valid_modes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;coherent&#39;</span><span class="p">,</span> <span class="s1">&#39;incoherent&#39;</span><span class="p">]</span>
+        <span class="n">valid_polarizations</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;IQUV&#39;</span><span class="p">,</span> <span class="s1">&#39;XXYY&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">valid_modes</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;mode(</span><span class="si">%r</span><span class="s1">) not one of </span><span class="si">%r</span><span class="s1">.&#39;</span> <span class="o">%</span> 
+                             <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span> <span class="n">valid_modes</span><span class="p">))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">polarizations</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">valid_polarizations</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;polarizations(</span><span class="si">%r</span><span class="s1">) not one of </span><span class="si">%r</span><span class="s1">.&#39;</span> <span class="o">%</span>
+                             <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">polarizations</span><span class="p">,</span> <span class="n">valid_polarizations</span><span class="p">))</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">subbands_per_file</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">int</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;subbands_per_file(</span><span class="si">%r</span><span class="s1">) must be an integer.&#39;</span> <span class="o">%</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">subbands_per_file</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">subbands_per_file</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">subbands_per_file</span> <span class="o">&gt;</span> <span class="mi">1024</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;subbands_per_file(</span><span class="si">%r</span><span class="s1">) not in &lt;0, 1024]&#39;</span> <span class="o">%</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">subbands_per_file</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stokes_downsampling_steps</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">int</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;stokes_downsampling_steps(</span><span class="si">%r</span><span class="s1">) must be an integer.&#39;</span>
+                             <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">stokes_downsampling_steps</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">stokes_downsampling_steps</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;stokes_downsampling_steps(</span><span class="si">%r</span><span class="s1">) must be &gt; 0.&#39;</span> <span class="o">%</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">stokes_downsampling_steps</span><span class="p">)</span></div>
+        
+
+
+<div class="viewcode-block" id="Stokes.stokes_suffix"><a class="viewcode-back" href="../../momxml.html#momxml.backend.Stokes.stokes_suffix">[docs]</a>    <span class="k">def</span> <span class="nf">stokes_suffix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        return CS or IS, depending on whether these are coherent or</span>
+<span class="sd">        incoherent stokes settings.  coherent stokes settings also</span>
+<span class="sd">        need tied array beams / fly&#39;s eye stuff specified. </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">+</span><span class="s1">&#39;S&#39;</span></div>
+
+
+<div class="viewcode-block" id="Stokes.xml"><a class="viewcode-back" href="../../momxml.html#momxml.backend.Stokes.xml">[docs]</a>    <span class="k">def</span> <span class="nf">xml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">project_name</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Produce the xml for the coherent stokes  or incoherent stokes</span>
+<span class="sd">        settings of the backend.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_collapsed_channels</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Stokes.xml(): number_collapsed_channels is not set.&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;&#39;&#39;&lt;subbandsPerFile</span><span class="si">%(suffix)s</span><span class="s1">&gt;</span><span class="si">%(subbands_per_file)d</span><span class="s1">&lt;/subbandsPerFile</span><span class="si">%(suffix)s</span><span class="s1">&gt;</span>
+<span class="s1">&lt;numberCollapsedChannels</span><span class="si">%(suffix)s</span><span class="s1">&gt;</span><span class="si">%(number_collapsed_channels)d</span><span class="s1">&lt;/numberCollapsedChannels</span><span class="si">%(suffix)s</span><span class="s1">&gt;</span>
+<span class="s1">&lt;stokesDownsamplingSteps</span><span class="si">%(suffix)s</span><span class="s1">&gt;</span><span class="si">%(stokes_downsampling_steps)d</span><span class="s1">&lt;/stokesDownsamplingSteps</span><span class="si">%(suffix)s</span><span class="s1">&gt;</span>
+<span class="s1">&lt;which</span><span class="si">%(suffix)s</span><span class="s1">&gt;</span><span class="si">%(polarizations)s</span><span class="s1">&lt;/which</span><span class="si">%(suffix)s</span><span class="s1">&gt;&#39;&#39;&#39;</span> <span class="o">%</span> 
+                <span class="p">{</span><span class="s1">&#39;suffix&#39;</span>                   <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">stokes_suffix</span><span class="p">(),</span>
+                 <span class="s1">&#39;subbands_per_file&#39;</span>        <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">subbands_per_file</span><span class="p">,</span>
+                 <span class="s1">&#39;number_collapsed_channels&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_collapsed_channels</span><span class="p">,</span>
+                 <span class="s1">&#39;stokes_downsampling_steps&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">stokes_downsampling_steps</span><span class="p">,</span>
+                 <span class="s1">&#39;polarizations&#39;</span>            <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">polarizations</span><span class="p">})</span></div></div>
+               
+
+
+
+
+
+
+
+
+<div class="viewcode-block" id="BackendProcessing"><a class="viewcode-back" href="../../momxml.html#momxml.backend.BackendProcessing">[docs]</a><span class="k">class</span> <span class="nc">BackendProcessing</span><span class="p">(</span><span class="n">AutoReprBaseClass</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    BackendProcessing contains all the settings for the correlator and</span>
+<span class="sd">    beamformer hardware.</span>
+
+<span class="sd">    **Parameters**</span>
+<span class="sd">    </span>
+<span class="sd">    channels_per_subband : int</span>
+<span class="sd">        Number of channels per sub band. Default is 64.</span>
+
+<span class="sd">    integration_time_seconds : number</span>
+<span class="sd">        Integration time for correlator observations. Typically 1 or 2</span>
+<span class="sd">        seconds, but anything from 0.2 to 99 seconds should be</span>
+<span class="sd">        possible.</span>
+
+<span class="sd">    correlated_data : bool</span>
+<span class="sd">        True if cross-correlation visibilities should be produced.</span>
+
+<span class="sd">    filtered_data : bool</span>
+<span class="sd">        No idea what this means. Default is False.</span>
+
+<span class="sd">    beamformed_data : bool</span>
+<span class="sd">        True if beamformed data is to be produced,</span>
+<span class="sd">        such as complex voltage, coherent stokes, or incoherent stokes</span>
+<span class="sd">        data. If True and coherent_stokes_data is set to</span>
+<span class="sd">        Stokes(&#39;coherent&#39;, polarizations=&#39;XXYY&#39;,</span>
+<span class="sd">               number_collapsed_channels=1, stokes_downsampling_steps=1),</span>
+<span class="sd">        complex voltages are produced.</span>
+
+<span class="sd">    coherent_stokes_data : None or Stokes instance</span>
+<span class="sd">        Coherent stokes settings.</span>
+
+<span class="sd">    incoherent_stokes_data : None or Stokes instance</span>
+<span class="sd">        Incoherent stokes settings.</span>
+
+<span class="sd">    stokes_integrate_channels : bool</span>
+<span class="sd">        Apply frequency averaging. Default False.</span>
+
+<span class="sd">    coherent_dedispersed_channels : bool</span>
+<span class="sd">        Apply coherent dedispersion? Default False.</span>
+
+<span class="sd">    tied_array_beams : None or TiedArrayBeams instance</span>
+<span class="sd">        Tied array beam settings.</span>
+
+<span class="sd">    bypass_pff : bool</span>
+<span class="sd">        If True, skip the correlator&#39;s / beamformer&#39;s polyphase filter</span>
+<span class="sd">        entirely. Useful for high time resolution beamformed</span>
+<span class="sd">        data. Default: False.</span>
+
+<span class="sd">    enable_superterp: bool</span>
+<span class="sd">        If True, also beamform the superterp stations and treat them</span>
+<span class="sd">        as a separate large station.</span>
+
+<span class="sd">    default_template: string</span>
+<span class="sd">        Default observation template to use. Possible values are:</span>
+<span class="sd">        &#39;BeamObservation&#39; (default),</span>
+<span class="sd">        &#39;BeamObservationNoStationControl&#39;, and</span>
+<span class="sd">        &#39;BeamObservationNoPlots&#39;. </span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; bp = BackendProcessing()</span>
+<span class="sd">    &gt;&gt;&gt; bp</span>
+<span class="sd">    BackendProcessing(beamformed_data               = False,</span>
+<span class="sd">                      bypass_pff                    = False,</span>
+<span class="sd">                      channels_per_subband          = 64,</span>
+<span class="sd">                      coherent_dedispersed_channels = False,</span>
+<span class="sd">                      coherent_stokes_data          = None,</span>
+<span class="sd">                      correlated_data               = True,</span>
+<span class="sd">                      default_template              = &#39;BeamObservation&#39;,</span>
+<span class="sd">                      enable_superterp              = False,</span>
+<span class="sd">                      filtered_data                 = False,</span>
+<span class="sd">                      incoherent_stokes_data        = None,</span>
+<span class="sd">                      integration_time_seconds      = 2,</span>
+<span class="sd">                      stokes_integrate_channels     = False,</span>
+<span class="sd">                      tied_array_beams              = TiedArrayBeams(beams_ra_dec_rad = None,</span>
+<span class="sd">                                                                     flyseye          = False,</span>
+<span class="sd">                                                                     nr_tab_rings     = 0,</span>
+<span class="sd">                                                                     tab_ring_size    = 0))</span>
+<span class="sd">    &gt;&gt;&gt; print(bp.xml())</span>
+<span class="sd">    &lt;correlatedData&gt;true&lt;/correlatedData&gt;</span>
+<span class="sd">    &lt;filteredData&gt;false&lt;/filteredData&gt;</span>
+<span class="sd">    &lt;beamformedData&gt;false&lt;/beamformedData&gt;</span>
+<span class="sd">    &lt;coherentStokesData&gt;false&lt;/coherentStokesData&gt;</span>
+<span class="sd">    &lt;incoherentStokesData&gt;false&lt;/incoherentStokesData&gt;</span>
+<span class="sd">    &lt;integrationInterval&gt;2&lt;/integrationInterval&gt;</span>
+<span class="sd">    &lt;channelsPerSubband&gt;64&lt;/channelsPerSubband&gt;</span>
+<span class="sd">    &lt;pencilBeams&gt;</span>
+<span class="sd">      &lt;flyseye&gt;false&lt;/flyseye&gt;</span>
+<span class="sd">      &lt;pencilBeamList/&gt;</span>
+<span class="sd">    &lt;/pencilBeams&gt;</span>
+<span class="sd">    &lt;tiedArrayBeams&gt;</span>
+<span class="sd">      &lt;flyseye&gt;false&lt;/flyseye&gt;</span>
+<span class="sd">      &lt;nrTabRings&gt;0&lt;/nrTabRings&gt;</span>
+<span class="sd">      &lt;tabRingSize&gt;0.000000&lt;/tabRingSize&gt;</span>
+<span class="sd">      &lt;tiedArrayBeamList/&gt;</span>
+<span class="sd">    &lt;/tiedArrayBeams&gt;</span>
+<span class="sd">    &lt;stokes&gt;</span>
+<span class="sd">      &lt;integrateChannels&gt;false&lt;/integrateChannels&gt;</span>
+<span class="sd">    &lt;/stokes&gt;</span>
+<span class="sd">    &lt;bypassPff&gt;false&lt;/bypassPff&gt;</span>
+<span class="sd">    &lt;enableSuperterp&gt;false&lt;/enableSuperterp&gt;</span>
+<span class="sd">    &lt;BLANKLINE&gt;</span>
+
+<span class="sd">    Here is a Fly&#39;s eye example:</span>
+
+<span class="sd">    &gt;&gt;&gt; channels_per_subband = 16</span>
+<span class="sd">    &gt;&gt;&gt; coherent_stokes_data = Stokes(&#39;coherent&#39;,</span>
+<span class="sd">    ...                               stokes_downsampling_steps = 128)</span>
+<span class="sd">    &gt;&gt;&gt; tied_array_beams     = TiedArrayBeams(flyseye = True,</span>
+<span class="sd">    ...                                       beams_ra_dec_rad = None)</span>
+
+<span class="sd">    &gt;&gt;&gt; bp_fe = BackendProcessing(</span>
+<span class="sd">    ...        correlated_data          = False,</span>
+<span class="sd">    ...        channels_per_subband     = channels_per_subband,</span>
+<span class="sd">    ...        coherent_stokes_data     = coherent_stokes_data,</span>
+<span class="sd">    ...        tied_array_beams         = tied_array_beams)</span>
+<span class="sd">    &gt;&gt;&gt; bp_fe</span>
+<span class="sd">    BackendProcessing(beamformed_data               = False,</span>
+<span class="sd">                      bypass_pff                    = False,</span>
+<span class="sd">                      channels_per_subband          = 16,</span>
+<span class="sd">                      coherent_dedispersed_channels = False,</span>
+<span class="sd">                      coherent_stokes_data          = Stokes(mode                      = &#39;coherent&#39;,</span>
+<span class="sd">                                                             number_collapsed_channels = 16,</span>
+<span class="sd">                                                             polarizations             = &#39;I&#39;,</span>
+<span class="sd">                                                             stokes_downsampling_steps = 128,</span>
+<span class="sd">                                                             subbands_per_file         = 512),</span>
+<span class="sd">                      correlated_data               = False,</span>
+<span class="sd">                      default_template              = &#39;BeamObservation&#39;,</span>
+<span class="sd">                      enable_superterp              = False,</span>
+<span class="sd">                      filtered_data                 = False,</span>
+<span class="sd">                      incoherent_stokes_data        = None,</span>
+<span class="sd">                      integration_time_seconds      = 2,</span>
+<span class="sd">                      stokes_integrate_channels     = False,</span>
+<span class="sd">                      tied_array_beams              = TiedArrayBeams(beams_ra_dec_rad = None,</span>
+<span class="sd">                                                                     flyseye          = True,</span>
+<span class="sd">                                                                     nr_tab_rings     = 0,</span>
+<span class="sd">                                                                     tab_ring_size    = 0))</span>
+<span class="sd">    &gt;&gt;&gt; print(bp_fe.xml())</span>
+<span class="sd">    &lt;correlatedData&gt;false&lt;/correlatedData&gt;</span>
+<span class="sd">    &lt;filteredData&gt;false&lt;/filteredData&gt;</span>
+<span class="sd">    &lt;beamformedData&gt;false&lt;/beamformedData&gt;</span>
+<span class="sd">    &lt;coherentStokesData&gt;true&lt;/coherentStokesData&gt;</span>
+<span class="sd">    &lt;incoherentStokesData&gt;false&lt;/incoherentStokesData&gt;</span>
+<span class="sd">    &lt;channelsPerSubband&gt;16&lt;/channelsPerSubband&gt;</span>
+<span class="sd">    &lt;pencilBeams&gt;</span>
+<span class="sd">      &lt;flyseye&gt;true&lt;/flyseye&gt;</span>
+<span class="sd">      &lt;pencilBeamList/&gt;</span>
+<span class="sd">    &lt;/pencilBeams&gt;</span>
+<span class="sd">    &lt;tiedArrayBeams&gt;</span>
+<span class="sd">      &lt;flyseye&gt;true&lt;/flyseye&gt;</span>
+<span class="sd">      &lt;nrTabRings&gt;0&lt;/nrTabRings&gt;</span>
+<span class="sd">      &lt;tabRingSize&gt;0.000000&lt;/tabRingSize&gt;</span>
+<span class="sd">      &lt;tiedArrayBeamList/&gt;</span>
+<span class="sd">    &lt;/tiedArrayBeams&gt;</span>
+<span class="sd">    &lt;stokes&gt;</span>
+<span class="sd">      &lt;integrateChannels&gt;false&lt;/integrateChannels&gt;</span>
+<span class="sd">      &lt;subbandsPerFileCS&gt;512&lt;/subbandsPerFileCS&gt;</span>
+<span class="sd">      &lt;numberCollapsedChannelsCS&gt;16&lt;/numberCollapsedChannelsCS&gt;</span>
+<span class="sd">      &lt;stokesDownsamplingStepsCS&gt;128&lt;/stokesDownsamplingStepsCS&gt;</span>
+<span class="sd">      &lt;whichCS&gt;I&lt;/whichCS&gt;</span>
+<span class="sd">    &lt;/stokes&gt;</span>
+<span class="sd">    &lt;bypassPff&gt;false&lt;/bypassPff&gt;</span>
+<span class="sd">    &lt;enableSuperterp&gt;false&lt;/enableSuperterp&gt;</span>
+<span class="sd">    &lt;BLANKLINE&gt;</span>
+
+<span class="sd">    And here for coherent stokes beam forming:</span>
+
+<span class="sd">    &gt;&gt;&gt; tied_array_beams     = TiedArrayBeams(flyseye = False,</span>
+<span class="sd">    ...                                       beams_ra_dec_rad = None)</span>
+<span class="sd">    &gt;&gt;&gt; bp_cs = BackendProcessing(</span>
+<span class="sd">    ...        correlated_data          = False,</span>
+<span class="sd">    ...        channels_per_subband     = channels_per_subband,</span>
+<span class="sd">    ...        coherent_stokes_data     = coherent_stokes_data,</span>
+<span class="sd">    ...        tied_array_beams         = tied_array_beams)</span>
+<span class="sd">    &gt;&gt;&gt; bp_cs</span>
+<span class="sd">    BackendProcessing(beamformed_data               = False,</span>
+<span class="sd">                      bypass_pff                    = False,</span>
+<span class="sd">                      channels_per_subband          = 16,</span>
+<span class="sd">                      coherent_dedispersed_channels = False,</span>
+<span class="sd">                      coherent_stokes_data          = Stokes(mode                      = &#39;coherent&#39;,</span>
+<span class="sd">                                                             number_collapsed_channels = 16,</span>
+<span class="sd">                                                             polarizations             = &#39;I&#39;,</span>
+<span class="sd">                                                             stokes_downsampling_steps = 128,</span>
+<span class="sd">                                                             subbands_per_file         = 512),</span>
+<span class="sd">                      correlated_data               = False,</span>
+<span class="sd">                      default_template              = &#39;BeamObservation&#39;,</span>
+<span class="sd">                      enable_superterp              = False,</span>
+<span class="sd">                      filtered_data                 = False,</span>
+<span class="sd">                      incoherent_stokes_data        = None,</span>
+<span class="sd">                      integration_time_seconds      = 2,</span>
+<span class="sd">                      stokes_integrate_channels     = False,</span>
+<span class="sd">                      tied_array_beams              = TiedArrayBeams(beams_ra_dec_rad = None,</span>
+<span class="sd">                                                                     flyseye          = False,</span>
+<span class="sd">                                                                     nr_tab_rings     = 0,</span>
+<span class="sd">                                                                     tab_ring_size    = 0))</span>
+<span class="sd">    &gt;&gt;&gt; print(bp_cs.xml())</span>
+<span class="sd">    &lt;correlatedData&gt;false&lt;/correlatedData&gt;</span>
+<span class="sd">    &lt;filteredData&gt;false&lt;/filteredData&gt;</span>
+<span class="sd">    &lt;beamformedData&gt;false&lt;/beamformedData&gt;</span>
+<span class="sd">    &lt;coherentStokesData&gt;true&lt;/coherentStokesData&gt;</span>
+<span class="sd">    &lt;incoherentStokesData&gt;false&lt;/incoherentStokesData&gt;</span>
+<span class="sd">    &lt;channelsPerSubband&gt;16&lt;/channelsPerSubband&gt;</span>
+<span class="sd">    &lt;pencilBeams&gt;</span>
+<span class="sd">      &lt;flyseye&gt;false&lt;/flyseye&gt;</span>
+<span class="sd">      &lt;pencilBeamList/&gt;</span>
+<span class="sd">    &lt;/pencilBeams&gt;</span>
+<span class="sd">    &lt;tiedArrayBeams&gt;</span>
+<span class="sd">      &lt;flyseye&gt;false&lt;/flyseye&gt;</span>
+<span class="sd">      &lt;nrTabRings&gt;0&lt;/nrTabRings&gt;</span>
+<span class="sd">      &lt;tabRingSize&gt;0.000000&lt;/tabRingSize&gt;</span>
+<span class="sd">      &lt;tiedArrayBeamList/&gt;</span>
+<span class="sd">    &lt;/tiedArrayBeams&gt;</span>
+<span class="sd">    &lt;stokes&gt;</span>
+<span class="sd">      &lt;integrateChannels&gt;false&lt;/integrateChannels&gt;</span>
+<span class="sd">      &lt;subbandsPerFileCS&gt;512&lt;/subbandsPerFileCS&gt;</span>
+<span class="sd">      &lt;numberCollapsedChannelsCS&gt;16&lt;/numberCollapsedChannelsCS&gt;</span>
+<span class="sd">      &lt;stokesDownsamplingStepsCS&gt;128&lt;/stokesDownsamplingStepsCS&gt;</span>
+<span class="sd">      &lt;whichCS&gt;I&lt;/whichCS&gt;</span>
+<span class="sd">    &lt;/stokes&gt;</span>
+<span class="sd">    &lt;bypassPff&gt;false&lt;/bypassPff&gt;</span>
+<span class="sd">    &lt;enableSuperterp&gt;false&lt;/enableSuperterp&gt;</span>
+<span class="sd">    &lt;BLANKLINE&gt;</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">channels_per_subband</span>     <span class="o">=</span> <span class="mi">64</span><span class="p">,</span>
+                 <span class="n">integration_time_seconds</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                 <span class="n">correlated_data</span>          <span class="o">=</span> <span class="bp">True</span><span class="p">,</span>
+                 <span class="n">filtered_data</span>            <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
+                 <span class="n">beamformed_data</span>          <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
+                 <span class="n">coherent_stokes_data</span>     <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+                 <span class="n">incoherent_stokes_data</span>   <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+                 <span class="n">stokes_integrate_channels</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
+                 <span class="n">coherent_dedispersed_channels</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
+                 <span class="n">tied_array_beams</span>              <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+                 <span class="n">bypass_pff</span>                    <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
+                 <span class="n">enable_superterp</span>              <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
+                 <span class="n">default_template</span> <span class="o">=</span> <span class="s1">&#39;BeamObservation&#39;</span>
+                 <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channels_per_subband</span> <span class="o">=</span> <span class="n">channels_per_subband</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">integration_time_seconds</span> <span class="o">=</span> <span class="n">integration_time_seconds</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">correlated_data</span> <span class="o">=</span> <span class="n">correlated_data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filtered_data</span> <span class="o">=</span> <span class="n">filtered_data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">beamformed_data</span> <span class="o">=</span> <span class="n">beamformed_data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">coherent_stokes_data</span> <span class="o">=</span> <span class="n">coherent_stokes_data</span>
+        <span class="c1"># If number_collapsed_channels is not set, default to</span>
+        <span class="c1"># correlator settings.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">coherent_stokes_data</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">coherent_stokes_data</span><span class="o">.</span><span class="n">number_collapsed_channels</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">coherent_stokes_data</span><span class="o">.</span><span class="n">number_collapsed_channels</span> <span class="o">=</span> \
+                        <span class="bp">self</span><span class="o">.</span><span class="n">channels_per_subband</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tied_array_beams</span>          <span class="o">=</span> <span class="n">tied_array_beams</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tied_array_beams</span>  <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tied_array_beams</span> <span class="o">=</span> <span class="n">TiedArrayBeams</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">incoherent_stokes_data</span>    <span class="o">=</span> <span class="n">incoherent_stokes_data</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">incoherent_stokes_data</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">incoherent_stokes_data</span><span class="o">.</span><span class="n">number_collapsed_channels</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">incoherent_stokes_data</span><span class="o">.</span><span class="n">number_collapsed_channels</span> <span class="o">=</span> \
+                        <span class="bp">self</span><span class="o">.</span><span class="n">channels_per_subband</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stokes_integrate_channels</span> <span class="o">=</span> <span class="n">stokes_integrate_channels</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">coherent_dedispersed_channels</span> <span class="o">=</span> <span class="n">coherent_dedispersed_channels</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bypass_pff</span>                <span class="o">=</span> <span class="n">bypass_pff</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enable_superterp</span>          <span class="o">=</span> <span class="n">enable_superterp</span>
+        <span class="n">valid_default_templates</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;BeamObservation&#39;</span><span class="p">,</span>
+                                   <span class="s1">&#39;BeamObservationNoPlots&#39;</span><span class="p">,</span>
+                                   <span class="s1">&#39;BeamObservationNoStationControl&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">default_template</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">valid_default_templates</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> is not a valid default template, choose one of </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span>
+                             <span class="p">(</span><span class="n">default_template</span><span class="p">,</span> <span class="n">valid_default_templates</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_template</span> <span class="o">=</span> <span class="n">default_template</span>
+
+
+
+<div class="viewcode-block" id="BackendProcessing.need_beam_observation"><a class="viewcode-back" href="../../momxml.html#momxml.backend.BackendProcessing.need_beam_observation">[docs]</a>    <span class="k">def</span> <span class="nf">need_beam_observation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">coherent_stokes_data</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">incoherent_stokes_data</span> <span class="ow">or</span> 
+                <span class="bp">self</span><span class="o">.</span><span class="n">filtered_data</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">beamformed_data</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="BackendProcessing.instrument_name"><a class="viewcode-back" href="../../momxml.html#momxml.backend.BackendProcessing.instrument_name">[docs]</a>    <span class="k">def</span> <span class="nf">instrument_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        These names are actually very important to MoM. They specify which</span>
+<span class="sd">        default observation screen is displayed. Valid values are</span>
+<span class="sd">        &#39;Beam Observation&#39;, &#39;Interferometer&#39;, and &#39;TBB (standalone)&#39;</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">need_beam_observation</span><span class="p">():</span>
+            <span class="k">return</span> <span class="s1">&#39;Beam Observation&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;Beam Observation&#39;</span> <span class="c1"># &#39;Interferometer&#39;</span></div>
+
+
+            
+    <span class="k">def</span> <span class="nf">measurement_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">need_beam_observation</span><span class="p">():</span>
+            <span class="k">return</span> <span class="s1">&#39;lofar:BFMeasurementType&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;lofar:UVMeasurementType&#39;</span>
+
+
+    <span class="k">def</span> <span class="nf">measurement_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">need_beam_observation</span><span class="p">():</span>
+            <span class="k">return</span> <span class="s1">&#39;bfMeasurementAttributes&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;uvMeasurementAttributes&#39;</span>
+
+
+<div class="viewcode-block" id="BackendProcessing.xml"><a class="viewcode-back" href="../../momxml.html#momxml.backend.BackendProcessing.xml">[docs]</a>    <span class="k">def</span> <span class="nf">xml</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">project_name</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">child_id</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">parent_label</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">def</span> <span class="nf">lower_case</span><span class="p">(</span><span class="nb">bool</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">repr</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            
+        <span class="n">incoherent_stokes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">incoherent_stokes_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span>
+        <span class="n">coherent_stokes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">coherent_stokes_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span>
+        <span class="n">flyseye</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="k">if</span> <span class="n">coherent_stokes</span><span class="p">:</span>
+            <span class="n">flyseye</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tied_array_beams</span><span class="o">.</span><span class="n">flyseye</span>
+
+            
+        <span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;&lt;correlatedData&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="n">lower_case</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">correlated_data</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/correlatedData&gt;</span>
+<span class="s1">&lt;filteredData&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="n">lower_case</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filtered_data</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/filteredData&gt;</span>
+<span class="s1">&lt;beamformedData&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="n">lower_case</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">beamformed_data</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/beamformedData&gt;</span>
+<span class="s1">&lt;coherentStokesData&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="n">lower_case</span><span class="p">(</span><span class="n">coherent_stokes</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/coherentStokesData&gt;</span>
+<span class="s1">&lt;incoherentStokesData&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="n">lower_case</span><span class="p">(</span><span class="n">incoherent_stokes</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/incoherentStokesData&gt;&#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">correlated_data</span><span class="p">:</span>
+            <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&lt;integrationInterval&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">integration_time_seconds</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/integrationInterval&gt;&#39;&#39;&#39;</span>
+        <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&lt;channelsPerSubband&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">channels_per_subband</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/channelsPerSubband&gt;</span>
+<span class="s1">&lt;pencilBeams&gt;</span>
+<span class="s1">  &lt;flyseye&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="n">lower_case</span><span class="p">(</span><span class="n">flyseye</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/flyseye&gt;</span>
+<span class="s1">  &lt;pencilBeamList/&gt;</span>
+<span class="s1">&lt;/pencilBeams&gt;&#39;&#39;&#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">tied_array_beams</span><span class="o">.</span><span class="n">xml</span><span class="p">()</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&lt;stokes&gt;</span>
+<span class="s1">  &lt;integrateChannels&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="n">lower_case</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stokes_integrate_channels</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/integrateChannels&gt;&#39;&#39;&#39;</span>
+
+        <span class="c1"># If number_collapsed_channels is not set, default to</span>
+        <span class="c1"># correlator settings.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">incoherent_stokes_data</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">incoherent_stokes_data</span><span class="o">.</span><span class="n">number_collapsed_channels</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">incoherent_stokes_data</span><span class="o">.</span><span class="n">number_collapsed_channels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">channels_per_subband</span>
+            <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">+</span><span class="n">indent</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">incoherent_stokes_data</span><span class="o">.</span><span class="n">xml</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">coherent_stokes_data</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">coherent_stokes_data</span><span class="o">.</span><span class="n">number_collapsed_channels</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">coherent_stokes_data</span><span class="o">.</span><span class="n">number_collapsed_channels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">channels_per_subband</span>
+
+            <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">+</span><span class="n">indent</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">coherent_stokes_data</span><span class="o">.</span><span class="n">xml</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span>
+
+        <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&lt;/stokes&gt;</span>
+<span class="s1">&lt;bypassPff&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="n">lower_case</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bypass_pff</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/bypassPff&gt;</span>
+<span class="s1">&lt;enableSuperterp&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="n">lower_case</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">enable_superterp</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/enableSuperterp&gt;</span>
+<span class="s1">&#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">output</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Genvalobs / momxml 1.7 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013, M.A. Brentjens.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+  </body>
+</html>

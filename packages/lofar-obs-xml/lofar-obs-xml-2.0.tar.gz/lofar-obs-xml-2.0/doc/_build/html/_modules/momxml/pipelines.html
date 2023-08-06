@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>momxml.pipelines &mdash; Genvalobs / momxml 1.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Genvalobs / momxml 1.7 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Genvalobs / momxml 1.7 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for momxml.pipelines</h1><div class="highlight"><pre>
+<span></span><span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">The pipelines module contains classes that represent data procesing</span>
+<span class="sd">pipelines. At this moment, only NDPPP is implemented here, but later</span>
+<span class="sd">on, this module will also support calibrator/target pipelines and</span>
+<span class="sd">imaging settings.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="kn">from</span> <span class="nn">lofarobsxml.observationspecificationbase</span> <span class="kn">import</span> <span class="n">ObservationSpecificationBase</span>
+<span class="kn">from</span> <span class="nn">lofarobsxml.utilities</span> <span class="kn">import</span> <span class="n">AutoReprBaseClass</span><span class="p">,</span> <span class="n">typecheck</span><span class="p">,</span> <span class="n">lower_case</span><span class="p">,</span> <span class="n">unique</span><span class="p">,</span> <span class="n">indent</span>
+<span class="kn">from</span> <span class="nn">lofarobsxml.momformats</span> <span class="kn">import</span> <span class="n">mom_duration</span><span class="p">,</span> <span class="n">mom_timestamp</span>
+<span class="kn">import</span> <span class="nn">ephem</span>
+
+        
+<div class="viewcode-block" id="NDPPP"><a class="viewcode-back" href="../../momxml.html#momxml.pipelines.NDPPP">[docs]</a><span class="k">class</span> <span class="nc">NDPPP</span><span class="p">(</span><span class="n">AutoReprBaseClass</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    The demixing- and averaging parameters for NDPPP.</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    avg_freq_step : int</span>
+<span class="sd">        How many channels to average.</span>
+<span class="sd">    </span>
+<span class="sd">    avg_time_step : int</span>
+<span class="sd">        How many time steps to average.</span>
+
+<span class="sd">    demix_freq_step : int</span>
+<span class="sd">        Width (in channels) of the window over which demixing is</span>
+<span class="sd">        done. This must be a multiple of ``avg_freq_step``.</span>
+
+<span class="sd">    demix_time_step : int</span>
+<span class="sd">        Length (in time slots) of the demixing window. This must be a</span>
+<span class="sd">        multiple of ``avg_time_step``.</span>
+
+<span class="sd">    demix_always : None or list of strings</span>
+<span class="sd">        Sources to always demix. Valid source names are: [&#39;CasA&#39;,</span>
+<span class="sd">        &#39;CygA&#39;, &#39;TauA&#39;, &#39;HydraA&#39;, &#39;VirA&#39;, &#39;HerA&#39;].</span>
+
+<span class="sd">    ignore_target : None or bool</span>
+<span class="sd">        See imagoing cookbook documentation. None implies observatory</span>
+<span class="sd">        default.</span>
+
+<span class="sd">    **Examples**</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; dmx = NDPPP(16, 2, demix_freq_step=64, demix_time_step=10,</span>
+<span class="sd">    ...             demix_always=[&#39;CygA&#39;, &#39;CasA&#39;])</span>
+<span class="sd">    &gt;&gt;&gt; dmx</span>
+<span class="sd">    NDPPP(avg_freq_step   = 16,</span>
+<span class="sd">          avg_time_step   = 2,</span>
+<span class="sd">          demix_always    = [&#39;CygA&#39;, &#39;CasA&#39;],</span>
+<span class="sd">          demix_freq_step = 64,</span>
+<span class="sd">          demix_if_needed = None,</span>
+<span class="sd">          demix_time_step = 10,</span>
+<span class="sd">          ignore_target   = None)</span>
+<span class="sd">    &gt;&gt;&gt; print(dmx.xml())</span>
+<span class="sd">    &lt;BLANKLINE&gt;</span>
+<span class="sd">    &lt;demixingParameters&gt;</span>
+<span class="sd">      &lt;averagingFreqStep&gt;16&lt;/averagingFreqStep&gt;</span>
+<span class="sd">      &lt;averagingTimeStep&gt;2&lt;/averagingTimeStep&gt;</span>
+<span class="sd">      &lt;demixFreqStep&gt;64&lt;/demixFreqStep&gt;</span>
+<span class="sd">      &lt;demixTimeStep&gt;10&lt;/demixTimeStep&gt;</span>
+<span class="sd">      &lt;demixAlways&gt;[CygA,CasA]&lt;/demixAlways&gt;</span>
+<span class="sd">      &lt;demixIfNeeded&gt;&lt;/demixIfNeeded&gt;</span>
+<span class="sd">      &lt;ignoreTarget&gt;&lt;/ignoreTarget&gt;</span>
+<span class="sd">    &lt;/demixingParameters&gt;</span>
+
+<span class="sd">    Of course, several consistency checks are made:</span>
+<span class="sd">    &gt;&gt;&gt; NDPPP(16, 2, demix_freq_step=64, demix_time_step=5,</span>
+<span class="sd">    ...                       demix_always=[&#39;CygA&#39;, &#39;CasA&#39;])</span>
+<span class="sd">    Traceback (most recent call last):</span>
+<span class="sd">    ...</span>
+<span class="sd">    ValueError: NDPPP.demix_time_step(5) is not a multiple of NDPPP.avg_time_step(2)</span>
+<span class="sd">    &gt;&gt;&gt; NDPPP(16, 2.5, demix_freq_step=64, demix_time_step=5,</span>
+<span class="sd">    ...                demix_always=[&#39;CygA&#39;, &#39;CasA&#39;])</span>
+<span class="sd">    Traceback (most recent call last):</span>
+<span class="sd">    ...</span>
+<span class="sd">    TypeError: type(NDPPP.avg_time_step)(2.5) not in [&#39;int&#39;]</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">avg_freq_step</span> <span class="o">=</span> <span class="mi">64</span><span class="p">,</span> <span class="n">avg_time_step</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                 <span class="n">demix_freq_step</span> <span class="o">=</span> <span class="mi">64</span><span class="p">,</span> <span class="n">demix_time_step</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+                 <span class="n">demix_always</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">demix_if_needed</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+                 <span class="n">ignore_target</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">avg_freq_step</span>   <span class="o">=</span> <span class="n">avg_freq_step</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">avg_time_step</span>   <span class="o">=</span> <span class="n">avg_time_step</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">demix_freq_step</span> <span class="o">=</span> <span class="n">demix_freq_step</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">demix_time_step</span> <span class="o">=</span> <span class="n">demix_time_step</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">demix_always</span>    <span class="o">=</span> <span class="n">demix_always</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">demix_always</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">str</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">demix_always</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">demix_always</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">demix_if_needed</span> <span class="o">=</span> <span class="n">demix_if_needed</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">demix_if_needed</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">str</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">demix_if_needed</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">demix_if_needed</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ignore_target</span> <span class="o">=</span> <span class="n">ignore_target</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">validate</span><span class="p">()</span>
+
+
+
+<div class="viewcode-block" id="NDPPP.validate"><a class="viewcode-back" href="../../momxml.html#momxml.pipelines.NDPPP.validate">[docs]</a>    <span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Raise a ValueError or TypeError if problems with the</span>
+<span class="sd">        specification are detected.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">typecheck</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">avg_freq_step</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="s1">&#39;NDPPP.avg_freq_step&#39;</span><span class="p">)</span>
+        <span class="n">typecheck</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">avg_time_step</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="s1">&#39;NDPPP.avg_time_step&#39;</span><span class="p">)</span>
+        <span class="n">typecheck</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">demix_freq_step</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="s1">&#39;NDPPP.demix_freq_step&#39;</span><span class="p">)</span>
+        <span class="n">typecheck</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">demix_time_step</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="s1">&#39;NDPPP.demix_time_step&#39;</span><span class="p">)</span>
+        <span class="n">typecheck</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">demix_always</span><span class="p">,</span> <span class="p">[</span><span class="nb">list</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="bp">None</span><span class="p">)],</span>
+                  <span class="s1">&#39;NDPPP.demix_always&#39;</span><span class="p">)</span>
+        <span class="n">typecheck</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">demix_if_needed</span><span class="p">,</span> <span class="p">[</span><span class="nb">list</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="bp">None</span><span class="p">)],</span>
+                  <span class="s1">&#39;NDPPP.demix_if_needed&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">demix_freq_step</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">avg_freq_step</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;NDPPP.demix_freq_step(</span><span class="si">%r</span><span class="s1">) is not a multiple of NDPPP.avg_freq_step(</span><span class="si">%r</span><span class="s1">)&#39;</span> <span class="o">%</span>
+                             <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">demix_freq_step</span><span class="p">,</span>
+                              <span class="bp">self</span><span class="o">.</span><span class="n">avg_freq_step</span><span class="p">))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">demix_time_step</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">avg_time_step</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;NDPPP.demix_time_step(</span><span class="si">%r</span><span class="s1">) is not a multiple of NDPPP.avg_time_step(</span><span class="si">%r</span><span class="s1">)&#39;</span> <span class="o">%</span>
+                             <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">demix_time_step</span><span class="p">,</span>
+                              <span class="bp">self</span><span class="o">.</span><span class="n">avg_time_step</span><span class="p">))</span>
+        <span class="n">typecheck</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ignore_target</span><span class="p">,</span> <span class="p">[</span><span class="nb">type</span><span class="p">(</span><span class="bp">None</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="bp">True</span><span class="p">)],</span>
+                  <span class="s1">&#39;NDPPP.ignore_target&#39;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="NDPPP.xml"><a class="viewcode-back" href="../../momxml.html#momxml.pipelines.NDPPP.xml">[docs]</a>    <span class="k">def</span> <span class="nf">xml</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Produce an xml representation of demixing settings.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">template</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&lt;demixingParameters&gt;</span>
+<span class="s1">  &lt;averagingFreqStep&gt;</span><span class="si">%(avg_freq_step)d</span><span class="s1">&lt;/averagingFreqStep&gt;</span>
+<span class="s1">  &lt;averagingTimeStep&gt;</span><span class="si">%(avg_time_step)d</span><span class="s1">&lt;/averagingTimeStep&gt;</span>
+<span class="s1">  &lt;demixFreqStep&gt;</span><span class="si">%(demix_freq_step)d</span><span class="s1">&lt;/demixFreqStep&gt;</span>
+<span class="s1">  &lt;demixTimeStep&gt;</span><span class="si">%(demix_time_step)d</span><span class="s1">&lt;/demixTimeStep&gt;</span>
+<span class="s1">  &lt;demixAlways&gt;</span><span class="si">%(demix_always)s</span><span class="s1">&lt;/demixAlways&gt;</span>
+<span class="s1">  &lt;demixIfNeeded&gt;</span><span class="si">%(demix_if_needed)s</span><span class="s1">&lt;/demixIfNeeded&gt;</span>
+<span class="s1">  &lt;ignoreTarget&gt;</span><span class="si">%(ignore_target)s</span><span class="s1">&lt;/ignoreTarget&gt;</span>
+<span class="s1">&lt;/demixingParameters&gt;&#39;&#39;&#39;</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;avg_freq_step&#39;</span>   <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">avg_freq_step</span><span class="p">,</span>
+                <span class="s1">&#39;avg_time_step&#39;</span>   <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">avg_time_step</span><span class="p">,</span>
+                <span class="s1">&#39;demix_freq_step&#39;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">demix_freq_step</span><span class="p">,</span>
+                <span class="s1">&#39;demix_time_step&#39;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">demix_time_step</span><span class="p">,</span>
+                <span class="s1">&#39;demix_always&#39;</span>    <span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;demix_if_needed&#39;</span> <span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;ignore_target&#39;</span>   <span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">}</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">demix_always</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">args</span><span class="p">[</span><span class="s1">&#39;demix_always&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;[&#39;</span><span class="o">+</span><span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">demix_always</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;]&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">demix_if_needed</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">args</span><span class="p">[</span><span class="s1">&#39;demix_if_needed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;[&#39;</span><span class="o">+</span><span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">demix_if_needed</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;]&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ignore_target</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">args</span><span class="p">[</span><span class="s1">&#39;ignore_target&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lower_case</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ignore_target</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">template</span> <span class="o">%</span> <span class="n">args</span></div></div>
+
+
+
+
+
+<div class="viewcode-block" id="AveragingPipeline"><a class="viewcode-back" href="../../momxml.html#momxml.pipelines.AveragingPipeline">[docs]</a><span class="k">class</span> <span class="nc">AveragingPipeline</span><span class="p">(</span><span class="n">ObservationSpecificationBase</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    **Parameters**</span>
+<span class="sd">    </span>
+<span class="sd">    flagging_strategy: &#39;LBAdefault&#39;, &#39;HBAdefault&#39;, or None</span>
+<span class="sd">        NDPPP flagging strategy.</span>
+
+<span class="sd">    initial_status : string</span>
+<span class="sd">        Either &#39;opened&#39; or &#39;approved&#39;</span>
+
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; from lofarobsxml             import TargetSource, Angle</span>
+<span class="sd">    &gt;&gt;&gt; from lofarobsxml.backend     import BackendProcessing</span>
+<span class="sd">    &gt;&gt;&gt; from lofarobsxml.observation import Observation</span>
+<span class="sd">    &gt;&gt;&gt; from lofarobsxml.beam        import Beam</span>
+<span class="sd">    &gt;&gt;&gt; target = TargetSource(name      = &#39;Cyg A&#39;,</span>
+<span class="sd">    ...                       ra_angle  = Angle(hms  = (19, 59, 28.3566)),</span>
+<span class="sd">    ...                       dec_angle = Angle(sdms = (&#39;+&#39;, 40, 44, 2.097)))</span>
+
+<span class="sd">    &gt;&gt;&gt; bm = Beam(target, &#39;77..324&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; obs = Observation(&#39;HBA_DUAL_INNER&#39;, &#39;LBA_LOW&#39;, (2013, 10, 20, 18, 5, 0),</span>
+<span class="sd">    ...                   duration_seconds = 600, name = &#39;Main observation&#39;,</span>
+<span class="sd">    ...                   stations  = [&#39;CS001&#39;, &#39;RS106&#39;, &#39;DE601&#39;],</span>
+<span class="sd">    ...                   clock_mhz = 200, beam_list = [bm],</span>
+<span class="sd">    ...                   backend   = BackendProcessing())</span>
+
+<span class="sd">    &gt;&gt;&gt; avg = AveragingPipeline(name = &#39;Avg Pipeline&#39;, ndppp = NDPPP())</span>
+<span class="sd">    &gt;&gt;&gt; avg.add_input_data_product(obs.children[0])</span>
+<span class="sd">    &gt;&gt;&gt; obs.append_child(avg)</span>
+<span class="sd">    &gt;&gt;&gt; avg</span>
+<span class="sd">    AveragingPipeline(parent            = Observation(&#39;Main observation&#39;),</span>
+<span class="sd">                      children          = None,</span>
+<span class="sd">                      default_template  = &#39;Preprocessing Pipeline&#39;,</span>
+<span class="sd">                      duration_s        = None,</span>
+<span class="sd">                      flagging_strategy = None,</span>
+<span class="sd">                      initial_status    = &#39;opened&#39;,</span>
+<span class="sd">                      input_data        = [Beam(parent           = Observation(&#39;Main observation&#39;),</span>
+<span class="sd">                                               children         = None,</span>
+<span class="sd">                                               duration_s       = None,</span>
+<span class="sd">                                               initial_status   = &#39;opened&#39;,</span>
+<span class="sd">                                               measurement_type = &#39;Target&#39;,</span>
+<span class="sd">                                               name             = &#39;Cyg A&#39;,</span>
+<span class="sd">                                               subband_spec     = &#39;77..324&#39;,</span>
+<span class="sd">                                               target_source    = TargetSource(name      = &#39;Cyg A&#39;,</span>
+<span class="sd">                                                                               ra_angle  = Angle(shms = (&#39;+&#39;, 19, 59, 28.3566)),</span>
+<span class="sd">                                                                               dec_angle = Angle(sdms = (&#39;+&#39;, 40, 44, 2.097))),</span>
+<span class="sd">                                               tied_array_beams = None)],</span>
+<span class="sd">                      name              = &#39;Avg Pipeline&#39;,</span>
+<span class="sd">                      ndppp             = NDPPP(avg_freq_step   = 64,</span>
+<span class="sd">                                                avg_time_step   = 1,</span>
+<span class="sd">                                                demix_always    = None,</span>
+<span class="sd">                                                demix_freq_step = 64,</span>
+<span class="sd">                                                demix_if_needed = None,</span>
+<span class="sd">                                                demix_time_step = 10,</span>
+<span class="sd">                                                ignore_target   = None),</span>
+<span class="sd">                      predecessor_label = None,</span>
+<span class="sd">                      start_date        = None)</span>
+<span class="sd">    &gt;&gt;&gt; print(avg.xml(&#39;Project name&#39;))</span>
+<span class="sd">    &lt;lofar:pipeline xsi:type=&quot;lofar:AveragingPipelineType&quot;&gt;</span>
+<span class="sd">      &lt;topology&gt;Main_observation.1.Avg_Pipeline&lt;/topology&gt;</span>
+<span class="sd">      &lt;predecessor_topology&gt;Main_observation&lt;/predecessor_topology&gt;</span>
+<span class="sd">      &lt;name&gt;Avg Pipeline&lt;/name&gt;</span>
+<span class="sd">      &lt;description&gt;Avg Pipeline: &quot;Preprocessing Pipeline&quot;&lt;/description&gt;</span>
+<span class="sd">      &lt;currentStatus&gt;</span>
+<span class="sd">        &lt;mom2:openedStatus/&gt;</span>
+<span class="sd">      &lt;/currentStatus&gt;</span>
+<span class="sd">      &lt;averagingPipelineAttributes&gt;</span>
+<span class="sd">        &lt;defaultTemplate&gt;Preprocessing Pipeline&lt;/defaultTemplate&gt;</span>
+<span class="sd">        &lt;duration&gt;&lt;/duration&gt;</span>
+<span class="sd">        &lt;startTime&gt;&lt;/startTime&gt;</span>
+<span class="sd">        &lt;endTime&gt;&lt;/endTime&gt;</span>
+<span class="sd">        &lt;demixingParameters&gt;</span>
+<span class="sd">          &lt;averagingFreqStep&gt;64&lt;/averagingFreqStep&gt;</span>
+<span class="sd">          &lt;averagingTimeStep&gt;1&lt;/averagingTimeStep&gt;</span>
+<span class="sd">          &lt;demixFreqStep&gt;64&lt;/demixFreqStep&gt;</span>
+<span class="sd">          &lt;demixTimeStep&gt;10&lt;/demixTimeStep&gt;</span>
+<span class="sd">          &lt;demixAlways&gt;&lt;/demixAlways&gt;</span>
+<span class="sd">          &lt;demixIfNeeded&gt;&lt;/demixIfNeeded&gt;</span>
+<span class="sd">          &lt;ignoreTarget&gt;&lt;/ignoreTarget&gt;</span>
+<span class="sd">        &lt;/demixingParameters&gt;</span>
+<span class="sd">        &lt;flaggingStrategy&gt;HBAdefault&lt;/flaggingStrategy&gt;</span>
+<span class="sd">      &lt;/averagingPipelineAttributes&gt;</span>
+<span class="sd">      &lt;usedDataProducts&gt;</span>
+<span class="sd">        &lt;item&gt;</span>
+<span class="sd">          &lt;lofar:uvDataProduct topology=&quot;Main_observation.0.Cyg_A.dps&quot;&gt;</span>
+<span class="sd">            &lt;name&gt;Main_observation.0.Cyg_A.dps&lt;/name&gt;</span>
+<span class="sd">          &lt;/lofar:uvDataProduct&gt;</span>
+<span class="sd">        &lt;/item&gt;</span>
+<span class="sd">      &lt;/usedDataProducts&gt;</span>
+<span class="sd">      &lt;resultDataProducts&gt;</span>
+<span class="sd">        &lt;item&gt;</span>
+<span class="sd">          &lt;lofar:uvDataProduct&gt;</span>
+<span class="sd">            &lt;name&gt;Main_observation.1.Avg_Pipeline.dps&lt;/name&gt;</span>
+<span class="sd">            &lt;topology&gt;Main_observation.1.Avg_Pipeline.dps&lt;/topology&gt;</span>
+<span class="sd">            &lt;status&gt;no_data&lt;/status&gt;</span>
+<span class="sd">          &lt;/lofar:uvDataProduct&gt;</span>
+<span class="sd">        &lt;/item&gt;</span>
+<span class="sd">      &lt;/resultDataProducts&gt;</span>
+<span class="sd">    &lt;/lofar:pipeline&gt;</span>
+
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">ndppp</span><span class="p">,</span> <span class="n">input_data</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+                 <span class="n">duration_s</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">start_date</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+                 <span class="n">flagging_strategy</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+                 <span class="n">parent</span>   <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">children</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+                 <span class="n">predecessor_label</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+                 <span class="n">initial_status</span><span class="o">=</span><span class="s1">&#39;opened&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">AveragingPipeline</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+                                                <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span>
+                                                <span class="n">children</span><span class="o">=</span><span class="n">children</span><span class="p">,</span>
+                                                <span class="n">initial_status</span><span class="o">=</span><span class="n">initial_status</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ndppp</span>            <span class="o">=</span> <span class="n">ndppp</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_data</span>       <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">duration_s</span>       <span class="o">=</span> <span class="n">duration_s</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_date</span>       <span class="o">=</span> <span class="n">start_date</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">flagging_strategy</span> <span class="o">=</span> <span class="n">flagging_strategy</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_template</span> <span class="o">=</span> <span class="s1">&#39;Preprocessing Pipeline&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">predecessor_label</span> <span class="o">=</span> <span class="n">predecessor_label</span>
+        <span class="k">if</span> <span class="n">input_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">input_data</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">add_input_data_product</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">validate</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="AveragingPipeline.validate"><a class="viewcode-back" href="../../momxml.html#momxml.pipelines.AveragingPipeline.validate">[docs]</a>    <span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">typecheck</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ndppp</span><span class="p">,</span> <span class="n">NDPPP</span><span class="p">,</span>
+                  <span class="s1">&#39;AveragingPipeline.NDPPP&#39;</span><span class="p">)</span>
+        <span class="n">typecheck</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">predecessor_label</span><span class="p">,</span> <span class="p">[</span><span class="nb">type</span><span class="p">(</span><span class="bp">None</span><span class="p">),</span> <span class="nb">str</span><span class="p">],</span>
+                  <span class="s1">&#39;AveragingPipeline.predecessor_label&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="AveragingPipeline.add_input_data_product"><a class="viewcode-back" href="../../momxml.html#momxml.pipelines.AveragingPipeline.add_input_data_product">[docs]</a>    <span class="k">def</span> <span class="nf">add_input_data_product</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_sap</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_data</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">input_data</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">input_sap</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="AveragingPipeline.predecessor"><a class="viewcode-back" href="../../momxml.html#momxml.pipelines.AveragingPipeline.predecessor">[docs]</a>    <span class="k">def</span> <span class="nf">predecessor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">predecessor_label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">predecessor_label</span>
+
+        <span class="n">predecessor_observations</span> <span class="o">=</span> <span class="n">unique</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">data_set</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">label</span><span class="p">()</span>
+             <span class="k">for</span> <span class="n">data_set</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_data</span>
+             <span class="k">if</span> <span class="n">data_set</span><span class="o">.</span><span class="n">parent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">])</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">predecessor_observations</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;AveragingPipeline: more than one predecessor (</span><span class="si">%r</span><span class="s1">)&#39;</span> <span class="o">%</span>
+                             <span class="n">predecessor_observations</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">predecessor_observations</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></div>
+        
+        
+
+    <span class="k">def</span> <span class="nf">xml_prefix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">project_name</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+        <span class="n">template</span> <span class="o">=</span><span class="s1">&#39;&#39;&#39;&lt;lofar:pipeline xsi:type=&quot;lofar:AveragingPipelineType&quot;&gt;</span>
+<span class="s1">  &lt;topology&gt;</span><span class="si">%(label)s</span><span class="s1">&lt;/topology&gt;</span>
+<span class="s1">  &lt;predecessor_topology&gt;</span><span class="si">%(predecessor)s</span><span class="s1">&lt;/predecessor_topology&gt;</span>
+<span class="s1">  &lt;name&gt;</span><span class="si">%(name)s</span><span class="s1">&lt;/name&gt;</span>
+<span class="s1">  &lt;description&gt;</span><span class="si">%(name)s</span><span class="s1">: &quot;</span><span class="si">%(default_template)s</span><span class="s1">&quot;&lt;/description&gt;</span>
+<span class="s1">  &lt;currentStatus&gt;</span>
+<span class="s1">    &lt;mom2:</span><span class="si">%(initial_status)s</span><span class="s1">Status/&gt;</span>
+<span class="s1">  &lt;/currentStatus&gt;</span>
+<span class="s1">  &lt;averagingPipelineAttributes&gt;</span>
+<span class="s1">    &lt;defaultTemplate&gt;</span><span class="si">%(default_template)s</span><span class="s1">&lt;/defaultTemplate&gt;</span>
+<span class="s1">    &lt;duration&gt;</span><span class="si">%(duration)s</span><span class="s1">&lt;/duration&gt;</span>
+<span class="s1">    &lt;startTime&gt;</span><span class="si">%(start_time)s</span><span class="s1">&lt;/startTime&gt;</span>
+<span class="s1">    &lt;endTime&gt;&lt;/endTime&gt;</span><span class="si">%(ndppp)s</span><span class="s1"></span>
+<span class="s1">    &lt;flaggingStrategy&gt;</span><span class="si">%(flagging_strategy)s</span><span class="s1">&lt;/flaggingStrategy&gt;</span>
+<span class="s1">  &lt;/averagingPipelineAttributes&gt;</span>
+<span class="s1">  &lt;usedDataProducts&gt;</span><span class="si">%(used_data_products)s</span><span class="s1"></span>
+<span class="s1">  &lt;/usedDataProducts&gt;</span>
+<span class="s1">  &lt;resultDataProducts&gt;</span>
+<span class="s1">    &lt;item&gt;</span>
+<span class="s1">      &lt;lofar:uvDataProduct&gt;</span>
+<span class="s1">        &lt;name&gt;</span><span class="si">%(label)s</span><span class="s1">.dps&lt;/name&gt;</span>
+<span class="s1">        &lt;topology&gt;</span><span class="si">%(label)s</span><span class="s1">.dps&lt;/topology&gt;</span>
+<span class="s1">        &lt;status&gt;no_data&lt;/status&gt;</span>
+<span class="s1">      &lt;/lofar:uvDataProduct&gt;</span>
+<span class="s1">    &lt;/item&gt;</span>
+<span class="s1">  &lt;/resultDataProducts&gt;</span>
+<span class="s1">&#39;&#39;&#39;</span>
+        <span class="n">used_data_product_template</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span><span class="se">\n</span><span class="s1">&lt;item&gt;</span>
+<span class="s1">  &lt;lofar:uvDataProduct topology=&quot;</span><span class="si">%(name)s</span><span class="s1">&quot;&gt;</span>
+<span class="s1">    &lt;name&gt;</span><span class="si">%(name)s</span><span class="s1">&lt;/name&gt;</span>
+<span class="s1">  &lt;/lofar:uvDataProduct&gt;</span>
+<span class="s1">&lt;/item&gt;&#39;&#39;&#39;</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;label&#39;</span>       <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="p">(),</span>
+            <span class="s1">&#39;predecessor&#39;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">predecessor</span><span class="p">(),</span>
+            <span class="s1">&#39;name&#39;</span>        <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s1">&#39;default_template&#39;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_template</span><span class="p">,</span>
+            <span class="s1">&#39;duration&#39;</span>    <span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;start_time&#39;</span>  <span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;flagging_strategy&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">flagging_strategy</span><span class="p">,</span>
+            <span class="s1">&#39;ndppp&#39;</span>       <span class="p">:</span> <span class="n">indent</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ndppp</span><span class="o">.</span><span class="n">xml</span><span class="p">(),</span> <span class="mi">4</span><span class="p">),</span>
+            <span class="s1">&#39;used_data_products&#39;</span> <span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;initial_status&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">initial_status</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">duration_s</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">args</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mom_duration</span><span class="p">(</span><span class="n">seconds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">duration_s</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_date</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">start_date</span> <span class="o">=</span> <span class="n">ephem</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start_date</span><span class="p">)</span><span class="o">.</span><span class="n">tuple</span><span class="p">()</span>
+            <span class="n">rounded_start_date</span> <span class="o">=</span> <span class="n">start_date</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">start_date</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])),)</span>
+            <span class="n">args</span><span class="p">[</span><span class="s1">&#39;start_time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mom_timestamp</span><span class="p">(</span><span class="o">*</span><span class="n">rounded_start_date</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_data</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;AveragingPipeline.input_data is None!&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">flagging_strategy</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">args</span><span class="p">[</span><span class="s1">&#39;flagging_strategy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">antenna_set</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">+</span><span class="s1">&#39;default&#39;</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">flagging_strategy</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;HBAdefault&#39;</span><span class="p">,</span> <span class="s1">&#39;LBAdefault&#39;</span><span class="p">]:</span>
+            <span class="n">args</span><span class="p">[</span><span class="s1">&#39;flagging_strategy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">flagging_strategy</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;lofarobsxml.AverigingPipeline: unknown flagging strategy </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">flagging_strategy</span><span class="p">)</span>
+        <span class="n">args</span><span class="p">[</span><span class="s1">&#39;used_data_products&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">indent</span><span class="p">(</span>
+            <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span>
+                <span class="n">used_data_product_template</span> <span class="o">%</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span> <span class="p">:</span> <span class="n">sap</span><span class="o">.</span><span class="n">data_products_label</span><span class="p">()}</span>
+                <span class="k">for</span> <span class="n">sap</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_data</span><span class="p">]),</span>
+            <span class="mi">4</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">template</span> <span class="o">%</span> <span class="n">args</span>
+
+    <span class="k">def</span> <span class="nf">xml_suffix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">project_name</span><span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;/lofar:pipeline&gt;&#39;</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Genvalobs / momxml 1.7 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013, M.A. Brentjens.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+  </body>
+</html>

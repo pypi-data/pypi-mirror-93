@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>momxml.targetsource &mdash; Genvalobs / momxml 1.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Genvalobs / momxml 1.7 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Genvalobs / momxml 1.7 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for momxml.targetsource</h1><div class="highlight"><pre>
+<span></span><span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">Specification of target sources to use in Observation Beams.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="kn">from</span> <span class="nn">lofarobsxml.angles</span> <span class="kn">import</span> <span class="n">Angle</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">urllib</span>
+<span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">urllib.request</span> <span class="kn">as</span> <span class="nn">request</span>
+
+<div class="viewcode-block" id="NoSimbadCoordinatesError"><a class="viewcode-back" href="../../momxml.html#momxml.targetsource.NoSimbadCoordinatesError">[docs]</a><span class="k">class</span> <span class="nc">NoSimbadCoordinatesError</span><span class="p">(</span><span class="ne">RuntimeError</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Raised if the Simbad response does not contain J2000 coordinates.</span>
+<span class="sd">    &#39;&#39;&#39;</span></div>
+
+<div class="viewcode-block" id="SourceSpecificationError"><a class="viewcode-back" href="../../momxml.html#momxml.targetsource.SourceSpecificationError">[docs]</a><span class="k">class</span> <span class="nc">SourceSpecificationError</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Raised in case of badly specified TargetSource.</span>
+<span class="sd">    &#39;&#39;&#39;</span></div>
+
+
+<div class="viewcode-block" id="TargetSource"><a class="viewcode-back" href="../../momxml.html#momxml.targetsource.TargetSource">[docs]</a><span class="k">class</span> <span class="nc">TargetSource</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    A target source to be used when specifying a Beam within an</span>
+<span class="sd">    Observation.</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    name : non-unicode string</span>
+<span class="sd">        Contains the name of the source.</span>
+
+<span class="sd">    ra_angle : None or an Angle</span>
+<span class="sd">        J2000 right ascension.</span>
+
+<span class="sd">    dec_angle : None or an Angle</span>
+<span class="sd">        J2000 declination.</span>
+
+<span class="sd">    reference_frame : string</span>
+<span class="sd">        Reference frame for the longitudinal (ra/az/lon) and</span>
+<span class="sd">        latitudinal (dec/el/lat) coordinates. Examples: &#39;J2000&#39;,</span>
+<span class="sd">        &#39;B1950&#39;, &#39;AZELGEO&#39;, &#39;AZEL&#39;, &#39;GALACTIC&#39;, &#39;JMEAN&#39;, JTRUE&#39;,</span>
+<span class="sd">        etc... Basically anything supported by Casacore.</span>
+<span class="sd">        Default: &#39;J2000&#39;</span>
+
+<span class="sd">    **Raises**</span>
+
+<span class="sd">    SourceSpecificationError</span>
+<span class="sd">        In case of badly specified TargetSource.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; TargetSource(&#39;Cyg A&#39;,</span>
+<span class="sd">    ...              ra_angle  = Angle(shms = (&#39;+&#39;, 19, 59, 28.3565)),</span>
+<span class="sd">    ...              dec_angle = Angle(sdms = (&#39;+&#39;, 40, 44, 2.099)) )</span>
+<span class="sd">    TargetSource(name      = &#39;Cyg A&#39;,</span>
+<span class="sd">                 ra_angle  = Angle(shms = (&#39;+&#39;, 19, 59, 28.3565)),</span>
+<span class="sd">                 dec_angle = Angle(sdms = (&#39;+&#39;, 40, 44, 2.099)))</span>
+
+
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ra_angle</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">dec_angle</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+                 <span class="n">reference_frame</span><span class="o">=</span><span class="s1">&#39;J2000&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span>      <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ra_angle</span>  <span class="o">=</span> <span class="n">ra_angle</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dec_angle</span> <span class="o">=</span> <span class="n">dec_angle</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reference_frame</span> <span class="o">=</span> <span class="n">reference_frame</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">validate_and_normalize</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="TargetSource.validate_and_normalize"><a class="viewcode-back" href="../../momxml.html#momxml.targetsource.TargetSource.validate_and_normalize">[docs]</a>    <span class="k">def</span> <span class="nf">validate_and_normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Validates type and contents of data members. This method is</span>
+<span class="sd">        called by the constructor.</span>
+
+<span class="sd">        **Returns**</span>
+
+<span class="sd">        A reference to ``self``.</span>
+
+<span class="sd">        **Raises**</span>
+
+<span class="sd">        SourceSpecificationError</span>
+<span class="sd">            In case of a badly specified target source.</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; TargetSource(&#39;Cyg A&#39;,</span>
+<span class="sd">        ...              ra_angle = Angle(shms = (&#39;+&#39;, 19, 59, 28.3565)),</span>
+<span class="sd">        ...              dec_angle = Angle(sdms = (&#39;+&#39;, 40, 44, 2.099)) )</span>
+<span class="sd">        TargetSource(name      = &#39;Cyg A&#39;,</span>
+<span class="sd">                     ra_angle  = Angle(shms = (&#39;+&#39;, 19, 59, 28.3565)),</span>
+<span class="sd">                     dec_angle = Angle(sdms = (&#39;+&#39;, 40, 44, 2.099)))</span>
+
+<span class="sd">        # &gt;&gt;&gt; TargetSource(u&#39;Cyg A&#39;,</span>
+<span class="sd">        # ...              ra_angle = Angle(shms = (&#39;+&#39;, 19, 59, 28.3565)),</span>
+<span class="sd">        # ...              dec_angle = Angle(sdms = (&#39;+&#39;, 40, 44, 2.099)) )</span>
+<span class="sd">        # Traceback (most recent call last):</span>
+<span class="sd">        # ...</span>
+<span class="sd">        # lofarobsxml.targetsource.SourceSpecificationError: Source name may not be a unicode string.</span>
+<span class="sd">        &gt;&gt;&gt; TargetSource(&#39;Cyg A&#39;,</span>
+<span class="sd">        ...              ra_angle = 3.0,</span>
+<span class="sd">        ...              dec_angle = Angle(sdms = (&#39;+&#39;, 40, 44, 2.099)) )</span>
+<span class="sd">        Traceback (most recent call last):</span>
+<span class="sd">        ...</span>
+<span class="sd">        lofarobsxml.targetsource.SourceSpecificationError: ra_angle must be a lofarobsxml.Angle, not 3.0</span>
+
+<span class="sd">        &gt;&gt;&gt; TargetSource(&#39;Cyg A&#39;,</span>
+<span class="sd">        ...              ra_angle = Angle(shms = (&#39;+&#39;, 19, 59, 28.3565)),</span>
+<span class="sd">        ...              dec_angle = -2)</span>
+<span class="sd">        Traceback (most recent call last):</span>
+<span class="sd">        ...</span>
+<span class="sd">        lofarobsxml.targetsource.SourceSpecificationError: dec_angle must be a lofarobsxml.Angle, not -2</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1"># Named tuple was introduced in Python 2.7</span>
+        <span class="c1"># In python 2.7 use sys.version_info.major </span>
+        <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="s1">u&#39;&#39;</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="n">SourceSpecificationError</span><span class="p">(</span>
+                    <span class="s1">&#39;Source name may not be a unicode string.&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">SourceSpecificationError</span><span class="p">(</span>
+                <span class="s1">&#39;Source name must be a string. You specified </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span>
+                <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">),))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ra_angle</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span> <span class="o">!=</span> <span class="s1">&#39;Angle&#39;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">SourceSpecificationError</span><span class="p">(</span>
+                <span class="s1">&#39;ra_angle must be a lofarobsxml.Angle, not </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">ra_angle</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dec_angle</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span> <span class="o">!=</span> <span class="s1">&#39;Angle&#39;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">SourceSpecificationError</span><span class="p">(</span>
+                <span class="s1">&#39;dec_angle must be a lofarobsxml.Angle, not </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">dec_angle</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+
+
+<div class="viewcode-block" id="TargetSource.ra_deg"><a class="viewcode-back" href="../../momxml.html#momxml.targetsource.TargetSource.ra_deg">[docs]</a>    <span class="k">def</span> <span class="nf">ra_deg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Return right ascension in degrees</span>
+
+<span class="sd">        **Returns**</span>
+
+<span class="sd">        A float.</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; TargetSource(&#39;Cyg A&#39;,</span>
+<span class="sd">        ...              ra_angle = Angle(deg = 299.868152),</span>
+<span class="sd">        ...              dec_angle = Angle(deg = 40.733916) ).ra_deg()</span>
+<span class="sd">        299.868152</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ra_angle</span><span class="o">.</span><span class="n">as_deg</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="TargetSource.dec_deg"><a class="viewcode-back" href="../../momxml.html#momxml.targetsource.TargetSource.dec_deg">[docs]</a>    <span class="k">def</span> <span class="nf">dec_deg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Return declination in degrees</span>
+
+<span class="sd">        **Returns**</span>
+
+<span class="sd">        A float.</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; TargetSource(&#39;Cyg A&#39;,</span>
+<span class="sd">        ...              ra_angle = Angle(deg = 299.868152),</span>
+<span class="sd">        ...              dec_angle = Angle(deg = 40.733916) ).dec_deg()</span>
+<span class="sd">        40.733916</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dec_angle</span><span class="o">.</span><span class="n">as_deg</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="TargetSource.ra_dec_rad"><a class="viewcode-back" href="../../momxml.html#momxml.targetsource.TargetSource.ra_dec_rad">[docs]</a>    <span class="k">def</span> <span class="nf">ra_dec_rad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Returns coordinates as an (ra_rad, dec_rad) pair of floats.</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; &#39;(%.6f, %.6f)&#39; % TargetSource(&#39;Cyg A&#39;,</span>
+<span class="sd">        ...                               ra_angle = Angle(deg = 299.868152),</span>
+<span class="sd">        ...                               dec_angle = Angle(deg = 40.733916) ).ra_dec_rad()</span>
+<span class="sd">        &#39;(5.233687, 0.710941)&#39;</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ra_angle</span><span class="o">.</span><span class="n">as_rad</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">dec_angle</span><span class="o">.</span><span class="n">as_rad</span><span class="p">())</span></div>
+
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;&#39;&#39;TargetSource(name      = </span><span class="si">%r</span><span class="s1">,</span>
+<span class="s1">             ra_angle  = Angle(shms = </span><span class="si">%r</span><span class="s1">),</span>
+<span class="s1">             dec_angle = Angle(sdms = </span><span class="si">%r</span><span class="s1">))&#39;&#39;&#39;</span> <span class="o">%</span>
+             <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+              <span class="bp">self</span><span class="o">.</span><span class="n">ra_angle</span><span class="o">.</span><span class="n">as_shms</span><span class="p">()[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>  <span class="o">+</span>
+              <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%7.4f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">ra_angle</span><span class="o">.</span><span class="n">as_shms</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]),),</span>
+              <span class="bp">self</span><span class="o">.</span><span class="n">dec_angle</span><span class="o">.</span><span class="n">as_sdms</span><span class="p">()[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span>
+              <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%7.4f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">dec_angle</span><span class="o">.</span><span class="n">as_sdms</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]),)))</span></div>
+
+
+
+
+<div class="viewcode-block" id="target_source_from_simbad_response"><a class="viewcode-back" href="../../momxml.html#momxml.targetsource.target_source_from_simbad_response">[docs]</a><span class="k">def</span> <span class="nf">target_source_from_simbad_response</span><span class="p">(</span><span class="n">source_name</span><span class="p">,</span> <span class="n">simbad_response</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; simbad_response = open(&#39;examples/simbad-ngc891.txt&#39;).read()</span>
+<span class="sd">    &gt;&gt;&gt; target_source_from_simbad_response(&#39;NGC 891&#39;, simbad_response)</span>
+<span class="sd">    TargetSource(name      = &#39;NGC 891&#39;,</span>
+<span class="sd">                 ra_angle  = Angle(shms = (&#39;+&#39;, 2, 22, 32.907)),</span>
+<span class="sd">                 dec_angle = Angle(sdms = (&#39;+&#39;, 42, 20, 53.95)))</span>
+
+<span class="sd">    &gt;&gt;&gt; simbad_trifid = open(&#39;examples/simbad-trifid.txt&#39;).read()</span>
+<span class="sd">    &gt;&gt;&gt; target_source_from_simbad_response(&#39;Trifid Nebula&#39;, simbad_trifid)</span>
+<span class="sd">    TargetSource(name      = &#39;Trifid Nebula&#39;,</span>
+<span class="sd">                 ra_angle  = Angle(shms = (&#39;+&#39;, 18, 2, 42.0)),</span>
+<span class="sd">                 dec_angle = Angle(sdms = (&#39;-&#39;, 22, 58, 18.0)))</span>
+
+<span class="sd">    &gt;&gt;&gt; simbad_ncp = open(&#39;examples/simbad-ncp.txt&#39;).read()</span>
+<span class="sd">    &gt;&gt;&gt; target_source_from_simbad_response(&#39;NCP&#39;, simbad_ncp)</span>
+<span class="sd">    TargetSource(name      = &#39;NCP&#39;,</span>
+<span class="sd">                 ra_angle  = Angle(shms = (&#39;+&#39;, 0, 0, 0.0)),</span>
+<span class="sd">                 dec_angle = Angle(sdms = (&#39;+&#39;, 90, 0, 0.0)))</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">coordinate_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">simbad_response</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+                         <span class="k">if</span> <span class="s1">&#39;Coordinates(ICRS,ep=J2000,eq=2000)&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">coordinate_lines</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">words</span>    <span class="o">=</span> <span class="n">coordinate_lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="n">ra_hms</span>   <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">words</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]]</span>
+        <span class="n">ra_angle</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">hms</span> <span class="o">=</span> <span class="n">ra_hms</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">words</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="s1">&#39;0123456789&#39;</span><span class="p">:</span>
+            <span class="n">dec_sdms</span> <span class="o">=</span> <span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                        <span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">1</span><span class="p">:]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">5</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">6</span><span class="p">]))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dec_sdms</span> <span class="o">=</span> <span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                        <span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">1</span><span class="p">:]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">5</span><span class="p">]),</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">dec_angle</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">sdms</span> <span class="o">=</span> <span class="n">dec_sdms</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">TargetSource</span><span class="p">(</span><span class="n">name</span>      <span class="o">=</span> <span class="n">source_name</span><span class="p">,</span>
+                            <span class="n">ra_angle</span>  <span class="o">=</span> <span class="n">ra_angle</span><span class="p">,</span>
+                            <span class="n">dec_angle</span> <span class="o">=</span> <span class="n">dec_angle</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">NoSimbadCoordinatesError</span><span class="p">(</span><span class="s1">&#39;No J2000 coordinates in </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span>
+                                       <span class="n">simbad_response</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="simbad"><a class="viewcode-back" href="../../momxml.html#momxml.targetsource.simbad">[docs]</a><span class="k">def</span> <span class="nf">simbad</span><span class="p">(</span><span class="n">source_name</span><span class="p">,</span> <span class="n">debug</span> <span class="o">=</span> <span class="bp">False</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Lookup ``source_name`` on simbad and return a TargetSource instance.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; simbad(&#39;3C 196&#39;)</span>
+<span class="sd">    TargetSource(name      = &#39;3C 196&#39;,</span>
+<span class="sd">                 ra_angle  = Angle(shms = (&#39;+&#39;, 8, 13, 36.0561)),</span>
+<span class="sd">                 dec_angle = Angle(sdms = (&#39;+&#39;, 48, 13, 2.636)))</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;&amp;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span>
+        <span class="s1">&#39;http://simbad.u-strasbg.fr/simbad/sim-id?output.format=ASCII&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;obj.coo1=on&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;obj.coo2=off&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;obj.coo3=off&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;obj.coo4=off&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;frame1=ICRS&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;epoch1=J2000&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;equi1=2000&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;obj.pmsel=off&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;obj.plxsel=off&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;obj.rvsel=off&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;obj.spsel=off&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;obj.mtsel=off&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;obj.sizesel=off&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;obj.fluxsel=off&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;obj.bibsel=off&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;obj.messel=off&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;obj.notesel=off&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Ident=</span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">])</span>
+
+    <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">query</span> <span class="o">%</span> <span class="n">urllib</span><span class="o">.</span><span class="n">quote</span><span class="p">(</span><span class="n">source_name</span><span class="p">),</span>
+                                <span class="n">proxies</span> <span class="o">=</span> <span class="p">{})</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">query</span> <span class="o">%</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">quote</span><span class="p">(</span><span class="n">source_name</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">debug</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">target_source_from_simbad_response</span><span class="p">(</span><span class="n">source_name</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span></div>
+
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Genvalobs / momxml 1.7 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013, M.A. Brentjens.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+  </body>
+</html>

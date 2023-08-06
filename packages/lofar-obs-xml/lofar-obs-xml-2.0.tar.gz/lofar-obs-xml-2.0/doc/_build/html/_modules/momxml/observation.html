@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>momxml.observation &mdash; Genvalobs / momxml 1.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Genvalobs / momxml 1.7 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Genvalobs / momxml 1.7 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for momxml.observation</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">lofarobsxml.observationspecificationbase</span> <span class="kn">import</span> <span class="n">ObservationSpecificationBase</span>
+<span class="kn">from</span> <span class="nn">lofarobsxml.momformats</span>   <span class="kn">import</span> <span class="n">mom_duration</span><span class="p">,</span> <span class="n">mom_timestamp</span><span class="p">,</span> <span class="n">mom_frequency_range</span>
+<span class="kn">from</span> <span class="nn">lofarobsxml.momformats</span>   <span class="kn">import</span> <span class="n">mom_antenna_name_from_mac_name</span>
+<span class="kn">from</span> <span class="nn">lofarobsxml.targetsource</span> <span class="kn">import</span> <span class="n">TargetSource</span>
+<span class="kn">from</span> <span class="nn">lofarobsxml.utilities</span>    <span class="kn">import</span> <span class="n">validate_enumeration</span><span class="p">,</span> <span class="n">indent</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">ceil</span>
+<span class="kn">import</span> <span class="nn">ephem</span>
+
+
+
+<span class="k">class</span> <span class="nc">Observation</span><span class="p">(</span><span class="n">ObservationSpecificationBase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">antenna_set</span><span class="p">,</span> <span class="n">frequency_range</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">duration_seconds</span><span class="p">,</span>
+                 <span class="n">stations</span><span class="p">,</span> <span class="n">clock_mhz</span><span class="p">,</span> <span class="n">beam_list</span><span class="p">,</span> <span class="n">backend</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">bit_mode</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+                 <span class="n">allow_tbb</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">allow_aartfaac</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">initial_status</span><span class="o">=</span><span class="s1">&#39;opened&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        *antenna_set*            : One of &#39;LBA_INNER&#39;, &#39;LBA_OUTER&#39;, &#39;LBA_SPARSE_ODD&#39;,</span>
+<span class="sd">                                   &#39;LBA_SPARSE_EVEN&#39;, &#39;HBA_ZERO&#39;, &#39;HBA_ONE&#39;,</span>
+<span class="sd">                                  &#39;HBA_DUAL&#39;, or &#39;HBA_JOINED&#39;</span>
+<span class="sd">        *frequency_range*        : One of &#39;LBA_LOW&#39; (10-90/70 MHz), &#39;LBA_HIGH&#39; (30-90/70 MHz),</span>
+<span class="sd">                                   &#39;HBA_LOW&#39; (110-190 MHz), &#39;HBA_MID&#39; (170-230 MHz), or</span>
+<span class="sd">                                   &#39;HBA_HIGH&#39; (210-250 MHz)</span>
+<span class="sd">        *start_date*             : UTC time of the beginning of the observation as a tuple</span>
+<span class="sd">                                   with format (year, month, day, hour, minute, second)</span>
+<span class="sd">        *duration_seconds*       : Observation duration in seconds</span>
+<span class="sd">        *stations*               : List of stations, e.g. [&#39;CS001&#39;, &#39;RS205&#39;, &#39;DE601&#39;]. An</span>
+<span class="sd">                                   easy way to generate such a list is through the</span>
+<span class="sd">                                   utilities.station_list() function.</span>
+<span class="sd">        *clock_mhz*              : An integer value of 200 or 160.</span>
+<span class="sd">        *beam_list*              : A list of Beam objects, which contain source/subband</span>
+<span class="sd">                                   specifications. Provide at least one beam.</span>
+<span class="sd">        *backend*                : BackendProcessing instance with correlator settings</span>
+<span class="sd">        *name*                   : Name of the observation. Defaults to name of first target plus antenna set.</span>
+<span class="sd">        *bit_mode*               : number of bits per sample. Either 4, 8, or 16.</span>
+<span class="sd">        *initial_status*         : status when first imported into MoM. Either &#39;opened&#39; or &#39;approved&#39;</span>
+
+<span class="sd">    allow_tbb : bool</span>
+<span class="sd">       If True, allow piggy-back observing with Transient Buffer Boards [TBB].</span>
+<span class="sd">       Default: True.</span>
+
+<span class="sd">    allow_aartfaac : bool</span>
+<span class="sd">       If True, allow piggy-back observing with AARTFAAC.</span>
+<span class="sd">       Default: True.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Observation</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">,</span> <span class="n">parent</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">children</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+                                          <span class="n">initial_status</span><span class="o">=</span><span class="n">initial_status</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">antenna_set</span>              <span class="o">=</span> <span class="n">antenna_set</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frequency_range</span>          <span class="o">=</span> <span class="n">frequency_range</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">duration_seconds</span>         <span class="o">=</span> <span class="n">duration_seconds</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stations</span>                 <span class="o">=</span> <span class="n">stations</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clock_mhz</span>                <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">clock_mhz</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_date</span>               <span class="o">=</span> <span class="n">start_date</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bit_mode</span>                 <span class="o">=</span> <span class="n">bit_mode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">allow_aartfaac</span>           <span class="o">=</span> <span class="n">allow_aartfaac</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">allow_tbb</span>                <span class="o">=</span> <span class="n">allow_tbb</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">backend</span>                  <span class="o">=</span> <span class="n">backend</span>
+        <span class="k">for</span> <span class="n">beam</span> <span class="ow">in</span> <span class="n">beam_list</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">append_child</span><span class="p">(</span><span class="n">beam</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">validate</span><span class="p">()</span>
+        <span class="k">pass</span>
+
+
+
+    <span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">valid_antenna_sets</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;LBA_INNER&#39;</span><span class="p">,</span> <span class="s1">&#39;LBA_OUTER&#39;</span><span class="p">,</span>
+                              <span class="s1">&#39;LBA_SPARSE_ODD&#39;</span><span class="p">,</span> <span class="s1">&#39;LBA_SPARSE_EVEN&#39;</span><span class="p">,</span>
+                              <span class="s1">&#39;HBA_ZERO&#39;</span><span class="p">,</span> <span class="s1">&#39;HBA_ONE&#39;</span><span class="p">,</span>
+                              <span class="s1">&#39;HBA_DUAL&#39;</span><span class="p">,</span> <span class="s1">&#39;HBA_JOINED&#39;</span><span class="p">,</span>
+                              <span class="s1">&#39;HBA_DUAL_INNER&#39;</span><span class="p">]</span>
+        <span class="n">valid_frequency_ranges</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;LBA_LOW&#39;</span><span class="p">,</span> <span class="s1">&#39;LBA_HIGH&#39;</span><span class="p">,</span> <span class="s1">&#39;HBA_LOW&#39;</span><span class="p">,</span> <span class="s1">&#39;HBA_MID&#39;</span><span class="p">,</span> <span class="s1">&#39;HBA_HIGH&#39;</span><span class="p">]</span>
+        <span class="n">valid_clocks</span>           <span class="o">=</span> <span class="p">[</span><span class="mi">160</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span>
+        <span class="n">valid_bit_modes</span>        <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
+
+        <span class="n">validate_enumeration</span><span class="p">(</span><span class="s1">&#39;Observation antenna set&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">antenna_set</span><span class="p">,</span> <span class="n">valid_antenna_sets</span><span class="p">)</span>
+        <span class="n">validate_enumeration</span><span class="p">(</span><span class="s1">&#39;Observation frequency range&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">frequency_range</span><span class="p">,</span> <span class="n">valid_frequency_ranges</span><span class="p">)</span>
+        <span class="n">validate_enumeration</span><span class="p">(</span><span class="s1">&#39;Observation clock frequency&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">clock_mhz</span><span class="p">,</span> <span class="n">valid_clocks</span><span class="p">)</span>
+        <span class="n">validate_enumeration</span><span class="p">(</span><span class="s1">&#39;Observation observation bit mode&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bit_mode</span><span class="p">,</span> <span class="n">valid_bit_modes</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start_date</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">type</span><span class="p">(</span><span class="nb">tuple</span><span class="p">([]))</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start_date</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">6</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Observation start_date must be a tuple of length 6; you provided </span><span class="si">%s</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start_date</span><span class="p">,))</span>
+        <span class="k">pass</span>
+
+
+
+    <span class="k">def</span> <span class="nf">xml_prefix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">project_name</span><span class="p">):</span>
+        <span class="n">obs_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">target_source</span><span class="o">.</span><span class="n">name</span><span class="o">+</span><span class="s1">&#39; &#39;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">antenna_set</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">:</span>
+            <span class="n">obs_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+
+        <span class="n">now</span> <span class="o">=</span> <span class="n">ephem</span><span class="o">.</span><span class="n">Observer</span><span class="p">()</span><span class="o">.</span><span class="n">date</span>
+
+        <span class="n">start_date</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_date</span>
+        <span class="n">end_date</span> <span class="o">=</span> <span class="n">ephem</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="n">ephem</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start_date</span><span class="p">)</span> <span class="o">+</span> <span class="n">ephem</span><span class="o">.</span><span class="n">second</span><span class="o">*</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">duration_seconds</span><span class="p">))</span><span class="o">.</span><span class="n">tuple</span><span class="p">()</span>
+        <span class="n">rounded_start_date</span> <span class="o">=</span> <span class="n">start_date</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">start_date</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])),)</span>
+        <span class="n">rounded_end_date</span>   <span class="o">=</span> <span class="n">end_date</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">end_date</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])),)</span>
+        <span class="n">now</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">tuple</span><span class="p">()[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">tuple</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">])),)</span>
+
+        <span class="n">observation_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;&lt;lofar:observation&gt;</span>
+<span class="s1">  &lt;name&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="n">obs_name</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/name&gt;</span>
+<span class="s1">  &lt;description&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="n">obs_name</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/description&gt;</span>
+<span class="s1">  &lt;topology&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="p">()</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/topology&gt;</span>
+<span class="s1">  &lt;currentStatus&gt;</span>
+<span class="s1">    &lt;mom2:&#39;&#39;&#39;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">initial_status</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;Status/&gt;</span>
+<span class="s1">  &lt;/currentStatus&gt;</span>
+<span class="s1">  &lt;lofar:observationAttributes&gt;</span>
+<span class="s1">    &lt;name&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="n">obs_name</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/name&gt;</span>
+<span class="s1">    &lt;projectName&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="n">project_name</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/projectName&gt;</span>
+<span class="s1">    &lt;instrument&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">backend</span><span class="o">.</span><span class="n">instrument_name</span><span class="p">()</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/instrument&gt;</span>
+<span class="s1">    &lt;defaultTemplate&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">backend</span><span class="o">.</span><span class="n">default_template</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/defaultTemplate&gt;</span>
+<span class="s1">    &lt;tbbPiggybackAllowed&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">allow_tbb</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/tbbPiggybackAllowed&gt;</span>
+<span class="s1">    &lt;aartfaacPiggybackAllowed&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">allow_aartfaac</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/aartfaacPiggybackAllowed&gt;</span>
+<span class="s1">    &lt;userSpecification&gt;</span>
+<span class="s1">      &lt;antenna&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="n">mom_antenna_name_from_mac_name</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">antenna_set</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/antenna&gt;</span>
+<span class="s1">      &lt;clock mode=</span><span class="se">\&quot;</span><span class="s1">&#39;&#39;&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">clock_mhz</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39; MHz</span><span class="se">\&quot;</span><span class="s1">/&gt;</span>
+<span class="s1">      &lt;instrumentFilter&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="n">mom_frequency_range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frequency_range</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">clock_mhz</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/instrumentFilter&gt;</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="o">+</span><span class="n">indent</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">backend</span><span class="o">.</span><span class="n">xml</span><span class="p">(),</span> <span class="mi">6</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;      &lt;stationSet&gt;Custom&lt;/stationSet&gt;</span>
+<span class="s1">      &lt;stations&gt;</span>
+<span class="s1">        &#39;&#39;&#39;</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">        &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;&lt;station name=</span><span class="se">\&quot;</span><span class="s1">&#39;</span><span class="o">+</span><span class="n">n</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\&quot;</span><span class="s1"> /&gt;&#39;</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">stations</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">      &lt;/stations&gt;</span>
+<span class="s1">      &lt;timeFrame&gt;UT&lt;/timeFrame&gt;</span>
+<span class="s1">      &lt;startTime&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="n">mom_timestamp</span><span class="p">(</span><span class="o">*</span><span class="n">rounded_start_date</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/startTime&gt;</span>
+<span class="s1">      &lt;endTime&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="n">mom_timestamp</span><span class="p">(</span><span class="o">*</span><span class="n">rounded_end_date</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/endTime&gt;</span>
+<span class="s1">      &lt;duration&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="n">mom_duration</span><span class="p">(</span><span class="n">seconds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">duration_seconds</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/duration&gt;</span>
+<span class="s1">      &lt;numberOfBitsPerSample&gt;&#39;&#39;&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bit_mode</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;&lt;/numberOfBitsPerSample&gt;</span>
+<span class="s1">    &lt;/userSpecification&gt;</span>
+<span class="s1">    &lt;systemSpecification/&gt;</span>
+<span class="s1">  &lt;/lofar:observationAttributes&gt;&#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">observation_str</span>
+
+
+
+    <span class="k">def</span> <span class="nf">xml_suffix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">project_name</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+        <span class="n">observation_str</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&lt;/lofar:observation&gt;&#39;</span>
+        <span class="k">return</span> <span class="n">observation_str</span>
+
+
+
+<div class="viewcode-block" id="xml"><a class="viewcode-back" href="../../momxml.html#momxml.observation.xml">[docs]</a><span class="k">def</span> <span class="nf">xml</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">project</span><span class="o">=</span><span class="s1">&#39;2015LOFAROBS_new&#39;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Format a list of *items* as an XML string that can be</span>
+<span class="sd">    uploaded to a MoM project with name *project*.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;&quot;&quot;&lt;?xml version=</span><span class="se">\&quot;</span><span class="s2">1.0</span><span class="se">\&quot;</span><span class="s2"> encoding=</span><span class="se">\&quot;</span><span class="s2">UTF-8</span><span class="se">\&quot;</span><span class="s2">?&gt;</span>
+<span class="s2">&lt;lofar:project xmlns:lofar=</span><span class="se">\&quot;</span><span class="s2">http://www.astron.nl/MoM2-Lofar</span><span class="se">\&quot;</span><span class="s2"></span>
+<span class="s2">    xmlns:mom2=</span><span class="se">\&quot;</span><span class="s2">http://www.astron.nl/MoM2</span><span class="se">\&quot;</span><span class="s2"></span>
+<span class="s2">    xmlns:xsi=</span><span class="se">\&quot;</span><span class="s2">http://www.w3.org/2001/XMLSchema-instance</span><span class="se">\&quot;</span><span class="s2"> xsi:schemaLocation=</span><span class="se">\&quot;</span><span class="s2">http://www.astron.nl/MoM2-Lofar http://lofar.astron.nl:8080/mom3/schemas/LofarMoM2.xsd http://www.astron.nl/MoM2 http://lofar.astron.nl:8080/mom3/schemas/MoM2.xsd </span><span class="se">\&quot;</span><span class="s2">&gt;</span>
+<span class="s2">    &lt;version&gt;1.16&lt;/version&gt;</span>
+<span class="s2">    &lt;name&gt;&quot;&quot;&quot;</span><span class="o">+</span><span class="n">project</span><span class="o">+</span><span class="s2">&quot;&quot;&quot;&lt;/name&gt;</span>
+<span class="s2">    &lt;description&gt;&quot;&quot;&quot;</span><span class="o">+</span> <span class="p">(</span><span class="n">description</span> <span class="ow">or</span> <span class="n">project</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;&quot;&quot;&lt;/description&gt;</span>
+<span class="s2">    &lt;children&gt;</span>
+<span class="s2">      &lt;item&gt;</span><span class="se">\n</span><span class="s2">&quot;&quot;&quot;</span><span class="o">+</span><span class="s1">&#39;      &lt;/item&gt;</span><span class="se">\n</span><span class="s1">      &lt;item&gt;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">indent</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">xml</span><span class="p">(</span><span class="n">project</span><span class="p">),</span> <span class="mi">8</span><span class="p">)</span>
+                                                    <span class="k">for</span> <span class="n">child_id</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">items</span><span class="p">)])</span><span class="o">+</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">      &lt;/item&gt;</span>
+<span class="s2">    &lt;/children&gt;</span>
+<span class="s2">&lt;/lofar:project&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Genvalobs / momxml 1.7 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013, M.A. Brentjens.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+  </body>
+</html>

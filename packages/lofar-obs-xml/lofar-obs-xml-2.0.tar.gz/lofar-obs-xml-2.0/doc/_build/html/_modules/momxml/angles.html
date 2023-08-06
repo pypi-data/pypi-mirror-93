@@ -1,0 +1,647 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>momxml.angles &mdash; Genvalobs / momxml 1.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Genvalobs / momxml 1.7 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Genvalobs / momxml 1.7 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for momxml.angles</h1><div class="highlight"><pre>
+<span></span><span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">Uniform handling of angles.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">floor</span><span class="p">,</span> <span class="n">pi</span>
+
+<div class="viewcode-block" id="signum"><a class="viewcode-back" href="../../momxml.html#momxml.angles.signum">[docs]</a><span class="k">def</span> <span class="nf">signum</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Returns the sign of ``number``.</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    number : number</span>
+<span class="sd">        The number for which to calculate the sign.</span>
+
+<span class="sd">    **Returns**</span>
+
+<span class="sd">    Integer +1 if `number`` &gt;= 0.0, -1 if ``number`` &lt; 0.0</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; signum(3)</span>
+<span class="sd">    1</span>
+<span class="sd">    &gt;&gt;&gt; signum(0.0)</span>
+<span class="sd">    1</span>
+<span class="sd">    &gt;&gt;&gt; signum(0)</span>
+<span class="sd">    1</span>
+<span class="sd">    &gt;&gt;&gt; signum(-1e-30)</span>
+<span class="sd">    -1</span>
+<span class="sd">    &gt;&gt;&gt; signum(-0)</span>
+<span class="sd">    1</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mf">0.0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">+</span><span class="mi">1</span></div>
+
+
+<div class="viewcode-block" id="sign_char"><a class="viewcode-back" href="../../momxml.html#momxml.angles.sign_char">[docs]</a><span class="k">def</span> <span class="nf">sign_char</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Returns the sign of ``number``.</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    number : number</span>
+<span class="sd">        The number for which to calculate the sign.</span>
+
+<span class="sd">    **Returns**</span>
+
+<span class="sd">    String &#39;+&#39; if number &gt;= 0.0, &#39;-&#39; if number &lt; 0.0</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; sign_char(3)</span>
+<span class="sd">    &#39;+&#39;</span>
+<span class="sd">    &gt;&gt;&gt; sign_char(0.0)</span>
+<span class="sd">    &#39;+&#39;</span>
+<span class="sd">    &gt;&gt;&gt; sign_char(0)</span>
+<span class="sd">    &#39;+&#39;</span>
+<span class="sd">    &gt;&gt;&gt; sign_char(-1e-30)</span>
+<span class="sd">    &#39;-&#39;</span>
+<span class="sd">    &gt;&gt;&gt; sign_char(-0)</span>
+<span class="sd">    &#39;+&#39;</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s1">&#39;+&#39;</span><span class="p">][</span><span class="mi">1</span><span class="o">+</span><span class="n">signum</span><span class="p">(</span><span class="n">number</span><span class="p">)]</span></div>
+
+
+<div class="viewcode-block" id="int_from_sign_char"><a class="viewcode-back" href="../../momxml.html#momxml.angles.int_from_sign_char">[docs]</a><span class="k">def</span> <span class="nf">int_from_sign_char</span><span class="p">(</span><span class="n">char</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Returns -1 if ``char`` == &#39;-&#39;, +1 if ``char`` == &#39;+&#39;</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    char: a one-character string</span>
+<span class="sd">        Either &#39;+&#39; or &#39;-&#39;.</span>
+
+<span class="sd">    **Returns**</span>
+
+<span class="sd">    The integer -1 or +1, depending on the value of ``char``.</span>
+
+<span class="sd">    **Raises**</span>
+
+<span class="sd">    ValueError</span>
+<span class="sd">        If ``char`` is something other than &#39;+&#39; or &#39;-&#39;.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; int_from_sign_char(&#39;+&#39;)</span>
+<span class="sd">    1</span>
+<span class="sd">    &gt;&gt;&gt; int_from_sign_char(&#39;-&#39;)</span>
+<span class="sd">    -1</span>
+<span class="sd">    &gt;&gt;&gt; int_from_sign_char(&#39;f&#39;)</span>
+<span class="sd">    Traceback (most recent call last):</span>
+<span class="sd">    ...</span>
+<span class="sd">    ValueError: char must be either &#39;+&#39; or &#39;-&#39;, not &#39;f&#39;</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">char</span> <span class="o">==</span> <span class="s1">&#39;+&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">+</span><span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">char</span> <span class="o">==</span> <span class="s1">&#39;-&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;char must be either </span><span class="se">\&#39;</span><span class="s1">+</span><span class="se">\&#39;</span><span class="s1"> or </span><span class="se">\&#39;</span><span class="s1">-</span><span class="se">\&#39;</span><span class="s1">, not </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">char</span><span class="p">)</span></div>
+
+
+
+
+<div class="viewcode-block" id="Angle"><a class="viewcode-back" href="../../momxml.html#momxml.angles.Angle">[docs]</a><span class="k">class</span> <span class="nc">Angle</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    A simple container for angles. It can be created from various</span>
+<span class="sd">    units of angles. Specify exactly one of ``shms``, ``sdms``,</span>
+<span class="sd">    ``rad``, or ``deg``.</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    rad : None or float</span>
+<span class="sd">        An angle in radians.</span>
+
+<span class="sd">    hms : None or tuple</span>
+<span class="sd">        An angle in hours, minutes, and seconds,</span>
+<span class="sd">        e.g. (13, 59, 12.4).</span>
+
+<span class="sd">    shms : None or tuple</span>
+<span class="sd">        A signed  angle in hours, minutes, and seconds, e.g. (&#39;+&#39;, 13, 59,</span>
+<span class="sd">        12.4). The sign is required.</span>
+
+<span class="sd">    sdms : None or tuple</span>
+<span class="sd">        An angle in degrees, minutes, and seconds, e.g. (&#39;-&#39;, 359, 59,</span>
+<span class="sd">        12.4). The sign is required.</span>
+
+<span class="sd">    deg : None or float</span>
+<span class="sd">        An angle in degrees.</span>
+
+<span class="sd">    **Raises**</span>
+
+<span class="sd">    ValueError</span>
+<span class="sd">        In case of problems with the provided arguments.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    Direct values:</span>
+
+<span class="sd">    &gt;&gt;&gt; Angle(deg = 360.0)</span>
+<span class="sd">    Angle(rad = 6.283185307179586)</span>
+<span class="sd">    &gt;&gt;&gt; Angle(rad = pi)</span>
+<span class="sd">    Angle(rad = 3.141592653589793)</span>
+
+<span class="sd">    Hours:</span>
+
+<span class="sd">    &gt;&gt;&gt; Angle(hms = (3, 15, 30.2))</span>
+<span class="sd">    Angle(rad = 0.8530442163226618)</span>
+<span class="sd">    &gt;&gt;&gt; Angle(shms = (&#39;-&#39;, 3, 15, 30.2))</span>
+<span class="sd">    Angle(rad = -0.8530442163226618)</span>
+
+<span class="sd">    Degrees:</span>
+
+<span class="sd">    &gt;&gt;&gt; Angle(sdms = (&#39;+&#39;, 3, 15, 30.2))</span>
+<span class="sd">    Angle(rad = 0.05686961442151079)</span>
+<span class="sd">    &gt;&gt;&gt; Angle(sdms = (&#39;-&#39;, 3, 15, 30.2))</span>
+<span class="sd">    Angle(rad = -0.05686961442151079)</span>
+
+
+<span class="sd">    Whoops:</span>
+<span class="sd">    &gt;&gt;&gt; Angle(rad = -0.0568696144215, deg = 12)</span>
+<span class="sd">    Traceback (most recent call last):</span>
+<span class="sd">    ...</span>
+<span class="sd">    ValueError: Specify *one* of hms, shms, sdms, rad, or deg.</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rad</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">hms</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">shms</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">sdms</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+                 <span class="n">deg</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+        <span class="n">none_count</span> <span class="o">=</span> <span class="p">[</span><span class="n">hms</span><span class="p">,</span> <span class="n">shms</span><span class="p">,</span> <span class="n">sdms</span><span class="p">,</span> <span class="n">rad</span><span class="p">,</span> <span class="n">deg</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">none_count</span> <span class="o">!=</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Specify *one* of hms, shms, sdms, rad, or deg.&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rad</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+        <span class="k">if</span> <span class="n">hms</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_shms</span><span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="o">*</span><span class="n">hms</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">shms</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_shms</span><span class="p">(</span><span class="o">*</span><span class="n">shms</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">sdms</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_sdms</span><span class="p">(</span><span class="o">*</span><span class="n">sdms</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">rad</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_rad</span><span class="p">(</span><span class="n">rad</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">deg</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_deg</span><span class="p">(</span><span class="n">deg</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;Angle(rad = </span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rad</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Angle.set_shms"><a class="viewcode-back" href="../../momxml.html#momxml.angles.Angle.set_shms">[docs]</a>    <span class="k">def</span> <span class="nf">set_shms</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sign</span><span class="p">,</span> <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">seconds</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Explicitly set angle with sign, hours, minutes, and seconds.</span>
+
+<span class="sd">        **Parameters**</span>
+
+<span class="sd">        sign : string</span>
+<span class="sd">            One of &#39;+&#39; or &#39;-&#39;</span>
+
+<span class="sd">        hours : positive number</span>
+<span class="sd">            Number of hours. Does not need to be restricted to the</span>
+<span class="sd">            [0..24] range. May also be a floating point number.</span>
+
+<span class="sd">        minutes : positive number</span>
+<span class="sd">            Number of minutes. Does not need to be restricted to</span>
+<span class="sd">            [0..60]. May also be floating point.</span>
+
+<span class="sd">        seconds : positive number</span>
+<span class="sd">            Number of seconds. Does not need to be restricted to</span>
+<span class="sd">            [0..60]. May also be floating point.</span>
+
+<span class="sd">        **Returns**</span>
+
+<span class="sd">        A float containing the angle in radians.</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; a = Angle(rad = 2.0)</span>
+<span class="sd">        &gt;&gt;&gt; rad = a.set_shms(&#39;-&#39;, 2, 30, 45.2)</span>
+<span class="sd">        &gt;&gt;&gt; str(a.as_rad())</span>
+<span class="sd">        &#39;-0.6577855062557962&#39;</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">sgn</span>      <span class="o">=</span> <span class="n">int_from_sign_char</span><span class="p">(</span><span class="n">sign</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rad</span> <span class="o">=</span> <span class="n">sgn</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="n">hours</span> <span class="o">+</span> <span class="n">minutes</span><span class="o">/</span><span class="mf">60.0</span> <span class="o">+</span> <span class="n">seconds</span><span class="o">/</span><span class="mf">3600.0</span><span class="p">)</span><span class="o">/</span><span class="mf">12.0</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">rad</span></div>
+
+
+<div class="viewcode-block" id="Angle.set_sdms"><a class="viewcode-back" href="../../momxml.html#momxml.angles.Angle.set_sdms">[docs]</a>    <span class="k">def</span> <span class="nf">set_sdms</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sign</span><span class="p">,</span> <span class="n">degrees</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">seconds</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Explicitly set angle with sign, degrees, minutes, and seconds.</span>
+
+<span class="sd">        **Parameters**</span>
+
+<span class="sd">        sign : string</span>
+<span class="sd">            One of &#39;+&#39; or &#39;-&#39;</span>
+
+<span class="sd">        degrees : positive number</span>
+<span class="sd">            Number of degrees. Does not need to be restricted to the</span>
+<span class="sd">            [0..360] range. May also be a floating point number.</span>
+
+<span class="sd">        minutes : positive number</span>
+<span class="sd">            Number of minutes. Does not need to be restricted to</span>
+<span class="sd">            [0..60]. May also be floating point.</span>
+
+<span class="sd">        seconds : positive number</span>
+<span class="sd">            Number of seconds. Does not need to be restricted to</span>
+<span class="sd">            [0..60]. May also be floating point.</span>
+
+<span class="sd">        **Returns**</span>
+
+<span class="sd">        A float containing the angle in radians.</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; a = Angle(rad = 2.0)</span>
+<span class="sd">        &gt;&gt;&gt; rad = a.set_sdms(&#39;-&#39;, 2, 30, 45.2)</span>
+<span class="sd">        &gt;&gt;&gt; str(a.as_rad())</span>
+<span class="sd">        &#39;-0.04385236708371975&#39;</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">sgn</span>      <span class="o">=</span> <span class="n">int_from_sign_char</span><span class="p">(</span><span class="n">sign</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rad</span> <span class="o">=</span> <span class="n">sgn</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="n">degrees</span> <span class="o">+</span> <span class="n">minutes</span><span class="o">/</span><span class="mf">60.0</span> <span class="o">+</span> <span class="n">seconds</span><span class="o">/</span><span class="mf">3600.0</span><span class="p">)</span><span class="o">/</span><span class="mf">180.0</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">rad</span></div>
+
+
+<div class="viewcode-block" id="Angle.set_deg"><a class="viewcode-back" href="../../momxml.html#momxml.angles.Angle.set_deg">[docs]</a>    <span class="k">def</span> <span class="nf">set_deg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deg</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Set the angle in degrees.</span>
+
+<span class="sd">        **Parameters**</span>
+
+<span class="sd">        degrees : float</span>
+<span class="sd">            The angle in degrees.</span>
+
+<span class="sd">        **Returns**</span>
+
+<span class="sd">        A float containing the angle in radians.</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; a = Angle(rad = 2.0)</span>
+<span class="sd">        &gt;&gt;&gt; str(a.set_deg(180.0))</span>
+<span class="sd">        &#39;3.141592653589793&#39;</span>
+<span class="sd">        &gt;&gt;&gt; str(a.set_deg(-90.0))</span>
+<span class="sd">        &#39;-1.5707963267948966&#39;</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rad</span> <span class="o">=</span> <span class="n">deg</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">rad</span></div>
+
+
+<div class="viewcode-block" id="Angle.set_rad"><a class="viewcode-back" href="../../momxml.html#momxml.angles.Angle.set_rad">[docs]</a>    <span class="k">def</span> <span class="nf">set_rad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rad</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Set the angle in radians.</span>
+
+<span class="sd">        **Parameters**</span>
+
+<span class="sd">        rad : float</span>
+<span class="sd">            The angle in radians.</span>
+
+<span class="sd">        **Returns**</span>
+
+<span class="sd">        A float containing the angle in radians.</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; a = Angle(rad = 2.0)</span>
+<span class="sd">        &gt;&gt;&gt; a.set_rad(3.0)</span>
+<span class="sd">        3.0</span>
+<span class="sd">        &gt;&gt;&gt; a.set_rad(-1.2)</span>
+<span class="sd">        -1.2</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rad</span> <span class="o">=</span> <span class="n">rad</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">rad</span></div>
+
+
+<div class="viewcode-block" id="Angle.as_rad"><a class="viewcode-back" href="../../momxml.html#momxml.angles.Angle.as_rad">[docs]</a>    <span class="k">def</span> <span class="nf">as_rad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Get angle in radians.</span>
+
+<span class="sd">        **Returns**</span>
+
+<span class="sd">        A float containing the angle in radians.</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; a = Angle (rad = 3.0)</span>
+<span class="sd">        &gt;&gt;&gt; a.as_rad()</span>
+<span class="sd">        3.0</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">rad</span></div>
+
+
+<div class="viewcode-block" id="Angle.as_deg"><a class="viewcode-back" href="../../momxml.html#momxml.angles.Angle.as_deg">[docs]</a>    <span class="k">def</span> <span class="nf">as_deg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Get angle in degrees.</span>
+
+<span class="sd">        **Returns**</span>
+
+<span class="sd">        A float containing the angle in degrees.</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; a = Angle (rad = 3.0)</span>
+<span class="sd">        &gt;&gt;&gt; str(a.as_deg())</span>
+<span class="sd">        &#39;171.88733853924697&#39;</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">rad</span><span class="o">*</span><span class="mf">180.0</span><span class="o">/</span><span class="n">pi</span></div>
+
+
+<div class="viewcode-block" id="Angle.as_hours"><a class="viewcode-back" href="../../momxml.html#momxml.angles.Angle.as_hours">[docs]</a>    <span class="k">def</span> <span class="nf">as_hours</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Get angle in hours.</span>
+
+<span class="sd">        **Returns**</span>
+
+<span class="sd">        A float containing the angle in hours.</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; a = Angle (rad = 3.0)</span>
+<span class="sd">        &gt;&gt;&gt; str(a.as_hours())</span>
+<span class="sd">        &#39;11.459155902616464&#39;</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">rad</span><span class="o">*</span><span class="mf">12.0</span><span class="o">/</span><span class="n">pi</span></div>
+
+
+
+<div class="viewcode-block" id="Angle.as_shms"><a class="viewcode-back" href="../../momxml.html#momxml.angles.Angle.as_shms">[docs]</a>    <span class="k">def</span> <span class="nf">as_shms</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Get the angle in hours, minutes, and seconds. It does not</span>
+<span class="sd">        round off the hours and minutes based on the seconds. See examples.</span>
+
+<span class="sd">        **Returns**</span>
+
+<span class="sd">        A tuple containing (sign, hours, minutes, seconds)</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; fmt = &#39;%s%02dh %02dm %06.3fs&#39;</span>
+<span class="sd">        &gt;&gt;&gt; fmt % Angle(shms = (&#39;+&#39;, 3, 10, 59.99999)).as_shms()</span>
+<span class="sd">        &#39;+03h 10m 60.000s&#39;</span>
+<span class="sd">        &gt;&gt;&gt; fmt % Angle(shms = (&#39;+&#39;, 3, 11, 0.0)).as_shms()</span>
+<span class="sd">        &#39;+03h 10m 60.000s&#39;</span>
+<span class="sd">        &gt;&gt;&gt; fmt % Angle(shms = (&#39;-&#39;, 3, 11, 0.1)).as_shms()</span>
+<span class="sd">        &#39;-03h 11m 00.100s&#39;</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">sgn</span>      <span class="o">=</span> <span class="n">sign_char</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rad</span><span class="p">)</span>
+        <span class="n">abs_rad</span>  <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rad</span><span class="p">)</span>
+        <span class="n">in_hours</span> <span class="o">=</span> <span class="n">abs_rad</span> <span class="o">*</span> <span class="mi">12</span><span class="o">/</span><span class="n">pi</span>
+        <span class="n">hours</span>    <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="n">in_hours</span><span class="p">))</span>
+        <span class="n">in_minutes</span> <span class="o">=</span> <span class="p">(</span><span class="n">in_hours</span><span class="o">-</span><span class="n">hours</span><span class="p">)</span><span class="o">*</span><span class="mf">60.0</span>
+        <span class="n">minutes</span>    <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="n">in_minutes</span><span class="p">))</span>
+        <span class="n">in_seconds</span> <span class="o">=</span> <span class="p">(</span><span class="n">in_minutes</span> <span class="o">-</span> <span class="n">minutes</span><span class="p">)</span><span class="o">*</span><span class="mf">60.0</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">sgn</span><span class="p">,</span> <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">in_seconds</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Angle.as_sdms"><a class="viewcode-back" href="../../momxml.html#momxml.angles.Angle.as_sdms">[docs]</a>    <span class="k">def</span> <span class="nf">as_sdms</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Get the angle in degrees, minutes, and seconds. It does not</span>
+<span class="sd">        round off the degrees and minutes based on the seconds. See examples.</span>
+
+<span class="sd">        **Returns**</span>
+
+<span class="sd">        A tuple containing (sign, degrees, minutes, seconds)</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; fmt = &#39;%s%02dd %02dm %06.3fs&#39;</span>
+<span class="sd">        &gt;&gt;&gt; fmt % Angle(sdms = (&#39;+&#39;, 3, 10, 59.99999)).as_sdms()</span>
+<span class="sd">        &#39;+03d 10m 60.000s&#39;</span>
+<span class="sd">        &gt;&gt;&gt; fmt % Angle(sdms = (&#39;+&#39;, 3, 11, 0.0)).as_sdms()</span>
+<span class="sd">        &#39;+03d 10m 60.000s&#39;</span>
+<span class="sd">        &gt;&gt;&gt; fmt % Angle(sdms = (&#39;-&#39;, 3, 11, 0.1)).as_sdms()</span>
+<span class="sd">        &#39;-03d 11m 00.100s&#39;</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">sgn</span>      <span class="o">=</span> <span class="n">sign_char</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rad</span><span class="p">)</span>
+        <span class="n">abs_rad</span>  <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rad</span><span class="p">)</span>
+        <span class="n">in_degrees</span> <span class="o">=</span> <span class="n">abs_rad</span> <span class="o">*</span> <span class="mi">180</span><span class="o">/</span><span class="n">pi</span>
+        <span class="n">degrees</span>    <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="n">in_degrees</span><span class="p">))</span>
+        <span class="n">in_minutes</span> <span class="o">=</span> <span class="p">(</span><span class="n">in_degrees</span> <span class="o">-</span> <span class="n">degrees</span><span class="p">)</span><span class="o">*</span><span class="mf">60.0</span>
+        <span class="n">minutes</span>    <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="n">in_minutes</span><span class="p">))</span>
+        <span class="n">in_seconds</span> <span class="o">=</span> <span class="p">(</span><span class="n">in_minutes</span> <span class="o">-</span> <span class="n">minutes</span><span class="p">)</span><span class="o">*</span><span class="mf">60.0</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">sgn</span><span class="p">,</span> <span class="n">degrees</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">in_seconds</span><span class="p">)</span></div>
+
+
+    <span class="k">def</span> <span class="nf">__float__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Implement float(angle).</span>
+
+<span class="sd">        **Returns**</span>
+
+<span class="sd">        A float containing the angle in radians</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; from math import sin, cos</span>
+<span class="sd">        &gt;&gt;&gt; str(sin(float(Angle(deg = 180.0))))</span>
+<span class="sd">        &#39;1.2246467991473532e-16&#39;</span>
+<span class="sd">        &gt;&gt;&gt; cos(float(Angle(deg = 180.0)))</span>
+<span class="sd">        -1.0</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">rad</span>
+
+
+    <span class="k">def</span> <span class="nf">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Implement Angle() + something, where float(something) is in</span>
+<span class="sd">        radians.</span>
+
+<span class="sd">        **Returns**</span>
+
+<span class="sd">        An Angle instance.</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; (Angle(deg = 90) + Angle(deg = 45)).as_deg()</span>
+<span class="sd">        135.0</span>
+<span class="sd">        &gt;&gt;&gt; Angle(rad = 2.0) + 2.0</span>
+<span class="sd">        Angle(rad = 4.0)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">Angle</span><span class="p">(</span><span class="n">rad</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">as_rad</span><span class="p">()</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="n">angle</span><span class="p">))</span>
+
+
+    <span class="k">def</span> <span class="nf">__sub__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Implement Angle() - something, where float(something) is in</span>
+<span class="sd">        radians.</span>
+
+<span class="sd">        **Returns**</span>
+
+<span class="sd">        An Angle instance.</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; (Angle(deg = 90) - Angle(deg = 45)).as_deg()</span>
+<span class="sd">        45.0</span>
+<span class="sd">        &gt;&gt;&gt; Angle(rad = 2.0) - 0.5</span>
+<span class="sd">        Angle(rad = 1.5)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">Angle</span><span class="p">(</span><span class="n">rad</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">as_rad</span><span class="p">()</span> <span class="o">-</span> <span class="nb">float</span><span class="p">(</span><span class="n">angle</span><span class="p">))</span>
+
+
+    <span class="k">def</span> <span class="nf">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">factor</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Implement Angle() * factor</span>
+
+<span class="sd">        **Parameters**</span>
+
+<span class="sd">        factor : number</span>
+<span class="sd">            The factor to multiply the angle by.</span>
+
+<span class="sd">        **Returns**</span>
+
+<span class="sd">        An Angle instance.</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; (Angle(deg = 90)*3).as_deg()</span>
+<span class="sd">        270.0</span>
+<span class="sd">        &gt;&gt;&gt; Angle(rad = 2.0)*3.0</span>
+<span class="sd">        Angle(rad = 6.0)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">Angle</span><span class="p">(</span><span class="n">rad</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">as_rad</span><span class="p">()</span> <span class="o">*</span> <span class="nb">float</span><span class="p">(</span><span class="n">factor</span><span class="p">))</span>
+
+
+
+    <span class="k">def</span> <span class="nf">__div__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">divisor</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Implement Angle()/divisor</span>
+
+<span class="sd">        **Parameters**</span>
+
+<span class="sd">        divisor : number</span>
+<span class="sd">            The factor to divide the angle by.</span>
+
+<span class="sd">        **Returns**</span>
+
+<span class="sd">        An Angle instance.</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; (Angle(deg = -90)/2).as_deg()</span>
+<span class="sd">        -45.0</span>
+<span class="sd">        &gt;&gt;&gt; Angle(rad = 2.0)/4.0</span>
+<span class="sd">        Angle(rad = 0.5)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">Angle</span><span class="p">(</span><span class="n">rad</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">as_rad</span><span class="p">()</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">divisor</span><span class="p">))</span>
+
+
+    <span class="k">def</span> <span class="nf">__truediv__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">divisor</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Implement Angle()/divisor</span>
+
+<span class="sd">        **Parameters**</span>
+
+<span class="sd">        divisor : number</span>
+<span class="sd">            The factor to divide the angle by.</span>
+
+<span class="sd">        **Returns**</span>
+
+<span class="sd">        An Angle instance.</span>
+
+<span class="sd">        **Examples**</span>
+
+<span class="sd">        &gt;&gt;&gt; (Angle(deg = -90)/2).as_deg()</span>
+<span class="sd">        -45.0</span>
+<span class="sd">        &gt;&gt;&gt; Angle(rad = 2.0)/4.0</span>
+<span class="sd">        Angle(rad = 0.5)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">Angle</span><span class="p">(</span><span class="n">rad</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">as_rad</span><span class="p">()</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">divisor</span><span class="p">))</span></div>
+
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Genvalobs / momxml 1.7 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013, M.A. Brentjens.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+  </body>
+</html>

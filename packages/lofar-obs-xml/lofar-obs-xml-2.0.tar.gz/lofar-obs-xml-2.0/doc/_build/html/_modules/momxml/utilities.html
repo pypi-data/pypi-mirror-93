@@ -1,0 +1,820 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>momxml.utilities &mdash; Genvalobs / momxml 1.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Genvalobs / momxml 1.7 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Genvalobs / momxml 1.7 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for momxml.utilities</h1><div class="highlight"><pre>
+<span></span><span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">Various support functions that did not fit anywhere else.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="kn">import</span> <span class="nn">ephem</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">arcsin</span><span class="p">,</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">arctan2</span>
+<span class="kn">from</span> <span class="nn">lofarobsxml</span> <span class="kn">import</span> <span class="n">Angle</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<div class="viewcode-block" id="InvalidStationSetError"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.InvalidStationSetError">[docs]</a><span class="k">class</span> <span class="nc">InvalidStationSetError</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    To be raised if an invalid station set is provided.</span>
+<span class="sd">    &#39;&#39;&#39;</span></div>
+
+
+
+<div class="viewcode-block" id="AutoReprBaseClass"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.AutoReprBaseClass">[docs]</a><span class="k">class</span> <span class="nc">AutoReprBaseClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Base class that implements a simplistic __repr__ function. The</span>
+<span class="sd">    order in which the members are printed is the same as that in</span>
+<span class="sd">    which the arguments are set in bthe constructor body.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">name</span>    <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span>
+        <span class="n">as_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span>
+        <span class="n">members</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">as_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="n">longest_member</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">members</span><span class="p">])[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">member_strings</span> <span class="o">=</span> <span class="p">[</span><span class="n">mem</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">longest_member</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; = &#39;</span><span class="o">+</span><span class="nb">repr</span><span class="p">(</span><span class="n">as_dict</span><span class="p">[</span><span class="n">mem</span><span class="p">])</span>
+                          <span class="k">for</span> <span class="n">mem</span> <span class="ow">in</span> <span class="n">members</span><span class="p">]</span>
+        <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">+</span><span class="s1">&#39; &#39;</span><span class="o">*</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">indented_member_strings</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="p">(</span><span class="n">longest_member</span><span class="o">+</span><span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="n">member</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">))</span>
+                                   <span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="n">member_strings</span><span class="p">]</span>
+        <span class="n">unadjusted</span> <span class="o">=</span>  <span class="s1">&#39;,</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">indented_member_strings</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">name</span><span class="o">+</span><span class="s1">&#39;(&#39;</span><span class="o">+</span><span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">unadjusted</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">))</span><span class="o">+</span><span class="s1">&#39;)&#39;</span></div>
+
+
+
+
+<div class="viewcode-block" id="with_auto_repr"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.with_auto_repr">[docs]</a><span class="k">def</span> <span class="nf">with_auto_repr</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Class decorator that adds a nicer default __repr__ method to a class.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; class Elements(object):</span>
+<span class="sd">    ...     def __init__(self, a, b):</span>
+<span class="sd">    ...         self.a = a</span>
+<span class="sd">    ...         self.b = b</span>
+<span class="sd">    &gt;&gt;&gt; aa = Elements(1, &#39;3&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; print(repr(aa)[0:-16])</span>
+<span class="sd">    &lt;lofarobsxml.utilities.Elements object at</span>
+<span class="sd">    &gt;&gt;&gt; Elements = with_auto_repr(Elements)</span>
+<span class="sd">    &gt;&gt;&gt; bb = Elements (1, &#39;v&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; print(repr(bb))</span>
+<span class="sd">    Elements(a = 1,</span>
+<span class="sd">             b = &#39;v&#39;)</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">class</span> <span class="nc">AutoReprClass</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Base class that implements a simplistic __repr__ function. The</span>
+<span class="sd">        order in which the members are printed is the same as that in</span>
+<span class="sd">        which the arguments are set in bthe constructor body.</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+
+        <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="n">name</span>    <span class="o">=</span> <span class="n">cls</span><span class="o">.</span><span class="n">__name__</span>
+            <span class="n">as_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span>
+            <span class="n">members</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">as_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+            <span class="n">longest_member</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">members</span><span class="p">])[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">member_strings</span> <span class="o">=</span> <span class="p">[</span><span class="n">mem</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">longest_member</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; = &#39;</span><span class="o">+</span><span class="nb">repr</span><span class="p">(</span><span class="n">as_dict</span><span class="p">[</span><span class="n">mem</span><span class="p">])</span>
+                              <span class="k">for</span> <span class="n">mem</span> <span class="ow">in</span> <span class="n">members</span><span class="p">]</span>
+            <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">+</span><span class="s1">&#39; &#39;</span><span class="o">*</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">indented_member_strings</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="p">(</span><span class="n">longest_member</span><span class="o">+</span><span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                <span class="n">member</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">))</span>
+                                       <span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="n">member_strings</span><span class="p">]</span>
+            <span class="n">unadjusted</span> <span class="o">=</span>  <span class="s1">&#39;,</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">indented_member_strings</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">name</span><span class="o">+</span><span class="s1">&#39;(&#39;</span><span class="o">+</span><span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">unadjusted</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">))</span><span class="o">+</span><span class="s1">&#39;)&#39;</span>
+
+    <span class="k">return</span> <span class="n">AutoReprClass</span></div>
+
+
+
+
+<div class="viewcode-block" id="typecheck"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.typecheck">[docs]</a><span class="k">def</span> <span class="nf">typecheck</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="n">type_class</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Raise TypeError if ``variable`` is not an instance of</span>
+<span class="sd">    ``type_class``.</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    variable : any object</span>
+<span class="sd">        The variable that will be type-checked.</span>
+
+<span class="sd">    type_class : type or list of types</span>
+<span class="sd">        The desired type of ``variable``.</span>
+
+<span class="sd">    name : string</span>
+<span class="sd">        A descriptive name of the variable, used in the error</span>
+<span class="sd">        message.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; typecheck(4.0 , float)</span>
+<span class="sd">    &gt;&gt;&gt; typecheck(None, [int, type(None)])</span>
+<span class="sd">    &gt;&gt;&gt; typecheck(5   , [int, type(None)])</span>
+<span class="sd">    &gt;&gt;&gt; typecheck(4.0, [int, type(None)])</span>
+<span class="sd">    Traceback (most recent call last):</span>
+<span class="sd">    ...</span>
+<span class="sd">    TypeError: type(4.0) not in [&#39;int&#39;, &#39;NoneType&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; a = &#39;blaargh&#39;</span>
+<span class="sd">    &gt;&gt;&gt; typecheck(a, int, &#39;a&#39;)</span>
+<span class="sd">    Traceback (most recent call last):</span>
+<span class="sd">    ...</span>
+<span class="sd">    TypeError: type(a)(&#39;blaargh&#39;) not in [&#39;int&#39;]</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">template</span> <span class="o">=</span> <span class="s1">&#39;type(</span><span class="si">%(var)r</span><span class="s1">) not in </span><span class="si">%(types)r</span><span class="s1">&#39;</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">template</span> <span class="o">=</span> <span class="s1">&#39;type(</span><span class="si">%(name)s</span><span class="s1">)(</span><span class="si">%(var)r</span><span class="s1">) not in </span><span class="si">%(types)r</span><span class="s1">&#39;</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">type_class</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="n">type_list</span> <span class="o">=</span> <span class="n">type_class</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">type_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">type_class</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">type_list</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">template</span> <span class="o">%</span>
+                            <span class="p">{</span><span class="s1">&#39;name&#39;</span>  <span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+                             <span class="s1">&#39;var&#39;</span>   <span class="p">:</span> <span class="n">variable</span><span class="p">,</span>
+                             <span class="s1">&#39;types&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="n">tp</span><span class="o">.</span><span class="n">__name__</span> <span class="k">for</span> <span class="n">tp</span> <span class="ow">in</span> <span class="n">type_list</span><span class="p">]})</span></div>
+
+
+
+
+<div class="viewcode-block" id="indent"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.indent">[docs]</a><span class="k">def</span> <span class="nf">indent</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Indent a multi-line string by the given amount.</span>
+
+<span class="sd">    string : string</span>
+<span class="sd">        The string to indent.</span>
+
+<span class="sd">    amount : int</span>
+<span class="sd">        The direction and amount to indent.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt; indent(&#39;Hi\nThere&#39;, 2)</span>
+<span class="sd">      Hi</span>
+<span class="sd">      There</span>
+
+<span class="sd">    &gt;&gt; indent(&#39;Hi\nThere\n\n&#39;, -1)</span>
+<span class="sd">    i</span>
+<span class="sd">    here</span>
+<span class="sd">    &lt;BLANKLINE&gt;</span>
+<span class="sd">    &lt;BLANKLINE&gt;</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">amount</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span> <span class="k">if</span> <span class="s1">&#39;&#39;</span> <span class="o">==</span> <span class="n">line</span> <span class="k">else</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="n">amount</span> <span class="o">+</span> <span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">amount</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="p">[</span><span class="o">-</span><span class="n">amount</span><span class="p">:]</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
+    <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span></div>
+
+
+
+
+
+<div class="viewcode-block" id="unique"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.unique">[docs]</a><span class="k">def</span> <span class="nf">unique</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Return a list containing all unique elements of a sequence.</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    sequence : sequence</span>
+<span class="sd">        List from which to return all unique elements.</span>
+
+<span class="sd">    **Returns**</span>
+
+<span class="sd">    A list.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; sorted(unique([3, 2, 4, 3, 1, 1, 2]))</span>
+<span class="sd">    [1, 2, 3, 4]</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">sequence</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="flatten_list"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.flatten_list">[docs]</a><span class="k">def</span> <span class="nf">flatten_list</span><span class="p">(</span><span class="n">list_of_lists</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Takes a list of lists and spits out one list with all sub lists</span>
+<span class="sd">    concatenated. [[1, 2, 3], [4, 5]] -&gt; [1, 2, 3, 4, 5]</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    list_of_lists : list of lists</span>
+<span class="sd">        The list to flatten.</span>
+
+<span class="sd">    **Returns**</span>
+
+<span class="sd">    A one dimensional list.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; flatten_list([[1, 2, 3], [&#39;a&#39;, True], [&#39;b&#39;, [&#39;c&#39;, 4]]])</span>
+<span class="sd">    [1, 2, 3, &#39;a&#39;, True, &#39;b&#39;, [&#39;c&#39;, 4]]</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">element</span> <span class="k">for</span> <span class="n">sub_list</span> <span class="ow">in</span> <span class="n">list_of_lists</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">sub_list</span><span class="p">]</span></div>
+
+
+
+
+<div class="viewcode-block" id="lower_case"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.lower_case">[docs]</a><span class="k">def</span> <span class="nf">lower_case</span><span class="p">(</span><span class="n">boolean</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Return lower case string representation of a boolean value.</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    boolean : bool</span>
+<span class="sd">        The value to convert to a string.</span>
+
+<span class="sd">    **Examples**</span>
+<span class="sd">    &gt;&gt;&gt; lower_case(True)</span>
+<span class="sd">    &#39;true&#39;</span>
+<span class="sd">    &gt;&gt;&gt; lower_case(False)</span>
+<span class="sd">    &#39;false&#39;</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="nb">repr</span><span class="p">(</span><span class="n">boolean</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span></div>
+
+
+
+
+<div class="viewcode-block" id="parse_subband_list"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.parse_subband_list">[docs]</a><span class="k">def</span> <span class="nf">parse_subband_list</span><span class="p">(</span><span class="n">parset_subband_list</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Parse a subband list from a parset or SAS/MAC / MoM spec.</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    parset_subband_list : string</span>
+<span class="sd">        Value of Observation.Beam[0].subbandList</span>
+
+<span class="sd">    **Returns**</span>
+
+<span class="sd">    A list of integers containing the subband numbers.</span>
+
+<span class="sd">    **Raises**</span>
+
+<span class="sd">    ValueError</span>
+<span class="sd">        If a syntax problem is encountered.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; sb_spec = &#39;[154..163,185..194,215..224,245..254,275..284,10*374]&#39;</span>
+<span class="sd">    &gt;&gt;&gt; parse_subband_list(sb_spec)</span>
+<span class="sd">    [154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374]</span>
+<span class="sd">    &gt;&gt;&gt; sb_spec = &#39;[77..87,116..127,155..166,194..205,233..243,272..282]&#39;</span>
+<span class="sd">    &gt;&gt;&gt; parse_subband_list(sb_spec)</span>
+<span class="sd">    [77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282]</span>
+<span class="sd">    &gt;&gt;&gt; parse_subband_list(&#39;[]&#39;)</span>
+<span class="sd">    []</span>
+<span class="sd">    &gt;&gt;&gt; parse_subband_list(&#39;1,2,10..15,200..202,400&#39;)</span>
+<span class="sd">    [1, 2, 10, 11, 12, 13, 14, 15, 200, 201, 202, 400]</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">stripped_subband_list</span> <span class="o">=</span> <span class="n">parset_subband_list</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;[] </span><span class="se">\n\t</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">stripped_subband_list</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="n">sub_lists</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">)</span>
+                 <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">stripped_subband_list</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)]</span>
+    <span class="n">subbands</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">sub_list</span> <span class="ow">in</span> <span class="n">sub_lists</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sub_list</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">multiplication</span> <span class="o">=</span> <span class="n">sub_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">multiplication</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">subbands</span> <span class="o">+=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">multiplication</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="n">multiplication</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">subbands</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">sub_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">sub_list</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">subbands</span> <span class="o">+=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">sub_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">sub_list</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%r</span><span class="s1"> is not a valid sub_range in a subband list&#39;</span> <span class="o">%</span>
+                             <span class="n">sub_list</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">subbands</span></div>
+
+
+
+
+<div class="viewcode-block" id="lofar_observer"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.lofar_observer">[docs]</a><span class="k">def</span> <span class="nf">lofar_observer</span><span class="p">(</span><span class="n">date</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    date : ephem.Date</span>
+<span class="sd">        The date to set for the ephem.Observer() instance</span>
+
+<span class="sd">    **Returns**</span>
+
+<span class="sd">    An ephem.Observer() instance for the LOFAR core.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; lofar_observer(&#39;2013/04/15 12:34:56&#39;)</span>
+<span class="sd">    &lt;ephem.Observer date=&#39;2013/4/15 12:34:56&#39; epoch=&#39;2000/1/1 12:00:00&#39; lon=6:52:11.4 lat=52:54:54.4 elevation=49.343999999999994m horizon=0:00:00.0 temp=15.0C pressure=1010.0mBar&gt;</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">lofar</span>           <span class="o">=</span> <span class="n">ephem</span><span class="o">.</span><span class="n">Observer</span><span class="p">()</span>
+    <span class="n">lofar</span><span class="o">.</span><span class="n">long</span>      <span class="o">=</span> <span class="o">+</span><span class="mf">6.869837540</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span>
+    <span class="n">lofar</span><span class="o">.</span><span class="n">lat</span>       <span class="o">=</span> <span class="o">+</span><span class="mf">52.915122495</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span>
+    <span class="n">lofar</span><span class="o">.</span><span class="n">elevation</span> <span class="o">=</span> <span class="o">+</span><span class="mf">49.344</span>
+    <span class="k">if</span> <span class="n">date</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">lofar</span><span class="o">.</span><span class="n">date</span> <span class="o">=</span> <span class="n">date</span>
+    <span class="k">return</span> <span class="n">lofar</span></div>
+
+
+
+<div class="viewcode-block" id="lofar_sidereal_time"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.lofar_sidereal_time">[docs]</a><span class="k">def</span> <span class="nf">lofar_sidereal_time</span><span class="p">(</span><span class="n">date</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Returns an ephem.Angle object with the current sidereal time at</span>
+<span class="sd">    LOFAR CS002 LBA. The CS002 LBA position in ITRF2005 coordinates at</span>
+<span class="sd">    epoch 2009.5.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; type(lofar_sidereal_time(ephem.Observer().date))</span>
+<span class="sd">    &lt;class &#39;ephem.Angle&#39;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; lofar           = ephem.Observer()</span>
+<span class="sd">    &gt;&gt;&gt; lofar.long      = +6.869837540*pi/180</span>
+<span class="sd">    &gt;&gt;&gt; lofar.lat       = +52.915122495*pi/180</span>
+<span class="sd">    &gt;&gt;&gt; lofar.elevation = +49.344</span>
+<span class="sd">    &gt;&gt;&gt; lofar.date      = ephem.Observer().date</span>
+<span class="sd">    &gt;&gt;&gt; abs(lofar.sidereal_time() - lofar_sidereal_time(lofar.date))</span>
+<span class="sd">    0.0</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1"># CS002 LBA in ITRF2005, epoch 2009.5</span>
+    <span class="n">lofar</span>           <span class="o">=</span> <span class="n">lofar_observer</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">lofar</span><span class="o">.</span><span class="n">sidereal_time</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="next_date_with_lofar_lst"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.next_date_with_lofar_lst">[docs]</a><span class="k">def</span> <span class="nf">next_date_with_lofar_lst</span><span class="p">(</span><span class="n">lst_rad</span><span class="p">,</span> <span class="n">start_date</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">start_date</span><span class="p">:</span>
+        <span class="n">start_date</span> <span class="o">=</span> <span class="n">ephem</span><span class="o">.</span><span class="n">Observer</span><span class="p">()</span><span class="o">.</span><span class="n">date</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">start_date</span> <span class="o">=</span> <span class="n">ephem</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="n">start_date</span><span class="p">)</span>
+    <span class="n">lst</span> <span class="o">=</span> <span class="n">lst_rad</span>
+    <span class="n">lst_at_start_rad</span>  <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">lofar_sidereal_time</span><span class="p">(</span><span class="n">start_date</span><span class="p">))</span>
+    <span class="k">while</span> <span class="n">lst</span> <span class="o">&lt;</span> <span class="n">lst_at_start_rad</span><span class="p">:</span>
+        <span class="n">lst</span> <span class="o">=</span> <span class="n">lst</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span>
+    <span class="n">delta_lst_rad</span> <span class="o">=</span> <span class="n">lst</span> <span class="o">-</span> <span class="n">lst_at_start_rad</span>
+    <span class="n">delta_utc_rad</span> <span class="o">=</span> <span class="n">delta_lst_rad</span><span class="o">/</span><span class="mf">1.002737904</span>
+    <span class="k">return</span> <span class="n">ephem</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="n">start_date</span> <span class="o">+</span> <span class="n">ephem</span><span class="o">.</span><span class="n">hour</span><span class="o">*</span><span class="p">(</span><span class="n">delta_utc_rad</span><span class="o">*</span><span class="mi">12</span><span class="o">/</span><span class="n">pi</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="next_sunrise"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.next_sunrise">[docs]</a><span class="k">def</span> <span class="nf">next_sunrise</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">observer</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Return an ephem.Date instance with the next sunrise at LOFAR, or</span>
+<span class="sd">    any other ephem.Observer, if provided.</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    date : ephem.Date</span>
+<span class="sd">        Date from which to look for sunrise.</span>
+
+<span class="sd">    observer : None or ephem.Observer</span>
+<span class="sd">        Location for which Sunrise is computed. Default is LOFAR core</span>
+<span class="sd">        if None is provided.</span>
+
+<span class="sd">    **Returns**</span>
+
+<span class="sd">    An ephem.Date instance.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; print(next_sunrise(&#39;2013/04/03 12:00:00&#39;))</span>
+<span class="sd">    2013/4/4 04:58:56</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">if</span> <span class="n">observer</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">observer</span> <span class="o">=</span> <span class="n">lofar_observer</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">observer</span><span class="o">.</span><span class="n">next_rising</span><span class="p">(</span><span class="n">ephem</span><span class="o">.</span><span class="n">Sun</span><span class="p">())</span></div>
+
+
+
+
+<div class="viewcode-block" id="next_sunset"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.next_sunset">[docs]</a><span class="k">def</span> <span class="nf">next_sunset</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">observer</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Return an ephem.Date instance with the next sunset at LOFAR, or</span>
+<span class="sd">    any other ephem.Observer, if provided.</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    date : ephem.Date</span>
+<span class="sd">        Date from which to look for sunrise.</span>
+
+<span class="sd">    observer : None or ephem.Observer</span>
+<span class="sd">        Location for which Sunrise is computed. Default is LOFAR core</span>
+<span class="sd">        if None is provided.</span>
+
+<span class="sd">    **Returns**</span>
+
+<span class="sd">    An ephem.Date instance.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; print(next_sunset(&#39;2013/04/03 12:00:00&#39;))</span>
+<span class="sd">    2013/4/3 18:11:18</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">if</span> <span class="n">observer</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">observer</span> <span class="o">=</span> <span class="n">lofar_observer</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">observer</span><span class="o">.</span><span class="n">next_setting</span><span class="p">(</span><span class="n">ephem</span><span class="o">.</span><span class="n">Sun</span><span class="p">())</span></div>
+
+
+
+<div class="viewcode-block" id="antenna_field_sort_key"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.antenna_field_sort_key">[docs]</a><span class="k">def</span> <span class="nf">antenna_field_sort_key</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Produce a sort key for station names.</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    name : string</span>
+<span class="sd">        The antenna field&#39;s name.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; antenna_field_sort_key(&#39;CS002HBA1&#39;)</span>
+<span class="sd">    21</span>
+<span class="sd">    &gt;&gt;&gt; antenna_field_sort_key(&#39;CS021LBA&#39;)</span>
+<span class="sd">    210</span>
+<span class="sd">    &gt;&gt;&gt; antenna_field_sort_key(&#39;RS106HBA&#39;)</span>
+<span class="sd">    10600</span>
+<span class="sd">    &gt;&gt;&gt; antenna_field_sort_key(&#39;UK608HBA&#39;)</span>
+<span class="sd">    60800</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">station_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">name</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span><span class="o">*</span><span class="mi">10</span>
+    <span class="k">if</span> <span class="n">name</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">!=</span> <span class="s1">&#39;CS&#39;</span><span class="p">:</span>
+        <span class="n">station_number</span> <span class="o">*=</span><span class="mi">10</span>
+    <span class="k">if</span> <span class="s1">&#39;HBA1&#39;</span> <span class="ow">in</span> <span class="n">name</span><span class="p">:</span>
+        <span class="n">station_number</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">station_number</span></div>
+
+
+<div class="viewcode-block" id="sort_station_list"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.sort_station_list">[docs]</a><span class="k">def</span> <span class="nf">sort_station_list</span><span class="p">(</span><span class="n">stations</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Sort a station list so we first get the CS, then the RS and EU in</span>
+<span class="sd">    numerical order.</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    stations : list of strings</span>
+<span class="sd">        The station list to sort.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; sort_station_list([&#39;UK608&#39;, &#39;RS407&#39;, &#39;DE603&#39;, &#39;RS106&#39;,</span>
+<span class="sd">    ...     &#39;RS205&#39;, &#39;CS026&#39;, &#39;SE607&#39;, &#39;CS501&#39;, &#39;DE605&#39;, &#39;RS509&#39;,</span>
+<span class="sd">    ...     &#39;CS001&#39;])</span>
+<span class="sd">    [&#39;CS001&#39;, &#39;CS026&#39;, &#39;CS501&#39;, &#39;RS106&#39;, &#39;RS205&#39;, &#39;RS407&#39;, &#39;RS509&#39;, &#39;DE603&#39;, &#39;DE605&#39;, &#39;SE607&#39;, &#39;UK608&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; sort_station_list([&#39;UK608HBA&#39;, &#39;RS407HBA&#39;, &#39;DE603HBA&#39;, &#39;RS106HBA&#39;,</span>
+<span class="sd">    ...     &#39;CS026HBA1&#39;, &#39;SE607HBA&#39;, &#39;CS026HBA0&#39;, &#39;CS501HBA0&#39;, &#39;DE605HBA&#39;, &#39;RS509HBA&#39;,</span>
+<span class="sd">    ...     &#39;CS001HBA1&#39;])</span>
+<span class="sd">    [&#39;CS001HBA1&#39;, &#39;CS026HBA0&#39;, &#39;CS026HBA1&#39;, &#39;CS501HBA0&#39;, &#39;RS106HBA&#39;, &#39;RS407HBA&#39;, &#39;RS509HBA&#39;, &#39;DE603HBA&#39;, &#39;DE605HBA&#39;, &#39;SE607HBA&#39;, &#39;UK608HBA&#39;]</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">stations</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">antenna_field_sort_key</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="station_list"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.station_list">[docs]</a><span class="k">def</span> <span class="nf">station_list</span><span class="p">(</span><span class="n">station_set</span><span class="p">,</span> <span class="n">include</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">exclude</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Provides a sorted list of station names, given a station set name,</span>
+<span class="sd">    a list of stations to include, and a list of stations to</span>
+<span class="sd">    exclude. Names use upper case letters.</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    station_set : string</span>
+<span class="sd">        One of &#39;superterp&#39;, &#39;core&#39;, &#39;remote&#39;, &#39;nl&#39;, &#39;all&#39;, or &#39;none&#39;, where</span>
+<span class="sd">        &#39;nl&#39; is the concatenation of the &#39;core&#39; and &#39;remote&#39; sets, and</span>
+<span class="sd">        all is &#39;nl&#39; plus &#39;eu&#39;.</span>
+
+<span class="sd">    include : None or list of strings</span>
+<span class="sd">        List of station names to append to the station set.</span>
+
+<span class="sd">    exclude : None or list of strings</span>
+<span class="sd">        List of station names to remove from the station set.</span>
+
+<span class="sd">    **Returns**</span>
+
+<span class="sd">    A sorted list of strings containing LOFAR station names.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; station_list(&#39;superterp&#39;)</span>
+<span class="sd">    [&#39;CS002&#39;, &#39;CS003&#39;, &#39;CS004&#39;, &#39;CS005&#39;, &#39;CS006&#39;, &#39;CS007&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; len(station_list(&#39;core&#39;))</span>
+<span class="sd">    24</span>
+<span class="sd">    &gt;&gt;&gt; station_list(&#39;remote&#39;)</span>
+<span class="sd">    [&#39;RS106&#39;, &#39;RS205&#39;, &#39;RS208&#39;, &#39;RS210&#39;, &#39;RS305&#39;, &#39;RS306&#39;, &#39;RS307&#39;, &#39;RS310&#39;, &#39;RS406&#39;, &#39;RS407&#39;, &#39;RS409&#39;, &#39;RS503&#39;, &#39;RS508&#39;, &#39;RS509&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; len(station_list(&#39;nl&#39;))</span>
+<span class="sd">    38</span>
+<span class="sd">    &gt;&gt;&gt; (station_list(&#39;nl&#39;, exclude = station_list(&#39;remote&#39;)) ==</span>
+<span class="sd">    ...  station_list(&#39;core&#39;))</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; station_list(&#39;eu&#39;)</span>
+<span class="sd">    [&#39;DE601&#39;, &#39;DE602&#39;, &#39;DE603&#39;, &#39;DE604&#39;, &#39;DE605&#39;, &#39;FR606&#39;, &#39;SE607&#39;, &#39;UK608&#39;, &#39;DE609&#39;, &#39;PL610&#39;, &#39;PL611&#39;, &#39;PL612&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; station_list(&#39;all&#39;)==station_list(&#39;nl&#39;, include=station_list(&#39;eu&#39;))</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; len(unique(station_list(&#39;all&#39;)))</span>
+<span class="sd">    50</span>
+<span class="sd">    &gt;&gt;&gt; station_list(&#39;wsrt&#39;)</span>
+<span class="sd">    Traceback (most recent call last):</span>
+<span class="sd">    ...</span>
+<span class="sd">    lofarobsxml.utilities.InvalidStationSetError: wsrt is not a valid station set.</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">superterp</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CS002&#39;</span><span class="p">,</span> <span class="s1">&#39;CS003&#39;</span><span class="p">,</span> <span class="s1">&#39;CS004&#39;</span><span class="p">,</span> <span class="s1">&#39;CS005&#39;</span><span class="p">,</span> <span class="s1">&#39;CS006&#39;</span><span class="p">,</span> <span class="s1">&#39;CS007&#39;</span><span class="p">]</span>
+    <span class="n">core</span>      <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CS001&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">superterp</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;CS011&#39;</span><span class="p">,</span> <span class="s1">&#39;CS013&#39;</span><span class="p">,</span> <span class="s1">&#39;CS017&#39;</span><span class="p">,</span> <span class="s1">&#39;CS021&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;CS024&#39;</span><span class="p">,</span> <span class="s1">&#39;CS026&#39;</span><span class="p">,</span> <span class="s1">&#39;CS028&#39;</span><span class="p">,</span> <span class="s1">&#39;CS030&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;CS031&#39;</span><span class="p">,</span> <span class="s1">&#39;CS032&#39;</span><span class="p">,</span> <span class="s1">&#39;CS101&#39;</span><span class="p">,</span> <span class="s1">&#39;CS103&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;CS201&#39;</span><span class="p">,</span> <span class="s1">&#39;CS301&#39;</span><span class="p">,</span> <span class="s1">&#39;CS302&#39;</span><span class="p">,</span> <span class="s1">&#39;CS401&#39;</span><span class="p">,</span>
+                                         <span class="s1">&#39;CS501&#39;</span><span class="p">]</span>
+    <span class="n">remote</span>    <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;RS106&#39;</span><span class="p">,</span> <span class="s1">&#39;RS205&#39;</span><span class="p">,</span> <span class="s1">&#39;RS208&#39;</span><span class="p">,</span> <span class="s1">&#39;RS210&#39;</span><span class="p">,</span> <span class="s1">&#39;RS305&#39;</span><span class="p">,</span> <span class="s1">&#39;RS306&#39;</span><span class="p">,</span> <span class="s1">&#39;RS307&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;RS310&#39;</span><span class="p">,</span> <span class="s1">&#39;RS406&#39;</span><span class="p">,</span> <span class="s1">&#39;RS407&#39;</span><span class="p">,</span> <span class="s1">&#39;RS409&#39;</span><span class="p">,</span> <span class="s1">&#39;RS503&#39;</span><span class="p">,</span> <span class="s1">&#39;RS508&#39;</span><span class="p">,</span> <span class="s1">&#39;RS509&#39;</span><span class="p">]</span>
+    <span class="n">netherlands</span> <span class="o">=</span> <span class="n">core</span> <span class="o">+</span> <span class="n">remote</span>
+    <span class="n">europe</span>    <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;DE601&#39;</span><span class="p">,</span> <span class="s1">&#39;DE602&#39;</span><span class="p">,</span> <span class="s1">&#39;DE603&#39;</span><span class="p">,</span> <span class="s1">&#39;DE604&#39;</span><span class="p">,</span> <span class="s1">&#39;DE605&#39;</span><span class="p">,</span> <span class="s1">&#39;FR606&#39;</span><span class="p">,</span> <span class="s1">&#39;SE607&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;UK608&#39;</span><span class="p">,</span> <span class="s1">&#39;DE609&#39;</span><span class="p">,</span> <span class="s1">&#39;PL610&#39;</span><span class="p">,</span> <span class="s1">&#39;PL611&#39;</span><span class="p">,</span> <span class="s1">&#39;PL612&#39;</span><span class="p">]</span>
+    <span class="n">all_stations</span> <span class="o">=</span> <span class="n">netherlands</span> <span class="o">+</span> <span class="n">europe</span>
+
+    <span class="n">lookup_table</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;superterp&#39;</span><span class="p">:</span> <span class="n">superterp</span><span class="p">,</span>
+                    <span class="s1">&#39;core&#39;</span>     <span class="p">:</span> <span class="n">core</span><span class="p">,</span>
+                    <span class="s1">&#39;remote&#39;</span>   <span class="p">:</span> <span class="n">remote</span><span class="p">,</span>
+                    <span class="s1">&#39;nl&#39;</span>       <span class="p">:</span> <span class="n">netherlands</span><span class="p">,</span>
+                    <span class="s1">&#39;eu&#39;</span>       <span class="p">:</span> <span class="n">europe</span><span class="p">,</span>
+                    <span class="s1">&#39;all&#39;</span>      <span class="p">:</span> <span class="n">all_stations</span><span class="p">,</span>
+                    <span class="s1">&#39;none&#39;</span>     <span class="p">:</span> <span class="p">[]}</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">include</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">include_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">include_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">station</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">station</span> <span class="ow">in</span> <span class="n">include</span><span class="p">]</span>
+        <span class="n">superset</span> <span class="o">=</span> <span class="n">unique</span><span class="p">(</span><span class="n">lookup_table</span><span class="p">[</span><span class="n">station_set</span><span class="p">]</span> <span class="o">+</span> <span class="n">include_list</span><span class="p">)</span>
+    <span class="k">except</span> <span class="p">(</span><span class="ne">KeyError</span><span class="p">,):</span>
+        <span class="k">raise</span> <span class="n">InvalidStationSetError</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> is not a valid station set.&#39;</span> <span class="o">%</span>
+                                     <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">exclude</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">exclude_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">exclude_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">station</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">station</span> <span class="ow">in</span> <span class="n">exclude</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">sort_station_list</span><span class="p">([</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">superset</span> <span class="k">if</span> <span class="n">s</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">exclude_list</span><span class="p">])</span></div>
+
+
+
+<div class="viewcode-block" id="exclude_conflicting_eu_stations"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.exclude_conflicting_eu_stations">[docs]</a><span class="k">def</span> <span class="nf">exclude_conflicting_eu_stations</span><span class="p">(</span><span class="n">stations</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+
+<span class="sd">    The international stations are connected to the same BlueGene</span>
+<span class="sd">    IONodes as the HBA1 ear in some core stations. For HBA_ONE,</span>
+<span class="sd">    HBA_DUAL_INNER, and HBA_DUAL mode, we need to remove either the</span>
+<span class="sd">    core stations, or the eu stations that conflict. This function</span>
+<span class="sd">    removes the conflicting eu stations.</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    stations : list of strings</span>
+<span class="sd">        The station names in the observation.</span>
+
+<span class="sd">    **Returns**</span>
+
+<span class="sd">    A list of strings containing only non-conflicting stations, from</span>
+<span class="sd">    which the EU stations have been removed.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; exclude_conflicting_eu_stations([&#39;CS001&#39;, &#39;CS002&#39;, &#39;RS407&#39;])</span>
+<span class="sd">    [&#39;CS001&#39;, &#39;CS002&#39;, &#39;RS407&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; exclude_conflicting_eu_stations([&#39;CS001&#39;, &#39;CS002&#39;, &#39;RS407&#39;, &#39;DE605&#39;])</span>
+<span class="sd">    [&#39;CS001&#39;, &#39;CS002&#39;, &#39;RS407&#39;, &#39;DE605&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; exclude_conflicting_eu_stations([&#39;CS001&#39;, &#39;CS002&#39;, &#39;CS028&#39;, &#39;RS407&#39;,</span>
+<span class="sd">    ...                                  &#39;DE601&#39;, &#39;DE605&#39;, &#39;UK608&#39;])</span>
+<span class="sd">    [&#39;CS001&#39;, &#39;CS002&#39;, &#39;CS028&#39;, &#39;RS407&#39;, &#39;DE605&#39;, &#39;UK608&#39;]</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">exclude_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;DE601&#39;</span><span class="p">:</span> <span class="s1">&#39;CS001&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;DE602&#39;</span><span class="p">:</span> <span class="s1">&#39;CS031&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;DE603&#39;</span><span class="p">:</span> <span class="s1">&#39;CS028&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;DE604&#39;</span><span class="p">:</span> <span class="s1">&#39;CS011&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;DE605&#39;</span><span class="p">:</span> <span class="s1">&#39;CS401&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;FR606&#39;</span><span class="p">:</span> <span class="s1">&#39;CS030&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;SE607&#39;</span><span class="p">:</span> <span class="s1">&#39;CS301&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;UK608&#39;</span><span class="p">:</span> <span class="s1">&#39;CS013&#39;</span><span class="p">}</span>
+    <span class="n">good_stations</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">station</span> <span class="ow">in</span> <span class="n">stations</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">exclude_dict</span><span class="p">[</span><span class="n">station</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stations</span><span class="p">:</span>
+                <span class="n">good_stations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">station</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">good_stations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">station</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">good_stations</span></div>
+
+
+<div class="viewcode-block" id="exclude_conflicting_nl_stations"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.exclude_conflicting_nl_stations">[docs]</a><span class="k">def</span> <span class="nf">exclude_conflicting_nl_stations</span><span class="p">(</span><span class="n">stations</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+
+<span class="sd">    The international stations are connected to the same BlueGene</span>
+<span class="sd">    IONodes as the HBA1 ear in some core stations. For HBA_ONE,</span>
+<span class="sd">    HBA_DUAL_INNER, and HBA_DUAL mode, we need to remove either the</span>
+<span class="sd">    core stations, or the eu stations that conflict. This function</span>
+<span class="sd">    removes the conflicting core stations.</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    stations : list of strings</span>
+<span class="sd">        The station names in the observation.</span>
+
+<span class="sd">    **Returns**</span>
+
+<span class="sd">    A list of strings containing only non-conflicting stations, from</span>
+<span class="sd">    which the core stations have been removed.</span>
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; exclude_conflicting_nl_stations([&#39;CS001&#39;, &#39;CS002&#39;, &#39;RS407&#39;])</span>
+<span class="sd">    [&#39;CS001&#39;, &#39;CS002&#39;, &#39;RS407&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; exclude_conflicting_nl_stations([&#39;CS001&#39;, &#39;CS002&#39;, &#39;RS407&#39;, &#39;DE605&#39;])</span>
+<span class="sd">    [&#39;CS001&#39;, &#39;CS002&#39;, &#39;RS407&#39;, &#39;DE605&#39;]</span>
+<span class="sd">    &gt;&gt;&gt; exclude_conflicting_nl_stations([&#39;CS001&#39;, &#39;CS002&#39;, &#39;CS028&#39;,</span>
+<span class="sd">    ...                                  &#39;RS407&#39;, &#39;DE601&#39;, &#39;DE605&#39;, &#39;UK608&#39;])</span>
+<span class="sd">    [&#39;CS002&#39;, &#39;CS028&#39;, &#39;RS407&#39;, &#39;DE601&#39;, &#39;DE605&#39;, &#39;UK608&#39;]</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">exclude_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;CS001&#39;</span><span class="p">:</span> <span class="s1">&#39;DE601&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;CS031&#39;</span><span class="p">:</span> <span class="s1">&#39;DE602&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;CS028&#39;</span><span class="p">:</span> <span class="s1">&#39;DE603&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;CS011&#39;</span><span class="p">:</span> <span class="s1">&#39;DE604&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;CS401&#39;</span><span class="p">:</span> <span class="s1">&#39;DE605&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;CS030&#39;</span><span class="p">:</span> <span class="s1">&#39;FR606&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;CS301&#39;</span><span class="p">:</span> <span class="s1">&#39;SE607&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;CS013&#39;</span><span class="p">:</span> <span class="s1">&#39;UK608&#39;</span><span class="p">}</span>
+    <span class="n">good_stations</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">station</span> <span class="ow">in</span> <span class="n">stations</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">exclude_dict</span><span class="p">[</span><span class="n">station</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stations</span><span class="p">:</span>
+                <span class="n">good_stations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">station</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">good_stations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">station</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">good_stations</span></div>
+
+
+
+<div class="viewcode-block" id="validate_enumeration"><a class="viewcode-back" href="../../momxml.html#momxml.utilities.validate_enumeration">[docs]</a><span class="k">def</span> <span class="nf">validate_enumeration</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">allowed</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    If ``value`` of kind ``name`` is not in the list of ``allowed``</span>
+<span class="sd">    values, raise a ``ValueError``. Very useful to verify if a caller</span>
+<span class="sd">    provided a wrong value for a string that is part of an</span>
+<span class="sd">    enumeration.</span>
+
+<span class="sd">    **Parameters**</span>
+
+<span class="sd">    name : string</span>
+<span class="sd">        The kind of thing the value could represent.</span>
+
+<span class="sd">    value : string</span>
+<span class="sd">        The value to be tested.</span>
+
+<span class="sd">    allowed : list of strings</span>
+<span class="sd">        List of all valid values.</span>
+
+<span class="sd">    **Returns**</span>
+
+<span class="sd">    True if ``value`` is in ``allowed``.</span>
+
+<span class="sd">    **Raises**</span>
+
+<span class="sd">    ValueError</span>
+<span class="sd">        If ``value`` is not in ``allowed``.</span>
+
+<span class="sd">    **Example**</span>
+
+<span class="sd">    &gt;&gt;&gt; validate_enumeration(&#39;station set&#39;, &#39;core&#39;,</span>
+<span class="sd">    ...                      allowed = [&#39;core&#39;, &#39;remote&#39;, &#39;nl&#39;, &#39;all&#39;])</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; validate_enumeration(&#39;station set&#39;, &#39;wsrt&#39;,</span>
+<span class="sd">    ...                      allowed = [&#39;core&#39;, &#39;remote&#39;, &#39;nl&#39;, &#39;all&#39;])</span>
+<span class="sd">    Traceback (most recent call last):</span>
+<span class="sd">    ...</span>
+<span class="sd">    ValueError: &#39;wsrt&#39; is not a valid station set; choose one of &#39;core&#39;, &#39;remote&#39;, &#39;nl&#39;, &#39;all&#39;</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">allowed</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%r</span><span class="s1"> is not a valid </span><span class="si">%s</span><span class="s1">; choose one of </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span>
+                         <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">&#39;</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">, </span><span class="se">\&#39;</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">allowed</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="bp">True</span></div>
+
+
+
+
+<span class="k">def</span> <span class="nf">lm_from_radec</span><span class="p">(</span><span class="n">ra_angle</span><span class="p">,</span> <span class="n">dec_angle</span><span class="p">,</span> <span class="n">ra0_angle</span><span class="p">,</span> <span class="n">dec0_angle</span><span class="p">):</span>
+    <span class="n">cos_dec</span>  <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">dec_angle</span><span class="p">))</span>
+    <span class="n">sin_dec</span>  <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">dec_angle</span><span class="p">))</span>
+    <span class="n">cos_dec0</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">dec0_angle</span><span class="p">))</span>
+    <span class="n">sin_dec0</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">dec0_angle</span><span class="p">))</span>
+    <span class="n">sin_dra</span>  <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">ra_angle</span> <span class="o">-</span> <span class="n">ra0_angle</span><span class="p">))</span>
+    <span class="n">cos_dra</span>  <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">ra_angle</span> <span class="o">-</span> <span class="n">ra0_angle</span><span class="p">))</span>
+
+    <span class="n">l_rad</span> <span class="o">=</span> <span class="n">cos_dec</span><span class="o">*</span><span class="n">sin_dra</span>
+    <span class="n">m_rad</span> <span class="o">=</span> <span class="n">sin_dec</span><span class="o">*</span><span class="n">cos_dec0</span> <span class="o">-</span> <span class="n">cos_dec</span><span class="o">*</span><span class="n">sin_dec0</span><span class="o">*</span><span class="n">cos_dra</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">l_rad</span><span class="p">,</span> <span class="n">m_rad</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">radec_from_lm</span><span class="p">(</span><span class="n">l_rad</span><span class="p">,</span> <span class="n">m_rad</span><span class="p">,</span> <span class="n">ra0_angle</span><span class="p">,</span> <span class="n">dec0_angle</span><span class="p">):</span>
+    <span class="n">n_rad</span>  <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">l_rad</span><span class="o">*</span><span class="n">l_rad</span> <span class="o">-</span> <span class="n">m_rad</span><span class="o">*</span><span class="n">m_rad</span><span class="p">)</span>
+    <span class="n">cos_dec0</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">dec0_angle</span><span class="p">))</span>
+    <span class="n">sin_dec0</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">dec0_angle</span><span class="p">))</span>
+    <span class="n">ra_rad</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ra0_angle</span><span class="p">)</span> <span class="o">+</span> <span class="n">arctan2</span><span class="p">(</span><span class="n">l_rad</span><span class="p">,</span>
+                                        <span class="n">cos_dec0</span><span class="o">*</span><span class="n">n_rad</span> <span class="o">-</span> <span class="n">m_rad</span><span class="o">*</span><span class="n">sin_dec0</span><span class="p">)</span>
+    <span class="n">dec_rad</span> <span class="o">=</span> <span class="n">arcsin</span><span class="p">(</span><span class="n">m_rad</span><span class="o">*</span><span class="n">cos_dec0</span> <span class="o">+</span> <span class="n">sin_dec0</span><span class="o">*</span><span class="n">n_rad</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">Angle</span><span class="p">(</span><span class="n">rad</span> <span class="o">=</span> <span class="n">ra_rad</span><span class="p">),</span> <span class="n">Angle</span><span class="p">(</span><span class="n">rad</span> <span class="o">=</span> <span class="n">dec_rad</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">rotate_lm_CCW</span><span class="p">(</span><span class="n">l_rad</span><span class="p">,</span> <span class="n">m_rad</span><span class="p">,</span> <span class="n">ccw_angle</span><span class="p">):</span>
+    <span class="n">cs</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">ccw_angle</span><span class="p">))</span>
+    <span class="n">ss</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">ccw_angle</span><span class="p">))</span>
+
+    <span class="n">l_new</span> <span class="o">=</span>  <span class="n">l_rad</span><span class="o">*</span><span class="n">cs</span> <span class="o">+</span> <span class="n">m_rad</span><span class="o">*</span><span class="n">ss</span>
+    <span class="n">m_new</span> <span class="o">=</span> <span class="o">-</span><span class="n">l_rad</span><span class="o">*</span><span class="n">ss</span> <span class="o">+</span> <span class="n">m_rad</span><span class="o">*</span><span class="n">cs</span>
+    <span class="k">return</span> <span class="n">l_new</span><span class="p">,</span> <span class="n">m_new</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Genvalobs / momxml 1.7 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013, M.A. Brentjens.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+  </body>
+</html>

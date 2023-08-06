@@ -1,0 +1,1864 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>momxml modules &mdash; Genvalobs / momxml 1.7 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Genvalobs / momxml 1.7 documentation" href="index.html" />
+    <link rel="prev" title="README" href="readme.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="readme.html" title="README"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Genvalobs / momxml 1.7 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="momxml-modules">
+<h1><code class="docutils literal"><span class="pre">momxml</span></code> modules<a class="headerlink" href="#momxml-modules" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-momxml">
+<span id="momxml"></span><h2><code class="docutils literal"><span class="pre">momxml</span></code><a class="headerlink" href="#module-momxml" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-momxml.observation">
+<span id="momxml-observation"></span><h2><code class="docutils literal"><span class="pre">momxml.observation</span></code><a class="headerlink" href="#module-momxml.observation" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="momxml.observation.xml">
+<code class="descclassname">momxml.observation.</code><code class="descname">xml</code><span class="sig-paren">(</span><em>items</em>, <em>project='2015LOFAROBS_new'</em>, <em>description=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/observation.html#xml"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.observation.xml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format a list of <em>items</em> as an XML string that can be
+uploaded to a MoM project with name <em>project</em>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-momxml.beam">
+<span id="momxml-beam"></span><h2><code class="docutils literal"><span class="pre">momxml.beam</span></code><a class="headerlink" href="#module-momxml.beam" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="momxml.beam.Beam">
+<em class="property">class </em><code class="descclassname">momxml.beam.</code><code class="descname">Beam</code><span class="sig-paren">(</span><em>target_source</em>, <em>subband_spec</em>, <em>duration_s=None</em>, <em>tied_array_beams=None</em>, <em>measurement_type='Target'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/beam.html#Beam"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.beam.Beam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a beam within an Observation. Beams (Sub Array
+Pointings) are one of the possible kinds of children of an
+observation. Pipelines are another kind of observation
+children. To fully generate its XML, a Beam needs information from
+its parent Observation.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>target_source <span class="classifier-delimiter">:</span> <span class="classifier">TargetSource</span></dt>
+<dd>Contains the name and direction in which to observe.</dd>
+<dt>subband_spec <span class="classifier-delimiter">:</span> <span class="classifier">string or list of int</span></dt>
+<dd>Sub band specification for this beam. Examples: &#8216;77..324&#8217;,
+[100, 200]</dd>
+<dt>duration_s <span class="classifier-delimiter">:</span> <span class="classifier">None or number</span></dt>
+<dd>Duration during which the beam is active. None implies during
+the entire observation.</dd>
+<dt>measurement_type <span class="classifier-delimiter">:</span> <span class="classifier">&#8216;Target&#8217; or &#8216;Calibration&#8217;</span></dt>
+<dd>Gives some intent for the observation.</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lofarobsxml</span> <span class="kn">import</span> <span class="n">TargetSource</span><span class="p">,</span> <span class="n">Angle</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lofarobsxml.backend</span> <span class="kn">import</span> <span class="n">BackendProcessing</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">target</span> <span class="o">=</span> <span class="n">TargetSource</span><span class="p">(</span><span class="n">name</span>      <span class="o">=</span> <span class="s1">&#39;Cyg A&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                      <span class="n">ra_angle</span>  <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">hms</span>  <span class="o">=</span> <span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mf">28.3566</span><span class="p">)),</span>
+<span class="gp">... </span>                      <span class="n">dec_angle</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">sdms</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mf">2.097</span><span class="p">)))</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bm</span> <span class="o">=</span> <span class="n">Beam</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="s1">&#39;77..324&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bm</span>
+<span class="go">Beam(parent           = NoneType,</span>
+<span class="go">     children         = None,</span>
+<span class="go">     duration_s       = None,</span>
+<span class="go">     initial_status   = &#39;opened&#39;,</span>
+<span class="go">     measurement_type = &#39;Target&#39;,</span>
+<span class="go">     name             = &#39;Cyg A&#39;,</span>
+<span class="go">     subband_spec     = &#39;77..324&#39;,</span>
+<span class="go">     target_source    = TargetSource(name      = &#39;Cyg A&#39;,</span>
+<span class="go">                                     ra_angle  = Angle(shms = (&#39;+&#39;, 19, 59, 28.3566)),</span>
+<span class="go">                                     dec_angle = Angle(sdms = (&#39;+&#39;, 40, 44, 2.097))),</span>
+<span class="go">     tied_array_beams = None)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">observation_stub</span> <span class="o">=</span> <span class="n">ObservationSpecificationBase</span><span class="p">(</span><span class="s1">&#39;Observation&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">observation_stub</span><span class="o">.</span><span class="n">backend</span> <span class="o">=</span> <span class="n">BackendProcessing</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">observation_stub</span><span class="o">.</span><span class="n">clock_mhz</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">observation_stub</span><span class="o">.</span><span class="n">frequency_range</span> <span class="o">=</span> <span class="s1">&#39;HBA_LOW&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">observation_stub</span><span class="o">.</span><span class="n">append_child</span><span class="p">(</span><span class="n">bm</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">bm</span><span class="o">.</span><span class="n">xml</span><span class="p">(</span><span class="s1">&#39;Project name&#39;</span><span class="p">))</span>
+<span class="go">&lt;lofar:measurement xsi:type=&quot;lofar:UVMeasurementType&quot;&gt;</span>
+<span class="go">&lt;name&gt;Cyg A&lt;/name&gt;</span>
+<span class="go">&lt;description&gt;Observation&lt;/description&gt;</span>
+<span class="go">&lt;topology&gt;Observation.0.Cyg_A&lt;/topology&gt;</span>
+<span class="go">&lt;currentStatus&gt;</span>
+<span class="go">  &lt;mom2:openedStatus/&gt;</span>
+<span class="go">&lt;/currentStatus&gt;</span>
+<span class="go">&lt;lofar:uvMeasurementAttributes&gt;</span>
+<span class="go">  &lt;measurementType&gt;Target&lt;/measurementType&gt;</span>
+<span class="go">  &lt;specification&gt;</span>
+<span class="go">    &lt;targetName&gt;Cyg A&lt;/targetName&gt;</span>
+<span class="go">    &lt;ra&gt;299.8681525&lt;/ra&gt;</span>
+<span class="go">    &lt;dec&gt;40.733915833333334&lt;/dec&gt;</span>
+<span class="go">    &lt;equinox&gt;J2000&lt;/equinox&gt;</span>
+<span class="go">    &lt;duration&gt;PT00S&lt;/duration&gt;</span>
+<span class="go">    &lt;subbandsSpecification&gt;</span>
+<span class="go">      &lt;bandWidth unit=&quot;MHz&quot;&gt;48.4375&lt;/bandWidth&gt;</span>
+<span class="go">      &lt;centralFrequency unit=&quot;MHz&quot;&gt;139.1602&lt;/centralFrequency&gt;</span>
+<span class="go">      &lt;contiguous&gt;false&lt;/contiguous&gt;</span>
+<span class="go">      &lt;subbands&gt;77..324&lt;/subbands&gt;</span>
+<span class="go">    &lt;/subbandsSpecification&gt;</span>
+<span class="go">  &lt;/specification&gt;</span>
+<span class="go">&lt;/lofar:uvMeasurementAttributes&gt;</span>
+<span class="go">&lt;resultDataProducts&gt;</span>
+<span class="go">  &lt;item&gt;</span>
+<span class="go">    &lt;lofar:uvDataProduct&gt;</span>
+<span class="go">      &lt;name&gt;Observation.0.Cyg_A.dps&lt;/name&gt;</span>
+<span class="go">      &lt;topology&gt;Observation.0.Cyg_A.dps&lt;/topology&gt;</span>
+<span class="go">      &lt;status&gt;no_data&lt;/status&gt;</span>
+<span class="go">    &lt;/lofar:uvDataProduct&gt;</span>
+<span class="go">  &lt;/item&gt;</span>
+<span class="go">&lt;/resultDataProducts&gt;</span>
+<span class="go">&lt;/lofar:measurement&gt;</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="momxml.beam.Beam.data_products_label">
+<code class="descname">data_products_label</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/beam.html#Beam.data_products_label"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.beam.Beam.data_products_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the name of the data products produced by this beam.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-momxml.targetsource">
+<span id="momxml-targetsource"></span><h2><code class="docutils literal"><span class="pre">momxml.targetsource</span></code><a class="headerlink" href="#module-momxml.targetsource" title="Permalink to this headline">¶</a></h2>
+<p>Specification of target sources to use in Observation Beams.</p>
+<dl class="exception">
+<dt id="momxml.targetsource.NoSimbadCoordinatesError">
+<em class="property">exception </em><code class="descclassname">momxml.targetsource.</code><code class="descname">NoSimbadCoordinatesError</code><a class="reference internal" href="_modules/momxml/targetsource.html#NoSimbadCoordinatesError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.targetsource.NoSimbadCoordinatesError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised if the Simbad response does not contain J2000 coordinates.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="momxml.targetsource.SourceSpecificationError">
+<em class="property">exception </em><code class="descclassname">momxml.targetsource.</code><code class="descname">SourceSpecificationError</code><a class="reference internal" href="_modules/momxml/targetsource.html#SourceSpecificationError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.targetsource.SourceSpecificationError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised in case of badly specified TargetSource.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="momxml.targetsource.TargetSource">
+<em class="property">class </em><code class="descclassname">momxml.targetsource.</code><code class="descname">TargetSource</code><span class="sig-paren">(</span><em>name=''</em>, <em>ra_angle=None</em>, <em>dec_angle=None</em>, <em>reference_frame='J2000'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/targetsource.html#TargetSource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.targetsource.TargetSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>A target source to be used when specifying a Beam within an
+Observation.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>name <span class="classifier-delimiter">:</span> <span class="classifier">non-unicode string</span></dt>
+<dd>Contains the name of the source.</dd>
+<dt>ra_angle <span class="classifier-delimiter">:</span> <span class="classifier">None or an Angle</span></dt>
+<dd>J2000 right ascension.</dd>
+<dt>dec_angle <span class="classifier-delimiter">:</span> <span class="classifier">None or an Angle</span></dt>
+<dd>J2000 declination.</dd>
+<dt>reference_frame <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd>Reference frame for the longitudinal (ra/az/lon) and
+latitudinal (dec/el/lat) coordinates. Examples: &#8216;J2000&#8217;,
+&#8216;B1950&#8217;, &#8216;AZELGEO&#8217;, &#8216;AZEL&#8217;, &#8216;GALACTIC&#8217;, &#8216;JMEAN&#8217;, JTRUE&#8217;,
+etc... Basically anything supported by Casacore.
+Default: &#8216;J2000&#8217;</dd>
+</dl>
+<p><strong>Raises</strong></p>
+<dl class="docutils">
+<dt>SourceSpecificationError</dt>
+<dd>In case of badly specified TargetSource.</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">TargetSource</span><span class="p">(</span><span class="s1">&#39;Cyg A&#39;</span><span class="p">,</span>
+<span class="gp">... </span>             <span class="n">ra_angle</span>  <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">shms</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mf">28.3565</span><span class="p">)),</span>
+<span class="gp">... </span>             <span class="n">dec_angle</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">sdms</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mf">2.099</span><span class="p">))</span> <span class="p">)</span>
+<span class="go">TargetSource(name      = &#39;Cyg A&#39;,</span>
+<span class="go">             ra_angle  = Angle(shms = (&#39;+&#39;, 19, 59, 28.3565)),</span>
+<span class="go">             dec_angle = Angle(sdms = (&#39;+&#39;, 40, 44, 2.099)))</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="momxml.targetsource.TargetSource.dec_deg">
+<code class="descname">dec_deg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/targetsource.html#TargetSource.dec_deg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.targetsource.TargetSource.dec_deg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return declination in degrees</p>
+<p><strong>Returns</strong></p>
+<p>A float.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">TargetSource</span><span class="p">(</span><span class="s1">&#39;Cyg A&#39;</span><span class="p">,</span>
+<span class="gp">... </span>             <span class="n">ra_angle</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">deg</span> <span class="o">=</span> <span class="mf">299.868152</span><span class="p">),</span>
+<span class="gp">... </span>             <span class="n">dec_angle</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">deg</span> <span class="o">=</span> <span class="mf">40.733916</span><span class="p">)</span> <span class="p">)</span><span class="o">.</span><span class="n">dec_deg</span><span class="p">()</span>
+<span class="go">40.733916</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.targetsource.TargetSource.ra_dec_rad">
+<code class="descname">ra_dec_rad</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/targetsource.html#TargetSource.ra_dec_rad"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.targetsource.TargetSource.ra_dec_rad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns coordinates as an (ra_rad, dec_rad) pair of floats.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;(</span><span class="si">%.6f</span><span class="s1">, </span><span class="si">%.6f</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="n">TargetSource</span><span class="p">(</span><span class="s1">&#39;Cyg A&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                              <span class="n">ra_angle</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">deg</span> <span class="o">=</span> <span class="mf">299.868152</span><span class="p">),</span>
+<span class="gp">... </span>                              <span class="n">dec_angle</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">deg</span> <span class="o">=</span> <span class="mf">40.733916</span><span class="p">)</span> <span class="p">)</span><span class="o">.</span><span class="n">ra_dec_rad</span><span class="p">()</span>
+<span class="go">&#39;(5.233687, 0.710941)&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.targetsource.TargetSource.ra_deg">
+<code class="descname">ra_deg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/targetsource.html#TargetSource.ra_deg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.targetsource.TargetSource.ra_deg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return right ascension in degrees</p>
+<p><strong>Returns</strong></p>
+<p>A float.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">TargetSource</span><span class="p">(</span><span class="s1">&#39;Cyg A&#39;</span><span class="p">,</span>
+<span class="gp">... </span>             <span class="n">ra_angle</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">deg</span> <span class="o">=</span> <span class="mf">299.868152</span><span class="p">),</span>
+<span class="gp">... </span>             <span class="n">dec_angle</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">deg</span> <span class="o">=</span> <span class="mf">40.733916</span><span class="p">)</span> <span class="p">)</span><span class="o">.</span><span class="n">ra_deg</span><span class="p">()</span>
+<span class="go">299.868152</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.targetsource.TargetSource.validate_and_normalize">
+<code class="descname">validate_and_normalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/targetsource.html#TargetSource.validate_and_normalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.targetsource.TargetSource.validate_and_normalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates type and contents of data members. This method is
+called by the constructor.</p>
+<p><strong>Returns</strong></p>
+<p>A reference to <code class="docutils literal"><span class="pre">self</span></code>.</p>
+<p><strong>Raises</strong></p>
+<dl class="docutils">
+<dt>SourceSpecificationError</dt>
+<dd>In case of a badly specified target source.</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">TargetSource</span><span class="p">(</span><span class="s1">&#39;Cyg A&#39;</span><span class="p">,</span>
+<span class="gp">... </span>             <span class="n">ra_angle</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">shms</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mf">28.3565</span><span class="p">)),</span>
+<span class="gp">... </span>             <span class="n">dec_angle</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">sdms</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mf">2.099</span><span class="p">))</span> <span class="p">)</span>
+<span class="go">TargetSource(name      = &#39;Cyg A&#39;,</span>
+<span class="go">             ra_angle  = Angle(shms = (&#39;+&#39;, 19, 59, 28.3565)),</span>
+<span class="go">             dec_angle = Angle(sdms = (&#39;+&#39;, 40, 44, 2.099)))</span>
+</pre></div>
+</div>
+<p># &gt;&gt;&gt; TargetSource(u&#8217;Cyg A&#8217;,
+# ...              ra_angle = Angle(shms = (&#8216;+&#8217;, 19, 59, 28.3565)),
+# ...              dec_angle = Angle(sdms = (&#8216;+&#8217;, 40, 44, 2.099)) )
+# Traceback (most recent call last):
+# ...
+# lofarobsxml.targetsource.SourceSpecificationError: Source name may not be a unicode string.
+&gt;&gt;&gt; TargetSource(&#8216;Cyg A&#8217;,
+...              ra_angle = 3.0,
+...              dec_angle = Angle(sdms = (&#8216;+&#8217;, 40, 44, 2.099)) )
+Traceback (most recent call last):
+...
+lofarobsxml.targetsource.SourceSpecificationError: ra_angle must be a lofarobsxml.Angle, not 3.0</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">TargetSource</span><span class="p">(</span><span class="s1">&#39;Cyg A&#39;</span><span class="p">,</span>
+<span class="gp">... </span>             <span class="n">ra_angle</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">shms</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mf">28.3565</span><span class="p">)),</span>
+<span class="gp">... </span>             <span class="n">dec_angle</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="c">...</span>
+<span class="gr">lofarobsxml.targetsource.SourceSpecificationError</span>: <span class="n">dec_angle must be a lofarobsxml.Angle, not -2</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.targetsource.simbad">
+<code class="descclassname">momxml.targetsource.</code><code class="descname">simbad</code><span class="sig-paren">(</span><em>source_name</em>, <em>debug=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/targetsource.html#simbad"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.targetsource.simbad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lookup <code class="docutils literal"><span class="pre">source_name</span></code> on simbad and return a TargetSource instance.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">simbad</span><span class="p">(</span><span class="s1">&#39;3C 196&#39;</span><span class="p">)</span>
+<span class="go">TargetSource(name      = &#39;3C 196&#39;,</span>
+<span class="go">             ra_angle  = Angle(shms = (&#39;+&#39;, 8, 13, 36.0561)),</span>
+<span class="go">             dec_angle = Angle(sdms = (&#39;+&#39;, 48, 13, 2.636)))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.targetsource.target_source_from_simbad_response">
+<code class="descclassname">momxml.targetsource.</code><code class="descname">target_source_from_simbad_response</code><span class="sig-paren">(</span><em>source_name</em>, <em>simbad_response</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/targetsource.html#target_source_from_simbad_response"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.targetsource.target_source_from_simbad_response" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">simbad_response</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;examples/simbad-ngc891.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">target_source_from_simbad_response</span><span class="p">(</span><span class="s1">&#39;NGC 891&#39;</span><span class="p">,</span> <span class="n">simbad_response</span><span class="p">)</span>
+<span class="go">TargetSource(name      = &#39;NGC 891&#39;,</span>
+<span class="go">             ra_angle  = Angle(shms = (&#39;+&#39;, 2, 22, 32.907)),</span>
+<span class="go">             dec_angle = Angle(sdms = (&#39;+&#39;, 42, 20, 53.95)))</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">simbad_trifid</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;examples/simbad-trifid.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">target_source_from_simbad_response</span><span class="p">(</span><span class="s1">&#39;Trifid Nebula&#39;</span><span class="p">,</span> <span class="n">simbad_trifid</span><span class="p">)</span>
+<span class="go">TargetSource(name      = &#39;Trifid Nebula&#39;,</span>
+<span class="go">             ra_angle  = Angle(shms = (&#39;+&#39;, 18, 2, 42.0)),</span>
+<span class="go">             dec_angle = Angle(sdms = (&#39;-&#39;, 22, 58, 18.0)))</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">simbad_ncp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;examples/simbad-ncp.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">target_source_from_simbad_response</span><span class="p">(</span><span class="s1">&#39;NCP&#39;</span><span class="p">,</span> <span class="n">simbad_ncp</span><span class="p">)</span>
+<span class="go">TargetSource(name      = &#39;NCP&#39;,</span>
+<span class="go">             ra_angle  = Angle(shms = (&#39;+&#39;, 0, 0, 0.0)),</span>
+<span class="go">             dec_angle = Angle(sdms = (&#39;+&#39;, 90, 0, 0.0)))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-momxml.backend">
+<span id="momxml-backend"></span><h2><code class="docutils literal"><span class="pre">momxml.backend</span></code><a class="headerlink" href="#module-momxml.backend" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="momxml.backend.BackendProcessing">
+<em class="property">class </em><code class="descclassname">momxml.backend.</code><code class="descname">BackendProcessing</code><span class="sig-paren">(</span><em>channels_per_subband=64</em>, <em>integration_time_seconds=2</em>, <em>correlated_data=True</em>, <em>filtered_data=False</em>, <em>beamformed_data=False</em>, <em>coherent_stokes_data=None</em>, <em>incoherent_stokes_data=None</em>, <em>stokes_integrate_channels=False</em>, <em>coherent_dedispersed_channels=False</em>, <em>tied_array_beams=None</em>, <em>bypass_pff=False</em>, <em>enable_superterp=False</em>, <em>default_template='BeamObservation'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/backend.html#BackendProcessing"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.backend.BackendProcessing" title="Permalink to this definition">¶</a></dt>
+<dd><p>BackendProcessing contains all the settings for the correlator and
+beamformer hardware.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>channels_per_subband <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Number of channels per sub band. Default is 64.</dd>
+<dt>integration_time_seconds <span class="classifier-delimiter">:</span> <span class="classifier">number</span></dt>
+<dd>Integration time for correlator observations. Typically 1 or 2
+seconds, but anything from 0.2 to 99 seconds should be
+possible.</dd>
+<dt>correlated_data <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>True if cross-correlation visibilities should be produced.</dd>
+<dt>filtered_data <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>No idea what this means. Default is False.</dd>
+<dt>beamformed_data <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first">True if beamformed data is to be produced,
+such as complex voltage, coherent stokes, or incoherent stokes
+data. If True and coherent_stokes_data is set to
+Stokes(&#8216;coherent&#8217;, polarizations=&#8217;XXYY&#8217;,</p>
+<blockquote>
+<div>number_collapsed_channels=1, stokes_downsampling_steps=1),</div></blockquote>
+<p class="last">complex voltages are produced.</p>
+</dd>
+<dt>coherent_stokes_data <span class="classifier-delimiter">:</span> <span class="classifier">None or Stokes instance</span></dt>
+<dd>Coherent stokes settings.</dd>
+<dt>incoherent_stokes_data <span class="classifier-delimiter">:</span> <span class="classifier">None or Stokes instance</span></dt>
+<dd>Incoherent stokes settings.</dd>
+<dt>stokes_integrate_channels <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>Apply frequency averaging. Default False.</dd>
+<dt>coherent_dedispersed_channels <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>Apply coherent dedispersion? Default False.</dd>
+<dt>tied_array_beams <span class="classifier-delimiter">:</span> <span class="classifier">None or TiedArrayBeams instance</span></dt>
+<dd>Tied array beam settings.</dd>
+<dt>bypass_pff <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>If True, skip the correlator&#8217;s / beamformer&#8217;s polyphase filter
+entirely. Useful for high time resolution beamformed
+data. Default: False.</dd>
+<dt>enable_superterp: bool</dt>
+<dd>If True, also beamform the superterp stations and treat them
+as a separate large station.</dd>
+<dt>default_template: string</dt>
+<dd>Default observation template to use. Possible values are:
+&#8216;BeamObservation&#8217; (default),
+&#8216;BeamObservationNoStationControl&#8217;, and
+&#8216;BeamObservationNoPlots&#8217;.</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bp</span> <span class="o">=</span> <span class="n">BackendProcessing</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bp</span>
+<span class="go">BackendProcessing(beamformed_data               = False,</span>
+<span class="go">                  bypass_pff                    = False,</span>
+<span class="go">                  channels_per_subband          = 64,</span>
+<span class="go">                  coherent_dedispersed_channels = False,</span>
+<span class="go">                  coherent_stokes_data          = None,</span>
+<span class="go">                  correlated_data               = True,</span>
+<span class="go">                  default_template              = &#39;BeamObservation&#39;,</span>
+<span class="go">                  enable_superterp              = False,</span>
+<span class="go">                  filtered_data                 = False,</span>
+<span class="go">                  incoherent_stokes_data        = None,</span>
+<span class="go">                  integration_time_seconds      = 2,</span>
+<span class="go">                  stokes_integrate_channels     = False,</span>
+<span class="go">                  tied_array_beams              = TiedArrayBeams(beams_ra_dec_rad = None,</span>
+<span class="go">                                                                 flyseye          = False,</span>
+<span class="go">                                                                 nr_tab_rings     = 0,</span>
+<span class="go">                                                                 tab_ring_size    = 0))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">bp</span><span class="o">.</span><span class="n">xml</span><span class="p">())</span>
+<span class="go">&lt;correlatedData&gt;true&lt;/correlatedData&gt;</span>
+<span class="go">&lt;filteredData&gt;false&lt;/filteredData&gt;</span>
+<span class="go">&lt;beamformedData&gt;false&lt;/beamformedData&gt;</span>
+<span class="go">&lt;coherentStokesData&gt;false&lt;/coherentStokesData&gt;</span>
+<span class="go">&lt;incoherentStokesData&gt;false&lt;/incoherentStokesData&gt;</span>
+<span class="go">&lt;integrationInterval&gt;2&lt;/integrationInterval&gt;</span>
+<span class="go">&lt;channelsPerSubband&gt;64&lt;/channelsPerSubband&gt;</span>
+<span class="go">&lt;pencilBeams&gt;</span>
+<span class="go">  &lt;flyseye&gt;false&lt;/flyseye&gt;</span>
+<span class="go">  &lt;pencilBeamList/&gt;</span>
+<span class="go">&lt;/pencilBeams&gt;</span>
+<span class="go">&lt;tiedArrayBeams&gt;</span>
+<span class="go">  &lt;flyseye&gt;false&lt;/flyseye&gt;</span>
+<span class="go">  &lt;nrTabRings&gt;0&lt;/nrTabRings&gt;</span>
+<span class="go">  &lt;tabRingSize&gt;0.000000&lt;/tabRingSize&gt;</span>
+<span class="go">  &lt;tiedArrayBeamList/&gt;</span>
+<span class="go">&lt;/tiedArrayBeams&gt;</span>
+<span class="go">&lt;stokes&gt;</span>
+<span class="go">  &lt;integrateChannels&gt;false&lt;/integrateChannels&gt;</span>
+<span class="go">&lt;/stokes&gt;</span>
+<span class="go">&lt;bypassPff&gt;false&lt;/bypassPff&gt;</span>
+<span class="go">&lt;enableSuperterp&gt;false&lt;/enableSuperterp&gt;</span>
+</pre></div>
+</div>
+<p>Here is a Fly&#8217;s eye example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">channels_per_subband</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">coherent_stokes_data</span> <span class="o">=</span> <span class="n">Stokes</span><span class="p">(</span><span class="s1">&#39;coherent&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                              <span class="n">stokes_downsampling_steps</span> <span class="o">=</span> <span class="mi">128</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tied_array_beams</span>     <span class="o">=</span> <span class="n">TiedArrayBeams</span><span class="p">(</span><span class="n">flyseye</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span>
+<span class="gp">... </span>                                      <span class="n">beams_ra_dec_rad</span> <span class="o">=</span> <span class="bp">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bp_fe</span> <span class="o">=</span> <span class="n">BackendProcessing</span><span class="p">(</span>
+<span class="gp">... </span>       <span class="n">correlated_data</span>          <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
+<span class="gp">... </span>       <span class="n">channels_per_subband</span>     <span class="o">=</span> <span class="n">channels_per_subband</span><span class="p">,</span>
+<span class="gp">... </span>       <span class="n">coherent_stokes_data</span>     <span class="o">=</span> <span class="n">coherent_stokes_data</span><span class="p">,</span>
+<span class="gp">... </span>       <span class="n">tied_array_beams</span>         <span class="o">=</span> <span class="n">tied_array_beams</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bp_fe</span>
+<span class="go">BackendProcessing(beamformed_data               = False,</span>
+<span class="go">                  bypass_pff                    = False,</span>
+<span class="go">                  channels_per_subband          = 16,</span>
+<span class="go">                  coherent_dedispersed_channels = False,</span>
+<span class="go">                  coherent_stokes_data          = Stokes(mode                      = &#39;coherent&#39;,</span>
+<span class="go">                                                         number_collapsed_channels = 16,</span>
+<span class="go">                                                         polarizations             = &#39;I&#39;,</span>
+<span class="go">                                                         stokes_downsampling_steps = 128,</span>
+<span class="go">                                                         subbands_per_file         = 512),</span>
+<span class="go">                  correlated_data               = False,</span>
+<span class="go">                  default_template              = &#39;BeamObservation&#39;,</span>
+<span class="go">                  enable_superterp              = False,</span>
+<span class="go">                  filtered_data                 = False,</span>
+<span class="go">                  incoherent_stokes_data        = None,</span>
+<span class="go">                  integration_time_seconds      = 2,</span>
+<span class="go">                  stokes_integrate_channels     = False,</span>
+<span class="go">                  tied_array_beams              = TiedArrayBeams(beams_ra_dec_rad = None,</span>
+<span class="go">                                                                 flyseye          = True,</span>
+<span class="go">                                                                 nr_tab_rings     = 0,</span>
+<span class="go">                                                                 tab_ring_size    = 0))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">bp_fe</span><span class="o">.</span><span class="n">xml</span><span class="p">())</span>
+<span class="go">&lt;correlatedData&gt;false&lt;/correlatedData&gt;</span>
+<span class="go">&lt;filteredData&gt;false&lt;/filteredData&gt;</span>
+<span class="go">&lt;beamformedData&gt;false&lt;/beamformedData&gt;</span>
+<span class="go">&lt;coherentStokesData&gt;true&lt;/coherentStokesData&gt;</span>
+<span class="go">&lt;incoherentStokesData&gt;false&lt;/incoherentStokesData&gt;</span>
+<span class="go">&lt;channelsPerSubband&gt;16&lt;/channelsPerSubband&gt;</span>
+<span class="go">&lt;pencilBeams&gt;</span>
+<span class="go">  &lt;flyseye&gt;true&lt;/flyseye&gt;</span>
+<span class="go">  &lt;pencilBeamList/&gt;</span>
+<span class="go">&lt;/pencilBeams&gt;</span>
+<span class="go">&lt;tiedArrayBeams&gt;</span>
+<span class="go">  &lt;flyseye&gt;true&lt;/flyseye&gt;</span>
+<span class="go">  &lt;nrTabRings&gt;0&lt;/nrTabRings&gt;</span>
+<span class="go">  &lt;tabRingSize&gt;0.000000&lt;/tabRingSize&gt;</span>
+<span class="go">  &lt;tiedArrayBeamList/&gt;</span>
+<span class="go">&lt;/tiedArrayBeams&gt;</span>
+<span class="go">&lt;stokes&gt;</span>
+<span class="go">  &lt;integrateChannels&gt;false&lt;/integrateChannels&gt;</span>
+<span class="go">  &lt;subbandsPerFileCS&gt;512&lt;/subbandsPerFileCS&gt;</span>
+<span class="go">  &lt;numberCollapsedChannelsCS&gt;16&lt;/numberCollapsedChannelsCS&gt;</span>
+<span class="go">  &lt;stokesDownsamplingStepsCS&gt;128&lt;/stokesDownsamplingStepsCS&gt;</span>
+<span class="go">  &lt;whichCS&gt;I&lt;/whichCS&gt;</span>
+<span class="go">&lt;/stokes&gt;</span>
+<span class="go">&lt;bypassPff&gt;false&lt;/bypassPff&gt;</span>
+<span class="go">&lt;enableSuperterp&gt;false&lt;/enableSuperterp&gt;</span>
+</pre></div>
+</div>
+<p>And here for coherent stokes beam forming:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tied_array_beams</span>     <span class="o">=</span> <span class="n">TiedArrayBeams</span><span class="p">(</span><span class="n">flyseye</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
+<span class="gp">... </span>                                      <span class="n">beams_ra_dec_rad</span> <span class="o">=</span> <span class="bp">None</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bp_cs</span> <span class="o">=</span> <span class="n">BackendProcessing</span><span class="p">(</span>
+<span class="gp">... </span>       <span class="n">correlated_data</span>          <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
+<span class="gp">... </span>       <span class="n">channels_per_subband</span>     <span class="o">=</span> <span class="n">channels_per_subband</span><span class="p">,</span>
+<span class="gp">... </span>       <span class="n">coherent_stokes_data</span>     <span class="o">=</span> <span class="n">coherent_stokes_data</span><span class="p">,</span>
+<span class="gp">... </span>       <span class="n">tied_array_beams</span>         <span class="o">=</span> <span class="n">tied_array_beams</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bp_cs</span>
+<span class="go">BackendProcessing(beamformed_data               = False,</span>
+<span class="go">                  bypass_pff                    = False,</span>
+<span class="go">                  channels_per_subband          = 16,</span>
+<span class="go">                  coherent_dedispersed_channels = False,</span>
+<span class="go">                  coherent_stokes_data          = Stokes(mode                      = &#39;coherent&#39;,</span>
+<span class="go">                                                         number_collapsed_channels = 16,</span>
+<span class="go">                                                         polarizations             = &#39;I&#39;,</span>
+<span class="go">                                                         stokes_downsampling_steps = 128,</span>
+<span class="go">                                                         subbands_per_file         = 512),</span>
+<span class="go">                  correlated_data               = False,</span>
+<span class="go">                  default_template              = &#39;BeamObservation&#39;,</span>
+<span class="go">                  enable_superterp              = False,</span>
+<span class="go">                  filtered_data                 = False,</span>
+<span class="go">                  incoherent_stokes_data        = None,</span>
+<span class="go">                  integration_time_seconds      = 2,</span>
+<span class="go">                  stokes_integrate_channels     = False,</span>
+<span class="go">                  tied_array_beams              = TiedArrayBeams(beams_ra_dec_rad = None,</span>
+<span class="go">                                                                 flyseye          = False,</span>
+<span class="go">                                                                 nr_tab_rings     = 0,</span>
+<span class="go">                                                                 tab_ring_size    = 0))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">bp_cs</span><span class="o">.</span><span class="n">xml</span><span class="p">())</span>
+<span class="go">&lt;correlatedData&gt;false&lt;/correlatedData&gt;</span>
+<span class="go">&lt;filteredData&gt;false&lt;/filteredData&gt;</span>
+<span class="go">&lt;beamformedData&gt;false&lt;/beamformedData&gt;</span>
+<span class="go">&lt;coherentStokesData&gt;true&lt;/coherentStokesData&gt;</span>
+<span class="go">&lt;incoherentStokesData&gt;false&lt;/incoherentStokesData&gt;</span>
+<span class="go">&lt;channelsPerSubband&gt;16&lt;/channelsPerSubband&gt;</span>
+<span class="go">&lt;pencilBeams&gt;</span>
+<span class="go">  &lt;flyseye&gt;false&lt;/flyseye&gt;</span>
+<span class="go">  &lt;pencilBeamList/&gt;</span>
+<span class="go">&lt;/pencilBeams&gt;</span>
+<span class="go">&lt;tiedArrayBeams&gt;</span>
+<span class="go">  &lt;flyseye&gt;false&lt;/flyseye&gt;</span>
+<span class="go">  &lt;nrTabRings&gt;0&lt;/nrTabRings&gt;</span>
+<span class="go">  &lt;tabRingSize&gt;0.000000&lt;/tabRingSize&gt;</span>
+<span class="go">  &lt;tiedArrayBeamList/&gt;</span>
+<span class="go">&lt;/tiedArrayBeams&gt;</span>
+<span class="go">&lt;stokes&gt;</span>
+<span class="go">  &lt;integrateChannels&gt;false&lt;/integrateChannels&gt;</span>
+<span class="go">  &lt;subbandsPerFileCS&gt;512&lt;/subbandsPerFileCS&gt;</span>
+<span class="go">  &lt;numberCollapsedChannelsCS&gt;16&lt;/numberCollapsedChannelsCS&gt;</span>
+<span class="go">  &lt;stokesDownsamplingStepsCS&gt;128&lt;/stokesDownsamplingStepsCS&gt;</span>
+<span class="go">  &lt;whichCS&gt;I&lt;/whichCS&gt;</span>
+<span class="go">&lt;/stokes&gt;</span>
+<span class="go">&lt;bypassPff&gt;false&lt;/bypassPff&gt;</span>
+<span class="go">&lt;enableSuperterp&gt;false&lt;/enableSuperterp&gt;</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="momxml.backend.BackendProcessing.instrument_name">
+<code class="descname">instrument_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/backend.html#BackendProcessing.instrument_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.backend.BackendProcessing.instrument_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>These names are actually very important to MoM. They specify which
+default observation screen is displayed. Valid values are
+&#8216;Beam Observation&#8217;, &#8216;Interferometer&#8217;, and &#8216;TBB (standalone)&#8217;</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.backend.BackendProcessing.need_beam_observation">
+<code class="descname">need_beam_observation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/backend.html#BackendProcessing.need_beam_observation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.backend.BackendProcessing.need_beam_observation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="momxml.backend.BackendProcessing.xml">
+<code class="descname">xml</code><span class="sig-paren">(</span><em>project_name=None</em>, <em>child_id=None</em>, <em>parent_label=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/backend.html#BackendProcessing.xml"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.backend.BackendProcessing.xml" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="momxml.backend.Stokes">
+<em class="property">class </em><code class="descclassname">momxml.backend.</code><code class="descname">Stokes</code><span class="sig-paren">(</span><em>mode</em>, <em>subbands_per_file=512</em>, <em>number_collapsed_channels=None</em>, <em>stokes_downsampling_steps=1</em>, <em>polarizations='I'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/backend.html#Stokes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.backend.Stokes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Describes averaging and storage parameters for beam formed
+observations. This class is not derived from
+ObservationSpecificationBase because it is really only a helper to
+BackendProcessing. Use instances of this class as parameters to
+BackendProcessing for <code class="docutils literal"><span class="pre">coherent_stokes_data</span></code> and
+<code class="docutils literal"><span class="pre">incoherent_stokes_data</span></code>.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>mode <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd>Either &#8216;coherent&#8217; or &#8216;incoherent&#8217;.</dd>
+<dt>subbands_per_file <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Number of sub bands per output file / storage machine. Use 512
+for low data rates, but decrease as necessary to keep the data
+rate per file (locus node / storage machine) below about 300 MB /
+s.</dd>
+<dt>number_collapsed_channels <span class="classifier-delimiter">:</span> <span class="classifier">None or int</span></dt>
+<dd>The number of output channels. If this is smaller than the
+number of channels for the correlator, the output channels
+will be averaged. None implies no averaging.</dd>
+<dt>stokes_downsampling_steps <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Number of time samples to average before writing to
+disk. Default is 1 (no averaging).</dd>
+<dt>polarizations <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd>Either &#8216;I&#8217;, &#8216;IQUV&#8217;, or &#8216;XXYY&#8217;.</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stk</span> <span class="o">=</span> <span class="n">Stokes</span><span class="p">(</span><span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;coherent&#39;</span><span class="p">,</span> <span class="n">polarizations</span> <span class="o">=</span> <span class="s1">&#39;IQUV&#39;</span><span class="p">,</span>
+<span class="gp">... </span>             <span class="n">stokes_downsampling_steps</span> <span class="o">=</span> <span class="mi">64</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">stk</span>
+<span class="go">Stokes(mode                      = &#39;coherent&#39;,</span>
+<span class="go">       number_collapsed_channels = None,</span>
+<span class="go">       polarizations             = &#39;IQUV&#39;,</span>
+<span class="go">       stokes_downsampling_steps = 64,</span>
+<span class="go">       subbands_per_file         = 512)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">stk</span><span class="o">.</span><span class="n">xml</span><span class="p">())</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="c">...</span>
+<span class="gr">ValueError</span>: <span class="n">Stokes.xml(): number_collapsed_channels is not set.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">stk</span> <span class="o">=</span> <span class="n">Stokes</span><span class="p">(</span><span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;coherent&#39;</span><span class="p">,</span> <span class="n">polarizations</span> <span class="o">=</span> <span class="s1">&#39;IQUV&#39;</span><span class="p">,</span>
+<span class="gp">... </span>             <span class="n">stokes_downsampling_steps</span> <span class="o">=</span> <span class="mi">64</span><span class="p">,</span>
+<span class="gp">... </span>             <span class="n">number_collapsed_channels</span> <span class="o">=</span> <span class="mi">16</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">stk</span>
+<span class="go">Stokes(mode                      = &#39;coherent&#39;,</span>
+<span class="go">       number_collapsed_channels = 16,</span>
+<span class="go">       polarizations             = &#39;IQUV&#39;,</span>
+<span class="go">       stokes_downsampling_steps = 64,</span>
+<span class="go">       subbands_per_file         = 512)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">stk</span><span class="o">.</span><span class="n">xml</span><span class="p">())</span>
+<span class="go">&lt;subbandsPerFileCS&gt;512&lt;/subbandsPerFileCS&gt;</span>
+<span class="go">&lt;numberCollapsedChannelsCS&gt;16&lt;/numberCollapsedChannelsCS&gt;</span>
+<span class="go">&lt;stokesDownsamplingStepsCS&gt;64&lt;/stokesDownsamplingStepsCS&gt;</span>
+<span class="go">&lt;whichCS&gt;IQUV&lt;/whichCS&gt;</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="momxml.backend.Stokes.stokes_suffix">
+<code class="descname">stokes_suffix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/backend.html#Stokes.stokes_suffix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.backend.Stokes.stokes_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>return CS or IS, depending on whether these are coherent or
+incoherent stokes settings.  coherent stokes settings also
+need tied array beams / fly&#8217;s eye stuff specified.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.backend.Stokes.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/backend.html#Stokes.validate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.backend.Stokes.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raises a ValueError for every problem found in the settings.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.backend.Stokes.xml">
+<code class="descname">xml</code><span class="sig-paren">(</span><em>project_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/backend.html#Stokes.xml"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.backend.Stokes.xml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Produce the xml for the coherent stokes  or incoherent stokes
+settings of the backend.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="momxml.backend.TiedArrayBeams">
+<em class="property">class </em><code class="descclassname">momxml.backend.</code><code class="descname">TiedArrayBeams</code><span class="sig-paren">(</span><em>flyseye=False</em>, <em>beam_offsets=None</em>, <em>beams_ra_dec_rad=None</em>, <em>nr_tab_rings=0</em>, <em>tab_ring_size=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/backend.html#TiedArrayBeams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.backend.TiedArrayBeams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of Tied Array Beam (TAB) settings.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>flyseye <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>If True, store data streams from each station individually.</dd>
+<dt>beams_ra_dec_rad <span class="classifier-delimiter">:</span> <span class="classifier">None or list of pairs of float</span></dt>
+<dd>The RA, Dec in rad of the phase centres of the TABs in J2000
+coordinates.</dd>
+<dt>nr_tab_rings <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Alternatively, one can specify with how many rings one wants
+to tile the beam.</dd>
+<dt>tab_ring_size <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>Distance between TAB rings in RADIANS.</dd>
+<dt>beam_offsets <span class="classifier-delimiter">:</span> <span class="classifier">None</span></dt>
+<dd>Previously, the offsets with repsoect to the phase
+center. Option is invalid as of 2014-06-14, LOFAR 2.4. Use
+beams_ra_dec_rad instead.</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tab</span> <span class="o">=</span> <span class="n">TiedArrayBeams</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tab</span>
+<span class="go">TiedArrayBeams(beams_ra_dec_rad = None,</span>
+<span class="go">               flyseye          = False,</span>
+<span class="go">               nr_tab_rings     = 0,</span>
+<span class="go">               tab_ring_size    = 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">tab</span><span class="o">.</span><span class="n">xml</span><span class="p">())</span>
+
+<span class="go">&lt;tiedArrayBeams&gt;</span>
+<span class="go">  &lt;flyseye&gt;false&lt;/flyseye&gt;</span>
+<span class="go">  &lt;nrTabRings&gt;0&lt;/nrTabRings&gt;</span>
+<span class="go">  &lt;tabRingSize&gt;0.000000&lt;/tabRingSize&gt;</span>
+<span class="go">  &lt;tiedArrayBeamList/&gt;</span>
+<span class="go">&lt;/tiedArrayBeams&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tab_fe</span> <span class="o">=</span> <span class="n">TiedArrayBeams</span><span class="p">(</span><span class="n">flyseye</span>      <span class="o">=</span> <span class="bp">True</span><span class="p">,</span>
+<span class="gp">... </span>                        <span class="n">beam_offsets</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.05</span><span class="p">)])</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="c">...</span>
+<span class="gr">ValueError</span>: <span class="n">Relative beam_offsets not supported as of LOFAR 2.4 (2014-06-30) use beams_ra_dec_rad instead</span>
+</pre></div>
+</div>
+<p>Whoops.... that was the old way of specifying. Let&#8217;s try again now.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tab_fe</span> <span class="o">=</span> <span class="n">TiedArrayBeams</span><span class="p">(</span><span class="n">flyseye</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span>
+<span class="gp">... </span>                        <span class="n">beams_ra_dec_rad</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">3.1</span><span class="p">,</span> <span class="o">+</span><span class="mf">0.5</span><span class="p">),</span>
+<span class="gp">... </span>                                            <span class="p">(</span><span class="mf">3.2</span><span class="p">,</span> <span class="o">+</span><span class="mf">0.54</span><span class="p">)])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tab_fe</span>
+<span class="go">TiedArrayBeams(beams_ra_dec_rad = [(3.1, 0.5), (3.2, 0.54)],</span>
+<span class="go">               flyseye          = True,</span>
+<span class="go">               nr_tab_rings     = 0,</span>
+<span class="go">               tab_ring_size    = 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">tab_fe</span><span class="o">.</span><span class="n">xml</span><span class="p">())</span>
+
+<span class="go">&lt;tiedArrayBeams&gt;</span>
+<span class="go">  &lt;flyseye&gt;true&lt;/flyseye&gt;</span>
+<span class="go">  &lt;nrTabRings&gt;0&lt;/nrTabRings&gt;</span>
+<span class="go">  &lt;tabRingSize&gt;0.000000&lt;/tabRingSize&gt;</span>
+<span class="go">  &lt;tiedArrayBeamList&gt;</span>
+<span class="go">    &lt;tiedArrayBeam&gt;&lt;coherent&gt;true&lt;/coherent&gt;&lt;angle1&gt;3.100000&lt;/angle1&gt;&lt;angle2&gt;0.500000&lt;/angle2&gt;&lt;/tiedArrayBeam&gt;</span>
+<span class="go">    &lt;tiedArrayBeam&gt;&lt;coherent&gt;true&lt;/coherent&gt;&lt;angle1&gt;3.200000&lt;/angle1&gt;&lt;angle2&gt;0.540000&lt;/angle2&gt;&lt;/tiedArrayBeam&gt;</span>
+<span class="go">  &lt;/tiedArrayBeamList&gt;</span>
+<span class="go">&lt;/tiedArrayBeams&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-momxml.pipelines">
+<span id="momxml-pipelines"></span><h2><code class="docutils literal"><span class="pre">momxml.pipelines</span></code><a class="headerlink" href="#module-momxml.pipelines" title="Permalink to this headline">¶</a></h2>
+<p>The pipelines module contains classes that represent data procesing
+pipelines. At this moment, only NDPPP is implemented here, but later
+on, this module will also support calibrator/target pipelines and
+imaging settings.</p>
+<dl class="class">
+<dt id="momxml.pipelines.AveragingPipeline">
+<em class="property">class </em><code class="descclassname">momxml.pipelines.</code><code class="descname">AveragingPipeline</code><span class="sig-paren">(</span><em>name</em>, <em>ndppp</em>, <em>input_data=None</em>, <em>duration_s=None</em>, <em>start_date=None</em>, <em>flagging_strategy=None</em>, <em>parent=None</em>, <em>children=None</em>, <em>predecessor_label=None</em>, <em>initial_status='opened'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/pipelines.html#AveragingPipeline"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.pipelines.AveragingPipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>flagging_strategy: &#8216;LBAdefault&#8217;, &#8216;HBAdefault&#8217;, or None</dt>
+<dd>NDPPP flagging strategy.</dd>
+<dt>initial_status <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd>Either &#8216;opened&#8217; or &#8216;approved&#8217;</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lofarobsxml</span>             <span class="kn">import</span> <span class="n">TargetSource</span><span class="p">,</span> <span class="n">Angle</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lofarobsxml.backend</span>     <span class="kn">import</span> <span class="n">BackendProcessing</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lofarobsxml.observation</span> <span class="kn">import</span> <span class="n">Observation</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lofarobsxml.beam</span>        <span class="kn">import</span> <span class="n">Beam</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">target</span> <span class="o">=</span> <span class="n">TargetSource</span><span class="p">(</span><span class="n">name</span>      <span class="o">=</span> <span class="s1">&#39;Cyg A&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                      <span class="n">ra_angle</span>  <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">hms</span>  <span class="o">=</span> <span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mf">28.3566</span><span class="p">)),</span>
+<span class="gp">... </span>                      <span class="n">dec_angle</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">sdms</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mf">2.097</span><span class="p">)))</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bm</span> <span class="o">=</span> <span class="n">Beam</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="s1">&#39;77..324&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obs</span> <span class="o">=</span> <span class="n">Observation</span><span class="p">(</span><span class="s1">&#39;HBA_DUAL_INNER&#39;</span><span class="p">,</span> <span class="s1">&#39;LBA_LOW&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">2013</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+<span class="gp">... </span>                  <span class="n">duration_seconds</span> <span class="o">=</span> <span class="mi">600</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Main observation&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                  <span class="n">stations</span>  <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CS001&#39;</span><span class="p">,</span> <span class="s1">&#39;RS106&#39;</span><span class="p">,</span> <span class="s1">&#39;DE601&#39;</span><span class="p">],</span>
+<span class="gp">... </span>                  <span class="n">clock_mhz</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">beam_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">bm</span><span class="p">],</span>
+<span class="gp">... </span>                  <span class="n">backend</span>   <span class="o">=</span> <span class="n">BackendProcessing</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">avg</span> <span class="o">=</span> <span class="n">AveragingPipeline</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Avg Pipeline&#39;</span><span class="p">,</span> <span class="n">ndppp</span> <span class="o">=</span> <span class="n">NDPPP</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">avg</span><span class="o">.</span><span class="n">add_input_data_product</span><span class="p">(</span><span class="n">obs</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obs</span><span class="o">.</span><span class="n">append_child</span><span class="p">(</span><span class="n">avg</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">avg</span>
+<span class="go">AveragingPipeline(parent            = Observation(&#39;Main observation&#39;),</span>
+<span class="go">                  children          = None,</span>
+<span class="go">                  default_template  = &#39;Preprocessing Pipeline&#39;,</span>
+<span class="go">                  duration_s        = None,</span>
+<span class="go">                  flagging_strategy = None,</span>
+<span class="go">                  initial_status    = &#39;opened&#39;,</span>
+<span class="go">                  input_data        = [Beam(parent           = Observation(&#39;Main observation&#39;),</span>
+<span class="go">                                           children         = None,</span>
+<span class="go">                                           duration_s       = None,</span>
+<span class="go">                                           initial_status   = &#39;opened&#39;,</span>
+<span class="go">                                           measurement_type = &#39;Target&#39;,</span>
+<span class="go">                                           name             = &#39;Cyg A&#39;,</span>
+<span class="go">                                           subband_spec     = &#39;77..324&#39;,</span>
+<span class="go">                                           target_source    = TargetSource(name      = &#39;Cyg A&#39;,</span>
+<span class="go">                                                                           ra_angle  = Angle(shms = (&#39;+&#39;, 19, 59, 28.3566)),</span>
+<span class="go">                                                                           dec_angle = Angle(sdms = (&#39;+&#39;, 40, 44, 2.097))),</span>
+<span class="go">                                           tied_array_beams = None)],</span>
+<span class="go">                  name              = &#39;Avg Pipeline&#39;,</span>
+<span class="go">                  ndppp             = NDPPP(avg_freq_step   = 64,</span>
+<span class="go">                                            avg_time_step   = 1,</span>
+<span class="go">                                            demix_always    = None,</span>
+<span class="go">                                            demix_freq_step = 64,</span>
+<span class="go">                                            demix_if_needed = None,</span>
+<span class="go">                                            demix_time_step = 10,</span>
+<span class="go">                                            ignore_target   = None),</span>
+<span class="go">                  predecessor_label = None,</span>
+<span class="go">                  start_date        = None)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">avg</span><span class="o">.</span><span class="n">xml</span><span class="p">(</span><span class="s1">&#39;Project name&#39;</span><span class="p">))</span>
+<span class="go">&lt;lofar:pipeline xsi:type=&quot;lofar:AveragingPipelineType&quot;&gt;</span>
+<span class="go">  &lt;topology&gt;Main_observation.1.Avg_Pipeline&lt;/topology&gt;</span>
+<span class="go">  &lt;predecessor_topology&gt;Main_observation&lt;/predecessor_topology&gt;</span>
+<span class="go">  &lt;name&gt;Avg Pipeline&lt;/name&gt;</span>
+<span class="go">  &lt;description&gt;Avg Pipeline: &quot;Preprocessing Pipeline&quot;&lt;/description&gt;</span>
+<span class="go">  &lt;currentStatus&gt;</span>
+<span class="go">    &lt;mom2:openedStatus/&gt;</span>
+<span class="go">  &lt;/currentStatus&gt;</span>
+<span class="go">  &lt;averagingPipelineAttributes&gt;</span>
+<span class="go">    &lt;defaultTemplate&gt;Preprocessing Pipeline&lt;/defaultTemplate&gt;</span>
+<span class="go">    &lt;duration&gt;&lt;/duration&gt;</span>
+<span class="go">    &lt;startTime&gt;&lt;/startTime&gt;</span>
+<span class="go">    &lt;endTime&gt;&lt;/endTime&gt;</span>
+<span class="go">    &lt;demixingParameters&gt;</span>
+<span class="go">      &lt;averagingFreqStep&gt;64&lt;/averagingFreqStep&gt;</span>
+<span class="go">      &lt;averagingTimeStep&gt;1&lt;/averagingTimeStep&gt;</span>
+<span class="go">      &lt;demixFreqStep&gt;64&lt;/demixFreqStep&gt;</span>
+<span class="go">      &lt;demixTimeStep&gt;10&lt;/demixTimeStep&gt;</span>
+<span class="go">      &lt;demixAlways&gt;&lt;/demixAlways&gt;</span>
+<span class="go">      &lt;demixIfNeeded&gt;&lt;/demixIfNeeded&gt;</span>
+<span class="go">      &lt;ignoreTarget&gt;&lt;/ignoreTarget&gt;</span>
+<span class="go">    &lt;/demixingParameters&gt;</span>
+<span class="go">    &lt;flaggingStrategy&gt;HBAdefault&lt;/flaggingStrategy&gt;</span>
+<span class="go">  &lt;/averagingPipelineAttributes&gt;</span>
+<span class="go">  &lt;usedDataProducts&gt;</span>
+<span class="go">    &lt;item&gt;</span>
+<span class="go">      &lt;lofar:uvDataProduct topology=&quot;Main_observation.0.Cyg_A.dps&quot;&gt;</span>
+<span class="go">        &lt;name&gt;Main_observation.0.Cyg_A.dps&lt;/name&gt;</span>
+<span class="go">      &lt;/lofar:uvDataProduct&gt;</span>
+<span class="go">    &lt;/item&gt;</span>
+<span class="go">  &lt;/usedDataProducts&gt;</span>
+<span class="go">  &lt;resultDataProducts&gt;</span>
+<span class="go">    &lt;item&gt;</span>
+<span class="go">      &lt;lofar:uvDataProduct&gt;</span>
+<span class="go">        &lt;name&gt;Main_observation.1.Avg_Pipeline.dps&lt;/name&gt;</span>
+<span class="go">        &lt;topology&gt;Main_observation.1.Avg_Pipeline.dps&lt;/topology&gt;</span>
+<span class="go">        &lt;status&gt;no_data&lt;/status&gt;</span>
+<span class="go">      &lt;/lofar:uvDataProduct&gt;</span>
+<span class="go">    &lt;/item&gt;</span>
+<span class="go">  &lt;/resultDataProducts&gt;</span>
+<span class="go">&lt;/lofar:pipeline&gt;</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="momxml.pipelines.AveragingPipeline.add_input_data_product">
+<code class="descname">add_input_data_product</code><span class="sig-paren">(</span><em>input_sap</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/pipelines.html#AveragingPipeline.add_input_data_product"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.pipelines.AveragingPipeline.add_input_data_product" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="momxml.pipelines.AveragingPipeline.predecessor">
+<code class="descname">predecessor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/pipelines.html#AveragingPipeline.predecessor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.pipelines.AveragingPipeline.predecessor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="momxml.pipelines.AveragingPipeline.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/pipelines.html#AveragingPipeline.validate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.pipelines.AveragingPipeline.validate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="momxml.pipelines.NDPPP">
+<em class="property">class </em><code class="descclassname">momxml.pipelines.</code><code class="descname">NDPPP</code><span class="sig-paren">(</span><em>avg_freq_step=64</em>, <em>avg_time_step=1</em>, <em>demix_freq_step=64</em>, <em>demix_time_step=10</em>, <em>demix_always=None</em>, <em>demix_if_needed=None</em>, <em>ignore_target=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/pipelines.html#NDPPP"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.pipelines.NDPPP" title="Permalink to this definition">¶</a></dt>
+<dd><p>The demixing- and averaging parameters for NDPPP.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>avg_freq_step <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>How many channels to average.</dd>
+<dt>avg_time_step <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>How many time steps to average.</dd>
+<dt>demix_freq_step <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Width (in channels) of the window over which demixing is
+done. This must be a multiple of <code class="docutils literal"><span class="pre">avg_freq_step</span></code>.</dd>
+<dt>demix_time_step <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Length (in time slots) of the demixing window. This must be a
+multiple of <code class="docutils literal"><span class="pre">avg_time_step</span></code>.</dd>
+<dt>demix_always <span class="classifier-delimiter">:</span> <span class="classifier">None or list of strings</span></dt>
+<dd>Sources to always demix. Valid source names are: [&#8216;CasA&#8217;,
+&#8216;CygA&#8217;, &#8216;TauA&#8217;, &#8216;HydraA&#8217;, &#8216;VirA&#8217;, &#8216;HerA&#8217;].</dd>
+<dt>ignore_target <span class="classifier-delimiter">:</span> <span class="classifier">None or bool</span></dt>
+<dd>See imagoing cookbook documentation. None implies observatory
+default.</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dmx</span> <span class="o">=</span> <span class="n">NDPPP</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">demix_freq_step</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">demix_time_step</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+<span class="gp">... </span>            <span class="n">demix_always</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;CygA&#39;</span><span class="p">,</span> <span class="s1">&#39;CasA&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dmx</span>
+<span class="go">NDPPP(avg_freq_step   = 16,</span>
+<span class="go">      avg_time_step   = 2,</span>
+<span class="go">      demix_always    = [&#39;CygA&#39;, &#39;CasA&#39;],</span>
+<span class="go">      demix_freq_step = 64,</span>
+<span class="go">      demix_if_needed = None,</span>
+<span class="go">      demix_time_step = 10,</span>
+<span class="go">      ignore_target   = None)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">dmx</span><span class="o">.</span><span class="n">xml</span><span class="p">())</span>
+
+<span class="go">&lt;demixingParameters&gt;</span>
+<span class="go">  &lt;averagingFreqStep&gt;16&lt;/averagingFreqStep&gt;</span>
+<span class="go">  &lt;averagingTimeStep&gt;2&lt;/averagingTimeStep&gt;</span>
+<span class="go">  &lt;demixFreqStep&gt;64&lt;/demixFreqStep&gt;</span>
+<span class="go">  &lt;demixTimeStep&gt;10&lt;/demixTimeStep&gt;</span>
+<span class="go">  &lt;demixAlways&gt;[CygA,CasA]&lt;/demixAlways&gt;</span>
+<span class="go">  &lt;demixIfNeeded&gt;&lt;/demixIfNeeded&gt;</span>
+<span class="go">  &lt;ignoreTarget&gt;&lt;/ignoreTarget&gt;</span>
+<span class="go">&lt;/demixingParameters&gt;</span>
+</pre></div>
+</div>
+<p>Of course, several consistency checks are made:
+&gt;&gt;&gt; NDPPP(16, 2, demix_freq_step=64, demix_time_step=5,
+...                       demix_always=[&#8216;CygA&#8217;, &#8216;CasA&#8217;])
+Traceback (most recent call last):
+...
+ValueError: NDPPP.demix_time_step(5) is not a multiple of NDPPP.avg_time_step(2)
+&gt;&gt;&gt; NDPPP(16, 2.5, demix_freq_step=64, demix_time_step=5,
+...                demix_always=[&#8216;CygA&#8217;, &#8216;CasA&#8217;])
+Traceback (most recent call last):
+...
+TypeError: type(NDPPP.avg_time_step)(2.5) not in [&#8216;int&#8217;]</p>
+<dl class="method">
+<dt id="momxml.pipelines.NDPPP.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/pipelines.html#NDPPP.validate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.pipelines.NDPPP.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raise a ValueError or TypeError if problems with the
+specification are detected.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.pipelines.NDPPP.xml">
+<code class="descname">xml</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/pipelines.html#NDPPP.xml"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.pipelines.NDPPP.xml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Produce an xml representation of demixing settings.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-momxml.angles">
+<span id="momxml-angles"></span><h2><code class="docutils literal"><span class="pre">momxml.angles</span></code><a class="headerlink" href="#module-momxml.angles" title="Permalink to this headline">¶</a></h2>
+<p>Uniform handling of angles.</p>
+<dl class="class">
+<dt id="momxml.angles.Angle">
+<em class="property">class </em><code class="descclassname">momxml.angles.</code><code class="descname">Angle</code><span class="sig-paren">(</span><em>rad=None</em>, <em>hms=None</em>, <em>shms=None</em>, <em>sdms=None</em>, <em>deg=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/angles.html#Angle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.angles.Angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>A simple container for angles. It can be created from various
+units of angles. Specify exactly one of <code class="docutils literal"><span class="pre">shms</span></code>, <code class="docutils literal"><span class="pre">sdms</span></code>,
+<code class="docutils literal"><span class="pre">rad</span></code>, or <code class="docutils literal"><span class="pre">deg</span></code>.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>rad <span class="classifier-delimiter">:</span> <span class="classifier">None or float</span></dt>
+<dd>An angle in radians.</dd>
+<dt>hms <span class="classifier-delimiter">:</span> <span class="classifier">None or tuple</span></dt>
+<dd>An angle in hours, minutes, and seconds,
+e.g. (13, 59, 12.4).</dd>
+<dt>shms <span class="classifier-delimiter">:</span> <span class="classifier">None or tuple</span></dt>
+<dd>A signed  angle in hours, minutes, and seconds, e.g. (&#8216;+&#8217;, 13, 59,
+12.4). The sign is required.</dd>
+<dt>sdms <span class="classifier-delimiter">:</span> <span class="classifier">None or tuple</span></dt>
+<dd>An angle in degrees, minutes, and seconds, e.g. (&#8216;-&#8216;, 359, 59,
+12.4). The sign is required.</dd>
+<dt>deg <span class="classifier-delimiter">:</span> <span class="classifier">None or float</span></dt>
+<dd>An angle in degrees.</dd>
+</dl>
+<p><strong>Raises</strong></p>
+<dl class="docutils">
+<dt>ValueError</dt>
+<dd>In case of problems with the provided arguments.</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<p>Direct values:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Angle</span><span class="p">(</span><span class="n">deg</span> <span class="o">=</span> <span class="mf">360.0</span><span class="p">)</span>
+<span class="go">Angle(rad = 6.283185307179586)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Angle</span><span class="p">(</span><span class="n">rad</span> <span class="o">=</span> <span class="n">pi</span><span class="p">)</span>
+<span class="go">Angle(rad = 3.141592653589793)</span>
+</pre></div>
+</div>
+<p>Hours:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Angle</span><span class="p">(</span><span class="n">hms</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mf">30.2</span><span class="p">))</span>
+<span class="go">Angle(rad = 0.8530442163226618)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Angle</span><span class="p">(</span><span class="n">shms</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mf">30.2</span><span class="p">))</span>
+<span class="go">Angle(rad = -0.8530442163226618)</span>
+</pre></div>
+</div>
+<p>Degrees:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Angle</span><span class="p">(</span><span class="n">sdms</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mf">30.2</span><span class="p">))</span>
+<span class="go">Angle(rad = 0.05686961442151079)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Angle</span><span class="p">(</span><span class="n">sdms</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mf">30.2</span><span class="p">))</span>
+<span class="go">Angle(rad = -0.05686961442151079)</span>
+</pre></div>
+</div>
+<p>Whoops:
+&gt;&gt;&gt; Angle(rad = -0.0568696144215, deg = 12)
+Traceback (most recent call last):
+...
+ValueError: Specify <em>one</em> of hms, shms, sdms, rad, or deg.</p>
+<dl class="method">
+<dt id="momxml.angles.Angle.as_deg">
+<code class="descname">as_deg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/angles.html#Angle.as_deg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.angles.Angle.as_deg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get angle in degrees.</p>
+<p><strong>Returns</strong></p>
+<p>A float containing the angle in degrees.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Angle</span> <span class="p">(</span><span class="n">rad</span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">as_deg</span><span class="p">())</span>
+<span class="go">&#39;171.88733853924697&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.angles.Angle.as_hours">
+<code class="descname">as_hours</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/angles.html#Angle.as_hours"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.angles.Angle.as_hours" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get angle in hours.</p>
+<p><strong>Returns</strong></p>
+<p>A float containing the angle in hours.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Angle</span> <span class="p">(</span><span class="n">rad</span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">as_hours</span><span class="p">())</span>
+<span class="go">&#39;11.459155902616464&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.angles.Angle.as_rad">
+<code class="descname">as_rad</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/angles.html#Angle.as_rad"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.angles.Angle.as_rad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get angle in radians.</p>
+<p><strong>Returns</strong></p>
+<p>A float containing the angle in radians.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Angle</span> <span class="p">(</span><span class="n">rad</span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">as_rad</span><span class="p">()</span>
+<span class="go">3.0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.angles.Angle.as_sdms">
+<code class="descname">as_sdms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/angles.html#Angle.as_sdms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.angles.Angle.as_sdms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the angle in degrees, minutes, and seconds. It does not
+round off the degrees and minutes based on the seconds. See examples.</p>
+<p><strong>Returns</strong></p>
+<p>A tuple containing (sign, degrees, minutes, seconds)</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fmt</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s%02d</span><span class="s1">d </span><span class="si">%02d</span><span class="s1">m </span><span class="si">%06.3f</span><span class="s1">s&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fmt</span> <span class="o">%</span> <span class="n">Angle</span><span class="p">(</span><span class="n">sdms</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">59.99999</span><span class="p">))</span><span class="o">.</span><span class="n">as_sdms</span><span class="p">()</span>
+<span class="go">&#39;+03d 10m 60.000s&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fmt</span> <span class="o">%</span> <span class="n">Angle</span><span class="p">(</span><span class="n">sdms</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">))</span><span class="o">.</span><span class="n">as_sdms</span><span class="p">()</span>
+<span class="go">&#39;+03d 10m 60.000s&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fmt</span> <span class="o">%</span> <span class="n">Angle</span><span class="p">(</span><span class="n">sdms</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">))</span><span class="o">.</span><span class="n">as_sdms</span><span class="p">()</span>
+<span class="go">&#39;-03d 11m 00.100s&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.angles.Angle.as_shms">
+<code class="descname">as_shms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/angles.html#Angle.as_shms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.angles.Angle.as_shms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the angle in hours, minutes, and seconds. It does not
+round off the hours and minutes based on the seconds. See examples.</p>
+<p><strong>Returns</strong></p>
+<p>A tuple containing (sign, hours, minutes, seconds)</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fmt</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s%02d</span><span class="s1">h </span><span class="si">%02d</span><span class="s1">m </span><span class="si">%06.3f</span><span class="s1">s&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fmt</span> <span class="o">%</span> <span class="n">Angle</span><span class="p">(</span><span class="n">shms</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">59.99999</span><span class="p">))</span><span class="o">.</span><span class="n">as_shms</span><span class="p">()</span>
+<span class="go">&#39;+03h 10m 60.000s&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fmt</span> <span class="o">%</span> <span class="n">Angle</span><span class="p">(</span><span class="n">shms</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">))</span><span class="o">.</span><span class="n">as_shms</span><span class="p">()</span>
+<span class="go">&#39;+03h 10m 60.000s&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fmt</span> <span class="o">%</span> <span class="n">Angle</span><span class="p">(</span><span class="n">shms</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">))</span><span class="o">.</span><span class="n">as_shms</span><span class="p">()</span>
+<span class="go">&#39;-03h 11m 00.100s&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.angles.Angle.set_deg">
+<code class="descname">set_deg</code><span class="sig-paren">(</span><em>deg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/angles.html#Angle.set_deg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.angles.Angle.set_deg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the angle in degrees.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>degrees <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>The angle in degrees.</dd>
+</dl>
+<p><strong>Returns</strong></p>
+<p>A float containing the angle in radians.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">rad</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">set_deg</span><span class="p">(</span><span class="mf">180.0</span><span class="p">))</span>
+<span class="go">&#39;3.141592653589793&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">set_deg</span><span class="p">(</span><span class="o">-</span><span class="mf">90.0</span><span class="p">))</span>
+<span class="go">&#39;-1.5707963267948966&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.angles.Angle.set_rad">
+<code class="descname">set_rad</code><span class="sig-paren">(</span><em>rad</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/angles.html#Angle.set_rad"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.angles.Angle.set_rad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the angle in radians.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>rad <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>The angle in radians.</dd>
+</dl>
+<p><strong>Returns</strong></p>
+<p>A float containing the angle in radians.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">rad</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">set_rad</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)</span>
+<span class="go">3.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">set_rad</span><span class="p">(</span><span class="o">-</span><span class="mf">1.2</span><span class="p">)</span>
+<span class="go">-1.2</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.angles.Angle.set_sdms">
+<code class="descname">set_sdms</code><span class="sig-paren">(</span><em>sign</em>, <em>degrees</em>, <em>minutes</em>, <em>seconds</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/angles.html#Angle.set_sdms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.angles.Angle.set_sdms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Explicitly set angle with sign, degrees, minutes, and seconds.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>sign <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd>One of &#8216;+&#8217; or &#8216;-&#8216;</dd>
+<dt>degrees <span class="classifier-delimiter">:</span> <span class="classifier">positive number</span></dt>
+<dd>Number of degrees. Does not need to be restricted to the
+[0..360] range. May also be a floating point number.</dd>
+<dt>minutes <span class="classifier-delimiter">:</span> <span class="classifier">positive number</span></dt>
+<dd>Number of minutes. Does not need to be restricted to
+[0..60]. May also be floating point.</dd>
+<dt>seconds <span class="classifier-delimiter">:</span> <span class="classifier">positive number</span></dt>
+<dd>Number of seconds. Does not need to be restricted to
+[0..60]. May also be floating point.</dd>
+</dl>
+<p><strong>Returns</strong></p>
+<p>A float containing the angle in radians.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">rad</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rad</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">set_sdms</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mf">45.2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">as_rad</span><span class="p">())</span>
+<span class="go">&#39;-0.04385236708371975&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.angles.Angle.set_shms">
+<code class="descname">set_shms</code><span class="sig-paren">(</span><em>sign</em>, <em>hours</em>, <em>minutes</em>, <em>seconds</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/angles.html#Angle.set_shms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.angles.Angle.set_shms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Explicitly set angle with sign, hours, minutes, and seconds.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>sign <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd>One of &#8216;+&#8217; or &#8216;-&#8216;</dd>
+<dt>hours <span class="classifier-delimiter">:</span> <span class="classifier">positive number</span></dt>
+<dd>Number of hours. Does not need to be restricted to the
+[0..24] range. May also be a floating point number.</dd>
+<dt>minutes <span class="classifier-delimiter">:</span> <span class="classifier">positive number</span></dt>
+<dd>Number of minutes. Does not need to be restricted to
+[0..60]. May also be floating point.</dd>
+<dt>seconds <span class="classifier-delimiter">:</span> <span class="classifier">positive number</span></dt>
+<dd>Number of seconds. Does not need to be restricted to
+[0..60]. May also be floating point.</dd>
+</dl>
+<p><strong>Returns</strong></p>
+<p>A float containing the angle in radians.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">rad</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rad</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">set_shms</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mf">45.2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">as_rad</span><span class="p">())</span>
+<span class="go">&#39;-0.6577855062557962&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.angles.int_from_sign_char">
+<code class="descclassname">momxml.angles.</code><code class="descname">int_from_sign_char</code><span class="sig-paren">(</span><em>char</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/angles.html#int_from_sign_char"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.angles.int_from_sign_char" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns -1 if <code class="docutils literal"><span class="pre">char</span></code> == &#8216;-&#8216;, +1 if <code class="docutils literal"><span class="pre">char</span></code> == &#8216;+&#8217;</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>char: a one-character string</dt>
+<dd>Either &#8216;+&#8217; or &#8216;-&#8216;.</dd>
+</dl>
+<p><strong>Returns</strong></p>
+<p>The integer -1 or +1, depending on the value of <code class="docutils literal"><span class="pre">char</span></code>.</p>
+<p><strong>Raises</strong></p>
+<dl class="docutils">
+<dt>ValueError</dt>
+<dd>If <code class="docutils literal"><span class="pre">char</span></code> is something other than &#8216;+&#8217; or &#8216;-&#8216;.</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">int_from_sign_char</span><span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">int_from_sign_char</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="go">-1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">int_from_sign_char</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="c">...</span>
+<span class="gr">ValueError</span>: <span class="n">char must be either &#39;+&#39; or &#39;-&#39;, not &#39;f&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.angles.sign_char">
+<code class="descclassname">momxml.angles.</code><code class="descname">sign_char</code><span class="sig-paren">(</span><em>number</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/angles.html#sign_char"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.angles.sign_char" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the sign of <code class="docutils literal"><span class="pre">number</span></code>.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>number <span class="classifier-delimiter">:</span> <span class="classifier">number</span></dt>
+<dd>The number for which to calculate the sign.</dd>
+</dl>
+<p><strong>Returns</strong></p>
+<p>String &#8216;+&#8217; if number &gt;= 0.0, &#8216;-&#8216; if number &lt; 0.0</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sign_char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">&#39;+&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sign_char</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">&#39;+&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sign_char</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="go">&#39;+&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sign_char</span><span class="p">(</span><span class="o">-</span><span class="mf">1e-30</span><span class="p">)</span>
+<span class="go">&#39;-&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sign_char</span><span class="p">(</span><span class="o">-</span><span class="mi">0</span><span class="p">)</span>
+<span class="go">&#39;+&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.angles.signum">
+<code class="descclassname">momxml.angles.</code><code class="descname">signum</code><span class="sig-paren">(</span><em>number</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/angles.html#signum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.angles.signum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the sign of <code class="docutils literal"><span class="pre">number</span></code>.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>number <span class="classifier-delimiter">:</span> <span class="classifier">number</span></dt>
+<dd>The number for which to calculate the sign.</dd>
+</dl>
+<p><strong>Returns</strong></p>
+<p>Integer +1 if <cite>number`</cite> &gt;= 0.0, -1 if <code class="docutils literal"><span class="pre">number</span></code> &lt; 0.0</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">signum</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">signum</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">signum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">signum</span><span class="p">(</span><span class="o">-</span><span class="mf">1e-30</span><span class="p">)</span>
+<span class="go">-1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">signum</span><span class="p">(</span><span class="o">-</span><span class="mi">0</span><span class="p">)</span>
+<span class="go">1</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-momxml.utilities">
+<span id="momxml-utilities"></span><h2><code class="docutils literal"><span class="pre">momxml.utilities</span></code><a class="headerlink" href="#module-momxml.utilities" title="Permalink to this headline">¶</a></h2>
+<p>Various support functions that did not fit anywhere else.</p>
+<dl class="class">
+<dt id="momxml.utilities.AutoReprBaseClass">
+<em class="property">class </em><code class="descclassname">momxml.utilities.</code><code class="descname">AutoReprBaseClass</code><a class="reference internal" href="_modules/momxml/utilities.html#AutoReprBaseClass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.AutoReprBaseClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class that implements a simplistic __repr__ function. The
+order in which the members are printed is the same as that in
+which the arguments are set in bthe constructor body.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="momxml.utilities.InvalidStationSetError">
+<em class="property">exception </em><code class="descclassname">momxml.utilities.</code><code class="descname">InvalidStationSetError</code><a class="reference internal" href="_modules/momxml/utilities.html#InvalidStationSetError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.InvalidStationSetError" title="Permalink to this definition">¶</a></dt>
+<dd><p>To be raised if an invalid station set is provided.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.utilities.antenna_field_sort_key">
+<code class="descclassname">momxml.utilities.</code><code class="descname">antenna_field_sort_key</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/utilities.html#antenna_field_sort_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.antenna_field_sort_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Produce a sort key for station names.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>name <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd>The antenna field&#8217;s name.</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">antenna_field_sort_key</span><span class="p">(</span><span class="s1">&#39;CS002HBA1&#39;</span><span class="p">)</span>
+<span class="go">21</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">antenna_field_sort_key</span><span class="p">(</span><span class="s1">&#39;CS021LBA&#39;</span><span class="p">)</span>
+<span class="go">210</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">antenna_field_sort_key</span><span class="p">(</span><span class="s1">&#39;RS106HBA&#39;</span><span class="p">)</span>
+<span class="go">10600</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">antenna_field_sort_key</span><span class="p">(</span><span class="s1">&#39;UK608HBA&#39;</span><span class="p">)</span>
+<span class="go">60800</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.utilities.exclude_conflicting_eu_stations">
+<code class="descclassname">momxml.utilities.</code><code class="descname">exclude_conflicting_eu_stations</code><span class="sig-paren">(</span><em>stations</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/utilities.html#exclude_conflicting_eu_stations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.exclude_conflicting_eu_stations" title="Permalink to this definition">¶</a></dt>
+<dd><p>The international stations are connected to the same BlueGene
+IONodes as the HBA1 ear in some core stations. For HBA_ONE,
+HBA_DUAL_INNER, and HBA_DUAL mode, we need to remove either the
+core stations, or the eu stations that conflict. This function
+removes the conflicting eu stations.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>stations <span class="classifier-delimiter">:</span> <span class="classifier">list of strings</span></dt>
+<dd>The station names in the observation.</dd>
+</dl>
+<p><strong>Returns</strong></p>
+<p>A list of strings containing only non-conflicting stations, from
+which the EU stations have been removed.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">exclude_conflicting_eu_stations</span><span class="p">([</span><span class="s1">&#39;CS001&#39;</span><span class="p">,</span> <span class="s1">&#39;CS002&#39;</span><span class="p">,</span> <span class="s1">&#39;RS407&#39;</span><span class="p">])</span>
+<span class="go">[&#39;CS001&#39;, &#39;CS002&#39;, &#39;RS407&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">exclude_conflicting_eu_stations</span><span class="p">([</span><span class="s1">&#39;CS001&#39;</span><span class="p">,</span> <span class="s1">&#39;CS002&#39;</span><span class="p">,</span> <span class="s1">&#39;RS407&#39;</span><span class="p">,</span> <span class="s1">&#39;DE605&#39;</span><span class="p">])</span>
+<span class="go">[&#39;CS001&#39;, &#39;CS002&#39;, &#39;RS407&#39;, &#39;DE605&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">exclude_conflicting_eu_stations</span><span class="p">([</span><span class="s1">&#39;CS001&#39;</span><span class="p">,</span> <span class="s1">&#39;CS002&#39;</span><span class="p">,</span> <span class="s1">&#39;CS028&#39;</span><span class="p">,</span> <span class="s1">&#39;RS407&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                                 <span class="s1">&#39;DE601&#39;</span><span class="p">,</span> <span class="s1">&#39;DE605&#39;</span><span class="p">,</span> <span class="s1">&#39;UK608&#39;</span><span class="p">])</span>
+<span class="go">[&#39;CS001&#39;, &#39;CS002&#39;, &#39;CS028&#39;, &#39;RS407&#39;, &#39;DE605&#39;, &#39;UK608&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.utilities.exclude_conflicting_nl_stations">
+<code class="descclassname">momxml.utilities.</code><code class="descname">exclude_conflicting_nl_stations</code><span class="sig-paren">(</span><em>stations</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/utilities.html#exclude_conflicting_nl_stations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.exclude_conflicting_nl_stations" title="Permalink to this definition">¶</a></dt>
+<dd><p>The international stations are connected to the same BlueGene
+IONodes as the HBA1 ear in some core stations. For HBA_ONE,
+HBA_DUAL_INNER, and HBA_DUAL mode, we need to remove either the
+core stations, or the eu stations that conflict. This function
+removes the conflicting core stations.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>stations <span class="classifier-delimiter">:</span> <span class="classifier">list of strings</span></dt>
+<dd>The station names in the observation.</dd>
+</dl>
+<p><strong>Returns</strong></p>
+<p>A list of strings containing only non-conflicting stations, from
+which the core stations have been removed.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">exclude_conflicting_nl_stations</span><span class="p">([</span><span class="s1">&#39;CS001&#39;</span><span class="p">,</span> <span class="s1">&#39;CS002&#39;</span><span class="p">,</span> <span class="s1">&#39;RS407&#39;</span><span class="p">])</span>
+<span class="go">[&#39;CS001&#39;, &#39;CS002&#39;, &#39;RS407&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">exclude_conflicting_nl_stations</span><span class="p">([</span><span class="s1">&#39;CS001&#39;</span><span class="p">,</span> <span class="s1">&#39;CS002&#39;</span><span class="p">,</span> <span class="s1">&#39;RS407&#39;</span><span class="p">,</span> <span class="s1">&#39;DE605&#39;</span><span class="p">])</span>
+<span class="go">[&#39;CS001&#39;, &#39;CS002&#39;, &#39;RS407&#39;, &#39;DE605&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">exclude_conflicting_nl_stations</span><span class="p">([</span><span class="s1">&#39;CS001&#39;</span><span class="p">,</span> <span class="s1">&#39;CS002&#39;</span><span class="p">,</span> <span class="s1">&#39;CS028&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                                 <span class="s1">&#39;RS407&#39;</span><span class="p">,</span> <span class="s1">&#39;DE601&#39;</span><span class="p">,</span> <span class="s1">&#39;DE605&#39;</span><span class="p">,</span> <span class="s1">&#39;UK608&#39;</span><span class="p">])</span>
+<span class="go">[&#39;CS002&#39;, &#39;CS028&#39;, &#39;RS407&#39;, &#39;DE601&#39;, &#39;DE605&#39;, &#39;UK608&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.utilities.flatten_list">
+<code class="descclassname">momxml.utilities.</code><code class="descname">flatten_list</code><span class="sig-paren">(</span><em>list_of_lists</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/utilities.html#flatten_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.flatten_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes a list of lists and spits out one list with all sub lists
+concatenated. [[1, 2, 3], [4, 5]] -&gt; [1, 2, 3, 4, 5]</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>list_of_lists <span class="classifier-delimiter">:</span> <span class="classifier">list of lists</span></dt>
+<dd>The list to flatten.</dd>
+</dl>
+<p><strong>Returns</strong></p>
+<p>A one dimensional list.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">flatten_list</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="bp">True</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]])</span>
+<span class="go">[1, 2, 3, &#39;a&#39;, True, &#39;b&#39;, [&#39;c&#39;, 4]]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.utilities.indent">
+<code class="descclassname">momxml.utilities.</code><code class="descname">indent</code><span class="sig-paren">(</span><em>string</em>, <em>amount</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/utilities.html#indent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.indent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indent a multi-line string by the given amount.</p>
+<dl class="docutils">
+<dt>string <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd>The string to indent.</dd>
+<dt>amount <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>The direction and amount to indent.</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<dl class="docutils">
+<dt>&gt;&gt; indent(&#8216;HinThere&#8217;, 2)</dt>
+<dd>Hi
+There</dd>
+</dl>
+<p>&gt;&gt; indent(&#8216;HinTherenn&#8217;, -1)
+i
+here
+&lt;BLANKLINE&gt;
+&lt;BLANKLINE&gt;</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.utilities.lofar_observer">
+<code class="descclassname">momxml.utilities.</code><code class="descname">lofar_observer</code><span class="sig-paren">(</span><em>date=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/utilities.html#lofar_observer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.lofar_observer" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>date <span class="classifier-delimiter">:</span> <span class="classifier">ephem.Date</span></dt>
+<dd>The date to set for the ephem.Observer() instance</dd>
+</dl>
+<p><strong>Returns</strong></p>
+<p>An ephem.Observer() instance for the LOFAR core.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lofar_observer</span><span class="p">(</span><span class="s1">&#39;2013/04/15 12:34:56&#39;</span><span class="p">)</span>
+<span class="go">&lt;ephem.Observer date=&#39;2013/4/15 12:34:56&#39; epoch=&#39;2000/1/1 12:00:00&#39; lon=6:52:11.4 lat=52:54:54.4 elevation=49.343999999999994m horizon=0:00:00.0 temp=15.0C pressure=1010.0mBar&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.utilities.lofar_sidereal_time">
+<code class="descclassname">momxml.utilities.</code><code class="descname">lofar_sidereal_time</code><span class="sig-paren">(</span><em>date</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/utilities.html#lofar_sidereal_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.lofar_sidereal_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an ephem.Angle object with the current sidereal time at
+LOFAR CS002 LBA. The CS002 LBA position in ITRF2005 coordinates at
+epoch 2009.5.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">lofar_sidereal_time</span><span class="p">(</span><span class="n">ephem</span><span class="o">.</span><span class="n">Observer</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">))</span>
+<span class="go">&lt;class &#39;ephem.Angle&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lofar</span>           <span class="o">=</span> <span class="n">ephem</span><span class="o">.</span><span class="n">Observer</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lofar</span><span class="o">.</span><span class="n">long</span>      <span class="o">=</span> <span class="o">+</span><span class="mf">6.869837540</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lofar</span><span class="o">.</span><span class="n">lat</span>       <span class="o">=</span> <span class="o">+</span><span class="mf">52.915122495</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lofar</span><span class="o">.</span><span class="n">elevation</span> <span class="o">=</span> <span class="o">+</span><span class="mf">49.344</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lofar</span><span class="o">.</span><span class="n">date</span>      <span class="o">=</span> <span class="n">ephem</span><span class="o">.</span><span class="n">Observer</span><span class="p">()</span><span class="o">.</span><span class="n">date</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">abs</span><span class="p">(</span><span class="n">lofar</span><span class="o">.</span><span class="n">sidereal_time</span><span class="p">()</span> <span class="o">-</span> <span class="n">lofar_sidereal_time</span><span class="p">(</span><span class="n">lofar</span><span class="o">.</span><span class="n">date</span><span class="p">))</span>
+<span class="go">0.0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.utilities.lower_case">
+<code class="descclassname">momxml.utilities.</code><code class="descname">lower_case</code><span class="sig-paren">(</span><em>boolean</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/utilities.html#lower_case"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.lower_case" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return lower case string representation of a boolean value.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>boolean <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>The value to convert to a string.</dd>
+</dl>
+<p><strong>Examples</strong>
+&gt;&gt;&gt; lower_case(True)
+&#8216;true&#8217;
+&gt;&gt;&gt; lower_case(False)
+&#8216;false&#8217;</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.utilities.next_date_with_lofar_lst">
+<code class="descclassname">momxml.utilities.</code><code class="descname">next_date_with_lofar_lst</code><span class="sig-paren">(</span><em>lst_rad</em>, <em>start_date=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/utilities.html#next_date_with_lofar_lst"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.next_date_with_lofar_lst" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="momxml.utilities.next_sunrise">
+<code class="descclassname">momxml.utilities.</code><code class="descname">next_sunrise</code><span class="sig-paren">(</span><em>date</em>, <em>observer=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/utilities.html#next_sunrise"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.next_sunrise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an ephem.Date instance with the next sunrise at LOFAR, or
+any other ephem.Observer, if provided.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>date <span class="classifier-delimiter">:</span> <span class="classifier">ephem.Date</span></dt>
+<dd>Date from which to look for sunrise.</dd>
+<dt>observer <span class="classifier-delimiter">:</span> <span class="classifier">None or ephem.Observer</span></dt>
+<dd>Location for which Sunrise is computed. Default is LOFAR core
+if None is provided.</dd>
+</dl>
+<p><strong>Returns</strong></p>
+<p>An ephem.Date instance.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">next_sunrise</span><span class="p">(</span><span class="s1">&#39;2013/04/03 12:00:00&#39;</span><span class="p">))</span>
+<span class="go">2013/4/4 04:58:56</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.utilities.next_sunset">
+<code class="descclassname">momxml.utilities.</code><code class="descname">next_sunset</code><span class="sig-paren">(</span><em>date</em>, <em>observer=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/utilities.html#next_sunset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.next_sunset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an ephem.Date instance with the next sunset at LOFAR, or
+any other ephem.Observer, if provided.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>date <span class="classifier-delimiter">:</span> <span class="classifier">ephem.Date</span></dt>
+<dd>Date from which to look for sunrise.</dd>
+<dt>observer <span class="classifier-delimiter">:</span> <span class="classifier">None or ephem.Observer</span></dt>
+<dd>Location for which Sunrise is computed. Default is LOFAR core
+if None is provided.</dd>
+</dl>
+<p><strong>Returns</strong></p>
+<p>An ephem.Date instance.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">next_sunset</span><span class="p">(</span><span class="s1">&#39;2013/04/03 12:00:00&#39;</span><span class="p">))</span>
+<span class="go">2013/4/3 18:11:18</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.utilities.parse_subband_list">
+<code class="descclassname">momxml.utilities.</code><code class="descname">parse_subband_list</code><span class="sig-paren">(</span><em>parset_subband_list</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/utilities.html#parse_subband_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.parse_subband_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse a subband list from a parset or SAS/MAC / MoM spec.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>parset_subband_list <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd>Value of Observation.Beam[0].subbandList</dd>
+</dl>
+<p><strong>Returns</strong></p>
+<p>A list of integers containing the subband numbers.</p>
+<p><strong>Raises</strong></p>
+<dl class="docutils">
+<dt>ValueError</dt>
+<dd>If a syntax problem is encountered.</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sb_spec</span> <span class="o">=</span> <span class="s1">&#39;[154..163,185..194,215..224,245..254,275..284,10*374]&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parse_subband_list</span><span class="p">(</span><span class="n">sb_spec</span><span class="p">)</span>
+<span class="go">[154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 374, 374, 374, 374, 374, 374, 374, 374, 374, 374]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sb_spec</span> <span class="o">=</span> <span class="s1">&#39;[77..87,116..127,155..166,194..205,233..243,272..282]&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parse_subband_list</span><span class="p">(</span><span class="n">sb_spec</span><span class="p">)</span>
+<span class="go">[77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parse_subband_list</span><span class="p">(</span><span class="s1">&#39;[]&#39;</span><span class="p">)</span>
+<span class="go">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parse_subband_list</span><span class="p">(</span><span class="s1">&#39;1,2,10..15,200..202,400&#39;</span><span class="p">)</span>
+<span class="go">[1, 2, 10, 11, 12, 13, 14, 15, 200, 201, 202, 400]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.utilities.sort_station_list">
+<code class="descclassname">momxml.utilities.</code><code class="descname">sort_station_list</code><span class="sig-paren">(</span><em>stations</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/utilities.html#sort_station_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.sort_station_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sort a station list so we first get the CS, then the RS and EU in
+numerical order.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>stations <span class="classifier-delimiter">:</span> <span class="classifier">list of strings</span></dt>
+<dd>The station list to sort.</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sort_station_list</span><span class="p">([</span><span class="s1">&#39;UK608&#39;</span><span class="p">,</span> <span class="s1">&#39;RS407&#39;</span><span class="p">,</span> <span class="s1">&#39;DE603&#39;</span><span class="p">,</span> <span class="s1">&#39;RS106&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s1">&#39;RS205&#39;</span><span class="p">,</span> <span class="s1">&#39;CS026&#39;</span><span class="p">,</span> <span class="s1">&#39;SE607&#39;</span><span class="p">,</span> <span class="s1">&#39;CS501&#39;</span><span class="p">,</span> <span class="s1">&#39;DE605&#39;</span><span class="p">,</span> <span class="s1">&#39;RS509&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s1">&#39;CS001&#39;</span><span class="p">])</span>
+<span class="go">[&#39;CS001&#39;, &#39;CS026&#39;, &#39;CS501&#39;, &#39;RS106&#39;, &#39;RS205&#39;, &#39;RS407&#39;, &#39;RS509&#39;, &#39;DE603&#39;, &#39;DE605&#39;, &#39;SE607&#39;, &#39;UK608&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sort_station_list</span><span class="p">([</span><span class="s1">&#39;UK608HBA&#39;</span><span class="p">,</span> <span class="s1">&#39;RS407HBA&#39;</span><span class="p">,</span> <span class="s1">&#39;DE603HBA&#39;</span><span class="p">,</span> <span class="s1">&#39;RS106HBA&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s1">&#39;CS026HBA1&#39;</span><span class="p">,</span> <span class="s1">&#39;SE607HBA&#39;</span><span class="p">,</span> <span class="s1">&#39;CS026HBA0&#39;</span><span class="p">,</span> <span class="s1">&#39;CS501HBA0&#39;</span><span class="p">,</span> <span class="s1">&#39;DE605HBA&#39;</span><span class="p">,</span> <span class="s1">&#39;RS509HBA&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s1">&#39;CS001HBA1&#39;</span><span class="p">])</span>
+<span class="go">[&#39;CS001HBA1&#39;, &#39;CS026HBA0&#39;, &#39;CS026HBA1&#39;, &#39;CS501HBA0&#39;, &#39;RS106HBA&#39;, &#39;RS407HBA&#39;, &#39;RS509HBA&#39;, &#39;DE603HBA&#39;, &#39;DE605HBA&#39;, &#39;SE607HBA&#39;, &#39;UK608HBA&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.utilities.station_list">
+<code class="descclassname">momxml.utilities.</code><code class="descname">station_list</code><span class="sig-paren">(</span><em>station_set</em>, <em>include=None</em>, <em>exclude=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/utilities.html#station_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.station_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a sorted list of station names, given a station set name,
+a list of stations to include, and a list of stations to
+exclude. Names use upper case letters.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>station_set <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd>One of &#8216;superterp&#8217;, &#8216;core&#8217;, &#8216;remote&#8217;, &#8216;nl&#8217;, &#8216;all&#8217;, or &#8216;none&#8217;, where
+&#8216;nl&#8217; is the concatenation of the &#8216;core&#8217; and &#8216;remote&#8217; sets, and
+all is &#8216;nl&#8217; plus &#8216;eu&#8217;.</dd>
+<dt>include <span class="classifier-delimiter">:</span> <span class="classifier">None or list of strings</span></dt>
+<dd>List of station names to append to the station set.</dd>
+<dt>exclude <span class="classifier-delimiter">:</span> <span class="classifier">None or list of strings</span></dt>
+<dd>List of station names to remove from the station set.</dd>
+</dl>
+<p><strong>Returns</strong></p>
+<p>A sorted list of strings containing LOFAR station names.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">station_list</span><span class="p">(</span><span class="s1">&#39;superterp&#39;</span><span class="p">)</span>
+<span class="go">[&#39;CS002&#39;, &#39;CS003&#39;, &#39;CS004&#39;, &#39;CS005&#39;, &#39;CS006&#39;, &#39;CS007&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">station_list</span><span class="p">(</span><span class="s1">&#39;core&#39;</span><span class="p">))</span>
+<span class="go">24</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">station_list</span><span class="p">(</span><span class="s1">&#39;remote&#39;</span><span class="p">)</span>
+<span class="go">[&#39;RS106&#39;, &#39;RS205&#39;, &#39;RS208&#39;, &#39;RS210&#39;, &#39;RS305&#39;, &#39;RS306&#39;, &#39;RS307&#39;, &#39;RS310&#39;, &#39;RS406&#39;, &#39;RS407&#39;, &#39;RS409&#39;, &#39;RS503&#39;, &#39;RS508&#39;, &#39;RS509&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">station_list</span><span class="p">(</span><span class="s1">&#39;nl&#39;</span><span class="p">))</span>
+<span class="go">38</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="n">station_list</span><span class="p">(</span><span class="s1">&#39;nl&#39;</span><span class="p">,</span> <span class="n">exclude</span> <span class="o">=</span> <span class="n">station_list</span><span class="p">(</span><span class="s1">&#39;remote&#39;</span><span class="p">))</span> <span class="o">==</span>
+<span class="gp">... </span> <span class="n">station_list</span><span class="p">(</span><span class="s1">&#39;core&#39;</span><span class="p">))</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">station_list</span><span class="p">(</span><span class="s1">&#39;eu&#39;</span><span class="p">)</span>
+<span class="go">[&#39;DE601&#39;, &#39;DE602&#39;, &#39;DE603&#39;, &#39;DE604&#39;, &#39;DE605&#39;, &#39;FR606&#39;, &#39;SE607&#39;, &#39;UK608&#39;, &#39;DE609&#39;, &#39;PL610&#39;, &#39;PL611&#39;, &#39;PL612&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">station_list</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span><span class="o">==</span><span class="n">station_list</span><span class="p">(</span><span class="s1">&#39;nl&#39;</span><span class="p">,</span> <span class="n">include</span><span class="o">=</span><span class="n">station_list</span><span class="p">(</span><span class="s1">&#39;eu&#39;</span><span class="p">))</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">unique</span><span class="p">(</span><span class="n">station_list</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)))</span>
+<span class="go">50</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">station_list</span><span class="p">(</span><span class="s1">&#39;wsrt&#39;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="c">...</span>
+<span class="gr">lofarobsxml.utilities.InvalidStationSetError</span>: <span class="n">wsrt is not a valid station set.</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.utilities.typecheck">
+<code class="descclassname">momxml.utilities.</code><code class="descname">typecheck</code><span class="sig-paren">(</span><em>variable</em>, <em>type_class</em>, <em>name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/utilities.html#typecheck"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.typecheck" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raise TypeError if <code class="docutils literal"><span class="pre">variable</span></code> is not an instance of
+<code class="docutils literal"><span class="pre">type_class</span></code>.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>variable <span class="classifier-delimiter">:</span> <span class="classifier">any object</span></dt>
+<dd>The variable that will be type-checked.</dd>
+<dt>type_class <span class="classifier-delimiter">:</span> <span class="classifier">type or list of types</span></dt>
+<dd>The desired type of <code class="docutils literal"><span class="pre">variable</span></code>.</dd>
+<dt>name <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd>A descriptive name of the variable, used in the error
+message.</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">typecheck</span><span class="p">(</span><span class="mf">4.0</span> <span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">typecheck</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="bp">None</span><span class="p">)])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">typecheck</span><span class="p">(</span><span class="mi">5</span>   <span class="p">,</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="bp">None</span><span class="p">)])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">typecheck</span><span class="p">(</span><span class="mf">4.0</span><span class="p">,</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="bp">None</span><span class="p">)])</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="c">...</span>
+<span class="gr">TypeError</span>: <span class="n">type(4.0) not in [&#39;int&#39;, &#39;NoneType&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;blaargh&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">typecheck</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="c">...</span>
+<span class="gr">TypeError</span>: <span class="n">type(a)(&#39;blaargh&#39;) not in [&#39;int&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.utilities.unique">
+<code class="descclassname">momxml.utilities.</code><code class="descname">unique</code><span class="sig-paren">(</span><em>sequence</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/utilities.html#unique"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.unique" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list containing all unique elements of a sequence.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>sequence <span class="classifier-delimiter">:</span> <span class="classifier">sequence</span></dt>
+<dd>List from which to return all unique elements.</dd>
+</dl>
+<p><strong>Returns</strong></p>
+<p>A list.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">unique</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="go">[1, 2, 3, 4]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.utilities.validate_enumeration">
+<code class="descclassname">momxml.utilities.</code><code class="descname">validate_enumeration</code><span class="sig-paren">(</span><em>name</em>, <em>value</em>, <em>allowed</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/utilities.html#validate_enumeration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.validate_enumeration" title="Permalink to this definition">¶</a></dt>
+<dd><p>If <code class="docutils literal"><span class="pre">value</span></code> of kind <code class="docutils literal"><span class="pre">name</span></code> is not in the list of <code class="docutils literal"><span class="pre">allowed</span></code>
+values, raise a <code class="docutils literal"><span class="pre">ValueError</span></code>. Very useful to verify if a caller
+provided a wrong value for a string that is part of an
+enumeration.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>name <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd>The kind of thing the value could represent.</dd>
+<dt>value <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd>The value to be tested.</dd>
+<dt>allowed <span class="classifier-delimiter">:</span> <span class="classifier">list of strings</span></dt>
+<dd>List of all valid values.</dd>
+</dl>
+<p><strong>Returns</strong></p>
+<p>True if <code class="docutils literal"><span class="pre">value</span></code> is in <code class="docutils literal"><span class="pre">allowed</span></code>.</p>
+<p><strong>Raises</strong></p>
+<dl class="docutils">
+<dt>ValueError</dt>
+<dd>If <code class="docutils literal"><span class="pre">value</span></code> is not in <code class="docutils literal"><span class="pre">allowed</span></code>.</dd>
+</dl>
+<p><strong>Example</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">validate_enumeration</span><span class="p">(</span><span class="s1">&#39;station set&#39;</span><span class="p">,</span> <span class="s1">&#39;core&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                     <span class="n">allowed</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;core&#39;</span><span class="p">,</span> <span class="s1">&#39;remote&#39;</span><span class="p">,</span> <span class="s1">&#39;nl&#39;</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">])</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">validate_enumeration</span><span class="p">(</span><span class="s1">&#39;station set&#39;</span><span class="p">,</span> <span class="s1">&#39;wsrt&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                     <span class="n">allowed</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;core&#39;</span><span class="p">,</span> <span class="s1">&#39;remote&#39;</span><span class="p">,</span> <span class="s1">&#39;nl&#39;</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">])</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="c">...</span>
+<span class="gr">ValueError</span>: <span class="n">&#39;wsrt&#39; is not a valid station set; choose one of &#39;core&#39;, &#39;remote&#39;, &#39;nl&#39;, &#39;all&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="momxml.utilities.with_auto_repr">
+<code class="descclassname">momxml.utilities.</code><code class="descname">with_auto_repr</code><span class="sig-paren">(</span><em>cls</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/utilities.html#with_auto_repr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.utilities.with_auto_repr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class decorator that adds a nicer default __repr__ method to a class.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Elements</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">aa</span> <span class="o">=</span> <span class="n">Elements</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">aa</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">16</span><span class="p">])</span>
+<span class="go">&lt;lofarobsxml.utilities.Elements object at</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Elements</span> <span class="o">=</span> <span class="n">with_auto_repr</span><span class="p">(</span><span class="n">Elements</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bb</span> <span class="o">=</span> <span class="n">Elements</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;v&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">bb</span><span class="p">))</span>
+<span class="go">Elements(a = 1,</span>
+<span class="go">         b = &#39;v&#39;)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-momxml.observationspecificationbase">
+<span id="momxml-observationspecificationbase"></span><h2><code class="docutils literal"><span class="pre">momxml.observationspecificationbase</span></code><a class="headerlink" href="#module-momxml.observationspecificationbase" title="Permalink to this headline">¶</a></h2>
+<p>A base class for classes that generate (part of) the xml needed to
+enter information into MoM.</p>
+<dl class="class">
+<dt id="momxml.observationspecificationbase.ObservationSpecificationBase">
+<em class="property">class </em><code class="descclassname">momxml.observationspecificationbase.</code><code class="descname">ObservationSpecificationBase</code><span class="sig-paren">(</span><em>name</em>, <em>parent=None</em>, <em>children=None</em>, <em>initial_status='opened'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/observationspecificationbase.html#ObservationSpecificationBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.observationspecificationbase.ObservationSpecificationBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>A base class from which to derive instances which can generate
+specifications for observations and pipelines in formats that MoM,
+the XML Generator by Alwin de Jong, or users can read.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>name <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd>A free form string labelling the instance.</dd>
+<dt>parent <span class="classifier-delimiter">:</span> <span class="classifier">ObservationSpecificationBase instance</span></dt>
+<dd>The parent of the curent instance.</dd>
+<dt>children <span class="classifier-delimiter">:</span> <span class="classifier">None or a list of ObservationSpecificationBase</span></dt>
+<dd>The children of the current instance.</dd>
+<dt>initial_status <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd>Either &#8216;opened&#8217; or &#8216;approved&#8217;</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">OSB</span> <span class="o">=</span> <span class="n">ObservationSpecificationBase</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="momxml.observationspecificationbase.ObservationSpecificationBase.append_child">
+<code class="descname">append_child</code><span class="sig-paren">(</span><em>instance</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/observationspecificationbase.html#ObservationSpecificationBase.append_child"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.observationspecificationbase.ObservationSpecificationBase.append_child" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append a child to <code class="docutils literal"><span class="pre">self.children</span></code>. This method also calls
+set_parent() on the the child, to ensure that the parent is
+set correctly.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>instance <span class="classifier-delimiter">:</span> <span class="classifier">ObservationSpecificationBase</span></dt>
+<dd>The object to add to self.children.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.observationspecificationbase.ObservationSpecificationBase.child_id">
+<code class="descname">child_id</code><span class="sig-paren">(</span><em>instance</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/observationspecificationbase.html#ObservationSpecificationBase.child_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.observationspecificationbase.ObservationSpecificationBase.child_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the child ID of object <code class="docutils literal"><span class="pre">instance</span></code> if it is in
+<code class="docutils literal"><span class="pre">self.children</span></code></p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>instance <span class="classifier-delimiter">:</span> <span class="classifier">ObservationSpecificationBase</span></dt>
+<dd>The instance for which one wants the position in the
+<code class="docutils literal"><span class="pre">self.children</span></code> list.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.observationspecificationbase.ObservationSpecificationBase.label">
+<code class="descname">label</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/observationspecificationbase.html#ObservationSpecificationBase.label"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.observationspecificationbase.ObservationSpecificationBase.label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an ascii label that reflects the full path of the
+current instance in the observation set specification.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.observationspecificationbase.ObservationSpecificationBase.set_parent">
+<code class="descname">set_parent</code><span class="sig-paren">(</span><em>instance</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/observationspecificationbase.html#ObservationSpecificationBase.set_parent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.observationspecificationbase.ObservationSpecificationBase.set_parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set self.parent to <code class="docutils literal"><span class="pre">instance</span></code>.</p>
+<p><strong>Parameters</strong></p>
+<dl class="docutils">
+<dt>instance <span class="classifier-delimiter">:</span> <span class="classifier">ObservationSpecificationBase</span></dt>
+<dd>The instance of the parent node.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.observationspecificationbase.ObservationSpecificationBase.tree_depth">
+<code class="descname">tree_depth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/observationspecificationbase.html#ObservationSpecificationBase.tree_depth"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.observationspecificationbase.ObservationSpecificationBase.tree_depth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the depth of the current node in the tree. A node
+without parent is automatically at depth 0.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.observationspecificationbase.ObservationSpecificationBase.xml">
+<code class="descname">xml</code><span class="sig-paren">(</span><em>project_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/observationspecificationbase.html#ObservationSpecificationBase.xml"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.observationspecificationbase.ObservationSpecificationBase.xml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Actually generate the required XML. This method calls two
+other methods, which may be overridden: xml_prefix() and
+xml_suffix().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.observationspecificationbase.ObservationSpecificationBase.xml_prefix">
+<code class="descname">xml_prefix</code><span class="sig-paren">(</span><em>project_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/observationspecificationbase.html#ObservationSpecificationBase.xml_prefix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.observationspecificationbase.ObservationSpecificationBase.xml_prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the XML content that goes before the child list.
+Should return a string. This is one of the two virtual
+methods. The other one is <code class="docutils literal"><span class="pre">xml_suffix()</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="momxml.observationspecificationbase.ObservationSpecificationBase.xml_suffix">
+<code class="descname">xml_suffix</code><span class="sig-paren">(</span><em>project_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/momxml/observationspecificationbase.html#ObservationSpecificationBase.xml_suffix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#momxml.observationspecificationbase.ObservationSpecificationBase.xml_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the XML content that goes after the child
+list. Should return a string. This is one of the two virtual
+methods. The other one is <code class="docutils literal"><span class="pre">xml_prefix()</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">momxml</span></code> modules</a><ul>
+<li><a class="reference internal" href="#module-momxml"><code class="docutils literal"><span class="pre">momxml</span></code></a></li>
+<li><a class="reference internal" href="#module-momxml.observation"><code class="docutils literal"><span class="pre">momxml.observation</span></code></a></li>
+<li><a class="reference internal" href="#module-momxml.beam"><code class="docutils literal"><span class="pre">momxml.beam</span></code></a></li>
+<li><a class="reference internal" href="#module-momxml.targetsource"><code class="docutils literal"><span class="pre">momxml.targetsource</span></code></a></li>
+<li><a class="reference internal" href="#module-momxml.backend"><code class="docutils literal"><span class="pre">momxml.backend</span></code></a></li>
+<li><a class="reference internal" href="#module-momxml.pipelines"><code class="docutils literal"><span class="pre">momxml.pipelines</span></code></a></li>
+<li><a class="reference internal" href="#module-momxml.angles"><code class="docutils literal"><span class="pre">momxml.angles</span></code></a></li>
+<li><a class="reference internal" href="#module-momxml.utilities"><code class="docutils literal"><span class="pre">momxml.utilities</span></code></a></li>
+<li><a class="reference internal" href="#module-momxml.observationspecificationbase"><code class="docutils literal"><span class="pre">momxml.observationspecificationbase</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="readme.html"
+                        title="previous chapter">README</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/momxml.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="readme.html" title="README"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Genvalobs / momxml 1.7 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013, M.A. Brentjens.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+  </body>
+</html>

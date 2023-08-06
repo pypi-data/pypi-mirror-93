@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>momxml.beam &mdash; Genvalobs / momxml 1.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Genvalobs / momxml 1.7 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Genvalobs / momxml 1.7 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for momxml.beam</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">lofarobsxml.observationspecificationbase</span> <span class="kn">import</span> <span class="n">ObservationSpecificationBase</span>
+<span class="kn">from</span> <span class="nn">lofarobsxml.momformats</span> <span class="kn">import</span> <span class="n">mom_duration</span>
+<span class="kn">from</span> <span class="nn">lofarobsxml.utilities</span> <span class="kn">import</span> <span class="n">parse_subband_list</span><span class="p">,</span> <span class="n">indent</span>
+
+<div class="viewcode-block" id="Beam"><a class="viewcode-back" href="../../momxml.html#momxml.beam.Beam">[docs]</a><span class="k">class</span> <span class="nc">Beam</span><span class="p">(</span><span class="n">ObservationSpecificationBase</span><span class="p">):</span>
+    <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">    Represents a beam within an Observation. Beams (Sub Array</span>
+<span class="sd">    Pointings) are one of the possible kinds of children of an</span>
+<span class="sd">    observation. Pipelines are another kind of observation</span>
+<span class="sd">    children. To fully generate its XML, a Beam needs information from</span>
+<span class="sd">    its parent Observation.</span>
+
+<span class="sd">    **Parameters**</span>
+<span class="sd">    </span>
+<span class="sd">    target_source :  TargetSource</span>
+<span class="sd">        Contains the name and direction in which to observe.</span>
+
+<span class="sd">    subband_spec : string or list of int</span>
+<span class="sd">        Sub band specification for this beam. Examples: &#39;77..324&#39;,</span>
+<span class="sd">        [100, 200]</span>
+
+<span class="sd">    duration_s : None or number</span>
+<span class="sd">        Duration during which the beam is active. None implies during</span>
+<span class="sd">        the entire observation.</span>
+
+<span class="sd">    measurement_type : &#39;Target&#39; or &#39;Calibration&#39;</span>
+<span class="sd">        Gives some intent for the observation.</span>
+
+
+<span class="sd">    **Examples**</span>
+
+<span class="sd">    &gt;&gt;&gt; from lofarobsxml import TargetSource, Angle</span>
+<span class="sd">    &gt;&gt;&gt; from lofarobsxml.backend import BackendProcessing</span>
+<span class="sd">    &gt;&gt;&gt; target = TargetSource(name      = &#39;Cyg A&#39;,</span>
+<span class="sd">    ...                       ra_angle  = Angle(hms  = (19, 59, 28.3566)),</span>
+<span class="sd">    ...                       dec_angle = Angle(sdms = (&#39;+&#39;, 40, 44, 2.097)))</span>
+
+<span class="sd">    &gt;&gt;&gt; bm = Beam(target, &#39;77..324&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; bm</span>
+<span class="sd">    Beam(parent           = NoneType,</span>
+<span class="sd">         children         = None,</span>
+<span class="sd">         duration_s       = None,</span>
+<span class="sd">         initial_status   = &#39;opened&#39;,</span>
+<span class="sd">         measurement_type = &#39;Target&#39;,</span>
+<span class="sd">         name             = &#39;Cyg A&#39;,</span>
+<span class="sd">         subband_spec     = &#39;77..324&#39;,</span>
+<span class="sd">         target_source    = TargetSource(name      = &#39;Cyg A&#39;,</span>
+<span class="sd">                                         ra_angle  = Angle(shms = (&#39;+&#39;, 19, 59, 28.3566)),</span>
+<span class="sd">                                         dec_angle = Angle(sdms = (&#39;+&#39;, 40, 44, 2.097))),</span>
+<span class="sd">         tied_array_beams = None)</span>
+<span class="sd">    &gt;&gt;&gt; observation_stub = ObservationSpecificationBase(&#39;Observation&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; observation_stub.backend = BackendProcessing()</span>
+<span class="sd">    &gt;&gt;&gt; observation_stub.clock_mhz = 200</span>
+<span class="sd">    &gt;&gt;&gt; observation_stub.frequency_range = &#39;HBA_LOW&#39;</span>
+<span class="sd">    &gt;&gt;&gt; observation_stub.append_child(bm)</span>
+<span class="sd">    &gt;&gt;&gt; print(bm.xml(&#39;Project name&#39;))</span>
+<span class="sd">    &lt;lofar:measurement xsi:type=&quot;lofar:UVMeasurementType&quot;&gt;</span>
+<span class="sd">    &lt;name&gt;Cyg A&lt;/name&gt;</span>
+<span class="sd">    &lt;description&gt;Observation&lt;/description&gt;</span>
+<span class="sd">    &lt;topology&gt;Observation.0.Cyg_A&lt;/topology&gt;</span>
+<span class="sd">    &lt;currentStatus&gt;</span>
+<span class="sd">      &lt;mom2:openedStatus/&gt;</span>
+<span class="sd">    &lt;/currentStatus&gt;</span>
+<span class="sd">    &lt;lofar:uvMeasurementAttributes&gt;</span>
+<span class="sd">      &lt;measurementType&gt;Target&lt;/measurementType&gt;</span>
+<span class="sd">      &lt;specification&gt;</span>
+<span class="sd">        &lt;targetName&gt;Cyg A&lt;/targetName&gt;</span>
+<span class="sd">        &lt;ra&gt;299.8681525&lt;/ra&gt;</span>
+<span class="sd">        &lt;dec&gt;40.733915833333334&lt;/dec&gt;</span>
+<span class="sd">        &lt;equinox&gt;J2000&lt;/equinox&gt;</span>
+<span class="sd">        &lt;duration&gt;PT00S&lt;/duration&gt;</span>
+<span class="sd">        &lt;subbandsSpecification&gt;</span>
+<span class="sd">          &lt;bandWidth unit=&quot;MHz&quot;&gt;48.4375&lt;/bandWidth&gt;</span>
+<span class="sd">          &lt;centralFrequency unit=&quot;MHz&quot;&gt;139.1602&lt;/centralFrequency&gt;</span>
+<span class="sd">          &lt;contiguous&gt;false&lt;/contiguous&gt;</span>
+<span class="sd">          &lt;subbands&gt;77..324&lt;/subbands&gt;</span>
+<span class="sd">        &lt;/subbandsSpecification&gt;</span>
+<span class="sd">      &lt;/specification&gt;</span>
+<span class="sd">    &lt;/lofar:uvMeasurementAttributes&gt;</span>
+<span class="sd">    &lt;resultDataProducts&gt;</span>
+<span class="sd">      &lt;item&gt;</span>
+<span class="sd">        &lt;lofar:uvDataProduct&gt;</span>
+<span class="sd">          &lt;name&gt;Observation.0.Cyg_A.dps&lt;/name&gt;</span>
+<span class="sd">          &lt;topology&gt;Observation.0.Cyg_A.dps&lt;/topology&gt;</span>
+<span class="sd">          &lt;status&gt;no_data&lt;/status&gt;</span>
+<span class="sd">        &lt;/lofar:uvDataProduct&gt;</span>
+<span class="sd">      &lt;/item&gt;</span>
+<span class="sd">    &lt;/resultDataProducts&gt;</span>
+<span class="sd">    &lt;/lofar:measurement&gt;</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_source</span><span class="p">,</span> <span class="n">subband_spec</span><span class="p">,</span>
+                 <span class="n">duration_s</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                 <span class="n">tied_array_beams</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                 <span class="n">measurement_type</span><span class="o">=</span><span class="s1">&#39;Target&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Beam</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">target_source</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                   <span class="n">parent</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">children</span> <span class="o">=</span> <span class="bp">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_source</span>    <span class="o">=</span> <span class="n">target_source</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subband_spec</span>     <span class="o">=</span> <span class="n">subband_spec</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">measurement_type</span> <span class="o">=</span> <span class="n">measurement_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">duration_s</span>       <span class="o">=</span> <span class="n">duration_s</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tied_array_beams</span> <span class="o">=</span> <span class="n">tied_array_beams</span>
+
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">subband_spec</span><span class="p">)</span> <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">subband_spec</span>     <span class="o">=</span> <span class="n">subband_spec</span>
+        <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">subband_spec</span><span class="p">)</span> <span class="o">==</span> <span class="nb">type</span><span class="p">([]):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">subband_spec</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">sub</span><span class="p">)</span> <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">subband_spec</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;subband_spec(</span><span class="si">%r</span><span class="s1">) is not a string list of ints&#39;</span> <span class="o">%</span>
+                             <span class="n">subband_spec</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">measurement_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Target&#39;</span><span class="p">,</span> <span class="s1">&#39;Calibration&#39;</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;measurement_type </span><span class="si">%r</span><span class="s1"> not in [</span><span class="se">\&#39;</span><span class="s1">Target</span><span class="se">\&#39;</span><span class="s1">, </span><span class="se">\&#39;</span><span class="s1">Calibration</span><span class="se">\&#39;</span><span class="s1">]&#39;</span> <span class="o">%</span>
+                <span class="n">measurement_type</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Beam.data_products_label"><a class="viewcode-back" href="../../momxml.html#momxml.beam.Beam.data_products_label">[docs]</a>    <span class="k">def</span> <span class="nf">data_products_label</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;</span>
+<span class="sd">        Return the name of the data products produced by this beam.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="p">()</span><span class="o">+</span><span class="s1">&#39;.dps&#39;</span></div>
+
+
+
+    <span class="k">def</span> <span class="nf">xml_prefix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">project_name</span><span class="p">,</span> <span class="n">current_date</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+        <span class="n">backend</span>    <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">backend</span>
+        <span class="n">obs_name</span>   <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_source</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">name</span><span class="p">:</span>
+            <span class="n">obs_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">name</span>
+
+        <span class="n">duration_s</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">duration_s</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">duration_s</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">duration_s</span><span class="p">))</span>
+
+        <span class="n">tied_array_beams</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">backend</span><span class="o">.</span><span class="n">need_beam_observation</span><span class="p">()</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">tied_array_beams</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tied_array_beams</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">tied_array_beams</span> <span class="o">=</span> <span class="n">backend</span><span class="o">.</span><span class="n">tied_array_beams</span>
+            <span class="n">tied_array_beams</span> <span class="o">=</span> <span class="n">indent</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">tied_array_beams</span><span class="o">.</span><span class="n">xml</span><span class="p">(</span><span class="n">project_name</span><span class="p">),</span>
+                <span class="n">amount</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
+
+        <span class="n">result_data_products</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">backend</span><span class="o">.</span><span class="n">need_beam_observation</span><span class="p">():</span>
+            <span class="n">result_data_products</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&lt;resultDataProducts&gt;</span>
+<span class="s1">  &lt;item&gt;</span>
+<span class="s1">    &lt;lofar:uvDataProduct&gt;</span>
+<span class="s1">      &lt;name&gt;</span><span class="si">%(label)s</span><span class="s1">&lt;/name&gt;</span>
+<span class="s1">      &lt;topology&gt;</span><span class="si">%(label)s</span><span class="s1">&lt;/topology&gt;</span>
+<span class="s1">      &lt;status&gt;no_data&lt;/status&gt;</span>
+<span class="s1">    &lt;/lofar:uvDataProduct&gt;</span>
+<span class="s1">  &lt;/item&gt;</span>
+<span class="s1">&lt;/resultDataProducts&gt;&#39;&#39;&#39;</span> <span class="o">%</span> <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_products_label</span><span class="p">()}</span>
+        
+        <span class="n">sub_bands</span>     <span class="o">=</span> <span class="n">parse_subband_list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">subband_spec</span><span class="p">)</span>
+        <span class="n">bandwidth_mhz</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sub_bands</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">clock_mhz</span><span class="o">/</span><span class="mf">1024.0</span><span class="p">)</span>
+        <span class="n">mean_sub_band</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">sub_bands</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sub_bands</span><span class="p">))</span>
+        <span class="n">central_frequency_mhz</span> <span class="o">=</span> <span class="n">mean_sub_band</span><span class="o">*</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">clock_mhz</span><span class="o">/</span><span class="mf">1024.0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">frequency_range</span> <span class="o">==</span> <span class="s1">&#39;HBA_LOW&#39;</span><span class="p">:</span>
+            <span class="n">central_frequency_mhz</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">clock_mhz</span><span class="o">/</span><span class="mf">2.0</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">frequency_range</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;HBA_MID&#39;</span><span class="p">,</span> <span class="s1">&#39;HBA_HIGH&#39;</span><span class="p">]:</span>
+            <span class="n">central_frequency_mhz</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">clock_mhz</span>
+
+        <span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;backend_measurement_type&#39;</span> <span class="p">:</span> <span class="n">backend</span><span class="o">.</span><span class="n">measurement_type</span><span class="p">(),</span>
+            <span class="s1">&#39;name&#39;</span>                     <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_source</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s1">&#39;description&#39;</span>              <span class="p">:</span> <span class="n">obs_name</span><span class="p">,</span>
+            <span class="s1">&#39;topology&#39;</span>                 <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="p">(),</span>
+            <span class="s1">&#39;backend_attributes&#39;</span>       <span class="p">:</span> <span class="n">backend</span><span class="o">.</span><span class="n">measurement_attributes</span><span class="p">(),</span>
+            <span class="s1">&#39;measurement_type&#39;</span>         <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">measurement_type</span><span class="p">,</span>
+            <span class="s1">&#39;target_name&#39;</span>              <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_source</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s1">&#39;ra_deg&#39;</span>                   <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_source</span><span class="o">.</span><span class="n">ra_deg</span><span class="p">(),</span>
+            <span class="s1">&#39;dec_deg&#39;</span>                  <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_source</span><span class="o">.</span><span class="n">dec_deg</span><span class="p">(),</span>
+            <span class="s1">&#39;reference_frame&#39;</span>          <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_source</span><span class="o">.</span><span class="n">reference_frame</span><span class="p">,</span>
+            <span class="s1">&#39;mom_duration&#39;</span>             <span class="p">:</span> <span class="n">mom_duration</span><span class="p">(</span><span class="n">seconds</span> <span class="o">=</span> <span class="n">duration_s</span><span class="p">),</span>
+            <span class="s1">&#39;bandwidth_mhz&#39;</span>            <span class="p">:</span> <span class="n">bandwidth_mhz</span><span class="p">,</span>
+            <span class="s1">&#39;central_frequency_mhz&#39;</span>    <span class="p">:</span> <span class="n">central_frequency_mhz</span><span class="p">,</span>
+            <span class="s1">&#39;subband_spec&#39;</span>             <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">subband_spec</span><span class="p">,</span>
+            <span class="s1">&#39;tied_array_beams&#39;</span>         <span class="p">:</span> <span class="n">tied_array_beams</span><span class="p">,</span>
+            <span class="s1">&#39;result_data_products&#39;</span>     <span class="p">:</span> <span class="n">result_data_products</span><span class="p">,</span>
+            <span class="s1">&#39;initial_status&#39;</span>           <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">initial_status</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">prefix_format</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;&lt;lofar:measurement xsi:type=</span><span class="se">\&quot;</span><span class="si">%(backend_measurement_type)s</span><span class="se">\&quot;</span><span class="s1">&gt;</span>
+<span class="s1">&lt;name&gt;</span><span class="si">%(name)s</span><span class="s1">&lt;/name&gt;</span>
+<span class="s1">&lt;description&gt;</span><span class="si">%(description)s</span><span class="s1">&lt;/description&gt;</span>
+<span class="s1">&lt;topology&gt;</span><span class="si">%(topology)s</span><span class="s1">&lt;/topology&gt;</span>
+<span class="s1">&lt;currentStatus&gt;</span>
+<span class="s1">  &lt;mom2:</span><span class="si">%(initial_status)s</span><span class="s1">Status/&gt;</span>
+<span class="s1">&lt;/currentStatus&gt;</span>
+<span class="s1">&lt;lofar:</span><span class="si">%(backend_attributes)s</span><span class="s1">&gt;</span>
+<span class="s1">  &lt;measurementType&gt;</span><span class="si">%(measurement_type)s</span><span class="s1">&lt;/measurementType&gt;</span>
+<span class="s1">  &lt;specification&gt;</span>
+<span class="s1">    &lt;targetName&gt;</span><span class="si">%(target_name)s</span><span class="s1">&lt;/targetName&gt;</span>
+<span class="s1">    &lt;ra&gt;</span><span class="si">%(ra_deg)r</span><span class="s1">&lt;/ra&gt;</span>
+<span class="s1">    &lt;dec&gt;</span><span class="si">%(dec_deg)r</span><span class="s1">&lt;/dec&gt;</span>
+<span class="s1">    &lt;equinox&gt;</span><span class="si">%(reference_frame)s</span><span class="s1">&lt;/equinox&gt;</span>
+<span class="s1">    &lt;duration&gt;</span><span class="si">%(mom_duration)s</span><span class="s1">&lt;/duration&gt;</span>
+<span class="s1">    &lt;subbandsSpecification&gt;</span>
+<span class="s1">      &lt;bandWidth unit=</span><span class="se">\&quot;</span><span class="s1">MHz</span><span class="se">\&quot;</span><span class="s1">&gt;</span><span class="si">%(bandwidth_mhz).4f</span><span class="s1">&lt;/bandWidth&gt;</span>
+<span class="s1">      &lt;centralFrequency unit=</span><span class="se">\&quot;</span><span class="s1">MHz</span><span class="se">\&quot;</span><span class="s1">&gt;</span><span class="si">%(central_frequency_mhz).4f</span><span class="s1">&lt;/centralFrequency&gt;</span>
+<span class="s1">      &lt;contiguous&gt;false&lt;/contiguous&gt;</span>
+<span class="s1">      &lt;subbands&gt;</span><span class="si">%(subband_spec)s</span><span class="s1">&lt;/subbands&gt;</span>
+<span class="s1">    &lt;/subbandsSpecification&gt;</span><span class="si">%(tied_array_beams)s</span><span class="s1"></span>
+<span class="s1">  &lt;/specification&gt;</span>
+<span class="s1">&lt;/lofar:</span><span class="si">%(backend_attributes)s</span><span class="s1">&gt;</span><span class="si">%(result_data_products)s</span><span class="s1">&#39;&#39;&#39;</span>
+
+        <span class="k">return</span> <span class="n">prefix_format</span> <span class="o">%</span> <span class="n">parameters</span>
+
+        
+    <span class="k">def</span> <span class="nf">xml_suffix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">project_name</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&lt;/lofar:measurement&gt;&#39;</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Genvalobs / momxml 1.7 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013, M.A. Brentjens.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>README &mdash; Genvalobs / momxml 1.7 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Genvalobs / momxml 1.7 documentation" href="index.html" />
+    <link rel="next" title="momxml modules" href="momxml.html" />
+    <link rel="prev" title="Welcome to Genvalobs / momxml’s documentation!" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="momxml.html" title="momxml modules"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Genvalobs / momxml’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Genvalobs / momxml 1.7 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="readme">
+<h1>README<a class="headerlink" href="#readme" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>The genvalobs program is a Python script that generates an XML file
+containing MoM specifications for a set of system validation
+observations for LOFAR. One can specify a target source (Cyg A, Vir A,
+3C 196, Cas A), and a planned start date in UTC. The script will then
+generate an XML file with observations for all desired observing
+modes, using the specified target source and a given duration per
+observation and interval between observations.</p>
+<p>The Genvalobs is based on the momxml library (included in this
+package), which can be used to write your own python scripts to
+generate XML files that can be imported to LOFAR&#8217;s MoM system.</p>
+<p>Extensive documentation can be found in the doc/ directory. The
+generated HTML documentation is found in <code class="docutils literal"><span class="pre">doc/_build/html/</span></code></p>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Python 2.6 or newer and pyephem (<a class="reference external" href="http://rhodesmill.org/pyephem/">http://rhodesmill.org/pyephem/</a>).</p>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="mailto:user&#37;&#52;&#48;localhost">user<span>&#64;</span>localhost</a>:~/genvalobs/ $ sudo python2 setup.py install</p>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>usage: genvalobs [-h] [-o FILENAME] [-m CORRELATOR_MODE] [-d SECONDS]</dt>
+<dd>[-g SECONDS] [-s STATION_SET] [-i STATION_NAMES]
+[-e STATION_NAMES] [&#8211;min-alt DEGREES] [&#8211;max-alt DEGREES]
+[-c CLOCK_MHZ] [-w SECONDS] [-t DATE_STRING] [-p MOM_NAME]
+[-k STATIONS_TO_KEEP] [-f FILE_NAME] [-v]
+[source]</dd>
+</dl>
+<p>The (optional) source name must be enclosed in single or double
+quotes if it contains spaces. The following sources are recommended:</p>
+<ul class="simple">
+<li>&#8220;3C 48&#8221;  /  48: LST 22:30&#8211;04:30</li>
+<li>&#8220;3C 147&#8221; / 147: LST 02:30&#8211;08:30</li>
+<li>&#8220;3C 196&#8221; / 196: LST 05:00&#8211;11:00</li>
+<li>&#8220;3C 295&#8221; / 295: LST 11:00&#8211;17:00</li>
+<li>&#8220;Cyg A&#8221;  / cyg: LST 16:00&#8211;24:00</li>
+</ul>
+<p>If no source is specified, the program chooses the source that is
+closest to the meridian at the central LST of the observing
+sequence. The program has separate calibrator lists for LBA
+and HBA observations and pulsars.</p>
+<p>Although genvalobs has its own default sequence of observations, it is
+possible to read a custom set from an ASCII file with a fairly simple
+format. The specification consists of newline-separated observations
+where each observation is specified in a white-space separated line
+with format:</p>
+<blockquote>
+<div><p>&lt;ANTENNA_SET&gt; &lt;BAND&gt; &lt;SUBBANDS&gt; &lt;CLOCK&gt; &lt;BIT_MODE&gt; &lt;DATA_PRODUCTS&gt;</p>
+<ul>
+<li><dl class="first docutils">
+<dt>ANTENNA_SET: one of LBA_INNER, LBA_OUTER, HBA_ZERO, HBA_ONE,</dt>
+<dd><p class="first last">HBA_DUAL, HBA_JOINED, HBA_ZERO_INNER,
+HBA_ONE_INNER, HBA_DUAL_INNER</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">FREQUENCY_BAND: LBA_LOW, LBA_HIGH, HBA_LOW, HBA_MID, HBA_HIGH</p>
+</li>
+<li><dl class="first docutils">
+<dt>SUBBAND_LIST: comma-separated list of sub band ranges. Note: NO</dt>
+<dd><dl class="first last docutils">
+<dt>SPACES ALLOWED! Examples:</dt>
+<dd><ul class="first last simple">
+<li>12..499</li>
+<li>12..22,112..122,212..222</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+<li><p class="first">CLOCK_MHZ: either 200 or 160</p>
+</li>
+<li><p class="first">BIT_MODE: either 4, 8, or 16</p>
+</li>
+<li><dl class="first docutils">
+<dt>DATA_PRODUCTS: white-space separated list of products. Allowed:</dt>
+<dd><ul class="first last simple">
+<li>XC (cross-correlation)</li>
+<li>FE (fly&#8217;s eye)</li>
+<li>CS (coherent stokes)</li>
+<li>IS (incoherent stokes)</li>
+<li>TR (TAB rings)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Empty lines are ignored, comments start with # end run until the
+end of the line.</p>
+<p>Example file:</p>
+<blockquote>
+<div># Antennaset    Band      Subbands   Clock  Bits   Products
+LBA_OUTER       LBA_LOW   12..499    200     8     XC
+HBA_DUAL        HBA_LOW   12..499    200     8     XC
+LBA_INNER       LBA_HIGH  156..399   200    16     FE
+HBA_DUAL        HBA_LOW   77..320    200    16     IS
+HBA_DUAL        HBA_LOW   77..320    200    16     CS
+HBA_DUAL_INNER  HBA_MID   66..309    160    16     XC IS</div></blockquote>
+</div></blockquote>
+<p>Note that the custom sequence is subject to the same filtering by
+options -m, -c, etc. as the default observing sequence. The last entry
+is using the 160 MHz clock. It will only be used in the observation
+sequence if the 160 MHz is selected using the -c / &#8211;clock option.</p>
+<dl class="docutils">
+<dt>positional arguments:</dt>
+<dd><dl class="first last docutils">
+<dt>source                Force a source to be used for all observations,</dt>
+<dd>bypassing genvalobs&#8217; own heuristics.</dd>
+</dl>
+</dd>
+<dt>optional arguments:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>show this help message and exit</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-o <var>FILENAME</var></span>, <span class="option">--output <var>FILENAME</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Name of the output file [lofar-
+validation-20140701-101048.xml].</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-m <var>CORRELATOR_MODE</var></span>, <span class="option">--mode <var>CORRELATOR_MODE</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Correlator modes to test. Choose one of XC
+(crosscorrelation), FE (Fly&#8217;s eye), IS (incoherent
+stokes), or CS (coherent stokes). One can specify more
+than one mode. If this argument is not spedified, all
+modes will be tested [XC,FE,CS,IS,TR].</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-d <var>SECONDS</var></span>, <span class="option">--duration <var>SECONDS</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Duration of individual observations in seconds [120].</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-g <var>SECONDS</var></span>, <span class="option">--gap <var>SECONDS</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Gap between observations in seconds [60].</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-s <var>STATION_SET</var></span>, <span class="option">--stations <var>STATION_SET</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>One of superterp, core, remote, nl, eu, all, or none.
+EU stations that conflict with certain HBA1 core
+fields are excluded from the HBA_ONE, HBA_ONE_INNER,
+HBA_DUAL, and HBA_DUAL_INNER observations. They are
+taken along in all other observations [nl].</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-i <var>STATION_NAMES</var></span>, <span class="option">--include <var>STATION_NAMES</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Comma separated list of station names to include. No
+spaces allowed in the list. Example: -i
+cs013,de601,rs106</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-e <var>STATION_NAMES</var></span>, <span class="option">--exclude <var>STATION_NAMES</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Comma separated list of station names to exclude. No
+spaces allowed in the list. Example: -e
+cs013,de601,rs106</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--min-alt <var>DEGREES</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Minimum elevation for target sources [40.00].</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--max-alt <var>DEGREES</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Maximum elevation for target sources [70.00].</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-c <var>CLOCK_MHZ</var></span>, <span class="option">--clocks <var>CLOCK_MHZ</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Allowed clock frequencies. Choose 160 or 200. Option
+can be provided multiple times if more than one clock
+frequency is required.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-w <var>SECONDS</var></span>, <span class="option">--wait <var>SECONDS</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Number of seconds until the first observation [540].</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-t <var>DATE_STRING</var></span>, <span class="option">--start-date <var>DATE_STRING</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Specify an exact date and time to start the first
+observation. Format: &#8220;yyyy/mm/dd hh:mm:ss.s&#8221;</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-p <var>MOM_NAME</var></span>, <span class="option">--project <var>MOM_NAME</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Name of the observations&#8217; MoM project
+[&#8216;2014LOFAROBS&#8217;].</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-k <var>STATIONS_TO_KEEP</var></span>, <span class="option">--keep <var>STATIONS_TO_KEEP</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>In case of HBA_DUAL or HBA_ONE network conflicts, keep
+either &#8220;core&#8221;, &#8220;eu&#8221; stations, or &#8220;all&#8221; of them.
+[&#8216;core&#8217;].</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-f <var>FILE_NAME</var></span>, <span class="option">--from-file <var>FILE_NAME</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Read a custom observing sequence from FILE_NAME.</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-v</span>, <span class="option">--version</span></kbd></td>
+<td>Print version number and exit.</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="brightest-3c-sources">
+<h2>Brightest 3C sources<a class="headerlink" href="#brightest-3c-sources" title="Permalink to this headline">¶</a></h2>
+<p>Just for reference, sorted by brightness:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="14%" />
+<col width="14%" />
+<col width="8%" />
+<col width="10%" />
+<col width="13%" />
+<col width="8%" />
+<col width="6%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">3CR</th>
+<th class="head">RA B1950</th>
+<th class="head">DEC B1950</th>
+<th class="head">Vmag</th>
+<th class="head">z</th>
+<th class="head">S 178 MHz</th>
+<th class="head">alpha</th>
+<th class="head">b</th>
+<th class="head">Comments</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>405</td>
+<td>19 57 44.43</td>
+<td>40 35 45.2</td>
+<td>16.22</td>
+<td>0.056</td>
+<td><ol class="first last arabic simple" start="8700">
+<li></li>
+</ol>
+</td>
+<td>0.74</td>
+<td>6</td>
+<td>108SP,CYGA,SE G</td>
+</tr>
+<tr class="row-odd"><td>274</td>
+<td>12 28 17.55</td>
+<td>12 40 01.5</td>
+<td>8.70</td>
+<td>0.004</td>
+<td><ol class="first last arabic simple" start="1050">
+<li></li>
+</ol>
+</td>
+<td>0.76</td>
+<td>75</td>
+<td>M87,30SP,CL   G</td>
+</tr>
+<tr class="row-even"><td>348</td>
+<td>16 48 39.98</td>
+<td>05 04 35.0</td>
+<td>16.90</td>
+<td>0.154</td>
+<td>351.0</td>
+<td>1.00</td>
+<td>29</td>
+<td>HER A,E,R174  G</td>
+</tr>
+<tr class="row-odd"><td>353</td>
+<td>17 17 53.29</td>
+<td>-00 55 49.5</td>
+<td>15.36</td>
+<td>0.030</td>
+<td>236.0</td>
+<td>0.71</td>
+<td>20</td>
+<td>75ID,E        G</td>
+</tr>
+<tr class="row-even"><td>123</td>
+<td>04 33 55.21</td>
+<td>29 34 12.6</td>
+<td>21.7</td>
+<td>0.218</td>
+<td>189.0</td>
+<td>0.70</td>
+<td>-12</td>
+<td>18,12ID,E,CL  G</td>
+</tr>
+<tr class="row-odd"><td>295</td>
+<td>14 09 33.44</td>
+<td>52 26 13.6</td>
+<td>20.20</td>
+<td>0.461</td>
+<td>83.5</td>
+<td>0.63</td>
+<td>61</td>
+<td>E,CL,SE(3727) G</td>
+</tr>
+<tr class="row-even"><td>196</td>
+<td>08 09 59.42</td>
+<td>48 22 07.2</td>
+<td>17.60</td>
+<td>0.871</td>
+<td>68.2</td>
+<td>0.79</td>
+<td>33</td>
+<td>Q</td>
+</tr>
+<tr class="row-odd"><td>111</td>
+<td>04 15 01.</td>
+<td>37 54 20.</td>
+<td>18.0</td>
+<td>0.048</td>
+<td>64.6</td>
+<td>0.73</td>
+<td>-9</td>
+<td>SE,R=173      G</td>
+</tr>
+<tr class="row-even"><td>273</td>
+<td>12 26 33.35</td>
+<td>02 19 42.0</td>
+<td>12.80</td>
+<td>0.158</td>
+<td>62.8</td>
+<td>0.23</td>
+<td>64</td>
+<td>111SP         Q</td>
+</tr>
+<tr class="row-odd"><td>84</td>
+<td>03 16 29.55</td>
+<td>41 19 51.9</td>
+<td>11.85</td>
+<td>0.017</td>
+<td>61.3</td>
+<td>0.78</td>
+<td>-13</td>
+<td>N1275,PERA,CL G</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">README</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#brightest-3c-sources">Brightest 3C sources</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to Genvalobs / momxml&#8217;s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="momxml.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">momxml</span></code> modules</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/readme.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="momxml.html" title="momxml modules"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Genvalobs / momxml’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Genvalobs / momxml 1.7 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013, M.A. Brentjens.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+  </body>
+</html>
