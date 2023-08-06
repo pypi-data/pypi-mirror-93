@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: bq-flow
+Version: 0.1.1
+Summary: BigQuery Workflow
+Author: sakuv2
+Author-email: loots2438@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyYAML (>=5.3.1,<6.0.0)
+Requires-Dist: abq (>=0.1.1,<0.2.0)
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: pydantic[dotenv] (>=1.7.3,<2.0.0)
+Requires-Dist: sqlparse (>=0.4.1,<0.5.0)
