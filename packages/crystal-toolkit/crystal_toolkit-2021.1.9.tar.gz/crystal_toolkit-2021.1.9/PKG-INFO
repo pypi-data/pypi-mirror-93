@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: crystal-toolkit
+Version: 2021.1.9
+Summary: 
+Author: Matthew Horton
+Author-email: mkhorton@lbl.gov
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: fermi
+Provides-Extra: server
+Requires-Dist: Flask-Caching; extra == "server"
+Requires-Dist: crystaltoolkit-extension (>=0.3.0,<0.4.0)
+Requires-Dist: dash (>=1.19.0,<2.0.0); extra == "server"
+Requires-Dist: dash-daq; extra == "server"
+Requires-Dist: dash-extensions; extra == "server"
+Requires-Dist: dash-mp-components; extra == "server"
+Requires-Dist: dscribe; extra == "server"
+Requires-Dist: gevent; extra == "server"
+Requires-Dist: gunicorn; extra == "server"
+Requires-Dist: habanero; extra == "server"
+Requires-Dist: hiphive; extra == "server"
+Requires-Dist: ifermi; extra == "fermi"
+Requires-Dist: plotly (>=4.10,<5.0)
+Requires-Dist: pydantic
+Requires-Dist: pyfftw; extra == "fermi"
+Requires-Dist: pymatgen (>=2020.9.14,<2021.0.0)
+Requires-Dist: redis; extra == "server"
+Requires-Dist: robocrys; extra == "server"
+Requires-Dist: scikit-image; extra == "server"
+Requires-Dist: scikit-learn; extra == "server"
+Requires-Dist: sentry-sdk; extra == "server"
+Requires-Dist: typing-extensions; python_version >= "3.7" and python_version < "3.8"
+Requires-Dist: webcolors
