@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: gpm-qprof
+Version: 0.0.1.dev0
+Summary: The operational QRNN-based implementation of GPROF.
+Home-page: https://github.com/simonpf/regn
+Author: Simon Pfreundschuh
+Author-email: simon.pfreundschuh@chalmers.se
+License: UNKNOWN
+Project-URL: Source, https://github.com/simonpf/qprof/
+Description: # QPROF
+        
+        This Python package provides the operational, neural-network-based implementation
+        of the GPROF surface-precipitation retrieval.
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: training_data_processing

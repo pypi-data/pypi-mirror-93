@@ -1,0 +1,8 @@
+numpy
+tqdm
+quantnn
+torch
+xarray
+
+[training_data_processing]
+netCDF4
