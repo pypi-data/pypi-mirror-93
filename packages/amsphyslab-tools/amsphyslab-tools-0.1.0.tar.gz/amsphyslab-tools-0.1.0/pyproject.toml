@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "amsphyslab-tools"
+version = "0.1.0"
+description = "Tools used for physics practicals at the Amsterdam universities."
+authors = ["David Fokkema <davidfokkema@gmail.com>"]
+license = "GPLv3"
+readme = "README.md"
+#homepage
+#repository
+#keywords
+
+[tool.poetry.scripts]
+amsphyslab = "amsphyslab_tools.tools-cli:main"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+click = "~7.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

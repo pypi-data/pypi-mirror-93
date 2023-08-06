@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: amsphyslab-tools
+Version: 0.1.0
+Summary: Tools used for physics practicals at the Amsterdam universities.
+License: GPLv3
+Author: David Fokkema
+Author-email: davidfokkema@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=7.0,<7.1)
+Description-Content-Type: text/markdown
+
+# amsphyslab-tools
+ Tools used for physics practicals at the Amsterdam universities.
+
