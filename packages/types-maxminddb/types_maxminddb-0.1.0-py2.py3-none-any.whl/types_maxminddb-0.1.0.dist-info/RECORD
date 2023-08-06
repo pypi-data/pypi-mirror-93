@@ -1,0 +1,12 @@
+maxminddb-stubs/METADATA.toml,sha256=b3IPdewnMt2dcM3AWQK3B4rbljLXgLGHO4M-fRSsWew,62
+maxminddb-stubs/__init__.pyi,sha256=VeOvFZHkaU9NmEfD-ZxOq735CGwfJmnMkDRUmkYLDW8,177
+maxminddb-stubs/compat.pyi,sha256=lE11t1KuE4nA0ph6Bw9dWfhNE4l45r-4fCxOVRy4AfQ,194
+maxminddb-stubs/const.pyi,sha256=c1LWH0XYtbcs9T0mJz5lyj6ZAVBwU2zZJdRk7Dd4Fc0,130
+maxminddb-stubs/decoder.pyi,sha256=lZIOBE8OKJGu1fMmiH_n0b46qbmDxnXNsCq2Ed9oxzA,215
+maxminddb-stubs/errors.pyi,sha256=ifm1u-yPLyPC5KPPF7F5vswnJ2X-TeGc5EgYXvWvn30,46
+maxminddb-stubs/extension.pyi,sha256=k7yLS2l266OjFQfh4zmzOwO-46LpvnT3KM9FnvrZybU,1122
+maxminddb-stubs/reader.pyi,sha256=X414tjdlsmCmS-fFfxFTqHn5-E8ifpb9_ckjzM-g9iM,1269
+types_maxminddb-0.1.0.dist-info/METADATA,sha256=LGRGC-g8_Qy4oYPiRKvefZ72m9SeswIZMK0gdkSWOjg,835
+types_maxminddb-0.1.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+types_maxminddb-0.1.0.dist-info/top_level.txt,sha256=p4Fr3ZS-RoH7ELFBR0wwbnvrLrRG9EIf-_-uzj80zeA,16
+types_maxminddb-0.1.0.dist-info/RECORD,,
