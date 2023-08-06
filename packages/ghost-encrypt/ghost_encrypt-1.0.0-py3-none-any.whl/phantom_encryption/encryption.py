@@ -1,0 +1,135 @@
+from .key import *
+from datetime import datetime
+
+
+class Encryptor:
+    def __init__(self, key=None):
+        if type(key) is Key or key is None:
+            self.key = key
+        elif type(key) is str:
+            self.key = Key(key)
+
+        if self.key:
+            self.key_size = len(self.key)
+
+        self.cfg = Config()
+        self.chars = [_ for _ in self.cfg["chars"] + "\n"] * 2
+
+    def __repr__(self):
+        return f"Class Encryptor from {__name__}\nKey: '{self.key}'"
+
+    def encrypt(self, content: str, key=None):
+        if not key and not self.key:
+            key = Key()
+        elif not key:
+            key = self.key
+        log("Encryption", f"Info: Started encrypting with key '{key}'")
+
+        errors = 0
+        encrypted = ""
+        key_iter, content_iter = -1, -1
+        for char in content:
+            key_iter, content_iter = (_ + 1 for _ in (key_iter, content_iter))
+            if key_iter >= len(key):
+                key_iter -= len(key)
+
+            key_idx = self.chars.index(key[key_iter])
+            try:
+                char_idx = self.chars.index(char, 0, len(self.chars) // 2)
+            except ValueError:
+                log("Encryption", f"Warning: Couldn't encrypt {char.encode('utf-8')}")
+                key_iter -= 1
+                errors += 1
+                continue
+
+            encrypted_idx = int(str(key_idx + char_idx).replace("-", ""))
+            encrypted_char = self.chars[encrypted_idx]
+            encrypted += encrypted_char if encrypted_char != "\n" else "€"
+        log("Encryption", f"Info: Encryption finished with {errors} errors")
+        return key, encrypted
+
+    def encrypt_file(self, path: str, key=None):
+        key = self.key if not key else key
+        with open(path, "r") as f:
+            plain_text = f.read()
+            f.close()
+        plain_text = plain_text.replace("\t", "    ")
+        key, value = self.encrypt(plain_text, key)
+        with open(path, "wb") as f:
+            f.write(value.encode("utf-8"))
+            f.close()
+        log("Encryption", f"Info: Encrypted file '{path}' with key '{key}'")
+        return key
+
+    # key_idx = index from the current char in the key in self.chars
+    # char_idx = index from current char of the content in self.chars
+    # encrypted_idx = key_idx + char_idx in the list
+
+
+class Decrypter:
+    def __init__(self, key=None):
+        if type(key) is Key or key is None:
+            self.key = key
+        elif type(key) is str:
+            self.key = Key(key)
+
+        if self.key:
+            self.key_size = len(self.key)
+
+        self.cfg = Config()
+        self.chars = [_ for _ in self.cfg["chars"] + "\n"] * 2
+
+    def decrypt(self, content: str = None, key=None, key_value: tuple = None):
+        if not key and not self.key:
+            key = Key()
+        elif not key:
+            key = self.key
+
+        if key_value is not None:
+            key = key_value[0]
+            content = key_value[1]
+
+        log("Decryption", f"Info: Started decrypting with key '{key}'")
+        errors = 0
+        decrypted = ""
+        key_iter, c = -1, -1
+        for char in content:
+            key_iter, c = (_ + 1 for _ in (key_iter, c))
+            if key_iter >= len(key):
+                key_iter -= len(key)
+
+            if char == "€":
+                char = "\n"
+            key_idx = self.chars.index(key[key_iter])
+            try:
+                content_idx = self.chars.index(char)
+            except ValueError:
+                log("Decryption", f"Warning: Can't decrypt char '{char}' at index {c}, it is not registered")
+                errors += 1
+                continue
+            if content_idx - key_idx < 0:
+                content_idx = self.chars.index(char, len(self.cfg["chars"]))
+            decrypted_idx = content_idx - key_idx
+            decrypted += self.chars[decrypted_idx]
+
+        log("Decryption", f"Info: Decryption finished with {errors} errors")
+        return decrypted
+
+    def decrypt_file(self, path: str, key: Key = None):
+        key = self.key if not key else key
+        with open(path, "r") as f:
+            encrypted = f.read()
+            f.close()
+        encrypted = encrypted.replace("â‚¬", "€")
+        decrypted = self.decrypt(encrypted, key)
+        with open(path, "w") as f:
+            f.write(decrypted)
+            f.close()
+        log("Decryption", f"Info: Decrypted file '{path}' with key '{key if key is not None else self.key}'")
+
+
+def log(*args):
+    print(f"[{datetime.now().strftime('%H:%M:%S')} - {args[0]}]", end=" ")
+    for arg in args[1:]:
+        print(arg, end=" ")
+    print()
