@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+neurommsig_epilepsy/__init__.py
+neurommsig_epilepsy/__main__.py
+neurommsig_epilepsy.egg-info/PKG-INFO
+neurommsig_epilepsy.egg-info/SOURCES.txt
+neurommsig_epilepsy.egg-info/dependency_links.txt
+neurommsig_epilepsy.egg-info/entry_points.txt
+neurommsig_epilepsy.egg-info/not-zip-safe
+neurommsig_epilepsy.egg-info/requires.txt
+neurommsig_epilepsy.egg-info/top_level.txt
