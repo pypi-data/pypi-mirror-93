@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mail-alias-creator
+Version: 1.0.0
+Summary: Set of pyhton scripts to create our mail alias tables from alias definitions
+License: MIT
+Author: Tim Neumann
+Author-email: neumantm@fius.informatik.uni-stuttgart.de
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: ldap3 (>=2.7,<3.0)
+Requires-Dist: pyyaml (>=5.2,<6.0)
