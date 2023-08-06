@@ -1,0 +1,9 @@
+README.md
+setup.py
+GameTracker/GameTracker.py
+GameTracker/__init__.py
+GameTracker/countries.py
+GameTracker.egg-info/PKG-INFO
+GameTracker.egg-info/SOURCES.txt
+GameTracker.egg-info/dependency_links.txt
+GameTracker.egg-info/top_level.txt
