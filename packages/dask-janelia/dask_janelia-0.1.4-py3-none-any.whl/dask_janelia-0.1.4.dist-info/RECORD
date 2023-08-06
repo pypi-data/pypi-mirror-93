@@ -1,0 +1,6 @@
+dask_janelia/__init__.py,sha256=NuFgxlZF5M4SuvoJ2k3qCrjlbv96Z3GDuY1XwyXNBD0,32
+dask_janelia/deploy.py,sha256=IQhoJgk4bxV1xnKUVHrrSB749YxyJLHq_mXb0hh-Xgs,6547
+dask_janelia-0.1.4.dist-info/LICENSE.txt,sha256=cCo76odpO6Uls3OnRoIZKUchRTJIogaEYHzLzpblOaQ,1513
+dask_janelia-0.1.4.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+dask_janelia-0.1.4.dist-info/METADATA,sha256=8HHPfMtR2sJhoGK4ViaB8eVoe5N6hqigjR2dHZ87YRs,690
+dask_janelia-0.1.4.dist-info/RECORD,,
