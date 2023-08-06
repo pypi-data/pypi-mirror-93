@@ -1,0 +1,11 @@
+pandas
+Pillow
+geopandas
+pyproj
+numpy
+requests
+requests-toolbelt
+rasterio
+Shapely
+geopy
+Fiona
