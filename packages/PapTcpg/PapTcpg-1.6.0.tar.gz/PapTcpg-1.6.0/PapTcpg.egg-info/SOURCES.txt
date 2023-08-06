@@ -1,0 +1,8 @@
+README.md
+setup.py
+PapTcp/Connection.py
+PapTcp/__init__.py
+PapTcpg.egg-info/PKG-INFO
+PapTcpg.egg-info/SOURCES.txt
+PapTcpg.egg-info/dependency_links.txt
+PapTcpg.egg-info/top_level.txt
