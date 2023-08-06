@@ -1,0 +1,23 @@
+language: python
+python:
+  - "3.6"
+  - "3.7"
+  - "3.8"
+  - "3.9"
+  - "pypy3"
+# command to install dependencies
+install:
+  - pip install pylint coverage coveralls codecov pycodestyle .
+# command to run tests
+script:
+  - coverage run --source dbusapi,dbusdeviation --omit 'dbusdeviation/utilities/*' setup.py test
+  - coverage report --fail-under=70
+  - python setup.py check
+  - pycodestyle dbusapi
+  - pycodestyle dbusdeviation
+  - pylint --errors-only dbusapi
+  - pylint --errors-only dbusdeviation
+# Submit coverage data to coveralls.io and codecov.io
+after_success:
+  - coveralls
+  - codecov
