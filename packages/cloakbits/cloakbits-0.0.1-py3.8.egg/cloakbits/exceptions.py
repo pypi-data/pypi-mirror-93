@@ -1,0 +1,2 @@
+class ManagerConfigureException(Exception):
+    pass
