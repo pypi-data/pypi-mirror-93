@@ -1,0 +1,735 @@
+interactions:
+- request:
+    body: '{"location": "eastus", "properties": {}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '40'
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - python/3.6.9 (Linux-4.9.184-linuxkit-x86_64-with-Ubuntu-18.04-bionic) msrest/0.6.10
+        msrest_azure/0.6.2 azure-mgmt-attestation/0.3.0 Azure-SDK-For-Python
+      accept-language:
+      - en-US
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_cli_mgmt_attestation_test_attestation76ba1178/providers/Microsoft.Attestation/attestationProviders/myprovider6?api-version=2020-10-01
+  response:
+    body:
+      string: '{"error":{"code":"MissingSubscriptionRegistration","message":"The subscription
+        is not registered to use namespace ''Microsoft.Attestation''. See https://aka.ms/rps-not-found
+        for how to register subscriptions.","details":[{"code":"MissingSubscriptionRegistration","target":"Microsoft.Attestation","message":"The
+        subscription is not registered to use namespace ''Microsoft.Attestation''.
+        See https://aka.ms/rps-not-found for how to register subscriptions."}]}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '454'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 28 Jan 2021 09:39:12 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-failure-cause:
+      - gateway
+    status:
+      code: 409
+      message: Conflict
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python-requests/2.22.0
+    method: POST
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Attestation/register?api-version=2016-02-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Attestation","namespace":"Microsoft.Attestation","authorizations":[{"applicationId":"c61423b7-1d1f-430d-b444-0eee53298103","roleDefinitionId":"7299b0b1-11da-4858-8943-7db197005959"}],"resourceTypes":[{"resourceType":"attestationProviders","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"],"capabilities":"None"},{"resourceType":"defaultProviders","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"locations","locations":[],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"locations/defaultProvider","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"operations","locations":[],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]}],"registrationState":"Registering"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1281'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 28 Jan 2021 09:39:16 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1199'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Attestation?api-version=2016-02-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Attestation","namespace":"Microsoft.Attestation","authorizations":[{"applicationId":"c61423b7-1d1f-430d-b444-0eee53298103","roleDefinitionId":"7299b0b1-11da-4858-8943-7db197005959"}],"resourceTypes":[{"resourceType":"attestationProviders","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"],"capabilities":"None"},{"resourceType":"defaultProviders","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"locations","locations":[],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"locations/defaultProvider","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"operations","locations":[],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]}],"registrationState":"Registering"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1281'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 28 Jan 2021 09:39:26 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Attestation?api-version=2016-02-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Attestation","namespace":"Microsoft.Attestation","authorizations":[{"applicationId":"c61423b7-1d1f-430d-b444-0eee53298103","roleDefinitionId":"7299b0b1-11da-4858-8943-7db197005959"}],"resourceTypes":[{"resourceType":"attestationProviders","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"],"capabilities":"None"},{"resourceType":"defaultProviders","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"locations","locations":[],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"locations/defaultProvider","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"operations","locations":[],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]}],"registrationState":"Registering"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1281'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 28 Jan 2021 09:39:36 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Attestation?api-version=2016-02-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Attestation","namespace":"Microsoft.Attestation","authorizations":[{"applicationId":"c61423b7-1d1f-430d-b444-0eee53298103","roleDefinitionId":"7299b0b1-11da-4858-8943-7db197005959"}],"resourceTypes":[{"resourceType":"attestationProviders","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"],"capabilities":"None"},{"resourceType":"defaultProviders","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"locations","locations":[],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"locations/defaultProvider","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"operations","locations":[],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]}],"registrationState":"Registering"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1281'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 28 Jan 2021 09:39:46 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Attestation?api-version=2016-02-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Attestation","namespace":"Microsoft.Attestation","authorizations":[{"applicationId":"c61423b7-1d1f-430d-b444-0eee53298103","roleDefinitionId":"7299b0b1-11da-4858-8943-7db197005959"}],"resourceTypes":[{"resourceType":"attestationProviders","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"],"capabilities":"None"},{"resourceType":"defaultProviders","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"locations","locations":[],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"locations/defaultProvider","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"operations","locations":[],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]}],"registrationState":"Registering"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1281'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 28 Jan 2021 09:39:56 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Attestation?api-version=2016-02-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Attestation","namespace":"Microsoft.Attestation","authorizations":[{"applicationId":"c61423b7-1d1f-430d-b444-0eee53298103","roleDefinitionId":"7299b0b1-11da-4858-8943-7db197005959"}],"resourceTypes":[{"resourceType":"attestationProviders","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"],"capabilities":"None"},{"resourceType":"defaultProviders","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"locations","locations":[],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"locations/defaultProvider","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"operations","locations":[],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]}],"registrationState":"Registering"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1281'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 28 Jan 2021 09:40:06 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Attestation?api-version=2016-02-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Attestation","namespace":"Microsoft.Attestation","authorizations":[{"applicationId":"c61423b7-1d1f-430d-b444-0eee53298103","roleDefinitionId":"7299b0b1-11da-4858-8943-7db197005959"}],"resourceTypes":[{"resourceType":"attestationProviders","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"],"capabilities":"None"},{"resourceType":"defaultProviders","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"locations","locations":[],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"locations/defaultProvider","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"operations","locations":[],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]}],"registrationState":"Registering"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1281'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 28 Jan 2021 09:40:17 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Attestation?api-version=2016-02-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Attestation","namespace":"Microsoft.Attestation","authorizations":[{"applicationId":"c61423b7-1d1f-430d-b444-0eee53298103","roleDefinitionId":"7299b0b1-11da-4858-8943-7db197005959"}],"resourceTypes":[{"resourceType":"attestationProviders","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"],"capabilities":"None"},{"resourceType":"defaultProviders","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"locations","locations":[],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"locations/defaultProvider","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"operations","locations":[],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]}],"registrationState":"Registering"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1281'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 28 Jan 2021 09:40:27 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Attestation?api-version=2016-02-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Attestation","namespace":"Microsoft.Attestation","authorizations":[{"applicationId":"c61423b7-1d1f-430d-b444-0eee53298103","roleDefinitionId":"7299b0b1-11da-4858-8943-7db197005959"}],"resourceTypes":[{"resourceType":"attestationProviders","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"],"capabilities":"None"},{"resourceType":"defaultProviders","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"locations","locations":[],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"locations/defaultProvider","locations":["East
+        US 2","Central US","UK South","East US","Canada Central","Canada East","UK
+        West","West US","North Europe","West Europe"],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]},{"resourceType":"operations","locations":[],"apiVersions":["2020-10-01","2018-09-01-preview","2018-09-01"]}],"registrationState":"Registered"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1280'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 28 Jan 2021 09:40:37 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"location": "eastus", "properties": {}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '40'
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - python/3.6.9 (Linux-4.9.184-linuxkit-x86_64-with-Ubuntu-18.04-bionic) msrest/0.6.10
+        msrest_azure/0.6.2 azure-mgmt-attestation/0.3.0 Azure-SDK-For-Python
+      accept-language:
+      - en-US
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_cli_mgmt_attestation_test_attestation76ba1178/providers/Microsoft.Attestation/attestationProviders/myprovider6?api-version=2020-10-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_cli_mgmt_attestation_test_attestation76ba1178/providers/Microsoft.Attestation/attestationProviders/myprovider6","name":"myprovider6","type":"Microsoft.Attestation/attestationProviders","location":"eastus","properties":{"trustModel":"AAD","status":"Ready","attestUri":"https://myprovider6.eus.attest.azure.net"}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '390'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 28 Jan 2021 09:40:47 GMT
+      expires:
+      - '-1'
+      location:
+      - https://myprovider6.eus.attest.azure.net/
+      pragma:
+      - no-cache
+      server:
+      - Kestrel
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-maa-service-version:
+      - 1.10.01476.0001
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1198'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python/3.6.9 (Linux-4.9.184-linuxkit-x86_64-with-Ubuntu-18.04-bionic) msrest/0.6.10
+        msrest_azure/0.6.2 azure-mgmt-attestation/0.3.0 Azure-SDK-For-Python
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_cli_mgmt_attestation_test_attestation76ba1178/providers/Microsoft.Attestation/attestationProviders/myprovider6?api-version=2020-10-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_cli_mgmt_attestation_test_attestation76ba1178/providers/Microsoft.Attestation/attestationProviders/myprovider6","name":"myprovider6","type":"Microsoft.Attestation/attestationProviders","location":"eastus","properties":{"trustModel":"AAD","status":"Ready","attestUri":"https://myprovider6.eus.attest.azure.net"}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '390'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 28 Jan 2021 09:40:48 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Kestrel
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-maa-service-version:
+      - 1.10.01476.0001
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python/3.6.9 (Linux-4.9.184-linuxkit-x86_64-with-Ubuntu-18.04-bionic) msrest/0.6.10
+        msrest_azure/0.6.2 azure-mgmt-attestation/0.3.0 Azure-SDK-For-Python
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/providers/Microsoft.Attestation/operations?api-version=2020-10-01
+  response:
+    body:
+      string: '{"value":[{"name":"Microsoft.Attestation/attestationProviders/read","display":{"provider":"Microsoft
+        Azure Attestation","resource":"AzureAttestation","operation":"Gets the attestation
+        service status.","description":"Gets the attestation service status."}},{"name":"Microsoft.Attestation/attestationProviders/write","display":{"provider":"Microsoft
+        Azure Attestation","resource":"AzureAttestation","operation":"Adds attestation
+        service.","description":"Adds attestation service."}},{"name":"Microsoft.Attestation/attestationProviders/delete","display":{"provider":"Microsoft
+        Azure Attestation","resource":"AzureAttestation","operation":"Removes attestation
+        service.","description":"Removes attestation service."}},{"name":"Microsoft.Attestation/attestationProviders/privateLinkResources/read","display":{"provider":"Microsoft
+        Azure Attestation","resource":"AzureAttestation","operation":"Gets privatelink
+        resources operation.","description":"Gets privatelink resources description."}},{"name":"Microsoft.Attestation/attestationProviders/PrivateEndpointConnectionsApproval/action","display":{"provider":"Microsoft
+        Azure Attestation","resource":"Private endpoints resource name.","operation":"Private
+        endpoints approve operation.","description":"Private endpoints approve description."}},{"name":"Microsoft.Attestation/attestationProviders/privateEndpointConnectionProxies/read","display":{"provider":"Microsoft
+        Azure Attestation","resource":"Private endpoint connection proxies resource
+        name.","operation":"Private endpoint connection proxies read operation.","description":"Private
+        endpoint connection proxies read description."}},{"name":"Microsoft.Attestation/attestationProviders/privateEndpointConnectionProxies/write","display":{"provider":"Microsoft
+        Azure Attestation","resource":"Private endpoint connection proxies resource
+        name.","operation":"Private endpoint connection proxies write operation.","description":"Private
+        endpoint connection proxies write description."}},{"name":"Microsoft.Attestation/attestationProviders/privateEndpointConnectionProxies/delete","display":{"provider":"Microsoft
+        Azure Attestation","resource":"Private endpoint connection proxies resource
+        name.","operation":"Private endpoint connection proxies delete operation.","description":"Private
+        endpoint connection proxies delete description."}},{"name":"Microsoft.Attestation/attestationProviders/privateEndpointConnectionProxies/validate/action","display":{"provider":"Microsoft
+        Azure Attestation","resource":"Private endpoint connection proxies resource
+        name.","operation":"Private endpoint connection proxies validate operation.","description":"Private
+        endpoint connection proxies validate oescription."}},{"name":"Microsoft.Attestation/attestationProviders/operationStatus/read","display":{"provider":"Microsoft
+        Azure Attestation","resource":"AzureAttestation","operation":"AzureAttestation","description":"AzureAttestation"}},{"name":"Microsoft.Attestation/attestationProviders/privateEndpointConnections/read","display":{"provider":"Microsoft
+        Azure Attestation","resource":"Private endpoints resource name.","operation":"Private
+        endpoints read operation.","description":"Private endpoints read description."}},{"name":"Microsoft.Attestation/attestationProviders/privateEndpointConnections/write","display":{"provider":"Microsoft
+        Azure Attestation","resource":"Private endpoints resource name.","operation":"Private
+        endpoints write operation.","description":"Private endpoints write description."}},{"name":"Microsoft.Attestation/attestationProviders/privateEndpointConnections/delete","display":{"provider":"Microsoft
+        Azure Attestation","resource":"Private endpoints resource name.","operation":"Private
+        endpoints delete operation.","description":"Private endpoints delete description."}},{"name":"Microsoft.Attestation/attestationProviders/providers/Microsoft.Insights/diagnosticSettings/read","display":{"provider":"Microsoft
+        Azure Attestation","resource":"AzureAttestation","operation":"Read diagnostic
+        setting","description":"Gets the diagnostic setting for the resource."}},{"name":"Microsoft.Attestation/attestationProviders/providers/Microsoft.Insights/diagnosticSettings/write","display":{"provider":"Microsoft
+        Azure Attestation","resource":"AzureAttestation","operation":"Creates or updates
+        the diagnostic setting for the resource.","description":"Write diagnostic
+        setting"}},{"properties":{"serviceSpecification":{"logSpecifications":[{"name":"INF","displayName":"Informational
+        message log category."},{"name":"WRN","displayName":"Warning message log category."},{"name":"ERR","displayName":"Error
+        message log category."},{"name":"AuditEvent","displayName":"AuditEvent message
+        log category."}]}},"name":"Microsoft.Attestation/attestationProviders/providers/Microsoft.Insights/logDefinitions/read","display":{"provider":"Microsoft
+        Azure Attestation","resource":"AzureAttestation","operation":"Read AzureAttestation
+        log definitions","description":"Gets the available logs for Azure Attestation."}}]}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '4997'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 28 Jan 2021 09:40:49 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Kestrel
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-maa-service-version:
+      - 1.10.01476.0001
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"tags": {"property1": "Value1", "property2": "Value2", "property3": "Value3"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '79'
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - python/3.6.9 (Linux-4.9.184-linuxkit-x86_64-with-Ubuntu-18.04-bionic) msrest/0.6.10
+        msrest_azure/0.6.2 azure-mgmt-attestation/0.3.0 Azure-SDK-For-Python
+      accept-language:
+      - en-US
+    method: PATCH
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_cli_mgmt_attestation_test_attestation76ba1178/providers/Microsoft.Attestation/attestationProviders/myprovider6?api-version=2020-10-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_cli_mgmt_attestation_test_attestation76ba1178/providers/Microsoft.Attestation/attestationProviders/myprovider6","name":"myprovider6","type":"Microsoft.Attestation/attestationProviders","location":"eastus","tags":{"property1":"Value1","property2":"Value2","property3":"Value3"},"properties":{"trustModel":"AAD","status":"Ready","attestUri":"https://myprovider6.eus.attest.azure.net"}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '462'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 28 Jan 2021 09:40:53 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Kestrel
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-maa-service-version:
+      - 1.10.01476.0001
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1197'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python/3.6.9 (Linux-4.9.184-linuxkit-x86_64-with-Ubuntu-18.04-bionic) msrest/0.6.10
+        msrest_azure/0.6.2 azure-mgmt-attestation/0.3.0 Azure-SDK-For-Python
+      accept-language:
+      - en-US
+    method: DELETE
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_cli_mgmt_attestation_test_attestation76ba1178/providers/Microsoft.Attestation/attestationProviders/myprovider6?api-version=2020-10-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Thu, 28 Jan 2021 09:41:00 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Kestrel
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-maa-service-version:
+      - 1.10.01476.0001
+      x-ms-ratelimit-remaining-subscription-deletes:
+      - '14999'
+    status:
+      code: 200
+      message: OK
+version: 1
