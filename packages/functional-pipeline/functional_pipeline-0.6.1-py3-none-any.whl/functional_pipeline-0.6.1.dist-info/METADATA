@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: functional-pipeline
+Version: 0.6.1
+Summary: Functional Pipelines implemented in python
+Home-page: https://gitlab.com/mc706/functional-pipeline
+Author: Ryan McDevitt
+Author-email: mcdevitt.ryan@gmail.com
+License: UNKNOWN
+Project-URL: Docs, https://functional-pipeline.readthedocs.io/en/stable/#
+Project-URL: Source, https://gitlab.com/mc706/functional-pipeline
+Project-URL: Bug Reports/Issues, https://gitlab.com/mc706/functional-pipeline/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: prospector ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+
+# Functional Pipeline
+[![PyPI version](https://badge.fury.io/py/functional-pipeline.svg)](https://badge.fury.io/py/functional-pipeline)
+[![pipeline status](https://gitlab.com/mc706/functional-pipeline/badges/master/pipeline.svg)](https://gitlab.com/mc706/functional-pipeline/commits/master)
+[![coverage report](https://gitlab.com/mc706/functional-pipeline/badges/master/coverage.svg)](https://gitlab.com/mc706/functional-pipeline/commits/master)
+[![PyPI](https://img.shields.io/pypi/pyversions/functional-pipeline.svg)](https://pypi.org/project/functional-pipeline/)
+[![Documentation Status](https://readthedocs.org/projects/functional-pipeline/badge/?version=latest)](https://functional-pipeline.readthedocs.io/en/latest/?badge=latest)
+
+
+Functional languages like Haskell, Elixir, and Elm have pipe functions that allow
+the results of one function to be passed to the next function. 
+
+Using functions from `functools`, we can build composition in python, however it is not
+nearly as elegant as a well thought out pipeline. 
+
+This library is designed to make the creation of a functional pipeline easier in python.
+
+```python 
+>>> from operator import add, mul
+
+>>> from functional_pipeline import pipeline, tap
+
+>>> result = pipeline(
+...     10,
+...     [
+...         (add, 1),
+...         (mul, 2)
+...     ]
+... )
+
+>>> result
+22
+
+```
+
+This pattern can be extended for easily dealing with lists or generators.
+
+```python
+>>> from functional_pipeline import pipeline, String, join
+
+>>> names = [
+...     "John",
+...     "James",
+...     "Bill",
+...     "Tiffany",
+...     "Jamie",
+... ]
+
+>>> result = pipeline(
+...     names,
+...     [
+...         (filter, String.startswith('J')),
+...         (map, lambda x: x + " Smith"),
+...         join(", "),
+...     ]
+... )
+
+>>> result
+'John Smith, James Smith, Jamie Smith'
+
+```
+
+
