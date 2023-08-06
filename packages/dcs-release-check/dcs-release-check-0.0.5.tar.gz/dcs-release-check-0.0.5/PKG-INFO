@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: dcs-release-check
+Version: 0.0.5
+Summary: "Tool to query latest versions from source code hosting platforms such as GitHub."
+Home-page: UNKNOWN
+Author: "Fabian Mueller"
+Author-email: "packages@dotcs.me"
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: develop
