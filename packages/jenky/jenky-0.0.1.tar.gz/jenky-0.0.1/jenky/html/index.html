@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jenky</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table, td, th {
+            border: 1px solid black;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<h1>Jenky, the gentle deploying app</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Repo Name</th>
+        <th>Git Actions</th>
+        <th>Process Name</th>
+        <th>Running</th>
+        <th>Create Time</th>
+        <th>Kill</th>
+        <th>Restart</th>
+        <th>Logs</th>
+    </tr>
+    </thead>
+    <tbody id="repos"></tbody>
+</table>
+
+<template id="processRow">
+    <tr>
+        <td>Repo Name</td>
+        <td><label><input type="radio" name="process"></label></td>
+        <td>Process Name</td>
+        <td>Running</td>
+        <td>Create Time</td>
+        <td>
+            <button type="button">Kill</button>
+        </td>
+        <td>
+            <button type="button">Start</button>
+        </td>
+        <td>
+            <a href="" target="">stdout</a>
+            <a href="" target="">stderr</a>
+        </td>
+    </tr>
+</template>
+
+<fieldset>
+    <legend>Git Actions</legend>
+    <form>
+        <code id="repoName"></code> current tag is <code id="gitTag"></code>
+        <div>
+            <select id="checkoutSrc" size=20>
+                <optgroup id="gitTags" label="Tags">
+                </optgroup>
+                <optgroup id="gitBranches" label="Branches">
+                </optgroup>
+            </select>
+
+            <button id="pull" type="button">Pull</button>
+        </div>
+        <pre id="gitMessage"></pre>
+    </form>
+</fieldset>
+
+</body>
+<script type="module">
+    /** @type{jenky.Repo[]} */
+    let repos;
+    /** @type{jenky.RepoDict } */
+    let reposByName;
+
+    /**
+     */
+    function renderRepos() {
+        const tbody = document.getElementById('repos');
+        tbody.textContent = '';
+        const template = document.getElementById('processRow');
+        for (const repo of repos) {
+            const name = repo.repoName;
+            for (const proc of repo.processes) {
+                let tr = template.content.firstElementChild.cloneNode(true);
+                let td = tr.firstElementChild;
+                td.textContent = repo.repoName;
+
+                td = td.nextElementSibling;
+                td.firstElementChild.value = repo.repoName;
+                td.firstElementChild.addEventListener('change', () => {
+                    fetchRepo(name)
+                    .then(repo => {
+                        reposByName[name] = repo;
+                        renderRepo(name);
+                    })
+                });
+
+                td = td.nextElementSibling;
+                td.textContent = proc.name;
+
+                td = td.nextElementSibling;
+                td.textContent = String(proc.running);
+
+                td = td.nextElementSibling;
+                td.textContent = proc.createTime ? new Date(proc.createTime * 1000).toISOString() : '';
+
+                td = td.nextElementSibling;   // Kill
+                td.firstElementChild.disabled = !proc.running;
+                td.firstElementChild.onclick = evt => kill(evt, repo, proc);
+
+                td = td.nextElementSibling;  // Restart
+                td.firstElementChild.disabled = proc.running;
+                td.firstElementChild.onclick = evt => restart(evt, repo, proc);
+
+                // /repos/{repo_id}/processes/{process_id}/{std}
+                td = td.nextElementSibling;
+                let a = td.firstElementChild;
+                while (a) {
+                    const std = a.textContent;
+                    a.href = `/repos/${name}/processes/${proc.name}/${std}`;
+                    a.target = `${proc.name}_${std}`
+                    a = a.nextElementSibling;
+                }
+
+                tbody.appendChild(tr);
+            }
+        }
+    }
+
+    /**
+     * @param {string} repoName
+     */
+    function renderRepo(repoName) {
+        /** @type{HTMLSelectElement} */
+        const select = /** @type{HTMLSelectElement} */ document.getElementById('checkoutSrc');
+        /** @type{jenky.Repo} */
+        const repo = reposByName[repoName];
+        // document.getElementById('pull').disabled = !repo.gitTag;
+        document.getElementById('pull').onclick = () => pull(repoName, select.value);
+        document.getElementById('repoName').textContent = repoName;
+        document.getElementById('gitTag').textContent = (repo.gitTag ? repo.gitTag : repo.gitMessage);
+        document.getElementById('gitMessage').textContent = "";
+
+        let optGroup = document.getElementById('gitTags');
+        optGroup.textContent = '';
+        for (const tag of repo.gitTags) {
+            const option = document.createElement('option');
+            option.textContent = tag;
+            optGroup.appendChild(option);
+        }
+
+        optGroup = document.getElementById('gitBranches');
+        optGroup.textContent = '';
+        for (const branch of repo.gitBranches) {
+            const option = document.createElement('option');
+            option.textContent = branch;
+            optGroup.appendChild(option);
+        }
+
+    }
+
+    /**
+     * @param {jenky.Repo} data
+     */
+    function setRepos(data) {
+        repos = /** @type{jenky.Repo[]} */ data;
+        reposByName = {};
+        for (const repo of repos) {
+            reposByName[repo.repoName] = repo;
+        }
+    }
+
+    /**
+     * @param {Event} evt
+     * @param {jenky.Repo} repo
+     * @param {jenky.Process} proc
+     */
+    function kill(evt, repo, proc) {
+        evt.target.disabled = true;
+        postAction(repo, proc, 'kill');
+    }
+
+    /**
+     * @param {Event} evt
+     * @param {jenky.Repo} repo
+     * @param {jenky.Process} proc
+     */
+    function restart(evt, repo, proc) {
+        evt.target.disabled = true;
+        postAction(repo, proc, 'restart');
+    }
+
+    function pull(repoName, gitTag) {
+        const payload = {action: 'pull', gitTag: gitTag};
+        const msgElem = document.getElementById('gitMessage');
+        msgElem.textContent = 'Loading...';
+        fetch(`/repos/${repoName}`, {method: 'post', body: JSON.stringify(payload)})
+            .then(response => {
+                if (response.status === 200) {
+                    return response.json();
+                } else {
+                    msgElem.textContent = (response.statusText + ' ' + response.url);
+                }
+            })
+            .then(data => msgElem.textContent = JSON.stringify(data, null, 4))
+    }
+
+    function fetchRepo(repoName) {
+        return fetch(`/repos/${repoName}`)
+            .then(response => {
+                if (response.status === 200) {
+                    return response.json();
+                } else {
+                    alert(response.statusText + ' ' + response.url);
+                }
+            })
+    }
+
+    /**
+     * @param {jenky.Repo} repo
+     * @param {jenky.Process} proc
+     * @param {string} action
+     */
+    function postAction(repo, proc, action) {
+        const payload = {action: action};
+        fetch(`/repos/${repo.repoName}/processes/${proc.name}`, {method: 'post', body: JSON.stringify(payload)})
+            .then(response => {
+                if (response.status === 200) {
+                    return response.json();
+                } else {
+                    alert(response.statusText + ' ' + response.url);
+                }
+            })
+            .then(data => console.log(data))
+            .then(fetchRepos)
+    }
+
+
+    function fetchRepos() {
+        fetch('/repos')
+            .then(response => response.json())
+            .then(data => {
+                setRepos(data['repos']);
+                renderRepos();
+            })
+    }
+
+    fetchRepos()
+</script>
+</html>
