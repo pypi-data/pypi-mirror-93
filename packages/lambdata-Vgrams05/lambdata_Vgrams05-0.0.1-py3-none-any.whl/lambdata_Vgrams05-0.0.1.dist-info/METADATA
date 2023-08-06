@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: lambdata-Vgrams05
+Version: 0.0.1
+Summary: A collection of Data Science functions
+Home-page: https://github.com/Vgrams05/lambdata-Vgrams05.git
+Author: Virginia Grams
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# lambdata-Vgrams05
+This is a repo for Sprint 1 that will contain a bunch of package modules.
+
+
