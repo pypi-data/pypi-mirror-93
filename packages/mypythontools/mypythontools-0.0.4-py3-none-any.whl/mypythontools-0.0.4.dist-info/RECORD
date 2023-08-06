@@ -1,0 +1,10 @@
+mypythontools/__init__.py,sha256=wWbpZ9lEocgzh7jAGL1YxIiJC11IJMZ1mYHs4B443es,1271
+mypythontools/build.py,sha256=4-xrVthoJE7PoewJtOIFHryp_RpgkqhPjmLpiQ3hMbM,6053
+mypythontools/deploy.py,sha256=cM1UkGMInQNxIKRBQ7XCTdLE-anyWqa_a3rCfaakdAw,818
+mypythontools/githooks.py,sha256=EJtw9UUN-wio3fNg_sosFQobySLLFbkAqCvma-vwl8E,4690
+mypythontools/misc.py,sha256=laSrvGfR-uWOXXfxCoh5COTrmPSUUmeJJF-TNrYoZl4,701
+mypythontools-0.0.4.dist-info/LICENSE,sha256=BM9DpN9cuZHAL1849vy5DyKFaQejXV1jfa9STrQkl-8,1093
+mypythontools-0.0.4.dist-info/METADATA,sha256=LndxiDtenmI1jQO8DF9HoqD6KS1G09QjjVLUQGLhGwc,2130
+mypythontools-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mypythontools-0.0.4.dist-info/top_level.txt,sha256=CPn6PNkUc8WWGPzOpW76m9GEddlkn2obN84_XsXKfDA,14
+mypythontools-0.0.4.dist-info/RECORD,,
