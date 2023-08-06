@@ -1,0 +1,9 @@
+HiveNetLib>=0.8.6
+pyautogui
+pywin32
+psutil
+uiautomation
+pyperclip
+pyscreeze
+prompt-toolkit>=2.0.0
+Appium-Python-Client
