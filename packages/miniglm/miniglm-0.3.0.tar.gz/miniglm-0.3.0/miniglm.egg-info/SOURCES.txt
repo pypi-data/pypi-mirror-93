@@ -1,0 +1,7 @@
+README.md
+setup.py
+./miniglm.cpp
+miniglm.egg-info/PKG-INFO
+miniglm.egg-info/SOURCES.txt
+miniglm.egg-info/dependency_links.txt
+miniglm.egg-info/top_level.txt
