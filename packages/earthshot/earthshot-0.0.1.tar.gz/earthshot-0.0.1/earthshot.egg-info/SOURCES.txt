@@ -1,0 +1,8 @@
+README.md
+setup.py
+earthshot/__init__.py
+earthshot.egg-info/PKG-INFO
+earthshot.egg-info/SOURCES.txt
+earthshot.egg-info/dependency_links.txt
+earthshot.egg-info/requires.txt
+earthshot.egg-info/top_level.txt
