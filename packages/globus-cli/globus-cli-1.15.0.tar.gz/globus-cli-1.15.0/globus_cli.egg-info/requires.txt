@@ -1,0 +1,24 @@
+globus-sdk==1.10.0
+click<8.0,>=7.1.1
+jmespath==0.10.0
+configobj<6.0.0,>=5.0.6
+requests<3.0.0,>=2.0.0
+six<2.0.0,>=1.10.0
+cryptography<3.4.0,>=1.8.1
+
+[delegate-proxy]
+
+[development]
+pytest<5
+pytest-cov<3.0
+responses==0.12.1
+ruamel.yaml==0.16.12
+flake8<4.0,>=3.8.4
+
+[development:python_version < "3.6"]
+mock==2.0.0
+
+[development:python_version >= "3.6"]
+black==20.8b1
+isort<6.0,>=5.6.4
+flake8-bugbear==20.11.1
