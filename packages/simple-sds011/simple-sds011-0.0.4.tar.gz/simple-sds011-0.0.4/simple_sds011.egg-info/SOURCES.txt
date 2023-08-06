@@ -1,0 +1,8 @@
+README.md
+setup.py
+simple_sds011/__init__.py
+simple_sds011.egg-info/PKG-INFO
+simple_sds011.egg-info/SOURCES.txt
+simple_sds011.egg-info/dependency_links.txt
+simple_sds011.egg-info/requires.txt
+simple_sds011.egg-info/top_level.txt
