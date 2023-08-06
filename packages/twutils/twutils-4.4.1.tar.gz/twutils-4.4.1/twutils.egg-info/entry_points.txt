@@ -1,0 +1,8 @@
+[console_scripts]
+os2tw = twutils.command_line.os2tw:main
+twinstall = twutils.command_line.twinstall:main
+twplot = twutils.command_line.twplot:main
+twscan = twutils.command_line.twscan:main
+twtest = twutils.command_line.twtest:main
+wigner = twutils.command_line.wigner:main
+
