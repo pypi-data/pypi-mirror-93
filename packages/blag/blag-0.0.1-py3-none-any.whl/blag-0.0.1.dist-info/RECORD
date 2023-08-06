@@ -1,0 +1,10 @@
+blag/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+blag/blag.py,sha256=Khf7G426Kzl43ucj5Af5DNFm9L735piNd7oZgFIGJyg,4733
+blag/markdown.py,sha256=akRuoyhnGMYZKSH1H3DNFs86QrdjzMAFQ7wTE_T0GWk,2484
+blag/version.py,sha256=PohVFTieegOsiVAoswB8R2_Zxxj_-ET9mf_y675CVs4,22
+blag-0.0.1.dist-info/LICENSE,sha256=AJbfjScq_wYhU5spsW7LrjWrGu3XPJlbIRFebcZdHMo,1072
+blag-0.0.1.dist-info/METADATA,sha256=CZQp65HTXxZFCocHOpYFP4eF6j24JjATEgIsKS8fERY,560
+blag-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+blag-0.0.1.dist-info/entry_points.txt,sha256=J3PHaFyy5YaLft-P-74mRYxK0u_hsGezKEiRezyRu5U,41
+blag-0.0.1.dist-info/top_level.txt,sha256=9IR7ftpCFV6XNJy_gynBeWxhyAVx4RnLkSOFIzWGlZI,5
+blag-0.0.1.dist-info/RECORD,,
