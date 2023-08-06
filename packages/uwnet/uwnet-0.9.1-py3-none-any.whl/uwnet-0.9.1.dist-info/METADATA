@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: uwnet
+Version: 0.9.1
+Summary: 
+License: MIT
+Author: Noah D. Brenowitz
+Author-email: nbren12@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: altair (>=4.1.0,<5.0.0)
+Requires-Dist: altair_saver (>=0.5.0,<0.6.0)
+Requires-Dist: attrs (>=20.2.0,<21.0.0)
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: cython (>=0.29.21,<0.30.0)
+Requires-Dist: dask (>=1.1)
+Requires-Dist: f90nml (>=1.2,<2.0)
+Requires-Dist: flake8 (>=3.8.4,<4.0.0)
+Requires-Dist: fsspec (>=0.8.3,<0.9.0)
+Requires-Dist: h5netcdf (>=0.8.1,<0.9.0)
+Requires-Dist: ipython (>=7.18.1,<8.0.0)
+Requires-Dist: joblib (>=0.13)
+Requires-Dist: jupyterlab (>=2.2.8,<3.0.0)
+Requires-Dist: matplotlib (>=3.3)
+Requires-Dist: metpy (>=0.12.2,<0.13.0)
+Requires-Dist: netcdf4 (>=1.4)
+Requires-Dist: numpy (>=1.16)
+Requires-Dist: pymongo (>=3.11.0,<4.0.0)
+Requires-Dist: pytest (>=6.1.1,<7.0.0)
+Requires-Dist: pytorch-ignite (>=0.4.2,<0.5.0)
+Requires-Dist: recommonmark (>=0.6.0,<0.7.0)
+Requires-Dist: sacred (>=0.8.1,<0.9.0)
+Requires-Dist: scikit-learn (>=0.20)
+Requires-Dist: seaborn (>=0.11.0,<0.12.0)
+Requires-Dist: snakemake (>=5.26.1,<6.0.0)
+Requires-Dist: sphinx (>=1.7)
+Requires-Dist: sphinx_rtd_theme (>=0.5.0,<0.6.0)
+Requires-Dist: toolz (>=0.11.1,<0.12.0)
+Requires-Dist: torch (>=1.0)
+Requires-Dist: torchvision (>=0.7.0,<0.8.0)
+Requires-Dist: tqdm (>=4.50.2,<5.0.0)
+Requires-Dist: xarray (>=0.12)
+Requires-Dist: zarr (>=2.5.0,<3.0.0)
