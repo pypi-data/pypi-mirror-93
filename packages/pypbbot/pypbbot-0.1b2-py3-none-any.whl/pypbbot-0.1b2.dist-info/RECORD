@@ -1,0 +1,14 @@
+pypbbot/__init__.py,sha256=0yZJsbwX15v3JlDZYMAmhny1tIqYcEOx5NFImETPLEc,69
+pypbbot/driver.py,sha256=suHvUF-UpvhbX8Vrh6F1I_ItIvN2SVlZL7sLDNPto7s,2889
+pypbbot/server.py,sha256=Keb08ND9jZ8yZ-WZCQKuUqtbqPIuV17FsxU_ffSb4cY,2304
+pypbbot/utils.py,sha256=vgtibte3Asiipsdk41VnQ4bECemvMMhVsijym4spajY,216
+pypbbot/protocol/__init__.py,sha256=6gBz7I913eIQH9pPwUaUNy7glwbls4rOiiqqLEPJbbQ,129
+pypbbot/protocol/onebot_api_pb2.py,sha256=xxlKFyM13nAPbcRDROo1fkcQDUM57MjrbzHlYORcCQ0,142394
+pypbbot/protocol/onebot_base_pb2.py,sha256=2gMySAreT-9czMJ24Xe0lkATLMfRFQ0DEP-WO3qwdn4,3925
+pypbbot/protocol/onebot_event_pb2.py,sha256=pgAf6pplzsK7VQUXGHJDMvKgs5wVVyMPkHuwMekkFpI,92637
+pypbbot/protocol/onebot_frame_pb2.py,sha256=5TaE3Qv7jr8GiMCS4E4S9MlAieGSM4oehRxpra8jKQc,89369
+pypbbot-0.1b2.dist-info/LICENSE,sha256=EMWGROl-ASr_67bimX8eYGQuamEgM7-7K4kaEa6s26Y,1086
+pypbbot-0.1b2.dist-info/METADATA,sha256=-p1bh1xQ4UElqKyFysQl9CbnyJfFaQxn1Eq1WDkXfsM,2356
+pypbbot-0.1b2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pypbbot-0.1b2.dist-info/top_level.txt,sha256=sz82kkG_u2E9QMqabKLXX10acWTdGn8-yK8ATvBYPP0,8
+pypbbot-0.1b2.dist-info/RECORD,,
