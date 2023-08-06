@@ -1,0 +1,4 @@
+[console_scripts]
+BSBolt = bsbolt.__main__:launch_bsb
+bsbolt = bsbolt.__main__:launch_bsb
+
