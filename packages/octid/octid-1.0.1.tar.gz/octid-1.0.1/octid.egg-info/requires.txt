@@ -1,0 +1,8 @@
+torch
+torchvision
+itertools
+matplotlib
+numpy
+sklearn
+pandas
+umap
