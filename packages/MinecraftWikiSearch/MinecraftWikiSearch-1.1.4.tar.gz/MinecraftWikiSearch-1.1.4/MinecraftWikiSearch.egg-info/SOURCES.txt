@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+config.json
+setup.py
+MinecraftWikiSearch/DataReturn.py
+MinecraftWikiSearch/Errors.py
+MinecraftWikiSearch/JSONRead.py
+MinecraftWikiSearch/MinecraftWikiSearch.py
+MinecraftWikiSearch/Special_Entry.py
+MinecraftWikiSearch/WebVisit.py
+MinecraftWikiSearch/__init__.py
+MinecraftWikiSearch.egg-info/PKG-INFO
+MinecraftWikiSearch.egg-info/SOURCES.txt
+MinecraftWikiSearch.egg-info/dependency_links.txt
+MinecraftWikiSearch.egg-info/entry_points.txt
+MinecraftWikiSearch.egg-info/top_level.txt
