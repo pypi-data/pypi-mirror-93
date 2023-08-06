@@ -1,0 +1,6 @@
+[pennylane.plugins]
+orquestra.forest = pennylane_orquestra:QeForestDevice
+orquestra.ibmq = pennylane_orquestra:QeIBMQDevice
+orquestra.qiskit = pennylane_orquestra:QeQiskitDevice
+orquestra.qulacs = pennylane_orquestra:QeQulacsDevice
+
