@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: tuaneda
+Version: 0.4.1
+Summary: Data structures, quick EDA, important variable analysis
+Home-page: https://github.com/tuanab
+Author: Tuan Bui
+Author-email: dev@tuanab.app
+License: MIT
+Download-URL: https://github.com/tuanab/tuaneda/archive/0.4.1.tar.gz
+Description: UNKNOWN
+Keywords: eda,data structures,important variables,exploratory analysis
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
