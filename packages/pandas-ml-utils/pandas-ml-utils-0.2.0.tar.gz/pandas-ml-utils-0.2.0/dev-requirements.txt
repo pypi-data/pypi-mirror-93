@@ -1,0 +1,5 @@
+drawilleplot
+ipykernel
+jupyter_client
+matplotlib
+nbconvert

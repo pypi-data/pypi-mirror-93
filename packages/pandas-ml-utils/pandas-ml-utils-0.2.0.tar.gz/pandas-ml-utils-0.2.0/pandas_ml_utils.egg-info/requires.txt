@@ -1,0 +1,17 @@
+Mako
+dill
+matplotlib
+mlxtend
+numpy
+pandas
+scikit-learn
+sortedcontainers
+statsmodels
+pandas-ml-common==0.2.0
+
+[dev]
+drawilleplot
+ipykernel
+jupyter_client
+matplotlib
+nbconvert
