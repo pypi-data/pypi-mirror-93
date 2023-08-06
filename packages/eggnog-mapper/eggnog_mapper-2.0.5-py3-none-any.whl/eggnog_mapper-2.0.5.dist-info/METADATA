@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: eggnog-mapper
+Version: 2.0.5
+Summary: Fast functional annotation of novel sequences using eggNOG orthology assignments.
+Home-page: http://eggnogdb.embl.de
+Author: Jaime Huerta-Cepas
+Author-email: jhcepas@gmail.com
+Maintainer: Jaime Huerta-Cepas
+Maintainer-email: huerta@embl.de
+License: GPLv3
+Keywords: functional annotation,orthology,eggNOG
+Platform: OS Independent
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+
+
+Fast functional annotation of novel sequences using eggNOG orthology assignments.
+
+
