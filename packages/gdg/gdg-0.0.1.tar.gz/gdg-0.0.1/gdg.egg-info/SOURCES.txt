@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+gdg/__init__.py
+gdg.egg-info/PKG-INFO
+gdg.egg-info/SOURCES.txt
+gdg.egg-info/dependency_links.txt
+gdg.egg-info/requires.txt
+gdg.egg-info/top_level.txt
