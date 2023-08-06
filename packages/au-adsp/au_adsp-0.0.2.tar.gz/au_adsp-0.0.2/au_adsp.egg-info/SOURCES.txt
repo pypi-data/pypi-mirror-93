@@ -1,0 +1,8 @@
+setup.py
+au_adsp/__init__.py
+au_adsp/au_adsp.py
+au_adsp.egg-info/PKG-INFO
+au_adsp.egg-info/SOURCES.txt
+au_adsp.egg-info/dependency_links.txt
+au_adsp.egg-info/requires.txt
+au_adsp.egg-info/top_level.txt
