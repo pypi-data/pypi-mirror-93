@@ -1,0 +1,3 @@
+[console_scripts]
+amsphyslab=amsphyslab_tools.tools_cli:main
+
