@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+data/data_file
+src/sample/__init__.py
+src/sample/package_data.dat
+src/sample/simple.py
+src/sampleproject_jeevan900929.egg-info/PKG-INFO
+src/sampleproject_jeevan900929.egg-info/SOURCES.txt
+src/sampleproject_jeevan900929.egg-info/dependency_links.txt
+src/sampleproject_jeevan900929.egg-info/entry_points.txt
+src/sampleproject_jeevan900929.egg-info/requires.txt
+src/sampleproject_jeevan900929.egg-info/top_level.txt
