@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: KinetiKit
+Version: 0.1.6
+Summary: Tools for comparing and kinetically simulating time-resolved data
+Home-page: UNKNOWN
+Author: Natalia Spitha
+Author-email: natalia.spitha@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
