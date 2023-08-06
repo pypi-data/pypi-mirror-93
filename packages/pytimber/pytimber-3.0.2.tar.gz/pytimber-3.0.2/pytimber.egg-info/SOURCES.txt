@@ -1,0 +1,6 @@
+README.md
+setup.py
+pytimber.egg-info/PKG-INFO
+pytimber.egg-info/SOURCES.txt
+pytimber.egg-info/dependency_links.txt
+pytimber.egg-info/top_level.txt
