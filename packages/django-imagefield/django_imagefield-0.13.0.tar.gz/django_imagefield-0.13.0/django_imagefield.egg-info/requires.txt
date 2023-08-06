@@ -1,0 +1,5 @@
+Pillow>=6.2.2
+
+[tests]
+Pillow
+coverage
