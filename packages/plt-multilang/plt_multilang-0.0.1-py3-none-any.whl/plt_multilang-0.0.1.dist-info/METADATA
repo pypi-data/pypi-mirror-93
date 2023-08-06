@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: plt-multilang
+Version: 0.0.1
+Summary: Super simple multilang support for python scripts
+Home-page: https://github.com/___/___
+Author: Lukas Merkle
+Author-email: lukas.merkle@tum.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+UNKNOWN
+
+
