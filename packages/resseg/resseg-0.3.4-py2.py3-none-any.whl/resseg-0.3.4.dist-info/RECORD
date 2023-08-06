@@ -1,0 +1,16 @@
+resseg/__init__.py,sha256=MXpAjva9H9exWDzUJN9D4a1bhx2QP9GwwhCKxyl2JL0,264
+resseg/inference.py,sha256=SFMGXeOu7aCBEWauEgoPebXpxe76s3XQMq5w6Z6qVlM,4863
+resseg/model.py,sha256=Xh5DfjHjUyAB1D_J0M9X7VJ99LIiuT_FJPjSU_RX8R8,806
+resseg/resseg.py,sha256=rt4Ham5X6MBPenclw_tkTw3TlMX7hx2U5wuznQuGVDk,686
+resseg/utils.py,sha256=MyVjpTBAZDSxxLiJth7hrdQu5ma04EtsCIv63FNlPsg,137
+resseg/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+resseg/cli/resseg.py,sha256=9tuUjwMYt07n1cOPBGlCyIj2kloOSTnMCzI7jFYrhG4,1830
+resseg/cli/resseg_download.py,sha256=UZKmwej-yn8skAXy9D4j6741anmqb4hqnVCVjFqePUo,755
+resseg/cli/resseg_mni.py,sha256=wYvFVI7JR7nY83BYRFBI1Jy5qc9MHc8fxpvRf7DcqQ0,1617
+resseg/cli/resseg_patches.py,sha256=Y4rrhRWIO61W3g22hl-XYRg76tTA4jjKC3JTa2PiwYU,1331
+resseg-0.3.4.dist-info/LICENSE,sha256=Vh34pCo9Owd76xcXcqdRaduhKzg7Jj1c4RQIFxqU2Ww,1080
+resseg-0.3.4.dist-info/METADATA,sha256=EUZpFZTHlQR4U3ih-SBXRzAmpD1na5JMOd5qJgRQI80,3338
+resseg-0.3.4.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+resseg-0.3.4.dist-info/entry_points.txt,sha256=al-n1_PIDe_RNnSBNee4ehhk0adzZg54UNP_htiCPtM,141
+resseg-0.3.4.dist-info/top_level.txt,sha256=FqUpqMPSuSqXqOhCkchrWKDIJMpZ9B3PKByuigl8f_g,7
+resseg-0.3.4.dist-info/RECORD,,
