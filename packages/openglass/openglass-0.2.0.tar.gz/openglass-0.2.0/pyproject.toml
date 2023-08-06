@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "openglass"
+version = "0.2.0"
+description = ""
+authors = ["Hiro <hiro@torproject.org>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+tweepy = "^3.9.0"
+Telethon = "^1.17.5"
+six = "^1.15.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[tool.poetry.scripts]
+openglass = 'openglass:main'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
