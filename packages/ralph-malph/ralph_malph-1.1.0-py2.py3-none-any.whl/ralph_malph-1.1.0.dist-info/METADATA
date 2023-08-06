@@ -1,0 +1,134 @@
+Metadata-Version: 2.1
+Name: ralph-malph
+Version: 1.1.0
+Summary: An OpenEdx's tracking logs processor to feed your LRS
+Home-page: https://github.com/openfun/ralph
+Author: Open FUN (France Universite Numerique)
+Author-email: fun.dev@fun-mooc.fr
+License: MIT
+Keywords: Open edX,Analytics,xAPI,LRS
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: click (==7.1.2)
+Requires-Dist: click-option-group (==0.5.2)
+Requires-Dist: elasticsearch (==7.10.1)
+Requires-Dist: ovh (==0.5.0)
+Requires-Dist: pandas (==1.2.1)
+Requires-Dist: python-keystoneclient (==4.2.0)
+Requires-Dist: python-swiftclient (==3.11.0)
+Requires-Dist: pyyaml (==5.4.1)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: sentry-sdk (==0.19.5)
+Provides-Extra: ci
+Requires-Dist: twine (==3.3.0) ; extra == 'ci'
+Provides-Extra: dev
+Requires-Dist: bandit (==1.7.0) ; extra == 'dev'
+Requires-Dist: black (==20.8b1) ; extra == 'dev'
+Requires-Dist: flake8 (==3.8.4) ; extra == 'dev'
+Requires-Dist: ipdb (==0.13.4) ; extra == 'dev'
+Requires-Dist: ipython (==7.19.0) ; extra == 'dev'
+Requires-Dist: isort (==5.7.0) ; extra == 'dev'
+Requires-Dist: logging-gelf (==0.0.26) ; extra == 'dev'
+Requires-Dist: memory-profiler (==0.58.0) ; extra == 'dev'
+Requires-Dist: pyfakefs (==4.3.3) ; extra == 'dev'
+Requires-Dist: pylint (==2.6.0) ; extra == 'dev'
+Requires-Dist: pytest (==6.2.2) ; extra == 'dev'
+Requires-Dist: pytest-cov (==2.11.1) ; extra == 'dev'
+
+# Ralph, a learning analytics processor to feed your LRS
+
+## Getting started with development
+
+### Core development
+
+To start playing with `ralph`, you should build it using the `bootstrap` Make target:
+
+```
+$ make bootstrap
+```
+
+Now you can start playing the CLI:
+
+```
+$ bin/ralph --help
+```
+
+To lint your code, either use the `lint` meta target or one of the linting tools we use:
+
+```bash
+# Run all linters
+$ make lint
+
+# Run pylint
+$ make lint-pylint
+
+# List available linters
+$ make help | grep lint-
+```
+
+To run tests on your code, either use the `test` Make target or the
+`bin/pytest` script to pass specific arguments to the test runner:
+
+```bash
+# Run all tests
+$ make test
+
+# Run pytest with options
+$ bin/pytest -x -k mixins
+```
+
+### Tray development
+
+Ralph is distributed along with its tray (a deployable package for Kubernetes
+clusters using [Arnold](https://github.com/openfun/arnold)). If you intend to
+work on this tray, please refer to Arnold's documentation.
+
+### Local Swift Storage development
+
+To make ralph work with a local instance of Swift:
+
+1) Setup environment variables for demo swift user in .env
+
+```
+RALPH_SWIFT_OS_USERNAME=demo
+RALPH_SWIFT_OS_PASSWORD=demo
+RALPH_SWIFT_OS_USER_DOMAIN_NAME=Default
+RALPH_SWIFT_OS_PROJECT_DOMAIN_NAME=Default
+RALPH_SWIFT_OS_AUTH_URL=http://swift:35357/v3/
+RALPH_SWIFT_OS_IDENTITY_API_VERSION=3
+RALPH_SWIFT_OS_REGION_NAME=RegionOne
+RALPH_SWIFT_OS_TENANT_ID=cd238e84310a46e58af7f1d515887d88
+RALPH_SWIFT_OS_TENANT_NAME=RegionOne
+RALPH_SWIFT_OS_STORAGE_URL=http://swift:8080/v1/KEY_cd238e84310a46e58af7f1d515887d88/test_container
+```
+
+2) Push a first object (forcefully) to create the test container
+
+```
+$ echo "some content" | ./bin/ralph push -b swift -f some_archive_name
+```
+
+Now ralph should be fully functional with the local Swift storage.
+
+## Contributing
+
+This project is intended to be community-driven, so please, do not hesitate to
+get in touch if you have any question related to our implementation or design
+decisions.
+
+We try to raise our code quality standards and expect contributors to follow
+the recommandations from our
+[handbook](https://openfun.gitbooks.io/handbook/content).
+
+## License
+
+This work is released under the MIT License (see [LICENSE](./LICENSE)).
+
+
