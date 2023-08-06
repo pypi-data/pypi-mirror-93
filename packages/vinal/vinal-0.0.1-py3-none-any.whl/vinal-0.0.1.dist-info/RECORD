@@ -1,0 +1,10 @@
+vinal/__init__.py,sha256=LTzqUVWJnUzC36szoMelPaYbKHzClI3rKUsYy1cfnuc,709
+vinal/algorithms.py,sha256=UN4sNA_RJbVDg8YMyiyojGHNH4JCvmhomCAsl8ceV3U,14310
+vinal/build.py,sha256=hlkHhpgs_iGK-HOnqYZxovFhfe5T0ppyb_0WgKaKzl0,3741
+vinal/plot.py,sha256=2atDBdZoHG2Aq8MmkTSKpEMK0EQBYN7pzZQioNgT0Zw,36403
+vinal/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vinal-0.0.1.dist-info/LICENSE,sha256=9Zmz0g6cB2cAy4rTIkaojXildjeT_jsa1rdZ9x6ssvY,1364
+vinal-0.0.1.dist-info/METADATA,sha256=ZHgRZc3oMmh5AZo_ypGJMx4F52RjW0P7iAUaUcvl0ig,6981
+vinal-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+vinal-0.0.1.dist-info/top_level.txt,sha256=CPggEustfbwC6Hgg01h1vVJb8ZGba5vf0WtD7MRkAmo,6
+vinal-0.0.1.dist-info/RECORD,,
