@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: CommonPart
+Version: 0.0.8
+Summary: tools model
+Home-page: https://github.com/afcentry
+Author: afcentry
+Author-email: afcentry@163.com
+License: BSD License
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries
