@@ -1,0 +1,5 @@
+blinker
+email_validator
+m9s_nereid_catalog<5.3,>=5.2
+m9s_sale_channel<5.3,>=5.2
+trytond<5.3,>=5.2
