@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: FacebookPagePoster
+Version: 0.1.10
+Summary: A bot to post of facebook pages
+Home-page: https://github.com/horstmannmat/FacebookPagePoster
+Author: Matheus Horstmann
+Author-email: mch15@c3sl.ufpr.br
+License: UNKNOWN
+Description: XPTO
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
