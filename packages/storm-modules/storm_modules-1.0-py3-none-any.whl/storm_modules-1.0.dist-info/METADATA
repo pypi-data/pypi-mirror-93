@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: storm-modules
+Version: 1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: GMA
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: click
+Requires-Dist: lxml
+Requires-Dist: matplotlib (==3.3.1)
+Requires-Dist: numpy (==1.19.4)
+Requires-Dist: omegaconf
+Requires-Dist: openpyxl
+Requires-Dist: pandas (==0.25.3)
+Requires-Dist: psycopg2-binary
+Requires-Dist: pyarrow (==0.15.1)
+Requires-Dist: requests
+Requires-Dist: requests-oauthlib
+Requires-Dist: SQLAlchemy
+Requires-Dist: statsmodels
+Requires-Dist: tanker
+
+UNKNOWN
+
+
