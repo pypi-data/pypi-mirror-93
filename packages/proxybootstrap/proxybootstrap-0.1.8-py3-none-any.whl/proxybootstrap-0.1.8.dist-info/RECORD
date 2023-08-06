@@ -1,0 +1,10 @@
+proxybootstrap/Dockerfile.jinja2,sha256=ewDtwHscqlgIKpMmRxWgOIXHZbV5YuPYeZgLguiSuRY,101
+proxybootstrap/__init__.py,sha256=o44XK5T4ZalsBqK-7T26GJT0RIf48TifwUDIJJOTwOQ,62
+proxybootstrap/nginx.default.jinja2,sha256=PJJiSkwK87BWAzLiwpEFQY77CkB2K-JycXNWQW78HtY,491
+proxybootstrap/proxy.py,sha256=dXchocU_5nExkDfIE5y5QeNzKyQMKR1IPYKiJ-DSkLg,8086
+proxybootstrap-0.1.8.dist-info/LICENSE,sha256=pItHVrxY95Gzs1ClNLag5-rGYI39py0JjvCNZjSGaxE,1062
+proxybootstrap-0.1.8.dist-info/METADATA,sha256=p6cj_CglH5zhl3WTWakJzSMxp0Z-8lRb1jrKNFQl6pc,1069
+proxybootstrap-0.1.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+proxybootstrap-0.1.8.dist-info/entry_points.txt,sha256=mWLYZrVkrXTKsf_uqmBrzO_i8zNh07owtN0Sbe0U7Ww,56
+proxybootstrap-0.1.8.dist-info/top_level.txt,sha256=JAKosTXIe9EI8NhNaXx64DQIYmBa7jQ-BRo3tZnGsJw,15
+proxybootstrap-0.1.8.dist-info/RECORD,,
