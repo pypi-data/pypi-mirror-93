@@ -1,0 +1,10 @@
+README.md
+setup.py
+aipoincare/__init__.py
+aipoincare/main.py
+aipoincare.egg-info/PKG-INFO
+aipoincare.egg-info/SOURCES.txt
+aipoincare.egg-info/dependency_links.txt
+aipoincare.egg-info/top_level.txt
+aipoincare/backend/__init__.py
+aipoincare/backend/training.py
