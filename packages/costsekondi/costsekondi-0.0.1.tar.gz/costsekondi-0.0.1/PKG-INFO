@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: costsekondi
+Version: 0.0.1
+Summary: A CLI tool for CoST Sekondi-Takoradi in Ghana West Africa to make the general public access their Infrastructure Transparency Initiative data
+Home-page: https://costsekondi-takoradigh.org/
+Author: LoGig
+Author-email: inquiries@logig.tech
+License: MIT
+Download-URL: https://costsekondi-takoradigh.org/
+Description: # CoSTSekondi
+        
+        CoST Sekondi Takoradi command line program to access public infrastructure data
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3
+Description-Content-Type: text/markdown
