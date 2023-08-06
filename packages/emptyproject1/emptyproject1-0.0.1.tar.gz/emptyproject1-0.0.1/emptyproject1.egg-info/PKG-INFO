@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: emptyproject1
+Version: 0.0.1
+Summary: empty project for sailboat testing
+Home-page: https://github.com/cole-wilson/empty
+Author: cole wilson
+Author-email: cole@colewilson.xyz
+License: none
+Description: # empty_project
+        empty project for sailboat testing
+        ### Contributors
+        - cole wilson
+        ### Contact
+        <cole@colewilson.xyz> 
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

@@ -1,0 +1,8 @@
+setup.py
+emptyproject1/__init__.py
+emptyproject1/__main__.py
+emptyproject1.egg-info/PKG-INFO
+emptyproject1.egg-info/SOURCES.txt
+emptyproject1.egg-info/dependency_links.txt
+emptyproject1.egg-info/entry_points.txt
+emptyproject1.egg-info/top_level.txt
