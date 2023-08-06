@@ -1,0 +1,9 @@
+pyteomics[xml]
+scipy
+numpy
+sklearn
+matplotlib
+pandas
+seaborn
+lightgbm
+biosaur
