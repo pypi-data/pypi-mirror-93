@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: simpleurllib3
+Version: 0.1.5
+Summary: Easy to use urllib3 simplifier.
+Home-page: UNKNOWN
+Author: TriC
+License: UNKNOWN
+Keywords: urllib3,requests,simple,http
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >= 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: urllib3
+Requires-Dist: certifi
+Requires-Dist: luddite
+
+# simpleurllib3
+Easy to use urllib3 simplifier.
+Usage:
+```
+>>> client = simpleurllib3.Client()
+>>> resp = client.get('http://httpbin.org/ip')
+>>> resp.status
+200
+>>> resp.data
+"{'origin': '127.0.0.1'}"
+```
+
+## `class` Client()
+PoolManager client.
+
+## `class` SSLClient()
+Secure SSL PoolManager client.
+
+## Any Client || Request
+```
+client.[method](url, args)
+```
+Returns `urllib3.response.HTTPResponse`,
+refer to urllib3 docs for more info.
+
