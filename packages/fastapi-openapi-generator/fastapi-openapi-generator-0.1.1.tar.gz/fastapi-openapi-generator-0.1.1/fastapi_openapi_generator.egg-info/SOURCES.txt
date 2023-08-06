@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+fastapi_openapi_generator.egg-info/PKG-INFO
+fastapi_openapi_generator.egg-info/SOURCES.txt
+fastapi_openapi_generator.egg-info/dependency_links.txt
+fastapi_openapi_generator.egg-info/entry_points.txt
+fastapi_openapi_generator.egg-info/requires.txt
+fastapi_openapi_generator.egg-info/top_level.txt
+generator/__init__.py
+generator/main.py
+generator/lib/__init__.py
+generator/lib/exceptions.py
