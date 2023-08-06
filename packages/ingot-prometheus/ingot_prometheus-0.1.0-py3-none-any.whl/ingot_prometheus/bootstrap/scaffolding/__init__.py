@@ -1,0 +1,1 @@
+"""Ingot Prometheus bootstrap scaffolding."""
