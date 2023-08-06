@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: mildom
+Version: 1.0.0
+Summary: Unofficial wrapper for mildom api.
+Home-page: https://github.com/Alpaca131/mildom_lib
+Author: Alpaca131
+Author-email: iwa124816@gmail.com
+License: MIT
+Description: # これは何？
+        Python用Mildom APIの非公式ライブラリです。
+        開発途中です。
+        
+        # 対応状況
+        - ProfileV2 API
+        
+        # 対応予定
+        - Playback API
+        
+        # 注意
+        あくまでも**非公式APIの非公式ラッパー**です。開発が継続される保証はありません。
+        開発者は募集中です。
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
