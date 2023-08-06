@@ -1,0 +1,12 @@
+murdaws/murd_ddb.py,sha256=MSWhlvpCHGUi3n8-0tacjlLv1f9NabWNV23USd2c29o,5081
+murdaws/murd_ddb_api.py,sha256=vTKmak9WjtV1Sj_VL2ylnrQGiRVDoenOV7OfV-m7_Tc,2294
+murdaws/murd_ddb_ws_api.py,sha256=8KYBCBj0HEIum21TwCYS5HwWrhe-rzGZYYOVYiH-lUU,4873
+murdaws/murd_https.py,sha256=gTMlRUMxIPnf5moBZ3rVjs_uYOcceB2Hab7ZV8v0ExU,1765
+murdaws/murd_s3.py,sha256=o4cNWnUmGj2WDFLjjIDLY_jyBKxMdMvWOXdf966udVQ,3655
+murdaws/murd_wsapi_client.py,sha256=8C8WceF8xkFg1SnjTmjGsBb36Z7pxrvaOqSbw5Ss1Ug,1680
+murdaws/run_async.py,sha256=36oifE90yIqtl6NIwJu1zlzdU1LfYwNGZth_5TRyKkw,1606
+murdaws/test_ws_api.py,sha256=QgtWjuRcb5nz-otO84fYh3XHOXaTB2j73GvIJw8fLXQ,495
+murdaws-0.0.0.1.dist-info/METADATA,sha256=nFw4j7QA2JLp7BvlU6zvuRs2mFg92-hH7Y7XdSelfb0,479
+murdaws-0.0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+murdaws-0.0.0.1.dist-info/top_level.txt,sha256=jHgrf62icxw04Rukl8gwbs13wJ_XXfRSnoJfzRIBrQE,8
+murdaws-0.0.0.1.dist-info/RECORD,,
