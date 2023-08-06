@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: pyfurion
+Version: 0.1.3
+Summary: A furion client for Python
+Home-page: https://github.com
+Author: zhangguanqun
+Author-email: zhanguanqunart@163.com
+License: UNKNOWN
+Project-URL: Source, https://github.com
+Description: UNKNOWN
+Keywords: furion client python
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
