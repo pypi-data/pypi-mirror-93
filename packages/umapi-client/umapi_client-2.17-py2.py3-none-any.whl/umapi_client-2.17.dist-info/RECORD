@@ -1,0 +1,13 @@
+umapi_client/__init__.py,sha256=hDIZemaeKArngqYXCIRpILSzRDqvzZgb_lvohD90tc0,1553
+umapi_client/api.py,sha256=-jEmJAe_-V2OZb8oHug9mYfWyUVTHrChd9qt-X5SO2w,12284
+umapi_client/auth.py,sha256=7k95kt_EYA5P-Mf5ZwwSCZfsFOR5Wgm3gRqUkH6xntY,3768
+umapi_client/connection.py,sha256=tY7sYRdDjTl59ztX1NVW2Iz15LnCL-hH0sCHuXmZdHk,27765
+umapi_client/error.py,sha256=PRd-jZCVybrARrOq-OOLlgBDFGmFjpaUqsdNxm-dEXM,2606
+umapi_client/functional.py,sha256=XdZmx19Wqs8vBHhwDP4tQzmUVu1elWT_PRNEZ2Hc_p4,22001
+umapi_client/legacy.py,sha256=VvxHxMzOy0MXhfrsBeBnzv04vlH5R275dkud3wVi7SU,10654
+umapi_client/version.py,sha256=DpDPye8wVoCW7zhLZ8cK8MzeUA_23ZVN-re5l-YHqXc,1138
+umapi_client-2.17.dist-info/LICENSE,sha256=1DDDOX5HCcb2ri85zjPoBvgw-uUJXHgpMuinOPr6-rc,1094
+umapi_client-2.17.dist-info/METADATA,sha256=KsqlDJ3g_1WGVnVNrGZ6GDIzmLK3iu3Cxe7WBf0mpPg,1422
+umapi_client-2.17.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+umapi_client-2.17.dist-info/top_level.txt,sha256=K4TQR4yDQr2zEG0LGwEaE1EjHBz457y8EI34SCux1Yw,13
+umapi_client-2.17.dist-info/RECORD,,
