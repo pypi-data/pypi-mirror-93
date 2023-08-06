@@ -1,0 +1,11 @@
+nbformat
+papermill
+click
+
+[dev]
+black==20.8b1
+docutils==0.16
+flake8==3.8.4
+
+[test]
+pytest==6.2.2
