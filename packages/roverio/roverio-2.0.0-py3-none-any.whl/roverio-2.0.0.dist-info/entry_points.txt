@@ -1,0 +1,6 @@
+[console_scripts]
+roverio-file-extension = roverio.file_extension:main
+roverio-scout = roverio.scout:main
+roverio-secrets = roverio.secrets:main
+roverio-sequential-renamer = roverio.sequential_renamer:main
+

@@ -1,0 +1,12 @@
+roverio/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+roverio/file_extension.py,sha256=WKJ831Eyg1hOAnYqLWQhcqDrVlcqF7f1AoJDI3ooAZ0,1901
+roverio/scout.py,sha256=ksAAM0-6wtuPVxQPVQKO49Asvwz2NyRW-5TjYqGf9vI,2444
+roverio/secrets.py,sha256=UcTeT3OMTUjBf9uAb_iPb4yim7T7JCiqnLsEflORR28,2770
+roverio/sequential_renamer.py,sha256=4ocPT5ZjAh9tb-b6Cg_AfuCc5qn8wyp9F59j_9U5NOE,3495
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+roverio-2.0.0.dist-info/LICENSE,sha256=eetzvdaAaPwdWbQ3lrIVNAsUEimMPZII2-W94pVigoI,1071
+roverio-2.0.0.dist-info/METADATA,sha256=zcq62SP0SJz04uX3x7iuD63R-gdYhKRMMdV7vNJ9QmM,4965
+roverio-2.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+roverio-2.0.0.dist-info/entry_points.txt,sha256=6BeO6K_JtgZ7VLlph7MoLt7yEnQzeIcEeVC2nX0fA2E,207
+roverio-2.0.0.dist-info/top_level.txt,sha256=cdErI8T6fphZ7P_5f350tLtKo-FGhCrNzegpq1wVFnM,13
+roverio-2.0.0.dist-info/RECORD,,
