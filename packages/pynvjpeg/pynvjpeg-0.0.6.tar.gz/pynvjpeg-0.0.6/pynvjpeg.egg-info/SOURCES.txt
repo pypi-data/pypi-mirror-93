@@ -1,0 +1,9 @@
+README.md
+nvjpeg-python.c
+setup.cfg
+setup.py
+pynvjpeg.egg-info/PKG-INFO
+pynvjpeg.egg-info/SOURCES.txt
+pynvjpeg.egg-info/dependency_links.txt
+pynvjpeg.egg-info/requires.txt
+pynvjpeg.egg-info/top_level.txt

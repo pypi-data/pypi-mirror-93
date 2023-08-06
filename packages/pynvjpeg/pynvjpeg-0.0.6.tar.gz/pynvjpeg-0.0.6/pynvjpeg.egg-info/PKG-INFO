@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: pynvjpeg
+Version: 0.0.6
+Summary: nvjpeg for python
+Home-page: https://github.com/UsingNet/nvjpeg-python
+Author: Usingnet
+Author-email: developer@usingnet.com
+License: MIT
+Project-URL: Source, https://github.com/UsingNet/nvjpeg-python
+Project-URL: Tracker, https://github.com/UsingNet/nvjpeg-python/issues
+Description: NvJpeg - Python
+        ---------------------------
+        
+        ## Require
+        * nvjpeg
+        * cuda >= 10.2
+        * numpy >= 1.7
+        * python >= 3.6
+        * gcc >= 7.5
+        * make >= 4.1
+        
+        ## Install
+        ```shell
+        pip install pynvjpeg
+        ```
+        
+        ## Usage
+        ```python
+        #!/usr/bin/env python3
+        
+        from nvjpeg import NvJpeg 
+        
+        # read file
+        fp = open("input-image.jpg", "rb")
+        jpegData = fp.read()
+        fp.close()
+        
+        # decode
+        nj = NvJpeg()
+        img_np = nj.decode(jpegData)
+        
+        # use opencv show numpy image data
+        cv2.imshow("Demo", img_np)
+        cv2.waitKey(0)
+        
+        # encode numpy image data
+        jpg = nj.encode(img_np)
+        
+        # write file
+        fp = open("output-image.jpg", "wb")
+        fp.write(jpg)
+        fp.close()
+        ```
+Keywords: pynvjpeg nvjpeg jpeg encode decode
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 10.2
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.0
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
