@@ -1,0 +1,5 @@
+setuptools>=43
+setuptools_scm==5.0.*
+sphinx-autodoc-typehints
+sphinx-automodapi
+toml
