@@ -1,0 +1,9 @@
+mongobit/__init__.py,sha256=JHYrFzGOgEmriZnptgnQ97uI4fZgFHPumAY5p_hKQnk,129
+mongobit/base.py,sha256=YSSwKNTM7DyEMdTLffSFJ7qOU-ykyBwGV8Vmr4CaMlQ,12142
+mongobit/fields.py,sha256=zyVLWun7qyiLlmw5uugPZDj4opZhmqbdpl15APx6JbE,4276
+mongobit/mongobit.py,sha256=yuoUSMQDrTqRZA0ug4vZOBxjrG-kiR1YFnn_6tnpy8Y,5564
+mongobit/utils.py,sha256=Fbx0_LL_aXl2i4m5KRMndI4kwLhu8olwVJDEUdqgvcU,1635
+MongoBit-0.7.0.dist-info/METADATA,sha256=BJ7XhxC0iFp2X7nHuongEYIEZ_c3bRN_Y7UDIU2onFQ,671
+MongoBit-0.7.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+MongoBit-0.7.0.dist-info/top_level.txt,sha256=H770EYMonRL1T_jGH5IX_4jUyHb3Rt0ccYQ0HzzAK94,9
+MongoBit-0.7.0.dist-info/RECORD,,
