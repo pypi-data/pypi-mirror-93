@@ -1,0 +1,12 @@
+dicewars/__init__.py,sha256=R2XEMxriRuCutc1WeidgA0s06I3oC3HIBLg9eCmWJpI,3378
+dicewars/__version__.py,sha256=5ofR4gPaD9ArghAogn0VHq_F7Si0MahcTU1lLnYIggY,831
+dicewars/game.py,sha256=e9l2QBr1q5_qGbjlLJ6za1vaNzzpVRmZVAcQrbxVBMI,5870
+dicewars/grid.py,sha256=iML4ZUwhqnP997I9J-mt_aPEvoC9s_cOpLh7qk4rXiQ,13555
+dicewars/match.py,sha256=21OsIwk2mL5X88HCsmbYHPXvcSrcbAliMsxiLly3sb8,19506
+dicewars/player.py,sha256=PCSXMME5MGtsFpqYTj_1_AHiLNXqmSackryyTqiVeC4,4081
+dicewars/util.py,sha256=AYj9POqZswcRBvkglDIMJLXjEGIxerTkroeAmddtmro,5185
+dicewars-0.1.0.dist-info/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+dicewars-0.1.0.dist-info/METADATA,sha256=Uj8GfoJmQhKyRt65DawMEPG7xHMBuqJmSX4GfGaZOvs,1761
+dicewars-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dicewars-0.1.0.dist-info/top_level.txt,sha256=5ebctPK6yOML30bGoSfiq4TNP5gvUN3aesYbqbJj-CQ,9
+dicewars-0.1.0.dist-info/RECORD,,
