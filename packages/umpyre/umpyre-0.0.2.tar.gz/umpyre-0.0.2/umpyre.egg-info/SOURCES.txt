@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+umpyre/__init__.py
+umpyre/python_code_stats.py
+umpyre.egg-info/PKG-INFO
+umpyre.egg-info/SOURCES.txt
+umpyre.egg-info/dependency_links.txt
+umpyre.egg-info/not-zip-safe
+umpyre.egg-info/requires.txt
+umpyre.egg-info/top_level.txt
