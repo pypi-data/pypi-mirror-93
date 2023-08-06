@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: snap-combine
+Version: 0.5
+Summary: SuperNova Async Pipeline: combining
+Home-page: UNKNOWN
+Author: Andrey Sheshukov
+Author-email: ash@jinr.ru
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy (>=1.19)
+Requires-Dist: snap-base (>=1.0.1)
+Requires-Dist: sn-stat
+Requires-Dist: tqdm (>=4.53)
+
+UNKNOWN
+
+
