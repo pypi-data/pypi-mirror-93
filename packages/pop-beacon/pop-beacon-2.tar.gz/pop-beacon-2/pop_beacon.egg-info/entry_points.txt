@@ -1,0 +1,3 @@
+[console_scripts]
+beacon_test = beacon.scripts:start
+

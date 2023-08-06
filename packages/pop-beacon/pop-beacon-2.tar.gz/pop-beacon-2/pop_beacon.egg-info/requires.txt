@@ -1,0 +1,4 @@
+acct>=5
+aio-pika
+pop>=16.3
+pop-evbus>=2.1
