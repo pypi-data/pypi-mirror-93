@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: adyeno
+Version: 0.3
+Summary: The adyeno is a live Adyen encryption lib.
+Home-page: https://github.com/DeveloperAdeel/adyeno
+Author: Adeel Khan
+Author-email: akodaos@gmail.com
+License: MIT
+Keywords: adyeno,adk,exvous,palace,wrappers,automation
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: datetime
+Requires-Dist: pytz
+
+UNKNOWN
+
+
