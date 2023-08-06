@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: qplanarity
+Version: 1.0
+Summary: a puzzle game about untangling graphs
+Home-page: https://gitlab.com/franksh/qplanarity
+Author: Frank S. Hestvik
+Author-email: tristesse@gmail.com
+License: BSD3
+Platform: UNKNOWN
+Requires-Dist: PyQt5
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+UNKNOWN
+
+
