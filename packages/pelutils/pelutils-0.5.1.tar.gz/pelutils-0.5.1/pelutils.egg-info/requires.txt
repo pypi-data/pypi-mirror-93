@@ -1,0 +1,8 @@
+numpy
+gitpython
+rich
+
+[ds]
+torch
+matplotlib
+scipy
