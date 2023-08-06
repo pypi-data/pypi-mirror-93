@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pycox
+Version: 0.2.2
+Summary: Survival analysis with PyTorch
+Home-page: https://github.com/havakv/pycox
+Author: Haavard Kvamme
+Author-email: haavard.kvamme@gmail.com
+License: BSD license
+Description: 
+        **pycox** is a python package for survival analysis and time-to-event prediction with [PyTorch](https://pytorch.org/).
+        It is built on the [torchtuples](https://github.com/havakv/torchtuples) package for training [PyTorch](https://pytorch.org/) models.
+        
+        Read the documentation at: https://github.com/havakv/pycox
+        
+        The package contains
+        
+        - survival models: (Logistic-Hazard, DeepHit, DeepSurv, Cox-Time, MTLR, etc.)
+        - evaluation criteria (concordance, Brier score, Binomial log-likelihood, etc.)
+        - event-time datasets (SUPPORT, METABRIC, KKBox, etc)
+        - simulation studies
+        - illustrative examples
+        
+Keywords: pycox
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
