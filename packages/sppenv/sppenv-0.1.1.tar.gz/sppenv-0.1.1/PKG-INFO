@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: sppenv
+Version: 0.1.1
+Summary: Simplified Python `.env` file parser.
+Author: TheBoringDude
+Author-email: iamcoderx@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+# penv
+
+Simplified Python `.env` file parser.
