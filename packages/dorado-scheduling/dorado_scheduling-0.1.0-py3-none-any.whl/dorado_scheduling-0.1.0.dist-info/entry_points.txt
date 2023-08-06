@@ -1,0 +1,4 @@
+[console_scripts]
+dorado-scheduling=dorado.scheduling.scripts.main:main
+dorado-scheduling-animate=dorado.scheduling.scripts.animate:main
+
