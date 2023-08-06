@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Select the correct iframe and paste this script into the console</p>
+    <code>
+      const injectHead =
+      (function(i,n,j,e,c,t,s){t=n.createElement(j),s=n.getElementsByTagName(j)[0];t.appendChild(n.createTextNode(e));s?s.parentNode.insertBefore(t,s):n.head.appendChild(t)});
+      window.fetch("http://localhost:5000{{ url_for('static',
+      filename='extract_submission_file.js') }}").then(r => { r.text().then(text
+      => { injectHead(window, document, 'script', text) }) });</code
+    >
+  </body>
+</html>

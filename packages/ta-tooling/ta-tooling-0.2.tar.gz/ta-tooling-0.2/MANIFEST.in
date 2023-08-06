@@ -1,0 +1,3 @@
+graft src/bbutils/templates
+graft src/bbutils/static
+global-exclude *.py[cod]

@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: ta-tooling
+Version: 0.2
+Summary: Various tools for TA
+Home-page: https://github.com/krerkkiat/ta-tooling
+Author: Krerkkiat Chusap
+Author-email: kc555014@ohio.edu
+License: MIT
+Description: # TA Tooling
+        
+        Various tools for TA working with [Blackboard](https://www.blackboard.com/), a learning management system.
+        
+        ## Installation
+        
+        ```console
+        $ python -m pip install ta-tooling
+        ```
+        
+        ## Usage
+        
+        To group the submission files by email handle.
+        
+        ```console
+        $ ta-tooling categorize source-dir dest-dir
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
