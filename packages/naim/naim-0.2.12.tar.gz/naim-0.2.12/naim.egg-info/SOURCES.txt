@@ -1,0 +1,9 @@
+README.md
+setup.py
+naim/__init__.py
+naim/annotate_identified_variants.py
+naim.egg-info/PKG-INFO
+naim.egg-info/SOURCES.txt
+naim.egg-info/dependency_links.txt
+naim.egg-info/requires.txt
+naim.egg-info/top_level.txt
