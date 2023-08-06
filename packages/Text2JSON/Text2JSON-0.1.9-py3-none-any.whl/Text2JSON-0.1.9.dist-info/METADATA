@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: Text2JSON
+Version: 0.1.9
+Summary: Text2JSON
+Home-page: https://github.com/1173710105/Text2JSON
+Author: Yucheng Zeng
+Author-email: yucheng-zeng@outlook.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Requires-Dist: numpy
+Requires-Dist: transformers (==2.5.1)
+Requires-Dist: chinese2digits
+
+Hybrid Ranking Filling Network for Text-to-JSON
+
+Environment:
+
+    python: 3.6 or higher
+    pyTorch: 1.7.0 or higher
+    numpy: 1.14.3 or higher
+    transformers: 2.5.1 or higher
+    chinese2digits: 4.0.2 or higher
+    cuda: 9.2 or higher
+
+
