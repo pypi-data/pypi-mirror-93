@@ -1,0 +1,3 @@
+[console_scripts]
+mkdocs-coverage=mkdocs_coverage.cli:main
+
