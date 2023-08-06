@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Export {{ count }} rows to a notebook{% endblock %}
+
+{% block extra_head %}
+<meta name="robots" content="noindex">
+<style type="text/css">pre { margin-bottom: 1em; }</style>
+{% endblock %}
+
+{% block content %}
+<h1>Export {{ count }} rows to a notebook</h1>
+
+<p><a href="{{ back_url }}">Back to the rows</a></p>
+
+<p>You can export this data to a <a href="https://jupyter.org/">Jupyter</a> or <a href="https://observablehq.com/">Observable</a> notebook by copying and pasting the following:</p>
+
+<h2>Jupyter</h2>
+
+<p>Make sure you have <a href="https://pandas.pydata.org/">Pandas</a>. Import it in a cell like this:</p>
+
+<pre>
+import pandas
+</pre>
+
+If this shows an error you can run <code>%pip install pandas</code> in a notebook cell to install it.</p>
+
+<p>Now paste the following into a cell to load the {{ count }} row{% if count != 1 %}s{% endif %} into a DataFrame called <code>df</code>:</p>
+
+<pre>
+df = pandas.read_json({{ json.dumps(json_url) }})
+</pre>
+
+<p>Run <code>df</code> in a new cell to see the table.</p>
+
+{% if allow_csv_stream and csv_stream_url and total_count and total_count > count %}
+    <p>You can export all {{ "{:,}".format(total_count) }} rows using a single streaming CSV export like this:</p>
+    <pre>{{ pandas_stream_code }}</pre>
+{% endif %}
+<h2>Observable</h2>
+{% if cors_enabled %}
+    <p>Import <a href="https://d3js.org/">d3</a> by running this in a cell:</p>
+
+    <pre>d3 = require("d3@5")</pre>
+
+    <p>Now import the data into a variable called <code>rows</code> like this:</p>
+
+    <pre>rows = d3.json({{ json.dumps(json_url) }})</pre>
+
+    {% if allow_csv_stream and csv_stream_url and total_count and total_count > count %}
+        <p>You can export all {{ "{:,}".format(total_count) }} rows using a single streaming CSV export like this:</p>
+        <pre>rows = d3.csv({{ json.dumps(csv_stream_url) }})</pre>
+        <p>This could lose type information, since every column in a CSV import will be treated as text.</p>
+    {% endif %}
+{% else %}
+    <p class="message-warning">Export to Observable is only available if Datasette is running with the <code>--cors</code> option.</p>
+{% endif %}
+
+{% endblock %}
