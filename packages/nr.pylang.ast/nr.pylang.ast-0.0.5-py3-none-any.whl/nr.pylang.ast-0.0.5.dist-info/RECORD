@@ -1,0 +1,10 @@
+nr/__init__.py,sha256=jv2YF__bseklT3OWEzlqJ5qE24c4aWd5F4r0TTjOrWQ,65
+nr/pylang/__init__.py,sha256=jv2YF__bseklT3OWEzlqJ5qE24c4aWd5F4r0TTjOrWQ,65
+nr/pylang/ast/__init__.py,sha256=kN64q5QdC0ItIbGpLJRLZkqejW9vEJ_vMOr0M7_yRs0,1310
+nr/pylang/ast/dynamic_eval.py,sha256=gjdlyd7BR67BRkA9wDVbKYEmRXnsKDW6LzHtQD6iSK4,12501
+nr.pylang.ast-0.0.5.dist-info/LICENSE.txt,sha256=PTMA8TgKd7TibXuKbMOGlqATHes1D76uP9dAlPyqdEk,1002
+nr.pylang.ast-0.0.5.dist-info/METADATA,sha256=sO9PZKgli9sBgkYJbKwlDUIlrfDe45mj0ZR1NlhOcFw,1390
+nr.pylang.ast-0.0.5.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+nr.pylang.ast-0.0.5.dist-info/top_level.txt,sha256=8ipe96hphd64fYwhLcJmehxJ5lvqPpqOvSWVv-HcPnI,3
+nr.pylang.ast-0.0.5.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+nr.pylang.ast-0.0.5.dist-info/RECORD,,
