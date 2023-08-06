@@ -1,0 +1,10 @@
+numpy
+scipy
+matplotlib
+numpydoc
+pyyaml
+pytest
+sphinx_rtd_theme
+
+[test]
+coverage
