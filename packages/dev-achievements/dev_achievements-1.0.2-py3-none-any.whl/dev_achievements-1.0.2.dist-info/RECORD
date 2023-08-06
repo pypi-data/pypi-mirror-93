@@ -1,0 +1,15 @@
+dev_achievements/__init__.py,sha256=hWqC7WQW7uU9GymjnpfQF2bRCGuEsWxe6AXhbkG_ySI,1319
+dev_achievements/achievements.py,sha256=kafyNrGrthMkyAgoyoGyJb56t3-Sys0Y7E4exSdpqpY,10370
+dev_achievements/processing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dev_achievements/processing/tree.py,sha256=kLMozQIA1fvlMY4ehLsMZM9H2EKuQMN2d53gNFDsxYU,1855
+dev_achievements/processing/visitor.py,sha256=nUzVRo0SHTEJ5v2NkOwCjepp8k_IvaqAnmHGtoVg-1s,1450
+dev_achievements/utilities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dev_achievements/utilities/constants.py,sha256=VkBsDp_qyi_k6HwE7MNyy0dYfmsPVr2grmOSN7uQgcU,197
+dev_achievements/utilities/utils.py,sha256=rP4w8PPTPfAt1zaM_QewvPpGMTXHgPqsRjmZSr6pB5o,2454
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test.py,sha256=XGkseAG_ZczAw4g7_BrMH7WHAfoLepknBIg2ohF5M9I,2952
+dev_achievements-1.0.2.dist-info/LICENSE,sha256=D2mksGKAgaalgHCYeQ8V7WAInIDwi33NHxMBFU7LtIM,1067
+dev_achievements-1.0.2.dist-info/METADATA,sha256=cMpfbLTIx1JWhXyLXqtH5umtHsOYOEImCG8iP6ZZlAI,2463
+dev_achievements-1.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dev_achievements-1.0.2.dist-info/top_level.txt,sha256=o_icu-cnxxxYP4DYUJ4U6VpmdO-EtfDOw3Y2hWnjHFw,17
+dev_achievements-1.0.2.dist-info/RECORD,,
