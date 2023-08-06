@@ -1,0 +1,8 @@
+gdbundle_debuginfod/__init__.py,sha256=FVHPBGkfhbQDi_z3v0PiKJrXXqXOx0vGW_1VaqNJi7U,22
+gdbundle_debuginfod/gdb_loader.py,sha256=7mCc8E37KmWfoK4sT19PP8XvkM28tFAb-zmlyLtLfOk,324
+gdbundle_debuginfod/lldb_loader.py,sha256=e31bIKwHc4RSVpSTpmvaCzD2CcJu9nIDgWtOzIaqIEo,307
+gdbundle_debuginfod/scripts/debuginfod_gdb.py,sha256=IsBmeektDw6O8VNB63pkvInpslx2-YAt-uQ_8HibOqs,2415
+gdbundle_debuginfod/scripts/debuginfod_lldb.py,sha256=qAbD9Sh0_tmMMNNV1tYcm-QE4qHzajwIO-yp9WKF-64,2515
+gdbundle_debuginfod-0.2.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+gdbundle_debuginfod-0.2.0.dist-info/METADATA,sha256=TfIM_Z8nb82K3D_VGZF5QyZfsTW0DoTGxSQWn80ru-s,2043
+gdbundle_debuginfod-0.2.0.dist-info/RECORD,,
