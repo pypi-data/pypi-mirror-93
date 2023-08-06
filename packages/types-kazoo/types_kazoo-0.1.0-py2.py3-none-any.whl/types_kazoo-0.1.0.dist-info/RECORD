@@ -1,0 +1,10 @@
+kazoo-stubs/METADATA.toml,sha256=rnHWMRmbcJAiPEgxS7RWo7DOytfc_BdihdFFc6vlg20,47
+kazoo-stubs/__init__.pyi,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kazoo-stubs/client.pyi,sha256=fUPUW9-5VQibevcTDbpkhTkorz9JNyBfw6e03lrKgxs,3400
+kazoo-stubs/exceptions.pyi,sha256=7DhQ3xMt63lVinoWQv0vwI6VmG2IfNPlMpLRGu_gq-s,2054
+kazoo-stubs/recipe/__init__.pyi,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kazoo-stubs/recipe/watchers.pyi,sha256=Pxdwrx10R_orsLVINsoCsy-TL6a96EumRsENf2G11BE,551
+types_kazoo-0.1.0.dist-info/METADATA,sha256=HDZ5J7Mk7sYWOyDSylbwfGcnQdNsToB0aih0HS8fYuk,780
+types_kazoo-0.1.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+types_kazoo-0.1.0.dist-info/top_level.txt,sha256=en777TLWf6VkaIbXc2i0Db_UNmm_bJCCUuftVlxTHQI,12
+types_kazoo-0.1.0.dist-info/RECORD,,
