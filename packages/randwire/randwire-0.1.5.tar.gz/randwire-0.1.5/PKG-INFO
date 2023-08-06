@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: randwire
+Version: 0.1.5
+Summary: Random Length Antenna Calculator
+Home-page: https://github.com/0x9900/randwire/
+Author: Fred C. (W6BSD)
+Author-email: w6bsd@bsdworld.org
+License: BSD
+Description: 
+        # Random Wire Antenna Calculator
+        
+        This program helps you to calculate the optimal length of wire for
+        building a random length antenna.
+        
+        You can find more info on my blog post related to this program:
+        [Random-Wire antenna][1].
+        
+        ## Installation
+        
+        ```
+        $ pip install randwire
+        ```
+        
+        ## Usage
+        
+        ```
+        usage: randwire.py [-h] [-D] [-b BANDS [BANDS ...]] [-f FILE]
+                           [-u {meter,feet}]
+        
+        Wire length to avoid
+        
+        optional arguments:
+          -h, --help            show this help message and exit
+          -D, --debug           Print information useful for debugging
+          -b BANDS [BANDS ...], --bands BANDS [BANDS ...]
+                                List of bands [default: [40, 20, 15, 10]]
+          -f FILE, --file FILE  Graph filename, then extention can be (.png, .pdf,
+                                .svg) [default: wire.png]
+          -u {meter,feet}, --unit {meter,feet}
+                                Wire length [default: meter]
+        ```
+        
+        ## Example
+        
+        ```
+        √ % randwire
+        13:45:27 INFO: Bands: 40, 20, 15, 10
+        13:45:27 INFO: "wire.png" saved
+        ```
+        
+        The program generates an image showing the length of the wire to
+        avoid. The blue blocks represent the length of the wire that might
+        cause tuning problems.
+        
+        ![Wire Length](https://raw.githubusercontent.com/0x9900/randwire/main/misc/wire.png)
+        
+        
+        [1]: https://0x9900.com/random-wire-antenna/
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Communications :: Ham Radio
+Description-Content-Type: text/markdown

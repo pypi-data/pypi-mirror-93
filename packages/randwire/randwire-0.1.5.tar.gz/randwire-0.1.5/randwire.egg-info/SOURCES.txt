@@ -1,0 +1,9 @@
+README.md
+randwire.py
+setup.py
+randwire.egg-info/PKG-INFO
+randwire.egg-info/SOURCES.txt
+randwire.egg-info/dependency_links.txt
+randwire.egg-info/entry_points.txt
+randwire.egg-info/requires.txt
+randwire.egg-info/top_level.txt
