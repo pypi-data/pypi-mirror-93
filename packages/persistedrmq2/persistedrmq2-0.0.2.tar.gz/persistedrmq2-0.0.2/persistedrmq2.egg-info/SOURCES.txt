@@ -1,0 +1,10 @@
+README.md
+setup.py
+persistedrmq2/__init__.py
+persistedrmq2/persistedrmq2.py
+persistedrmq2.egg-info/PKG-INFO
+persistedrmq2.egg-info/SOURCES.txt
+persistedrmq2.egg-info/dependency_links.txt
+persistedrmq2.egg-info/requires.txt
+persistedrmq2.egg-info/top_level.txt
+persistedrmq2.egg-info/zip-safe
