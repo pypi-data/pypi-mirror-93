@@ -1,0 +1,12 @@
+README.md
+setup.py
+BSPM/__init__.py
+BSPM/events.py
+BSPM/info.py
+BSPM/level.py
+BSPM/notes.py
+BSPM/obstacles.py
+BeatSaberPythonMapper_jerrymarshall2004.egg-info/PKG-INFO
+BeatSaberPythonMapper_jerrymarshall2004.egg-info/SOURCES.txt
+BeatSaberPythonMapper_jerrymarshall2004.egg-info/dependency_links.txt
+BeatSaberPythonMapper_jerrymarshall2004.egg-info/top_level.txt
