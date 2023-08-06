@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+save_scummer/__init__.py
+save_scummer/backup.py
+save_scummer/cli.py
+save_scummer/config.py
+save_scummer/utils.py
+save_scummer.egg-info/PKG-INFO
+save_scummer.egg-info/SOURCES.txt
+save_scummer.egg-info/dependency_links.txt
+save_scummer.egg-info/entry_points.txt
+save_scummer.egg-info/requires.txt
+save_scummer.egg-info/top_level.txt
+test/test_save_scummer.py
