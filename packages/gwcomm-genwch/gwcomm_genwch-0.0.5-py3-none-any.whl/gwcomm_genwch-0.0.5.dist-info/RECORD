@@ -1,0 +1,9 @@
+gwcomm/__init__.py,sha256=vzBiF3pOLV1g7cIdL_NUFOnGgyRrav26zcMM9Lgjc2E,68
+gwcomm/conf.py,sha256=3hw4l8getMiQWw-zJoY6RP5J05DgmYX_yf_oj3FQYxY,1390
+gwcomm/filesystem.py,sha256=Xerw2EB47xk_c8gYSzb6AGRHP147dYFecaqygde75Ec,996
+gwcomm/logger.py,sha256=C4RRAac4-bPRM8aMhC3excGq1nucOI2DOO7cKO9eZMg,479
+gwcomm_genwch-0.0.5.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+gwcomm_genwch-0.0.5.dist-info/METADATA,sha256=8BrU0WUpXtdJVlDt8BL-vB3h0KhaFC5Wef31ts7wJPI,492
+gwcomm_genwch-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+gwcomm_genwch-0.0.5.dist-info/top_level.txt,sha256=GPBefw2-hJfgmvTMr1r1wAr9FRVONmHv9XIZe-MwjxE,7
+gwcomm_genwch-0.0.5.dist-info/RECORD,,
