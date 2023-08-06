@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: SDP18py
+Version: 0.1.4
+Summary: This package schedules surgeries using metaheurisitcs. It is a project done for in NUS for Systems Design Project (SDP):Metaheuristic Surgery Scheduling for Operating Theatre Scheduling
+Home-page: https://github.com/lwq96/NewProject
+Author: SDP18
+Author-email: e0176071@u.nus.edu
+License: MIT
+Keywords: metaheuristic,surgery,scheduling
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pareto
+Requires-Dist: time
+Requires-Dist: copy
+Requires-Dist: tkinter
+Requires-Dist: csv
+Requires-Dist: matplotlib
+Requires-Dist: datetime
+Requires-Dist: threading
+
+This is for SDP18 NUS ISE Metaheuristic Surgery Scheduling. It has 4 heuristics to choose from, Tabu Search, Genetic Algorithm, Simulated Annealing and Hill climbing. 
+The main functions for the heuristics are schedule_GA, schedule_SA, schedule_TS, schedule_HCO
+It will prompt you to select 3 files, they have to be in a specific format for the code to work. 
+
