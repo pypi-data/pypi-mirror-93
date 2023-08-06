@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: github-stats-pages
+Version: 0.1.5
+Summary: Retrieve statistics for a user's repositories and populate the information onto a GitHub static page
+Home-page: https://github.com/astrochun/github-stats-pages
+Author: Chun Ly
+Author-email: astro.chun@gmail.com
+License: MIT
+Description: # github-stats-pages
+        Retrieve statistics for a user's repositories and populate the information onto a GitHub static page
+        
+        [![GitHub Workflow Status (main)](https://img.shields.io/github/workflow/status/astrochun/github-stats-pages/Python%20package/main?color=blue&label=build%20%28main%29&logo=github)](https://github.com/astrochun/github-stats-pages/actions?query=workflow%3A%22Python+package%22+branch%3Amain)
+        [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/astrochun/github-stats-pages/Python%20package?color=blue&label=build%20%28latest%29&logo=github)](https://github.com/astrochun/github-stats-pages/actions?query=workflow%3A%22Python+package%22)
+        ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/github-stats-pages)
+        [![PyPI](https://img.shields.io/pypi/v/github-stats-pages?color=blue)](https://pypi.org/project/github-stats-pages)
+        
+        ![PyPI - Downloads](https://img.shields.io/pypi/dm/github-stats-pages?color=light%20green&label=PyPI-download)
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
