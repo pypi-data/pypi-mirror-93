@@ -1,0 +1,8 @@
+tox_bindep/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tox_bindep/hooks.py,sha256=kU_wm6OFFFQ09hdEvoPv2rvWgCXZncdU13q87eHE9GM,2023
+tox_bindep-0.2.1.dist-info/LICENSE,sha256=LaxzAPOruu6rZ5xeXcysNBm4WUBnxNTj__UdhgNoWxc,1070
+tox_bindep-0.2.1.dist-info/METADATA,sha256=bmASjPYMSUTeXxewYjnUG5SUBLdO8BYEuyvPTZnd-wI,1625
+tox_bindep-0.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+tox_bindep-0.2.1.dist-info/entry_points.txt,sha256=Iac0CgPYxnkyiNHdMSg9k8_m-LdS_EfazV9WNb1AUKI,33
+tox_bindep-0.2.1.dist-info/top_level.txt,sha256=tmrCMQQuHJuBt6_057IHZDGkrI2DbcDh6G_5_OeLaFk,11
+tox_bindep-0.2.1.dist-info/RECORD,,
