@@ -1,0 +1,14 @@
+pyvisa>=1.11.0
+typing_extensions
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[gpib_ctypes]
+gpib-ctypes>=0.3.0
+
+[serial]
+pyserial>=3.0
+
+[usb]
+pyusb
