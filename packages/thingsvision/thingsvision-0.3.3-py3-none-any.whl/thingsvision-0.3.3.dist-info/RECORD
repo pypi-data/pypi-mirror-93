@@ -1,0 +1,11 @@
+thingsvision/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+thingsvision/clip.py,sha256=JP9hLM7ciPGkm0wc2yuljFF3NpXaBADQLXHgKhHZMA4,5351
+thingsvision/dataset.py,sha256=xBqWRjkSK2dj4FbPFxG4CwIKiB_1jAjCxIm_HLgAq28,6119
+thingsvision/model.py,sha256=Vo5S5Jg5kblCJINEqVcPJ_8TPb3iVv5Jf0AMGpLuSBk,15662
+thingsvision/simple_tokenizer.py,sha256=0bCfEO09Hiw0NhnLmMv6y5I2PdhgdSakOqf-LWDRW60,4632
+thingsvision/vision.py,sha256=sklNnPE49KpmlTjLue_0nL38tJChUR_2tTdMacBjkds,18216
+thingsvision-0.3.3.dist-info/LICENSE,sha256=nDmIdRW_Jdb--mUovZnchLA7ickL4wihrzZykptsBQU,1097
+thingsvision-0.3.3.dist-info/METADATA,sha256=1wN6io5Y1LsbkV0j3oLEdiK-A8YfukspBcYxQf4goqc,10679
+thingsvision-0.3.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+thingsvision-0.3.3.dist-info/top_level.txt,sha256=Wjzy4xY8sH6YwAOYsmifxYtwRBxK05o_oDP7SHF3hZE,13
+thingsvision-0.3.3.dist-info/RECORD,,
