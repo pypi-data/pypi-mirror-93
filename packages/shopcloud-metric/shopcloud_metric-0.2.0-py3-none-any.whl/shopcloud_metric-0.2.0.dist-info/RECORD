@@ -1,0 +1,9 @@
+shopcloud_metric/__init__.py,sha256=8VCPnvSqyIVTVGMKupuTfZbTFsbulSXcNEN21bkPfRI,19
+shopcloud_metric/__main__.py,sha256=BPwDjrmXyV_hMvSyEDmwzIwGKkat9W8ed1MnELjvn-c,46
+shopcloud_metric/cli.py,sha256=WMCsAXrb_11QfcydUPgd-4XRiW7mAvoJ6QVn2z3fA5M,3667
+shopcloud_metric-0.2.0.data/scripts/metric,sha256=N24-WBSL8LZZkw3OGuvNCcZj1Wb8ABxjTXwtfcQFIZ8,118
+shopcloud_metric-0.2.0.dist-info/LICENSE,sha256=1-yznMdom_n61h-AQaoD-eTzfcTBQjX23gEoEGDRu3o,1072
+shopcloud_metric-0.2.0.dist-info/METADATA,sha256=XuIS7RtKtm0wMxO8uiYNlWC_qccHRze-VnTKMpiAEVY,1643
+shopcloud_metric-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+shopcloud_metric-0.2.0.dist-info/top_level.txt,sha256=1l9-RJFEFIeNUN-4O-neMRlggyuBARLjklADo4924-8,17
+shopcloud_metric-0.2.0.dist-info/RECORD,,
