@@ -1,0 +1,10 @@
+mypy_protobuf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_protobuf/extensions_pb2.py,sha256=ePOhnDsJl-OToubUWZVCqM8yeFsEm2iQApFpNexqfPo,2959
+mypy_protobuf/main.py,sha256=RA7nODFtMD2kf_o5czoy_gvalbUXb-BGxSoLskPANs8,32235
+mypy_protobuf-2.2.data/scripts/protoc_gen_mypy.bat,sha256=vbqxp3UeQ_5EiMusbNcKxaO5mmVD69FEELmFO1lJVAQ,48
+mypy_protobuf-2.2.dist-info/LICENSE,sha256=CIjHyVlsmnBaaMbI1wMMLjdiMgpL49hVLVX9DS1RwWU,11348
+mypy_protobuf-2.2.dist-info/METADATA,sha256=2oVL-77vzEj6lo01ucb0iYOHwa4rpSmlcSGLCBSdC48,438
+mypy_protobuf-2.2.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+mypy_protobuf-2.2.dist-info/entry_points.txt,sha256=rWUQwZWP7ZZnDz6EfncFVliV9eWukgT0hPpv-YY9Edw,108
+mypy_protobuf-2.2.dist-info/top_level.txt,sha256=tO9v4o6_pbRRPH26fTqRsfEMQEmg8RqweBWmjIw4ihU,14
+mypy_protobuf-2.2.dist-info/RECORD,,
