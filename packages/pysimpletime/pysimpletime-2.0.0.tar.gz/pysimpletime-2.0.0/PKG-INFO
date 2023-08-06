@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pysimpletime
+Version: 2.0.0
+Summary: Easy realtime debugging with time results
+Author: James Frienkins
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
