@@ -1,0 +1,7 @@
+README.md
+setup.py
+HDS-krishangupta/__init__.py
+HDS_krishangupta.egg-info/PKG-INFO
+HDS_krishangupta.egg-info/SOURCES.txt
+HDS_krishangupta.egg-info/dependency_links.txt
+HDS_krishangupta.egg-info/top_level.txt
