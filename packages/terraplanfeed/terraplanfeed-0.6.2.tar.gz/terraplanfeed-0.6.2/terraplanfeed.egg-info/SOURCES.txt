@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+terraplanfeed.egg-info/PKG-INFO
+terraplanfeed.egg-info/SOURCES.txt
+terraplanfeed.egg-info/dependency_links.txt
+terraplanfeed.egg-info/entry_points.txt
+terraplanfeed.egg-info/requires.txt
+terraplanfeed.egg-info/top_level.txt
