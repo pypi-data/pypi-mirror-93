@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: wynncraft
+Version: 0.1.0
+Summary: A wrapper for the Wynncraft API.
+Home-page: https://github.com/martinkovacs/wynncraft-python
+Author: Martin Kovács
+Author-email: martin.k.kovacs@gmail.com
+License: UNKNOWN
+Description: # wynncraft-python
+        
+        A wrapper for the Wynncraft API, with local caching.
+        
+        # Install
+        Needs at least python 3.6
+        
+            pip install wynncraft
+        
+        # Example
+        
+            import wynncraft
+            
+            # Get guild list
+            guilds = wynncraft.Guild.list()
+            print(guilds)
+            
+            # Get guild list from cache.
+            # If it hasn't been cached, it will make a request.
+            for _ in range(100):
+        	    guilds = wynncraft.cache.Guild.list()
+        	    print(guilds)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
