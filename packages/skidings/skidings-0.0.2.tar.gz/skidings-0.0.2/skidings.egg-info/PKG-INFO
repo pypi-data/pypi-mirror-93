@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: skidings
+Version: 0.0.2
+Summary: Simple module for new comers to networking and requests and mysql
+Home-page: https://github.com/AeronPY/SkidingsPY-module
+Author: AeronPY
+Author-email: aeron1337@protonmail.com
+License: MIT
+Description: [Skidings-lib Docs]
+        
+        About this lib:
+        
+        this library was primarly made for people that are getting into networking and sql databases, also requests library ect. this is just a shortcut for learning these librarys and makes you're code more simple and easier to use, this is a open source project so this means you are able to upload community versions of this applications and add and improve the current source code.
+Keywords: skidings
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

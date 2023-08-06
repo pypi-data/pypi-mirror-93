@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+skidings/__init__.py
+skidings.egg-info/PKG-INFO
+skidings.egg-info/SOURCES.txt
+skidings.egg-info/dependency_links.txt
+skidings.egg-info/requires.txt
+skidings.egg-info/top_level.txt

@@ -1,0 +1,23 @@
+Change Log
+==========
+
+0.0.1(01/02/2021)
+-----------------
+- Get Hwid
+- Check Hwid
+- Check Username
+- Check Password
+- Check Ip
+- Send Request
+- Get Sql Data
+- Fetch Sql Data (with indexing)
+- Encrypt Text
+- Geo Location
+- Reverse Hostname
+- Phone Lookup
+
+0.0.2(01/02/2021)
+-----------------
+- Discord Webhook Delete
+- Fixed & Updated Check Ip Func
+- Get Ip
