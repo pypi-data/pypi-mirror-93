@@ -1,0 +1,10 @@
+ipdb
+pytest
+pyyaml
+juju
+juju-wait
+charm-tools
+charmcraft
+
+[:python_version < "3.8"]
+asynctest
