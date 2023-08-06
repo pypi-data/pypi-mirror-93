@@ -1,0 +1,3 @@
+TotalDepth/LIS/core/cFrameSet.cpython-39-darwin.so
+TotalDepth/LIS/core/cRepCode.cpython-39-darwin.so
+TotalDepth/LIS/core/cpRepCode.cpython-39-darwin.so
