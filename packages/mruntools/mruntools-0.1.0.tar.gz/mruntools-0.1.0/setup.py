@@ -1,0 +1,33 @@
+# -*- coding: utf-8 -*-
+from setuptools import setup
+
+packages = \
+['mruntools']
+
+package_data = \
+{'': ['*']}
+
+install_requires = \
+['click>=7.1.2,<8.0.0',
+ 'pandas>=1.2.1,<2.0.0',
+ 'parse>=1.19.0,<2.0.0',
+ 'ruamel.yaml>=0.16.12,<0.17.0']
+
+setup_kwargs = {
+    'name': 'mruntools',
+    'version': '0.1.0',
+    'description': '',
+    'long_description': None,
+    'author': 'Matthew Hartley',
+    'author_email': 'mhartley@cantab.net',
+    'maintainer': None,
+    'maintainer_email': None,
+    'url': None,
+    'packages': packages,
+    'package_data': package_data,
+    'install_requires': install_requires,
+    'python_requires': '>=3.8,<4.0',
+}
+
+
+setup(**setup_kwargs)
