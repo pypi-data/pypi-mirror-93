@@ -1,0 +1,124 @@
+Metadata-Version: 2.1
+Name: MimV6
+Version: 0.0.1
+Summary: This package implement command line and python package tool for Man In The Middle in IPv6.
+Home-page: https://gitlab.com/ChrisASSR/mim_ipv6_scapy
+License: UNKNOWN
+Description: # mim_ipv6
+        
+        ## Description
+        Un package python pour performer un attaque de type "Man in the middle" avec Scapy, et de manipuler les paquets ip.
+        
+        Le but de notre programme, consiste Ã  usurper l'identitÃ© d'un destinataire dans une communication ipv6, pour voler des donnÃ©es au vrai           destinataire.
+        
+        Les donnÃ©es une fois copiÃ©es seront tjr acheminÃ©e au vrai destinataire, pour que ce spoofing reste indetectable.
+        
+        Notre programme n'est pas detectable en wifi, mais le deviens en ethernet.
+        
+        ## Requis
+         - Python 3
+         - Librairies standarts
+        
+        
+        ## Installation
+        
+        se mettre dans le dossier git et lancer :
+        
+        ```
+        pip install .
+        
+        ```
+        
+        ## Utilisation
+        
+        ```
+        mimV6
+        
+        ```
+        C'est un sniffeur de trame, qui une fois lancÃ©, rÃ©cupereras toutes les trames ipv6 du reseau sur lequel il est connectÃ©. 
+        
+        Le programme n'as besoin d'aucune interection utilisateur, et "spoofera", c'est Ã  dire qu'il voleras, afficheras les trames volÃ©s sur votre terminal au format ASCII (droite) et hexadecimal(gauche), et enverras la trame volÃ©e aux diffÃ©rentes victime de son attaque.
+        
+        le programme est codÃ© pour tourner de faÃ§on constante et nÃ©cessite une interuption utilisateur (CTRL + C) pour Ãªtre arrÃªtÃ©.
+        
+        Nous avons aussi codÃ© un outil de statistiques, qui fournira des info relatives Ã  l'attaque que vous venez de lancer.
+        
+        Les statistiques seronts affichÃ©s dÃ¨s l'interruption utilisateur.
+        
+        
+        ## Test
+        Nous avons crÃ©e des codes de test qui importent l'ensemble des fonctions nÃ©cessaire au fonctionnnement du code.
+        
+        Ces test sont des fichiers indÃ©pendants qui peuvent Ãªtres appellÃ©s Ã  tout moment via :
+        
+        ```
+        pytest
+        
+        ```
+        ## Exemples
+        
+        Packetstat.py
+        
+        ```
+        from MimV6 import statistics, PacketStats
+        from scapy.all import Ether, IP, TCP, UDP, IPv6
+        
+        statistics.append(PacketStats(Ether()))
+        statistics.append(PacketStats(Ether()/IP()))
+        statistics.append(PacketStats(Ether()/IP()/TCP()))
+        statistics.append(PacketStats(Ether()/IP()/UDP()))
+        statistics.append(PacketStats(Ether()/IPv6()/TCP()))
+        statistics.append(PacketStats(Ether()/IPv6()/UDP()))
+        statistics.append(PacketStats(Ether()/IPv6()))
+        statistics.append(PacketStats(Ether()))
+        
+        print(f"""
+        UDP: {PacketStats.udp}
+        TCP: {PacketStats.tcp}
+        Other: {PacketStats.other}
+        """)
+        
+        print("Lenght: " + ", ".join([str(pkt.lenght) for pkt in statistics]))
+        
+        ```
+        
+        hexa_packet.py
+        
+        ```
+        from MimV6 import hexa_packet
+        from scapy.all import Ether, IP, TCP, UDP, IPv6
+        hexa_packet(Ether()/IP()/TCP())
+        
+        hexa_packet(Ether())
+        hexa_packet(Ether()/IP())
+        hexa_packet(Ether()/IP()/TCP())
+        hexa_packet(Ether()/IP()/UDP())
+        hexa_packet(Ether()/IPv6()/TCP())
+        hexa_packet(Ether()/IPv6()/UDP())
+        hexa_packet(Ether()/IPv6())
+        hexa_packet(Ether())
+        
+        ```
+        mim_attack.py
+        
+        ```
+        from MimV6 import mim_attack
+        mim_attack()
+        
+        ```
+        
+        ## License
+        Licensed under the [GPL, version 3](https://www.gnu.org/licenses/).
+        
+        ## Lien
+        [Gitlab Page](https://gitlab.com/ChrisASSR/mim_ipv6_scapy)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

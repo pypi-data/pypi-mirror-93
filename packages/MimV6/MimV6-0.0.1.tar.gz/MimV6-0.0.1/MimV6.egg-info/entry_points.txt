@@ -1,0 +1,3 @@
+[console_scripts]
+mimV6 = MimV6:mim_attack
+
