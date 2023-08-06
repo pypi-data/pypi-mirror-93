@@ -1,0 +1,7 @@
+kde_diffusion/__init__.py,sha256=3PhKeFFQs4SGy6NRhYX5Fmij4_KJ4JRQ2z8yuwRe2iA,486
+kde_diffusion/kde1d.py,sha256=fXN94WpDK-USQMlLrdnND6QJOWhJHKPYvxz4bg0vNzI,4033
+kde_diffusion/kde2d.py,sha256=yuh-PGYnTawS2LE_gyR4lZ2AZ7Sd8IWNSK1-CLA-VHM,6459
+KDE_diffusion-1.0.2.dist-info/license.txt,sha256=NTbuW4CPu2i6gti7skvKgVdMUILszoUp7hILXUvwEUs,1093
+KDE_diffusion-1.0.2.dist-info/WHEEL,sha256=CqyTrkghQBNsEzLD3HbCSEIJ_fY58-XpoU29dUzwHSk,81
+KDE_diffusion-1.0.2.dist-info/METADATA,sha256=ihCzThK6PruORxgds1xikQFGzzzO5FWPRwGb_O_C2n0,2344
+KDE_diffusion-1.0.2.dist-info/RECORD,,
