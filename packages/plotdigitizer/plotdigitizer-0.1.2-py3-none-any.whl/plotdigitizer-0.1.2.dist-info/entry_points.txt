@@ -1,0 +1,3 @@
+[console_scripts]
+plotdigitizer=plotdigitizer.plotdigitizer:main
+
