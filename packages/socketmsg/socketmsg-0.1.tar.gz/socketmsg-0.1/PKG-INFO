@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: socketmsg
+Version: 0.1
+Summary: server connect to client msg to server 
+Home-page: UNKNOWN
+Author: ishan oshada
+Author-email: <ic31908@gmail.com>
+License: UNKNOWN
+Description: 
+        server using : 
+        
+        
+        import socket-client-msg
+        
+        server = socket-client-msg.connect(ip,port)
+        server.server()
+        
+        
+        client using :
+             
+        import socket-client-msg
+        
+        server = sock-client-msg.connecr(ip,port)
+        server.client()
+Keywords: connection.server,connection.client
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown

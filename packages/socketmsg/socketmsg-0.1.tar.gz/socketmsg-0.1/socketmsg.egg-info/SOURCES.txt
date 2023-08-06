@@ -1,0 +1,7 @@
+README.md
+setup.py
+socketmsg/__init__.py
+socketmsg.egg-info/PKG-INFO
+socketmsg.egg-info/SOURCES.txt
+socketmsg.egg-info/dependency_links.txt
+socketmsg.egg-info/top_level.txt
