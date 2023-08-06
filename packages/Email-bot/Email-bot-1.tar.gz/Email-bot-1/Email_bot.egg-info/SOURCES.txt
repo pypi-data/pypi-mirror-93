@@ -1,0 +1,6 @@
+setup.py
+Email_bot.egg-info/PKG-INFO
+Email_bot.egg-info/SOURCES.txt
+Email_bot.egg-info/dependency_links.txt
+Email_bot.egg-info/top_level.txt
+email-bot/__init__.py
