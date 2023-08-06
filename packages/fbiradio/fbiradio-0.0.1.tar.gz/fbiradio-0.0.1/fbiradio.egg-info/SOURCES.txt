@@ -1,0 +1,9 @@
+README.md
+setup.py
+bin/fbiplaying
+fbiradio/__init__.py
+fbiradio.egg-info/PKG-INFO
+fbiradio.egg-info/SOURCES.txt
+fbiradio.egg-info/dependency_links.txt
+fbiradio.egg-info/requires.txt
+fbiradio.egg-info/top_level.txt
