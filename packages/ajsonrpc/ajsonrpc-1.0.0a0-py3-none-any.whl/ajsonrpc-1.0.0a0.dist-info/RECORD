@@ -1,0 +1,16 @@
+ajsonrpc/__init__.py,sha256=1brYiVUYR2domvrgdn9WgfP1w5wF4RsXI7MsjLmKjSM,23
+ajsonrpc/core.py,sha256=MZou79fakZucUNxjt3syalybPuYUZwbaeINtwsgf-V0,19868
+ajsonrpc/dispatcher.py,sha256=g7uDOn7trTP-X1G_UFYd4DfoUxpKYH6MYBLkUaZwYoY,3604
+ajsonrpc/manager.py,sha256=qJ_fsAwkOtKblFOiSNogncu6Ea4As9coQMA6Q3gAk2I,4297
+ajsonrpc/utils.py,sha256=nc3ImNF9BnNewJz0Dmy_g__Q5IEqd65gAQSJ5gOkCwY,1129
+ajsonrpc/scripts/server.py,sha256=oHCZ-aPMaGXwBCVWhsbh_Jrct9NGYqOgoLO5SgzqUP0,3346
+ajsonrpc/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ajsonrpc/tests/test_core.py,sha256=FrTlFNbvwzIfKnqH-xj9iTziEIK0K3wFU7wr7MSLUYQ,13556
+ajsonrpc/tests/test_dispatcher.py,sha256=jADoBtqeCTqxFKWe74nMd8qFB-qDh9n3ywpndhjKJCE,99
+ajsonrpc/tests/test_manager.py,sha256=UWYe08rkLV3D7Irv0n06ROAfi7fYwxQM4PYDZN6oHZo,10542
+ajsonrpc-1.0.0a0.dist-info/LICENSE.txt,sha256=MuaJyO94t2dskQe7cepWSoxDQHVCCkDidxWa023h4JY,1091
+ajsonrpc-1.0.0a0.dist-info/METADATA,sha256=LlwHfs5N_nrntSO-iRrGi362sbbdnpixmNC2TqoY7os,6789
+ajsonrpc-1.0.0a0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ajsonrpc-1.0.0a0.dist-info/entry_points.txt,sha256=9bYFirevIbWWbjUBkNhMn7DgmPfVEv6JzmKlbNo8iGs,72
+ajsonrpc-1.0.0a0.dist-info/top_level.txt,sha256=Q4qXeQSl9d5m-GJuRxO0cGS12q9umn9uLcM1lcDM15k,9
+ajsonrpc-1.0.0a0.dist-info/RECORD,,
