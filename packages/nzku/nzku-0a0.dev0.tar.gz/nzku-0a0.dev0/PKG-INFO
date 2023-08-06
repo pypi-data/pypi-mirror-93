@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: nzku
+Version: 0a0.dev0
+Summary: Python package generated from template https://framagit.org/1ohmatr/sw/py/template
+Home-page: https://framagit.org/1ohmatr/sw/py/nzku.git
+Author: neze
+Author-email: neze_nzku@melix.org
+License: UNKNOWN
+Description: |pipeline| |coverage| |rtd|
+        
+        .. |pipeline| image:: https://framagit.org/1ohmatr/sw/py/nzku.git/badges/master/pipeline.svg
+        
+        .. |coverage| image:: https://framagit.org/1ohmatr/sw/py/nzku.git/badges/master/coverage.svg
+        
+        .. |rtd| image:: https://readthedocs.org/projects/nzku/badge/?version=latest
+        
+        Python package generated from template https://framagit.org/1ohmatr/sw/py/template
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/x-rst
