@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: ProtoDriver
+Version: 0.0.1
+Summary: A simple Raspberry Pi web api for driving a MAX7219 dot matrix display
+Home-page: https://github.com/ZynosStudios/ProtoDriverPI
+Author: ZynosStudios
+Author-email: zynosstudios@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX :: Other
+Requires-Python: >=3.6, <3.8
+Description-Content-Type: text/markdown
+Requires-Dist: luma.led-matrix
+Requires-Dist: flask
+Requires-Dist: flask-restful
+Requires-Dist: pillow
+
+# ProtoDriverPI
+A simple Raspberry Pi web api for driving a MAX7219 dot matrix display
+
+This packege is meant to be ran as a REST API and be called from a dedicated frontend.
+
+ProtoDriverPI has only just been brought to a useable level and is in no way production ready.
+
