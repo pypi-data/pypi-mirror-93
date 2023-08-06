@@ -1,0 +1,8 @@
+README.md
+setup.py
+webqueue.cpp
+./webqueue.cpp
+webqueue.egg-info/PKG-INFO
+webqueue.egg-info/SOURCES.txt
+webqueue.egg-info/dependency_links.txt
+webqueue.egg-info/top_level.txt
