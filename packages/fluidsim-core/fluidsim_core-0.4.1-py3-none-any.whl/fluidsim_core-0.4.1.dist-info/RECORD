@@ -1,0 +1,16 @@
+fluidsim_core/__init__.py,sha256=YeXPDlU61uKgqZnw1BmU6BZ_MPc8O-pyneXbGeUeBoE,260
+fluidsim_core/_version.py,sha256=pMtTmSUht-XtbR_7Doz6bsQqopJJd8rZ8I8zy2HwwoA,22
+fluidsim_core/info.py,sha256=QTOYkMtb-iEcdFLHTNTVfW6EArAmnu0K2rLyboUUh9k,2440
+fluidsim_core/loader.py,sha256=2ZUDzoVskFdcGUe4IMm9OlgeckuM2WaR-5egVvvv4IQ,1656
+fluidsim_core/magic.py,sha256=KoOIxW-ORbhUb1PR2er0iXmT_3_mD-pKikcYr-73s4w,2568
+fluidsim_core/output.py,sha256=IC4jhIbxvoVYbotnkrkOVWtIt9IYANQfJ4is0Li2Gdo,12263
+fluidsim_core/params.py,sha256=hxJTeN2ThBxEQV6gYC2tZCk83RFCncBDbhwVAQFMabg,5877
+fluidsim_core/solver.py,sha256=KEy_-tSURQLExQq_irc3U5r3qbnfHAK39q1oOkvkXqw,2406
+fluidsim_core/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fluidsim_core/tests/test_solver.py,sha256=WLl_V3I_fIRh29jL-l5AeulRI6ra1GOwbvGwSGjE_eo,905
+fluidsim_core/tests/test_solver_with_output.py,sha256=OF8CjCH5BHfqv0f7Y3Q9EKMVrFmxoIVjLgfsI944E0I,1907
+fluidsim_core-0.4.1.dist-info/LICENSE.txt,sha256=AiAPiQe-eNAWu5LXvoHQ62R1QTqN35Q9fq1-90ANvAw,21781
+fluidsim_core-0.4.1.dist-info/METADATA,sha256=VzXyFnth4aNLVE5omBOwf71JEF8FFgJnvpZwilgb8hE,1224
+fluidsim_core-0.4.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+fluidsim_core-0.4.1.dist-info/top_level.txt,sha256=Fh_FkGB3haEQkv7U39CVu4fFCWJdqM0pZ3U5vW-r0Lg,14
+fluidsim_core-0.4.1.dist-info/RECORD,,
