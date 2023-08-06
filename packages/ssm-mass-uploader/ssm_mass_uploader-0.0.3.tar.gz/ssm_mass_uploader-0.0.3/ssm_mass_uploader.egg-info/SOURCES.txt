@@ -1,0 +1,16 @@
+CHANGELOG.txt
+MANIFEST.in
+README.md
+__main__.py
+setup.py
+core/__init__.py
+core/__version__.py
+core/upload_ssm.py
+core/aws_utils/__init__.py
+core/aws_utils/kms.py
+core/aws_utils/ssm.py
+ssm_mass_uploader.egg-info/PKG-INFO
+ssm_mass_uploader.egg-info/SOURCES.txt
+ssm_mass_uploader.egg-info/dependency_links.txt
+ssm_mass_uploader.egg-info/requires.txt
+ssm_mass_uploader.egg-info/top_level.txt
