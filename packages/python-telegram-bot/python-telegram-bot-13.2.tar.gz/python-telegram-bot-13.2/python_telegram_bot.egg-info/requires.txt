@@ -1,0 +1,11 @@
+certifi
+cryptography
+tornado>=5.1
+APScheduler==3.6.3
+pytz>=2018.6
+
+[json]
+ujson
+
+[socks]
+PySocks
