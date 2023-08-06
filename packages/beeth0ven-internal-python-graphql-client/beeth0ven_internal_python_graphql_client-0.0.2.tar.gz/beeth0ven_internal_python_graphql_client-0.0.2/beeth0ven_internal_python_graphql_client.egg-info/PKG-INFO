@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: beeth0ven-internal-python-graphql-client
+Version: 0.0.2
+Summary: It's a simple graphQL client.
+Home-page: https://gitlab.picroup.com:444/beeth0ven/beeth0ven_internal_python_graphql_client
+Author: Luo Jie
+Author-email: beeth0vendev@gmail.com
+License: UNKNOWN
+Description: # Graphql Client
+        
+        It's a simple graphQL client.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

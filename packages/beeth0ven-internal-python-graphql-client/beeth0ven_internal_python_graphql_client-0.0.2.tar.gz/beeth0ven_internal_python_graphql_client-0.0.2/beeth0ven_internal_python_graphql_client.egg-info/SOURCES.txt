@@ -1,0 +1,8 @@
+README.md
+setup.py
+beeth0ven_internal_python_graphql_client/__init__.py
+beeth0ven_internal_python_graphql_client.egg-info/PKG-INFO
+beeth0ven_internal_python_graphql_client.egg-info/SOURCES.txt
+beeth0ven_internal_python_graphql_client.egg-info/dependency_links.txt
+beeth0ven_internal_python_graphql_client.egg-info/requires.txt
+beeth0ven_internal_python_graphql_client.egg-info/top_level.txt
