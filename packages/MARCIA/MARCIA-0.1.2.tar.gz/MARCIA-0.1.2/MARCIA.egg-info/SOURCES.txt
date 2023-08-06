@@ -1,0 +1,10 @@
+README.md
+setup.py
+MARCIA.egg-info/PKG-INFO
+MARCIA.egg-info/SOURCES.txt
+MARCIA.egg-info/dependency_links.txt
+MARCIA.egg-info/not-zip-safe
+MARCIA.egg-info/requires.txt
+MARCIA.egg-info/top_level.txt
+marcia/__init__.py
+marcia/mask.py
