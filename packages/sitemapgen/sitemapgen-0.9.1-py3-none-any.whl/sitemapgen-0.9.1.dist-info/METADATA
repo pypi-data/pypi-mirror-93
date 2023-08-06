@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: sitemapgen
+Version: 0.9.1
+Summary: A package to generate Sitemaps from a URL. Also provides a CLI for non programmatical use.
+Home-page: https://github.com/Nalin-2005/SitemapGen
+Author: Nalin Angrish
+Author-email: nalin@nalinangrish.me
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: bs4
+
+UNKNOWN
+
+
