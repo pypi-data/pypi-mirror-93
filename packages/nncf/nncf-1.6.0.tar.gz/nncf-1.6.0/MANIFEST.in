@@ -1,0 +1,3 @@
+graft nncf/extensions
+graft nncf/hw_configs
+include LICENSE
