@@ -1,0 +1,15 @@
+PennyLane_Lightning-0.14.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+PennyLane_Lightning-0.14.0.dist-info/METADATA,sha256=00YztPOdZY3iKg7smCkgsg9bb9alfJv0rjY1IltgURM,6641
+PennyLane_Lightning-0.14.0.dist-info/entry_points.txt,sha256=fgLGNe_9Av6nl9eJ7WXdQeS63causCrFsO1beybxjbA,74
+PennyLane_Lightning-0.14.0.dist-info/WHEEL,sha256=kRpTOiUzoWO2GDfCevceK0ME-mjr5hdBNCWO78h60mA,112
+PennyLane_Lightning-0.14.0.dist-info/top_level.txt,sha256=sdUchIJor0s-xafJZ1sShHq2FjnKFhl494-_wT-GRIg,40
+PennyLane_Lightning-0.14.0.dist-info/RECORD,,
+pennylane_lightning/lightning_qubit_ops.cpython-36m-x86_64-linux-gnu.so,sha256=Wb0536ATQSGvOcWJgj9e3CW8FD0Wwin9KLVwkeQn5RA,185888920
+pennylane_lightning/lightning_qubit.py,sha256=3OjRZc3mLaPxwefLSo-OnHlw9SQgS94aG_9O_Rkjixk,5727
+pennylane_lightning/_version.py,sha256=nUlUZ6px6vTvAk3LsM1AYIiEmBY5n0NBoNmYWORRBGM,692
+pennylane_lightning/__init__.py,sha256=lHYIbmGzrOztEdzj1EV23O02jpaPvCIog1t5Mmz-6eg,716
+pennylane_lightning/src/operations.hpp,sha256=4Zz3zo8pcsOnXmSIFXvvWJH5QNcVdy14VmRu0OVpXq4,10049
+pennylane_lightning/src/lightning_qubit.hpp,sha256=jMPXt1dCXVefQ07hzaI5vFoPGOaILY1aA0-O4W1kGUM,15134
+pennylane_lightning/src/lightning_qubit.cpp,sha256=2PCVtgAfGxaoPyv9xoWOVgzOQsxteIGCzEaH08zZM94,5709
+pennylane_lightning/src/typedefs.hpp,sha256=uMTL7O_xecr99kdlPNPgiVrnBxIltHhIRDVvd8ATXw0,1259
+PennyLane_Lightning.libs/libgomp-f7e03b3e.so.1.0.0,sha256=zbIl_S4-7kPHDUQOH1n_ENyLfww1WJv0eKBvWVHOPkI,93080
