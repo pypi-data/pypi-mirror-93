@@ -1,0 +1,7 @@
+README.md
+setup.py
+impauto/__init__.py
+impauto.egg-info/PKG-INFO
+impauto.egg-info/SOURCES.txt
+impauto.egg-info/dependency_links.txt
+impauto.egg-info/top_level.txt
