@@ -1,0 +1,6 @@
+setup.py
+EasyCompleteYou.egg-info/PKG-INFO
+EasyCompleteYou.egg-info/SOURCES.txt
+EasyCompleteYou.egg-info/dependency_links.txt
+EasyCompleteYou.egg-info/requires.txt
+EasyCompleteYou.egg-info/top_level.txt
