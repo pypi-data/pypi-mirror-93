@@ -1,0 +1,7 @@
+sfunc/__init__.py,sha256=nDLH5pP35ehY86IQTwaoJwaQm0RLAAEXCnRB-N9iQC0,1838
+sfunc/apigw_request.py,sha256=oXWu1ot2wBYRNuo1wpMabZGTyiSMjYSJQrUSNxGVG8I,2280
+sfunc/apigw_response.py,sha256=A1uYNycYxkxeed8tWcicBsc2ZxQ63bzBg0sVklOWbf0,1214
+sfunc-0.1.0.dist-info/METADATA,sha256=UQ_0CukPTao6AATLd_A2W-_l0D9kjmPIWDbcdecuWWo,267
+sfunc-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sfunc-0.1.0.dist-info/top_level.txt,sha256=dzXRR4WsgQD6uszVI-ixlZ43XvRLlYPYz3G8C5pyh6k,6
+sfunc-0.1.0.dist-info/RECORD,,
