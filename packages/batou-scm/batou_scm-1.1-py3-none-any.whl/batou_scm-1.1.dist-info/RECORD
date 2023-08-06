@@ -1,0 +1,15 @@
+batou_scm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+batou_scm/buildout.py,sha256=ejmhv9PZgFow4b1yXZd4YR9UddrR6J8zc_MO3i7lUOc,3537
+batou_scm/conftest.py,sha256=0BDkP_03k_qvF2rO6NYIAyfHcyIX_8-IxK_YdN-V158,46
+batou_scm/source.py,sha256=o9nk6HJBRS9b_j9T4Y55Ar4MIiqotso1IIiouKpBrGw,2695
+batou_scm/resources/buildout_overrides.cfg,sha256=t36pGICJEgdi1Vf_Athj4CvkvWvBqFXlTmkW42netH0,381
+batou_scm/resources/hgrc,sha256=Jh5cxpUwNrx-dNRZslspmT-bIwvqOEf6LYOmli50D_I,152
+batou_scm/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+batou_scm/tests/test_buildout.py,sha256=Um6-ymZhnw91EKUIUhjp0MGPZN1RaFAty4ZGKTIzxCU,5481
+batou_scm/tests/test_source.py,sha256=lXlQtrfwC0mwbSAiryLL6y5iSLJeJr-2O49SO-1PYd8,2531
+batou_scm-1.1.dist-info/LICENSE.txt,sha256=LgkZgYmTrW63RHfPZ8BfITPglCA-HDxyqtyqLPU7KSs,2070
+batou_scm-1.1.dist-info/METADATA,sha256=OVsDD1afBvHlKmEe7YxK0IZj-Z1tLsZGo7zBRMWq7jQ,3723
+batou_scm-1.1.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+batou_scm-1.1.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+batou_scm-1.1.dist-info/top_level.txt,sha256=feeVzMlPnGwcgXjIJjA5VgmGQ4no4vYpHCC2WL_EuJk,10
+batou_scm-1.1.dist-info/RECORD,,
