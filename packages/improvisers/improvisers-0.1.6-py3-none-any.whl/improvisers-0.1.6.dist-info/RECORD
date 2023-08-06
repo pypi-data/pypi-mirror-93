@@ -1,0 +1,11 @@
+improvisers/__init__.py,sha256=u_N9w9q0148fQwek0ouixitZYIIAQceVRlSgE4qj8Iw,281
+improvisers/critic.py,sha256=S9hIpJ4EJx7SwXrOl0OT2U1Mfej4dGxkZC-UUtCvoE4,1889
+improvisers/explicit.py,sha256=wMj1ENgsreor8KGxJdk_zplwZ97JosMWQQT0a9PKbi4,1723
+improvisers/game_graph.py,sha256=2yAg30qu74H3sMpVrbgrUyzQ4qXoc58OwHwxafIq5uY,2064
+improvisers/implicit.py,sha256=oGhxfuQP3kBP5LAjnQv82PpgSWrPi_Tfh6cppn1ynL8,2170
+improvisers/policy.py,sha256=NhFeV3hjKvl9sAt85yj0NDMfQLtBfTTQvUirtoh2DA8,5586
+improvisers/tabular.py,sha256=941kVq6FR5W0RlcvtvsMf8nTtSJwSi3vZMT6jjqQTMU,10554
+improvisers-0.1.6.dist-info/LICENSE,sha256=jEKY2ty3xNTu8AWYGVOoJCqCwJoap-EzVMycErqZLyA,1082
+improvisers-0.1.6.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+improvisers-0.1.6.dist-info/METADATA,sha256=vwA8HYr8iWJoc2lPWzL_ShbRYOD8uVR_kVuv9eaP4po,471
+improvisers-0.1.6.dist-info/RECORD,,
