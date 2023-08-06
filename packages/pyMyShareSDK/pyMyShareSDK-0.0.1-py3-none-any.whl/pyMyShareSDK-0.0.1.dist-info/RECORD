@@ -1,0 +1,10 @@
+mysdk/__init__.py,sha256=do8XF0kCOd6NgnIv9HVuWHsiZ6FM01gzDQEGxnddu0Y,788
+mysdk/apihelper.py,sha256=I8wWRUS-euHIdTrpMpk8BZWKdglSLHAijzWc-DW5Ea8,1000
+mysdk/urls.py,sha256=C1k_LopGwy-qRkeVC0epjEPUbWMf2xnYXhutCP761n4,649
+mysdk/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mysdk/version.py,sha256=4kcEfgWoDlVlb84R-aVrdmOuuauuw3h5LiJZprHsQms,95
+pyMyShareSDK-0.0.1.dist-info/LICENSE,sha256=lk_LhSNPFsG11iwwEupegeoWZOcvW-BOx8INdGIpcss,1093
+pyMyShareSDK-0.0.1.dist-info/METADATA,sha256=Kn4l2O7gXAxl7s0t0ZVhBFIAdKKsKhDJb0n73XqP3AA,6126
+pyMyShareSDK-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyMyShareSDK-0.0.1.dist-info/top_level.txt,sha256=oM9nBKLuRVht3cnrESJHs9PPLJehFEogDTllh2TBqz4,6
+pyMyShareSDK-0.0.1.dist-info/RECORD,,
