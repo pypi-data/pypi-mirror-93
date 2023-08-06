@@ -1,0 +1,7 @@
+README.md
+setup.py
+nbc/__init__.py
+nbc.egg-info/PKG-INFO
+nbc.egg-info/SOURCES.txt
+nbc.egg-info/dependency_links.txt
+nbc.egg-info/top_level.txt

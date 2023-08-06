@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: nbc
+Version: 1.2.0
+Summary: Number Base Converter
+Home-page: https://gitlab.com/v01d-gl/number-base-converter
+Author: v01d
+Author-email: v01dmain@aol.com
+License: MIT
+Description: # Number Base Converter by v01d
+        
+        *Converts string representation from one base to another*
+        
+        ## Installation
+        
+        ### From PyPI (recommended)
+        
+        Via pip
+        
+        ```cmd
+        pip install --user nbc
+        ```
+        
+        ### From GitLab
+        
+        ```cmd
+        git clone https://gitlab.com/v01d-gl/number-base-converter.git
+        cd number-base-converter
+        python setup.py install --user
+        ```
+        
+        ## Docs
+        
+        See docstring.
+        
+        ## Example
+        
+        See doctests.
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
