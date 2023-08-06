@@ -1,0 +1,8 @@
+onlinehd/__init__.py,sha256=4gdyVni-PVpKaGVRDeWiS_SWDKR7cszlQ0ZxgTtbnZ8,407
+onlinehd/encoder.py,sha256=iEihLqngvmE3WjexQzwRRI6ifsFNCX5yXhpdCzJaZp4,2944
+onlinehd/fasthd/onlinehd.cpp,sha256=A-71kwhrUX7aIG6mSAw9SVmbhNpMalTmExQGL9Vg9mI,1132
+onlinehd/onlinehd.py,sha256=Wca_tiDrSkrK7FIeRPWhEr4iGT2FoD5_9I2VYgDg6K8,9456
+onlinehd/spatial.py,sha256=c1TREEZZEP0tTy7cTLugKtPRkYje2zUlfUIF68gtzvs,1248
+onlinehd-0.1.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+onlinehd-0.1.1.dist-info/METADATA,sha256=Y87BsMnCnve5sCAGjpb7AGypMiNeyaF6eOPAdISHUp4,2040
+onlinehd-0.1.1.dist-info/RECORD,,
