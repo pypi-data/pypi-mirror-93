@@ -1,0 +1,17 @@
+python-dateutil>=2.4
+requests>=2.7
+
+[docs]
+Sphinx<3,>=2.3
+sphinx_rtd_theme<1,>=0.4
+
+[mypy]
+mypy
+
+[test]
+coverage<6,>=5
+coveralls<2.0,>=1.1
+flake8<4,>=3.3
+pytest<7,>=6
+pytest-cov<3,>=2
+pytest-mock<4,>=3
