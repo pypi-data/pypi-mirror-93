@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: coiled-venv
+Version: 0.0.1
+Summary: Let it hatch, watch it coil (your python virtualenv)
+Home-page: https://github.com/fopina/coil
+Author: Filipe Pina
+Author-email: fopina@skmobi.com
+License: MIT
+Download-URL: https://github.com/fopina/coil/tarball/v0.0.1
+Keywords: productivity,virtual env,cleanup,cli
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+
+UNKNOWN
+
+
