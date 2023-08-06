@@ -1,0 +1,3 @@
+[console_scripts]
+apx-changelog = apxchangelog:main
+
