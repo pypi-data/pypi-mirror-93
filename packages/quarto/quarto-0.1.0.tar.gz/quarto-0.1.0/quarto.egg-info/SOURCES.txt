@@ -1,0 +1,11 @@
+README.md
+setup.py
+quarto/__init__.py
+quarto/metadata.py
+quarto/quarto.py
+quarto/render.py
+quarto.egg-info/PKG-INFO
+quarto.egg-info/SOURCES.txt
+quarto.egg-info/dependency_links.txt
+quarto.egg-info/requires.txt
+quarto.egg-info/top_level.txt
