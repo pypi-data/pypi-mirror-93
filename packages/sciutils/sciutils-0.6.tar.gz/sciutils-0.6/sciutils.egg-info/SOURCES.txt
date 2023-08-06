@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+sciutils/__init__.py
+sciutils/plot.py
+sciutils/stats.py
+sciutils/util.py
+sciutils.egg-info/PKG-INFO
+sciutils.egg-info/SOURCES.txt
+sciutils.egg-info/dependency_links.txt
+sciutils.egg-info/requires.txt
+sciutils.egg-info/top_level.txt
