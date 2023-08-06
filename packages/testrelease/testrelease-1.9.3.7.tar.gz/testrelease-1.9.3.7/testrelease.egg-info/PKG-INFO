@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: testrelease
+Version: 1.9.3.7
+Summary: Building Recognition using AI at Large-Scale
+Home-page: UNKNOWN
+Author: testrelease
+Author-email: 
+License: BSD 3-Clause
+Description: # testrelease
+Keywords: testrelease,bim,testrelease framework
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
