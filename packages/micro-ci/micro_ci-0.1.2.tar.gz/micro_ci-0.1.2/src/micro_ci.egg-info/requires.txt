@@ -1,0 +1,13 @@
+pyyaml
+
+[dev]
+black
+flake8
+mypy
+pylint
+rope
+
+[test]
+flaky
+pytest
+pytest-cov

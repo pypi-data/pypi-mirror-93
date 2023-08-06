@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/micro_ci/__init__.py
+src/micro_ci/main.py
+src/micro_ci.egg-info/PKG-INFO
+src/micro_ci.egg-info/SOURCES.txt
+src/micro_ci.egg-info/dependency_links.txt
+src/micro_ci.egg-info/entry_points.txt
+src/micro_ci.egg-info/requires.txt
+src/micro_ci.egg-info/top_level.txt
