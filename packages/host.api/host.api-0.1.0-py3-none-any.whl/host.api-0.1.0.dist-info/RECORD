@@ -1,0 +1,10 @@
+host_api/.deta/prog_info,sha256=0GD-kQAF280cyRMW5Dngl3nRpvfg7altf4vdCBExKT4,350
+host_api/.deta/state,sha256=XSplGUwMFry0P1tUSyI6kwSnzM0TbYblM_F50vT7O1Q,326
+host_api/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+host_api/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+host_api/main.py,sha256=4yxup284leIbn2KzIQpG86oVVbiT-zEIvz8kEN8yTbM,950
+host_api/requirements.txt,sha256=Fl4GztDI2MOFMKpbTI_zcjMz8SqUkaPsIe6SjpsEJho,67
+host.api-0.1.0.dist-info/entry_points.txt,sha256=1dleFFPPRvvXfTLdSVcfuGTGGmkaOH5Kl2hNxW7yWKk,48
+host.api-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+host.api-0.1.0.dist-info/METADATA,sha256=eCu65MlaK9_dceUND9J3wWG9_WPvV1q4dq4cRTl19m0,662
+host.api-0.1.0.dist-info/RECORD,,

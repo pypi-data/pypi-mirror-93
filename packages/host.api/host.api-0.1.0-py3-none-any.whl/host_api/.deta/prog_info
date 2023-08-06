@@ -1,0 +1,1 @@
+{"id":"31b4d020-c7d0-432a-8fac-592814b10929","space":1838,"runtime":"python3.7","name":"host_api","path":"vaay06","project":"b0zrnc89","account":"144798365827","region":"sa-east-1","deps":["fastapi","python-dotenv","python-jose","deta","passlib","bcrypt","typer","uvicorn"],"envs":null,"public":true,"log_level":"debug","cron":"","reload_deps":false}

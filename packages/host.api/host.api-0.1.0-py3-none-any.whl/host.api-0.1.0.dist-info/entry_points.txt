@@ -1,0 +1,3 @@
+[console_scripts]
+webhost=host_api.main:webapp
+
