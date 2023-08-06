@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: neatpy
+Version: 0.1.0
+Summary: A NEAT library in Python
+Home-page: https://github.com/reddragonnm/neatpy
+Author: reddragonnm
+License: MIT
+Description: # neatpy
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
