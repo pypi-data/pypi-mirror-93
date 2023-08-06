@@ -1,0 +1,8 @@
+dicom_lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dicom_lib/pickups.py,sha256=HNJwnnze1tXnI3D9goi1aBVHc2_9BLCwAn9Nueq8xro,2018
+dicom_lib/rates.py,sha256=oGPwtVL6gHIv5_M8faYgVTIThsemLChRc8pDROQbRLU,3327
+dicom_lib/shipments.py,sha256=XpffWFe4ZUsJ7rfGYV9T732mybGcN5bzUAWUKM15O0o,3623
+dicom_lib/tracking.py,sha256=i4bwyOzi3qslXZJ_TQFaiU69th_BwvLg9TV67vXmKhE,4983
+carrier.dicom-2020.11.1b0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+carrier.dicom-2020.11.1b0.dist-info/METADATA,sha256=4Zz0s5ocZPzYZnW92AfUrntal8mw2Ny43xwyRWWDx9E,1208
+carrier.dicom-2020.11.1b0.dist-info/RECORD,,
