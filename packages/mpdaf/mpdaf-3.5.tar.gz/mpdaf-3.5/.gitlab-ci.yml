@@ -1,0 +1,51 @@
+stages:
+  - setup
+  - test
+  - extra
+
+before_script:
+  - export PYENV_ROOT="$HOME/.pyenv"
+  - export PATH="$PYENV_ROOT/bin:$PATH"
+  - export LC_ALL=C.UTF-8
+  - export LANG=C.UTF-8
+  - eval "$(pyenv init -)"
+  - pyenv local 3.6.10 3.7.6 3.8.1
+  - pwd
+
+# this build is run first, to update tox and run the check on setup
+check-setup:
+  stage: setup
+  script:
+    - pip install -U tox tox-pyenv
+    - tox -v -e check
+
+
+py36:
+  stage: test
+  script:
+    - tox -v -e py36 -- --pyargs mpdaf
+
+py37:
+  stage: test
+  script:
+    - tox -v -e py37 -- --pyargs mpdaf
+    
+py38:
+  stage: test
+  script:
+    - tox -v -e py38 -- --pyargs mpdaf
+
+py37-slow:
+  stage: extra
+  script:
+    - tox -v -e py37 -- -m 'slow' --pyargs mpdaf
+
+pre:
+  allow_failure: true
+  stage: extra
+  script:
+    - tox --pre -v -e py37 -- --pyargs mpdaf
+
+docs:
+  stage: extra
+  script: tox -v -e docs
