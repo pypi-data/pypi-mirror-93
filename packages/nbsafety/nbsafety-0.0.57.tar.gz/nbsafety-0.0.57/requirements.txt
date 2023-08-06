@@ -1,0 +1,5 @@
+astunparse
+ipykernel
+ipython
+jupyter
+jupyterlab
