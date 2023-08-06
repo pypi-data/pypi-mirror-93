@@ -1,0 +1,10 @@
+manx/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+manx/exceptions.py,sha256=gyCgeLvDQj7m5712C6jof5tNwFiclxRzjtED8q7cVFg,87
+manx/filename.py,sha256=j9BLaUQ2fxgIyz5yeqKb5cw9B5ETykhetSHSHfew9bY,2413
+manx/migrate.py,sha256=iodNJ6aYNu5pIF4xrXpBNFdMITQpY-9wu56Pbvc_UdM,4247
+manx/migrations/01_create_person_index.py,sha256=NUOaNg0ExPmwfwpWg1Y1OwyKNjESq0HwLHnUTk--3jM,1387
+manx/py.typed,sha256=UeDB0z9u_l00cbh_ZqC6KdIkR1CIZLG7n70PuqRLA6o,324
+manx-0.1.0.dist-info/LICENSE,sha256=IeheakTm8dYbIHBGkvr37kgwe6HSoA24IU3TDxc_z84,1068
+manx-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+manx-0.1.0.dist-info/METADATA,sha256=A8564C4S-_eVKyDdS9a9uXGDWBWbVdiAfCh8Y0u5JdI,384
+manx-0.1.0.dist-info/RECORD,,
