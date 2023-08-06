@@ -1,0 +1,3 @@
+[console_scripts]
+henpy = henpy.henpy:main
+
