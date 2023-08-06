@@ -1,0 +1,5 @@
+pyahocorasick
+
+[test]
+pytest
+pytest-cov
