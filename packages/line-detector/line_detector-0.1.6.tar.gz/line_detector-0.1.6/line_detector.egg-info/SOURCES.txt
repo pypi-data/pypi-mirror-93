@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+line_detector.egg-info/PKG-INFO
+line_detector.egg-info/SOURCES.txt
+line_detector.egg-info/dependency_links.txt
+line_detector.egg-info/requires.txt
+line_detector.egg-info/top_level.txt
+src/line_detector.c
+src/line_detector.pyx
+src/line_detector.egg-info/PKG-INFO
+src/line_detector.egg-info/SOURCES.txt
+src/line_detector.egg-info/dependency_links.txt
+src/line_detector.egg-info/requires.txt
+src/line_detector.egg-info/top_level.txt
