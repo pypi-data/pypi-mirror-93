@@ -1,0 +1,7 @@
+setup.py
+hellopkgabc.egg-info/PKG-INFO
+hellopkgabc.egg-info/SOURCES.txt
+hellopkgabc.egg-info/dependency_links.txt
+hellopkgabc.egg-info/top_level.txt
+libname/__init__.py
+libname/hello.py
