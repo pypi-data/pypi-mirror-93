@@ -1,0 +1,13 @@
+tqdm
+bbopt
+
+[dev]
+pdoc3
+Markdown
+
+[examples]
+numpy
+scipy
+mpmath
+scikit-learn
+matplotlib
