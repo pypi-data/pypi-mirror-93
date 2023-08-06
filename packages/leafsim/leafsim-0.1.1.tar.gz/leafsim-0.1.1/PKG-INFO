@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: leafsim
+Version: 0.1.1
+Summary: A simulator for Large Energy-Aware Fog computing environments.
+Home-page: https://github.com/dos-group/leaf
+License: MIT
+Keywords: simulation,modeling,fog computing,energy consumption,edge computing
+Author: Philipp Wiesner
+Author-email: wiesner@tu-berlin.de
+Requires-Python: >=3.7.9,<4.0.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Distributed Computing
+Classifier: Typing :: Typed
+Requires-Dist: networkx (>=2.5,<3.0)
+Requires-Dist: numpy (>=1.20.0,<2.0.0)
+Requires-Dist: pandas (>=1.2.1,<2.0.0)
+Requires-Dist: simpy (>=4.0.0,<5.0.0)
+Requires-Dist: tqdm (>=4.0.0,<5.0.0)
+Project-URL: Repository, https://github.com/dos-group/leaf
+Description-Content-Type: text/markdown
+
+# LEAF [![PyPI version fury.io](https://badge.fury.io/py/leafsim.svg)](https://pypi.org/project/leafsim/) [![Supported versions](https://img.shields.io/pypi/pyversions/leafsim.svg)](https://pypi.org/project/leafsim/) [![License](https://img.shields.io/pypi/l/leafsim.svg)](https://pypi.org/project/leafsim/)
+
+A simulator for **L**arge **E**nergy-**A**ware **F**og computing environments.
+LEAF enables energy consumption modeling of distributed, heterogeneous, and resource-constrained infrastructure that executes complex application graphs.
+
+Features include:
+
+- **Power modeling**: Model the power usage of individual compute nodes, network traffic and applications
+- **Energy-aware algorithms**: Implement dynamically adapting task placement strategies, routing policies, and other energy-saving mechanisms
+- **Dynamic networks**: Nodes can be mobile and can join or leave the network during the simulation
+- **Scalability**: Simulate thousands of devices and applications in magnitudes faster than real time
+- **Exporting**: Export power usage characteristics and other results as CSV files for further analysis
+
+<p align="center">
+  <img src="/images/infrastructure.png">
+</p>
+
+
+## Under Development
+
+This Python implementation was ported from the [original Java protoype](https://www.github.com/birnbaum/leaf).
+All future development will take place in this repository.
+However, the code is currently under early development and only comes with a minimal working example you can find under `examples/simple`.
+
+Further examples, including the smart city traffic scenario implemented in the Java prototype will follow soon.
+
+
+## Development
+
+### Build and Publish
+
+> poetry build --format sdist
+> poetry publish
+
+
+## Publications
+
+The paper behind LEAF is currently under review:
+- Philipp Wiesner and Lauritz Thamsen. "LEAF: Simulating Large Energy-Aware Fog Computing Environments" [under review]
+
