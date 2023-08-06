@@ -1,0 +1,8 @@
+README.md
+setup.py
+BMESBIO2Data/__init__.py
+BMESBIO2Data/main.py
+BMESBIO2Data.egg-info/PKG-INFO
+BMESBIO2Data.egg-info/SOURCES.txt
+BMESBIO2Data.egg-info/dependency_links.txt
+BMESBIO2Data.egg-info/top_level.txt

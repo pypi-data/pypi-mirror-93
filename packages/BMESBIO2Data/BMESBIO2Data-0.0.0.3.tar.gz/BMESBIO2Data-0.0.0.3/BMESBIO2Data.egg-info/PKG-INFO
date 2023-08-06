@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: BMESBIO2Data
+Version: 0.0.0.3
+Summary: Terry toolkit BMESBIO2Data
+Home-page: https://www.terrychan.org/BMESBIO2Data/
+Author: Terry Chan
+Author-email: napoler2008@gmail.com
+License: UNKNOWN
+Description: 
+            
+            BMESBIO2Data
+            一个用于将命名实体任务中输出的BIO、BMES数据转换为格式化数据的包。
+            
+            [项目地址](https://github.com/napoler/BMESBIO2Data)
+            [查看文档](http://www.terrychan.org/BMESBIO2Data/)
+            
+            
+            
+            
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
