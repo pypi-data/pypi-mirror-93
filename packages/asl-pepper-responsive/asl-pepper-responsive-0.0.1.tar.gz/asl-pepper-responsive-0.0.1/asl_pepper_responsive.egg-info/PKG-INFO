@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: asl-pepper-responsive
+Version: 0.0.1
+Summary: libraries for DWA low-latency planner for pepper
+Home-page: https://github.com/ethz-asl/pepper_local_planning.git
+Author: Daniel Dugas
+License: UNKNOWN
+Description: Low-latency DWA planner for pepper
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
