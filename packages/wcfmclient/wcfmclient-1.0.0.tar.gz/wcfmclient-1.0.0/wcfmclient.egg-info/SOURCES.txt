@@ -1,0 +1,15 @@
+README.md
+setup.py
+tests/__init__.py
+tests/data.py
+tests/test_api.py
+tests/test_jwt_auth.py
+wcfmclient/__init__.py
+wcfmclient/api.py
+wcfmclient/jwt_auth_service.py
+wcfmclient/session.py
+wcfmclient.egg-info/PKG-INFO
+wcfmclient.egg-info/SOURCES.txt
+wcfmclient.egg-info/dependency_links.txt
+wcfmclient.egg-info/requires.txt
+wcfmclient.egg-info/top_level.txt
