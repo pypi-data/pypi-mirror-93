@@ -1,0 +1,9 @@
+numpy
+opencv-python
+pandas
+matplotlib
+seaborn
+scipy
+pyyaml
+statsmodels
+loguru
