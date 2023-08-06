@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: rend
+Version: 5
+Summary: A collection of tools to render text files into data structures
+Home-page: https://saltstack.com
+Author: Thomas S Hatch
+Author-email: thatch@saltstack.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 5 - Production/Stable
+Description-Content-Type: text/x-rst
+Requires-Dist: colored
+Requires-Dist: dict-toolbox (>=2)
+Requires-Dist: jinja2
+Requires-Dist: pop (>=10.1)
+Requires-Dist: pyyaml (>=5.1)
+Requires-Dist: toml
+
+====
+Rend
+====
+
+Rend is the renderer collection used by pop and pop derived projects.
+It allows for text files of multiple types to be read and rendered into
+consistent data structures. These files also get the benefit of having
+access to specific components of the hub.
+
+
