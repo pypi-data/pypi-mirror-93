@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: vid2slides
+Version: 0.0.1
+Summary: Extract a slideshow from a video presentation
+Home-page: https://github.com/lukew3/vid2slides
+Author: Luke Weiler
+Author-email: lukew25073@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: click
+Requires-Dist: Pillow
+
+UNKNOWN
+
+
