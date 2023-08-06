@@ -1,0 +1,9 @@
+README.md
+setup.py
+pydeltalake/__init__.py
+pydeltalake/lib.py
+pydeltalake.egg-info/PKG-INFO
+pydeltalake.egg-info/SOURCES.txt
+pydeltalake.egg-info/dependency_links.txt
+pydeltalake.egg-info/top_level.txt
+test/test_files.py
