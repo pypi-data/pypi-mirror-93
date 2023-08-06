@@ -1,0 +1,9 @@
+README.md
+setup.py
+pytabulate/__init__.py
+pytabulate/pytabulate.py
+pytabulate/utility.py
+pytabulate.egg-info/PKG-INFO
+pytabulate.egg-info/SOURCES.txt
+pytabulate.egg-info/dependency_links.txt
+pytabulate.egg-info/top_level.txt

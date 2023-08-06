@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pytabulate
+Version: 1.0.0a0
+Summary: understand your table datasets.
+Home-page: UNKNOWN
+Author: Umar Yousafzai
+Author-email: umaryousafzai9@gmail.com
+License: UNKNOWN
+Description: ##pytabulate
+        
+        Note: this is an alpha release, this package allows you to understand your table datasets, providing different set of analytics, the main package function at the moment is get_probability_distribution(), calling this function and seeing its docstrings would reveal all the distributions of metadata of your dataset it would provide, this is still in its early stages of development as a package and doesn't have a publically available github page as we have a commercial consumption of the package at the moment, but in near future all the open source code for this and much more additional features will be introduced.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
