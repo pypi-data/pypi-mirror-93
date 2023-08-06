@@ -1,0 +1,5 @@
+[console_scripts]
+gendocs=tasks:gendocs
+multilint=multilint:main
+srvdocs=tasks:srvdocs
+
