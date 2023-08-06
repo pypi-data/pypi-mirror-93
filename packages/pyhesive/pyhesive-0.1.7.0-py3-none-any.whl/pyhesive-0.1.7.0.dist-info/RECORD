@@ -1,0 +1,11 @@
+pyhesive/__about__.py,sha256=Rq4hLEHFbBZEhyfxhuqe2uPkBsdFYD9-KjSmym8_75k,297
+pyhesive/__init__.py,sha256=pAFGPPmYUUOwlEFNpCnmjW_OWyHMv8dW_wKhZ6zjiik,220
+pyhesive/_mesh.py,sha256=hbpPlvs_rxsf5wdDVycijBJkVVGOp0UB5fU3SCJfbsA,12609
+pyhesive/_optsctx.py,sha256=zMmaneqVkAU1hlfO0OdTiPsROTvMw61gjoYixr0z2RA,2893
+pyhesive/_utils.py,sha256=-AiEHJy5NZB3WCMA6B3jyRgQoBchfdt4dtG1JxoPLaI,1766
+pyhesive-0.1.7.0.data/scripts/pyhesive-insert,sha256=k4GLfewRq30oeu4wN5AdjY-tysCrlzO8qvcjwHHk9so,2881
+pyhesive-0.1.7.0.dist-info/LICENSE,sha256=VmVmbMmUCziriIfWlVIphCbJoa4cMTCpLQleU76xezY,1059
+pyhesive-0.1.7.0.dist-info/METADATA,sha256=XIvJPkTsZZn_2B9WRghIAikSOqBDhnodcVidLLzTNPo,6026
+pyhesive-0.1.7.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyhesive-0.1.7.0.dist-info/top_level.txt,sha256=3Y8jMHVFhiEMlwt6OgTugdHkOoYulD1-foECufFLF1Y,9
+pyhesive-0.1.7.0.dist-info/RECORD,,
