@@ -1,0 +1,61 @@
+# General
+
+This is serial port to UDP packet transceiver.
+The reads serial port ascii and sends the text as UDP datagrams if the lines match selection criteria.
+
+# DOWNLOAD & INSTALL FROM SOURCE
+
+
+```sh 
+$ git clone ssh://gitolite@galaxy.astro.uni.torun.pl/serial2udp
+```
+
+```sh
+$ cd serial2udp
+```
+
+```sh
+$ python3 -m venv venv
+```
+
+```sh
+$ source venv/bin/activate
+```
+
+```sh
+$ python setup.py build install
+```
+
+# USE EXAMPLE
+
+Suppose you read data from a serial port of a device `/dev/device1` and want to distribute that data via UDP packages to a local network.
+
+Suppose the device generates ascii text lines:
+
+	line1 word1 word2
+	
+	line2 word3 word4
+	
+	udp key1=val1, key2=val2
+	
+	lineN
+	
+	udp key3=val3, key4=val4
+
+
+If we wish to distribute only the lines that start with udp the following command will do it:
+
+```sh
+serial2udp.py --serport /dev/device1 --host xxx.xxx.xxx.xxx -p port --ifstarts_with 'udp '
+```
+
+For the example above this command will generate two UDP datagrams.
+
+The program does not parse the data in ny way, but if ``--ifstarts_with`` option is used, the line string is stripped off of the value given in that option (\'udp \' in this case). The serial communication options are customizable.
+
+
+
+# AUTHOR
+
+Bartosz Lew \<bartosz.lew@umk.pl\>
+
