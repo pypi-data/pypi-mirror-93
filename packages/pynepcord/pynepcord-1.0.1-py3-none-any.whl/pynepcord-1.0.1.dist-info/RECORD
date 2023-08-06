@@ -1,0 +1,15 @@
+pynepcord/__init__.py,sha256=0k1TDkfFZO7R2SpgGA20uW0ctRxX7n3vkQFPu50C5xk,1423
+pynepcord/__main__.py,sha256=bYuHtjp8H9cyF7XXnS-TM-FSFnvfnxTIcTutw4LIS6k,1260
+pynepcord/errors.py,sha256=s4zhRR2N5knr2ZzJ1x0NC2p3EYMkw4o4fSKbzff1HX4,1512
+pynepcord/models.py,sha256=cuQ0NdlOqv_PB2UPpBSSNejbkzNdu3dNITNaL2HSyNw,2586
+pynepcord/aio/__init__.py,sha256=I0OkC8Rp0zKR9HmAXIawmhj7r-_zw12X0Dt_qjUMNes,1195
+pynepcord/aio/images.py,sha256=1nScrDqR4kNcbZ2KMX1zKLjmPM0kjWDBJ4fEMG3qf1M,3890
+pynepcord/aio/sharp.py,sha256=hSSbrcWtLV4UYs0ySi2vKMhlLn0mSAZL8rzIvxbPQ-s,4373
+pynepcord/base/__init__.py,sha256=I0OkC8Rp0zKR9HmAXIawmhj7r-_zw12X0Dt_qjUMNes,1195
+pynepcord/base/images.py,sha256=UWEllI42bdIV8965iUonubcDeFi-ovLdOBA8dZTv-AI,3606
+pynepcord/base/sharp.py,sha256=DO3OE5TVd4Its2ji7nI1C9QXcKKgKfhunxCEoN_26wo,4087
+pynepcord-1.0.1.dist-info/LICENSE,sha256=QT5C8lRvjz7kQGkV5qXlnaiiuDEN1-OgESBoyjRtmzY,1065
+pynepcord-1.0.1.dist-info/METADATA,sha256=zNuCNsuScrhVEyb0JdAVKKNX_Wj4ME8M6ujy30qRZSc,2669
+pynepcord-1.0.1.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+pynepcord-1.0.1.dist-info/top_level.txt,sha256=48fRIwz4RPvBrs1x04D025vMpMQqwdDleCxQvVYBvcA,10
+pynepcord-1.0.1.dist-info/RECORD,,
