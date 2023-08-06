@@ -1,0 +1,16 @@
+annotell_input_api-0.4.2-py3.8-nspkg.pth,sha256=QpBPPgWNKzm0ysnHOq_yHjdpWnH3BJrz1TQeNgOzolw,549
+annotell/input_api/__init__.py,sha256=xzQHmcUzYce-Zcfs5idAXDvrbNMiMO1-NjPih1RBsY0,125
+annotell/input_api/annoutil.py,sha256=KuDRAFLms55d6SDx7jA2Ihv7qlCjlcrdEoLCjAiPxiQ,5122
+annotell/input_api/input_api_client.py,sha256=s-6kolAv_u6pTRs0ez6lUs8Nt6lHloP6qP7NiaGFl-g,31333
+annotell/input_api/input_api_model.py,sha256=6EURltp11uL6bXrD_AaNRslDVJnZCrkgqUJiLPKaTtM,19530
+annotell/input_api/util.py,sha256=GxlImLBDzXdbVip7HQ5gE11SiCizJItZMHnyeLpdFwo,1394
+annotell/input_api/model/abstract_models.py,sha256=ZaG0kdpiLw6LGqNVd4o5uOyEdg5bBuTesMyhJPtLgbs,315
+annotell/input_api/model/calibration.py,sha256=Hf83svqQ0VHlKKu43pM2zj9o5XY_47Zv-FpeQUYuPX0,3085
+annotell/input_api/model/calibration_legacy.py,sha256=D3ry1AG5F8TCrBaIWEQEL9Dni-Exxabwyb0qba_PW1Q,2643
+annotell/input_api/model/enums.py,sha256=mETW9ObcExuEjIY6l9ATKirncBFmRVCVuZHLBHFzz2M,821
+annotell_input_api-0.4.2.data/scripts/annoutil,sha256=Ezjx3i9kMdizegOOoaFxjZogt4clTnNsvAJvF-Sgz6s,103
+annotell_input_api-0.4.2.dist-info/METADATA,sha256=-vBfXTNC8MNW8y9XRq6pAjlitOtCWvIjdG2j3G5iYSk,8233
+annotell_input_api-0.4.2.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+annotell_input_api-0.4.2.dist-info/namespace_packages.txt,sha256=ovwDyo5ajMsAZxqAovd0d4s8ZFftRtmvbKk1zN8Z0go,9
+annotell_input_api-0.4.2.dist-info/top_level.txt,sha256=ovwDyo5ajMsAZxqAovd0d4s8ZFftRtmvbKk1zN8Z0go,9
+annotell_input_api-0.4.2.dist-info/RECORD,,
