@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    distillbert_tokens_classification_train=src.models.distillbert_tokens_classification_train:main
+    
