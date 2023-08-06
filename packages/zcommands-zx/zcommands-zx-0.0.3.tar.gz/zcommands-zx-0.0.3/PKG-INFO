@@ -1,0 +1,155 @@
+Metadata-Version: 2.1
+Name: zcommands-zx
+Version: 0.0.3
+Summary: 使用python增强的shell命令
+Home-page: UNKNOWN
+Author: notfresh@github
+Author-email: notfresh@foxmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/notfresh/zcommands/issues
+Project-URL: Funding, https://donate.pypi.org
+Project-URL: Source, https://github.com/notfresh/zcommands/
+Description: [^_^]:
+            名称: 小发明系列-zfind
+        
+        # 背景
+        我们经常会使用 find 命令,  奈何 find命令实在不怎么好用, 于是写一个python 脚本来包装 find命令,让它更友好一些,使用它可以极高的提高效率.
+        它可以让我们以更少的输入来快速完成原来很复杂的查询, 而且会打印出生成的底层语句, 来看几个例子吧
+        
+        
+        # 例子
+        以前我要使用 find 查找当前目录下的"名称中包含XX的后缀是XX的文档", 而且希望它能忽略大小写, 能查找目录软链接下的内容, 我必须写很长的参数.  
+        
+        ## case1 简单初体验
+        比如我之前想查找 当前目录下,名称中含有 make 的markdown 文件, 那么我必须写成:
+        `find  -L . -iname "*make*.md" -type f`
+        作为对比, 我现在只用写: `zfind make`
+        实际效果如下:
+        ```bash
+        ➜  interview zfind make
+        the command is:  find  -L . -iname "*make*.md" -type f
+        ./writings/cpp_rank/25_0_什么是Cmake_28.md
+        ./writings/cpp-interview/cpp_rank/25_0_什么是Cmake_28.md
+        ./writings/cpp-interview/cpp_basic/18_0_make的用法_11298.md
+        ./writings/cpp-interview/cpp_basic/12_0_make的用法_11291.md
+        ./htmls/cpp-html/make/@makefile写法.htm.md
+        ./htmls/cpp-html/make/@make 命令零基础教程.html.md
+        ./htmls/cpp-html/make/@CMake Tutorial.htm.md
+        ./cpp-interview/cpp_rank/25_0_什么是Cmake_28.md
+        ./cpp-interview/cpp_basic/18_0_make的用法_11298.md
+        ./cpp-interview/cpp_basic/12_0_make的用法_11291.md
+        ```
+        
+        ## case2 指定特定文件后缀查询
+        再比如, 我想找 当前目录下,名称中含有 make 的 html 文件, 那么我必须写成
+        ` find  -L . -iname "*make*.html" -type f`
+        作为对比, 我现在只用写: `zfind make -s html`
+        
+        实际效果如下:
+        ```bash
+        ➜  interview zfind make -s html
+        the command is:  find  -L . -iname "*make*.html" -type f
+        ./htmls/cpp-html/make/Make 命令零基础教程.html
+        ./htmls/cpp-html/make/makefile - What is the difference between _make_ and _make all__ - Stack Overflow.html
+        ```
+        # case3 多种文件后缀查询
+        再比如, 我想找 当前目录下,名称中含有 make 的 html和htm 文件, 那么我必须写成两条语句
+        ` find  -L . -iname "*make*.html" -type f` 和 ` find  -L . -iname "*make*.htm" -type f`
+        作为对比, 我现在只用写: `zfind make -s html+htm`
+        
+        # case4 排除特定路径
+        有的时候,我不想找某个路径, 那么我可以使用 -e 来排除这个路径, e 是 exclude 的首字母. 它强制是模糊查询的.
+        我写这么一条语句: `zfind find -e blog`
+        其实它会生成这么复杂的一条语句.  
+        `the command is:  find  -L . -iname "*find*.md" -type f -print  -o -path "*blog*" -prune`
+        
+        # 使用
+        ## 方法1
+        我将提供下面一段脚本, 只要你:
+        1. 将它命令为 zfind, 不要带`.py`后缀, 使用 `chmod a+x zfind `成为可执行文件
+        2. 把它放到可执行文件的查找路径下
+        3. 使用 zfind 关键字 就可以愉快地使用了
+        <font color=red>因为我喜欢使用markdown 来写文档, 所以我默认让 find 命令查找 markdown 文件</font>
+        
+        ## 方法2
+        pip install zcommands-zx
+        
+        # 脚本展示
+        ```python
+        #! /Users/zxzx/.conda/envs/scrapy/bin/python  #换成你本机的python解释器路径
+        #coding=utf-8
+        import os,sys
+        
+        help_txt = """
+        使用 zfind -h 来获取帮助
+        使用 zfind 关键字 在当前目录查询含有`关键字`的md文档
+        使用 zfind 关键字 -d 路径 在指定目录查询含有`关键字`的md文档
+        使用 zfind 关键字 -d 路径 -s 文件后缀 在指定目录查询含有`关键字`的指定后缀文档
+        """
+        
+        ######################## 准备变量
+        search_dir = ''
+        keyword = ''
+        suffix = ''
+        type = ''
+        
+        args = sys.argv
+        if len(args) > 1 and args[1] == '-h':
+            print(help_txt)
+        if len(args) >= 2:
+            keyword = sys.argv[1]
+        
+        # 捕捉多余可选参数
+        opt_args = args[2:]
+        for i in range(len(opt_args)):
+            if(opt_args[i] == '-s'):
+                suffix = opt_args[i+1]
+            if (opt_args[i] == '-d'):
+                search_dir = opt_args[i+1]
+            if (opt_args[i] == '-t'):
+                type = opt_args[i+1]
+        
+        ######### 执行命令
+        search_dir = search_dir or '.'
+        suffix = suffix or 'md'
+        type = type or 'f'
+        
+        if type == 'd':
+            suffix = ''
+        else:
+            suffix = '.'+ suffix
+        
+        command = 'find  -L {} -iname "*{}*{}" -type {}'.format(search_dir, keyword, suffix, type)
+        # example as: find . -iname "*@make*.md"
+        ######### 执行查询软链接命令
+        print("the command is: ", command)
+        ret = os.popen(command).readlines()
+        
+        
+        for line in ret:
+            print(line, end='')
+        
+        ```
+        
+        
+        # 缺点
+        目前还没有发现
+        
+        
+        
+Keywords: sample,setuptools,development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.5, <4
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
