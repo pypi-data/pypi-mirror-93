@@ -1,0 +1,6 @@
+README.md
+setup.py
+aeurtiaeu.egg-info/PKG-INFO
+aeurtiaeu.egg-info/SOURCES.txt
+aeurtiaeu.egg-info/dependency_links.txt
+aeurtiaeu.egg-info/top_level.txt
