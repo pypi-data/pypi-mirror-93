@@ -1,0 +1,9 @@
+koala_buckets/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+koala_buckets/koala_gcs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+koala_buckets/koala_gcs/gcs_bucket.py,sha256=T7DAuxGPZItDE0wTq2cwSejzrsvQ0VJkZt63RvLOB9Q,3386
+koala_buckets/koala_onprem_s3/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+koala_buckets/koala_onprem_s3/s3_bucket.py,sha256=tPrCkdPEdPAdu5-hWH6RXjb-qPOYGS841-QXkXVH-bg,3556
+koala_buckets-0.0.2.dist-info/METADATA,sha256=ej1wetSbov2JC-5Xoskev-MEkiZ0np3bA2xF3ursm-E,638
+koala_buckets-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+koala_buckets-0.0.2.dist-info/top_level.txt,sha256=cZjPARIeb4v5O1j6uP-qGGz7nnKWE1AekpFB2PEUug4,14
+koala_buckets-0.0.2.dist-info/RECORD,,
