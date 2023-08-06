@@ -1,0 +1,76 @@
+.homepage{
+    background: url(/images/background-image.jpg);
+    background-size: contain;
+    padding: 50px 25px;
+}
+.hero{
+    background: none;
+}
+.header-text-logo {
+    background: url(/images/VALERIA_Texte_Noir.svg);
+    background-size: contain;
+    max-width: 282px;
+    max-height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.masthead a {
+    color: transparent;
+}
+.account-masthead{
+    background-color: #2d2d2d;
+}
+.masthead{
+    background: none;
+    background-color: white;
+    border-bottom: #fdc300;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding: 0;
+}
+.navbar {
+    min-height: 40px;
+}
+.masthead nav ul li a {
+    color: #929292 !important;
+}
+.container {
+    padding-left: 15 px;
+    padding-right: 15px;
+    margin: 0;
+    width: 100%;
+}
+.homepage .module-search .tags{
+    background-color: #2d2d2d;
+}
+.homepage .module-search .module-content {
+    background-color: #2d2d2d;
+}
+.site-footer{
+    background-color: #2d2d2d;
+    border-top-color: #fdc300;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+.homepage .module-search {
+    padding: 1px;
+    color: #fff;
+    background: #fdc300;
+}
+.box{
+    border: 1px solid #fdc300;
+    border-radius: 6px;
+}
+.masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li a:focus, .masthead .navigation .nav-pills li.active a {
+    background-color: transparent;
+}
+.media-image img {
+    min-width: 420px;
+    margin: auto;
+}
+.ul-logo{
+    width: 200px;
+}
+label {
+    color: black;
+}
