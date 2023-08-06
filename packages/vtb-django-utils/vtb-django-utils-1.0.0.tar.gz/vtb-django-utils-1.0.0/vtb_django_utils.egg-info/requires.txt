@@ -1,0 +1,6 @@
+
+[test]
+pytest
+pytest-env
+pylint
+pytest-asyncio
