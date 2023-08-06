@@ -1,0 +1,11 @@
+apxchangelog/.version,sha256=xkYTjNh63Mtzbta2P-7-w1MIaWadykwRIrot26y7yvA,6
+apxchangelog/__init__.py,sha256=UOw_cfKcaRwEUi9Au7fADQ0UrFqujF2DH_jNyi42_VA,103
+apxchangelog/apxchangelog.py,sha256=BDHPHFXpKNKavGzfTnAmB-DrWlceWCFb71Km1AWRlrA,10937
+apxchangelog/templates/changes.jinja2,sha256=8yokGn49aOMiGAQ4lmG14sj-mZ_MtrmhX_FCIlfXn-k,121
+apxchangelog/templates/commits_format.jinja2,sha256=GBQtBM6EEY0D_PCIAi_Kakxbl36k6o07ghZVFeRSJhU,859
+apx_changelog-1.0.15.dist-info/LICENSE,sha256=VmFtyn9aJzqHWJDdFPv9EMHKl2efjef-qEQhHQ4bwQU,1075
+apx_changelog-1.0.15.dist-info/METADATA,sha256=NHNCqJeBg4miIHSmBKon6vSiDEQibEoth6JbxaTsGzw,2969
+apx_changelog-1.0.15.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+apx_changelog-1.0.15.dist-info/entry_points.txt,sha256=p73-5OPeRC0zWURm5d-ulZ4Kf4qlFvQ0WkQ3eZV6ZKE,53
+apx_changelog-1.0.15.dist-info/top_level.txt,sha256=KbEKnas0ih0Ur56qFcNwOaQEH-iv9i_WMdADWPtXtxU,13
+apx_changelog-1.0.15.dist-info/RECORD,,
