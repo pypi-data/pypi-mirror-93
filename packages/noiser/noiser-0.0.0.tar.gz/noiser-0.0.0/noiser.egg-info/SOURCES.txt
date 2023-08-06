@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+noiser/__init__.py
+noiser.egg-info/PKG-INFO
+noiser.egg-info/SOURCES.txt
+noiser.egg-info/dependency_links.txt
+noiser.egg-info/top_level.txt
