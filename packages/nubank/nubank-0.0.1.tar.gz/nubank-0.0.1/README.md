@@ -1,0 +1,53 @@
+# nubank
+
+This is an example bank project publishing into pypi.
+
+''' python
+pip install nubank
+
+'''
+
+'''
+##usage
+
+from nubank import deposit_amount
+from nubank import withdraw_amount
+from nubank import home_loan
+from nubank import personal_loan
+from nubank import vehicle_loan
+
+
+#if you want to deposit
+
+
+d_a=deposit_amount.dep_amount(1000,100000)
+print(d_a)
+
+#if you want to withdraw
+
+w_a=withdraw_amount.with_amount(1000,11111111)
+print(w_a)
+
+
+#if you want to loans
+
+h_l=home_loan.hm_loan(100000)
+print(h_1)
+
+#personal loan
+
+p_l=personal_loan.per_loan(100000)
+
+print(p_l)
+
+#vehicle loan
+
+v_l=vehicle_loan.ve_loan(100000)
+print(v_l)
+'''
+
+'''developing  nubank
+
+pip install -e .[dev]
+
+'''
