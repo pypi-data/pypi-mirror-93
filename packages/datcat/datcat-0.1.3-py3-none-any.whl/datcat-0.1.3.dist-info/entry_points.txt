@@ -1,0 +1,4 @@
+[console_scripts]
+create_mappings=helpers:create_mappings
+datcat=datcat.entrypoints.flask_app:main
+
