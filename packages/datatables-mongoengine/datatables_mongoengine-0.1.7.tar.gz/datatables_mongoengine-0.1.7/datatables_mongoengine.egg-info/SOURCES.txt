@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+datatables_mongoengine/__init__.py
+datatables_mongoengine/datatables.py
+datatables_mongoengine.egg-info/PKG-INFO
+datatables_mongoengine.egg-info/SOURCES.txt
+datatables_mongoengine.egg-info/dependency_links.txt
+datatables_mongoengine.egg-info/not-zip-safe
+datatables_mongoengine.egg-info/requires.txt
+datatables_mongoengine.egg-info/top_level.txt
