@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: anguis
+Version: 0.2.3
+Summary: A generic key-store library
+Home-page: https://github.com/reale/anguis
+Author: Roberto Reale
+Author-email: roberto@reale.me
+License: UNKNOWN
+Keywords: cache,key-value store
+Platform: UNKNOWN
+Requires-Dist: python-etcd
+
+UNKNOWN
+
+
