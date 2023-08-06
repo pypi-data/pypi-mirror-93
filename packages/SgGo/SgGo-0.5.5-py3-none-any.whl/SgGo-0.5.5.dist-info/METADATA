@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: SgGo
+Version: 0.5.5
+Summary: view sg graph.
+Home-page: UNKNOWN
+Author: Wei Zou
+Author-email: wei.zou@corerain.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: Flask
+Requires-Dist: click (>=6.7)
+
+UNKNOWN
+
+
