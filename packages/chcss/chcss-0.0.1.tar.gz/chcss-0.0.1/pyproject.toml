@@ -1,0 +1,145 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# chcss, a CSS naming hierarchy enforcer.
+# Copyright (C) 2021 Jeremy A Gray <jeremy.a.gray@gmail.com>.
+
+[build-system]
+
+# Setuptools.
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# Poetry.
+# requires = ["poetry_core>=1.0.0"]
+# build-backend = "poetry.core.masonry.api"
+
+[tool]
+
+[tool.black]
+
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+
+(
+  /(
+    \.git
+    | \.pytest_cache
+    | __pycache__
+    | htmlcov
+  )/
+)
+'''
+
+[tool.isort]
+
+ensure_newline_before_comments = true
+force_single_line = true
+include_trailing_comma = true
+line_length = 88
+multi_line_output = 3
+use_parentheses = true
+
+[tool.pccc]
+
+header_length = 50
+body_length = 72
+rewrap = true
+spell_check = false
+repair = false
+
+types = [
+"build",
+"ci",
+"depends",
+"docs",
+"feat",
+"fix",
+"perf",
+"refactor",
+"release",
+"style",
+"test"
+]
+
+scopes = [
+"config",
+"parser"
+]
+
+footers = [
+"signed-off-by"
+]
+
+required_footers = [
+"signed-off-by"
+]
+
+[tool.poetry]
+
+authors = ["Jeremy A Gray <jeremy.a.gray@gmail.com>"]
+description = "chcss:  a CSS naming hierarchy enforcer"
+name = "chcss"
+version = "0.0.1"
+license = "GPL-3.0-or-later"
+maintainers = ["Jeremy A Gray <jeremy.a.gray@gmail.com>"]
+readme = "README.rst"
+homepage = "https://github.com/jeremyagray/chcss"
+repository = "https://github.com/jeremyagray/chcss"
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Topic :: Text Processing :: Markup :: HTML",
+]
+
+packages = [
+  { include = "chcss" },
+]
+
+include = [
+  "README.rst",
+  "LICENSE.rst",
+  "chcss.toml",
+  "docs/**/*",
+]
+
+[tool.poetry.dependencies]
+
+pyparsing = "^2.4"
+python = "^3.9"
+toml = "^0.10"
+
+[tool.poetry.dev-dependencies]
+
+Sphinx = "^3.4"
+black = { version = "*", allow-prereleases = true }
+flake8 = "^3.8"
+flake8-docstrings = "^1.5"
+isort = "^5.6"
+pccc = "^0.4"
+pre-commit = "^2.9"
+pydocstyle = "^5.1"
+pytest = "^6.1"
+pytest-cov = "^2.10"
+tox = "^3.21"
+twine = "^3.3"
+
+[tool.poetry.scripts]
+
+chcss = "chcss:main"
+
+[tool.poetry.urls]
+
+"Issues" = "https://github.com/jeremyagray/chcss/issues"
+"Documentation" = "https://chcss.readthedocs.io/"
+"Repository" = "https://github.com/jeremyagray/chcss"
+
+[tool.pytest.ini_options]
