@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="ISBN" version="3.0" prefix="rendition: http://www.idpf.org/vocab/rendition/#">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <meta property="dcterms:modified">2021-01-30T14:30:09Z</meta>
+    <meta name="generator" content="Ebook-lib 0.17.1"/>
+    <dc:identifier id="ISBN">isbn_9780993191459</dc:identifier>
+    <dc:title>Usan Abasi's Lament</dc:title>
+    <dc:creator id="creator">Gavin Chait</dc:creator>
+    <dc:language>en</dc:language>
+    <dc:date>2017-07-23</dc:date>
+    <dc:rights>All rights reserved</dc:rights>
+    <dc:publisher>Qwyre</dc:publisher>
+    <dc:subject>science fiction</dc:subject>
+    <dc:subject>african mythology</dc:subject>
+    <meta name="cover" content="cover-img"></meta>
+  </metadata>
+  <manifest>
+    <item href="css/stylesheet.css" id="stylesheet" media-type="text/css"/>
+    <item href="cover.jpg" id="cover-img" media-type="image/jpeg" properties="cover-image"/>
+    <item href="cover.xhtml" id="cover" media-type="application/xhtml+xml"/>
+    <item href="copyright.xhtml" id="chapter_0" media-type="application/xhtml+xml"/>
+    <item href="dedication.xhtml" id="chapter_1" media-type="application/xhtml+xml"/>
+    <item href="images/logo.png" id="image_0" media-type="image/png"/>
+    <item href="fonts/PT-Sans-Bold.ttf" id="static_1" media-type="font/ttf"/>
+    <item href="fonts/PT-Sans-Italic.ttf" id="static_2" media-type="font/ttf"/>
+    <item href="fonts/PT-Sans.ttf" id="static_3" media-type="font/ttf"/>
+    <item href="fonts/PT-Serif-Bold.ttf" id="static_4" media-type="font/ttf"/>
+    <item href="fonts/PT-Serif-Italic.ttf" id="static_5" media-type="font/ttf"/>
+    <item href="fonts/PT-Serif.ttf" id="static_6" media-type="font/ttf"/>
+    <item href="fonts/Times-New-Roman-Italic.ttf" id="static_7" media-type="font/ttf"/>
+    <item href="fonts/Times-New-Roman.ttf" id="static_8" media-type="font/ttf"/>
+    <item href="ch001.xhtml" id="chapter_2" media-type="application/xhtml+xml"/>
+    <item href="ch002.xhtml" id="chapter_3" media-type="application/xhtml+xml"/>
+    <item href="ch003.xhtml" id="chapter_4" media-type="application/xhtml+xml"/>
+    <item href="ch004.xhtml" id="chapter_5" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="nav.xhtml" id="nav" media-type="application/xhtml+xml" properties="nav"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover" linear="no"/>
+    <itemref idref="chapter_0"/>
+    <itemref idref="chapter_1"/>
+    <itemref idref="nav"/>
+    <itemref idref="chapter_2"/>
+    <itemref idref="chapter_3"/>
+    <itemref idref="chapter_4"/>
+    <itemref idref="chapter_5"/>
+  </spine>
+</package>
