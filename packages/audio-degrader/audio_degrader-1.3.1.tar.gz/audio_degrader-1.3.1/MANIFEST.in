@@ -1,0 +1,9 @@
+# Include the README, requirements, license, etc.
+include *.md *.txt
+
+# Include the data files
+recursive-include audio_degrader *
+
+# Include tests
+graft tests
+include Makefile
