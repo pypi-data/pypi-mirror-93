@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: qwertywerty123
+Version: 1234
+Summary: Discrete Event Simulator
+Home-page: UNKNOWN
+Author: NUS
+License: NUS
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# O2DESPy
+
+A python package that performs discrete event simulation
+
+
