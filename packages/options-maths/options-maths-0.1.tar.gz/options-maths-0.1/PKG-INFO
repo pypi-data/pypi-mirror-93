@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: options-maths
+Version: 0.1
+Summary: Performs Options Trading Mathamatics
+Home-page: https://github.com/rahulroshan96/options-maths.git
+Author: Rahul Roshan, Kshitij Gupta
+Author-email: rahulroshan96@gmail.com, kshitijgupta1993@gmail.com
+License: MIT
+Download-URL: https://github.com/rahulroshan96/options-maths/archive/v0.1.tar.gz
+Description: UNKNOWN
+Keywords: Options Trading,Options Maths,Options Greeks
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
