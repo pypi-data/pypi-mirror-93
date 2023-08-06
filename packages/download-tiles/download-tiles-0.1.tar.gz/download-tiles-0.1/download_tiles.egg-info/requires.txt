@@ -1,0 +1,5 @@
+click
+landez==2.5.0
+
+[test]
+pytest
