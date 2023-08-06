@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: jod
+Version: 0.0.1
+Summary: Join, or Die simple asynchronous execution
+Home-page: https://gitlab.com/musingsole/jod
+Author: musingsole
+Author-email: musingsole@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Join, or Die
+
+![Join, or Die](https://upload.wikimedia.org/wikipedia/commons/9/9c/Benjamin_Franklin_-_Join_or_Die.jpg)
+
+Simple, asynchronous execution of multiple argument sets to one function.
+
+
