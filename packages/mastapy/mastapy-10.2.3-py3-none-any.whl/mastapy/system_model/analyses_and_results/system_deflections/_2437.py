@@ -1,0 +1,887 @@
+﻿'''_2437.py
+
+SpecialisedAssemblySystemDeflection
+'''
+
+
+from mastapy.system_model.part_model import _2122, _2090, _2100
+from mastapy._internal import constructor
+from mastapy._internal.cast_exception import CastException
+from mastapy.system_model.part_model.gears import (
+    _2158, _2160, _2164, _2166,
+    _2168, _2170, _2173, _2176,
+    _2179, _2181, _2183, _2185,
+    _2186, _2188, _2190, _2192,
+    _2196, _2198
+)
+from mastapy.system_model.part_model.cycloidal import _2212
+from mastapy.system_model.part_model.couplings import (
+    _2220, _2222, _2225, _2227,
+    _2230, _2232, _2241, _2243,
+    _2245, _2250
+)
+from mastapy.system_model.analyses_and_results.power_flows import (
+    _3762, _3667, _3671, _3674,
+    _3679, _3680, _3684, _3689,
+    _3692, _3695, _3700, _3702,
+    _3704, _3711, _3717, _3719,
+    _3722, _3726, _3730, _3733,
+    _3736, _3744, _3746, _3755,
+    _3765, _3768, _3771, _3774,
+    _3779, _3783, _3790, _3793
+)
+from mastapy.system_model.analyses_and_results.system_deflections import _2323
+from mastapy._internal.python_net import python_net_import
+
+_SPECIALISED_ASSEMBLY_SYSTEM_DEFLECTION = python_net_import('SMT.MastaAPI.SystemModel.AnalysesAndResults.SystemDeflections', 'SpecialisedAssemblySystemDeflection')
+
+
+__docformat__ = 'restructuredtext en'
+__all__ = ('SpecialisedAssemblySystemDeflection',)
+
+
+class SpecialisedAssemblySystemDeflection(_2323.AbstractAssemblySystemDeflection):
+    '''SpecialisedAssemblySystemDeflection
+
+    This is a mastapy class.
+    '''
+
+    TYPE = _SPECIALISED_ASSEMBLY_SYSTEM_DEFLECTION
+
+    __hash__ = None
+
+    def __init__(self, instance_to_wrap: 'SpecialisedAssemblySystemDeflection.TYPE'):
+        super().__init__(instance_to_wrap)
+        self._freeze()
+
+    @property
+    def assembly_design(self) -> '_2122.SpecialisedAssembly':
+        '''SpecialisedAssembly: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2122.SpecialisedAssembly.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to SpecialisedAssembly. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_bolted_joint(self) -> '_2090.BoltedJoint':
+        '''BoltedJoint: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2090.BoltedJoint.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to BoltedJoint. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_flexible_pin_assembly(self) -> '_2100.FlexiblePinAssembly':
+        '''FlexiblePinAssembly: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2100.FlexiblePinAssembly.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to FlexiblePinAssembly. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_agma_gleason_conical_gear_set(self) -> '_2158.AGMAGleasonConicalGearSet':
+        '''AGMAGleasonConicalGearSet: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2158.AGMAGleasonConicalGearSet.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to AGMAGleasonConicalGearSet. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_bevel_differential_gear_set(self) -> '_2160.BevelDifferentialGearSet':
+        '''BevelDifferentialGearSet: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2160.BevelDifferentialGearSet.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to BevelDifferentialGearSet. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_bevel_gear_set(self) -> '_2164.BevelGearSet':
+        '''BevelGearSet: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2164.BevelGearSet.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to BevelGearSet. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_concept_gear_set(self) -> '_2166.ConceptGearSet':
+        '''ConceptGearSet: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2166.ConceptGearSet.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to ConceptGearSet. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_conical_gear_set(self) -> '_2168.ConicalGearSet':
+        '''ConicalGearSet: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2168.ConicalGearSet.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to ConicalGearSet. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_cylindrical_gear_set(self) -> '_2170.CylindricalGearSet':
+        '''CylindricalGearSet: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2170.CylindricalGearSet.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to CylindricalGearSet. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_face_gear_set(self) -> '_2173.FaceGearSet':
+        '''FaceGearSet: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2173.FaceGearSet.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to FaceGearSet. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_gear_set(self) -> '_2176.GearSet':
+        '''GearSet: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2176.GearSet.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to GearSet. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_hypoid_gear_set(self) -> '_2179.HypoidGearSet':
+        '''HypoidGearSet: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2179.HypoidGearSet.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to HypoidGearSet. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_klingelnberg_cyclo_palloid_conical_gear_set(self) -> '_2181.KlingelnbergCycloPalloidConicalGearSet':
+        '''KlingelnbergCycloPalloidConicalGearSet: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2181.KlingelnbergCycloPalloidConicalGearSet.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to KlingelnbergCycloPalloidConicalGearSet. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_klingelnberg_cyclo_palloid_hypoid_gear_set(self) -> '_2183.KlingelnbergCycloPalloidHypoidGearSet':
+        '''KlingelnbergCycloPalloidHypoidGearSet: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2183.KlingelnbergCycloPalloidHypoidGearSet.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to KlingelnbergCycloPalloidHypoidGearSet. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_klingelnberg_cyclo_palloid_spiral_bevel_gear_set(self) -> '_2185.KlingelnbergCycloPalloidSpiralBevelGearSet':
+        '''KlingelnbergCycloPalloidSpiralBevelGearSet: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2185.KlingelnbergCycloPalloidSpiralBevelGearSet.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to KlingelnbergCycloPalloidSpiralBevelGearSet. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_planetary_gear_set(self) -> '_2186.PlanetaryGearSet':
+        '''PlanetaryGearSet: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2186.PlanetaryGearSet.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to PlanetaryGearSet. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_spiral_bevel_gear_set(self) -> '_2188.SpiralBevelGearSet':
+        '''SpiralBevelGearSet: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2188.SpiralBevelGearSet.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to SpiralBevelGearSet. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_straight_bevel_diff_gear_set(self) -> '_2190.StraightBevelDiffGearSet':
+        '''StraightBevelDiffGearSet: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2190.StraightBevelDiffGearSet.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to StraightBevelDiffGearSet. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_straight_bevel_gear_set(self) -> '_2192.StraightBevelGearSet':
+        '''StraightBevelGearSet: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2192.StraightBevelGearSet.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to StraightBevelGearSet. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_worm_gear_set(self) -> '_2196.WormGearSet':
+        '''WormGearSet: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2196.WormGearSet.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to WormGearSet. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_zerol_bevel_gear_set(self) -> '_2198.ZerolBevelGearSet':
+        '''ZerolBevelGearSet: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2198.ZerolBevelGearSet.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to ZerolBevelGearSet. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_cycloidal_assembly(self) -> '_2212.CycloidalAssembly':
+        '''CycloidalAssembly: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2212.CycloidalAssembly.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to CycloidalAssembly. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_belt_drive(self) -> '_2220.BeltDrive':
+        '''BeltDrive: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2220.BeltDrive.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to BeltDrive. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_clutch(self) -> '_2222.Clutch':
+        '''Clutch: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2222.Clutch.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to Clutch. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_concept_coupling(self) -> '_2225.ConceptCoupling':
+        '''ConceptCoupling: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2225.ConceptCoupling.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to ConceptCoupling. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_coupling(self) -> '_2227.Coupling':
+        '''Coupling: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2227.Coupling.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to Coupling. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_cvt(self) -> '_2230.CVT':
+        '''CVT: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2230.CVT.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to CVT. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_part_to_part_shear_coupling(self) -> '_2232.PartToPartShearCoupling':
+        '''PartToPartShearCoupling: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2232.PartToPartShearCoupling.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to PartToPartShearCoupling. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_rolling_ring_assembly(self) -> '_2241.RollingRingAssembly':
+        '''RollingRingAssembly: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2241.RollingRingAssembly.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to RollingRingAssembly. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_spring_damper(self) -> '_2243.SpringDamper':
+        '''SpringDamper: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2243.SpringDamper.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to SpringDamper. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_synchroniser(self) -> '_2245.Synchroniser':
+        '''Synchroniser: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2245.Synchroniser.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to Synchroniser. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def assembly_design_of_type_torque_converter(self) -> '_2250.TorqueConverter':
+        '''TorqueConverter: 'AssemblyDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _2250.TorqueConverter.TYPE not in self.wrapped.AssemblyDesign.__class__.__mro__:
+            raise CastException('Failed to cast assembly_design to TorqueConverter. Expected: {}.'.format(self.wrapped.AssemblyDesign.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.AssemblyDesign.__class__)(self.wrapped.AssemblyDesign) if self.wrapped.AssemblyDesign else None
+
+    @property
+    def power_flow_results(self) -> '_3762.SpecialisedAssemblyPowerFlow':
+        '''SpecialisedAssemblyPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3762.SpecialisedAssemblyPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to SpecialisedAssemblyPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_agma_gleason_conical_gear_set_power_flow(self) -> '_3667.AGMAGleasonConicalGearSetPowerFlow':
+        '''AGMAGleasonConicalGearSetPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3667.AGMAGleasonConicalGearSetPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to AGMAGleasonConicalGearSetPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_belt_drive_power_flow(self) -> '_3671.BeltDrivePowerFlow':
+        '''BeltDrivePowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3671.BeltDrivePowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to BeltDrivePowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_bevel_differential_gear_set_power_flow(self) -> '_3674.BevelDifferentialGearSetPowerFlow':
+        '''BevelDifferentialGearSetPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3674.BevelDifferentialGearSetPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to BevelDifferentialGearSetPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_bevel_gear_set_power_flow(self) -> '_3679.BevelGearSetPowerFlow':
+        '''BevelGearSetPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3679.BevelGearSetPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to BevelGearSetPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_bolted_joint_power_flow(self) -> '_3680.BoltedJointPowerFlow':
+        '''BoltedJointPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3680.BoltedJointPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to BoltedJointPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_clutch_power_flow(self) -> '_3684.ClutchPowerFlow':
+        '''ClutchPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3684.ClutchPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to ClutchPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_concept_coupling_power_flow(self) -> '_3689.ConceptCouplingPowerFlow':
+        '''ConceptCouplingPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3689.ConceptCouplingPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to ConceptCouplingPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_concept_gear_set_power_flow(self) -> '_3692.ConceptGearSetPowerFlow':
+        '''ConceptGearSetPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3692.ConceptGearSetPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to ConceptGearSetPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_conical_gear_set_power_flow(self) -> '_3695.ConicalGearSetPowerFlow':
+        '''ConicalGearSetPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3695.ConicalGearSetPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to ConicalGearSetPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_coupling_power_flow(self) -> '_3700.CouplingPowerFlow':
+        '''CouplingPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3700.CouplingPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to CouplingPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_cvt_power_flow(self) -> '_3702.CVTPowerFlow':
+        '''CVTPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3702.CVTPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to CVTPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_cycloidal_assembly_power_flow(self) -> '_3704.CycloidalAssemblyPowerFlow':
+        '''CycloidalAssemblyPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3704.CycloidalAssemblyPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to CycloidalAssemblyPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_cylindrical_gear_set_power_flow(self) -> '_3711.CylindricalGearSetPowerFlow':
+        '''CylindricalGearSetPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3711.CylindricalGearSetPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to CylindricalGearSetPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_face_gear_set_power_flow(self) -> '_3717.FaceGearSetPowerFlow':
+        '''FaceGearSetPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3717.FaceGearSetPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to FaceGearSetPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_flexible_pin_assembly_power_flow(self) -> '_3719.FlexiblePinAssemblyPowerFlow':
+        '''FlexiblePinAssemblyPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3719.FlexiblePinAssemblyPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to FlexiblePinAssemblyPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_gear_set_power_flow(self) -> '_3722.GearSetPowerFlow':
+        '''GearSetPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3722.GearSetPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to GearSetPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_hypoid_gear_set_power_flow(self) -> '_3726.HypoidGearSetPowerFlow':
+        '''HypoidGearSetPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3726.HypoidGearSetPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to HypoidGearSetPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_klingelnberg_cyclo_palloid_conical_gear_set_power_flow(self) -> '_3730.KlingelnbergCycloPalloidConicalGearSetPowerFlow':
+        '''KlingelnbergCycloPalloidConicalGearSetPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3730.KlingelnbergCycloPalloidConicalGearSetPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to KlingelnbergCycloPalloidConicalGearSetPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_klingelnberg_cyclo_palloid_hypoid_gear_set_power_flow(self) -> '_3733.KlingelnbergCycloPalloidHypoidGearSetPowerFlow':
+        '''KlingelnbergCycloPalloidHypoidGearSetPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3733.KlingelnbergCycloPalloidHypoidGearSetPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to KlingelnbergCycloPalloidHypoidGearSetPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_klingelnberg_cyclo_palloid_spiral_bevel_gear_set_power_flow(self) -> '_3736.KlingelnbergCycloPalloidSpiralBevelGearSetPowerFlow':
+        '''KlingelnbergCycloPalloidSpiralBevelGearSetPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3736.KlingelnbergCycloPalloidSpiralBevelGearSetPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to KlingelnbergCycloPalloidSpiralBevelGearSetPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_part_to_part_shear_coupling_power_flow(self) -> '_3744.PartToPartShearCouplingPowerFlow':
+        '''PartToPartShearCouplingPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3744.PartToPartShearCouplingPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to PartToPartShearCouplingPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_planetary_gear_set_power_flow(self) -> '_3746.PlanetaryGearSetPowerFlow':
+        '''PlanetaryGearSetPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3746.PlanetaryGearSetPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to PlanetaryGearSetPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_rolling_ring_assembly_power_flow(self) -> '_3755.RollingRingAssemblyPowerFlow':
+        '''RollingRingAssemblyPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3755.RollingRingAssemblyPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to RollingRingAssemblyPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_spiral_bevel_gear_set_power_flow(self) -> '_3765.SpiralBevelGearSetPowerFlow':
+        '''SpiralBevelGearSetPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3765.SpiralBevelGearSetPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to SpiralBevelGearSetPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_spring_damper_power_flow(self) -> '_3768.SpringDamperPowerFlow':
+        '''SpringDamperPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3768.SpringDamperPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to SpringDamperPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_straight_bevel_diff_gear_set_power_flow(self) -> '_3771.StraightBevelDiffGearSetPowerFlow':
+        '''StraightBevelDiffGearSetPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3771.StraightBevelDiffGearSetPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to StraightBevelDiffGearSetPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_straight_bevel_gear_set_power_flow(self) -> '_3774.StraightBevelGearSetPowerFlow':
+        '''StraightBevelGearSetPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3774.StraightBevelGearSetPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to StraightBevelGearSetPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_synchroniser_power_flow(self) -> '_3779.SynchroniserPowerFlow':
+        '''SynchroniserPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3779.SynchroniserPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to SynchroniserPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_torque_converter_power_flow(self) -> '_3783.TorqueConverterPowerFlow':
+        '''TorqueConverterPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3783.TorqueConverterPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to TorqueConverterPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_worm_gear_set_power_flow(self) -> '_3790.WormGearSetPowerFlow':
+        '''WormGearSetPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3790.WormGearSetPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to WormGearSetPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
+
+    @property
+    def power_flow_results_of_type_zerol_bevel_gear_set_power_flow(self) -> '_3793.ZerolBevelGearSetPowerFlow':
+        '''ZerolBevelGearSetPowerFlow: 'PowerFlowResults' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        '''
+
+        if _3793.ZerolBevelGearSetPowerFlow.TYPE not in self.wrapped.PowerFlowResults.__class__.__mro__:
+            raise CastException('Failed to cast power_flow_results to ZerolBevelGearSetPowerFlow. Expected: {}.'.format(self.wrapped.PowerFlowResults.__class__.__qualname__))
+
+        return constructor.new_override(self.wrapped.PowerFlowResults.__class__)(self.wrapped.PowerFlowResults) if self.wrapped.PowerFlowResults else None
