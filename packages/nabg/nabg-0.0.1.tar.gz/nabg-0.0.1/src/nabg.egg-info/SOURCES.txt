@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+src/nabg.py
+src/patterns.py
+src/vocabulary.py
+src/nabg.egg-info/PKG-INFO
+src/nabg.egg-info/SOURCES.txt
+src/nabg.egg-info/dependency_links.txt
+src/nabg.egg-info/entry_points.txt
+src/nabg.egg-info/requires.txt
+src/nabg.egg-info/top_level.txt
+tests/test_default_corpus.py
+tests/test_nabg.py
