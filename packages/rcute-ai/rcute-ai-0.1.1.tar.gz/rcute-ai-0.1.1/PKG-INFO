@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: rcute-ai
+Version: 0.1.1
+Summary: Simple wrapper over some python libs for image/audio detection/recognition etc
+Home-page: https://github.com/r-cute/rcute-ai
+Author: Huang Yan
+Author-email: hyansuper@foxmail.com
+License: MIT
+Description: # rcute-ai
+        
+        Simple wrapper over some python libs for image/audio detection/recognition etc to facilitate R-Cute robots.
+        
+        中文文档: https://rcute-ai.readthedocs.io
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

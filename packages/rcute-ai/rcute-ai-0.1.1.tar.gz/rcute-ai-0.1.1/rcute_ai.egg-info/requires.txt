@@ -1,0 +1,8 @@
+Pillow
+face_recognition
+numpy
+opencv-contrib-python
+opencv-python
+pydub
+pyttsx3
+vosk
