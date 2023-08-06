@@ -1,0 +1,3 @@
+[sphinx.html_themes]
+press = romnn_sphinx_press_theme
+
