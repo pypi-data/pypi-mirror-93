@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: cluster-wasser
+Version: 1.0.0
+Summary: Clustering based on the Wasserstein distance, k-nearest neighbours and a union find algorithm
+Home-page: https://github.com/barblin/clus-wasser
+Author: Johannes Preisinger
+Maintainer: Johannes Preisinger
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.1
+Requires-Python: >=3.8
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: sklearn
+
+UNKNOWN
+
+
