@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+wagtail_restaurant.egg-info/PKG-INFO
+wagtail_restaurant.egg-info/SOURCES.txt
+wagtail_restaurant.egg-info/dependency_links.txt
+wagtail_restaurant.egg-info/requires.txt
+wagtail_restaurant.egg-info/top_level.txt
