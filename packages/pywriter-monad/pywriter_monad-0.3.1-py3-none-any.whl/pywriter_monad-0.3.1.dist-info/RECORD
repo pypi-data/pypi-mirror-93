@@ -1,0 +1,9 @@
+writer/VERSION.py,sha256=r4xAFihOf72W9TD-lpMi6ntWSTKTP2SlzKP1ytkjRbI,22
+writer/VERSION.pyi,sha256=6K1dAkUFDCRBwCcFMKcpXFSBThtSYSX8xsawSEmO0ZY,77
+writer/__init__.py,sha256=QSZJ7vLumB1s2fXaBhIdKQatPL4k6D9JDdWY9lrgVG0,155
+writer/__init__.pyi,sha256=lHED1L2V4cRgt-BEUyII5_K4BdbwHxjcRvnV0C5ideQ,141
+writer/writer.py,sha256=Hw_NelbMMyJAB4O50_o6tTvCBCSCsFRBCCZhMAUl6D4,1867
+writer/writer.pyi,sha256=YwXvhCifybea9MiNpMws-Jk-FSMM5D1j53DkZQiYej8,664
+pywriter_monad-0.3.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+pywriter_monad-0.3.1.dist-info/METADATA,sha256=qMrbu29-ym-220-cDF-UxJ08WoM-7iFGTDBwDioyaXg,525
+pywriter_monad-0.3.1.dist-info/RECORD,,
