@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: dbt-dremio
+Version: 0.19.0.0
+Summary: The dremio adapter plugin for dbt (data build tool)
+Home-page: https://github.com/fabrice-etanchaud/dbt-dremio
+Author: Fabrice Etanchaud
+Author-email: fabrice.etanchaud@netc.fr
+License: UNKNOWN
+Description: The dremio adapter plugin for dbt (data build tool)
+Platform: UNKNOWN
