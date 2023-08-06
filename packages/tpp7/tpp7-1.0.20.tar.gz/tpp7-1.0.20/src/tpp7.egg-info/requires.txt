@@ -1,0 +1,7 @@
+numpy
+scipy
+matplotlib
+python-usbtmc
+pandas
+pyusb
+fitutils
