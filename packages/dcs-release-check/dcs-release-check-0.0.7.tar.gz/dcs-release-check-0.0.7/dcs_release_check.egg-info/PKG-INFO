@@ -1,0 +1,130 @@
+Metadata-Version: 2.1
+Name: dcs-release-check
+Version: 0.0.7
+Summary: "Tool to query latest versions from source code hosting platforms such as GitHub."
+Home-page: UNKNOWN
+Author: "Fabian Mueller"
+Author-email: "packages@dotcs.me"
+License: UNKNOWN
+Description: # Release Check
+        
+        Tool to query latest versions from source code hosting platforms such as GitHub.
+        
+        Currently supported are the following platforms:
+        
+        - [GitHub]
+        
+        ## Installation
+        
+        To install the package run `pip install dcs-release-check`.
+        It will register itself as a CLI appliction with the name `release-check`.
+        Learn more about all available commands use `release-check --help`.
+        
+        *Note this tool requires Python>=3.8 to run.*
+        
+        ## Usage
+        
+        All available command require to identify the repository.
+        The URI of a repository is given by the host of the platform, e.g. `github.com`, and an identifier for the repository, e.g. `username/repo_name`.
+        So for example the repository https://github.com/nextcloud/server is described by the URI `github.com:nextcloud/server`.
+        
+        ### Single Repository Queries
+        
+        To query the most recent version of a single repository, use the `single` sub-command:
+        
+        ```console
+        $ release-check single github.com:nextcloud/server
+        20.0.6
+        ```
+        
+        The default assumption is that stable releases do use a [semver] identifier, so that the regex `^.*?(\d+\.\d+\.\d+)$` matches version tags.
+        While this holds true for most of the repositories, some repositories don't follow this convention and require custom rules.
+        One of those respositories is [docker-pi-hole] which uses release tags such as [`v5.6`](https://github.com/pi-hole/docker-pi-hole/releases/tag/v5.6).
+        The underlying regex pattern can be changed with the `--pattern` parameter:
+        
+        ```console
+        $ release-check single github.com:pi-hole/docker-pi-hole --pattern '^.*?(\d+\.\d+(\.\d+)?)$'
+        5.6
+        ```
+        
+        ### Batch Queries
+        
+        To query multiple repositories all at once, a simple configuration file written in TOML format can be used.
+        
+        ```toml
+        [repos.github]
+        "nextcloud/server" = "default"
+        "apache/airflow" = "^(\\d+\\.\\d+\\.\\d+)$"
+        "matrix-org/synapse" = "default"
+        ```
+        
+        The first line refers to the [`nextcloud/server`](https://github.com/nextcloud/server/releases) repository on GitHub.
+        The [default regex](release_check/constants.py#L5) covers most of the use-cases to extract version information from tag names, but it might be adjusted as seen in line 2 with the `apache/airflow` repository.
+        
+        To receive the latest versions, simply pass this path to the `release-check` CLI tool.
+        
+        ```console
+        $ release-check batch --config ./config/sample.toml
+        repository          latest_version    updated     host
+        ------------------  ----------------  ----------  ----------
+        apache/airflow      2.0.0             2020-12-18  github.com
+        matrix-org/synapse  1.26.0            2021-01-27  github.com
+        nextcloud/server    20.0.6            2021-01-25  github.com
+        ```
+        
+        To process the output with other tools, the `--format=json` option can be used.
+        
+        ```console
+        $ release-check batch --config /path/to/config.toml --format=json
+        [{"host": "github.com", "repository": "apache/airflow", "latest_version": "2.0.0", "updated": "2020-12-18"}, {"host": "github.com", "repository": "matrix-org/synapse", "latest_version": "1.25.0", "updated": "2021-01-13"}, {"host": "github.com", "repository": "nextcloud/server", "latest_version": "20.0.5", "updated": "2021-01-14"}]
+        ```
+        
+        ### Docker
+        
+        If docker containers are labeled with a few standard labels, this tool is able to compare the running versions of those containers with the most recent upstream versions.
+        
+        To make this work seamlessly the following labels must be set on the containers:
+        
+        ```
+        labels:
+            me.dotcs.monitor/app.name: load-balancer
+            me.dotcs.monitor/app.repo-uri:github.com:nginx/nginx
+            me.dotcs.monitor/app.version: 1.19.6
+        ```
+        
+        To define a custom pattern use `me.dotcs.monitor/app.version-pattern` and pass a customized regex.
+        
+        Running `release-check docker` will automatically scan through all running containers and match the running version against the most recent upstream versions.
+        
+        ```console
+        Application    Container name           Installed version    Available version    Update available
+        -------------  -----------------------  -------------------  -------------------  ------------------
+        load-balancer  lb_nginx_1               1.19.6               1.19.6
+        pihole         pihole_pihole_1          5.5.1                5.6                  x
+        ```
+        
+        By default only running containers will be queried.
+        This can be changed by using the `--all` flag.
+        
+        ## Development
+        
+        Install the repoistory with development dependencies via pip:
+        
+        ```console
+        $ pip install --editable ".[develop]"
+        ```
+        
+        
+        [docker-pi-hole]: https://github.com/pi-hole/docker-pi-hole
+        [semver]: https://semver.org/
+        [GitHub]: https://github.com
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Description-Content-Type: text/markdown
+Provides-Extra: develop
