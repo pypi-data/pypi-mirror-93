@@ -1,0 +1,10 @@
+QWidget {
+    background-color: #202225;
+    color: white;
+}
+
+QPushButton#launch_game_button {
+    background-color: #4040ff;
+    color: white;
+}
+
