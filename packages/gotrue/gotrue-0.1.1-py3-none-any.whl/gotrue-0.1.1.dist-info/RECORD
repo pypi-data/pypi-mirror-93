@@ -1,0 +1,6 @@
+gotrue/.gitignore,sha256=k15AoIYq3ds9UGy869fl551ldkDEWDuK1HdwAx2WobE,1477
+gotrue/__init__.py,sha256=0lmhDCF7jsHZI0RBhgmrqrWb_sK82nG1ZBwS1sg8FbU,50
+gotrue/client.py,sha256=p5jTZacDVRZzWAf85UjDW3uHq1Bs5R4x8S0oZFKr9A0,2502
+gotrue-0.1.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+gotrue-0.1.1.dist-info/METADATA,sha256=UpoaUT4t_S5xdVHHo8zAvgU85RA0kIDcBaLJ449AkuM,220
+gotrue-0.1.1.dist-info/RECORD,,
