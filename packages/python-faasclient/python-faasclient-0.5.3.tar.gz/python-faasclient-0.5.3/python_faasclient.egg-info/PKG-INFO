@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: python-faasclient
+Version: 0.5.3
+Summary: Python bindings to the Filer as a Service API.
+Home-page: https://gitlab.globoi.com/storm/python-faasclient
+Author: STORM
+Author-email: storm@corp.globo.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

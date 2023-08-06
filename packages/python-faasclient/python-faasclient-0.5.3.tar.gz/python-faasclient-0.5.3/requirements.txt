@@ -1,0 +1,7 @@
+-i https://artifactory.globoi.com/artifactory/api/pypi/pypi/simple
+-i https://artifactory.globoi.com/artifactory/api/pypi/pypi-all/simple
+
+click==6.2
+prettytable==0.7.2
+python-keystoneclient==3.16.0
+requests>=2.19.1
