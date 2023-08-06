@@ -1,0 +1,8 @@
+README.md
+setup.py
+dds238/__init__.py
+python_dds238.egg-info/PKG-INFO
+python_dds238.egg-info/SOURCES.txt
+python_dds238.egg-info/dependency_links.txt
+python_dds238.egg-info/requires.txt
+python_dds238.egg-info/top_level.txt
