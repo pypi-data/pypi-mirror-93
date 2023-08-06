@@ -1,0 +1,16 @@
+::2018 VERSION::
+- This version allows utf8mb4 as a charset option (current pip version does not). Also, will use utf8mb4_unicode_ci vs utf8mb4_general_ci (esnme/ultramysql:master currently has that)
+
+::Install 2018 Version::
+- pip install umysql-2018
+
+:: Description ::
+A fast MySQL driver written in pure C/C++ for Python. 
+Compatible with gevent through monkey patching
+
+:: Requirements ::
+Requires Python (http://www.python.org) 
+
+:: Installation ::
+python setup.py build install
+
