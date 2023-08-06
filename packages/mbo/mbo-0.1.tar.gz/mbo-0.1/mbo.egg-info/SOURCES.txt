@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+mbo/__init__.py
+mbo.egg-info/PKG-INFO
+mbo.egg-info/SOURCES.txt
+mbo.egg-info/dependency_links.txt
+mbo.egg-info/top_level.txt

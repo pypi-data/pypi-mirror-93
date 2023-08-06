@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mbo
+Version: 0.1
+Summary: Tools for multi-objective optimization
+Home-page: https://github.com/DavidWalz/mbo
+License: UNKNOWN
+Description: # mbo
+        
+        Placeholder for the public release.
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
