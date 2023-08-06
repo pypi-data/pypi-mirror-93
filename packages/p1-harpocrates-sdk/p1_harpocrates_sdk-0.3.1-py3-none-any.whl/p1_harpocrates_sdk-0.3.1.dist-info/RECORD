@@ -1,0 +1,17 @@
+keychainClient/KeychainClient.py,sha256=AMwtGyjvI82hkqetwK0J0qqAHinpHgps8QGyUwWXHEg,24444
+keychainClient/__init__.py,sha256=KVJTuGK1iAeGhQtDMKG4ZS_khNMNwMcTvzUpeVURK08,42
+keychainClient/crypto/KeychainEncryptor.py,sha256=CBEcPu2gP5AOtLTkdjWjvLtCBi33uMEwppQHceYPtug,5984
+keychainClient/crypto/__init__.py,sha256=VZ6A_nhuzhyOHPPLuejcSoii9i26S-5dzpykNjLbCGU,48
+keychainClient/exception/KeychainEncryptionException.py,sha256=hTPpzr5CBqvdHwzYWn_3AkfyyBv43BJyZ6BuelBtUHs,140
+keychainClient/exception/KeychainNotExistException.py,sha256=Kkk2OflEP5oWuKUUsigUWQLQiS_aiJHXcn2p2W8-xmQ,138
+keychainClient/exception/__init__.py,sha256=J7Z6tBNGehCHUgIVpWqLRtkyzIyebZB0cyUut-AIJN4,134
+keychainClient/model/KeySpec.py,sha256=RsIXU4an4XJ5R1-Wxp6e-4SyK_KfeWxiS3MzVrkYXmA,843
+keychainClient/model/__init__.py,sha256=sR4CZALTMZnH8uT-g7PvjjoGe_9yrwYojhKACBV_vCE,29
+keychainClient/protobuf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+keychainClient/protobuf/derived_key_pb2.py,sha256=49SZFPb8h-BGXhi0h-MznpfOw5db6lB10wWQCZpvDHQ,2759
+keychainClient/protobuf/keychain_pb2.py,sha256=tY41fY7ilqT_pXDWzrPpHFK6KZn1bKT6eTE9vLfY3J4,8491
+p1_harpocrates_sdk-0.3.1.dist-info/LICENSE,sha256=o6WQWZMGSQvcuOoDlQ9dgdiNP6tBpFK81aXZwev0xFs,725
+p1_harpocrates_sdk-0.3.1.dist-info/METADATA,sha256=3xVIaZlRUNY43V0XeoLrAuDK4dLVziXFB1ISBuMPXmU,400
+p1_harpocrates_sdk-0.3.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+p1_harpocrates_sdk-0.3.1.dist-info/top_level.txt,sha256=iUkjE35kQT1-f3kG12MXoQQgNdXlEZWAArxIDbb2_rk,15
+p1_harpocrates_sdk-0.3.1.dist-info/RECORD,,
