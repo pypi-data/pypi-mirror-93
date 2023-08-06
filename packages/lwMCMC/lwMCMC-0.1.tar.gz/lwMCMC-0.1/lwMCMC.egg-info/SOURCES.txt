@@ -1,0 +1,9 @@
+README.md
+setup.py
+lwMCMC/__init__.py
+lwMCMC/_main.py
+lwMCMC.egg-info/PKG-INFO
+lwMCMC.egg-info/SOURCES.txt
+lwMCMC.egg-info/dependency_links.txt
+lwMCMC.egg-info/top_level.txt
+test/test_operations.py
