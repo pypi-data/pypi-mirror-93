@@ -1,0 +1,6 @@
+[console_scripts]
+enrich_cmd = countess.main:main_cmd
+
+[gui_scripts]
+enrich_gui = countess.main:main_gui
+
