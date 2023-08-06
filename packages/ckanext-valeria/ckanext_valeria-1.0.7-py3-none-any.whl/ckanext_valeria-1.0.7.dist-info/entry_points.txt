@@ -1,0 +1,6 @@
+
+        [ckan.plugins]
+        valeria=ckanext.valeria.plugin:ValeriaPlugin
+        [babel.extractors]
+        ckan = ckan.lib.extract:extract_ckan
+    
