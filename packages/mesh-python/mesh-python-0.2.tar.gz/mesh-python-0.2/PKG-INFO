@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: mesh-python
+Version: 0.2
+Summary: Python client to query the mesh engine.
+Home-page: UNKNOWN
+Author: Thierry Bleau
+Author-email: thierry@protean.so
+License: UNKNOWN
+Description: ### A python client for Mesh Queries
+        
+        #### Installation
+        
+        `pip install mesh-python`
+        
+        #### Usage
+        
+        ```python
+        from mesh import MeshClient
+        
+        credentials = {
+            "username":"Your username",
+            "password":"Your password"
+            }
+        client = MeshClient(**credentials)
+        query = "$UNIV2.DPI_WETH.DPI_PRICE"
+        
+        result = client.engine(query)
+        ```
+Keywords: crypto ethereum python client uniswap graph
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
