@@ -1,0 +1,16 @@
+nbdev_template/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+nbdev_template/_nbdev.py,sha256=zfHyMDKIFQ2ir6sjja6Qs-gB-y4svnA8SWfuLXNaPpE,361
+nbdev_template/inventory.py,sha256=nFFzDIhphpydUM7SwhLMFc7W51CgPu_PmlYJuXsRwFg,5372
+villaInventorySdk/__init__.py,sha256=YvuYzWnKtqBb-IqG8HAu-nhIYAsgj9Vmc_b9o7vO-js,22
+villaInventorySdk/_nbdev.py,sha256=sIr_ZvTigsYO0lmdcyVwexAs4S_MbtHYlrDgz3eY5Xw,656
+villaInventorySdk/inventory.py,sha256=bZDxJzqbYE3O3LQbC3JjPnCEdQvEmHxEyv7ziHKDugg,6908
+villaPricingSdk/__init__.py,sha256=QvlVh4JTl3JL7jQAja76yKtT-IvF4631ASjWY1wS6AQ,22
+villaPricingSdk/_nbdev.py,sha256=HcSTFwlEeOwtdRPLAGc48zeAXUEe-TbV2ombYRDjENM,638
+villaPricingSdk/inventory.py,sha256=NofSLpt3KkRpkWJhjOBcfjl-5W6jj9RRw7sGEIJfCWc,6921
+villaPricingSdk/price.py,sha256=oMALEkHNFNhBP4heqvaWOaYfTdfwG6RIhRyRYmn2Y04,6948
+villaPricingSdk-0.0.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+villaPricingSdk-0.0.2.dist-info/METADATA,sha256=J0itvo9S5Fpr0aU5YTrUPjmrvflg8fz0hm6hSRVK6pw,8728
+villaPricingSdk-0.0.2.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+villaPricingSdk-0.0.2.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+villaPricingSdk-0.0.2.dist-info/top_level.txt,sha256=eYb3tulX2zdncyJ8hsFu-qN7l0laQ5vAjGymp1OxjNk,31
+villaPricingSdk-0.0.2.dist-info/RECORD,,
