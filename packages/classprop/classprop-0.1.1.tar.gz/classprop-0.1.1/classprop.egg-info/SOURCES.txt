@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+classprop/__init__.py
+classprop/classprop.py
+classprop.egg-info/PKG-INFO
+classprop.egg-info/SOURCES.txt
+classprop.egg-info/dependency_links.txt
+classprop.egg-info/not-zip-safe
+classprop.egg-info/requires.txt
+classprop.egg-info/top_level.txt
+tests/test_classprop.py
