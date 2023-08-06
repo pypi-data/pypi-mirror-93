@@ -1,0 +1,9 @@
+pithermalcam/__init__.py,sha256=M71EM0IJiGyfG7DQGG1zyWrmEtLY8pnq6SlnigD3PCw,2109
+pithermalcam/pi_therm_cam.py,sha256=oNzen0snml8vbjDRRL3GeUPgT9nvg7lr56anWoTbRW8,12931
+pithermalcam/web_server.py,sha256=eE284tOtf-dYjsSgLLYaqM8-oiSV49lcgPBCHmBh6OA,4531
+pithermalcam/templates/index.html,sha256=7qGOOzVoNagMwQ8Da8lMDOu0XtTFV92iDemEbof1jC0,3858
+pithermalcam-0.1.1.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+pithermalcam-0.1.1.dist-info/METADATA,sha256=uxYZDjiwjqaPKdT2Oo8snWGXz9-87fkZ0_MHYMliVvo,2827
+pithermalcam-0.1.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+pithermalcam-0.1.1.dist-info/top_level.txt,sha256=CXcdGDVN07Ao-R2EDeX4_pa-O3Au9o-hg69vd1TMiho,13
+pithermalcam-0.1.1.dist-info/RECORD,,
