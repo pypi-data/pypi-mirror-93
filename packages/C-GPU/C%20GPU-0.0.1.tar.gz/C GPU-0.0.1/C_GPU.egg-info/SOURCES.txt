@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+_init_.py
+setup.py
+C_GPU.egg-info/PKG-INFO
+C_GPU.egg-info/SOURCES.txt
+C_GPU.egg-info/dependency_links.txt
+C_GPU.egg-info/top_level.txt

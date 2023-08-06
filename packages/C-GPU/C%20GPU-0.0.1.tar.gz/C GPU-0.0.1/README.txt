@@ -1,0 +1,1 @@
+This is a module that simply makes using cursed easier.

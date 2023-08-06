@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: C GPU
+Version: 0.0.1
+Summary: Mini virtual GPU made with the curses module!
+Home-page: UNKNOWN
+Author: Brandon Cannistraci
+Author-email: fixerboy2009@gmail.com
+License: MIT
+Description: This is a module that simply makes using cursed easier.
+        
+        Change Log
+        ===========
+        
+        0.0.1 (PUBLISH 1, FEB 1, 2021)
+        -------------------------------
+        MAIN RELEASE
+Keywords: GPU
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
