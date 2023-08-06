@@ -1,0 +1,4 @@
+
+#      [console_scripts]
+#      ipa-tools=ipa-tools.scripts.cli:cli
+#      

@@ -1,0 +1,13 @@
+README.rst
+setup.cfg
+setup.py
+ipa-tools/__init__.py
+ipa-tools/scripts/__init__.py
+ipa-tools/scripts/cli.py
+ipa_tools.egg-info/PKG-INFO
+ipa_tools.egg-info/SOURCES.txt
+ipa_tools.egg-info/dependency_links.txt
+ipa_tools.egg-info/entry_points.txt
+ipa_tools.egg-info/not-zip-safe
+ipa_tools.egg-info/requires.txt
+ipa_tools.egg-info/top_level.txt
