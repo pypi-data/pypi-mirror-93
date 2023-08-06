@@ -1,0 +1,4 @@
+selfpoc/mypackjulianpoc.egg-info/PKG-INFO
+selfpoc/mypackjulianpoc.egg-info/SOURCES.txt
+selfpoc/mypackjulianpoc.egg-info/dependency_links.txt
+selfpoc/mypackjulianpoc.egg-info/top_level.txt
