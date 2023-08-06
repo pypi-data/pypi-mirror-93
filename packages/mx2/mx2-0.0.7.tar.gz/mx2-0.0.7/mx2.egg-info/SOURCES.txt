@@ -1,0 +1,7 @@
+README.md
+setup.py
+mx2/__init__.py
+mx2.egg-info/PKG-INFO
+mx2.egg-info/SOURCES.txt
+mx2.egg-info/dependency_links.txt
+mx2.egg-info/top_level.txt
