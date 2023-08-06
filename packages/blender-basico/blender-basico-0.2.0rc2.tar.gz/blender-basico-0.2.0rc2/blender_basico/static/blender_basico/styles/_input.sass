@@ -1,0 +1,9 @@
+/* Highlight required fields or those with errors. */
+/* ".has-error" is deprecated in BS4, backend should use HTML4 validation. */
+.has-error,
+.form-required
+	.form-control
+		border-color: $color-danger
+
+	.input-group-addon
+		border-color: $color-danger
