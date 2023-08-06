@@ -1,0 +1,10 @@
+README.md
+setup.py
+snapmap_archiver/__init__.py
+snapmap_archiver/__main__.py
+snapmap_archiver/get_data.py
+snapmap_archiver.egg-info/PKG-INFO
+snapmap_archiver.egg-info/SOURCES.txt
+snapmap_archiver.egg-info/dependency_links.txt
+snapmap_archiver.egg-info/top_level.txt
+snapmap_archiver/utils/__init__.py
