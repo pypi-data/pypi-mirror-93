@@ -1,0 +1,12 @@
+koch_trainer/__init__.py,sha256=B_uXreRt4ATY05oVuWZvvXz9O_dhyvtKM23Ikuq4Yeo,27
+koch_trainer/koch_trainer.py,sha256=WbNTfhTyhOeZ52Z-gwyEVVMOj4ndalsfLgjXhGURM-k,17465
+koch_trainer/static/callsigns.txt,sha256=Rl2J8VXLEGGEIHYJLU-PZH8opTOSyBP0kIrfus1ajuE,1201620
+koch_trainer/static/english-all.txt,sha256=bqNTwXzRAVai4Jm1-iz6vC_wikAusTfjR6cmIB3_Y8g,4234901
+koch_trainer/static/english-long.txt,sha256=YofcUKn1hiNS7iAxF4_jTR_wK-ggwUZb3sZyCEaqH0U,67411
+koch_trainer/static/english.txt,sha256=QlhFzyKM-RIA4ly_A2HMB4UCzhzC-dRViymr54CWr-E,22223
+koch_trainer-0.0.5.dist-info/LICENSE,sha256=2YzTBVkBMtCrQKPAs3FJ1iz896q7VUs0zmz7d5mX3F8,1331
+koch_trainer-0.0.5.dist-info/METADATA,sha256=2kf_UcOZTpBPe11YOVjUMyygRkbzCQz6FGWNdbaCa2U,2799
+koch_trainer-0.0.5.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+koch_trainer-0.0.5.dist-info/entry_points.txt,sha256=PvCB1vIcI8YmyQS2FFsfc4PWljGFLctJHey5t1AfBVw,65
+koch_trainer-0.0.5.dist-info/top_level.txt,sha256=W6YermkWCJsbD86UQBGVGsrv3FfE3QtO_RzGZc1-_W8,13
+koch_trainer-0.0.5.dist-info/RECORD,,
