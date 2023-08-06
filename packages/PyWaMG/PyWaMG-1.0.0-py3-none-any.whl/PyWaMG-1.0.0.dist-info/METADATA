@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: PyWaMG
+Version: 1.0.0
+Summary: PyWaMG - WhatsApp Automator Bot
+Home-page: https://github.com/megz15/PyWaMG
+Author: Meghraj Goswami
+Author-email: meghgoswami835@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Communications :: Chat
+Requires-Dist: msedge-selenium-tools
+Requires-Dist: selenium (==3.141)
+Requires-Dist: pillow (==8.0.1)
+
+PyWaMG is a simple python library to automate sending messages and files on WhatsApp
+
+
