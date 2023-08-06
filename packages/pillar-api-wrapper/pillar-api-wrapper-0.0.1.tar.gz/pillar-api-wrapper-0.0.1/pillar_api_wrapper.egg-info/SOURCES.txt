@@ -1,0 +1,9 @@
+README.md
+setup.py
+pillar/__init__.py
+pillar/client.py
+pillar_api_wrapper.egg-info/PKG-INFO
+pillar_api_wrapper.egg-info/SOURCES.txt
+pillar_api_wrapper.egg-info/dependency_links.txt
+pillar_api_wrapper.egg-info/requires.txt
+pillar_api_wrapper.egg-info/top_level.txt
