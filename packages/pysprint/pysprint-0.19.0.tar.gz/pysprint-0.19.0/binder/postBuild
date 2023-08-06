@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -ex
+
+curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain nightly -y
+export PATH="$HOME/.cargo/bin:$PATH"
+
+cargo -vV
+
+pip install -e .
