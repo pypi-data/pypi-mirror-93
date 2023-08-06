@@ -1,0 +1,10 @@
+README.md
+setup.py
+scrutinize/__init__.py
+scrutinize/client.py
+scrutinize.egg-info/PKG-INFO
+scrutinize.egg-info/SOURCES.txt
+scrutinize.egg-info/dependency_links.txt
+scrutinize.egg-info/not-zip-safe
+scrutinize.egg-info/requires.txt
+scrutinize.egg-info/top_level.txt
