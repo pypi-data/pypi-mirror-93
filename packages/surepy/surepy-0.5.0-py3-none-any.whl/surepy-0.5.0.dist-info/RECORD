@@ -1,0 +1,15 @@
+surepy/__init__.py,sha256=iSGgzBsk0Nov2YEERVLH-umVtgrLxtfKWGIlLe133ug,7251
+surepy/cli.py,sha256=yqZaoJul7mrVbQLIR3cJCiS0QeJuO2wpP6RSjSEagQw,13496
+surepy/client.py,sha256=PWJz-U9e996t2e_eXxff6K14jfgyQSux-k2aC4s2oNU,8773
+surepy/const.py,sha256=DcsZ0r72dIaI-88kLrHLEnDucK2KisI1HyYOX0Wv0FU,1122
+surepy/entities.py,sha256=OLZZ6voESM0FkcTVox4Hxu9iuw6Qxvaoa_wJojtvPmI,1564
+surepy/enums.py,sha256=n6LWKvGaJjHbR3PwE_JTu-nVGH0HPaNyDyf4947Cb7w,1004
+surepy/exceptions.py,sha256=VotmdCgYKwz9RL82ckkiCARRqIPOmHibg83cKziZGUc,308
+surepy/flap.py,sha256=bajj9Tb9Z9dDOXBHIV3oxqwVEbmRsECQ0tSBC0uLw-E,2083
+surepy/pet.py,sha256=X158YBlhvrV3OBhdfYEOJnp9iRc1xfp-BgWLNQ0urI8,4111
+surepy/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+surepy-0.5.0.dist-info/entry_points.txt,sha256=bhBwk8kL0zWuvw64S5C1Kl_A0CVXMgvNMk6qV-6nags,41
+surepy-0.5.0.dist-info/LICENSE,sha256=aZCMOdV0XPB6_xx3pViOO7OFYDwl6kRVzSlvPAnkFRM,1068
+surepy-0.5.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+surepy-0.5.0.dist-info/METADATA,sha256=V_fzOMZxXRJQR6vfb21dQ2HttNFaPBzyQjXBfX9HIgo,4704
+surepy-0.5.0.dist-info/RECORD,,
