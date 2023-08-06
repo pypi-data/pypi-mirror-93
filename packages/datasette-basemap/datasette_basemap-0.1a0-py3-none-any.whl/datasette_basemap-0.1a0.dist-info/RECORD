@@ -1,0 +1,7 @@
+datasette_basemap/__init__.py,sha256=Wu2dgqXCEiZ23bavH_TNetkLsyRuyOViNMBY91yRQxc,272
+datasette_basemap/data/basemap.db,sha256=1t35ObFbDJetaQKZSSpbcdi3cOl-G2hq13BKEK700ec,65536
+datasette_basemap-0.1a0.dist-info/METADATA,sha256=9fB9h232OzdhKh0ZBluGSHFyv6Xfg3Eq5WdSSEvFwOc,2190
+datasette_basemap-0.1a0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+datasette_basemap-0.1a0.dist-info/entry_points.txt,sha256=S23ofmerx4Ae7hRDgoH_lhasXwaBLpDyl37hJEoZQt8,41
+datasette_basemap-0.1a0.dist-info/top_level.txt,sha256=ds2GFyCWSXMSjdajnkVHnA-I6A15CHWdtEW86K_R92w,18
+datasette_basemap-0.1a0.dist-info/RECORD,,
