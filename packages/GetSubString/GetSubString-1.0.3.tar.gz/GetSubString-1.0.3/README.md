@@ -1,0 +1,68 @@
+# GetSubStr
+
+Utility that allows you get substring of each stdout line based on regexp.
+
+```
+GetSubStr v1.0.3 - gets substring of each stdout line based on regexp.
+
+positional arguments:
+  regexp_pattern        Regexp pattern
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -l CUT_LEFT, --left-cut CUT_LEFT
+                        Cut N chars from left side of result
+  -r CUT_RIGHT, --right-cut CUT_RIGHT
+                        Cut N chars from right side of result
+  --lwrap L_WRAP        Wrap results from left side by specified char(s)
+  --rwrap R_WRAP        Wrap results from left side by specified char(s)
+  -s, --strip           Strip spaces from left and right side of result
+  -j JOIN_RESULTS, --join-results JOIN_RESULTS
+                        Join all results with specified char(s)
+  --join-matches JOIN_MATCHES
+                        Join more regexp matches with specified char(s). Default is TAB \t
+  -f FIND_REPLACE, --find-replace FIND_REPLACE
+                        Find string and replace it with another string. It have to be defined in following format "find::replace"
+  -o OUTPUT_FORMAT, --output-format OUTPUT_FORMAT
+                        Output format for matches (Best if you are using regexp groups). ex: "myId:{0} yourId:{1}"
+  -i, --ignore-errors   Ignore errors caused regexp.
+  ```
+  
+### example #1:
+```bash
+printf "**** Error while updating article content id=498 ****\n**** Error while updating article content id=512 ****\n" \
+| getsub "id\=\d+" -l 3 -j "," --lwrap "\"" --rwrap "\""
+```
+output:
+```
+"498","512"
+```
+
+### example #2 - grep lines from common logfile:
+```bash
+> grep "Error" error.log | getsub "id\=\d+" -l 3 -j "," --lwrap "\"" --rwrap "\""
+```
+output:
+```
+"680093","679962","678612","678313","678043","677973","676873","676431","675696"
+```
+
+### example #3 - custom output format:
+```bash
+printf "123 456\n789 012" | getsub "(\d+) (\d+)" --o "i='{0}'...j='{1}'"
+```
+output:
+```
+i='123'...j='456'
+i='789'...j='012'
+```
+
+
+# Installation
+```bash
+sudo python3 setup.py install
+```
+or
+```bash
+pip3 install GetSubString
+```
