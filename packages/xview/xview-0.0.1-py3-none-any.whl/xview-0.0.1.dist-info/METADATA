@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: xview
+Version: 0.0.1
+Summary: Examine memory views/bytes.
+Home-page: https://github.com/bad-address/xview
+Author: Di Paola Martin
+Author-email: use-github-issues@example.com
+License: GNU GPLv3
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.5
+Requires-Dist: more-itertools
+
+Examine memory views/bytes.
+
+
