@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: KubunConfector
+Version: 0.1.3.post9
+Summary: Kubun Data-Preparation Utility
+Home-page: https://github.com/ra-martin/KubunConfector
+Author: Raphael Martin
+Author-email: raphael@kubun.io
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Requires-Dist: typeguard
+
+UNKNOWN
+
+
