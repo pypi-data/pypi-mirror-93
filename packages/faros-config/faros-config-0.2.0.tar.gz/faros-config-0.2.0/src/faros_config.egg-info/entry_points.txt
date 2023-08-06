@@ -1,0 +1,3 @@
+[console_scripts]
+faros-inventory = faros_config.inventory.cli:main
+
