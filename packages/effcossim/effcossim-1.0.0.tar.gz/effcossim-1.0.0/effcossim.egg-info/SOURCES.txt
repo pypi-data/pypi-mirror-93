@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+version.txt
+effcossim/__init__.py
+effcossim/pcs.py
+effcossim.egg-info/PKG-INFO
+effcossim.egg-info/SOURCES.txt
+effcossim.egg-info/dependency_links.txt
+effcossim.egg-info/requires.txt
+effcossim.egg-info/top_level.txt
