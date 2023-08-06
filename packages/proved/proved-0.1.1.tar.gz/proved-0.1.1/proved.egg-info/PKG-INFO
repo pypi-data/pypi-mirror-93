@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: proved
+Version: 0.1.1
+Summary: PROVED (PRocess mining OVer uncErtain Data) is a collection of tools to perform process mining on uncertain event data.
+Home-page: https://github.com/marcopegoraro/proved
+Author: Marco Pegoraro
+Author-email: pegoraro@pads.rwth-aachen.de
+License: GNU General Public License v3
+Description: ======
+        PROVED (PRocess mining OVer uncErtain Data)
+        ======
+        
+        Branch dedicated to the experiments for the paper
+        
+        **"Efficient Construction of Behavior Graphs for Uncertain Event Data"**,
+        Marco Pegoraro, Merih Seran Uysal, Wil M.P. van der Aalst,
+        In *International Conference on Business Information Systems (BIS)*, 2020.
+        
+        Experiments are in the folder experiments. Needs additional data files to run:
+        
+        * BPI_Challenge_2012.xes: from https://data.4tu.nl/repository/uuid:3926db30-f712-4394-aebc-75976070e91f
+        * Help_Desk_event_log.xes: from https://data.4tu.nl/repository/uuid:0c60edf1-6f83-4e75-9367-4c63b3e9d5bb
+        * Road_Traffic_Fine_Management_Process.xes: from https://data.4tu.nl/repository/uuid:270fd440-1057-4fb9-89a9-b699b47990f5
+        
+        For more information see http://mpegoraro.net/pages/research.html
+        
+        * Free software: GNU General Public License v3
+        * Documentation: Coming soon!
+        
+        
+        Features
+        --------
+        
+        * Coming soon!
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2019-08-22)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: proved,process mining,data science,process discovery,conformance checking
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
