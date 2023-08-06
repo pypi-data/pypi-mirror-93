@@ -1,0 +1,10 @@
+github_stats_pages/__init__.py,sha256=Wzf5T3NBDfhQoTnhnRNHSlAsE0XMqbclXG-M81Vas70,22
+github_stats_pages/repo_list.py,sha256=YXjj3RwTJKoI7AlUgtoyajz_OovUzDO_gJ0M58-AUKk,1567
+github_stats_pages-0.1.4.data/scripts/get_repo_list,sha256=4Fxm1H2AZQaaR1Dcadp-DWCj5vad5byMOXzKhlEl-DM,510
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_repo_list.py,sha256=gDPldNUhVEnnydOikzz-TjuyD0mJM18wZQrJaQEcvSQ,400
+github_stats_pages-0.1.4.dist-info/LICENSE,sha256=9wtf09COT9cu89I-3ZcmaIMbyob9pXyJOUyRqZaQkiM,1064
+github_stats_pages-0.1.4.dist-info/METADATA,sha256=Qu-vo28UahSe-n7rWm4lDI56MSa9X-80olvKMhj_37g,431
+github_stats_pages-0.1.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+github_stats_pages-0.1.4.dist-info/top_level.txt,sha256=tOjrB4KlUAgo6zJiyqfN53YtWpf8uZu-Jw1URCH1_z8,25
+github_stats_pages-0.1.4.dist-info/RECORD,,

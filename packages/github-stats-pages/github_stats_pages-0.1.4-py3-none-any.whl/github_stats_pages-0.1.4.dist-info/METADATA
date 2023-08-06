@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: github-stats-pages
+Version: 0.1.4
+Summary: Retrieve statistics for a user's repositories and populate the information onto a GitHub static page
+Home-page: https://github.com/astrochun/github-stats-pages
+Author: Chun Ly
+Author-email: astro.chun@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.22.0)
+Requires-Dist: pandas (>=1.2.0)
+
+UNKNOWN
+
+
