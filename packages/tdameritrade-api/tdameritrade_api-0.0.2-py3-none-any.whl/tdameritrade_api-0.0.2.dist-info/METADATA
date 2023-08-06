@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: tdameritrade-api
+Version: 0.0.2
+Summary: A python wrapper for the TDAmeritrade API
+Home-page: https://github.com/prairiesnpr/tdameritrade-api
+Author: Ryan Miller
+Author-email: midnryanmiller@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+Requires-Dist: pyyaml
+
+# Introduction
+
+tdameritrade-api is a python wrapper for the TDAmeritrade API. It implements a small subset of the functions of the API. It is was created to work with Home Assistant.
+
