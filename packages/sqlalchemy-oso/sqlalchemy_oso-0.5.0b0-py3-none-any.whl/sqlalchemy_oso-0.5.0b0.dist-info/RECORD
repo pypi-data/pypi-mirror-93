@@ -1,0 +1,12 @@
+sqlalchemy_oso/__init__.py,sha256=e5wKrHaIBL0G8R5cA0QRek24Bh5MxB5-whxJqHjrG7k,201
+sqlalchemy_oso/auth.py,sha256=D6zL8Rm89Z69QqQ0qUDqOItVfOIQIWakXjiD-c49j6E,2953
+sqlalchemy_oso/flask.py,sha256=JWKdcyVKQajz8Hhsgv9UTgyYmWeKkw1TSuF2qsT6HOc,2342
+sqlalchemy_oso/partial.py,sha256=PBoJDVMn9mJ4PlgNNkHbHHja0JTZLAoLakBpG7jEDlw,7284
+sqlalchemy_oso/preprocess.py,sha256=gwK_lWXCMLEEFfXkSnZtpytpFbRlUcpFS4Pi9tukiP8,3969
+sqlalchemy_oso/roles.py,sha256=3mVb04hVTYoDBhE9b5SAfH2W5ni3yGzyuNUTC4C8mpY,18847
+sqlalchemy_oso/session.py,sha256=mciP0Zk5as4HjHMKgkxoBUo1nvzeHtkQ2f8cQ3-iWRA,6589
+sqlalchemy_oso-0.5.0b0.dist-info/METADATA,sha256=n9Uai5DG5Nyf01lEVZz2spCS0NV9kgSKRiLu8MfeaBk,4804
+sqlalchemy_oso-0.5.0b0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sqlalchemy_oso-0.5.0b0.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+sqlalchemy_oso-0.5.0b0.dist-info/top_level.txt,sha256=kS8xiPA_k96mHwOaXC52aQE8oZQ8ikhcHjVHs5cWj4Q,15
+sqlalchemy_oso-0.5.0b0.dist-info/RECORD,,
