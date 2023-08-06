@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: transcoding
+Version: 0.2.0
+Summary: Bijective transoding engine for standardized file in- and outputs
+Home-page: https://gitlab.mpcdf.mpg.de/dboe/transcoding
+Author: Daniel Böckenhoff
+Author-email: dboe@ipp.mpg.de
+License: MIT License
+Project-URL: Documentation, https://transcoding.readthedocs.io
+Project-URL: Source, https://gitlab.mpcdf.mpg.de/dboe/transcoding
+Description: =============================
+        Introduction to `transcoding`
+        =============================
+        
+        
+        .. pypi
+        .. image:: https://img.shields.io/pypi/v/transcoding.svg
+            :target: https://pypi.python.org/pypi/transcoding
+        
+        .. ci
+            .. image:: https://img.shields.io/travis/dboe/transcoding.svg
+                :target: https://travis-ci.com/dboe/transcoding
+        .. image:: https://gitlab.mpcdf.mpg.de/dboe/transcoding/badges/master/pipeline.svg
+            :target: https://gitlab.mpcdf.mpg.de/dboe/transcoding/commits/master
+        
+        .. coverage
+        .. image:: https://gitlab.mpcdf.mpg.de/dboe/transcoding/badges/master/coverage.svg
+            :target: https://gitlab.mpcdf.mpg.de/dboe/transcoding/commits/master
+        
+        .. readthedocs
+        .. image:: https://readthedocs.org/projects/transcoding/badge/?version=latest
+            :target: https://transcoding.readthedocs.io/en/latest/?badge=latest
+            :alt: Documentation Status
+        
+        .. pyup crosschecks your dependencies. Github is default, gitlab more complicated: https://pyup.readthedocs.io/en/latest/readme.html#run-your-first-update 
+            .. image:: https://pyup.io/repos/github/dboe/transcoding/shield.svg
+                :target: https://pyup.io/repos/github/dboe/transcoding/
+                :alt: Updates
+        
+        .. image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+           :target: https://github.com/pre-commit/pre-commit
+           :alt: pre-commit
+        
+        
+        Bijective transoding engine for standardized file in- and outputs
+        
+        
+        Licensed under the ``MIT License``
+        
+        Resources
+        ---------
+        
+        * Source code: https://gitlab.mpcdf.mpg.de/dboe/transcoding
+        * Documentation: https://transcoding.readthedocs.io
+        * Pypi: https://pypi.python.org/pypi/transcoding
+        
+        
+        Features
+        --------
+        
+        The following features should be highlighted:
+        
+        * TODO
+        
+        MIT License
+        
+        Copyright (c) 2021, Daniel Böckenhoff
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Keywords: file input output transcoding standardization
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.0
+Description-Content-Type: text/x-rst
+Provides-Extra: all
+Provides-Extra: dev
+Provides-Extra: docs
+Provides-Extra: test
+Provides-Extra: tar
