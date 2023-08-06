@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "nonebot_plugin_itreflection"
+version = "0.0.1"
+description = "适用于nonebot2的交互式反射插件"
+authors = ["Maximilian Wu <me@maxesisn.online>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+nonebot2 = "^2.0.0-alpha.9"
+
+
+[tool.poetry.dev-dependencies]
+twine = "^3.3.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
