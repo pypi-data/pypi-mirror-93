@@ -1,0 +1,12 @@
+iad/__init__.py,sha256=pUWc66LiGPTC_vvTJogr0wjxWVAut6O2Ndvuuym0TsE,200
+iad/errors.py,sha256=wO3HGj5urFXKCwTHHGFE2Q2tGw55RVdAUc1I1VTdrBg,131
+iad/ratelimit.py,sha256=59GNNX7l5My09rRcz1-gZpJNtzxY5AQpm_6EJhsop_Q,1158
+iad/request.py,sha256=HDirs9V0GQ_66e6CUTH1mh-csTloiyr2r28bdhPSopE,1483
+iad/model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+iad/model/client.py,sha256=xNcFj1cgSpOPZH-HcrnL826Ric51VKWWifMLO6RfHDI,2459
+iad/model/upload.py,sha256=Zr89aJ_jLMsKQGkxik8zFzWxvh7BgLoC3snAcGTOXQo,163
+iad.py-1.0.2.dist-info/LICENSE,sha256=4Hsuhx-YKmuFkcQoxZnpbFnc-I-uf9J02vmE0c4J-DQ,1088
+iad.py-1.0.2.dist-info/METADATA,sha256=odFvmA_RzCAPLmYdqr5a0M77luQYNImW7YOGwx7LNGE,1392
+iad.py-1.0.2.dist-info/WHEEL,sha256=D1Wh14kWDxPnrM-5t_6UCB-UuQNrEODtRa3vF4OsvQY,97
+iad.py-1.0.2.dist-info/top_level.txt,sha256=0yrLCuMvoH25SfHlCrXMbnXt-cLNRn3x9PRi5QBHQR0,4
+iad.py-1.0.2.dist-info/RECORD,,
