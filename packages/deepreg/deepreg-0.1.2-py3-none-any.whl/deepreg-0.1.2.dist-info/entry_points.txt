@@ -1,0 +1,7 @@
+[console_scripts]
+deepreg_download = deepreg.download:main
+deepreg_predict = deepreg.predict:main
+deepreg_train = deepreg.train:main
+deepreg_vis = deepreg.vis:main
+deepreg_warp = deepreg.warp:main
+
