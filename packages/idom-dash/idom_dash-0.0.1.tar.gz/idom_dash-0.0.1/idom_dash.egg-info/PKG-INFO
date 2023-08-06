@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: idom-dash
+Version: 0.0.1
+Summary: A custom component for Dash that uses IDOM
+Home-page: UNKNOWN
+Author: Ryan Morshead <ryan.morshead@gmail.com>
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Framework :: Dash
