@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: workflow-nodes
+Version: 0.2.1
+Summary: Collection of nodes for use in workflows.
+Home-page: https://gitlab.com/iam-cms/workflows/workflow-nodes
+Author: Karlsruhe Institute of Technology
+License: Apache-2.0
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: graphviz
+Requires-Dist: kadi-apy (>=0.4.1)
+Requires-Dist: matplotlib
+Requires-Dist: openpyxl
+Requires-Dist: pandas
+Requires-Dist: pylatex
+Requires-Dist: qrcode
+Requires-Dist: xmlhelpy (>=0.2.0)
+Provides-Extra: dev
+Requires-Dist: black (==20.8b1) ; extra == 'dev'
+Requires-Dist: pre-commit (>=2.7.0) ; extra == 'dev'
+Requires-Dist: pylint (<2.5.0,>=2.4.4) ; extra == 'dev'
+Requires-Dist: tox (>=3.15.0) ; extra == 'dev'
+
+# Workflow-Nodes
+
+**Workflow-Nodes** is a collection of nodes usable inside a *workflow* written
+in Python 3. There are nodes to generate reports, to wrap system commands like
+`awk` and some nodes for special use cases like integrating ImageJ macros.
+Additionally, some nodes can interact with a Kadi4Mat instance.
+
+Each node is an executable command line tool providing the `--xmlhelp`
+interface.
+
+## Installation
+
+The library can be installed using `pip3` (or `pip`, if there is no dedicated
+version of `pip` for Python 3 installed), which generally comes bundled with
+Python installations. Python version >= 3.6 is required.
+
+`pip3 install workflow-nodes`
+
+When installing the library from source for development instead, it is
+recommended to install the library in editable mode, which simply creates a
+link to the sources so all changes are reflected in the installed package
+immediately. The command will also install some additional development
+dependencies as defined in `setup.py`.
+
+`pip3 install -e .[dev]`
+
+Running the installations inside a virtual environment is recommended, see
+[Virtualenv](https://virtualenv.pypa.io/en/latest/ "Virtualenv") for more
+information.
+
+After installing, make sure the `workflow-nodes` command is runnable from
+anywhere. Depending on the type of installation and if a virtual environment is
+used or not, the `PATH` system variable may need to be adapted accordingly to
+include the path the executable resides in. For example, the following command
+can be used on Linux, assuming the executable resides in `~/.local/bin`:
+
+`export PATH=${HOME}/.local/bin:${PATH}`
+
+This line can also be added to `.bashrc` so it will be executed each time a new
+terminal is opened:
+
+`echo 'export PATH=${HOME}/.local/bin:${PATH}' >> ${HOME}/.bashrc`
+
+## Usage
+
+All commands concerning different resources are available as various
+subcommands. For more information or to get a list of subcommands, the
+following commands can be used:
+
+`workflow-nodes --help`
+
+`workflow-nodes --commands`
+
+To use nodes with the local workflow editor, they have to be added to the file
+`$HOME/.pacestudio/tools.txt`. Afterwards you can insert them using the "Add
+Tool" context menu option in the editor.
+
+## Creating new nodes
+
+1. Create a Python file for the node in the desired package, e.g. in
+   `workflow_nodes/report/`.
+2. Implement the functionality of the tool. You can use other existing tools as
+   reference.
+3. Add the implemented function to a fitting subcommand group, e.g. to
+   `workflow_nodes/report/main.py`.
+
+
