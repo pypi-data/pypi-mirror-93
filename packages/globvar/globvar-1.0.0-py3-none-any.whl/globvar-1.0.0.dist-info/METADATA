@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: globvar
+Version: 1.0.0
+Summary: Extremely simple in-memory global variable manager
+Home-page: https://gitlab.com/TECHNOFAB/globvar
+Author: Technofab
+Author-email: globvar.git@technofab.de
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Description-Content-Type: text/markdown
+
+# Globvar
+
+Extremely simple in-memory storage
+
+
