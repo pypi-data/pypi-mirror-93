@@ -1,0 +1,16 @@
+rosetta-dispatcher/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rosetta-dispatcher/dispatch_client.py,sha256=uZuc6oUHE2VmevfdUt_r--k4tD1X7gIjip3H1NOg0ts,110
+rosetta-dispatcher/dispatch_server.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rosetta_dispatcher/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rosetta_dispatcher/dispatch_client.py,sha256=7dJNsPRpf2xfOB8aSoI7tiEQ2An4qucV0NKaNzpZs1Y,1337
+rosetta_dispatcher/dispatch_server.py,sha256=5mHM9Mo9fKZcKtrkimf584d5-3RLX4veVHYA3jMBMqs,2121
+rosetta_dispatcher/idtool.py,sha256=d9wtCEB8us54VXzQvQDnZWgQdgsWida205zk-_AZ5wQ,158
+rosetta_dispatcher/model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rosetta_dispatcher/model/dispatch_request_model.py,sha256=0GG0T22ukXhdKGbk8DaqEG9l4OYbTjtoiUh9fBvRUYs,352
+rosetta_dispatcher/model/dispatch_response_model.py,sha256=oPt1oVbfg8MdZ9lM6tppp7RdHzFwJusdjnNXP5EBtxw,312
+rosetta_dispatcher/model/dispatch_types.py,sha256=l5MWafJoGnAqeE7FGzp-MG4qCXGAhJffNvTvx_tZXqY,161
+rosetta_dispatcher-0.0.11.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rosetta_dispatcher-0.0.11.dist-info/METADATA,sha256=hRsqP7ej-Ov7xqDPiZkXVBLXfLdluscF4um3WtmmCuQ,455
+rosetta_dispatcher-0.0.11.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+rosetta_dispatcher-0.0.11.dist-info/top_level.txt,sha256=pCNwlOep5cjyBOWbcBlhjJZzctiCES3OkQQAbOkL0jE,19
+rosetta_dispatcher-0.0.11.dist-info/RECORD,,
