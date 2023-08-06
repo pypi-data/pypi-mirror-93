@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-sm navbar-dark shadow">
+	<div class="navbar-brand py-0">
+		<a href="{{ config.theme.home or "home" }}" target="article">
+			{% if config.extra.logo %}
+			<img src="{{ base_url }}/{{ config.extra.logo }}" alt="{{config.site_name}} Logo" />
+			{% endif %}
+			<span>{{ config.site_name }}</span>
+		</a>
+		{%- block version %}
+		{% if config.extra.version %}
+		<span class="badge bg-light text-dark p-1 ms-1">{{ config.extra.version }}</span>
+		{% endif %}
+		{%- endblock %}
+	</div>
+
+	<div class="cm-navbar-group placeholding">
+		{# Table-of-contents button #}
+		<button type="button" id="wm-toc-button" class="btn btn-sm btn-light"><i class="fa fa-th-list" aria-label="Open/Close navigation pane"></i></button>
+
+		{# Search button #}
+		<button class="btn btn-sm btn-light d-md-none d-inline-block ms-2" type="button" id="wm-search-show" data-bs-toggle="collapse" data-bs-target="#wm-search-form" aria-label="Open/Close Search" aria-controls="wm-search-form" aria-hidden="true"
+			><i class="fa fa-search" aria-hidden="true"></i>
+		</button>
+
+		{# Optional forward-back buttons #}
+		{% if config.extra.history_buttons %}
+		<div class="btn-group ms-2" role="group">
+			<button type="button" class="btn btn-sm btn-light" id="hist-back"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+			<button type="button" class="btn btn-sm btn-light" id="hist-fwd"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+		</div>
+		{% endif %}
+	</div>
+
+	<form class="form-inline text-right collapse show" action="{{ base_url }}/search.html" id="wm-search-form" target="article">
+		<div class="input-group input-group-sm">
+			{# Search group #}
+			<input type="search" class="form-control" placeholder="Search" id="mkdocs-search-query" name="q" autocomplete="off">
+			<button class="btn btn-light" type="submit" aria-label="Search"
+				><i class="fa fa-search" aria-hidden="true"></i>
+			</button>
+		</div>
+		<div id="mkdocs-search-results" class="dropdown-menu dropdown-menu-end collapse"></div>
+	</form>
+</nav>
