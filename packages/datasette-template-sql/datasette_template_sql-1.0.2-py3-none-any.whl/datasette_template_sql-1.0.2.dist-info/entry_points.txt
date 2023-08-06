@@ -1,0 +1,3 @@
+[datasette]
+template-sql = datasette_template_sql
+
