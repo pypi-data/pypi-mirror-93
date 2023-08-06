@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+testrelease/ModelZoo.py
+testrelease/_version.py
+testrelease/test.py
+testrelease.egg-info/PKG-INFO
+testrelease.egg-info/SOURCES.txt
+testrelease.egg-info/dependency_links.txt
+testrelease.egg-info/not-zip-safe
+testrelease.egg-info/requires.txt
+testrelease.egg-info/top_level.txt
