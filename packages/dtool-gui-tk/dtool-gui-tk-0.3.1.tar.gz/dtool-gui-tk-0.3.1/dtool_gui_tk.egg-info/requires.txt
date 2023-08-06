@@ -1,0 +1,4 @@
+dtoolcore>=3.18.0
+dtool-info
+ruamel.yaml
+jsonschema

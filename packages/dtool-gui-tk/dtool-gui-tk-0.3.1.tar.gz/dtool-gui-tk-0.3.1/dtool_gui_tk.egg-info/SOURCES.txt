@@ -1,0 +1,16 @@
+LICENSE.rst
+MANIFEST.in
+README.rst
+main-window.png
+new-dataset-window.png
+setup.py
+dtool_gui_tk/__init__.py
+dtool_gui_tk/metadata.py
+dtool_gui_tk/models.py
+dtool_gui_tk/tkgui.py
+dtool_gui_tk.egg-info/PKG-INFO
+dtool_gui_tk.egg-info/SOURCES.txt
+dtool_gui_tk.egg-info/dependency_links.txt
+dtool_gui_tk.egg-info/entry_points.txt
+dtool_gui_tk.egg-info/requires.txt
+dtool_gui_tk.egg-info/top_level.txt
