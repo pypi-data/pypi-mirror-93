@@ -1,0 +1,5 @@
+pyquery
+click
+rich
+requests
+playsound

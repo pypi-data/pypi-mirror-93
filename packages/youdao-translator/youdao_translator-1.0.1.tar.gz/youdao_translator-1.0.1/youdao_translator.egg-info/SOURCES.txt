@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+youdao_translator.py
+youdao_translator.egg-info/PKG-INFO
+youdao_translator.egg-info/SOURCES.txt
+youdao_translator.egg-info/dependency_links.txt
+youdao_translator.egg-info/entry_points.txt
+youdao_translator.egg-info/requires.txt
+youdao_translator.egg-info/top_level.txt
