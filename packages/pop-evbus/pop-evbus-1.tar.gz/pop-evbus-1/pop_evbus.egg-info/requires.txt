@@ -1,0 +1,4 @@
+acct>=2.4
+aio-pika
+pop>=16.3
+rend
