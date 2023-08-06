@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: ignnition
+Version: 0.2
+Summary: Library for fast prototyping of GNN
+Home-page: https://ignnition.net/
+Author: Barcelona Neural Networking Center
+Author-email: ignnition@contactus.net
+License: MIT
+Download-URL: https://github.com/knowledgedefinednetworking/ignnition/archive/v_0.02.tar.gz
+Description: UNKNOWN
+Keywords: Machine Learning,Graph Neural Networks,Networking,Artificial Intelligence
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
