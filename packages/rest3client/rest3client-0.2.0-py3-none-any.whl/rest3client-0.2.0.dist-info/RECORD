@@ -1,0 +1,12 @@
+rest3client/__init__.py,sha256=OmemrQduVz993A2u9W_kAsFBOwv_1SPfn4294OhefxI,650
+rest3client/rest.py,sha256=gECQC4v7U99L3H4yTcvL56OME3tMDuhTU3TY7HtxpuA,194
+rest3client/restcli.py,sha256=zP-xLJrXMx9JR1Lz1_Yw707tfgE5iD2NhQvQihvL7tM,6967
+rest3client/restclient.py,sha256=7YAGpeoFAOayDRH70dPvwH-KXbPQl_e1txMLlUPHeKg,11374
+rest3client/ssladapter.py,sha256=lHvcWXFWa0qKazp9dB372NdiMMkfKOHgVirQaUwCAUc,1467
+rest3client-0.2.0.dist-info/METADATA,sha256=2nHq6pt7xe6HF7ern5pbV6NWDFQnYfFYME7I2pj8UAo,1923
+rest3client-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+rest3client-0.2.0.dist-info/entry_points.txt,sha256=4cx5Z6P7ERRftfapJyhPMUu9a2SJtTnyO8NJ46u-4ZE,48
+rest3client-0.2.0.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+rest3client-0.2.0.dist-info/top_level.txt,sha256=mFsd1mz2tTfdvlw21c25W0qGYFTdos17b2AE2qacGBg,12
+rest3client-0.2.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+rest3client-0.2.0.dist-info/RECORD,,
