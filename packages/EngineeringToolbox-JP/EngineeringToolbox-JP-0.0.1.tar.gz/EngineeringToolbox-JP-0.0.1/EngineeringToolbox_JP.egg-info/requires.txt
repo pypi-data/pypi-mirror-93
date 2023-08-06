@@ -1,0 +1,7 @@
+json
+math
+matplotlib
+numpy
+pandas
+sympy
+warnings
