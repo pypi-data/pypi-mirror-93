@@ -1,0 +1,9 @@
+README.md
+setup.py
+pod_whois/core.py
+pod_whois.egg-info/PKG-INFO
+pod_whois.egg-info/SOURCES.txt
+pod_whois.egg-info/dependency_links.txt
+pod_whois.egg-info/entry_points.txt
+pod_whois.egg-info/requires.txt
+pod_whois.egg-info/top_level.txt
