@@ -1,0 +1,9 @@
+transformer_discord_notifier/__init__.py,sha256=8wQfT_eh5GtpEDd68WrKBXjJXCQXXKKVVHduVtu_Ics,299
+transformer_discord_notifier/discord.py,sha256=W5Xtr8Ga5Gt98MqQuwiRyvAMys0XFgeiY3aZPoYEsVE,19538
+transformer_discord_notifier/transformers.py,sha256=XOTkw91_lWfQ6qXGiAINowIOVzVLHU8ji9oIDZjLZds,10967
+transformer_discord_notifier-0.4.5.dist-info/AUTHORS.rst,sha256=mcXDrbCEVCiIRTVbmlZZTv6czUbD9pfxxvXJbu0ZMIQ,69
+transformer_discord_notifier-0.4.5.dist-info/LICENSE,sha256=aamneib99zJnnELt3UcfTxLxQajW5iEnj4JCKi38ctc,1100
+transformer_discord_notifier-0.4.5.dist-info/METADATA,sha256=F4zfgGyg8jvsoFzYCNEuzBkNEopbsZqNv6vB8ZKBEsU,4921
+transformer_discord_notifier-0.4.5.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+transformer_discord_notifier-0.4.5.dist-info/top_level.txt,sha256=P_EOqcFkTDfM2nIW_7wTHEY2kNSe3BKQrI0sgr8f04g,29
+transformer_discord_notifier-0.4.5.dist-info/RECORD,,
