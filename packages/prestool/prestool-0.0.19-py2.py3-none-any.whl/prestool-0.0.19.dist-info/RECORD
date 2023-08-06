@@ -1,0 +1,10 @@
+prestool/PresMySql.py,sha256=vSF3agDgsuCpSdq-hFDQCPrdRfZwtKXRHfShNq18qls,1158
+prestool/Tool.py,sha256=cVDVcHnml5V3FQI1A2HbD4kiI5woSQrP83LQfu5kJEA,5289
+prestool/__init__.py,sha256=Qt6Kur0sgmfVCoZ-06MMxfTV_QdGWD1FW88WtIeTXZ8,21
+prestool/__version__.py,sha256=pUA5IjyUwxKATmL4CyGO1olU8ymoTQs6FhAl3FPbGeg,361
+prestool/util.py,sha256=rX85Qnp5AaRq_dlEtbU3ABsdUg3GahDFlgmcy3NFNhM,4955
+prestool-0.0.19.dist-info/LICENSE,sha256=FcjRcdYhYtp8GHz5veJbfC8zKDxF4BIHHOrNvqCOkyI,1069
+prestool-0.0.19.dist-info/METADATA,sha256=RCfYvT5uqOSbJf4QzVs5O8PG16nOxluwjo_s7P1dVho,3634
+prestool-0.0.19.dist-info/WHEEL,sha256=6T3TYZE4YFi2HTS1BeZHNXAi8N52OZT4O-dJ6-ome_4,116
+prestool-0.0.19.dist-info/top_level.txt,sha256=qn2dGqCr5-DoEMzTAn2EDlr3YbWUzNM7vM11QriaPh4,9
+prestool-0.0.19.dist-info/RECORD,,
