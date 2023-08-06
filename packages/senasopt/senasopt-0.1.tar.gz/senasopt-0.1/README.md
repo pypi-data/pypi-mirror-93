@@ -1,0 +1,41 @@
+# senasopt
+
+This package is meant to give you simple energy asset optimisation (in short *senasopt*) toolkit for basic test. This package is meant to be used with Python 3.
+
+## Capabilities
+
+None for now
+
+## Installation
+
+### Latest stable version
+If you want to get the latest stable version, you can get it via pip, as it is [registered on PyPi](https://pypi.org/project/senasopt/) :
+~~~ 
+pip install senasopt
+~~~
+
+### Development versions
+If you want to use the development version, then just keep on using the one in the [repository on Gitlab](https://gitlab.com/Pierre_VF/senasopt) by checking out the right branches:
+
+To get the latest stable version, pull the master branch from Gitlab:
+~~~ 
+pip install git+https://gitlab.com/Pierre_VF/senasopt.git@master
+~~~ 
+
+To get the latest developments (can be unstable), pull the Development branch from Gitlab:
+~~~ 
+pip install git+https://gitlab.com/Pierre_VF/senasopt.git@Development
+~~~ 
+
+## Examples and documentation
+
+You can find a documentation and code samples in Jupyter notebooks in the *examples* folder.
+
+The installation process for the API keys is provided in these notebooks where relevant.
+
+## Note to users and developers
+This repository is currently developed as a hobby project. But if you're interested in contributing, this is very welcome.
+
+At the moment, the documentation is very unevenly advanced, help there is also appreciated.
+
+The style format used for development is [Black](https://pypi.org/project/black/), if you contribute, it would be nice if you remember to apply it to your code before committing.

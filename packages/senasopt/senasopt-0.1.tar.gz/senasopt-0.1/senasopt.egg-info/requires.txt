@@ -1,0 +1,6 @@
+casadi
+dash
+numpy
+pandas
+plotly
+xlrd

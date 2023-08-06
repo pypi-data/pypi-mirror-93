@@ -1,0 +1,38 @@
+import setuptools
+
+setuptools.setup(
+    name="senasopt",
+    version="0.1",
+    author="PVF",
+    author_email="pvf@dtime.ai",
+    description="Simple Energy Asset Optimisation (aka. senasopt) - A small example package trying out optimisation of energy-related assets",
+    long_description=open("README.md", "r").read(),
+    long_description_content_type="text/markdown",
+    url="https://gitlab.com/Pierre_VF/senasopt",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires=">=3.6",
+    requires=[
+        "casadi",
+        "dash",
+        "numpy",
+        "pandas",
+        "plotly",
+        "setuptools",
+        "xlrd",
+    ],
+    install_requires=[
+        "casadi",
+        "dash",
+        "numpy",
+        "pandas",
+        "plotly",
+        "xlrd",
+    ],
+)
+
+# More details on how to set this up: https://setuptools.readthedocs.io/en/latest/userguide/dependency_management.html
