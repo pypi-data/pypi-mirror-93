@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+predictnow_client.egg-info/PKG-INFO
+predictnow_client.egg-info/SOURCES.txt
+predictnow_client.egg-info/dependency_links.txt
+predictnow_client.egg-info/requires.txt
+predictnow_client.egg-info/top_level.txt

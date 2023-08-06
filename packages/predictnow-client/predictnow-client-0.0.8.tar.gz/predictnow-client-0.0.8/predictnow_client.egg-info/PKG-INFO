@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: predictnow-client
+Version: 0.0.8
+Summary: A restful client library, designed to access predictnow restful api.
+Home-page: UNKNOWN
+Author: Radu Ciobanu
+Author-email: radu@predictnow.ai
+License: BSD
+Description: Usage:
+        =================================
+        
+        from predictnow.pdapi import PredictNowClient
+        import pandas as pd
+        api_key = "%KeyProvidedToEachOfOurSubscriber"  
+        
+        api_host = "http://%VMIP%"  # current makeshift api host
+        username = "helloWorld"
+        email = "helloWorld@yourmail.com"
+        
+        client = PredictNowClient(api_host,api_key)
+        
+         # You will need to edit this input dataset file path and labelname!
+        
+        file_path = 'my_amazing_features.xlsx'
+        labelname = 'Next_day_strategy_return'
+        import os
+        
+        
+          # For classification problems
+        
+        params = {'timeseries': 'yes', 'type': 'classification',  'feature_selection': 'shap', 'analysis': 'none', 'boost': 'gbdt',  'testsize': '0.2', 'weights': 'no', 'eda': 'yes', 'prob_calib': 'no', 'mode': 'train'}
+        
+          # For regression problems, suitable for CPO
+        
+        params = {'timeseries': 'yes', 'type': 'regression',   'feature_selection': 'none', 'analysis': 'none', 'boost': 'gbdt', 'testsize': '0.2', 'weights': 'no', 'eda': 'yes', 'prob_calib': 'no', 'mode': 'train'}
+        
+        response = client.create_model( username=username,
+            model_name="test1",
+            params=params
+          )
+          
+          
+        
+        
+        
+        from pandas import read_excel
+        df = read_excel(file_path, engine="openpyxl")  # Same here
+        df.name = "testdataframe"  # Optional, but recommended
+        
+        ########## TRAIN MODE ###################################
+        response = client.train(
+        	model_name="test1",
+        	input_df=df,
+        	label=labelname,
+        	username=username,
+        	email=email)
+        
+        
+        status = client.getstatus(
+                username=username,
+            train_id=response["train_id"]
+        )
+        
+        
+        if status["state"] == "COMPLETED":
+        
+        	response = client.getresult(
+        	model_name="test1",
+        	username=username,
+        	)
+        	predicted_targets_cv = pd.read_json(response.predicted_targets_cv)
+        	print("predicted_targets_cv")
+        	print(predicted_targets_cv)
+        
+        	predicted_targets_test = pd.read_json(response.predicted_targets_test)
+        	print("predicted_targets_test")
+        	print(predicted_targets_test)
+        
+        	if response.feature_importance:
+        		feature_importance = pd.read_json(response.feature_importance)
+        		print("feature_importance")
+        		print(feature_importance)
+        
+        
+        	performance_metrics = pd.read_json(response.performance_metrics)
+        	print("performance_metrics")
+        	print(performance_metrics)
+        
+        ########## LIVE MODE ###################################
+        if status["state"] == "COMPLETED":
+        	df = read_csv("example_input_live.csv") # live input data
+        	df.name = "myfirstpredictname"  # optional, but recommended
+              # Making live predictions
+        	response = client.predict(
+        	model_name="test1",
+        	input_df=df,username=username,
+        	eda="yes",
+        	prob_calib=params["prob_calib"],
+        	)
+        	y_pred = pd.read_json(response.labels)
+        	print("THE LABELS")
+        	print(y_pred)
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
