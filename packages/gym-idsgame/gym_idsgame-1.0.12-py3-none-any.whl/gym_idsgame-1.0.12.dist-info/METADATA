@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: gym-idsgame
+Version: 1.0.12
+Summary: An Abstract Cyber Security Simulation and Markov Game for OpenAI Gym
+Home-page: https://github.com/Limmen/gym-idsgame
+Author: Kim Hammar
+Author-email: hammar.kim@gmail.com
+License: MIT License
+Download-URL: https://github.com/Limmen/gym-idsgame/archive/1.0.0.tar.gz
+Keywords: Cyber Security,Intrusion Detection,Markov Games,Reinforcement Learning,Q-learning
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: gym
+Requires-Dist: pyglet
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: tqdm
+Requires-Dist: opencv-python
+Requires-Dist: imageio
+Requires-Dist: jsonpickle
+Requires-Dist: tensorboard
+Requires-Dist: sklearn
+Requires-Dist: stable-baselines3
+Requires-Dist: torchvision
+
+UNKNOWN
+
+
