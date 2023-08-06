@@ -1,0 +1,12 @@
+pandasnet/__init__.py,sha256=72BR2oOE513OELHhn4b7BkBVSySB44q-OdSQMTsMkUg,195
+pandasnet/libs/PandasNet.deps.json,sha256=hmU6SYEMA6Pix5cIi4ziJG5Nl0gmVlvMgoOIAq2lFMM,2259
+pandasnet/libs/PandasNet.dll,sha256=3XAnJyt6WZcaxeev8fQcoWbOhsGGDiZeGCEbeRcN9xw,26112
+pandasnet/libs/PandasNet.pdb,sha256=ebGNdTE9an0vpFDxslG-yAflnA5It062Ibwf1ieFG8w,12428
+tests/libs/LibForTests.deps.json,sha256=xiWVOKBJQBhBNJWfEAhswqzfSpVRgeUvxQtRO4LlDVQ,1346
+tests/libs/LibForTests.dll,sha256=WLhlK12p8PLGTXu0Vk2ckSck1r39GP3-IwW_pZz_3dw,4608
+tests/libs/LibForTests.pdb,sha256=a3HptlQazOPTd57ail4qpqu6LJoKRp__IEfl2JCe-sI,7652
+pandasnet-0.2.dist-info/LICENSE,sha256=sofsQA8MkjTwtfx1doRIvKkUACA_vVTfVVg1X0NH-Bo,1065
+pandasnet-0.2.dist-info/METADATA,sha256=MsguTsAwIPvgNF5Y1FIWUAPtHQRY8TR7lxbARRS2AMo,4808
+pandasnet-0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pandasnet-0.2.dist-info/top_level.txt,sha256=iJkmKYooXOqdxxmAUK4Qqk6iMvENppp_HHCuVjABk-0,10
+pandasnet-0.2.dist-info/RECORD,,
