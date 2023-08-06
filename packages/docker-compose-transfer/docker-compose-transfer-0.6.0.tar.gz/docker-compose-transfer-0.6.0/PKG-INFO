@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: docker-compose-transfer
+Version: 0.6.0
+Summary: Docker compose companion for images save/load
+Home-page: https://github.com/pohmelie/docker-compose-transfer
+Author: pohmelie
+Author-email: multisosnooley@gmail.com
+License: UNKNOWN
+Description: # Docker compose transfer
+        Missed `save`/`load` commands for docker compose.
+        
+        ## Installation
+        ``` bash
+        python -m pip install docker-compose-transfer
+        ```
+        
+        ## Requirements
+        * python 3.5+
+        * docker
+        
+        ## License
+        `docker-compose-transfer` is offered under the WTFPL license.
+        
+        ## Usage
+        
+        ``` bash
+        $ docker-compose-transfer --help
+        usage: docker-compose-transfer [-h] [--version] [--timeout TIMEOUT]
+                                       [--use-service-image-name-as-filename]
+                                       [-f FILE]
+                                       {save,load} ...
+        
+        positional arguments:
+          {save,load}
+        
+        optional arguments:
+          -h, --help            show this help message and exit
+          --version             show version
+          --timeout TIMEOUT     docker connection timeout [default: 60]
+          --use-service-image-name-as-filename
+                                Support legacy naming behavior
+          -f FILE, --file FILE  specify an alternate compose file
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
