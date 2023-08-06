@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ysb_common
+Version: 1.2
+Summary: ysb common
+Home-page: https://markdown.felinae.net
+Author: ysb
+Author-email: 497257761@qq.com
+License: UNKNOWN
+Description: ysb公共类库
+        
+        使用方式:
+        from ysb_common.DateTools import DateToolsCls
+        
+Keywords: django markdown editor editormd
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Apache Software License
+Description-Content-Type: text/markdown
