@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: uqoclient
+Version: 1.0.0
+Summary: Client of the optimisation framework UQO
+Home-page: https://github.com/pypa/sampleproject
+Author: QAR-Lab Munich
+Author-email: Sebastian.Zielinski@ifi.lmu.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Installation
+---
+
+1. Create a new python project on your machine (lets say you named it "my_project")
+2. Clone this repository into you project folder (git clone https://github.com/QAR-Lab/uqclient.git)
+   Your folder structure should look like this now:
+   <pre>
+   my_project/
+       uqclient/
+   </pre>
+
+Now you have two possibilities:
+
+1. [Not recommended, but easy to start with]: Go to uqclient -> main_prototype.py and add your token there, uncomment an example and start
+2. [RECOMMENDED]: Create a main.py in the my_project folder and copy/paste the content of the main_prototype.py inside of the uqclient package to the main.py you just created
+
+   <pre>
+   my_project/
+       uqclient/
+       main.py
+   </pre>
+    With this method you should not modify any files inside the uqclient package. Just copy the code you need to python files YOU create 
+    inside the my_project folder.
+
+# Config
+---
+In order to connect to the UQ servers you need to specify an auth method, auth credentials and the endpoint (server ip + port).
+This is done by creating a config object.
+
+There are two ways of creating a config object:
+
+1. Create the config object directly in the code:
+   ```
+   ip = "UQ-Server IP"
+   token = "your_token"
+   config = Config(method="token", credentials=token, endpoint=ip)
+   ```
+2. Use a config file
+
+   The UQ repository contains a config_prototype.json. Just copy it from the uqclient package somewhere else (e.g. into your project folder), change the token inside the copied config file and create the config object like this:
+   ```
+   config = Config(config_path="Path\to\the\configfile")
+   ```
+
+# FAQ
+---
+### Python Version / Packages
+- Python 3.7
+- Module dimod version 0.8.17
+### Error messages while solving
+
+If you try to solve a problem with UQ you might run into problems. Please consider updating ALL your python packages that are relevant for UQ. After you have done this, verify that your code is correct. If you still encounter problems, you can contact me (sebastian.zielinski@ifi.lmu.de) and I will try to help you with your problem.
+
+
+
