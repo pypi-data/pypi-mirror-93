@@ -1,0 +1,10 @@
+madeira_tools/__init__.py,sha256=-cHO5oOHPuBCll4Noe1fIVjbMIhK_d1gaJJcPlbSlt4,20
+madeira_tools/tools.py,sha256=KJkJ-u-fjOyWjqYHtgT3RXEiDc7--zxFO-jJyLS9Oro,7290
+madeira_tools-0.2.data/scripts/madeira-deploy,sha256=uG6b_omBbC0r61CNcUFvDpgC3GGPhNFWPvFJzikTCIQ,525
+madeira_tools-0.2.data/scripts/madeira-package-layer,sha256=SuIGmi3msiCU9t7rp0wPAnggUa3dcwKqgE_CkRK1caY,1670
+madeira_tools-0.2.data/scripts/madeira-remove,sha256=BM1Ev4J2Kg0DiM5FB3GGXX9PbHPsCVP96Z3VVZkJo6U,525
+madeira_tools-0.2.data/scripts/madeira-run-dev,sha256=goB6f4T7-Pd8vfrJ9k6bz8urVr9wDM4gwRLprvL8sbU,967
+madeira_tools-0.2.dist-info/METADATA,sha256=T4v47CZS-nx_zwrNJvWB1iRN5flGcLsCPr8mXzXlm0A,1502
+madeira_tools-0.2.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+madeira_tools-0.2.dist-info/top_level.txt,sha256=EIrd-Z2R3VtZsDsizH_tPUrtEB2oJ9njE4tcQxRhGD8,14
+madeira_tools-0.2.dist-info/RECORD,,
