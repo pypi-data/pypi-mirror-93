@@ -1,0 +1,33 @@
+[tool.poetry]
+authors = ["ldsands <ldsands@outlook.com>"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+]
+description = "Functions I use regularly with my python projects"
+license = "MIT"
+name = "SandsPythonFunctions"
+packages = [
+  {include = "SandsPythonFunctions", from = "src"},
+]
+readme = "README.md"
+repository = "https://github.com/ldsands/SandsPythonFunctions"
+version = "0.0.1a17"
+
+[tool.poetry.dependencies]
+#python
+python = "^3.9"
+# data file management and manipulation
+numpy = "^1.20.0"
+pandas = "^1.2.1"
+pyarrow = "^3.0.0"
+zstandard = "^0.15.1"
+
+[tool.poetry.dev-dependencies]
+# here you put any packages that would be used in development of the package such as packages used in testing
+black = "^19.10b0"
+flake8 = "^3.8.1"
+isort = "^4.3.21"
+
+[build-system]
+build-backend = "poetry.masonry.api"
+requires = ["poetry>=0.12"]
