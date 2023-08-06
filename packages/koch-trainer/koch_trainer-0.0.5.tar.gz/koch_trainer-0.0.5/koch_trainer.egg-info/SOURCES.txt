@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+koch_trainer/__init__.py
+koch_trainer/koch_trainer.py
+koch_trainer.egg-info/PKG-INFO
+koch_trainer.egg-info/SOURCES.txt
+koch_trainer.egg-info/dependency_links.txt
+koch_trainer.egg-info/entry_points.txt
+koch_trainer.egg-info/requires.txt
+koch_trainer.egg-info/top_level.txt
+koch_trainer/static/callsigns.txt
+koch_trainer/static/english-all.txt
+koch_trainer/static/english-long.txt
+koch_trainer/static/english.txt
