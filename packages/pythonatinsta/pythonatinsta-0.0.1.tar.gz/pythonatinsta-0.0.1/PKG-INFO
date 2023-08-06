@@ -1,0 +1,55 @@
+Metadata-Version: 1.1
+Name: pythonatinsta
+Version: 0.0.1
+Summary: A very basic instagram robot
+Home-page: UNKNOWN
+Author: Nasser B. Al-Ostath
+Author-email: nasser@dotslashhack.io
+License: MIT
+Description: """
+        
+        Author : Eng. Nasser AlOstath
+                 nasser@dotslashhack.io
+        
+        pythonatinstagramtool, is a simple library/bot developed by The CEO of www.dotslashhack.io for educational perposes as an asset code to an article
+        written in arabic for www.pythonat.com that talks about writing and uploading a user built python package to pypi.org
+        so that it can be installed using pip.
+        
+        this library is opensource that yields to the MIT license.
+        
+        for more information, please check www.pythonat.com
+        or
+        www.dotslashhack.io to contact the author
+        
+        this library is build mainly on top of selenium and webdriver-manager
+        
+        the webdriver-manager library is usefull because it will automatically find and download the suitable browser webdriver depending on it's version and OS.
+        
+        
+        NOTE:
+        
+        it is always better to keep you instagram credentials in a separate file and import them here
+        
+        """
+        
+        
+        Change Log
+        ==========
+        
+        0.0.1 (3/2/2021)
+        -------------------
+        - First Release
+        
+Keywords: pythonat
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8

@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+__init__.py
+setup.py
+pythonatinsta.egg-info/PKG-INFO
+pythonatinsta.egg-info/SOURCES.txt
+pythonatinsta.egg-info/dependency_links.txt
+pythonatinsta.egg-info/top_level.txt
