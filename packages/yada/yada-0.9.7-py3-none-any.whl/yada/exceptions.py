@@ -1,0 +1,2 @@
+class YadaImportError(Exception):
+    pass
