@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: py-soap
+Version: 2020.3.2
+Summary: SOAP Schemas Python Data Types library
+Home-page: https://github.com/PurplShip/py-soap
+License: MIT
+Author: Dan Kobina
+Author-email: danielkobina@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: lxml (>=4.6.2,<5.0.0)
+Requires-Dist: six (>=1.15.0,<2.0.0)
+Project-URL: Repository, https://github.com/PurplShip/py-soap
+Description-Content-Type: text/markdown
+
+# python-soap
+
+SOAP Python Data Structure generated from [SOAP Envelope](http://schemas.xmlsoap.org/soap/envelope/) .xml file with [generateDS](http://www.davekuhlman.org/generateDS.html)
+
+## Installation
+
+```bash
+pip install py-soap
+```
+
+
+```python
+from pysoap.envelope import Envelope, Header, Body
+```
+
+*This package is used by the [Purplship Multi-carrier Shipping SDK](https://github.com/PurplShip/purplship)*
+
+## License
+
+This project is licensed under the terms of the `MIT` license.
+Please see [LICENSE.md](/LICENSE) for licensing details.
+
+
+## Authors
+
+- **Daniel K.** | [@DanHK91](https://twitter.com/DanHK91) | [danielk.xyz](https://danielk.xyz/)
+- **Purplship Team** | hello@purplship.com | [purplship.com](https://purplship.com)
