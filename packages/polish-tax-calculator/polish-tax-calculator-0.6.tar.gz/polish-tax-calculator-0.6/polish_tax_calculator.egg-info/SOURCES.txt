@@ -1,0 +1,10 @@
+README.md
+setup.py
+polish_tax_calculator.egg-info/PKG-INFO
+polish_tax_calculator.egg-info/SOURCES.txt
+polish_tax_calculator.egg-info/dependency_links.txt
+polish_tax_calculator.egg-info/entry_points.txt
+polish_tax_calculator.egg-info/requires.txt
+polish_tax_calculator.egg-info/top_level.txt
+ptc/__init__.py
+ptc/ptc.py
