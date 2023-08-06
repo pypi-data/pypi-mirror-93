@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mesa-solutions-utils
+Version: 1.0.0
+Summary: Manages SOAP connection for NAV
+Home-page: https://dev.azure.com/mesa-ngs/_git/nav-soap-manager
+Author: Mesa Natural Gas Solutions, LLC
+Author-email: support@mesangs.com
+License: MIT
+Download-URL: https://dev.azure.com/mesa-ngs/_git/nav-soap-manager
+Keywords: Microsoft Dynamics NAV,SOAP
+Platform: UNKNOWN
+Requires-Dist: zeep
+
+UNKNOWN
+
+
