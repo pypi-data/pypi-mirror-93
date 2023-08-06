@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: logging_logger
+Version: 0.1
+Summary: loggiing in python made easy - receive the log file you like in just one line of code!
+Home-page: https://github.com/payalkutana/logging_logger
+Author: payal kutana
+Author-email: kutanapayal@gmail.com
+License: MIT
+Download-URL: https://github.com/payalkutana/logging_logger/archive/logging_logger_01.tar.gz
+Description: UNKNOWN
+Keywords: logger,logging,logs,easy
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
