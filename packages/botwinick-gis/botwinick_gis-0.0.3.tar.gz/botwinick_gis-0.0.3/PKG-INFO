@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: botwinick_gis
+Version: 0.0.3
+Summary: GIS support package
+Home-page: https://github.com/dbotwinick/python-botwinick-gis
+Author: Drew Botwinick
+Author-email: foss@drewbotwinick.com
+License: UNKNOWN
+Description: # python-botwinick-gis
+        GIS utilities
+        
+        More documentation to come. Intended purpose is to support:
+        - automation of coordinate transformation to/from UTM or Lat/Lon
+        - helper functions for UTM to Lat/Lon and inverse
+        - helper functions for Lat/Lon DMS, arc-seconds, etc.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7, >=3.6
+Description-Content-Type: text/markdown
