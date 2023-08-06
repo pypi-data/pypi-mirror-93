@@ -1,0 +1,9 @@
+dailycovid/__init__.py,sha256=i3ki8eIQ-Veactah22qt4LfuuvsfpkSpEyHpZlTcEAQ,26
+dailycovid/__main__.py,sha256=c4QC3tHUVe67g6c4wl8BxnVUhR4HcKT7NcJ7eS22G3M,69
+dailycovid/american_states.py,sha256=TyqELcVUqLJrtS2eDYN9kk6hFEeRdVkgyl3jUqhtZgg,4427
+dailycovid/covid_plot.py,sha256=9_9WvoV0lEh3NuNWiBVzByN_taKCht07U-a4mrVjPv4,4655
+dailycovid/dailycovid.py,sha256=m0MszLgnk9dyJfaNTWSbpmEjgZ2vumPUv0v-pYgtkmE,9048
+dailycovid-1.2.1.dist-info/entry_points.txt,sha256=eQ1uLmKCioUvhFdkpqE8gZCryt8GBmEWQtIJ22HfqrA,46
+dailycovid-1.2.1.dist-info/WHEEL,sha256=Q99itqWYDhV793oHzqzi24q7L7Kdiz6cb55YDfTXphE,84
+dailycovid-1.2.1.dist-info/METADATA,sha256=IzbiYUfe1n8X0qBV6VNOVW82uTRv1Vy4xr7F1icFnns,1829
+dailycovid-1.2.1.dist-info/RECORD,,
