@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: pulmoscan
+Version: 0.1.4.dev12
+Summary: An example Python project
+Home-page: https://github.com/NandreyN/PulmoAI
+Author: Andrew Naumovich
+Author-email: andrew.naumovich@yandex.ru
+License: Proprietary
+Description: UNKNOWN
+Keywords: python
+Platform: UNKNOWN
+Requires-Python: >=3.6

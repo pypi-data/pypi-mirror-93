@@ -1,0 +1,28 @@
+# https://snarky.ca/what-the-heck-is-pyproject-toml/
+[build-system]
+requires = ["setuptools>=46.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pylint.master]
+ignore=["conf.py"]
+min-public-methods=1
+max-args=7
+
+[tool.pylint.format]
+max-line-length = 250
+disable = "import-error,too-many-lines,too-many-arguments,too-many-function-args,fixme,import-outside-toplevel,len-as-condition,super-with-arguments,raise-missing-from,too-many-ancestors"
+
+[tool.pylint.reports]
+output-format="colorized"
+
+[tool.mypy]
+# Coming soon? https://github.com/python/mypy/issues/5205
+
+[tool.black]
+line-length = 250
+target-version = ["py37"]
+
+[tool.pytest.ini_options]
+addopts = "--cov pulmoscan --cov-branch"
+testpaths = [ "tests" ]
+junit_family = "xunit2"
