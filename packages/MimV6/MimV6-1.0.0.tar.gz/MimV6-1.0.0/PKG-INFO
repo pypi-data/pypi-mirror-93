@@ -1,0 +1,118 @@
+Metadata-Version: 2.1
+Name: MimV6
+Version: 1.0.0
+Summary: This package implement a Man In the Middle attack in IPv6, a IPv6 Sniffer and a Statistic Packet Tool.
+Home-page: https://gitlab.com/ChrisASSR/MimV6/
+Author: gitlab.com@ChrisASSR, gitlab.com@tHz_FireStorm, gitlab.com@lecorrem, gitlab.com@mrbouk
+Author-email: mauricelambert434@gmail.com
+License: UNKNOWN
+Description: # MimV6
+        
+        ## Description
+        This package implement a Man In the Middle attack in IPv6, a IPv6 Sniffer and a Statistic Packet Tool.
+        
+        ## Requirements
+         - Python 3
+         - Librairies standarts
+         - Scapy
+        
+        ## Install
+        ```bash
+        pip install MimV6
+        ```
+        
+        ## Usage
+        Command line:
+        ```bash
+        mimV6
+        mimV6 -h && mimV6 --help
+        mimV6 -H -s -D -d -p -r -i -T "all" -S "save.pcap" -t "all" -v && mimV6 --no-hexa-sniffer --summary-sniffer --details-sniffer --details2-sniffer --python-sniffer --raw-sniffer --info-sniffer --target-sniffer "all" --save-filename-sniffer "save.pcap" --target-spoofer "all" --verbose-spoofer
+        ```
+        To stop it use `Ctrl` + `C`.
+        
+        ## Test
+        To launch test install and use `pytest` like this:
+        ```bash
+        python3 -m pip install pytest
+        pytest
+        ```
+        ## Examples
+        
+        To launch mim attack like the command line in python:
+        ```python
+        from MimV6 import mim_attack
+        
+        mim_attack()
+        ```
+        Use Packet Printer Tool:
+        ```python
+        from MimV6 import PacketPrinter
+        from scapy.all import Ether, IPv6, TCP
+        
+        printer = PacketPrinter()
+        printer.print(Ether()/IPv6()/TCP())
+        ```
+        
+        Use Spoofer Tool:
+        ```python
+        from MimV6 import Spoofer
+        
+        spoofer = Spoofer()
+        spoofer.launcher()
+        ```
+        
+        Use the Packet Statistic Tool:
+        ```python
+        from MimV6 import statistics, PacketStats
+        from scapy.all import Ether, IP, TCP, UDP, IPv6
+        
+        statistics.append(PacketStats(Ether()))
+        statistics.append(PacketStats(Ether()/IP()))
+        statistics.append(PacketStats(Ether()/IP()/TCP()))
+        statistics.append(PacketStats(Ether()/IP()/UDP()))
+        statistics.append(PacketStats(Ether()/IPv6()/TCP()))
+        statistics.append(PacketStats(Ether()/IPv6()/UDP()))
+        statistics.append(PacketStats(Ether()/IPv6()))
+        statistics.append(PacketStats(Ether()))
+        
+        print(f"""
+        UDP: {PacketStats.udp}
+        TCP: {PacketStats.tcp}
+        Other: {PacketStats.other}
+        """)
+        
+        print("Lenght: " + ", ".join([str(pkt.lenght) for pkt in statistics]))
+        ```
+        
+        To use Custom Sniffer and use sniffed packets:
+        
+        ```python
+        from MimV6 import Sniffer, Spoofer, PacketPrinter
+        
+        class CustomAnalysis (Sniffer):
+        	
+        	def __init__ (self):
+        		super().__init__("all", PacketPrinter(), None)
+        
+        	def analysis (self, packet):
+        		print(bytes(packet))
+        
+        attack = Spoofer("all", CustomAnalysis())
+        attack.launcher()
+        ```
+        
+        ## License
+        Licensed under the [GPL, version 3](https://www.gnu.org/licenses/).
+        
+        ## Link
+        [Gitlab Page](https://gitlab.com/ChrisASSR/mim_ipv6_scapy)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
