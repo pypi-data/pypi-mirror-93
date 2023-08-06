@@ -1,0 +1,12 @@
+README.md
+client.py
+const.py
+error.py
+pythf.py
+setup.py
+pythf.egg-info/PKG-INFO
+pythf.egg-info/SOURCES.txt
+pythf.egg-info/dependency_links.txt
+pythf.egg-info/not-zip-safe
+pythf.egg-info/requires.txt
+pythf.egg-info/top_level.txt
