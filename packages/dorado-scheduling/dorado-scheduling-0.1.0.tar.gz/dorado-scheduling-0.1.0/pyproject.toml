@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "dorado-scheduling"
+version = "0.1.0"
+description = "Dorado observation planning and scheduling simulations"
+authors = ["Leo Singer <leo.singer@ligo.org>"]
+license = "NOSA"
+packages = [
+    {include = "dorado"}]
+include = [
+    "dorado/scheduling/data/*.txt",
+    "dorado/scheduling/data/*.md"]
+
+[tool.poetry.dependencies]
+python = "^3.7, <3.9"  # cplex does not yet have wheels built for Python 3.9
+skyfield = "*"
+astropy = "^4.1"
+astroplan = ">=0.7"
+cplex = "*"
+docplex = "*"
+"ligo.skymap" = "^0.5.0"
+healpy = "*"
+seaborn = "*"
+shapely = "*"  # for ligo.skymap.plot.poly.cut_prime_meridian
+numpy = "<1.20.0"  # https://git.ligo.org/lscsoft/lalsuite/-/issues/414
+
+[tool.poetry.dev-dependencies]
+flake8 = "*"
+hypothesis = "*"
+ipykernel = "*"
+pytest = "*"
+
+[tool.poetry.scripts]
+dorado-scheduling = "dorado.scheduling.scripts.main:main"
+dorado-scheduling-animate = "dorado.scheduling.scripts.animate:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

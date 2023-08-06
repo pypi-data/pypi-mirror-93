@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: dorado-scheduling
+Version: 0.1.0
+Summary: Dorado observation planning and scheduling simulations
+License: NOSA
+Author: Leo Singer
+Author-email: leo.singer@ligo.org
+Requires-Python: >=3.7,<3.9
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: astroplan (>=0.7)
+Requires-Dist: astropy (>=4.1,<5.0)
+Requires-Dist: cplex
+Requires-Dist: docplex
+Requires-Dist: healpy
+Requires-Dist: ligo.skymap (>=0.5.0,<0.6.0)
+Requires-Dist: numpy (<1.20.0)
+Requires-Dist: seaborn
+Requires-Dist: shapely
+Requires-Dist: skyfield
