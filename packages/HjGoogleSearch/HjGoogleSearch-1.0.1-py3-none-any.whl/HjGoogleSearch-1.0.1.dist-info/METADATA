@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: HjGoogleSearch
+Version: 1.0.1
+Summary: search google by image and key words
+Home-page: UNKNOWN
+Author: navy
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Database
+Description-Content-Type: text/markdown
+
+## Google search
+### search by image and key words.
+
+- example
+```
+pip install HjGoogleSearch
+```
+```python
+from googleSearch import UploadDataForSbi,ParseGoogleList
+# 以图搜图sbi
+UploadDataForSbi().upload_local_image('filepath')
+UploadDataForSbi().upload_local_image('filepath')
+
+```
+
