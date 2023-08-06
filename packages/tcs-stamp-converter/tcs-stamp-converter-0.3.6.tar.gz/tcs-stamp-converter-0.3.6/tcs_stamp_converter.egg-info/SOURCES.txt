@@ -1,0 +1,15 @@
+README.md
+setup.py
+tcs_stamp_converter.egg-info/PKG-INFO
+tcs_stamp_converter.egg-info/SOURCES.txt
+tcs_stamp_converter.egg-info/dependency_links.txt
+tcs_stamp_converter.egg-info/entry_points.txt
+tcs_stamp_converter.egg-info/requires.txt
+tcs_stamp_converter.egg-info/top_level.txt
+tcsstamp/__init__.py
+tcsstamp/__main__.py
+tcsstamp/__version__.py
+tcsstamp/console.py
+tcsstamp/echo_server.py
+tcsstamp/process.py
+tcsstamp/sock_if.py

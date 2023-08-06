@@ -1,0 +1,4 @@
+[console_scripts]
+echo_server = tcsstamp.echo_server:main
+tcs_stamp = tcsstamp.__main__:main
+
