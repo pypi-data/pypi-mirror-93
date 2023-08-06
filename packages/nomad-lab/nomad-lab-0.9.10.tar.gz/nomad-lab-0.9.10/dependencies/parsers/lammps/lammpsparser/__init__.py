@@ -1,0 +1,1 @@
+from lammpsparser.lammps_parser import LammpsParser

@@ -1,0 +1,93 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>NOMAD Encyclopedia</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet"> <!-- Arimo:400,400i,700 -->
+  <link rel="stylesheet"  href="css/styles.css"/>
+
+  <script defer src="conf.js"></script>
+  <script defer src="keycloak.min.js"></script>
+  <script defer src="lib/3d-viewers/three.min.js"></script>
+  <script defer src="lib/3d-viewers/orthographiccontrols.js"></script>
+  <script defer src="lib/3d-viewers/matviewer.min.js"></script>
+  <script defer type="text/javascript" src="bundle.js" charset="utf-8"></script>
+
+</head>
+
+<body>
+
+  <div id="info-tooltip" style="position:absolute; display: none">
+    <div id="tooltip-triangle" >
+      <img src="img/corner.png" style="margin-bottom: -1px"/>
+    </div>
+    <div id="tooltip-content" ></div>
+  </div>
+
+  <div id="loading-popup" style="position:absolute;
+    visibility: hidden">
+    <img src="img/loading_animation.gif"
+      width="40px" style="margin-bottom: -6px" /> Loading
+  </div>
+
+  <div id="calc-flagging-tab"
+    style="position:absolute;  visibility: hidden; ">
+    Report error
+  </div>
+
+  <div id="flagging-form-popup-bg"
+    style="position:absolute; visibility: hidden; ">
+  </div>
+  <div id="flagging-form-popup" style="position:absolute;
+      visibility: hidden; ">
+  </div>
+
+
+  <header>
+
+    <div id="logo-header" >
+      <div "logo-panel">
+        <a href="https://nomad-lab.eu/"  target="_blank">
+        <img src="img/nomad-logo.png" style="margin-right: 1rem">
+          The NOMAD Laboratory
+        </a>
+      </div>
+      <div id="spacer"></div>
+      <div id="auth-panel">
+        <span style="vertical-align: middle;">
+          <span id="auth-user">
+            <span id="user-name"></span>
+            <span id="login-button" style="display: none; text-decoration: underline; cursor: pointer">(LOGIN)</span>
+            <span id="logout-button" style="display: none; text-decoration: underline; cursor: pointer">(LOGOUT)</span>
+          </span>
+        </span>
+        <img  src="img/user.png" />
+      </div>
+    </div>
+   </header>
+
+   <div id="second-header">
+     <div style="float: left; width: 60%;">
+       <a href=""> <img  src="img/NOMADEncyclopedia.png"  /></a>
+     </div>
+
+     <div style="float: right; width: 30%;text-align: right">
+       <div id="info-sys-switch-box" >
+         Additional information &nbsp;
+         <!--<input id="info-sys-switch" type="checkbox"  />-->
+       </div>
+    </div>
+    <div style="clear: both;"></div>
+   </div>
+
+   <div id="breadcrumb-placeholder" ></div>
+
+  <div id="content">
+  </div>
+
+</body>
+</html>
