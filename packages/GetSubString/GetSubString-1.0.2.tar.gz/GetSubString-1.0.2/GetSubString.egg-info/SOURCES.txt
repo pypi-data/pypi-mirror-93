@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+GetSubString.egg-info/PKG-INFO
+GetSubString.egg-info/SOURCES.txt
+GetSubString.egg-info/dependency_links.txt
+GetSubString.egg-info/entry_points.txt
+GetSubString.egg-info/not-zip-safe
+GetSubString.egg-info/top_level.txt
+getsubstr/VERSION
+getsubstr/__init__.py
+getsubstr/main.py
+getsubstr/setuptools.py
