@@ -1,0 +1,11 @@
+LICENSE
+README.rst
+setup.cfg
+setup.py
+BLE_GATT/__init__.py
+BLE_GATT/central.py
+BLE_GATT.egg-info/PKG-INFO
+BLE_GATT.egg-info/SOURCES.txt
+BLE_GATT.egg-info/dependency_links.txt
+BLE_GATT.egg-info/requires.txt
+BLE_GATT.egg-info/top_level.txt
