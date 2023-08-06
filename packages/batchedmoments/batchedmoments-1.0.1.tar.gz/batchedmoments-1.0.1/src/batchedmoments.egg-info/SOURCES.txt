@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/batchedmoments/__init__.py
+src/batchedmoments.egg-info/PKG-INFO
+src/batchedmoments.egg-info/SOURCES.txt
+src/batchedmoments.egg-info/dependency_links.txt
+src/batchedmoments.egg-info/requires.txt
+src/batchedmoments.egg-info/top_level.txt
