@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: cml_easy
+Version: 0.1.1
+Summary: Create a terminal command line with just 2 lines of code
+Home-page: https://github.com/dead-zone-termux
+Author: kanish
+Author-email: kanish.ravikumar@gmail.com
+License: MIT
+Description: # To create a terminal command line with a simple code
+        
+        you need to _give asked information_ 
+        then youl be asked for your terminal's orignal _clear_ code
+        ## PLEASE ENJOY
+Keywords: core
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
