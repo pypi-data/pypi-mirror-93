@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: de1
+Version: 0.0.5
+Summary: DE1's curated collection of kedro tools.
+Home-page: https://github.com/dataengineerone/de1-python
+Author: DataEngineerOne
+Author-email: dataengineerone@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: kedro (>=0.16.0)
+
+# de1-kedro
+Curated collection of DE1's favorite kedro pieces.
+
+
