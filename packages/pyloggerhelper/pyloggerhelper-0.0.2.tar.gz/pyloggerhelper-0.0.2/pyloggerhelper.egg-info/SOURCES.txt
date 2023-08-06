@@ -1,0 +1,15 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+pyloggerhelper/__init__.py
+pyloggerhelper/proxy.py
+pyloggerhelper.egg-info/PKG-INFO
+pyloggerhelper.egg-info/SOURCES.txt
+pyloggerhelper.egg-info/dependency_links.txt
+pyloggerhelper.egg-info/not-zip-safe
+pyloggerhelper.egg-info/requires.txt
+pyloggerhelper.egg-info/top_level.txt
