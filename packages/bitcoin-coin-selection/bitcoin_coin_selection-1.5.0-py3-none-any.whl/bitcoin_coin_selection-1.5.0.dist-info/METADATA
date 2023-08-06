@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: bitcoin-coin-selection
+Version: 1.5.0
+Summary: Port of Bitcoin core coin selection logic to Python
+Home-page: https://github.com/Kevingislason/bitcoin_coin_selection
+Author: Kevin Gislason
+Author-email: kevingislason@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# bitcoin_coin_selection
+
+Port of Bitcoin core coin selection logic to Python, prioritizing fidelity to the original and convenience. <br>
+Classes / functions were named and organized per the original C++ code as far as was practicable. Most comments are copied.
+
+# Installation
+
+```pip install bitcoin_coin_selection```
+
+# Usage
+``select_coins`` is the main interface here. See the exmples folder for a step-by-step walkthrough. <br>
+
+# Context
+
+Bitcoin core coin selection logic:<br>
+https://github.com/bitcoin/bitcoin/blob/master/src/wallet/coinselection.cpp<br>
+https://github.com/bitcoin/bitcoin/blob/master/src/wallet/wallet.cpp<br><br>
+
+Erhardt's thesis on coin selection<br>
+https://murch.one/wp-content/uploads/2016/11/erhardt2016coinselection.pdf<br><br>
+
+Explanation of the "OutputGroup" type (privacy enhancement)<br>
+https://github.com/bitcoin/bitcoin/pull/12257<br>
+
+
