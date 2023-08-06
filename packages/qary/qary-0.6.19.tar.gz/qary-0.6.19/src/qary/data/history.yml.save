@@ -1,0 +1,284 @@
+- conversation_manager: qary.clibot
+  reply_confidence: 0.675
+  reply_text: 'I''m going to ask you a few questions about python to set a baseline
+    on your python knowledge.
+
+    This way you can see how much you learn over time.
+
+    So don''t worry if you don''t know the answers, you will soon!
+
+    Ready?'
+  skills:
+  - qary.skills.quiz
+  statement: null
+- conversation_manager: qary.clibot
+  reply_confidence: 0.675
+  reply_text: 'Rate your `python` skill from 0 to 5.
+
+    0 if you''ve never heard of it as a programming language.
+
+    You''d be a 5 if you are an internationally recognized expert who regularly writes
+    blog posts.
+
+    You could also be a 5 if you have written a book about Python.
+
+    Another example of a 5 would be someone who has been the lead developer on a production
+    python app for more than 1000 users.
+
+    You''d be a 3 if you have created a github or gitlab repository with some python
+    code that you''ve written from scratch yourself.
+
+    You''d also be a 3 if you have a reputation of 1000 or more on Stack Exchange.
+
+    You''d also be a 3 if you''ve ever given a lightning talk about anything python-related.'
+  skills:
+  - qary.skills.quiz
+  statement: 'yes'
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_text: Hello!
+  skills:
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_text: Hello!
+  skills:
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_text: Hello!
+  skills:
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.25
+  reply_text: I'm not sure I understand you fully.
+  skills:
+  - qary.skills.eliza
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.25
+  reply_text: Please go on.
+  skills:
+  - qary.skills.eliza
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.25
+  reply_text: What does that suggest to you ?
+  skills:
+  - qary.skills.eliza
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.0025000000000000005
+  reply_text: I don't understand. That doesn't sound like a question I can answer
+    using my glossary.
+  skills:
+  - qary.skills.glossary
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.0025000000000000005
+  reply_text: I don't understand. That doesn't sound like a question I can answer
+    using my glossary.
+  skills:
+  - qary.skills.glossary
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.0025000000000000005
+  reply_text: I don't understand. That doesn't sound like a question I can answer
+    using my glossary.
+  skills:
+  - qary.skills.glossary
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_text: I am sorry! I don't understand you
+  skills:
+  - qary.skills.parul
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.667
+  reply_text: !!python/tuple
+  - 1.0
+  - Hello!
+  skills:
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.667
+  reply_text: !!python/tuple
+  - 1.0
+  - Hello!
+  skills:
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.667
+  reply_text: !!python/object/new:qary.skills.base.BotReply
+  - 0.5
+  - I'm not sure I understand you fully.
+  - qary.skills.eliza
+  - null
+  skills:
+  - qary.skills.eliza
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.667
+  reply_text: !!python/object/new:qary.skills.base.BotReply
+  - 0.5
+  - Please go on.
+  - qary.skills.eliza
+  - null
+  skills:
+  - qary.skills.eliza
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.667
+  reply_text: !!python/object/new:qary.skills.base.BotReply
+  - 0.05
+  - I don't understand. That doesn't sound like a question I can answer using my glossary.
+  - qary.skills.glossary
+  - null
+  skills:
+  - qary.skills.glossary
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.667
+  reply_text: !!python/object/new:qary.skills.base.BotReply
+  - 0.05
+  - I don't understand. That doesn't sound like a question I can answer using my glossary.
+  - qary.skills.glossary
+  - null
+  skills:
+  - qary.skills.glossary
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_text: Hello!
+  skills:
+  - qary.skills.parul
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_text: Hello!
+  skills:
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_text: Hello!
+  skills:
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_text: Hello!
+  skills:
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.5
+  reply_text: I'm not sure I understand you fully.
+  skills:
+  - qary.skills.eliza
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.5
+  reply_text: Please go on.
+  skills:
+  - qary.skills.eliza
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.5
+  reply_text: What does that suggest to you ?
+  skills:
+  - qary.skills.eliza
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.05
+  reply_text: I don't understand. That doesn't sound like a question I can answer
+    using my glossary.
+  skills:
+  - qary.skills.glossary
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.05
+  reply_text: I don't understand. That doesn't sound like a question I can answer
+    using my glossary.
+  skills:
+  - qary.skills.glossary
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.05
+  reply_text: I don't understand. That doesn't sound like a question I can answer
+    using my glossary.
+  skills:
+  - qary.skills.glossary
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_text: Hello!
+  skills:
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_text: Hello!
+  skills:
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_text: Hello!
+  skills:
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.5
+  reply_text: I'm not sure I understand you fully.
+  skills:
+  - qary.skills.eliza
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.5
+  reply_text: Please go on.
+  skills:
+  - qary.skills.eliza
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.5
+  reply_text: What does that suggest to you ?
+  skills:
+  - qary.skills.eliza
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.05
+  reply_text: I don't understand. That doesn't sound like a question I can answer
+    using my glossary.
+  skills:
+  - qary.skills.glossary
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.05
+  reply_text: I don't understand. That doesn't sound like a question I can answer
+    using my glossary.
+  skills:
+  - qary.skills.glossary
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.05
+  reply_text: I don't understand. That doesn't sound like a question I can answer
+    using my glossary.
+  skills:
+  - qary.skills.glossary
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_text: Hello!
+  skills:
+  - qary.skills.parul
+  - qary.skills.pattern
+  statement: Hi
