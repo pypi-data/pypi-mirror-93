@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: sndfileio
+Version: 1.0.0
+Summary: Common API for reading writing soundfiles
+Home-page: https://github.com/gesellkammer/sndfileio
+Author: Eduardo Moguillansky
+Author-email: eduardo.moguillansky@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.8
