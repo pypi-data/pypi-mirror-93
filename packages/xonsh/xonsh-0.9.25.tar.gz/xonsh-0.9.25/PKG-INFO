@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: xonsh
+Version: 0.9.25
+Summary: Python-powered, cross-platform, Unix-gazing shell
+Home-page: https://github.com/xonsh/xonsh
+Author: Anthony Scopatz
+Author-email: scopatz@gmail.com
+Maintainer: Anthony Scopatz
+License: BSD
+Description: Python-powered, cross-platform, Unix-gazing shell
+Platform: Cross Platform
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Provides-Extra: ptk
+Provides-Extra: pygments
+Provides-Extra: mac
+Provides-Extra: linux
+Provides-Extra: proctitle
+Provides-Extra: zipapp
+Provides-Extra: full
