@@ -1,0 +1,8 @@
+setup.py
+au_adsp/__init__.py
+au_adsp/au_adsp.py
+au_adsp_mpgriff.egg-info/PKG-INFO
+au_adsp_mpgriff.egg-info/SOURCES.txt
+au_adsp_mpgriff.egg-info/dependency_links.txt
+au_adsp_mpgriff.egg-info/requires.txt
+au_adsp_mpgriff.egg-info/top_level.txt
