@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: mx2
+Version: 0.0.7
+Summary: Python library for the RedRobotics MX2 motor controller
+Home-page: https://github.com/RedRobotics/MX2
+Author: Neil Lambeth
+Author-email: neil@redrobotics.co.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# MX2
+**Dual 6 Amp Motor Controller**  
+A stackable add-on board for the Raspberry Pi computer. Use it with or without the [RedBoard+](https://github.com/RedRobotics/RedBoard) robotics controller for independent control of multiple DC brushed motors - up to 6 Amps each.   
+
+
