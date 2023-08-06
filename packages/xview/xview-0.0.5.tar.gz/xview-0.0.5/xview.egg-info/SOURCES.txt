@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+xview/__init__.py
+xview/xview.py
+xview.egg-info/PKG-INFO
+xview.egg-info/SOURCES.txt
+xview.egg-info/dependency_links.txt
+xview.egg-info/requires.txt
+xview.egg-info/top_level.txt
