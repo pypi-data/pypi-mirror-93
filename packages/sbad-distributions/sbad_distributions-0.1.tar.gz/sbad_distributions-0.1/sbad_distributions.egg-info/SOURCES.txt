@@ -1,0 +1,10 @@
+setup.py
+sbad_distributions/Binomialdistribution.py
+sbad_distributions/Gaussiandistribution.py
+sbad_distributions/Generaldistribution.py
+sbad_distributions/__init__.py
+sbad_distributions.egg-info/PKG-INFO
+sbad_distributions.egg-info/SOURCES.txt
+sbad_distributions.egg-info/dependency_links.txt
+sbad_distributions.egg-info/not-zip-safe
+sbad_distributions.egg-info/top_level.txt
