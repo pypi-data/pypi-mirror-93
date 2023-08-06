@@ -1,0 +1,3 @@
+[console_scripts]
+ambibulb = ambibulb.__main__:main
+
