@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "jijmodeling"
+version = "0.5.0"
+description = "QUBO Modeling tool"
+authors = ["Jij Inc."]
+license = "JijCloud License"
+
+[tool.poetry.dependencies]
+python = ">=3.6"
+numpy = "1.19"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
