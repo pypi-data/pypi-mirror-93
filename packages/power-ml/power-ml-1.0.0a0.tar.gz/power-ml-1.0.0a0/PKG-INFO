@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: power-ml
+Version: 1.0.0a0
+Summary: Empowerment Python Machine Learing Stack.
+License: MIT
+Author: Takeru Saito
+Author-email: takelushi@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: boto3 (>=1.16.63,<2.0.0)
+Requires-Dist: joblib (>=1.0.0,<2.0.0)
+Requires-Dist: lightgbm (>=3.1.1,<4.0.0)
+Requires-Dist: numpy (>=1.19.5,<2.0.0)
+Requires-Dist: pandas (>=1.2.1,<2.0.0)
+Requires-Dist: psutil (>=5.8.0,<6.0.0)
+Requires-Dist: scikit-learn (>=0.24.1,<0.25.0)
