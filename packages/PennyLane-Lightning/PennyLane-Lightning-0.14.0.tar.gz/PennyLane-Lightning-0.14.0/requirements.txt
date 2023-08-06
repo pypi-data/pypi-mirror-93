@@ -1,0 +1,7 @@
+flaky
+numpy
+pennylane>=0.12
+pybind11
+pytest
+pytest-cov
+pytest-mock

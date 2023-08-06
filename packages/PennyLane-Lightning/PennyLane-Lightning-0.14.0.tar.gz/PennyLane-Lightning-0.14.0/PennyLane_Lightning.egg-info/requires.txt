@@ -1,0 +1,3 @@
+numpy
+pennylane>=0.12.0
+pybind11
