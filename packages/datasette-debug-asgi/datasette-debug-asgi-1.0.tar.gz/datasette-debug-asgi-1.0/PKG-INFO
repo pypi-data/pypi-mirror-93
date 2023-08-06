@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: datasette-debug-asgi
+Version: 1.0
+Summary: Datasette plugin for dumping out the ASGI scope
+Home-page: https://github.com/simonw/datasette-debug-asgi
+Author: Simon Willison
+License: Apache License, Version 2.0
+Project-URL: Issues, https://github.com/simonw/datasette-debug-asgi/issues
+Project-URL: CI, https://github.com/simonw/datasette-debug-asgi/actions
+Project-URL: Changelog, https://github.com/simonw/datasette-debug-asgi/releases
+Description: # datasette-debug-asgi
+        
+        [![PyPI](https://img.shields.io/pypi/v/datasette-debug-asgi.svg)](https://pypi.org/project/datasette-debug-asgi/)
+        [![Changelog](https://img.shields.io/github/v/release/simonw/datasette-debug-asgi?include_prereleases&label=changelog)](https://github.com/simonw/datasette-debug-asgi/releases)
+        [![Tests](https://github.com/simonw/datasette-debug-asgi/workflows/Test/badge.svg)](https://github.com/simonw/datasette-debug-asgi/actions?query=workflow%3ATest)
+        [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/simonw/datasette-debug-asgi/blob/main/LICENSE)
+        
+        Datasette plugin for dumping out the ASGI scope.
+        
+        Adds a new URL at `/-/asgi-scope` which shows the current ASGI scope. Demo here: https://www.niche-museums.com/-/asgi-scope
+        
+        ## Installation
+        
+            pip install datasette-debug-asgi
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: test
