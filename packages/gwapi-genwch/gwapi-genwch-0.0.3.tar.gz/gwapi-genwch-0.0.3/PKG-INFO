@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: gwapi-genwch
+Version: 0.0.3
+Summary: api functions package
+Home-page: https://github.com/genwch/gwapi
+Author: genwch
+Author-email: 
+License: UNKNOWN
+Description: # api functions
+        
+        This api functions written by python
+        
+        ## Configuration
+        
+        - Setup as **OS environment variable** with **PY\_** prefix
+          - Replace **[]** with your value
+        
+        ```
+        PY_API_HTTP=[https|http]
+        PY_API_HOST=[apihost]
+        PY_API_PORT=[443|80]
+        PY_API_DATA=[/api/v1/data]
+        PY_API_USR=[apiuser]
+        PY_API_PWD=[apipwd]
+        ```
+        
+        - Setup as ./conf/system.json
+          - Replace **[]** with your value
+        
+        ```
+        {
+            "api_http": "[https|http]",
+            "api_host": "[apihost]",
+            "api_port": "[443|80]",
+            "api_data": "[/api/v1/data]",
+            "api_usr": "[apiuser]",
+            "api_pwd": "[apipwd]"
+        }
+        ```
+        
+        ## Dependancies
+        
+        Read more [requirements.txt](./requirements.txt)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
