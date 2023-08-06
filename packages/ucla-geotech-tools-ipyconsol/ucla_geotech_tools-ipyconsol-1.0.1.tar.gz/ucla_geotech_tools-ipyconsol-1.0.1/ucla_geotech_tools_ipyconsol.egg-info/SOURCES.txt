@@ -1,0 +1,8 @@
+setup.py
+ucla_geotech_tools/ipyconsol/ipyconsol.c
+ucla_geotech_tools/ipyconsol/ipyconsol.c
+ucla_geotech_tools_ipyconsol.egg-info/PKG-INFO
+ucla_geotech_tools_ipyconsol.egg-info/SOURCES.txt
+ucla_geotech_tools_ipyconsol.egg-info/dependency_links.txt
+ucla_geotech_tools_ipyconsol.egg-info/namespace_packages.txt
+ucla_geotech_tools_ipyconsol.egg-info/top_level.txt
