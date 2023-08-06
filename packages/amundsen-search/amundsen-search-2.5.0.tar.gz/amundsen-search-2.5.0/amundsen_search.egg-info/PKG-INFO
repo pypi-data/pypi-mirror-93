@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: amundsen-search
+Version: 2.5.0
+Summary: Search Service for Amundsen
+Home-page: https://github.com/amundsen-io/amundsensearchlibrary.git
+Maintainer: Amundsen TSC
+Maintainer-email: amundsen-tsc@lists.lfai.foundation
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
