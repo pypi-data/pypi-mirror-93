@@ -1,0 +1,9 @@
+ERROR.txt
+PACKAGE_NAME
+README.rst
+package_info.py
+setup.py
+nvidia_tlt.egg-info/PKG-INFO
+nvidia_tlt.egg-info/SOURCES.txt
+nvidia_tlt.egg-info/dependency_links.txt
+nvidia_tlt.egg-info/top_level.txt
