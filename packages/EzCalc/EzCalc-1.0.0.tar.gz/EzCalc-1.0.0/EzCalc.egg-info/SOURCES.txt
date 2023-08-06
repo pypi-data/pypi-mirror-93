@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+requirements_test.txt
+setup.cfg
+setup.py
+EzCalc.egg-info/PKG-INFO
+EzCalc.egg-info/SOURCES.txt
+EzCalc.egg-info/dependency_links.txt
+EzCalc.egg-info/top_level.txt
+EzCalc.egg-info/zip-safe
+module/__init__.py
+module/main.py
