@@ -1,0 +1,4 @@
+[console_scripts]
+flowserv = flowserv.client.cli.base:cli_flowserv
+rob = flowserv.client.cli.base:cli_rob
+
