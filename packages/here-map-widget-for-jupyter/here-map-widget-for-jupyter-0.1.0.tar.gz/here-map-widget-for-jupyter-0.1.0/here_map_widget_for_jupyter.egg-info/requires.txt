@@ -1,0 +1,6 @@
+ipywidgets
+branca
+
+[dev]
+black==19.10b0
+isort
