@@ -1,0 +1,12 @@
+README.md
+setup.py
+github_stats_pages/__init__.py
+github_stats_pages/repo_list.py
+github_stats_pages.egg-info/PKG-INFO
+github_stats_pages.egg-info/SOURCES.txt
+github_stats_pages.egg-info/dependency_links.txt
+github_stats_pages.egg-info/requires.txt
+github_stats_pages.egg-info/top_level.txt
+scripts/get_repo_list
+tests/__init__.py
+tests/test_repo_list.py
