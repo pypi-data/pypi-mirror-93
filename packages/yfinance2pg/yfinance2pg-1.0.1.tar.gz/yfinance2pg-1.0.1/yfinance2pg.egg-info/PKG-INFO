@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: yfinance2pg
+Version: 1.0.1
+Summary: Download finance data from yfinance to postgres database
+Home-page: https://github.com/regan-karlewicz/yfinance2pg
+Author: Regan Karlewicz
+Author-email: yfinance2pg@karlewr.net
+License: UNKNOWN
+Description: # yfinance2pg
+        
+        Download financial data to postgres database from yahoo finance.
+        
+        ```txt
+        usage:
+            yfinance2pg [options]
+        
+        options:
+            --help
+                help menu
+            --exclude [value,...]
+                skip download phase, possible list
+                values are `companies` or `priceVolume`
+            --host [string]
+            --user [string]
+            --dbname [string]
+            --port [string]
+            --password [string]
+                postgres connection options
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

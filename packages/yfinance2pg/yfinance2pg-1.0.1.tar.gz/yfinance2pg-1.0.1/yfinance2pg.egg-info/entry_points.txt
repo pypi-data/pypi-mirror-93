@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        yfinance2pg=yfinance2pg.main:main
+    
