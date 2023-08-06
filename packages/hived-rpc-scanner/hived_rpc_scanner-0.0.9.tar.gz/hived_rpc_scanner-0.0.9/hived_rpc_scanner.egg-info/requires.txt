@@ -1,0 +1,4 @@
+prettytable==2.0.0
+httpx
+colored
+progressbar2
