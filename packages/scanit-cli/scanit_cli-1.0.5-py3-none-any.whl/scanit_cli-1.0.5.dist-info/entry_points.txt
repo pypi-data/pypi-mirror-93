@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        scanit=scanit_cli.scanit:main
+    
