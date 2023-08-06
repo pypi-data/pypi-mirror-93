@@ -1,0 +1,13 @@
+README.md
+setup.py
+src/sharkreduce/__init__.py
+src/sharkreduce/__main__.py
+src/sharkreduce/activity.py
+src/sharkreduce/device.py
+src/sharkreduce/flow.py
+src/sharkreduce/packet.py
+src/sharkreduce.egg-info/PKG-INFO
+src/sharkreduce.egg-info/SOURCES.txt
+src/sharkreduce.egg-info/dependency_links.txt
+src/sharkreduce.egg-info/requires.txt
+src/sharkreduce.egg-info/top_level.txt
