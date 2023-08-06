@@ -1,0 +1,15 @@
+glue_geospatial/__init__.py,sha256=XqOWrejTZPlo57o3gs6PNzKIvDfBOFAO5kQBc0R0MFg,290
+glue_geospatial/coordinates.py,sha256=lXLY9ECUl5pTIj1gUQOR4PNhWpylTqJKMdFdyOPj-Rw,1886
+glue_geospatial/data_factory.py,sha256=q2tRGU7n6mAw-dfxrh8rNsR1ST4plfPKrShxaPrvQL0,2010
+glue_geospatial/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+glue_geospatial/tests/test_basic.py,sha256=AW9lqZqNKLkkAoUhONYwlbVNBysnZ3EwG7WW4cxvDYI,567
+glue_geospatial/tests/data/generate.py,sha256=39PcxxgJBUlVyuy9j1cOHVXacvKt2tS34_31gz8-SY0,728
+glue_geospatial/tests/data/plain.tif,sha256=WMIxNDg-L8npG1ZdiiNq6NIpm1rVdn32fmWNongXQ_8,17312
+glue_geospatial/tests/data/simplegeo.tif,sha256=3DmI765fmdy3L6qrCRyLINPmRuAatY2PoaMuhdw5R_Y,3930
+glue_geospatial-0.4.dist-info/LICENSE,sha256=u9pLi8HvNEE1pqLcpe53VyY2nH1HcvbZStPJ5QGMWXM,1504
+glue_geospatial-0.4.dist-info/METADATA,sha256=GS2aaCMZ-d8Cifhfa5EQ3FxvidRqGb8BKlBSDCyTlq4,2216
+glue_geospatial-0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+glue_geospatial-0.4.dist-info/entry_points.txt,sha256=TlpmQRJtZEUB1yPm4ahJa62jYAuXvFrkm7c750kltE4,56
+glue_geospatial-0.4.dist-info/top_level.txt,sha256=XXk-LhftgniGDvi7S5pk9kFVbs63Wd1F7YJ67ByyFcg,16
+glue_geospatial-0.4.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+glue_geospatial-0.4.dist-info/RECORD,,
