@@ -1,0 +1,17 @@
+CHANGES
+=======
+
+0.1.12
+------
+
+* change script name
+* add syslog
+* add tidevice wdaproxy to keep xctest running and relay
+* change CFBundleName to CFBundleExecutable to fit other test ipa
+* little change to pr
+* 优化tidevice中wda路径被写死的bug
+* skip exists when pypi already exists
+* fix missing requirements
+* add -x to tidevice relay
+* fix again
+* fix github yml
