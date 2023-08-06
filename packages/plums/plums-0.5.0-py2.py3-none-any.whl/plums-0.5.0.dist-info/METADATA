@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: plums
+Version: 0.5.0
+Summary: Playground ML Unified Microlib Set: The Playground ML python toolbox package
+Home-page: UNKNOWN
+Author: Airbus DS GEO
+Author-email: jeffaudi.airbus@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: appdirs (==1.4.3)
+Requires-Dist: ordered-set
+Requires-Dist: lark-parser (==0.8.5)
+Requires-Dist: schema
+Requires-Dist: PyYaml
+Requires-Dist: packaging
+Requires-Dist: Pillow (==7.0.0)
+Requires-Dist: colorspacious
+Requires-Dist: geojson
+Requires-Dist: nox
+Provides-Extra: docs
+Requires-Dist: sphinx (~=3.4) ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme (~=0.5) ; extra == 'docs'
+Requires-Dist: recommonmark ; extra == 'docs'
+Provides-Extra: lint
+Requires-Dist: nox ; extra == 'lint'
+Requires-Dist: flake8 ; extra == 'lint'
+Requires-Dist: flake8-docstrings ; extra == 'lint'
+Requires-Dist: pep8-naming ; extra == 'lint'
+Requires-Dist: flake8-mutable ; extra == 'lint'
+Requires-Dist: flake8-eradicate ; extra == 'lint'
+Requires-Dist: flake8-comprehensions ; extra == 'lint'
+Requires-Dist: flake8-import-order ; extra == 'lint'
+Provides-Extra: tests
+Requires-Dist: pytest (==5.4.1) ; extra == 'tests'
+Requires-Dist: pytest-cov (==2.8.1) ; extra == 'tests'
+Requires-Dist: opencv-contrib-python (==4.5.1.48) ; extra == 'tests'
+Requires-Dist: lycon (==0.2.0) ; extra == 'tests'
+Requires-Dist: python-rapidjson (==0.9.1) ; extra == 'tests'
+Requires-Dist: simplejson (==3.17.0) ; extra == 'tests'
+Requires-Dist: orjson (==2.6.2) ; extra == 'tests'
+
+UNKNOWN
+
+
