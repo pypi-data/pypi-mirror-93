@@ -1,0 +1,363 @@
+{
+  "documentVersion": "1.0",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Environment",
+      "extendsEntity": "Entity",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/Environment"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.ODI.logicalReference",
+          "arguments": [
+            {
+              "name": "definedAt",
+              "value": "urn://odi.org/v1-beta/entities/customer/"
+            }
+          ]
+        },
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "logical"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.0"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "explanation": "",
+          "entity": {
+            "entityReference": "BrowserDetails",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "BrowserDetails/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/browserDetails"
+                }
+              ]
+            }
+          ],
+          "name": "browserDetails"
+        },
+        {
+          "name": "operatingSystem",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/operatingSystem"
+                }
+              ]
+            }
+          ],
+          "displayName": "Operating system",
+          "description": "The name of the operating system used when the observation was made. The attribute should not contain any version information such as '10.5.3', but instead contain 'edition' designations such as 'Ultimate' or 'Professional'."
+        },
+        {
+          "name": "operatingSystemVersion",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/operatingSystemVersion"
+                }
+              ]
+            }
+          ],
+          "displayName": "Operating system Version",
+          "description": "The version of the OS running"
+        },
+        {
+          "name": "operatingSystemVendor",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/operatingSystemVendor"
+                }
+              ]
+            }
+          ],
+          "displayName": "Operating System Vendor",
+          "description": "The vendor of the OS running"
+        },
+        {
+          "name": "displayColorDepth",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/displayColorDepth"
+                }
+              ]
+            }
+          ],
+          "displayName": "Display color depth",
+          "description": "The colordepth of the display used when the event was generated"
+        },
+        {
+          "name": "displayViewportHeight",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/displayViewportHeight"
+                }
+              ]
+            }
+          ],
+          "displayName": "DisplayView port height",
+          "description": "The height of the window or viewport of the display used when the event was generated"
+        },
+        {
+          "name": "displayViewPortWidth",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/displayViewPortWidth"
+                }
+              ]
+            }
+          ],
+          "displayName": "DisplayView port width",
+          "description": "The width of the window or viewport of the display used when the event was generated"
+        },
+        {
+          "name": "networkConnectionType",
+          "purpose": "hasA",
+          "dataType": "listLookupString",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/networkConnectionType"
+                }
+              ]
+            }
+          ],
+          "displayName": "Network connection type",
+          "description": "network connection types like dialup, isdn, bisdn, cable, wireless_wifi, mobile, mobile_edge, mobile_3g, mobile_lte, t1, t3, oc3, lan, modem"
+        },
+        {
+          "name": "networkMobileCarrier",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/networkMobileCarrier"
+                }
+              ]
+            }
+          ],
+          "displayName": "Network Mobile Carrier",
+          "description": "The carrier or wireless service provider"
+        },
+        {
+          "name": "ip4Address",
+          "purpose": "hasA",
+          "dataType": "IP4Address",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/ip4Address"
+                }
+              ]
+            }
+          ],
+          "displayName": "IP Address 4",
+          "description": "IP Address"
+        },
+        {
+          "name": "ip6Address",
+          "purpose": "hasA",
+          "dataType": "IP6Address",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/ip6Address"
+                }
+              ]
+            }
+          ],
+          "displayName": "IP Address 6",
+          "description": "IP Address"
+        },
+        {
+          "name": "ipAddressHash",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/ipAddressHash"
+                }
+              ]
+            }
+          ],
+          "displayName": "IP address Hash",
+          "description": "The obfusctaed/hashed version of the IP address"
+        },
+        {
+          "name": "networkDomain",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/networkDomain"
+                }
+              ]
+            }
+          ],
+          "displayName": "Network domain",
+          "description": "The domain of the ISP"
+        },
+        {
+          "name": "networkISP",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/networkISP"
+                }
+              ]
+            }
+          ],
+          "displayName": "Network ISP",
+          "description": "The name of the Internet Service Provider"
+        },
+        {
+          "name": "suspectedVPN",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/suspectedVPN"
+                }
+              ]
+            }
+          ],
+          "displayName": "suspected VPN",
+          "description": "is the session connected through VPN"
+        }
+      ],
+      "displayName": "Environment",
+      "description": "Information about the surrounding situation the event observation occurred, specifically detailing transitory information such as the network or software versions."
+    }
+  ]
+}

@@ -1,0 +1,312 @@
+{
+  "documentVersion": "1.0",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Device",
+      "extendsEntity": "Entity",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/Device"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.ODI.logicalReference",
+          "arguments": [
+            {
+              "name": "definedAt",
+              "value": "urn://odi.org/v1-beta/entities/customer/"
+            }
+          ]
+        },
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "logical"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.0"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "name": "deviceTypeID",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/deviceTypeID"
+                }
+              ]
+            }
+          ],
+          "displayName": "device Type ID",
+          "description": "An identifier for the device. This may be an identifier from Device Atlas or another service that identifies the hardware that is being used."
+        },
+        {
+          "name": "deviceType",
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "odic:DeviceType"
+                  },
+                  {
+                    "name": "defaultList",
+                    "value": {
+                      "entityReference": {
+                        "entityShape": "listLookupWellKnownValues",
+                        "constantValues": [
+                          [
+                            "en",
+                            "Mobile",
+                            "Mobile",
+                            "0",
+                            "Mobile Device Type",
+                            "urn://odi.org/v1-beta/entities/customer/mobile"
+                          ],
+                          [
+                            "en",
+                            "Tablet",
+                            "Tablet",
+                            "1",
+                            "Tablet Device Type",
+                            "urn://odi.org/v1-beta/entities/customer/tablet"
+                          ],
+                          [
+                            "en",
+                            "Desktop",
+                            "Desktop",
+                            "2",
+                            "Desktop Device Type",
+                            "urn://odi.org/v1-beta/entities/customer/desktop"
+                          ],
+                          [
+                            "en",
+                            "E-reader",
+                            "E-reader",
+                            "3",
+                            "E-reader Device Type",
+                            "urn://odi.org/v1-beta/entities/customer/ereader"
+                          ],
+                          [
+                            "en",
+                            "Gaming Console",
+                            "Gaming Console",
+                            "4",
+                            "Gaming Console Type",
+                            "urn://odi.org/v1-beta/entities/customer/gaming"
+                          ],
+                          [
+                            "en",
+                            "Television",
+                            "Television",
+                            "5",
+                            "Television Device Type",
+                            "urn://odi.org/v1-beta/entities/customer/television"
+                          ],
+                          [
+                            "en",
+                            "Set-top Box",
+                            "Set-top Box",
+                            "6",
+                            "Set-top Box Device Type",
+                            "urn://odi.org/v1-beta/entities/customer/settop"
+                          ],
+                          [
+                            "en",
+                            "Media player",
+                            "Media player",
+                            "7",
+                            "Media Device Type",
+                            "urn://odi.org/v1-beta/entities/customer/mediaplayer"
+                          ],
+                          [
+                            "en",
+                            "Computers",
+                            "Computers",
+                            "8",
+                            "Computer Device Type",
+                            "urn://odi.org/v1-beta/entities/customer/computers"
+                          ],
+                          [
+                            "en",
+                            "TV screens",
+                            "TV screens",
+                            "9",
+                            "TV Screen Device Type",
+                            "urn://odi.org/v1-beta/entities/customer/tv screens"
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/deviceType"
+                }
+              ]
+            }
+          ],
+          "displayName": "device Type",
+          "description": "Device Type like mobile, tablet etc"
+        },
+        {
+          "name": "deviceManufacturer",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/deviceManufacturer"
+                }
+              ]
+            }
+          ],
+          "displayName": "device Manufacturer",
+          "description": "The name of the organization who owns the design and creation of the Device. For example, 'Apple' is the manufacturer of the iPhone."
+        },
+        {
+          "name": "deviceModel",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/deviceModel"
+                }
+              ]
+            }
+          ],
+          "displayName": "device Model",
+          "description": "The name of the model for the Device. This is the common, human-readable or marketing name for the Device. The 'iPhone 6S' is a particular model of mobile phone."
+        },
+        {
+          "name": "deviceModelNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/deviceModelNumber"
+                }
+              ]
+            }
+          ],
+          "displayName": "device Model Number",
+          "description": "The unique model number designation assigned by the manufacturer for this Device. Model numbers are not versions, but unique identifiers that identify a particular model configuration. While the model for a particular phone might be 'iPhone 6S' the model number would be 'A1633', or 'A1634' based on configuration at the time of sale."
+        },
+        {
+          "name": "deviceScreenHeight",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/deviceScreenHeight"
+                }
+              ]
+            }
+          ],
+          "displayName": "Screen Height",
+          "description": "The number of veritcal pixels of the device's active display in its default orientation."
+        },
+        {
+          "name": "deviceScreenWidth",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/deviceScreenWidth"
+                }
+              ]
+            }
+          ],
+          "displayName": "device Screen Width",
+          "description": "The number of horizontal pixels of the device's active display in its default orientation."
+        },
+        {
+          "name": "deviceColorDepth",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/deviceColorDepth"
+                }
+              ]
+            }
+          ],
+          "displayName": "Color Depth",
+          "description": "The number of colors the device display is able to represent."
+        }
+      ],
+      "displayName": "Device Entity",
+      "description": "An identified device that is an application or browser instance that is trackable across sessions, normally by cookies"
+    }
+  ]
+}

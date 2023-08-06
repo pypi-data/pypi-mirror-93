@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: commondatamodel-objectmodel
+Version: 1.1.0
+Summary: Common Data Model Object Model library for Python
+Home-page: https://github.com/microsoft/CDM/tree/master/objectModel/Python
+Author: Microsoft
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: adal (==1.2.5)
+Requires-Dist: asn1crypto (==0.24.0)
+Requires-Dist: astroid (==2.2.5)
+Requires-Dist: atomicwrites (==1.3.0)
+Requires-Dist: attrs (==19.1.0)
+Requires-Dist: autopep8 (==1.4.4)
+Requires-Dist: certifi (==2019.6.16)
+Requires-Dist: cffi (==1.12.3)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: colorama (==0.4.3)
+Requires-Dist: cryptography (==3.3.1)
+Requires-Dist: idna (==2.8)
+Requires-Dist: importlib-metadata (==1.0)
+Requires-Dist: isort (==4.3.4)
+Requires-Dist: lazy-object-proxy (==1.3.1)
+Requires-Dist: nest-asyncio (==1.4.3)
+Requires-Dist: mccabe (==0.6.1)
+Requires-Dist: more-itertools (==7.2.0)
+Requires-Dist: mypy (==0.720)
+Requires-Dist: mypy-extensions (==0.4.1)
+Requires-Dist: packaging (==19.1)
+Requires-Dist: pathlib2 (==2.3.4)
+Requires-Dist: pluggy (==0.12.0)
+Requires-Dist: py (==1.8.0)
+Requires-Dist: pycodestyle (==2.5.0)
+Requires-Dist: pycparser (==2.19)
+Requires-Dist: PyJWT (==1.7.1)
+Requires-Dist: pyparsing (==2.4.2)
+Requires-Dist: pytest (==5.0.1)
+Requires-Dist: python-dateutil (==2.8.0)
+Requires-Dist: regex (==2019.8.19)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: rope (==0.14.0)
+Requires-Dist: six (==1.12.0)
+Requires-Dist: typed-ast (==1.4.0)
+Requires-Dist: typing-extensions (==3.7.4)
+Requires-Dist: urllib3 (==1.25.9)
+Requires-Dist: wcwidth (==0.1.7)
+Requires-Dist: wrapt (==1.11.1)
+Requires-Dist: zipp (==0.5.2)
+
+UNKNOWN
+
+

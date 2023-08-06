@@ -1,0 +1,838 @@
+{
+  "documentVersion": "1.1",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "$schema": "../../schema.cdm.json",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.1.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CustomerSalesLine",
+      "extendsEntity": "ODIEntity",
+      "displayName": "Customer Sales Line",
+      "description": "Individual line items associated with a Customer Sales Header transaction",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/CustomerSalesLine"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.1"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "purpose": "hasA",
+          "dataType": "integer",
+          "name": "LineNumber",
+          "displayName": "Line Number",
+          "description": "Line number of this item within the CustomerSalesHeader transaction",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/lineNumber"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "customerSalesLineProduct",
+          "displayName": "Customer Sales Line Product",
+          "description": "The Product associated with this sales line",
+          "entity": {
+            "entityReference": "Product",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Product/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/customerSalesLineProduct"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "name": "customerSalesLinePlacementDate",
+          "displayName": "Placement Date",
+          "description": "Placement Date",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.date",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/customerSalesLinePlacementDate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "unitOfMeasure",
+          "displayName": "Unit of Measure",
+          "description": "Unit of measure used to quantify the associated products",
+          "entity": {
+            "entityReference": "UnitOfMeasure",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "UnitOfMeasure/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/unitOfMeasure"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "double",
+          "name": "quantityOrdered",
+          "displayName": "Quantity Ordered",
+          "description": "The quantity (in unitOfMeasure) of Product ordered if this SalesLine item represents an order",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/quantityOrdered"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "double",
+          "name": "quantityInvoiced",
+          "displayName": "Quantity Invoiced",
+          "description": "The quantity (in unitOfMeasure) of Product invoiced if this SalesLine item represents an invoice",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/quantityInvoiced"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "double",
+          "name": "quantityBackordered",
+          "displayName": "Quantity Backordered",
+          "description": "The quantity (in unitOfMeasure) of Product backordered if this SalesLine item represents an backorder",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/quantityBackordered"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "double",
+          "name": "quantityReturned",
+          "displayName": "Quantity Returned",
+          "description": "The quantity (in unitOfMeasure) of Product returned if this SalesLine item represents an return",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/quantityReturned"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "double",
+          "name": "quantityFulfilled",
+          "displayName": "Quantity Fulfilled",
+          "description": "The quantity (in unitOfMeasure) of Product fulfilled if this SalesLine item represents an fulfillment",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/quantityFulfilled"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "double",
+          "name": "quantityCancelled",
+          "displayName": "Quantity Cancelled",
+          "description": "The quantity (in unitOfMeasure) of Product cancelled if this SalesLine item represents an cancellation",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/quantityCancelled"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineCurrentStateCode"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "Unfulfilled",
+                          "UNFULFILLED",
+                          "0",
+                          "The Customer Sales Line Current State Code is 'Unfulfilled'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineCurrentStateCodeUnfulfilled"
+                        ],
+                        [
+                          "en",
+                          "Fulfilled",
+                          "FULFILLED",
+                          "1",
+                          "The Customer Sales Line Current State Code is 'Fulfilled'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineCurrentStateCodeFulfilled"
+                        ],
+                        [
+                          "en",
+                          "Invoiced",
+                          "INVOICED",
+                          "2",
+                          "The Customer Sales Line Current State Code is 'Invoiced'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineCurrentStateCodeInvoiced"
+                        ],
+                        [
+                          "en",
+                          "BackOrdered",
+                          "BACKORDERED",
+                          "3",
+                          "The Customer Sales Line Current State Code is 'BackOrdered'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineCurrentStateCodeBackOrdered"
+                        ],
+                        [
+                          "en",
+                          "Cancelled",
+                          "CANCELLED",
+                          "4",
+                          "The Customer Sales Line Current State Code is 'Cancelled'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineCurrentStateCodeCancelled"
+                        ],
+                        [
+                          "en",
+                          "Returned",
+                          "RETURNED",
+                          "5",
+                          "The Customer Sales Line Current State Code is 'Returned'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineCurrentStateCodeReturned"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "6",
+                          "The Customer Sales Line Current State Code is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineCurrentStateCodeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "7",
+                          "The Current State Code is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineCurrentStateCodeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "currentStateCode",
+          "displayName": "State Code",
+          "description": "State of the line item: unfulfilled, fulfilled, invoiced, backordered, cancelled, returned",
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/currentStateCode"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "name": "currentStateDate",
+          "displayName": "Current State Date",
+          "description": "The effective date for the Current State Code",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.date",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/currentStateDate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "netUnitPrice",
+          "displayName": "Net Unit Price",
+          "description": "Net Unit Price",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/netUnitPrice"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "totalTaxAmount",
+          "displayName": "Total Tax Amount",
+          "description": "Aggregate of all tax types",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/totalTaxAmount"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "customerSalesLineTotalDiscountAmount",
+          "displayName": "Total Discount Amount",
+          "description": "The total discount amount applied to this line item",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/customerSalesLineTotalDiscountAmount"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingStatusCode"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "Not Shipped",
+                          "NOTSHIPPED",
+                          "0",
+                          "The Customer Sales Line Shipping Status Code is 'NotShipped'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingStatusCodeNotShipped"
+                        ],
+                        [
+                          "en",
+                          "Shipped",
+                          "SHIPPED",
+                          "1",
+                          "The Customer Sales Line Shipping Status Code is 'Shipped'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingStatusCodeShipped"
+                        ],
+                        [
+                          "en",
+                          "Undeliverable",
+                          "UNDELIVERABLE",
+                          "2",
+                          "The Customer Sales Line Shipping Status Code is 'Undeliverable'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingStatusCodeUndeliverable"
+                        ],
+                        [
+                          "en",
+                          "Refused",
+                          "REFUSED",
+                          "3",
+                          "The Customer Sales Line Shipping Status Code is 'Refused'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingStatusCodeRefused"
+                        ],
+                        [
+                          "en",
+                          "Delivered",
+                          "DELIVERED",
+                          "4",
+                          "The Customer Sales Line Shipping Status Code is 'Delivered'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingStatusCodeDelivered"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "5",
+                          "The Customer Sales Line Shipping Status Code is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingStatusCodeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "6",
+                          "The Shipping Status Code is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingStatusCodeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "shippingStatusCode",
+          "displayName": "Shipping Status Code",
+          "description": "Shipping status for this line item: not shipped, shipped, undeliverable, refused, delivered",
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/shippingStatusCode"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingType"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "PaperPostal",
+                          "PAPERPOSTAL",
+                          "0",
+                          "The Customer Sales Line Shipping Type is 'PaperPostal'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingTypePaperPostal"
+                        ],
+                        [
+                          "en",
+                          "Electronic",
+                          "ELECTRONIC",
+                          "1",
+                          "The Customer Sales Line Shipping Type is 'Electronic'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingTypeElectronic"
+                        ],
+                        [
+                          "en",
+                          "Both",
+                          "BOTH",
+                          "2",
+                          "The Customer Sales Line Shipping Type is 'Both'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingTypeBoth"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "3",
+                          "The Customer Sales Line Shipping Type is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingTypeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "4",
+                          "The Shipping Type is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingTypeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "shippingType",
+          "displayName": "Shipping Type",
+          "description": "Shipping type: paper/postal, electronic, both",
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/shippingType"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "shippingPostalAddress",
+          "displayName": "Shipping Postal Address",
+          "description": "The Physical Address to use for paper/postal shipping type",
+          "entity": {
+            "entityReference": "PhysicalAddress",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "PhysicalAddress/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/shippingPostalAddress"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          }
+        },
+        {
+          "name": "shippingEmailAddress",
+          "displayName": "Shipping Email Address",
+          "description": "The Email Address to use for electronic shipping type",
+          "entity": {
+            "entityReference": "EmailAddress",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "EmailAddress/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/shippingEmailAddress"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          }
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "name": "estimatedShipDate",
+          "displayName": "Estimated Ship Date",
+          "description": "Estimated ship date",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.date",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/estimatedShipDate"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "name": "promisedShipDate",
+          "displayName": "Promised Ship Date",
+          "description": "Promised ship date",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.date",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/promisedShipDate"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "name": "actualShipDate",
+          "displayName": "Actual Ship Date",
+          "description": "Actual ship date",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.date",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/actualShipDate"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "name": "customerSalesLineCampaign",
+          "displayName": "Campaign",
+          "description": "The Campaign associated with this sales line item",
+          "entity": {
+            "entityReference": "Campaign",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Campaign/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/customerSalesLineCampaign"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          }
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "currencyCode",
+          "displayName": "Currency Code",
+          "description": "The ISO 4217 currency code for currency values given in this line item",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/currencyCode"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

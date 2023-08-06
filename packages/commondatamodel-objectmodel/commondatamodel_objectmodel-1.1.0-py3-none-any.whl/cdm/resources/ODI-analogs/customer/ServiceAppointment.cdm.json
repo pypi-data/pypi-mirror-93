@@ -1,0 +1,454 @@
+{
+  "documentVersion": "1.0",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ServiceAppointment",
+      "extendsEntity": "ODIEntity",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/ServiceAppointment"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.ODI.logicalReference",
+          "arguments": [
+            {
+              "name": "definedAt",
+              "value": "urn://odi.org/v1-beta/entities/customer/"
+            }
+          ]
+        },
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "logical"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.0"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "name": "serviceAppointmentActualDateTimeEnd",
+          "purpose": "hasA",
+          "dataType": "dateTimeOffset",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceAppointmentActualDateTimeEnd"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Actual Date Time End",
+          "description": "The actual end date and time of the service activity. Exists when the activity was closed or canceled."
+        },
+        {
+          "name": "serviceAppointmentActualDateTimeBegin",
+          "purpose": "hasA",
+          "dataType": "dateTimeOffset",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceAppointmentActualDateTimeBegin"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Actual Date Time Begin",
+          "description": "The actual start date and time for the service activity. Exists when the activity was created."
+        },
+        {
+          "name": "serviceAppointmentActualDateTimeUTCOffset",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceAppointmentActualDateTimeUTCOffset"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Actual Date Time UTC Offset",
+          "description": "Actual Date Time UTC Offset"
+        },
+        {
+          "name": "serviceAppointmentCategory",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceAppointmentCategory"
+                }
+              ]
+            }
+          ],
+          "displayName": "Category",
+          "description": "A category to identify the service activity type, such as routine maintenance or service call, to tie the service activity to a business group or function."
+        },
+        {
+          "name": "serviceAppointmentDescription",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceAppointmentDescription"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Description",
+          "description": "Additional information to describe the service activity, such as key talking points or objectives."
+        },
+        {
+          "explanation": "Person who the activity is from.",
+          "entity": {
+            "entityReference": "Person",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Person/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceAppointmentFrom"
+                }
+              ]
+            }
+          ],
+          "name": "serviceAppointmentFrom"
+        },
+        {
+          "name": "serviceAppointmentLocation",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceAppointmentLocation"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Location",
+          "description": "The location where the service activity will take place, such as a conference room, customer office, or other venue."
+        },
+        {
+          "explanation": "Person who organized the activity",
+          "entity": {
+            "entityReference": "Person",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Person/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceAppointmentOrganizer"
+                }
+              ]
+            }
+          ],
+          "name": "serviceAppointmentOrganizer"
+        },
+        {
+          "name": "serviceAppointmentSentDateTime",
+          "purpose": "hasA",
+          "dataType": "dateTimeOffset",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceAppointmentSentDateTime"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Sent Date Time",
+          "description": "Date and time when the activity was sent."
+        },
+        {
+          "explanation": "The service scheduled to be performed during the service activity.",
+          "entity": {
+            "entityReference": "ServiceType",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "ServiceType/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceAppointmentServiceType"
+                }
+              ]
+            }
+          ],
+          "name": "serviceAppointmentServiceType"
+        },
+        {
+          "name": "serviceAppointmentStateCode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceAppointmentStateCode"
+                }
+              ]
+            }
+          ],
+          "displayName": "State Code",
+          "description": "Whether the service activity is open, completed, or canceled"
+        },
+        {
+          "name": "serviceAppointmentStatusCode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceAppointmentStatusCode"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Status Code",
+          "description": "Additional sub-status associated with the State Code"
+        },
+        {
+          "name": "serviceAppointmentSubcategory",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceAppointmentSubcategory"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Subcategory",
+          "description": "A subcategory to identify the service activity type and relate the activity to a specific product, service region, business group, or other function."
+        },
+        {
+          "name": "serviceAppointmentSubject",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceAppointmentSubject"
+                }
+              ]
+            }
+          ],
+          "displayName": "Subject",
+          "description": "A short description about the objective or primary topic of the service activity"
+        },
+        {
+          "name": "serviceAppointmentScheduledDateTimeEnd",
+          "purpose": "hasA",
+          "dataType": "dateTimeOffset",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceAppointmentScheduledDateTimeEnd"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Scheduled Date Time End",
+          "description": "The expected ending date and time."
+        },
+        {
+          "name": "serviceAppointmentScheduledDateTimeBegin",
+          "purpose": "hasA",
+          "dataType": "dateTimeOffset",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceAppointmentScheduledDateTimeBegin"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Scheduled Date Time Begin",
+          "description": "The expected starting date and time."
+        },
+        {
+          "name": "serviceAppointmentScheduledDateTimeUTCOffset",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceAppointmentScheduledDateTimeUTCOffset"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Scheduled Date Time UTC Offset",
+          "description": "Scheduled Date Time UTC Offset"
+        }
+      ],
+      "displayName": "Service Appointment",
+      "description": "Service Appointment for a specific type of Service "
+    }
+  ]
+}

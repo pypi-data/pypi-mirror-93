@@ -1,0 +1,134 @@
+{
+  "documentVersion": "1.0",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Party",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/Party"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.ODI.logicalReference",
+          "arguments": [
+            {
+              "name": "definedAt",
+              "value": "urn://odi.org/v1-beta/entities/customer/"
+            }
+          ]
+        },
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "logical"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.0"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "entity": {
+            "entityReference": "Organization",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Organization/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/OrganizationOption"
+                }
+              ]
+            }
+          ],
+          "name": "OrganizationOption"
+        },
+        {
+          "entity": {
+            "entityReference": "Person",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Person/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/PersonOption"
+                }
+              ]
+            }
+          ],
+          "name": "PersonOption"
+        }
+      ],
+      "displayName": "Party",
+      "description": "A type of entity that can be treated interchangeably as a 'Party', Person and Organization for example."
+    }
+  ]
+}

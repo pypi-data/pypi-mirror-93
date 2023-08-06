@@ -1,0 +1,443 @@
+{
+  "documentVersion": "1.1",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "$schema": "../../schema.cdm.json",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Lead",
+      "extendsEntity": "ODIEntity",
+      "displayName": "Lead",
+      "description": "Prospect or potential sales opportunity. Leads are converted into accounts, contacts, or opportunities when they are qualified. Otherwise, they are deleted or archived..",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/Lead"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.1"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "name": "leadParty",
+          "displayName": "Party",
+          "description": "The associated Party",
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "id",
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "displayName": "PartyID",
+                "description": "The party's identifier",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ]
+              }
+            },
+            "selectsSubAttribute": {
+              "selects": "one",
+              "selectedTypeAttribute": {
+                "name": "idType",
+                "dataType": "entityName",
+                "displayName": "PartyID Type",
+                "description": "The party identifier type",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ]
+              }
+            }
+          },
+          "entity": {
+            "entityReference": "Party"
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/leadParty"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dataType": "boolean",
+          "name": "leadIsDecisionMaker",
+          "displayName": "Is Decision Maker",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/leadIsDecisionMaker"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "leadDescription",
+          "displayName": "Description",
+          "description": "Additional information to describe the Lead, such as an excerpt from the company's website.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/leadDescription"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "leadEstimatedAmount",
+          "displayName": "Estimated Amount",
+          "description": "The estimated revenue value that this lead will generate to assist in sales forecasting and planning.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.currency.revenue",
+            "means.qualification.estimate",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/leadEstimatedAmount"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "name": "leadEstimatedCloseDate",
+          "displayName": "Estimated Close Date",
+          "description": "The expected close date for the lead.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.date",
+            "means.qualification.estimate",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/leadEstimatedCloseDate"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "name": "leadIsInitialCommunication",
+          "displayName": "Is Initial Communication",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/leadIsInitialCommunication"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "leadQuality",
+          "displayName": "Lead Quality",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/leadQuality"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "leadPriorityCode",
+          "displayName": "Priority Code",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/leadPriorityCode"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "leadQualificationComments",
+          "displayName": "Qualification Comments",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/leadQualificationComments"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "name": "qualifyingOpportunity",
+          "displayName": "Qualifying Opportunity",
+          "entity": {
+            "entityReference": "Opportunity",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Opportunity/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/qualifyingOpportunity"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          }
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "revenue",
+          "displayName": "Revenue Amount",
+          "description": "The revenue value that this lead generated.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.currency.revenue",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/revenue"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "name": "leadValidFrom",
+          "displayName": "Valid From",
+          "description": "Starting date time for the range during which the association is valid",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/leadValidFrom"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "name": "leadValidTo",
+          "displayName": "Valid To",
+          "description": "Ending date time for the range during which the association is valid",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/leadValidTo"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer//LeadStateCode"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "Open",
+                          "OPEN",
+                          "0",
+                          "The Lead State Code is 'Open'",
+                          "urn://odi.org/v1-beta/entities/customer/LeadStateCodeOpen"
+                        ],
+                        [
+                          "en",
+                          "Qualified",
+                          "QUALIFIED",
+                          "1",
+                          "The Lead State Code is 'Qualified'",
+                          "urn://odi.org/v1-beta/entities/customer/LeadStateCodeQualified"
+                        ],
+                        [
+                          "en",
+                          "Disqualified",
+                          "DISQUALIFIED",
+                          "2",
+                          "The Lead State Code is 'Disqualified'",
+                          "urn://odi.org/v1-beta/entities/customer/LeadStateCodeDisqualified"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "3",
+                          "The Lead State Code is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/LeadStateCodeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "4",
+                          "The State Code is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/LeadStateCodeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "leadStateCode",
+          "displayName": "State Code",
+          "description": "whether the lead is open, qualified, or disqualified. Qualified and disqualified leads are read-only and can't be edited unless they are reactivated.",
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/leadStateCode"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "currencyCode",
+          "displayName": "Currency Code",
+          "description": "The ISO 4217 currency code for currency values given in this lead",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/currencyCode"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        }
+      ]
+    }
+  ]
+}

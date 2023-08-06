@@ -1,0 +1,295 @@
+{
+  "documentVersion": "1.1",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "$schema": "../../schema.cdm.json",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.1.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "PhoneCall",
+      "extendsEntity": "ODIEntity",
+      "displayName": "PhoneCall",
+      "description": "A phone call type of interaction.",
+      "exhibitsTraits": [
+        "means.ODI.interaction.phoneCall",
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/PhoneCall"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.1"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "name": "phoneCallInteractionEvent",
+          "displayName": "Interaction Event",
+          "description": "Unique identifier of the interaction across all interaction types",
+          "entity": {
+            "entityReference": "InteractionEvent",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "InteractionEvent/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/phoneCallInteractionEvent"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "purpose": "endedOn",
+          "dataType": "dateTime",
+          "name": "phoneCallActualDateTimeEnd",
+          "displayName": "Actual Date Time End",
+          "description": "The actual date and time for when the interaction was completed",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/phoneCallActualDateTimeEnd"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "startedOn",
+          "dataType": "dateTime",
+          "name": "phoneCallActualDateTimeBegin",
+          "displayName": "Actual Date Time Begin",
+          "description": "The actual date and time for when the interaction was started",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/phoneCallActualDateTimeBegin"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "integer",
+          "name": "actualDateTimeUTCOffset",
+          "displayName": "Actual Date Time UTC Offset",
+          "description": "The UTC offset of time values in this PhoneCall",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/actualDateTimeUTCOffset"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "phoneCallDescription",
+          "displayName": "Description",
+          "description": "A description about the objective or primary topic of the interaction.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/phoneCallDescription"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "from",
+          "displayName": "From",
+          "description": "The Person initiating the call",
+          "entity": {
+            "entityReference": "Person",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Person/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/from"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id"
+              }
+            }
+          }
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "name": "leftVoiceMail",
+          "displayName": "Left Voice Mail",
+          "description": "Indicates if a voice mail message was left.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/leftVoiceMail"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "name": "to",
+          "displayName": "To",
+          "description": "the primary recipient of the phone call",
+          "entity": {
+            "entityReference": "Person",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Person/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/to"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "cardinality": "many",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id"
+              }
+            }
+          }
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "phone",
+          "name": "phoneNumberFrom",
+          "displayName": "Phone Number From",
+          "description": "The Phone Number called from.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/phoneNumberFrom"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "phone",
+          "name": "phoneNumberTo",
+          "displayName": "Phone Number To",
+          "description": "The Phone Number called.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/phoneNumberTo"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        }
+      ]
+    }
+  ]
+}

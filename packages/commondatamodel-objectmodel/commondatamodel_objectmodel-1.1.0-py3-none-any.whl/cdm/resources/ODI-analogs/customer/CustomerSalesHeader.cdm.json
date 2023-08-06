@@ -1,0 +1,1055 @@
+{
+  "documentVersion": "1.1",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "$schema": "../../schema.cdm.json",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CustomerSalesHeader",
+      "displayName": "Customer Sales Header",
+      "description": "Customer Sales Header",
+      "extendsEntity": "ODIEntity",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeader"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.1"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "purpose": "hasA",
+          "dataType": "integer",
+          "name": "salesHeaderNumber",
+          "displayName": "Sales Header Number",
+          "description": "Identifier used by the source system",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/salesHeaderNumber"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderType"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "Order",
+                          "ORDER",
+                          "0",
+                          "The Customer Sales Header Type is 'Order'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderTypeOrder"
+                        ],
+                        [
+                          "en",
+                          "Invoice",
+                          "INVOICE",
+                          "1",
+                          "The Customer Sales Header Type is 'Invoice'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderTypeInvoice"
+                        ],
+                        [
+                          "en",
+                          "Return",
+                          "RETURN",
+                          "2",
+                          "The Customer Sales Header Type is 'Return'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderTypeReturn"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "3",
+                          "The Customer Sales Header Type is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderTypeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "4",
+                          "The type is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderTypeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "customerSalesHeaderType",
+          "displayName": "Type",
+          "description": "The type of transaction, Order, Invoice, Return",
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/customerSalesHeaderType"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "name": "customerSalesHeaderPlacementDate",
+          "displayName": "Placement Date",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.date",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/customerSalesHeaderPlacementDate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "customer",
+          "displayName": "Customer",
+          "description": "The Customer of this transaction",
+          "entity": {
+            "entityReference": "Customer",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Customer/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/customer"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderStateCode"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "Active",
+                          "ACTIVE",
+                          "0",
+                          "The Customer Sales Header State Code is 'Active'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderStateCodeActive"
+                        ],
+                        [
+                          "en",
+                          "Submitted",
+                          "SUBMITTED",
+                          "1",
+                          "The Customer Sales Header State Code is 'Submitted'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderStateCodeSubmitted"
+                        ],
+                        [
+                          "en",
+                          "Cancelled",
+                          "CANCELLED",
+                          "2",
+                          "The Customer Sales Header State Code is 'Cancelled'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderStateCodeCancelled"
+                        ],
+                        [
+                          "en",
+                          "Fulfilled",
+                          "FULFILLED",
+                          "3",
+                          "The Customer Sales Header State Code is 'Fulfilled'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderStateCodeFulfilled"
+                        ],
+                        [
+                          "en",
+                          "Closed",
+                          "CLOSED",
+                          "4",
+                          "The Customer Sales Header State Code is 'Closed'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderStateCodeClosed"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "5",
+                          "The Customer Sales Header State Code is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderStateCodeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "6",
+                          "The StateCode is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderStateCodeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "customerSalesHeaderStateCode",
+          "displayName": "State Code",
+          "description": "State of the transaction: active, cancelled, closed",
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/customerSalesHeaderStateCode"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderStatusCode"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "InProgress",
+                          "INPROGRESS",
+                          "0",
+                          "The Customer Sales Header Status Code is known but is 'InProgress'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderStatusCodeInProgress"
+                        ],
+                        [
+                          "en",
+                          "NoMoney",
+                          "NOMONEY",
+                          "1",
+                          "The Customer Sales Header Status Code is known but is 'NoMoney'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderStatusCodeNoMoney"
+                        ],
+                        [
+                          "en",
+                          "New",
+                          "NEW",
+                          "2",
+                          "The Customer Sales Header Status Code is known but is 'New'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderStatusCodeNew"
+                        ],
+                        [
+                          "en",
+                          "Pending",
+                          "PENDING",
+                          "3",
+                          "The Customer Sales Header Status Code is known but is 'Pending'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderStatusCodePending"
+                        ],
+                        [
+                          "en",
+                          "Complete",
+                          "COMPLETE",
+                          "4",
+                          "The Customer Sales Header Status Code is known but is 'Complete'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderStatusCodeComplete"
+                        ],
+                        [
+                          "en",
+                          "Partial",
+                          "PARTIAL",
+                          "5",
+                          "The Customer Sales Header Status Code is known but is 'Partial'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderStatusCodePartial"
+                        ],
+                        [
+                          "en",
+                          "Invoiced",
+                          "INVOICED",
+                          "6",
+                          "The Customer Sales Header Status Code is known but is 'Invoiced'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderStatusCodeInvoiced"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "7",
+                          "The Customer Sales Header Status Code is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderStatusCodeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "8",
+                          "The Status Code is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderStatusCodeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "customerSalesHeaderStatusCode",
+          "displayName": "Status Code",
+          "description": "further information about the status of this transaction",
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/customerSalesHeaderStatusCode"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "customerPrimaryContactId",
+          "displayName": "Primary Contact",
+          "description": "The primary Person associated with this customer of this transaction",
+          "entity": {
+            "entityReference": "Person",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Person/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/customerPrimaryContactId"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          }
+        },
+        {
+          "name": "salesPerson",
+          "displayName": "Sales Person",
+          "description": "The sales person",
+          "entity": {
+            "entityReference": "Person",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Person/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/salesPerson"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          }
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderOriginationChannelType"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "WebPage",
+                          "WEBPAGE",
+                          "0",
+                          "The Customer Sales Header Origination Channel Type is 'WebPage'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderOriginationChannelTypeWebPage"
+                        ],
+                        [
+                          "en",
+                          "StoreFront",
+                          "STOREFRONT",
+                          "1",
+                          "The Customer Sales Header Origination Channel Type is 'StoreFront'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderOriginationChannelTypeStoreFront"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "2",
+                          "The Customer Sales Header Origination Channel Type is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderOriginationChannelTypeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "3",
+                          "The Customer Sales Header Origination Channel Type is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderOriginationChannelTypeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "originationChannelType",
+          "displayName": "Origination Channel Type",
+          "description": "web page, physical storefront",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/originationChannelType"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "originalChannelDetails",
+          "displayName": "Original Channel Details",
+          "description": "Details about the original channel: web url, store location, etc.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/originalChannelDetails"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "customerSalesHeaderDescription",
+          "displayName": "Description",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/customerSalesHeaderDescription"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "name": "isDerived",
+          "displayName": "Is Derived",
+          "description": "True if header was not explicitly sourced",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/isDerived"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderDefaultShippingType"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "PaperPostal",
+                          "PAPERPOSTAL",
+                          "0",
+                          "The Customer Sales Header Default Shipping Type Other is 'PaperPostal'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderDefaultShippingTypePaperPostal"
+                        ],
+                        [
+                          "en",
+                          "Electronic",
+                          "ELECTRONIC",
+                          "1",
+                          "The Customer Sales Header Default Shipping Type Other is 'Electronic'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderDefaultShippingTypeElectronic"
+                        ],
+                        [
+                          "en",
+                          "Both",
+                          "BOTH",
+                          "2",
+                          "The Customer Sales Header Default Shipping Type Other is 'Both'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderDefaultShippingTypeBoth"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "3",
+                          "The Customer Sales Header Default Shipping Type Other is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderDefaultShippingTypeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "4",
+                          "The Default Shipping Type is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesHeaderDefaultShippingTypeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "billingType",
+          "displayName": "Billing Type",
+          "description": "the method of billing: paper/postal, electronic, both",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/billingType"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "billingPostalAddress",
+          "displayName": "Billing Postal Address",
+          "description": "Billing Postal Address",
+          "entity": {
+            "entityReference": "PhysicalAddress",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "PhysicalAddress/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/billingPostalAddress"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          }
+        },
+        {
+          "name": "billingEmailAddress",
+          "displayName": "Billing Email Address",
+          "description": "Billing Email Address",
+          "entity": {
+            "entityReference": "EmailAddress",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "EmailAddress/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/billingEmailAddress"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          }
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingType"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "PaperPostal",
+                          "PAPERPOSTAL",
+                          "0",
+                          "The Customer Sales Line Shipping Type is 'PaperPostal'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingTypePaperPostal"
+                        ],
+                        [
+                          "en",
+                          "Electronic",
+                          "ELECTRONIC",
+                          "1",
+                          "The Customer Sales Line Shipping Type is 'Electronic'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingTypeElectronic"
+                        ],
+                        [
+                          "en",
+                          "Both",
+                          "BOTH",
+                          "2",
+                          "The Customer Sales Line Shipping Type is 'Both'",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingTypeBoth"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "3",
+                          "The Customer Sales Line Shipping Type is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingTypeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "4",
+                          "The Shipping Type is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/CustomerSalesLineShippingTypeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "defaultShippingType",
+          "displayName": "Default Shipping Type",
+          "description": "Default shipping type: paper/postal, electronic, both",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/defaultShippingType"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "defaultShippingPostalAddress",
+          "displayName": "Default Shipping Postal Address",
+          "description": "The Shipping Physical Address to use by default",
+          "entity": {
+            "entityReference": "PhysicalAddress",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "PhysicalAddress/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/defaultShippingPostalAddress"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          }
+        },
+        {
+          "name": "defaultShippingEmailAddress",
+          "displayName": "Default Shipping Email Address",
+          "description": "The Shipping Email Address to use by default",
+          "entity": {
+            "entityReference": "EmailAddress",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "EmailAddress/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/defaultShippingEmailAddress"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          }
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "shippingChargeAmount",
+          "displayName": "Shipping Charge Amount",
+          "description": "Shipping Charge Amount",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/shippingChargeAmount"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "serviceChargeAmount",
+          "displayName": "Service Charge Amount",
+          "description": "Service Charge Amount",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceChargeAmount"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "headerDiscountAmount",
+          "displayName": "Header Discount Amount",
+          "description": "Line item independent discount amount",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/headerDiscountAmount"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "customerSalesHeaderTotalDiscountAmount",
+          "displayName": "Total Discount Amount",
+          "description": "Total transaction discount amount",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.currency.revenue",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/customerSalesHeaderTotalDiscountAmount"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "totalNetSalesAmount",
+          "displayName": "Total Net Sales Amount",
+          "description": "Total Net Sales Amount",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.currency.revenue",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/totalNetSalesAmount"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "currencyCode",
+          "displayName": "Currency Code",
+          "description": "The ISO 4217 currency code for currency values given in this header",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/currencyCode"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,329 @@
+{
+  "documentVersion": "1.0",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "OutboundMessage",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/OutboundMessage"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.ODI.logicalReference",
+          "arguments": [
+            {
+              "name": "definedAt",
+              "value": "urn://odi.org/v1-beta/entities/customer/"
+            }
+          ]
+        },
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "logical"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.0"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "name": "variant",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/variant"
+                }
+              ]
+            }
+          ],
+          "displayName": "Content variant attribute",
+          "description": "A campaign activity can have multiple variants e.g. Multilingual (translated variants for the same content) or A/B testing (different content to test what works better) but a message delivered to a recipient always contains one of them.\n> IMPORTANT: In case of multilingual, the mirror page, the recipient can switch from one variant to another (ex: switch of the language)."
+        },
+        {
+          "name": "seedMember",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/seedMember"
+                }
+              ]
+            }
+          ],
+          "displayName": "Seed member attribute",
+          "description": "The recipient of this message is a member of a seed list for this campaign activity. Seed addresses are used to include recipients who do not match the defined target criteria. Seed members could be your marketing team or other stakeholders who are interested in tracking/measuring the quality of the campaign. SeedMembers get the actual message, at the same time with regular recipients, even when the seedMember does not qualify to be a regular recipient."
+        },
+        {
+          "name": "quarantine",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/quarantine"
+                }
+              ]
+            }
+          ],
+          "displayName": "Quarantine attribute",
+          "description": "Address moved to quarantine. The quarantine is set to `true` when the message failed to deliver in a way that indicates that no future messages will be deliverable either to this address."
+        },
+        {
+          "name": "proofMember",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/proofMember"
+                }
+              ]
+            }
+          ],
+          "displayName": "Proof member attribute",
+          "description": "The recipient of this message is a member of the proof group for this campaign activity. The proof is a special message that lets you test a delivery before sending to the main target. Proof recipients are responsible for approving both the form and content of the message. It is a pre-delivery target."
+        },
+        {
+          "name": "controlGroupMember",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/controlGroupMember"
+                }
+              ]
+            }
+          ],
+          "displayName": "Control group member attribute",
+          "description": "The recipient of this message is a member of a control group for this campaign activity. A control group is a population which will not receive the delivery; it is used to track post-delivery behavior and campaign impact by making a comparison between the control group (or hold out group) with the behavior of target population, which has received the delivery."
+        },
+        {
+          "name": "testMember",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/testMember"
+                }
+              ]
+            }
+          ],
+          "displayName": "A/B Test Member attribute",
+          "description": "The recipient of this message is a member of a test group for this campaign activity. This is primarily used for identifying the initial population of an A/B Test. After sending different variants to the testMembers, the winner Variant is decided to be sent to the remaining population based on behavioral changes in testMembers."
+        },
+        {
+          "name": "size",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/size"
+                }
+              ]
+            }
+          ],
+          "displayName": "Size (Bytes) attribute",
+          "description": "Size in bytes of the message. *For , the size reflects the all MIME envelope of the message, including the encoded attachments if any.* For SMS, the size reflects the number of bytes necessary to deliver the message.If that number is over 160 the message will be delivered over more than one SMS."
+        },
+        {
+          "name": "reason",
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "odic:FailureReasonCode"
+                  },
+                  {
+                    "name": "defaultList",
+                    "value": {
+                      "entityReference": {
+                        "entityShape": "listLookupWellKnownValues",
+                        "constantValues": []
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/reason"
+                }
+              ]
+            }
+          ],
+          "displayName": "Reason attribute",
+          "description": "The reason why the message could/would not be delivered."
+        },
+        {
+          "name": "reasonMessage",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/reasonMessage"
+                }
+              ]
+            }
+          ],
+          "displayName": "Reason Message attribute",
+          "description": "Reason of message delivery failure"
+        },
+        {
+          "name": "outboundIP",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/outboundIP"
+                }
+              ]
+            }
+          ],
+          "displayName": "Outbound IP Address attribute",
+          "description": "Outbound IP address used to deliver the message."
+        },
+        {
+          "name": "externalID",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/externalID"
+                }
+              ]
+            }
+          ],
+          "displayName": "External ID attribute",
+          "description": "An ID generated by the parent activity invoking service to check later if the incoming experienceEvent was generated using this ID."
+        },
+        {
+          "name": "inSegment",
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "odic:Segment"
+                  },
+                  {
+                    "name": "defaultList",
+                    "value": {
+                      "entityReference": {
+                        "entityShape": "listLookupWellKnownValues",
+                        "constantValues": []
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/inSegment"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Segment ID attribute",
+          "description": "A code or ID assigned to the segment population generated by a segmentation workflow. This can identify the population as part of a result set based on a criteria."
+        }
+      ],
+      "displayName": "Outbound Message Entity",
+      "description": "A single message sent to a recipient"
+    }
+  ]
+}

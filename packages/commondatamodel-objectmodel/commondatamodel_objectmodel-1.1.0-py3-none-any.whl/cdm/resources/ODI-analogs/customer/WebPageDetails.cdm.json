@@ -1,0 +1,266 @@
+{
+  "documentVersion": "1.0",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "WebPageDetails",
+      "extendsEntity": "Entity",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/WebPageDetails"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.ODI.logicalReference",
+          "arguments": [
+            {
+              "name": "definedAt",
+              "value": "urn://odi.org/v1-beta/entities/customer/"
+            }
+          ]
+        },
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "logical"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.0"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "name": "webSiteSection",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/webSiteSection"
+                }
+              ]
+            }
+          ],
+          "displayName": "webSite Section",
+          "description": "The normative name of the site section where this web page resides, which may be used to classify or categorize the interaction"
+        },
+        {
+          "name": "webPageName",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/webPageName"
+                }
+              ]
+            }
+          ],
+          "displayName": "webPage Name",
+          "description": "The normative name of the web page. This name is not necessarily the page title or directy associate with page content, but is used to organize a site's pages for classification purposes"
+        },
+        {
+          "name": "webPageUrl",
+          "purpose": "hasA",
+          "dataType": "uri",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/webPageUrl"
+                }
+              ]
+            }
+          ],
+          "displayName": "webPage Url",
+          "description": "The normative or usual URL of the web page.  This may or may not be the actual URL used to reach the page, which would be recorded using `Web Link`."
+        },
+        {
+          "name": "webServer",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/webServer"
+                }
+              ]
+            }
+          ],
+          "displayName": "webServer",
+          "description": "The normative or usual server that hosts the web page.  This may or may not be the host or server that actually served the page interaction, but is used for classification purposes."
+        },
+        {
+          "name": "webIsErrorPage",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/webIsErrorPage"
+                }
+              ]
+            }
+          ],
+          "displayName": "web Is ErrorPage",
+          "description": "Flag that indicate if the page is error page or not.  Error here is defined by the application, and may nor may not correspond to a page served with an HTTP error code.  This flag is used to broadly categorize web interactions."
+        },
+        {
+          "name": "webIsHomePage",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/webIsHomePage"
+                }
+              ]
+            }
+          ],
+          "displayName": "web Is HomePage",
+          "description": "Flag that indicate if the page is the site home page or not.  The definition of home page is determined by the application, but is commonly used to designate a top level landing page or common site entry point.  This flag is used to broadly categorize web interactions."
+        },
+        {
+          "name": "webPageViews",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/webPageViews"
+                }
+              ]
+            }
+          ],
+          "displayName": "webPage Views",
+          "description": "View(s) of a webpage has occurred."
+        },
+        {
+          "name": "webInteractionType",
+          "purpose": "hasA",
+          "dataType": "listLookupString",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/webInteractionType"
+                }
+              ]
+            }
+          ],
+          "displayName": "web Interaction Type attribute",
+          "description": "The link type. like download, exit, other"
+        },
+        {
+          "name": "webInteractionURL",
+          "purpose": "hasA",
+          "dataType": "uri",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/webInteractionURL"
+                }
+              ]
+            }
+          ],
+          "displayName": "web Interaction URL",
+          "description": "The actual link/URL used for this web interaction"
+        },
+        {
+          "name": "webInteractionName",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/webInteractionName"
+                }
+              ]
+            }
+          ],
+          "displayName": "webInteraction Name",
+          "description": "The normative name used for this web link, used for classification purposes"
+        },
+        {
+          "name": "webLinkClicks",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/webLinkClicks"
+                }
+              ]
+            }
+          ],
+          "displayName": "webLink Clicks ",
+          "description": "The web metric link-clicks describes the number of clicks on a link on a web page."
+        }
+      ],
+      "displayName": "Web Page Details Entity",
+      "description": "Details about the web page where the web interaction occurred"
+    }
+  ]
+}

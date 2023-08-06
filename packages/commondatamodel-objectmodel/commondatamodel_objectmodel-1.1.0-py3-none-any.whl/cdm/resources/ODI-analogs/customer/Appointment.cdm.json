@@ -1,0 +1,251 @@
+{
+  "documentVersion": "1.1",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "$schema": "../../schema.cdm.json",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Appointment",
+      "displayName": "Appointment",
+      "description": "An appointment type of interaction.",
+      "extendsEntity": "ODIEntity",
+      "exhibitsTraits": [
+        "means.ODI.interaction.appointment",
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/Appointment"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.1"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "name": "appointmentInteractionEvent",
+          "displayName": "Interaction Event Identity",
+          "description": "Unique identifier of the interaction across all interaction types",
+          "entity": {
+            "entityReference": "InteractionEvent",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "InteractionEvent/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/appointmentInteractionEvent"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "purpose": "endedOn",
+          "dataType": "dateTime",
+          "name": "appointmentActualDateTimeEnd",
+          "displayName": "Actual Date Time End",
+          "description": "The actual date and time for when the interaction was completed",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/appointmentActualDateTimeEnd"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "startedOn",
+          "dataType": "dateTime",
+          "name": "appointmentActualDateTimeBegin",
+          "displayName": "Actual Date Time Begin",
+          "description": "The actual date and time for when the interaction was started",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/appointmentActualDateTimeBegin"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "appointmentBody",
+          "displayName": "Body",
+          "description": "A description about the objective or primary topic of the interaction.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/appointmentBody"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "location",
+          "displayName": "Location",
+          "description": "The location of the interaction.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.location",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/location"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "appointmentSubject",
+          "description": "The subject of the interaction.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/appointmentSubject"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "name": "organizer",
+          "entity": {
+            "entityReference": "Person",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Person/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/organizer"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id"
+              }
+            }
+          }
+        },
+        {
+          "dataType": "dateTime",
+          "name": "appointmentScheduledDateTimeBegin",
+          "displayName": "Scheduled Date Time Begin",
+          "description": "The Scheduled date and time for when the interaction was started",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/appointmentScheduledDateTimeBegin"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dataType": "dateTime",
+          "name": "appointmentScheduledDateTimeEnd",
+          "displayName": "Scheduled Date Time End",
+          "description": "The Scheduled date and time for when the interaction was ended",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/appointmentScheduledDateTimeEnd"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "documentVersion": "1.0",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "WebReferer",
+      "extendsEntity": "Entity",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/WebReferer"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.ODI.logicalReference",
+          "arguments": [
+            {
+              "name": "definedAt",
+              "value": "urn://odi.org/v1-beta/entities/customer/"
+            }
+          ]
+        },
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "logical"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.0"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "name": "webReferrerURL",
+          "purpose": "hasA",
+          "dataType": "uri",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/webReferrerURL"
+                }
+              ]
+            }
+          ],
+          "displayName": "webReferrer URL",
+          "description": "The referrer URL."
+        },
+        {
+          "name": "webReferrerType",
+          "purpose": "hasA",
+          "dataType": "listLookupString",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/webReferrerType"
+                }
+              ]
+            }
+          ],
+          "displayName": "Web referer type",
+          "description": "The referrer type like ..internal, external, search_engine, typed_bookmakr, email, social, unknown, usenet ..etc"
+        }
+      ],
+      "displayName": "Web Referer Entity",
+      "description": "The referrer of a web interaction, which is the URL a visitor came from immediately before the current web interaction was recorded"
+    }
+  ]
+}

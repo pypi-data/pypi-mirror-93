@@ -1,0 +1,280 @@
+{
+  "documentVersion": "1.0",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "MessageDelivery",
+      "extendsEntity": "ODIEntity",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/MessageDelivery"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.ODI.logicalReference",
+          "arguments": [
+            {
+              "name": "definedAt",
+              "value": "urn://odi.org/v1-beta/entities/customer/"
+            }
+          ]
+        },
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "logical"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.0"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "name": "fromAddress",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/fromAddress"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "From attribute",
+          "description": "Address used as a from/sender/caller address. Depending on the communication channel, the `address` has a different format.`email`: an email address. `textMessage` or `phone`: a shortcode or phone number."
+        },
+        {
+          "name": "messageClass",
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "odic:MessageClass"
+                  },
+                  {
+                    "name": "defaultList",
+                    "value": {
+                      "entityReference": {
+                        "entityShape": "listLookupWellKnownValues",
+                        "constantValues": [
+                          [
+                            "en",
+                            "One Time",
+                            "One Time",
+                            "0",
+                            "Marketing (One Time)",
+                            "urn://odi.org/v1-beta/entities/customer/MessageClassOneTime"
+                          ],
+                          [
+                            "en",
+                            "Recurring",
+                            "Recurring",
+                            "1",
+                            "Recurring Message",
+                            "urn://odi.org/v1-beta/entities/customer/MessageClassContinuous"
+                          ],
+                          [
+                            "en",
+                            "Event Based",
+                            "Event Based",
+                            "2",
+                            "Transactional Event-based Message",
+                            "urn://odi.org/v1-beta/entities/customer/MessageClassEventBased"
+                          ],
+                          [
+                            "en",
+                            "Other",
+                            "Other",
+                            "3",
+                            "A known value that is other than allowed by this enum",
+                            "urn://odi.org/v1-beta/entities/customer/MessageClassOther"
+                          ],
+                          [
+                            "en",
+                            "Unknown",
+                            "Unknown",
+                            "4",
+                            "The MessageClass is unknown",
+                            "urn://odi.org/v1-beta/entities/customer/MessageClassUnknown"
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/messageClass"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Message class attribute",
+          "description": "Mode of delivery for the messages sent."
+        },
+        {
+          "explanation": "This is reference to Campaign Entity",
+          "entity": {
+            "entityReference": "Campaign",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Campaign/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/campaign"
+                }
+              ]
+            }
+          ],
+          "name": "campaign"
+        },
+        {
+          "explanation": "The delivery template's ID used to initialize this delivery.The type the template used in Campaign can be identified using the `messageClass`. `messageClass` = `oneTime`: the template is standard delivery template.\n* `messageClass` = `continuous`: the template is a recurring delivery.\n* `messageClass` = `transactional`: the template is a transactional message template.",
+          "entity": {
+            "entityReference": "Template",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Template/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/template"
+                }
+              ]
+            }
+          ],
+          "name": "template"
+        },
+        {
+          "name": "deliveryLabel",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/deliveryLabel"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Delivery Label attribute",
+          "description": "A human-friendly name of the campaign activity which is originating this message."
+        },
+        {
+          "name": "deliveryName",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/deliveryName"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Delivery Internal Name attribute",
+          "description": "A human-friendly identifier of the campaign activity which is originating this message."
+        }
+      ],
+      "displayName": "Message Delivery Entity",
+      "description": "The campaign activity originating a message to a recipient"
+    }
+  ]
+}

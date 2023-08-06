@@ -1,0 +1,209 @@
+{
+  "documentVersion": "1.0",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Commerce",
+      "extendsEntity": "Entity",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/Commerce"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.ODI.logicalReference",
+          "arguments": [
+            {
+              "name": "definedAt",
+              "value": "urn://odi.org/v1-beta/entities/customer/"
+            }
+          ]
+        },
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "logical"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.0"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "name": "cartAbandons",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/cartAbandons"
+                }
+              ]
+            }
+          ],
+          "displayName": "cart Abandons",
+          "description": "Number of cart abandons for which a product list has been identified as no longer purchasable or accessible by the user without the user re-creating the product list from scratch."
+        },
+        {
+          "name": "checkouts",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/checkouts"
+                }
+              ]
+            }
+          ],
+          "displayName": "checkouts",
+          "description": "Number of actions during a checkout process of a product list, there can be more than one checkout event if there are multiple steps in a checkout process. If there are multiple steps the event time information and referenced page or experience is used to identify the step individual events represent in order."
+        },
+        {
+          "name": "productListAdds",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/productListAdds"
+                }
+              ]
+            }
+          ],
+          "displayName": "productList Adds",
+          "description": "The commerce metric productListAdds describes the number of times a product has been added to a product list. The most common case is adding an item to the shopping cart."
+        },
+        {
+          "name": "productListOpens",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/productListOpens"
+                }
+              ]
+            }
+          ],
+          "displayName": "productList Opens",
+          "description": "The commerce metric product-list-opens describes how many new product lists have been created. The most common case is the creation of a new shopping cart by putting the first item into the shopping cart."
+        },
+        {
+          "name": "productListRemovals",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/productListRemovals"
+                }
+              ]
+            }
+          ],
+          "displayName": "productList Removals",
+          "description": "The commerce metric productListRemovals describes the number of times a product has been removed from a product list. The most common use case is the removal of a product from the shopping cart."
+        },
+        {
+          "name": "productViews",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/productViews"
+                }
+              ]
+            }
+          ],
+          "displayName": "product Views",
+          "description": "The commerce metric product-list-views describes how often a product list has been seen by a shopper. The most common use case is to open the shopping cart to inspect its contents."
+        },
+        {
+          "name": "productPurchases",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/productPurchases"
+                }
+              ]
+            }
+          ],
+          "displayName": "product Purchases",
+          "description": "Number of orders has occurred. Purchase is the only required action in a commerce conversion. Purchase must have a product list referenced."
+        },
+        {
+          "name": "saveForLaters",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/saveForLaters"
+                }
+              ]
+            }
+          ],
+          "displayName": "save For Laters ",
+          "description": "The commerce metric saveForLaters describes how often a product has been saved for a later day purchase."
+        }
+      ],
+      "displayName": "Commerce Entity",
+      "description": "Data related to buying and selling activity"
+    }
+  ]
+}

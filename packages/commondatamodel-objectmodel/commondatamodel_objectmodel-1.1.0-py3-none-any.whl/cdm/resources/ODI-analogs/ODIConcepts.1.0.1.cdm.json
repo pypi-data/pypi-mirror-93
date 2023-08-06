@@ -1,0 +1,159 @@
+{
+  "documentVersion": "1.0.1",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "$schema": "../schema.cdm.json",
+  "imports": [
+    {
+      "corpusPath": "/foundations.2.1.1.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "explanation": "Base trait for descriptions of ODI specific properties or ideas.",
+      "traitName": "is.ODI",
+      "extendsTrait": "is"
+    },
+    {
+      "traitName": "is.ODI.entityVersion",
+      "extendsTrait": "is.ODI",
+      "hasParameters": [
+        {
+          "explanation": "semantic version number of the entity",
+          "name": "versionNumber",
+          "required": true,
+          "dataType": "string"
+        }
+      ],
+      "associatedProperties": [
+        "version"
+      ]
+    },
+    {
+      "explanation": "identifies attributes that are a part of the ODI standard",
+      "traitName": "is.ODI.attribute",
+      "extendsTrait": "is.ODI"
+    },
+    {
+      "explanation": "identifies attributes that are reserved to be included in specific ODI entities",
+      "traitName": "is.ODI.attribute.reserved",
+      "extendsTrait": "is.ODI.attribute"
+    },
+    {
+      "explanation": "identifies attributes that are required to be included in specific ODI entities",
+      "traitName": "is.ODI.attribute.required",
+      "extendsTrait": "is.ODI.attribute.reserved"
+    },
+    {
+      "explanation": "identifies entities that are a part of the ODI standard",
+      "traitName": "is.ODI.entity",
+      "extendsTrait": "is.ODI"
+    },
+    {
+      "explanation": "root for ODI semantic meanings",
+      "traitName": "means.ODI",
+      "extendsTrait": "means"
+    },
+    {
+      "explanation": "identifies entities or attributes that are a type of interaction with a party",
+      "traitName": "means.ODI.interaction",
+      "extendsTrait": "means.ODI"
+    },
+    {
+      "explanation": "identifies entities or attributes that are a type of contact or identity of a party",
+      "traitName": "means.ODI.contactPoint",
+      "extendsTrait": "means.ODI"
+    },
+    {
+      "explanation": "identifies appointments",
+      "traitName": "means.ODI.interaction.appointment",
+      "extendsTrait": "means.ODI.interaction"
+    },
+    {
+      "explanation": "identifies email messages",
+      "traitName": "means.ODI.interaction.emailMessage",
+      "extendsTrait": "means.ODI.interaction"
+    },
+    {
+      "explanation": "identifies phone calls",
+      "traitName": "means.ODI.interaction.phoneCall",
+      "extendsTrait": "means.ODI.interaction"
+    },
+    {
+      "explanation": "identifies phone numbers",
+      "traitName": "means.ODI.contactPoint.phoneNumber",
+      "extendsTrait": "means.ODI.contactPoint"
+    },
+    {
+      "explanation": "identifies email addresses",
+      "traitName": "means.ODI.contactPoint.emailAddress",
+      "extendsTrait": "means.ODI.contactPoint"
+    },
+    {
+      "explanation": "identifies physical addresses",
+      "traitName": "means.ODI.contactPoint.physicalAddress",
+      "extendsTrait": "means.ODI.contactPoint"
+    },
+    {
+      "explanation": "identifies objects that are a part of the ODI standard",
+      "traitName": "is.ODI.equivalent",
+      "extendsTrait": "is.ODI",
+      "hasParameters": [
+        {
+          "name": "equivalentOf",
+          "required": true,
+          "dataType": "string"
+        }
+      ]
+    },
+    {
+      "explanation": "identifies entities that are a part of the ODI standard",
+      "traitName": "is.ODI.equivalent.entity",
+      "extendsTrait": "is.ODI.equivalent"
+    },
+    {
+      "explanation": "identifies type attributes that are a part of the ODI standard",
+      "traitName": "is.ODI.equivalent.attribute",
+      "extendsTrait": "is.ODI.equivalent"
+    },
+    {
+      "explanation": "identifies attributes using entities as types that are a part of the ODI standard",
+      "traitName": "is.ODI.equivalent.entityAttribute",
+      "extendsTrait": "is.ODI.equivalent"
+    },
+    {
+      "explanation": "identifies entities created during conversion from odi format",
+      "traitName": "is.ODI.logicalReference",
+      "extendsTrait": "is.ODI",
+      "hasParameters": [
+        {
+          "explanation": "The namespace urn used in an odi.json file to point at the definition location of this tagged entity. This lets us avoid duplicating entities when we create copies of defintions from the same original place.",
+          "name": "definedAt",
+          "required": true,
+          "dataType": "string"
+        }
+      ]
+    },
+    {
+      "explanation": "identifies attributes that contain the entity name for an identifier or labels a fixed entity name value for every identifier in an entity",
+      "traitName": "is.ODI.identity.entity",
+      "extendsTrait": "is.ODI",
+      "hasParameters": [
+        {
+          "name": "fixedValue",
+          "dataType": "string"
+        }
+      ]
+    },
+    {
+      "explanation": "identifies attributes that contain the scope value for an identifier or labels a fixed scope value for every identifier in an entity",
+      "traitName": "is.ODI.identity.scope",
+      "extendsTrait": "is.ODI",
+      "hasParameters": [
+        {
+          "name": "fixedValue",
+          "dataType": "string"
+        }
+      ]
+    }
+  ]
+}

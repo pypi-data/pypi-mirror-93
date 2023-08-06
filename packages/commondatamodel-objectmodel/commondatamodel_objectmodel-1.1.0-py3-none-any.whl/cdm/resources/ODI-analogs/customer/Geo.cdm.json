@@ -1,0 +1,228 @@
+{
+  "documentVersion": "1.0",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Geo",
+      "extendsEntity": "BehavioralEvent",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/Geo"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.ODI.logicalReference",
+          "arguments": [
+            {
+              "name": "definedAt",
+              "value": "urn://odi.org/v1-beta/entities/customer/"
+            }
+          ]
+        },
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "logical"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.0"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "name": "countryCode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/countryCode"
+                }
+              ]
+            }
+          ],
+          "displayName": "country code attribute",
+          "description": "country code of the physical location either captured or derived"
+        },
+        {
+          "name": "stateProvince",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/stateProvince"
+                }
+              ]
+            }
+          ],
+          "displayName": "stateProvince attribute",
+          "description": "state or province name for the physical location either captured or derived"
+        },
+        {
+          "name": "city",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/city"
+                }
+              ]
+            }
+          ],
+          "displayName": "city name attribute",
+          "description": "city name of the physical location either captured or derived "
+        },
+        {
+          "name": "postalCode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/postalCode"
+                }
+              ]
+            }
+          ],
+          "displayName": "postal code attribute",
+          "description": "postal code of the physical location captured or derived"
+        },
+        {
+          "name": "dmaID",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/dmaID"
+                }
+              ]
+            }
+          ],
+          "displayName": "dma ID attribute",
+          "description": "Designated Market Area Identifier"
+        },
+        {
+          "name": "msaID",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/msaID"
+                }
+              ]
+            }
+          ],
+          "displayName": "msaID attribute",
+          "description": "Metropolitan statistical area Identifier"
+        },
+        {
+          "name": "latitude",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/latitude"
+                }
+              ]
+            }
+          ],
+          "displayName": "latitude attribute",
+          "description": "latitude of the physical location captured or derived"
+        },
+        {
+          "name": "longitude",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/longitude"
+                }
+              ]
+            }
+          ],
+          "displayName": "longitude attribute",
+          "description": "longitude of the physical longitude captured or derived"
+        },
+        {
+          "name": "elevation",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/elevation"
+                }
+              ]
+            }
+          ],
+          "displayName": "elevation attribute",
+          "description": "elevation of the physical location captured or derived"
+        }
+      ],
+      "displayName": "geo Entity",
+      "description": "Details of the physical location that an event occurred in either captured directly and derived from other captured attributes"
+    }
+  ]
+}

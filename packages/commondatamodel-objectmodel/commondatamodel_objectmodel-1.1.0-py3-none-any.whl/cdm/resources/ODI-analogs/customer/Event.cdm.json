@@ -1,0 +1,133 @@
+{
+  "documentVersion": "1.0",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Event",
+      "extendsEntity": "ODIEntity",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/Event"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.ODI.logicalReference",
+          "arguments": [
+            {
+              "name": "definedAt",
+              "value": "urn://odi.org/v1-beta/entities/customer/"
+            }
+          ]
+        },
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "logical"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.0"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "name": "eventID",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/eventID"
+                }
+              ]
+            }
+          ],
+          "displayName": "EventID Attribute",
+          "description": "A unique identifer for the event, used for de-duplication"
+        },
+        {
+          "name": "timestamp",
+          "purpose": "hasA",
+          "dataType": "dateTimeOffset",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/timestamp"
+                }
+              ]
+            }
+          ],
+          "displayName": "timestamp Attribute",
+          "description": "The date/time the event was created at the point of origin in UTC"
+        },
+        {
+          "name": "receivedTimestamp",
+          "purpose": "hasA",
+          "dataType": "dateTimeOffset",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/receivedTimestamp"
+                }
+              ]
+            }
+          ],
+          "displayName": "The date/time the event was received at the initial data collection endpoint in UTC",
+          "description": "time when event received by downstream application"
+        },
+        {
+          "name": "eventType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/eventType"
+                }
+              ]
+            }
+          ],
+          "displayName": "Event type Attribute",
+          "description": "The type or class of event "
+        }
+      ],
+      "displayName": "Event Entity",
+      "description": "Base class for all time-oriented event entities like interaction event,behavioral event ..etc"
+    }
+  ]
+}

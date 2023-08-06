@@ -1,0 +1,215 @@
+{
+  "documentVersion": "1.1",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "$schema": "../../schema.cdm.json",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.1.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Product",
+      "extendsEntity": "ODIEntity",
+      "displayName": "Product Entity",
+      "description": "A class of identical items produced by an Organization.",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/Product"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.1"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "dataType": "string",
+          "name": "gtin",
+          "displayName": "GTIN",
+          "description": "Global Trade Item Number of the product.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/gtin"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "dataType": "string",
+          "name": "productName",
+          "displayName": "Product Name",
+          "description": "Name of the product.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/productName"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dataType": "string",
+          "name": "productDescription",
+          "displayName": "Product Description",
+          "description": "Description of the product.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/productDescription"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "dataType": "url",
+          "name": "productMainImage",
+          "displayName": "Product Main Image",
+          "description": "The main header image of the product.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/productMainImage"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "dataType": "string",
+          "name": "productKeywords",
+          "displayName": "Product Keywords",
+          "description": "The search keywords associated with the product.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/productKeywords"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "name": "salesUnitOfMeasure",
+          "displayName": "Sales Unit of Measure",
+          "description": "Unit of Measure for the sales of the product.",
+          "entity": {
+            "entityReference": "UnitOfMeasure",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "UnitOfMeasure/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/salesUnitOfMeasure"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "productCatalogCategoryOfProduct",
+          "displayName": "Product Catalog Category",
+          "description": "The associated product catalog category.",
+          "entity": {
+            "entityReference": "ProductCatalogCategory",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "ProductCatalogCategory/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/productCatalogCategoryOfProduct"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "cardinality": "many",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

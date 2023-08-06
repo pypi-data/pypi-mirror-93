@@ -1,0 +1,136 @@
+{
+  "documentVersion": "1.0",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ServiceType",
+      "extendsEntity": "ODIEntity",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/ServiceType"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.ODI.logicalReference",
+          "arguments": [
+            {
+              "name": "definedAt",
+              "value": "urn://odi.org/v1-beta/entities/customer/"
+            }
+          ]
+        },
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "logical"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.0"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "name": "serviceTypeName",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceTypeName"
+                }
+              ]
+            }
+          ],
+          "displayName": "Name",
+          "description": "Name of the service"
+        },
+        {
+          "name": "serviceTypeDescription",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceTypeDescription"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Description",
+          "description": "Description of activity that represents work done to satisfy a customer's need."
+        },
+        {
+          "name": "serviceTypeEstimatedFrequency",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceTypeEstimatedFrequency"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Estimated Frequency",
+          "description": "Describes how often the service is performed"
+        },
+        {
+          "name": "serviceTypeEstimatedDurationMinutes",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/serviceTypeEstimatedDurationMinutes"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Estimated Duration Minutes",
+          "description": "Duration of the service."
+        }
+      ],
+      "displayName": "Service Type",
+      "description": "Activity that represents work done to satisfy a customer's need"
+    }
+  ]
+}

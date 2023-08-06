@@ -1,0 +1,722 @@
+{
+  "documentVersion": "1.1",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "$schema": "../../schema.cdm.json",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Campaign",
+      "displayName": "Campaign",
+      "description": "Campaign",
+      "extendsEntity": "ODIEntity",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/Campaign"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.1"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "campaignName",
+          "displayName": "Campaign Name",
+          "description": "Campaign Name",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/campaignName"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "campaignDescription",
+          "displayName": "Description",
+          "description": "Additional information to describe the Opportunity.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/campaignDescription"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/CampaignStateCode"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "Active",
+                          "ACTIVE",
+                          "0",
+                          "The State Code is 'Active'",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignStateCodeActive"
+                        ],
+                        [
+                          "en",
+                          "Inactive",
+                          "INACTIVE",
+                          "1",
+                          "The State Code is 'Inactive'",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignStateCodeInactive"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "2",
+                          "The State Code is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignStateCodeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "3",
+                          "The State Code is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignStateCodeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "campaignStateCode",
+          "displayName": "State Code",
+          "description": "State Code",
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/campaignStateCode"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/CampaignStatusCode"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "Proposed",
+                          "PROPOSED",
+                          "0",
+                          "The Status Code is 'Proposed'",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignStatusCodeProposed"
+                        ],
+                        [
+                          "en",
+                          "Ready To Launch",
+                          "READY TO LAUNCH",
+                          "1",
+                          "The Status Code is 'Ready To Launch'",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignStatusCodeReadyToLaunch"
+                        ],
+                        [
+                          "en",
+                          "Launched",
+                          "LAUNCHED",
+                          "2",
+                          "The Status Code is 'Launched'",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignStatusCodeLaunched"
+                        ],
+                        [
+                          "en",
+                          "Completed",
+                          "COMPLETED",
+                          "3",
+                          "The Status Code is 'Completed'",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignStatusCodeCompleted"
+                        ],
+                        [
+                          "en",
+                          "Canceled",
+                          "CANCELED",
+                          "4",
+                          "The Status Code is 'Canceled'",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignStatusCodeCanceled"
+                        ],
+                        [
+                          "en",
+                          "Suspended",
+                          "SUSPENDED",
+                          "5",
+                          "The Status Code is 'Suspended'",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignStatusCodeSuspended"
+                        ],
+                        [
+                          "en",
+                          "Inactive",
+                          "INACTIVE",
+                          "6",
+                          "The Status Code is 'Inactive'",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignStatusCodeInactive"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "7",
+                          "The Status Code is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignStatusCodeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "8",
+                          "The Status Code is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignStatusCodeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "campaignStatusCode",
+          "displayName": "Status Code",
+          "description": "Further details about a Campaign's state",
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/campaignStatusCode"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/CampaignType"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "Advertisement",
+                          "ADVERTISEMENT",
+                          "0",
+                          "The Type is 'Advertisement'",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignTypeAdvertisement"
+                        ],
+                        [
+                          "en",
+                          "DirectMarketing",
+                          "DIRECTMARKETING",
+                          "1",
+                          "The Type is 'DirectMarketing'",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignTypeDirectMarketing"
+                        ],
+                        [
+                          "en",
+                          "Event",
+                          "EVENT",
+                          "2",
+                          "The Type is 'Event'",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignTypeEvent"
+                        ],
+                        [
+                          "en",
+                          "Co-Branding",
+                          "CO-BRANDING",
+                          "3",
+                          "The Type is 'Co-Branding'",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignTypeCoBranding"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "4",
+                          "The Type is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignTypeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "5",
+                          "The Type is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignTypeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "campaignType",
+          "displayName": "Type",
+          "description": "The Type of Campaign",
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/campaignType"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "name": "actualStartDate",
+          "displayName": "Actual Start Date",
+          "description": "The start date for the Campaign.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.date",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/actualStartDate"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "name": "actualEndDate",
+          "displayName": "Actual End Date",
+          "description": "The end date for the Campaign.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.date",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/actualEndDate"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "name": "estimatedStartDate",
+          "displayName": "Estimated Start Date",
+          "description": "The start date for the Campaign.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.date",
+            "means.qualification.estimate",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/estimatedStartDate"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "name": "estimatedEndDate",
+          "displayName": "Estimated End Date",
+          "description": "The end date for the Campaign.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.date",
+            "means.qualification.estimate",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/estimatedEndDate"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "budgetedCostAmount",
+          "displayName": "Budgeted Cost Amount",
+          "description": "Budgeted Cost Amount",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/budgetedCostAmount"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "actualCostAmount",
+          "displayName": "Actual Cost Amount",
+          "description": "Actual Cost Amount",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/actualCostAmount"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "codeName",
+          "displayName": "Code Name",
+          "description": "Internal name to informally identify the campaign.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/codeName"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "objective",
+          "displayName": "Objective",
+          "description": "",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/objective"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "message",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/message"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "promotionCode",
+          "displayName": "Promotion Code",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/promotionCode"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "double",
+          "name": "estimatedResponsePercentage",
+          "displayName": "Estimated Response Percentage",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.probability",
+            "means.qualification.estimate",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/estimatedResponsePercentage"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "estimatedRevenueAmount",
+          "displayName": "Estimated Revenue Amount",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.currency.revenue",
+            "means.qualification.estimate",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/estimatedRevenueAmount"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "double",
+          "name": "actualResponsePercentage",
+          "displayName": "Actual Response Percentage",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.probability",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/actualResponsePercentage"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "actualRevenueAmount",
+          "displayName": "Actual Revenue Amount",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.currency.revenue",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/actualRevenueAmount"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/CampaignChannelType"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "WebPage",
+                          "WEBPAGE",
+                          "0",
+                          "The Channel Type is 'WebPage'",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignChannelTypeWebPage"
+                        ],
+                        [
+                          "en",
+                          "StoreFront",
+                          "STOREFRONT",
+                          "1",
+                          "The Channel Type is 'StoreFront'",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignChannelTypeStoreFront"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "2",
+                          "The Channel Type is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignChannelTypeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "3",
+                          "The Channel Type is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/CampaignChannelTypeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "channelType",
+          "displayName": "Channel Type",
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/channelType"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "currencyCode",
+          "displayName": "Currency Code",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/currencyCode"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        }
+      ]
+    }
+  ]
+}

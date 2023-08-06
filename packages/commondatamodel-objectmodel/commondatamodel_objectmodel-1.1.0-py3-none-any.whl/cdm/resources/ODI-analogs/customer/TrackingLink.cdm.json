@@ -1,0 +1,197 @@
+{
+  "documentVersion": "1.0",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "TrackingLink",
+      "extendsEntity": "ODIEntity",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/TrackingLink"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.ODI.logicalReference",
+          "arguments": [
+            {
+              "name": "definedAt",
+              "value": "urn://odi.org/v1-beta/entities/customer/"
+            }
+          ]
+        },
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "logical"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.0"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "name": "description",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/description"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Tracking URL Description attribute",
+          "description": "A human-friendly description of the link."
+        },
+        {
+          "name": "url",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/url"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "URL attribute",
+          "description": "URL of the Link."
+        },
+        {
+          "name": "occurrence",
+          "purpose": "hasA",
+          "dataType": "JSInteger",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/occurrence"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Occurrence attribute",
+          "description": "URL occurrence index in the content (first is 1). When the same URL is available several times in the same content, its is necessary to track which occurrence of the URL has been clicked on."
+        },
+        {
+          "name": "linklabel",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/linklabel"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "URL Label attribute",
+          "description": "The user-friendly label clicking on which the link opens."
+        },
+        {
+          "name": "category",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/category"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "URL Category attribute",
+          "description": "The category of the link. It may be `subscription`, or a user-defined category."
+        },
+        {
+          "name": "inAppMessageAction",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/inAppMessageAction"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "In-App Message Action attribute",
+          "description": "Actions on the In-App message delivered, e.g. action on primary button, secondary button or close button."
+        },
+        {
+          "name": "inAppMessageButtonText",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/inAppMessageButtonText"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "In-App Message Button Text attribute",
+          "description": "The user-friendly text on the button."
+        }
+      ],
+      "displayName": "Tracking Link Entity",
+      "description": "The campaign activity originating a message to a recipient."
+    }
+  ]
+}

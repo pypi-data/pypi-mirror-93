@@ -1,0 +1,229 @@
+{
+  "documentVersion": "1.1",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "$schema": "../../schema.cdm.json",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "EmailAddress",
+      "extendsEntity": "ODIEntity",
+      "exhibitsTraits": [
+        "means.ODI.contactPoint.emailAddress",
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/EmailAddress"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.1"
+            }
+          ]
+        }
+      ],
+      "displayName": "Email Address",
+      "description": "email addresses for an organization or person.",
+      "hasAttributes": [
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/EmailAddressType"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "Personal",
+                          "PERSONAL",
+                          "0",
+                          "The Email Address Type is 'Personal'",
+                          "urn://odi.org/v1-beta/entities/customer/EmailAddressTypePersonal"
+                        ],
+                        [
+                          "en",
+                          "Alternate",
+                          "ALTERNATE",
+                          "1",
+                          "The Email Address Type is 'Alternate'",
+                          "urn://odi.org/v1-beta/entities/customer/EmailAddressTypeAlternate"
+                        ],
+                        [
+                          "en",
+                          "PersonWork",
+                          "PERSONWORK",
+                          "2",
+                          "The Email Address Type is 'PersonWork'",
+                          "urn://odi.org/v1-beta/entities/customer/EmailAddressTypePersonWork"
+                        ],
+                        [
+                          "en",
+                          "Organization",
+                          "ORGANIZATION",
+                          "3",
+                          "The Email Address Type is 'Organization'",
+                          "urn://odi.org/v1-beta/entities/customer/EmailAddressTypeOrganization"
+                        ],
+                        [
+                          "en",
+                          "Group",
+                          "GROUP",
+                          "4",
+                          "The Email Address Type is 'Group'",
+                          "urn://odi.org/v1-beta/entities/customer/EmailAddressTypeGroup"
+                        ],
+                        [
+                          "en",
+                          "Support",
+                          "SUPPORT",
+                          "5",
+                          "The Email Address Type is 'Support'",
+                          "urn://odi.org/v1-beta/entities/customer/EmailAddressTypeSupport"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "6",
+                          "The Email Address Type is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/EmailAddressTypeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "7",
+                          "The Type is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/EmailAddressTypeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "emailAddressType",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/emailAddressType"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Email Address Type",
+          "description": "the email address type, such as personal, work."
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "email",
+          "name": "emailAddress",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/emailAddress"
+                }
+              ]
+            }
+          ],
+          "displayName": "Email Address",
+          "description": "Email Address"
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "name": "emailAddressIsPrimary",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/emailAddressIsPrimary"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Is Primary",
+          "description": "indicates the primary email address for an organization or person"
+        },
+        {
+          "name": "emailAddressParty",
+          "entity": {
+            "entityReference": "Party"
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/emailAddressParty"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "displayName": "PartyID",
+                "description": "The party's identifier"
+              }
+            },
+            "selectsSubAttribute": {
+              "selects": "one",
+              "selectedTypeAttribute": {
+                "dataType": "entityName",
+                "name": "idType",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "displayName": "PartyID Type",
+                "description": "The party identifier type"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

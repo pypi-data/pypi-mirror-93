@@ -1,0 +1,839 @@
+{
+  "documentVersion": "1.1",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "$schema": "../../schema.cdm.json",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.1.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Opportunity",
+      "extendsEntity": "ODIEntity",
+      "displayName": "Opportunity",
+      "description": "Potential revenue-generating event, or sale to an account, which needs to be tracked through a sales process to completion.",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/Opportunity"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.1"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "name": "actualCloseDate",
+          "displayName": "Actual Close Date",
+          "description": "The close date for the opportunity.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.date",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/actualCloseDate"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "actualValue",
+          "displayName": "Actual Value",
+          "description": "The revenue value that this opportunity generated.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.currency.revenue",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/actualValue"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "double",
+          "name": "closeProbablity",
+          "displayName": "Close Probability",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.probability",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/closeProbablity"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "customerNeed",
+          "displayName": "Customer Need",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/customerNeed"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "name": "opportunityIsDecisionMaker",
+          "displayName": "Is Decision Maker",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/opportunityIsDecisionMaker"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "opportunityDescription",
+          "displayName": "Description",
+          "description": "Additional information to describe the Opportunity.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/opportunityDescription"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "discountAmount",
+          "displayName": "Discount Amount",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.currency",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/discountAmount"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "double",
+          "name": "discountPercentage",
+          "displayName": "Discount Percentage",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.percent",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/discountPercentage"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "name": "opportunityEstimatedCloseDate",
+          "displayName": "Estimated Close Date",
+          "description": "The expected close date for the Opportunity.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.date",
+            "means.qualification.estimate",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/opportunityEstimatedCloseDate"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "opportunityEstimatedAmount",
+          "displayName": "Estimated Amount",
+          "description": "The estimated revenue value that this Opportunity will generate to assist in sales forecasting and planning.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.currency.revenue",
+            "means.qualification.estimate",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/opportunityEstimatedAmount"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "name": "finalDecisionDate",
+          "displayName": "Final Decision Date",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.date",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/finalDecisionDate"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "name": "opportunityIsInitialCommunication",
+          "displayName": "Is Initial Communication",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/opportunityIsInitialCommunication"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/OpportunitySalesStage"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "Qualify",
+                          "QUALIFY",
+                          "0",
+                          "The Opportunity Sales Stage is 'Qualify'",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunitySalesStageQualify"
+                        ],
+                        [
+                          "en",
+                          "Develop",
+                          "DEVELOP",
+                          "1",
+                          "The Opportunity Sales Stage is 'Develop'",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunitySalesStageDevelop"
+                        ],
+                        [
+                          "en",
+                          "Propose",
+                          "PROPOSE",
+                          "2",
+                          "The Opportunity Sales Stage is 'Propose'",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunitySalesStagePropose"
+                        ],
+                        [
+                          "en",
+                          "Close",
+                          "CLOSE",
+                          "3",
+                          "The Opportunity Sales Stage is 'Close'",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunitySalesStageClose"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "4",
+                          "The Opportunity Sales Stage is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunitySalesStageOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "5",
+                          "The Sales Stage is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunitySalesStageUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "opportunityRatingCode",
+          "displayName": "Opportunity Rating Code",
+          "description": "The expected value or priority of the opportunity based on revenue, customer status, or closing probability.",
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/opportunityRatingCode"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "name": "originatingLead",
+          "displayName": "Originating Lead",
+          "description": "The Lead that originated this opportunity",
+          "entity": {
+            "entityReference": "Lead",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Lead/(resolvedAttributes)/idValue"
+                ]
+              }
+            ]
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/originatingLead"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ],
+                "isNullable": true
+              }
+            }
+          }
+        },
+        {
+          "name": "parentAccountHolderParty",
+          "displayName": "Parent Account Holder Party",
+          "description": "The Parent Account Holder Party",
+          "entity": {
+            "entityReference": "Party"
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/parentAccountHolderParty"
+                }
+              ]
+            }
+          ],
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "name": "id",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ]
+              }
+            },
+            "selectsSubAttribute": {
+              "selects": "one",
+              "selectedTypeAttribute": {
+                "dataType": "entityName",
+                "name": "idType",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "integer",
+          "name": "opportunityPriorityCode",
+          "displayName": "Priority Code",
+          "description": "An indication of the priority for this Opportunity",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/opportunityPriorityCode"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "purchaseTimeframe",
+          "displayName": "Purchase Time frame",
+          "description": "An indication of the customer's expected timeframe for a purchase",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/purchaseTimeframe"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "opportunityQualificationComments",
+          "displayName": "Qualification Comments",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/opportunityQualificationComments"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/OpportunitySalesStage"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "Qualify",
+                          "qualify",
+                          "0",
+                          "The Opportunity Sales Stage is at 'Qualify'",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunitySalesStageQualify"
+                        ],
+                        [
+                          "en",
+                          "Develop",
+                          "develop",
+                          "1",
+                          "The Opportunity Sales Stage is at 'Develop'",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunitySalesStageDevelop"
+                        ],
+                        [
+                          "en",
+                          "Propose",
+                          "propose",
+                          "2",
+                          "The Opportunity Sales Stage is at 'Propose'",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunitySalesStagePropose"
+                        ],
+                        [
+                          "en",
+                          "Close",
+                          "close",
+                          "3",
+                          "The Opportunity Sales Stage is at 'Close'",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunitySalesStageClose"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "4",
+                          "The Opportunity Sales Stage is known but has a value outside of this enumeration's set.",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunitySalesStageOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "5",
+                          "The Opportunity Sales Stage is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunitySalesStageUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "salesStage",
+          "displayName": "Sales Stage",
+          "description": "The sales stage of this Opportunity to aid the sales team in their efforts to cover this to an opportunity: qualify, develop, propose, close",
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/salesStage"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/OpportunityStateCode"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "Open",
+                          "OPEN",
+                          "0",
+                          "The Opportunity State Code is 'Open'",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunityStateCodeOpen"
+                        ],
+                        [
+                          "en",
+                          "Won",
+                          "WON",
+                          "1",
+                          "The Opportunity State Code is 'Won'",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunityStateCodeWon"
+                        ],
+                        [
+                          "en",
+                          "Lost",
+                          "LOST",
+                          "2",
+                          "The Opportunity State Code is 'Lost'",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunityStateCodeLost"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "3",
+                          "The Opportunity State Code is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunityStateCodeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "4",
+                          "The State Code is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunityStateCodeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "opportunityStateCode",
+          "displayName": "State Code",
+          "description": "whether the opportunity is open, won, or lost.",
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/opportunityStateCode"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/OpportunityStatusCode"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "InProgress",
+                          "INPROGRESS",
+                          "0",
+                          "The Opportunity Status Code is 'InProgress'",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunityStatusCodeInProgress"
+                        ],
+                        [
+                          "en",
+                          "OnHold",
+                          "ONHOLD",
+                          "1",
+                          "The Opportunity Status Code is 'OnHold'",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunityStatusCodeOnHold"
+                        ],
+                        [
+                          "en",
+                          "Won",
+                          "WON",
+                          "2",
+                          "The Opportunity Status Code is 'Won'",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunityStatusCodeWon"
+                        ],
+                        [
+                          "en",
+                          "Canceled",
+                          "CANCELED",
+                          "3",
+                          "The Opportunity Status Code is 'Canceled'",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunityStatusCodeCanceled"
+                        ],
+                        [
+                          "en",
+                          "OutSold",
+                          "OUTSOLD",
+                          "4",
+                          "The Opportunity Status Code is 'OutSold'",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunityStatusCodeOutSold"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "5",
+                          "The Opportunity Status Code is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunityStatusCodeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "6",
+                          "The Status Code is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/OpportunityStatusCodeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "opportunityStatusCode",
+          "displayName": "Status Code",
+          "description": "Further details about a Opportunity's state",
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/opportunityStatusCode"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "totalAmount",
+          "displayName": "Total Amount",
+          "description": "The revenue value that this opportunity generated.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.currency.revenue",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/totalAmount"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "currency",
+          "name": "opportunityTotalDiscountAmount",
+          "displayName": "Total Discount Amount",
+          "description": "The total discount offered on this opportunity",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            "means.measurement.currency",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/opportunityTotalDiscountAmount"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "currencyCode",
+          "displayName": "Currency Code",
+          "description": "The ISO 4217 currency code for currency values given in this Opportunity",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/currencyCode"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        }
+      ]
+    }
+  ]
+}

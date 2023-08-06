@@ -1,0 +1,346 @@
+{
+  "documentVersion": "1.1",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "$schema": "../../schema.cdm.json",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.1.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Person",
+      "extendsEntity": "ODIEntity",
+      "displayName": "Person",
+      "description": "Person with whom a business has a relationship, such as customer, supplier, and colleague.",
+      "exhibitsTraits": [
+        "means.idea.person",
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/Person"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.1"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "salutation",
+          "displayName": "Salutation",
+          "description": "The salutation of the person to make sure the person is addressed correctly in sales calls, email messages, and marketing campaigns.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/salutation"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "firstName",
+          "name": "firstName",
+          "displayName": "First Name",
+          "description": "The person's first name to make sure the person is addressed correctly in sales calls, email, and marketing campaigns.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/firstName"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "name",
+          "name": "nickName",
+          "displayName": "Nickname",
+          "description": "The person's nickname.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/nickName"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "middleName",
+          "name": "middleName",
+          "displayName": "Middle Name",
+          "description": "The person's middle name or initial to make sure the person is addressed correctly.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/middleName"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "lastName",
+          "name": "lastName",
+          "displayName": "Last Name",
+          "description": "The person's last name to make sure the person is addressed correctly in sales calls, email, and marketing campaigns.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/lastName"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "string",
+          "name": "suffix",
+          "displayName": "Suffix",
+          "description": "The suffix used in the person's name, such as Jr. or Sr. to make sure the person is addressed correctly in sales calls, email, and marketing campaigns.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/suffix"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "fullName",
+          "name": "fullName",
+          "displayName": "Full Name",
+          "description": "Combines and shows the person's first and last names so that the full name can be displayed in views and reports.",
+          "appliedTraits": [
+            "is.ODI.attribute.reserved",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/fullName"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "day",
+          "name": "birthdayDay",
+          "displayName": "Birthday Day",
+          "description": "The person's birthday day of the month",
+          "appliedTraits": [
+            "means.demographic.birthDate",
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/birthdayDay"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "month",
+          "name": "birthdayMonth",
+          "displayName": "Birthday Month",
+          "description": "The person's birthday month",
+          "appliedTraits": [
+            "means.demographic.birthDate",
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/birthdayMonth"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "year",
+          "name": "birthdayYear",
+          "displayName": "Birthday Year",
+          "description": "The person's birthday year.",
+          "appliedTraits": [
+            "means.demographic.birthDate",
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/birthdayYear"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "name": "birthDate",
+          "displayName": "Birthday Date",
+          "description": "The person's birthday for use in customer gift programs or other communications.",
+          "appliedTraits": [
+            "means.demographic.birthDate",
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/birthDate"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/PersonGenderCode"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "Female",
+                          "FEMALE",
+                          "0",
+                          "The Person Gender Code is 'Female'",
+                          "urn://odi.org/v1-beta/entities/customer/PersonGenderCodeFemale"
+                        ],
+                        [
+                          "en",
+                          "Male",
+                          "MALE",
+                          "1",
+                          "The Person Gender Code is 'Male'",
+                          "urn://odi.org/v1-beta/entities/customer/PersonGenderCodeMale"
+                        ],
+                        [
+                          "en",
+                          "Unspecified",
+                          "UNSPECIFIED",
+                          "2",
+                          "The Person Gender Code is 'Unspecified'",
+                          "urn://odi.org/v1-beta/entities/customer/PersonGenderCodeUnspecified"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "3",
+                          "The Person Gender Code is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/PersonGenderCodeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "4",
+                          "The GenderCode is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/PersonGenderCodeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "genderCode",
+          "displayName": "Gender",
+          "description": "The person's gender",
+          "appliedTraits": [
+            "means.demographic.gender",
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/genderCode"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

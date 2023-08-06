@@ -1,0 +1,190 @@
+{
+  "documentVersion": "1.1",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "$schema": "../../schema.cdm.json",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "InteractionEvent",
+      "displayName": "Interaction Event",
+      "description": "A master list of all types of interaction events",
+      "extendsEntity": "ODIEntity",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/InteractionEvent"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.1"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/InteractionEventRole"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "EmailMessage",
+                          "EMAILMESSAGE",
+                          "0",
+                          "The Interaction Event Role is 'EmailMessage'",
+                          "urn://odi.org/v1-beta/entities/customer/InteractionEventRoleEmailMessage"
+                        ],
+                        [
+                          "en",
+                          "PhoneCall",
+                          "PHONECALL",
+                          "1",
+                          "The Interaction Event Role is 'PhoneCall'",
+                          "urn://odi.org/v1-beta/entities/customer/InteractionEventRolePhoneCall"
+                        ],
+                        [
+                          "en",
+                          "Appointment",
+                          "APPOINTMENT",
+                          "2",
+                          "The Interaction Event Role is 'Appointment'",
+                          "urn://odi.org/v1-beta/entities/customer/InteractionEventRoleAppointment"
+                        ],
+                        [
+                          "en",
+                          "ChatSession",
+                          "CHATSESSION",
+                          "3",
+                          "The Interaction Event Role is 'ChatSession'",
+                          "urn://odi.org/v1-beta/entities/customer/InteractionEventRoleChatSession"
+                        ],
+                        [
+                          "en",
+                          "MessageDelivery",
+                          "MESSAGEDELIVERY",
+                          "4",
+                          "The Interaction Event Role is 'MessageDelivery'",
+                          "urn://odi.org/v1-beta/entities/customer/InteractionEventRoleMessageDelivery"
+                        ],
+                        [
+                          "en",
+                          "Behavioral",
+                          "BEHAVIORAL",
+                          "5",
+                          "The Interaction Event Role is 'Behavioral'",
+                          "urn://odi.org/v1-beta/entities/customer/InteractionEventRoleBehavioral"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "6",
+                          "The Interaction Event Role is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/InteractionEventRoleOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "7",
+                          "The Role is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/InteractionEventRoleUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "interactionEventRole",
+          "displayName": "Interaction Event Role",
+          "description": "the event type",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/interactionEventRole"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "interactionEventParty",
+          "displayName": "Party",
+          "description": "The associated Party",
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "id",
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "displayName": "PartyID",
+                "description": "The party's identifier",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ]
+              }
+            },
+            "selectsSubAttribute": {
+              "selects": "one",
+              "selectedTypeAttribute": {
+                "name": "idType",
+                "dataType": "entityName",
+                "displayName": "PartyID Type",
+                "description": "The party identifier type",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ]
+              }
+            }
+          },
+          "entity": {
+            "entityReference": "Party"
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/interactionEventParty"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

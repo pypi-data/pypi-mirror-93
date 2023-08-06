@@ -1,0 +1,190 @@
+{
+  "documentVersion": "1.0",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "BrowserDetails",
+      "extendsEntity": "Entity",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/BrowserDetails"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.ODI.logicalReference",
+          "arguments": [
+            {
+              "name": "definedAt",
+              "value": "urn://odi.org/v1-beta/entities/customer/"
+            }
+          ]
+        },
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "logical"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.0"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "name": "browserName",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/browserName"
+                }
+              ]
+            }
+          ],
+          "displayName": "browser Name ",
+          "description": "The application or browser name used for the activity or the interaction"
+        },
+        {
+          "name": "browserVendor",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/browserVendor"
+                }
+              ]
+            }
+          ],
+          "displayName": "browser Vendor",
+          "description": "The application or browser vendor"
+        },
+        {
+          "name": "browserVersion",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/browserVersion"
+                }
+              ]
+            }
+          ],
+          "displayName": "browser version",
+          "description": "The application or browser version"
+        },
+        {
+          "name": "browserUserAgent",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/browserUserAgent"
+                }
+              ]
+            }
+          ],
+          "displayName": "browser User Agent",
+          "description": "The HTTP User-Agent string from the client request"
+        },
+        {
+          "name": "browserAcceptLanguage",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/browserAcceptLanguage"
+                }
+              ]
+            }
+          ],
+          "displayName": "browser Accept Language",
+          "description": "An IETF Language Tag (RFC 5646)."
+        },
+        {
+          "name": "browserCookiesEnabled",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/browserCookiesEnabled"
+                }
+              ]
+            }
+          ],
+          "displayName": "browser Cookies Enabled",
+          "description": "The current user agent settings allow for the writing of cookies"
+        },
+        {
+          "name": "browserJavascriptEnabled",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/browserJavascriptEnabled"
+                }
+              ]
+            }
+          ],
+          "displayName": "browser Java script Enabled",
+          "description": "The current user agent settings allow for the writing of cookies."
+        }
+      ],
+      "displayName": "Browser Details",
+      "description": ""
+    }
+  ]
+}

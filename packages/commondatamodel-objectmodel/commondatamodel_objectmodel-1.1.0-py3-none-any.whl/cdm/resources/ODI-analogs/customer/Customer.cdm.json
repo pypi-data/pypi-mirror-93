@@ -1,0 +1,88 @@
+{
+  "documentVersion": "1.1",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "$schema": "../../schema.cdm.json",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Customer",
+      "extendsEntity": "ODIEntity",
+      "displayName": "Customer",
+      "description": "Organization and/or primary Contact that represents a customer, potential customer or distinct account.",
+      "exhibitsTraits": [
+        "means.idea.customer",
+        "means.idea.account",
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/Customer"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.1"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "name": "customerParty",
+          "displayName": "Party",
+          "description": "The associated Party",
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "id",
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "displayName": "PartyID",
+                "description": "The party's identifier",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ]
+              }
+            },
+            "selectsSubAttribute": {
+              "selects": "one",
+              "selectedTypeAttribute": {
+                "name": "idType",
+                "dataType": "entityName",
+                "displayName": "PartyID Type",
+                "description": "The party identifier type",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ]
+              }
+            }
+          },
+          "entity": {
+            "entityReference": "Party"
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/customerParty"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

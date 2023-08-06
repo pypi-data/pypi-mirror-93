@@ -1,0 +1,155 @@
+{
+  "documentVersion": "1.0",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "$schema": "../../schema.cdm.json",
+  "imports": [
+    {
+      "corpusPath": "/ODI-analogs/ODIConcepts.1.0.1.cdm.json"
+    },
+    {
+      "corpusPath": "/ODI-analogs/ODIEntity.1.0.1.cdm.json"
+    },
+    {
+      "corpusPath": "/ODI-analogs/UnitOfMeasure.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "AccountIdentity.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "Appointment.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "BehavioralEvent.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "BrowserDetails.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "Campaign.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "CampaignParty.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "CampaignProduct.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "Commerce.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "ConsentDefinition.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "Customer.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "CustomerConsent.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "CustomerSalesHeader.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "CustomerSalesLine.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "Device.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "Email.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "EmailAddress.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "Environment.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "Event.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "Geo.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "InteractionEvent.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "InteractionEventParty.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "Lead.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "MarketingEvent.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "MarketSegment.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "MessageDelivery.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "Opportunity.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "Organization.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "OutboundMessage.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "Party.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "Person.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "PersonOrganization.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "PhoneCall.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "PhoneNumber.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "PhysicalAddress.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "Product.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "ProductCatalog.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "ProductCatalogCategory.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "ProductCatalogCategoryProduct.1.1.cdm.json"
+    },
+    {
+      "corpusPath": "ProductSelection.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "ServiceAppointment.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "ServiceType.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "Template.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "TrackingLink.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "WebInfo.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "WebPageDetails.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "WebReferer.1.0.cdm.json"
+    }
+  ],
+  "definitions": []
+}

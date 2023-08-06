@@ -1,0 +1,246 @@
+{
+  "documentVersion": "1.1",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "$schema": "../../schema.cdm.json",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "PhoneNumber",
+      "extendsEntity": "ODIEntity",
+      "displayName": "Phone Number",
+      "description": "phone numbers for an organization or person.",
+      "exhibitsTraits": [
+        "means.ODI.contactPoint.phoneNumber",
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/PhoneNumber"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.1"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "purpose": "hasA",
+          "dataType": {
+            "dataTypeReference": "listLookupWellKnown",
+            "appliedTraits": [
+              {
+                "traitReference": "is.constrainedList.wellKnown",
+                "arguments": [
+                  {
+                    "name": "uniqueIdentifier",
+                    "value": "urn://odi.org/v1-beta/entities/customer/PhoneNumberType"
+                  },
+                  {
+                    "entityReference": {
+                      "explanation": "The constantValues below correspond to the attributes of the 'listLookupWellKnownValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder, description, uniqueIdentifier}",
+                      "entityShape": "listLookupWellKnownValues",
+                      "constantValues": [
+                        [
+                          "en",
+                          "Business",
+                          "BUSINESS",
+                          "0",
+                          "The Phone Number Type is 'Business'",
+                          "urn://odi.org/v1-beta/entities/customer/PhoneNumberTypeOrganization"
+                        ],
+                        [
+                          "en",
+                          "Home",
+                          "HOME",
+                          "1",
+                          "The Phone Number Type is 'Home'",
+                          "urn://odi.org/v1-beta/entities/customer/PhoneNumberTypeHome"
+                        ],
+                        [
+                          "en",
+                          "Work",
+                          "WORK",
+                          "2",
+                          "The Phone Number Type is 'Work'",
+                          "urn://odi.org/v1-beta/entities/customer/PhoneNumberTypeWork"
+                        ],
+                        [
+                          "en",
+                          "Mobile",
+                          "MOBILE",
+                          "3",
+                          "The Phone Number Type is 'Mobile'",
+                          "urn://odi.org/v1-beta/entities/customer/PhoneNumberTypeMobile"
+                        ],
+                        [
+                          "en",
+                          "Contact",
+                          "CONTACT",
+                          "4",
+                          "The Phone Number Type is 'Contact'",
+                          "urn://odi.org/v1-beta/entities/customer/PhoneNumberTypeContact"
+                        ],
+                        [
+                          "en",
+                          "MessageOnly",
+                          "MESSAGEONLY",
+                          "5",
+                          "The Phone Number Type is 'MessageOnly'",
+                          "urn://odi.org/v1-beta/entities/customer/PhoneNumberTypeMessageOnly"
+                        ],
+                        [
+                          "en",
+                          "Fax",
+                          "FAX",
+                          "6",
+                          "The Phone Number Type is 'Fax'",
+                          "urn://odi.org/v1-beta/entities/customer/PhoneNumberTypeFax"
+                        ],
+                        [
+                          "en",
+                          "Pager",
+                          "PAGER",
+                          "7",
+                          "The Phone Number Type is 'Pager'",
+                          "urn://odi.org/v1-beta/entities/customer/PhoneNumberTypePager"
+                        ],
+                        [
+                          "en",
+                          "Other",
+                          "OTHER",
+                          "8",
+                          "The Phone Number Type is known but is not one of the prescribed values",
+                          "urn://odi.org/v1-beta/entities/customer/PhoneNumberTypeOther"
+                        ],
+                        [
+                          "en",
+                          "Unknown",
+                          "UNKNOWN",
+                          "9",
+                          "The Type is unknown",
+                          "urn://odi.org/v1-beta/entities/customer/PhoneNumberTypeUnknown"
+                        ]
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "name": "phoneNumberType",
+          "displayName": "Phone Number Type",
+          "description": "the phone number type, such as home, work, cell.",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/phoneNumberType"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "phone",
+          "name": "number",
+          "displayName": "Phone Number",
+          "description": "phone number",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/number"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "name": "phoneNumberIsPrimary",
+          "displayName": "Is Primary",
+          "description": "indicated the primary phone number for an organization or contact",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/phoneNumberIsPrimary"
+                }
+              ]
+            }
+          ],
+          "isNullable": true
+        },
+        {
+          "name": "phoneNumberParty",
+          "displayName": "Party",
+          "description": "The associated Party",
+          "resolutionGuidance": {
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "id",
+                "purpose": "hasA",
+                "dataType": "entityId",
+                "displayName": "PartyID",
+                "description": "The party's identifier",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ]
+              }
+            },
+            "selectsSubAttribute": {
+              "selects": "one",
+              "selectedTypeAttribute": {
+                "name": "idType",
+                "dataType": "entityName",
+                "displayName": "PartyID Type",
+                "description": "The party identifier type",
+                "appliedTraits": [
+                  "is.ODI.attribute.required"
+                ]
+              }
+            }
+          },
+          "entity": {
+            "entityReference": "Party"
+          },
+          "appliedTraits": [
+            {
+              "traitReference": "is.ODI.equivalent.entityAttribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/phoneNumberParty"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

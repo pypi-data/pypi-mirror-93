@@ -1,0 +1,153 @@
+{
+  "documentVersion": "1.0",
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ConsentDefinition",
+      "extendsEntity": "ODIEntity",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.ODI.equivalent.entity",
+          "arguments": [
+            {
+              "name": "equivalentOf",
+              "value": "urn://odi.org/v1-beta/entities/customer/ConsentDefinition"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.ODI.logicalReference",
+          "arguments": [
+            {
+              "name": "definedAt",
+              "value": "urn://odi.org/v1-beta/entities/customer/"
+            }
+          ]
+        },
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "logical"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.CDM.entityVersion",
+          "arguments": [
+            {
+              "name": "versionNumber",
+              "value": "1.0"
+            }
+          ]
+        }
+      ],
+      "hasAttributes": [
+        {
+          "name": "consentDefinitionPurpose",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/consentDefinitionPurpose"
+                }
+              ]
+            }
+          ],
+          "displayName": "Consent Definition Purpose",
+          "description": "Short description for the legal purpose of the consent."
+        },
+        {
+          "name": "consentDefinitionVersion",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/consentDefinitionVersion"
+                }
+              ]
+            }
+          ],
+          "displayName": "Consent Definition Version",
+          "description": "Version of the Consent Definition."
+        },
+        {
+          "name": "consentDefinitionLocale",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/consentDefinitionLocale"
+                }
+              ]
+            }
+          ],
+          "displayName": "Consent Definition Locale",
+          "description": "Language / Locale of the consent statement."
+        },
+        {
+          "name": "consentDefinitionDescription",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/consentDefinitionDescription"
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "displayName": "Consent Definition Description",
+          "description": "Optional description of the consent statement."
+        },
+        {
+          "name": "consentDefinitionDocumentURL",
+          "purpose": "hasA",
+          "dataType": "uri",
+          "appliedTraits": [
+            "is.ODI.attribute.required",
+            {
+              "traitReference": "is.ODI.equivalent.attribute",
+              "arguments": [
+                {
+                  "name": "equivalentOf",
+                  "value": "urn://odi.org/v1-beta/entities/customer/consentDefinitionDocumentURL"
+                }
+              ]
+            }
+          ],
+          "displayName": "Consent Definition Document URL",
+          "description": "URL to the document, where a \"read-only\" version of the consent statement is published."
+        }
+      ],
+      "displayName": "Consent Definition",
+      "description": "Definition of consent statements that a customer can grant or reject."
+    }
+  ]
+}
