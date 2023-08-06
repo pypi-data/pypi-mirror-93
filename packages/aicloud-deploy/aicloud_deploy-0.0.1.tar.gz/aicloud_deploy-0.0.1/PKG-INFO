@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: aicloud-deploy
+Version: 0.0.1
+Summary: 
+Home-page: https://github.com/sbercloud-ai
+License: MIT
+Keywords: poetry,pypi
+Author: Nikolay Baryshnikov
+Author-email: root@k0d.ru
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Russian
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: fastapi (>=0.63.0,<0.64.0)
+Requires-Dist: gunicorn (>=20.0.4,<21.0.0)
+Requires-Dist: sentry_sdk (>=0.19.5,<0.20.0)
+Requires-Dist: starlette-prometheus (>=0.7.0,<0.8.0)
+Requires-Dist: uvicorn (>=0.13.3,<0.14.0)
+Project-URL: Repository, https://github.com/sbercloud-ai/aicloud_deploy
+Description-Content-Type: text/markdown
+
+# Toolkit AI Cloud для написания скриптов деплоя в Inference
+
+
