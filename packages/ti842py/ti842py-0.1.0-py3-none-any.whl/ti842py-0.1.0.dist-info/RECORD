@@ -1,0 +1,12 @@
+ti842py/__init__.py,sha256=96DkTWksNPmzbhJvEzxELGedtTc094MQPQe1u24FNGA,166
+ti842py/__version__.py,sha256=2n_6VOzvT52htewQD2TWREy1jvcdVP05-JHwFXnTDD0,286
+ti842py/main.py,sha256=e8Jinkd15EKMu6DR54ru2sl1-69PAP8kEC9nuKUVd-M,1717
+ti842py/tiParser.py,sha256=lcdhR8BGBS5aW-2bJJ_jb4dTLjEU8tQkgAsfPQPpb6w,6341
+ti842py/utils/clear.py,sha256=wOKhMUQFDBv-TDRz8V31ls7VfbQN8JOb_F-16Sj7BcQ,128
+ti842py/utils/getKey.py,sha256=BWw97V3ER4QuYjR2Yhjj9mjxTEOe83wpdR3SUW_EonE,1242
+ti842py-0.1.0.dist-info/LICENSE,sha256=1qnuLgLYJSisP7oO5RaMTSUxDZq9wz_HnLPQ8ZQSuZg,35110
+ti842py-0.1.0.dist-info/METADATA,sha256=tWrAQ1meJ11t-Nry_KKjhF8o0ksITjtuZ0xwT-XQd9I,3471
+ti842py-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ti842py-0.1.0.dist-info/entry_points.txt,sha256=aIbThas4ObLFzGlC7gPkD8civpNNl72g9Fj8Y9JdMIM,47
+ti842py-0.1.0.dist-info/top_level.txt,sha256=5gOWxBvLk0qTDRinQHBJa98ccO3xYQMdrpukk0EVI9s,8
+ti842py-0.1.0.dist-info/RECORD,,
