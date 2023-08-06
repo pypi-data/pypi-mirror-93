@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: materialdashboard
+Version: 0.0.1
+Summary: Dashboard with a material design
+Home-page: UNKNOWN
+Author: Flo Vouin <florent.vouin@gmail.com>
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Framework :: Dash
