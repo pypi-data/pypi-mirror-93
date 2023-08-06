@@ -1,0 +1,9 @@
+ammolite/__init__.py,sha256=EcjdXwGspZIULoNrjC5vq-A5xcOkvqhD2o36FRTZAtk,1096
+ammolite/convert.py,sha256=YRq4EIDPmMwpxUD3X-Cb93ZmHoHlx9dpnuTGa_IIKzs,4957
+ammolite/display.py,sha256=azbkkccJO8IFY-690IIqJhhCjnkzOI3LjEvbPlkK-kw,2905
+ammolite/object.py,sha256=96jCjauuQt0f9ULZR5sAE3TpqX4Vj1Go6VXPlZIBXcY,41407
+ammolite/startup.py,sha256=Lm75qiAtaorcL9Mry7NjMtZL9lfT2Z1Z3itx3YjAqyg,3484
+ammolite-0.5.0.dist-info/LICENSE,sha256=Ziwm-V0CAgOgtuUQalrbCuRemrq62EvuKU2JbkIsp3c,1656
+ammolite-0.5.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+ammolite-0.5.0.dist-info/METADATA,sha256=sWDWhctvejs1UchRfgKxRiIfM8MOxRVGe-AJxIsDqjM,2184
+ammolite-0.5.0.dist-info/RECORD,,
