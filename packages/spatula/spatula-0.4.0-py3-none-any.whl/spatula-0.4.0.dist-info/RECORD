@@ -1,0 +1,11 @@
+spatula/__init__.py,sha256=2iXWLey3JjRJ8f07Y_G2sioR1T3VFqd8f3QAp_pv7sA,338
+spatula/cli.py,sha256=fuDCWLX7hulqlhZ83Ki3OxeponVit27k9delRIEticA,5468
+spatula/core.py,sha256=UvOXE8IZxkfzWW4ktZG9k3CfLZRQd9tp7xqy5ehIUN4,3737
+spatula/pages.py,sha256=lf7xKuSrLD06NNp4oheEKjltivdx1N109-Fjkc8jXq8,6663
+spatula/selectors.py,sha256=Ac1cxUI0OBRJNeTsVGzCU7PTZpjGtQvnfvAzu1s_If8,5321
+spatula/utils.py,sha256=vuyvBtpS4QhcM19vJNwe4qHT4NmRk-iohcsYPaROx3g,739
+spatula-0.4.0.dist-info/entry_points.txt,sha256=E9_TJVHxYQCf2bK3T_8_PFs8g4gzcFL0-LjmXnshJTI,43
+spatula-0.4.0.dist-info/LICENSE,sha256=Yjhz7jiFeGs5Vw-vU8OLupAmB0n-f1tgUxMLqaHE_Gc,1067
+spatula-0.4.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+spatula-0.4.0.dist-info/METADATA,sha256=s_emXXnY2YfAN45q1pc8gLom4eUfgJz_sbP0a5C7uio,1349
+spatula-0.4.0.dist-info/RECORD,,
