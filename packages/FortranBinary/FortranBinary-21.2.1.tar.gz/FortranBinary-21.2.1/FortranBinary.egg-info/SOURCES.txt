@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+FortranBinary/FortranBinary.py
+FortranBinary/__init__.py
+FortranBinary.egg-info/PKG-INFO
+FortranBinary.egg-info/SOURCES.txt
+FortranBinary.egg-info/dependency_links.txt
+FortranBinary.egg-info/requires.txt
+FortranBinary.egg-info/top_level.txt
