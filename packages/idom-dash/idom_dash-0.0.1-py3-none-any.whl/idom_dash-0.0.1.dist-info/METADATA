@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: idom-dash
+Version: 0.0.1
+Summary: A custom component for Dash that uses IDOM
+Home-page: UNKNOWN
+Author: Ryan Morshead <ryan.morshead@gmail.com>
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Classifier: Framework :: Dash
+Requires-Dist: idom[flask] (>=0.22.1)
+
+UNKNOWN
+
+
