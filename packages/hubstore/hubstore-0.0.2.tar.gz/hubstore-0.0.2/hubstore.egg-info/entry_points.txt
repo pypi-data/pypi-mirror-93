@@ -1,0 +1,3 @@
+[console_scripts]
+hubstore = hubstore.main:main
+
