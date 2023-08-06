@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: daim
+Version: 0.0.2
+Summary: A variant annotation package
+Home-page: https://github.com/nesegunes
+Author: tardis
+Author-email: nesegunes.ce@gmail.com
+License: UNKNOWN
+Description: # Annotation of Identified Variants
+        
+        Annotation of Identified Mutations to Create Reports for Clinicians to Assist Therapeutic Decisions
+        
+        ## Prerequisites
+        
+        It requires two main modules: pandas and myvariant
+        
+        ```
+        pip install pandas
+        pip install myvariant
+        pip install reportlab
+        ```
+        
+        ## Installing
+        
+        ```
+        pip install daim
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
