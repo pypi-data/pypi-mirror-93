@@ -1,0 +1,3 @@
+[console_scripts]
+fastapi-openapi-gen = generator.main:main
+
