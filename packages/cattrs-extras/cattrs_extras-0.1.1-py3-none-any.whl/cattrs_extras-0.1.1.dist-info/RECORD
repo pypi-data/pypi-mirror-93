@@ -1,0 +1,11 @@
+cattrs_extras/__init__.py,sha256=ls1camlIoMxEZz9gSkZ1OJo-MXqHWwKPtdPbZJmwp7E,22
+cattrs_extras/converter.py,sha256=cTF1uREMLC74ce9zLGyD8w9DtSbqjkuW09h44ZFLVk8,8904
+cattrs_extras/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cattrs_extras/tortoise/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cattrs_extras/tortoise/converter.py,sha256=psQqAjjr17E-KCPtIsMhkzSdwQJq6TK12q863Ft9Nxo,7069
+cattrs_extras/tortoise/fields.py,sha256=xldSrW4J5u9MogOnYphS1MXD-Gw7ybvhgF9SSlHgkXo,1919
+cattrs_extras/tortoise/model.py,sha256=YY3e6jE01UUalzwjG9-9-aRA_b6TF6CpsAk-g9kcmvc,2966
+cattrs_extras-0.1.1.dist-info/LICENSE,sha256=JcikJmng9eatzNthbl8DSTrNl9gcdokuD07kFbOA1MY,1070
+cattrs_extras-0.1.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+cattrs_extras-0.1.1.dist-info/METADATA,sha256=nioJoTPzPE7uc9yefOuTN2UAh5M6jIj1BnF2bEeltBo,4253
+cattrs_extras-0.1.1.dist-info/RECORD,,
