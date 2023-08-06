@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "autoretouch-service-library"
+version = "1.1.5"
+description = "Autoretouch helper library"
+authors = ["Nicolas Dieumegarde <nicolas.dieumegarde@cmdscale.com>", "Till Lorentzen <till@autoretouch.com>"]
+include = [
+    "LICENSE",
+]
+packages = [
+    { include = "autoretouchlib" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+fakeredis = "^1.4.3"
+redis = "^3.5.3"
+canonicaljson = "^1.3.0"
+fastapi = "^0.61"
+autopep8 = "^1.5.4"
+requests_mock = "^1.8.0"
+
+[tool.poetry.dev-dependencies]
+assertpy = "^1.1"
+pytest = "^6.0.1"
+tox = "^3.19.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
