@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: aicscytoparam
+Version: 0.1.1
+Summary: Cytoplasm parameterization using spherical harmonics
+Home-page: https://github.com/AllenCell/aics-cytoparam
+Author: Matheus Viana
+Author-email: matheus.viana@alleninstitute.org
+License: Allen Institute Software License
+Description: # Cytoplasm Parameterization
+        
+        [![Build Status](https://github.com/AllenCell/aics-cytoparam/workflows/Build%20Main/badge.svg)](https://github.com/AllenCell/aics-cytoparam/actions)
+        [![Documentation](https://github.com/AllenCell/aics-cytoparam/workflows/Documentation/badge.svg)](https://AllenCell.github.io/aicscytoparam/)
+        [![Code Coverage](https://codecov.io/gh/AllenCell/aics-cytoparam/branch/main/graph/badge.svg)](https://codecov.io/gh/AllenCell/aics-cytoparam)
+        
+        Spherical harmonics expansion coefficients-based parameterization of the cytoplasm and nucleoplasm for 3D cells
+        ---
+        ## Installation
+        
+        **Stable Release:** `pip install aicscytoparam`<br>
+        **Development Head:** `pip install git+https://github.com/AllenCell/aics-cytoparam.git`
+        
+        ## Documentation
+        
+        For full package documentation please visit [AllenCell.github.io/aicscytoparam](https://AllenCell.github.io/aicscytoparam).
+        
+        ## Development
+        
+        See [CONTRIBUTING.md](CONTRIBUTING.md) for information related to developing the code.
+        
+        ## Questions?
+        
+        If you have any questions, feel free to leave a comment in our Allen Cell forum: [https://forum.allencell.org/](https://forum.allencell.org/). 
+        
+        
+        ***Free software: Allen Institute Software License***
+Keywords: aicscytoparam
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: Free for non-commercial use
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: setup
+Provides-Extra: test
+Provides-Extra: dev
+Provides-Extra: all
