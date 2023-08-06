@@ -1,0 +1,13 @@
+spotondocker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spotondocker/client.py,sha256=qBFhpKNGf08RRu_x6EiqI44XER1zE2h-Fn1JO5VBCCE,9872
+spotondocker/server.py,sha256=6z79BHnOAGaeelhCk5x3TIvAA_Xw_MlGshKfG37ZUl8,5411
+spotondocker/genpy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spotondocker/genpy/spotondocker/SpotOnDocker.py,sha256=HmiBD6TeO-TygEc8T9HLbC-Bk_gRK-gbSgOB-Xv5dRs,53083
+spotondocker/genpy/spotondocker/__init__.py,sha256=rl8wpfmWOvGjE7CIQ0ws_OySTi_l3jn_LFptpdBjTkA,51
+spotondocker/genpy/spotondocker/constants.py,sha256=4amduC_GDlxhvfD98coHcgdEOkIkz7rp258JZ5LHERY,380
+spotondocker/genpy/spotondocker/ttypes.py,sha256=davIaQbMHvOE1Z6IPeXiDrlZjbU4xwDr9RUk8DHZrNc,14808
+spotondocker-0.1.2.dist-info/LICENSE,sha256=Fg7JNv9DnCKfzxFsR9GGcIVWBYfjg94MvR8cAghlLs4,1552
+spotondocker-0.1.2.dist-info/METADATA,sha256=VJHy4IRNso1ZICJmxH9eIrd4Aq0M8eK8kf9LZkYz6Ao,2988
+spotondocker-0.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+spotondocker-0.1.2.dist-info/top_level.txt,sha256=YM-mgtJH35xKOVrWwZdc3L02BFaBG8HmT_o1_EHVymM,13
+spotondocker-0.1.2.dist-info/RECORD,,
