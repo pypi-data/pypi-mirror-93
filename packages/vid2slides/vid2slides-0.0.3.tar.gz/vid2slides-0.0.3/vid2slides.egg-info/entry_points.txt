@@ -1,0 +1,3 @@
+[console_scripts]
+vid2slides = vid2slides.cli:cli
+
