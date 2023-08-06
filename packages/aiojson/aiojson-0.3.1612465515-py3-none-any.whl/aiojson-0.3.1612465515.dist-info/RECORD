@@ -1,0 +1,17 @@
+aiojson/__init__.py,sha256=3fAXcCaHSZ60D4CrQxBeyh0Qs6yybYAejJc_qjyXdCs,50
+aiojson/client.py,sha256=gPOMuNg7ZXu9fVCNfqOFIZKh3IJaDFa0WsBcIyrrjYs,2741
+aiojson/config.py,sha256=HHeUabZK_IY9T3Qn4iEQr38tJtDU-Yf75kHa4nvTPyg,195
+aiojson/exception.py,sha256=XIhwf8VR1RDW6ll6GCZtw04fhoeRSw4_juMP8DriAXM,415
+aiojson/middleware.py,sha256=HkDHQuOd_yNArv9kRaQGwHiSDxqmqJPazH2zxXPxiP8,816
+aiojson/response.py,sha256=QvQCMymYg-tuFiJRIFyX5o6JpVCdHE-G0T92kqmrE0w,717
+aiojson/routes.py,sha256=kDXCtqaL09Zbxa6W2HK5y98t5Pvd2HKgDihZA_vjQ2k,1631
+aiojson/template.py,sha256=kWU2LYKcn_bWSgMJIXYkTRPD4NAX4-EAi_cvdscNNHo,4855
+tests/functional/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/pytest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/pytest/test_middleware.py,sha256=U-GVw78X-qyke5rvj0iST_Y2kN3DiWCT7AhXMnA2520,418
+tests/pytest/test_responses.py,sha256=kWKaC5cYt5lWpxAkJqzWsI0mXqJ_OceECfpspzB51Rw,1653
+tests/pytest/test_templates.py,sha256=XSdMPW1He0kZQF5dJIfy5s7h6llYpTquDg8x1GESuIg,3607
+aiojson-0.3.1612465515.dist-info/METADATA,sha256=u4ZJ-mY7scfL8lyHWzc0a9KEQvomn_shki9PFqAKttE,1061
+aiojson-0.3.1612465515.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aiojson-0.3.1612465515.dist-info/top_level.txt,sha256=opUsOaIDL62kFxlx9snyO8IIwLL4rY-w7G0yUC_pL6M,14
+aiojson-0.3.1612465515.dist-info/RECORD,,
