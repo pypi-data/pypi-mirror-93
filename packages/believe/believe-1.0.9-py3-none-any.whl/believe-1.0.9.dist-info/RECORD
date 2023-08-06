@@ -1,0 +1,13 @@
+believe/__init__.py,sha256=acdj2JzkRSxiSF5MmNAwkyzSZj1e3RCsQ3qZH9d4n6w,1028
+believe/dict_matcher.py,sha256=ThlkuQTYOW6nPKfJD5SN_wmbi5A5czUtxbF6lP6brvY,2523
+believe/error.py,sha256=ESbLx_xQcmybxWe7wYfg_Fie9LjHnWNTzVtVU4hZMq0,898
+believe/internal.py,sha256=OEbX_UWjFLmmSfxu7SrmbbR5xIefR2njsfSBg4i848E,1367
+believe/list_matcher.py,sha256=c-4mHWQ4KxqwPFsTzip0cQzLD1vwkvMEyo7HUeLwbEY,2019
+believe/number_matcher.py,sha256=qj4Rw1HJ-73RcO5IzuZai01eYC0cYIC1J8apKQk1inQ,1808
+believe/other_matcher.py,sha256=f80SuF0OdzOg2AsMwlxFDg22cd1ISKLtCrXroNX1WUo,939
+believe/str_matcher.py,sha256=6kCRwg84hxFNbpcqRMW5qty8dcsToi2JRWJLqIDNGCU,2657
+believe-1.0.9.dist-info/LICENSE,sha256=mNKNG4Fz69LLjCsAScbysGlRWES_LpoVdURIFNrjdO0,1063
+believe-1.0.9.dist-info/METADATA,sha256=VyEqHXkWU4B5eoOHMgY2Nuq-rRtjSpff_4EAczJypIM,3597
+believe-1.0.9.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+believe-1.0.9.dist-info/top_level.txt,sha256=LDjW6QO2bfeKbnnYddWBdwao2_6U_6wmYk15Tfa3f3M,8
+believe-1.0.9.dist-info/RECORD,,
