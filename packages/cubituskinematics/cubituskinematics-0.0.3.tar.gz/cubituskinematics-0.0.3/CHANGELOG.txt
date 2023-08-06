@@ -1,0 +1,14 @@
+Change Log
+----------
+
+0.0.3 (02/02/2021)
+------------------
+- Bugfix release of this package (fixed module dependencies) - now fully functional
+
+0.0.2 (02/01/2021)
+------------------
+- Bugfix release of this package (fixed module dependencies) - does not work
+
+0.0.1 (02/01/2021)
+------------------
+- First Release of this package (no minor/major changes made yet)
