@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: pytorchkeras
+Version: 0.0.2
+Summary: Its a Keras replica for Pytorch
+Home-page: https://github.com/malihamza/keras_pytorch
+Author: Ali Hamza
+Author-email: alihamzakhan94@gmail.com
+License: UNKNOWN
+Description: # Pytorch Keras 
+        It is keras like for the Pytorch.
+        For now, it has Fit and compile method and rest will be added later, it does not behave exactly like Keras, but we can make it so in the future.
+        
+        
+        ## Installtion
+        
+        Run the following to install
+        
+        ```python
+            pip install pytorchkeras==0.0.1
+        ```
+        
+        ## Usage
+        ```python
+            from PytorchKeras import PytorchKeras
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

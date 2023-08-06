@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+main.py
+setup.py
+dist/pytorchkeras-0.0.1-py3-none-any.whl
+src/Constants.py
+src/PytorchKeras.py
+src/pytorchkeras.egg-info/PKG-INFO
+src/pytorchkeras.egg-info/SOURCES.txt
+src/pytorchkeras.egg-info/dependency_links.txt
+src/pytorchkeras.egg-info/requires.txt
+src/pytorchkeras.egg-info/top_level.txt
