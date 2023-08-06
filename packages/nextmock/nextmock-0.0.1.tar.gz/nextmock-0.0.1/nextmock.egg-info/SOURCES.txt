@@ -1,0 +1,11 @@
+README.md
+setup.py
+nextmock/__init__.py
+nextmock/arg.py
+nextmock/async_mock.py
+nextmock/fake.py
+nextmock/mock.py
+nextmock.egg-info/PKG-INFO
+nextmock.egg-info/SOURCES.txt
+nextmock.egg-info/dependency_links.txt
+nextmock.egg-info/top_level.txt
