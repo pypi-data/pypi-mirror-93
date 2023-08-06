@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: zimp
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/freecraver/simp
+Author: Martin Freisehner
+Author-email: mfreisehner@gmail.com
+License: apache-2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Description-Content-Type: text/markdown
+
+# zimp
+A pip package for simplifying texts for NLP pipelines
+
+

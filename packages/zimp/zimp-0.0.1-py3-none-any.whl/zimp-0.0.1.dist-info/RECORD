@@ -1,0 +1,11 @@
+simp/__init__.py,sha256=wL5_TvfBwaFs22eraoPAfAsCxmakQ9YL1Sn_BqlxwZQ,49
+simp/readability/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simp/readability/metrics.py,sha256=skgVNkrXhjZIxYbBdbnRZyIDx2JMImTx1XvLWf0hXMY,42
+zimp/__init__.py,sha256=wL5_TvfBwaFs22eraoPAfAsCxmakQ9YL1Sn_BqlxwZQ,49
+zimp/readability/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zimp/readability/metrics.py,sha256=skgVNkrXhjZIxYbBdbnRZyIDx2JMImTx1XvLWf0hXMY,42
+zimp-0.0.1.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+zimp-0.0.1.dist-info/METADATA,sha256=g1BDY22oRodFQUmIHeqF6g7y15SVb3G8z4eE8Yx3L1k,470
+zimp-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+zimp-0.0.1.dist-info/top_level.txt,sha256=bhk2hHNltfhOPENx6wMD621mH1hiEgW5SFGPpqLwhSg,5
+zimp-0.0.1.dist-info/RECORD,,
