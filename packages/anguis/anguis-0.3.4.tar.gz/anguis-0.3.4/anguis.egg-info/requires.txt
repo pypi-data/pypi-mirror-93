@@ -1,0 +1,6 @@
+gitpython
+paramiko
+etcd3
+redis
+sqlitedict
+pymemcache
