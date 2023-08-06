@@ -1,0 +1,8 @@
+cdk_apisix/__init__.py,sha256=vCAwhWtE4XwTBuYZ3agXEKN8Nw4sUGQcc36iA0r8REc,11183
+cdk_apisix/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cdk_apisix/_jsii/__init__.py,sha256=YfqvdOj2Ba7mhqQ1R7hCpjjZUGTA6OZipg1QkTia2FM,592
+cdk_apisix/_jsii/cdk-apisix@0.0.35.jsii.tgz,sha256=3HvdH5Hk_ONCIt3-HvNZa2zBD0TYcG7TvACv01EXDJI,405892
+cdk_apisix-0.0.35.dist-info/METADATA,sha256=K27uUaK-HzMV1g4exsy85fmBPbRhpdZLjWVo1dc2g9g,2690
+cdk_apisix-0.0.35.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cdk_apisix-0.0.35.dist-info/top_level.txt,sha256=2MyGlIfp1pDW1p9944muLeXBAnMbVBARCqAwwhE1BDk,11
+cdk_apisix-0.0.35.dist-info/RECORD,,
