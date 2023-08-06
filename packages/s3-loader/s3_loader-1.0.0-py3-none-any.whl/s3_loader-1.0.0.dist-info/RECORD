@@ -1,0 +1,6 @@
+s3_loader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+s3_loader/main.py,sha256=LK0MCfE0WW7mHVhFNm6pHZZ1Xn94vuxxbo4Thv1MJz8,1127
+s3_loader-1.0.0.dist-info/entry_points.txt,sha256=Y4lMzv9AR3OwPu9cw93e0Zg2AoGdsBRDbImUwUkTugM,50
+s3_loader-1.0.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+s3_loader-1.0.0.dist-info/METADATA,sha256=mKoLeTPK7IW7fEBsDDS0xVF7-oE4Y_Uef3YM3Qq2pZo,474
+s3_loader-1.0.0.dist-info/RECORD,,
