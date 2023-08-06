@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+modularRoboticsBasic/__init__.py
+modularRoboticsBasic/canInterface.py
+modularRoboticsBasic/robot.py
+modularRoboticsBasic.egg-info/PKG-INFO
+modularRoboticsBasic.egg-info/SOURCES.txt
+modularRoboticsBasic.egg-info/dependency_links.txt
+modularRoboticsBasic.egg-info/requires.txt
+modularRoboticsBasic.egg-info/top_level.txt
+test/test.py

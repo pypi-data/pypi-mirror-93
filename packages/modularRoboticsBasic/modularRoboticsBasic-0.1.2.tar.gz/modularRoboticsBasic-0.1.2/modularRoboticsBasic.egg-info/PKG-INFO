@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: modularRoboticsBasic
+Version: 0.1.2
+Summary: A package to controll products of Modular robotics
+Home-page: https://github.com/Fischchen/modular-robotics
+Author: Fischchen
+Author-email: tipp.klever@gmail.com
+License: MIT
+Download-URL: https://github.com/Fischchen/modular-robotics/archive/v0.1-alpha.tar.gz
+Description: # modular-robotics-basics
+        
+        ## This libary is made to allow easy controll of products made by modular robotics.
+Keywords: SOME,MEANINGFULL,KEYWORDS
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
