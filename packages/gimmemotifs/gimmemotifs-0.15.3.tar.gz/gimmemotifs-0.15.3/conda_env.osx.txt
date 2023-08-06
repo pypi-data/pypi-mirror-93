@@ -1,0 +1,44 @@
+bedtools
+configparser
+diskcache
+feather-format
+gadem
+genomepy >=0.8.3
+ghostscript
+homer
+jinja2
+logomaker
+llvm-openmp
+matplotlib >=2.0
+meme >=5
+ncurses
+numpy
+prosampler
+pillow
+pyarrow
+pybedtools
+pysam
+python
+python-xxhash
+pyyaml >=3.10
+qnorm
+scikit-learn
+scipy
+seaborn
+statsmodels
+tqdm >=4.27.0
+trawler
+ucsc-bigbedtobed
+ucsc-genepredtobed
+weeder
+xdg
+xgboost=0.72
+xxmotif
+
+# development-specific
+black
+flake8
+flake8-bugbear
+pytest
+pytest-cov
+twine
