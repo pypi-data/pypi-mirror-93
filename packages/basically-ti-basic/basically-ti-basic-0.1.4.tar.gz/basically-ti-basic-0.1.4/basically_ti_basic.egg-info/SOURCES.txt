@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+basically_ti_basic/__init__.py
+basically_ti_basic/__version__.py
+basically_ti_basic/main.py
+basically_ti_basic.egg-info/PKG-INFO
+basically_ti_basic.egg-info/SOURCES.txt
+basically_ti_basic.egg-info/dependency_links.txt
+basically_ti_basic.egg-info/entry_points.txt
+basically_ti_basic.egg-info/requires.txt
+basically_ti_basic.egg-info/top_level.txt
+basically_ti_basic/compiler/__init__.py
+basically_ti_basic/files/__init__.py
+basically_ti_basic/tokens/__init__.py
