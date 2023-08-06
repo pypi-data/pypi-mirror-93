@@ -1,0 +1,24 @@
+attrs>=19.1
+certvalidator
+cryptoparser>=0.3.0
+urllib3
+six
+
+[:python_version < "3.4"]
+enum34==1.1.6
+py2-ipaddress
+
+[:python_version < '3']
+enum34==1.1.6
+Mock
+
+[pep8]
+flake8
+
+[pylint]
+pylint
+
+[test]
+unittest2
+coverage
+six
