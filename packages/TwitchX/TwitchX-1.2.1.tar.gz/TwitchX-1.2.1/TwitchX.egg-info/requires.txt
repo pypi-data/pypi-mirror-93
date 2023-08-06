@@ -1,0 +1,8 @@
+aiohttp[speedups]
+aiographql-client
+pydantic
+ujson
+user_agent
+Scrapy
+browser_cookie3
+requests

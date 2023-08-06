@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: TwitchX
+Version: 1.2.1
+Summary: Netchive-Lite Twitch Extension
+Home-page: https://netchive.com/
+Author: Netchive™ Team
+Author-email: contact@netchive.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: TwitchX,Twitch,Netchive,Extension
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: Free for non-commercial use
+Classifier: Development Status :: 3 - Alpha
