@@ -1,0 +1,5 @@
+python-mpd2
+ffmpeg-python
+pixcat
+pillow
+ueberzug
