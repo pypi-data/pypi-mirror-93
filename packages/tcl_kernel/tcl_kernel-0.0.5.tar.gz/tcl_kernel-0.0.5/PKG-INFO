@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: tcl_kernel
+Version: 0.0.5
+Summary: A Tcl kernel for Jupyter
+Home-page: https://github.com/ryanpepper/tcl_kernel
+Author: Ryan Pepper
+Author-email: rp20g15@soton.ac.uk
