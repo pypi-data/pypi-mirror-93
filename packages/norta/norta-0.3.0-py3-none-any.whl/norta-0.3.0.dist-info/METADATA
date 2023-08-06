@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: norta
+Version: 0.3.0
+Summary: Normal-To-Anything fitter
+Home-page: https://github.com/dukduque/NortaPy
+Author: Daniel Duque-Villarreal
+Author-email: d.duque25@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+UNKNOWN
+
+
