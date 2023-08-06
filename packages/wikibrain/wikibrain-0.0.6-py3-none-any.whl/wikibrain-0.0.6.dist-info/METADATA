@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: wikibrain
+Version: 0.0.6
+Summary: Stores knowledge and data necessary to properly use links from OpenStreetMap to Wikipedia, Wikidata and other Wikimedia projects.
+Home-page: https://github.com/matkoniecz/wikibrain
+Author: Mateusz Konieczny
+Author-email: matkoniecz@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: geopy (>=1.11.0)
+Requires-Dist: nose (>=1.3.7)
+
+Stores knowledge and data necessary to properly use links from OpenStreetMap to Wikipedia, Wikidata and Wikimedia Commons.
+
+# Running tests
+
+```nosetests3``` or ```python3 -m unittest```
+
+
