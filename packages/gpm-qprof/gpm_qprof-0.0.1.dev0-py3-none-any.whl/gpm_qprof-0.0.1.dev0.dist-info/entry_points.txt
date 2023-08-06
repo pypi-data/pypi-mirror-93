@@ -1,0 +1,3 @@
+[console_scripts]
+qprof = qprof.qprof:main
+
