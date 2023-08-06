@@ -1,0 +1,6 @@
+README.md
+setup.py
+ubConvert.egg-info/PKG-INFO
+ubConvert.egg-info/SOURCES.txt
+ubConvert.egg-info/dependency_links.txt
+ubConvert.egg-info/top_level.txt
