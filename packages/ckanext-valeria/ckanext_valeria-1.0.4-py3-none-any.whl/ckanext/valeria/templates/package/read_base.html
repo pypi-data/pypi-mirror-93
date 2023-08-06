@@ -1,0 +1,12 @@
+{% ckan_extends %}
+
+{% block content_primary_nav %}
+  {{ h.build_nav_icon(dataset_type ~ '.read', _('Dataset'), id=pkg.id if is_activity_archive else pkg.name, icon='sitemap') }}
+{% endblock %}
+
+{% block package_organization %}
+{% if pkg.organization %}
+  {% set org = h.get_organization(pkg.organization.id) %}
+  {% snippet "snippets/organization.html", organization=org, has_context_title=true %}
+{% endif %}
+{% endblock %}
