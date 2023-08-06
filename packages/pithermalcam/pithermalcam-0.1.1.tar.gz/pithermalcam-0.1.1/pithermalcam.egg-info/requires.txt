@@ -1,0 +1,9 @@
+numpy
+matplotlib
+scipy
+RPI.GPIO
+Adafruit-Blinka
+adafruit-circuitpython-mlx90640
+flask
+opencv-python
+cmapy
