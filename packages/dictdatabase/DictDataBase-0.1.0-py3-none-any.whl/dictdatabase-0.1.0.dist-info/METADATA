@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dictdatabase
+Version: 0.1.0
+Summary: Easy-to-use database using dicts
+License: MIT
+Author: Marcel Kröker
+Author-email: kroeker.marcel@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: path-dict (>=1.0.4,<2.0.0)
