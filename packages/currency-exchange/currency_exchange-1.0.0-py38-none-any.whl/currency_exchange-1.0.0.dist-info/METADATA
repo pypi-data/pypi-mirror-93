@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: currency-exchange
+Version: 1.0.0
+Summary: UNKNOWN
+Home-page: https://gitlab.godeltech.com/v.rashkevich/currencyexchange
+Author: Vadim Rashkevich
+Author-email: v.rashkevich@godeltech.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: requests
+Requires-Dist: pytest
+
+UNKNOWN
+
+

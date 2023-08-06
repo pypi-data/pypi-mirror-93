@@ -1,0 +1,11 @@
+CurrencyExchange/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+CurrencyExchange/currency_exchange.py,sha256=u7TCvFh8DNksw2-7OMRwXDb2I7q6m9tMT9323Ldfm2s,5977
+CurrencyExchange/logger.py,sha256=T7XwszN8tJgQBGn35TQiGC1baR4B4hIMyKnKTwAii_k,1134
+CurrencyExchange/menu.py,sha256=AablUn0I9dJF0jO_HRReyqbuIB06g2UM6JOHHVUy5y8,1483
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_currency.py,sha256=l_rQsUholmWSrdnKvJbWn88RrZgh762e2N_rzbLBDBo,7200
+currency_exchange-1.0.0.dist-info/METADATA,sha256=WWV40rwF7KjR9-FYBCZ81KjN5hO6l8oT1GvS2DNmLy8,329
+currency_exchange-1.0.0.dist-info/WHEEL,sha256=I5zY81DUoJ6uVSd-fokuUFvpLqLUGPlQYMOYm0Te7V4,93
+currency_exchange-1.0.0.dist-info/entry_points.txt,sha256=_UJZ1zPrs-6WLvfkYM8O-srYDzzFzOggkfzNHx4oMuA,65
+currency_exchange-1.0.0.dist-info/top_level.txt,sha256=KzWVjZYUbH8s_xKpuj5mTByYFiXf39PifLivpq5Jy8w,23
+currency_exchange-1.0.0.dist-info/RECORD,,
