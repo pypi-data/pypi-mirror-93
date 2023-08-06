@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sidemash-sdk
+Version: 1.0.6
+Summary: Official SDK to use Sidemash Cloud Services
+Home-page: https://github.com/sidemash/sdk-python
+Author: Sidemash Cloud Services
+Author-email: opensource@sidemash.com
+License: UNKNOWN
+Description: # sdk-python
+        Sdk for Sidemash Cloud Services in Python
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
