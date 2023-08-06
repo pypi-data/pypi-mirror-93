@@ -1,0 +1,11 @@
+gql[all]
+pydantic
+ujson
+user_agent
+browser_cookie3
+requests
+selenium
+scrapy
+gql[aiohttp]==3.0.0a5
+beautifulsoup4
+lxml
