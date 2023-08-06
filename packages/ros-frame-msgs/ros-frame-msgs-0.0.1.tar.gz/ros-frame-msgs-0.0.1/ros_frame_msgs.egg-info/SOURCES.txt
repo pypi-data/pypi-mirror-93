@@ -1,0 +1,16 @@
+setup.py
+frame_msgs/__init__.py
+frame_msgs/msg/_DetectedPerson.py
+frame_msgs/msg/_DetectedPersons.py
+frame_msgs/msg/_PersonTrajectories.py
+frame_msgs/msg/_PersonTrajectory.py
+frame_msgs/msg/_PersonTrajectoryEntry.py
+frame_msgs/msg/_TrackedPerson.py
+frame_msgs/msg/_TrackedPerson2d.py
+frame_msgs/msg/_TrackedPersons.py
+frame_msgs/msg/_TrackedPersons2d.py
+frame_msgs/msg/__init__.py
+ros_frame_msgs.egg-info/PKG-INFO
+ros_frame_msgs.egg-info/SOURCES.txt
+ros_frame_msgs.egg-info/dependency_links.txt
+ros_frame_msgs.egg-info/top_level.txt
