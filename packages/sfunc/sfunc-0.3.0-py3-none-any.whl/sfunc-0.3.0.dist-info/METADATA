@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: sfunc
+Version: 0.3.0
+Summary: Wrappers for using a single lambda function for AWS ApiGateway
+Home-page: https://github.com/hawry/single-lambda-api-function
+Author: hawry
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+
+UNKNOWN
+
+
