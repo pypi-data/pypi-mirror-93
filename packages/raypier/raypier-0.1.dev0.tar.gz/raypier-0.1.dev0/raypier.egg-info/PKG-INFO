@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: raypier
+Version: 0.1.dev0
+Summary: A optical ray-tracing package, for design, optimisation and 
+visualisation of mirror/lens systems. Physical optics modelling is possible
+using the method of Gaussian beam decomposition and Gausslet raytracing.
+Home-page: python-raytrace@googlegroups.com
+Author: Bryan Cole
+Author-email: bryancole.cam@gmail.com
+License: GPL3
+Download-URL: https://github.com/bryancole/raypier_optics
+Description: UNKNOWN
+Keywords: science engineering optics ray-tracing physcics
+Platform: UNKNOWN
