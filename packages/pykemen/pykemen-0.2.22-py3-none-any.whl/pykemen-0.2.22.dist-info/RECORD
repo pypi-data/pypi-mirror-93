@@ -1,0 +1,10 @@
+pykemen/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pykemen/utilities.py,sha256=U8pwMpnPlWV5TjzXTDnjyDtEh5GFnEOkMXAYR1n7FuA,1460
+pykemen/google/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pykemen/google/analytics_manager.py,sha256=xF97T7sCfPQRW5wX7vXpvz8X68ASOJeMnNK-rdTHlus,18865
+pykemen/google/bigquery_manager.py,sha256=zIW2E6TWRyK0-VmHty1JuTWgAr16ob_tB6OULqUvPOg,12674
+pykemen/google/mail_manager.py,sha256=KxLVhBvL-cnIrJw_-sj_DW6GL93CK4FdZ1Wg_Fhd4J8,3617
+pykemen-0.2.22.dist-info/METADATA,sha256=HcqAJNhJw9FHU5Xwr91tZUEw2ZzBu0Y8UK8GAYg2wP0,598
+pykemen-0.2.22.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+pykemen-0.2.22.dist-info/top_level.txt,sha256=CGVUFy7sbCb-9tSPXI-ydfs6cEHxWSBN_kjnnAa8YR4,8
+pykemen-0.2.22.dist-info/RECORD,,
