@@ -1,0 +1,8 @@
+beautifulsoup4
+kcu
+kstopit
+kyoutubescraper
+selenium
+selenium-account
+selenium-firefox
+selenium-uploader-account
