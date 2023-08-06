@@ -1,0 +1,8 @@
+README.md
+setup.py
+humor_langs/__init__.py
+humor_langs/main_trans.py
+humor_langs.egg-info/PKG-INFO
+humor_langs.egg-info/SOURCES.txt
+humor_langs.egg-info/dependency_links.txt
+humor_langs.egg-info/top_level.txt
