@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: invisible-watermark
+Version: 0.1.0
+Summary: The library for creating and decoding invisible image watermarks
+Home-page: https://github.com/ShiedMnt/invisible-watermark
+Author: Qingquan Wang
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: opencv-python (>=4.1.0.25)
+Requires-Dist: torch (==1.0.1.post2)
+Requires-Dist: torch-dct (==0.1.5)
+Requires-Dist: pandas (<0.26,>=0.25)
+Requires-Dist: numpy (<2,>=1.17.3)
+Requires-Dist: Pillow (>=6.0.0)
+Requires-Dist: PyWavelets (>=1.1.1)
+Requires-Dist: numpy (>=1.17.0)
+
+# invisible-watermark
+python library for invisible image watermark (blind image watermark)
+
+
