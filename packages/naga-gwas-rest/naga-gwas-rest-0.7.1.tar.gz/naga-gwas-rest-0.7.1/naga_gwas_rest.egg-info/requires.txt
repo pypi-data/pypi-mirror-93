@@ -1,0 +1,8 @@
+argparse
+networkx==1.11
+ndex2==3.0.0a1
+naga-gwas==0.4.1
+numpy
+flask
+flask-restplus
+python-daemon
