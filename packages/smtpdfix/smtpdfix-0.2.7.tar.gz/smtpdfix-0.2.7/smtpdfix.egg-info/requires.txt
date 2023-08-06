@@ -1,0 +1,11 @@
+aiosmtpd<=1.2.2
+cryptography
+lazy-object-proxy
+pytest
+python-dotenv
+
+[dev]
+flake8
+isort
+pytest-asyncio
+pytest-cov
