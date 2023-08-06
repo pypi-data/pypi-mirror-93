@@ -1,0 +1,7 @@
+attrdict>=2.0
+numpy>=1.0
+wxPython>=2.8
+matplotlib>=1.0pygame>=1.9
+mpl_utils>=0.1.1.0
+opencv-python
+scikit-image>=0.12

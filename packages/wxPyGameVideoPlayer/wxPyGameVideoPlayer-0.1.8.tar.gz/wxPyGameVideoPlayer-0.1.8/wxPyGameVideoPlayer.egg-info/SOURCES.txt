@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+wxPyGameVideoPlayer/__init__.py
+wxPyGameVideoPlayer/_version.py
+wxPyGameVideoPlayer/cv2_utils.py
+wxPyGameVideoPlayer/opencv_player.py
+wxPyGameVideoPlayer/pygame_interface.py
+wxPyGameVideoPlayer/thumbnails.py
+wxPyGameVideoPlayer/wx_func_utils.py
+wxPyGameVideoPlayer/wx_video_ui.py
+wxPyGameVideoPlayer.egg-info/PKG-INFO
+wxPyGameVideoPlayer.egg-info/SOURCES.txt
+wxPyGameVideoPlayer.egg-info/dependency_links.txt
+wxPyGameVideoPlayer.egg-info/requires.txt
+wxPyGameVideoPlayer.egg-info/top_level.txt
