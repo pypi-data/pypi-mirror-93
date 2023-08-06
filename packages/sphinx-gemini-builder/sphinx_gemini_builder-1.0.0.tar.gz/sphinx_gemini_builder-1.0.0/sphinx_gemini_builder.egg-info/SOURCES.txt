@@ -1,0 +1,15 @@
+LICENSE
+LICENSE-de
+LICENSE-fr
+LICENSE-nl
+README.rst
+setup.cfg
+setup.py
+sphinx_gemini_builder/__init__.py
+sphinx_gemini_builder/writer.py
+sphinx_gemini_builder.egg-info/PKG-INFO
+sphinx_gemini_builder.egg-info/SOURCES.txt
+sphinx_gemini_builder.egg-info/dependency_links.txt
+sphinx_gemini_builder.egg-info/entry_points.txt
+sphinx_gemini_builder.egg-info/requires.txt
+sphinx_gemini_builder.egg-info/top_level.txt

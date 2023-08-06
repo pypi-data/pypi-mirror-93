@@ -1,0 +1,3 @@
+[sphinx.builders]
+gemini = sphinx_gemini_builder
+
