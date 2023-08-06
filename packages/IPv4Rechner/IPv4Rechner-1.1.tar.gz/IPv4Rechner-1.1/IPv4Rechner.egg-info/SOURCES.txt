@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+IPv4Rechner/IPv4.py
+IPv4Rechner/__init__.py
+IPv4Rechner.egg-info/PKG-INFO
+IPv4Rechner.egg-info/SOURCES.txt
+IPv4Rechner.egg-info/dependency_links.txt
+IPv4Rechner.egg-info/top_level.txt
