@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: address_search_google
+Version: 0.0.1
+Summary: Google Search API with Caching for repeated search.
+Home-page: https://github.com/dextrop/address_search_google
+Author: Saurabh Pandey
+Author-email: scoder91@gmail.com
+License: UNKNOWN
+Description: # Search Google Address
+        
+        ## Usage
+        Google Search API with caching for repeated search.
+        
+        ## Example Code
+        ```python
+        from search_addr import SearchAddressGoogleAPI
+        
+        search_lib = SearchAddressGoogleAPI(key="YOUR_GOOGLE_SERVER_KEY")
+        search_lib.search_google("569KA/104 Shen Nagar, Alambagh, Lucknow, Uttar Pradesh, 226005")
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
