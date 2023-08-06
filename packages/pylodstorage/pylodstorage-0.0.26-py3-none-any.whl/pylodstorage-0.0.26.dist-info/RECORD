@@ -1,0 +1,15 @@
+lodstorage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lodstorage/jsonable.py,sha256=o06330xEjL3pEnfuXuBpOfGDmvLkyBIL7yghdzFr8Us,13215
+lodstorage/lod.py,sha256=6ZIhsDDjLEqSCD94ML5tYmCSijp8fV91IUeRlW5FwJ0,1336
+lodstorage/mwTable.py,sha256=N8luDA6zRTAhMX5hb1IBtyoMRyycwXWbNSxllk9CD64,2691
+lodstorage/query.py,sha256=APaOwg-KwBY5TAWNxfpXnU85Q8SvNzl8skR9bZBzdQg,2563
+lodstorage/sample.py,sha256=moB5WRgR1-UTM7rEeeyKxveZ35xOsPHln31TTgeYP-k,2991
+lodstorage/schema.py,sha256=vxPUF1dfSkAX4TL2fG-prTOAr-5IyRWo9PHhPHYdNtM,3694
+lodstorage/sparql.py,sha256=2VafC7L5_A3O75fPsLwL84iLQTARr4Wjhrgtk5wk5eI,14776
+lodstorage/sql.py,sha256=jlOocAW5PQIn59IZKBAI8oOQmF44OULWjpV88OXsEP4,18938
+lodstorage/uml.py,sha256=Pexfh6qLnjkis6ofoPOB3MXr-MVkXbkGrTKtg6uJWfA,6166
+pylodstorage-0.0.26.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pylodstorage-0.0.26.dist-info/METADATA,sha256=zpYvqDPaCnde2ZQ6flOmOJyeWgKDnGBQkZdprbAb7ws,2578
+pylodstorage-0.0.26.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pylodstorage-0.0.26.dist-info/top_level.txt,sha256=st19uGwrkkqmHTXbXcsJTIXKbeLb2vSQWJqztorxngc,11
+pylodstorage-0.0.26.dist-info/RECORD,,
