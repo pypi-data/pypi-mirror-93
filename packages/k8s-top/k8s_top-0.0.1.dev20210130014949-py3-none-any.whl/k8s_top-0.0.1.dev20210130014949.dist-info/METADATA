@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: k8s-top
+Version: 0.0.1.dev20210130014949
+Summary: K8S Top is a console dashboard and monitoring utility for Kubernetes
+Home-page: https://github.com/karellen/k8s-top
+Author: Karellen, Inc.
+Author-email: supervisor@karellen.co
+Maintainer: Arcadiy Ivanov
+Maintainer-email: arcadiy@karellen.co
+License: Apache License, Version 2.0
+Project-URL: Bug Tracker, https://github.com/karellen/k8s-top/issues
+Project-URL: Documentation, https://github.com/karellen/k8s-top/
+Project-URL: Source Code, https://github.com/karellen/k8s-top/
+Keywords: kubernetes k8s kube top monitoring dashboard
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Environment :: Console
+Classifier: Topic :: Utilities
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: System :: Distributed Computing
+Classifier: Topic :: System :: Clustering
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Networking :: Monitoring
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: gevent (>=21.1.2)
+Requires-Dist: kubernetes (~=12.0)
+Requires-Dist: picotui (~=1.1.2)
+
+# K8S Top - Console Dashboard and Monitoring Utility for Kubernetes
+
+[![Gitter](https://img.shields.io/gitter/room/karellen/lobby?logo=gitter)](https://gitter.im/karellen/lobby)
+
+[![K8STop Version](https://img.shields.io/pypi/v/k8s-top?logo=pypi)](https://pypi.org/project/k8s-top/)
+[![K8STop Python Versions](https://img.shields.io/pypi/pyversions/k8s-top?logo=pypi)](https://pypi.org/project/k8s-top/)
+[![K8STop Downloads Per Day](https://img.shields.io/pypi/dd/k8s-top?logo=pypi)](https://pypi.org/project/k8s-top/)
+[![K8STop Downloads Per Week](https://img.shields.io/pypi/dw/k8s-top?logo=pypi)](https://pypi.org/project/k8s-top/)
+[![K8STop Downloads Per Month](https://img.shields.io/pypi/dm/k8s-top?logo=pypi)](https://pypi.org/project/k8s-top/)
+
+
+
