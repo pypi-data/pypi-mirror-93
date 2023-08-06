@@ -1,0 +1,10 @@
+README.md
+setup.py
+gwapi/__init__.py
+gwapi/auth.py
+gwapi/data.py
+gwapi_genwch.egg-info/PKG-INFO
+gwapi_genwch.egg-info/SOURCES.txt
+gwapi_genwch.egg-info/dependency_links.txt
+gwapi_genwch.egg-info/requires.txt
+gwapi_genwch.egg-info/top_level.txt
