@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: strongarm-ios
+Version: 10.5.1
+Summary: Mach-O/ARM64 analyzer
+Home-page: https://github.com/datatheorem/strongarm
+Author: Data Theorem
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: capstone
+Requires-Dist: more-itertools
+Requires-Dist: strongarm-dataflow (==2.1.2)
+
+UNKNOWN
+
+
