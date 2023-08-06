@@ -1,0 +1,6 @@
+colored
+dict-toolbox>=2
+jinja2
+pop>=10.1
+pyyaml>=5.1
+toml
