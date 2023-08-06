@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+openweather_pws/__init__.py
+openweather_pws/__main__.py
+openweather_pws/openweather_pws.py
+openweather_pws.egg-info/PKG-INFO
+openweather_pws.egg-info/SOURCES.txt
+openweather_pws.egg-info/dependency_links.txt
+openweather_pws.egg-info/not-zip-safe
+openweather_pws.egg-info/requires.txt
+openweather_pws.egg-info/top_level.txt
