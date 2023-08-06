@@ -1,0 +1,8 @@
+minty_amqp/__init__.py,sha256=8b8YvOIYYmQxO1Hh7k16GFCPMayynm_SWmpfQ3jHt4w,105
+minty_amqp/client.py,sha256=adBELMdVOJ5T1-ZKtaDxWGrmcYyfTIj72ScDaEX8OjU,6614
+minty_amqp/consumer.py,sha256=6ZhIdnI4uBamAcJC1miRJ6M-hQa01wadpYUfn6iKASU,7418
+minty_amqp-2.1.5.dist-info/LICENSE,sha256=f-l6oY_PIHkuhTBX7NZ4ymHXmIImslftUGNzuRlYGWA,13961
+minty_amqp-2.1.5.dist-info/METADATA,sha256=UPxDNBIY32qO0Y-MhPMXgx4ol209PDLncFfn2y_Izi4,2843
+minty_amqp-2.1.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+minty_amqp-2.1.5.dist-info/top_level.txt,sha256=nrkZl7j8c6m_EmWw8Tez6swKAqa1zPKddrW8dwEdmPo,11
+minty_amqp-2.1.5.dist-info/RECORD,,
