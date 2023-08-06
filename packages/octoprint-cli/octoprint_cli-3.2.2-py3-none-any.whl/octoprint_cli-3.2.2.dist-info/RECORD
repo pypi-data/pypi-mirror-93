@@ -1,0 +1,9 @@
+octoprint_cli/__init__.py,sha256=BHySGfbUoTmBRhx1RakA8zUpqh40ahdIgQBJON04wJo,468
+octoprint_cli/__main__.py,sha256=aDzdOUOh69jtInYPlD3yZrlicnvGSMhC91STJwNkT7c,30909
+octoprint_cli/api.py,sha256=PDNNY5-CXhX8V1o_p2XhTzm0SMO0sNcokdsv_F-EkBM,2830
+octoprint_cli-3.2.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+octoprint_cli-3.2.2.dist-info/METADATA,sha256=iGGwCri3xmTTZn1GliQ4antAgnhDqZ__yxXUcx7DLUA,6554
+octoprint_cli-3.2.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+octoprint_cli-3.2.2.dist-info/entry_points.txt,sha256=21uaIOnOqZJRYCl6PaYu3jG0yGyxf121dCYEmcHmJi4,63
+octoprint_cli-3.2.2.dist-info/top_level.txt,sha256=uyXeNLyjBTQAwpAlwsbvg-ggSKnIAuZZqk_bmNbM6AA,14
+octoprint_cli-3.2.2.dist-info/RECORD,,
