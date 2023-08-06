@@ -1,0 +1,58 @@
+:root {
+    --read-the-docs-background-color:#fcfcfc;
+    --read-the-docs-accent-color: #2980b9;
+    --popup-dialog-background-color: rgb(212, 229, 241);
+    --astutus-table-scroll-static-height: 0px;
+}
+div.wy-side-scroll a.icon img.logo {
+    position: absolute;
+    left: 30px;
+    top: -5px;
+
+}
+.wy-nav-content {
+    /* Override width for dynamic pages: should be moved to specific pages
+    */
+    max-width: 1200px;
+}
+div.astutus-popup {
+    background-color: var(--popup-dialog-background-color);
+    display: none;
+    position: absolute;
+    z-index: 11000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.astutus-table-scroll-wrapper {
+    height: calc(100% - var(--astutus-table-scroll-static-height));
+    border-style: solid;
+    border-width: thin;
+}
+div.astutus-table-scroll {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: var(--read-the-docs-background-color);
+}
+table.astutus-table-scroll-header,
+table.astutus-table-scroll {
+  width: 100%
+}
+input[type=color].astutus-color {
+    height: 26px;
+    width: 26px;
+    padding: 1px;
+}
+div.astutus-menu {
+    padding: 4px 0px 4px 0px;
+    border-style: thin;
+}
+div.astutus-menu div {
+    padding: 0px 15px 0px 15px;
+}
+div.astutus-menu div:hover {
+    background-color: var(--read-the-docs-accent-color);
+}
+div.astutus-menu div:hover  a {
+    color: var(--read-the-docs-background-color);
+}
