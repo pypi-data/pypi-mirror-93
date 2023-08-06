@@ -1,0 +1,9 @@
+tcl_kernel/__init__.py,sha256=oolnVc-6zC-iiEQGDc6kOpQ58qQ_OiIuQ2gsKeNN3FM,54
+tcl_kernel/__main__.py,sha256=5MQOn6kl_HKb6qPKMSeTs26BZ1u3O307w8EfLoQGG00,126
+tcl_kernel/install.py,sha256=xqj6QCn8Njj8bvbOG_s9I8DZ--QYN-ajMwK9YtZ5JbQ,1167
+tcl_kernel/kernel.json,sha256=g05AvrdJw0_Bgu2Mo4-f4In9rcWLdlb4FDzaBZBY3k0,89
+tcl_kernel/kernel.py,sha256=gWb9AkznOok0FV1dPbFdKK8lehxcruigzSxCC5oVb0U,4035
+tcl_kernel-0.0.5.dist-info/LICENSE.md,sha256=vrGRmNmkmW5AF0l9Yf1NhjAog_-ss28br-CB8u_yjiM,1542
+tcl_kernel-0.0.5.dist-info/WHEEL,sha256=NLqmsx-ZFZ6gDavYgh2oH0ZSN-KRmpcdEXIZDnYy9Pg,99
+tcl_kernel-0.0.5.dist-info/METADATA,sha256=lbn-mT-4mfAPVaSD0Bi_J_TjEK498eQdOGaUu7_Jf-4,1397
+tcl_kernel-0.0.5.dist-info/RECORD,,
