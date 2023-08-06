@@ -1,0 +1,13 @@
+README.rst
+setup.cfg
+setup.py
+egn/__init__.py
+egn.egg-info/PKG-INFO
+egn.egg-info/SOURCES.txt
+egn.egg-info/dependency_links.txt
+egn.egg-info/entry_points.txt
+egn.egg-info/top_level.txt
+test/__init__.py
+test/test_cli.py
+test/test_egn.py
+test/test_parse.py
