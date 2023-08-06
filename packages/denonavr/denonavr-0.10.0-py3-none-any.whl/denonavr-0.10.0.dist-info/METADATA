@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: denonavr
+Version: 0.10.0
+Summary: Automation Library for Denon AVR receivers
+Home-page: https://github.com/scarface-4711/denonavr
+Author: Oliver Goetz
+Author-email: scarface@mywoh.de
+License: MIT
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Home Automation
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Requires-Dist: async-lru (>=1.0.2)
+Requires-Dist: attrs (>=20.3.0)
+Requires-Dist: defusedxml (>=0.6.0)
+Requires-Dist: httpx (>=0.16.1)
+Requires-Dist: netifaces (>=0.10.9)
+
+Automation Library for Denon AVR receivers
+
+
