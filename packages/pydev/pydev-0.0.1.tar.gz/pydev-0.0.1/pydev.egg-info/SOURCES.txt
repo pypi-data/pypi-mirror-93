@@ -1,0 +1,8 @@
+README.md
+pydev.py
+setup.py
+pydev.egg-info/PKG-INFO
+pydev.egg-info/SOURCES.txt
+pydev.egg-info/dependency_links.txt
+pydev.egg-info/requires.txt
+pydev.egg-info/top_level.txt
