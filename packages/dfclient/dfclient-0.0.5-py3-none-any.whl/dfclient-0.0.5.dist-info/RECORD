@@ -1,0 +1,8 @@
+dfclient/__init__.py,sha256=BHAad-DHOyQamDWJA1UTfisJ3xBpmfF5p877mbHAkNQ,245
+dfclient/client.py,sha256=P_9dNd0EG7RR-chG6s5kv51mDhV07umIUsh4CCJ47iY,2689
+dfclient/exceptions.py,sha256=A712w-qbxuoWc8_yRvughXWmQJDcXCjsRwjtkOSWxGc,170
+dfclient-0.0.5.dist-info/LICENSE,sha256=udtUbeXdoT5hUz-XWUrJiG1Nc7mByR9sG-I3fKBazsQ,14969
+dfclient-0.0.5.dist-info/METADATA,sha256=EpMyKlaljkCq2W-FIGCzuDtgkZ1LIhEq-QgeTb75M3Q,464
+dfclient-0.0.5.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+dfclient-0.0.5.dist-info/top_level.txt,sha256=SjvINW3hOeKIAselxnJjwCdVDzsDX94ludOrcLUWfpU,9
+dfclient-0.0.5.dist-info/RECORD,,
