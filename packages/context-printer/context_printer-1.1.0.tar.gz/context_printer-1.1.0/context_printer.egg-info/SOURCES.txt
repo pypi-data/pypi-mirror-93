@@ -1,0 +1,8 @@
+README.md
+setup.py
+context_printer/__init__.py
+context_printer/context_printer.py
+context_printer.egg-info/PKG-INFO
+context_printer.egg-info/SOURCES.txt
+context_printer.egg-info/dependency_links.txt
+context_printer.egg-info/top_level.txt
