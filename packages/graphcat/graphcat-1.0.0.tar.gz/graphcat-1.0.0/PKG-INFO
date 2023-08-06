@@ -1,0 +1,28 @@
+Metadata-Version: 1.2
+Name: graphcat
+Version: 1.0.0
+Summary: Lightweight, flexible toolkit for managing computational graphs.
+Home-page: https://graphcat.readthedocs.io
+Maintainer: Timothy M. Shead
+Maintainer-email: tim@shead-custom-design.com
+License: UNKNOWN
+Project-URL: Chat, https://graphcat.zulipchat.com
+Project-URL: Coverage, https://coveralls.io/r/shead-custom-design/graphcat
+Project-URL: Documentation, https://graphcat.readthedocs.io
+Project-URL: Issue Tracker, https://github.com/shead-custom-design/graphcat/issues
+Project-URL: Regression Tests, https://travis-ci.org/shead-custom-design/graphcat
+Project-URL: Source, https://github.com/shead-custom-design/graphcat
+Description: Graphcat provides a lightweight, flexible toolkit for managing computational graphs.
+            See the Graphcat documentation at http://graphcat.readthedocs.io, and the Graphcat sources at http://github.com/shead-custom-design/graphcat
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
