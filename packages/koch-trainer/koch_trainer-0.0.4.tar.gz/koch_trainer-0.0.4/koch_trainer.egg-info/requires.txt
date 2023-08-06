@@ -1,0 +1,2 @@
+audiogen@ https://github.com/rguisewite/audiogen/tarball/master
+PyAudio
