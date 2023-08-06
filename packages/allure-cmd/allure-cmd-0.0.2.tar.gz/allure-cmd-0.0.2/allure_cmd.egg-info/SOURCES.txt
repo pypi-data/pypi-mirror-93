@@ -1,0 +1,9 @@
+setup.py
+allure/__init__.py
+allure/__main__.py
+allure_cmd.egg-info/PKG-INFO
+allure_cmd.egg-info/SOURCES.txt
+allure_cmd.egg-info/dependency_links.txt
+allure_cmd.egg-info/entry_points.txt
+allure_cmd.egg-info/requires.txt
+allure_cmd.egg-info/top_level.txt
