@@ -1,0 +1,21 @@
+Metadata-Version: 1.0
+Name: siweilib
+Version: 0.0.2.8
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: A collection of utilities
+        
+        To publish:
+        
+        python upgrade_version.py -u
+        source build.sh
+        
+        
+        To publish (deprecated):
+        
+        python setup.py sdist bdist_wheel
+        twine upload dist/*
+Platform: UNKNOWN
