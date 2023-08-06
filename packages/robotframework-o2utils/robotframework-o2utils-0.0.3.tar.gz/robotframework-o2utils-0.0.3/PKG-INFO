@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: robotframework-o2utils
+Version: 0.0.3
+Summary: Package for testing needs
+Home-page: UNKNOWN
+Author: Eduard Farkaš
+License: UNKNOWN
+Description: # A sample Python project
+        
+        ![Python Logo](https://www.python.org/static/community_logos/python-logo.png "Sample inline image")
+        
+        second try
+Keywords: robot framework,testing
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown

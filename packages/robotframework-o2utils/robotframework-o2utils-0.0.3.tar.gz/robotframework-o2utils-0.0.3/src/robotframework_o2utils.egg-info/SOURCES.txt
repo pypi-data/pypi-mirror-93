@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/robotframework_o2utils.egg-info/PKG-INFO
+src/robotframework_o2utils.egg-info/SOURCES.txt
+src/robotframework_o2utils.egg-info/dependency_links.txt
+src/robotframework_o2utils.egg-info/top_level.txt
