@@ -1,0 +1,215 @@
+Metadata-Version: 2.1
+Name: benchling-sdk
+Version: 0.5.0a0
+Summary: SDK for interacting with the Benchling Platform. Currently unsupported for production use.
+License: Apache-2.0
+Author: Benchling Customer Engineering
+Author-email: ce-team@benchling.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: backoff (>=1.10.0,<2.0.0)
+Requires-Dist: benchling-api-client (>=0.10.8-alpha.0,<0.11.0)
+Requires-Dist: typing-extensions (>=3.7.4,<4.0.0)
+Description-Content-Type: text/markdown
+
+# Benchling SDK
+
+A Python 3.7+ SDK for the [Benchling](https://www.benchling.com/) platform designed to provide typed, fluent
+interactions with [Benchling APIs](https://docs.benchling.com/reference).
+
+*Important!* This is an unsupported pre-release not suitable for production use.
+
+## Getting Started
+
+### Installation
+
+Install the dependency via [Poetry](https://python-poetry.org/) (if applicable):
+
+```bash
+poetry add benchling-sdk
+```
+ 
+Or [Pip](https://pypi.org/project/pip/):
+ 
+```bash
+pip install benchling-sdk
+```
+
+### Using the SDK
+
+Obtain a valid API key from your Benchling account and provide it to the SDK, along with the URL for the server.
+Example:
+
+```python
+from benchling_sdk.benchling import Benchling
+benchling = Benchling(url="https://my.benchling.com", api_key="api_key")
+```
+
+With `Benchling` now instantiated, make a sample call to get a custom entity with the ID `"custom_id"`.
+
+```python
+entity = benchling.custom_entities.get_by_id(entity_id="custom_id")
+```
+
+API calls made by the SDK are synchronous and blocking.
+
+### Generators and nextToken
+
+Paginated API endpoints listing objects and supporting the `nextToken` parameter will produce a `PageIterator`, which
+is a [Python generator](https://wiki.python.org/moin/Generators). Example:
+
+```python
+requests_generator = benchling.requests.list(schema_id="assaych_test")
+next_request = next(requests_generator)
+```
+
+In this example, `requests_generator` is a generator. Each iteration will return a `List` of `Request`s, not an 
+individual `Request`.
+
+The `PageIterator` object has an `estimated_count()` which will return the value of the `Result-Count` header from
+the API, if applicable for the endpoint. Note that you MUST consume the generator at least once or `estimated_count()`
+will return `None`.
+
+### Working with Benchling Fields
+
+Many objects in Benchling have the concept of `fields`. They are represented in the SDK via the 
+`benchling_api_client.models.fields.Fields` class.
+
+To conveniently construct `Fields` from a dictionary, we have provided a `fields` method 
+in the `serialization_helper` module:
+
+```python
+from benchling_sdk.helpers.serialization_helpers import fields
+from benchling_api_client.models.custom_entity import CustomEntity
+
+entity = CustomEntity(
+    name="My Entity",
+    fields=fields({
+    "a_field": {"value": "First value"},
+    "second_field": {"value": "Second value"},
+    })
+)
+```
+
+### Unset
+
+The Benchling SDK uses the type `benchling_api_client.types.Unset` and the constant value 
+`benchling_api_client.types.UNSET` to represent values that were not present in an interaction with the API. This is to
+distinguish from values that were explicitly set to `None` from those that were simply unspecified.
+
+A common example might be updating only specific properties of an object:
+
+```python
+from benchling_api_client.models.custom_entity_update import CustomEntityUpdate
+
+update = CustomEntityUpdate(name="New name")
+
+updated_entity = benchling.custom_entities.update(
+    entity_id="entity_id", entity=update
+)
+```
+
+All other properties of `CustomEntityUpdate` besides `name` will default to `UNSET` and not be sent with the update. Setting any
+optional property to `None` will send a `null` JSON value. In general, you should not need to set `UNSET` directly.
+
+When receiving objects from the API, some of their fields may be `Unset`. To treat `UNSET` values equivalent to 
+`Optional[T]`, you can use the convenience function `unset_as_none()`:
+
+```python
+from benchling_sdk.helpers.serialization_helpers import unset_as_none
+
+sample_value: Union[Unset, None, int] = UNSET
+
+optional_value = unset_as_none(sample_value)
+# optional_value will be None
+```
+
+### Error Handling
+
+Failed API interactions will generally return a `BenchlingError`, which will contain some underlying
+information on the HTTP response such as the status. Example:
+
+```python
+from benchling_sdk.errors import BenchlingError
+
+try:
+    requests = benchling.requests.get_by_id("requst_id")
+except BenchlingError as error:
+    print(error.status_code)
+```
+
+If an HTTP error code is not returned to the SDK or deserialization fails, an unbounded `Exception` 
+could be raised instead.
+
+### Advanced Use Cases
+
+By default, the Benchling SDK is designed to be opinionated towards most common usage. There is some more 
+advanced configuration available for use cases which require it.
+
+### Retries
+
+The SDK will automatically retry certain HTTP calls when the calls fail and certain conditions are met.
+
+The default strategy is to retry calls failing with HTTP status codes `429`, `502`, `503`, and `504`. The rationale for
+these status codes being retried is that many times they are indicative of a temporary network failure or exceeding the
+rate limit and may be successful upon retry.
+
+Retries will be attempted up to 5 times, with an exponential time delay backoff between calls.
+
+To disable retries, specify `None` for `retry_strategy` when constructing `Benchling`:
+
+```python
+benchling = Benchling(url="https://my.benchling.com", api_key="api_key", retry_strategy=None)
+```
+
+Alternatively, instantiate your own `benchling_sdk.retry_helpers.RetryStrategy` to further customize retry behavior.
+
+### BenchlingApiClient Customization (e.g., HTTP Timeout Settings)
+
+While the SDK abstracts most of the HTTP transport layer, access can still be granted via the `BenchlingApiClient`. A
+common use case might be extending HTTP timeouts for all calls.
+
+This can be achieved by specifying a function which accepts a default configured instance of `BenchlingApiClient` and
+returns a mutated instance with the desired changes.
+
+For example, to set the HTTP timeout to 180 seconds:
+
+```python
+from benchling_api_client.benchling_client import BenchlingApiClient
+
+def higher_timeout_client(client: BenchlingApiClient) -> BenchlingApiClient:
+    return client.with_timeout(180)
+
+
+benchling = Benchling(
+    url="https://my.benchling.com",
+    api_key="api_key",
+    client_decorator=higher_timeout_client,
+)
+```
+
+To fully customize the `BenchlingApiClient` and ignore default settings, construct your own instance in lieu of 
+modifying the `client` argument.
+
+#### Changing the Base URL
+
+When instantiating `Benchling`, the path `/api/v2` will automatically be appended to the server information provided.
+
+For example, if creating `Benchling` like this:
+
+```python
+benchling = Benchling(url="https://my.benchling.com", api_key="api_key")
+```
+
+API calls will be made to `https://my.benchling.com/api/v2`.
+
+To specify, an alternative path, set the `base_path` when creating `Benchling`:
+
+```python
+benchling = Benchling(url="https://my.benchling.com", api_key="api_key", base_path="/api/custom")
+```
+
+In this case, API calls will be made to `https://my.benchling.com/api/custom`.
