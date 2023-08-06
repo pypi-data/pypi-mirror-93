@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: numtostring
+Version: 0.1.0
+Summary: A simple int-to-string converter to covert numbers like 10 to strings like ten
+Home-page: https://github.com/Khhs167/number-to-string/
+Author: khhs
+Author-email: khhs1671@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: number to text,conversion
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Other Audience
+Classifier: Programming Language :: Python :: 3
