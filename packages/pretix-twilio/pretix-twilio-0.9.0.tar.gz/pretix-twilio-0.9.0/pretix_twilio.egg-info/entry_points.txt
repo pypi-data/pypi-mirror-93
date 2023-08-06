@@ -1,0 +1,3 @@
+
+[pretix.plugin]
+pretix_twilio=pretix_twilio:PretixPluginMeta
