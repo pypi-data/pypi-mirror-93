@@ -1,0 +1,6 @@
+ipython
+matplotlib
+bokeh
+
+[:python_version < "3.7"]
+numpy<1.20
