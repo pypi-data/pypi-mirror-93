@@ -1,0 +1,9 @@
+README.md
+setup.py
+pickledict/__init__.py
+pickledict/dict.py
+pickledict/list.py
+pickledict.egg-info/PKG-INFO
+pickledict.egg-info/SOURCES.txt
+pickledict.egg-info/dependency_links.txt
+pickledict.egg-info/top_level.txt
