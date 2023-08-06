@@ -1,0 +1,12 @@
+pdbx/__init__.py,sha256=fUN8XK_jOxHhXS2Uxuzi1m--HUE6dh3VDzvnPXvcDnE,1424
+pdbx/_version.py,sha256=vMKEKmX6vmCto9pqQt61mRPx39NvCbB7pYq5Rw4xo_g,19161
+pdbx/containers.py,sha256=-pCETE2Y60FV2qM9f9j5RFIgPAnw83k1kN2FZfuwH5I,33758
+pdbx/errors.py,sha256=AyOik_N6b5lXId_Zo1noQhz7PIjrNw6DLsX9_JjMIzI,447
+pdbx/reader.py,sha256=Obw9rwI-F-qtJzVR-l7UkZ8InxgCeQxbjPy1LACZFiw,19572
+pdbx/writer.py,sha256=lTefJL0fY-Bn_udrDKxo5OyPiQMoci2I2_WAYHOAQqA,7142
+mmcif_pdbx-2.0.0.dist-info/LICENSE,sha256=9Ofzc7m5lpUDN-jUGkopOcLZC3cl6brz1QhKInF60yg,7169
+mmcif_pdbx-2.0.0.dist-info/METADATA,sha256=l3c5Pt6UbWYmRdcRgnbu-Rfca-JjyE8x5GLp5Mwa4k8,2495
+mmcif_pdbx-2.0.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+mmcif_pdbx-2.0.0.dist-info/top_level.txt,sha256=13Zf_7GIt0LNWJLYZnjyOdd5p7DgO2FFMW6lXVUHQb4,5
+mmcif_pdbx-2.0.0.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+mmcif_pdbx-2.0.0.dist-info/RECORD,,
