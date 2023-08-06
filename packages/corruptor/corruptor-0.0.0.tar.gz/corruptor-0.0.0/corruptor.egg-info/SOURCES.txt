@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+corruptor/__init__.py
+corruptor.egg-info/PKG-INFO
+corruptor.egg-info/SOURCES.txt
+corruptor.egg-info/dependency_links.txt
+corruptor.egg-info/top_level.txt
