@@ -1,0 +1,11 @@
+requests>=2.4.2
+cryptography==3.3.1
+PyJWT==2.0.1
+
+[setup]
+pytest-runner
+
+[test]
+mock
+pytest>=3.0.5
+PyYAML
