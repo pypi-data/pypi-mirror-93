@@ -1,0 +1,6 @@
+Po.py
+setup.py
+Taote.egg-info/PKG-INFO
+Taote.egg-info/SOURCES.txt
+Taote.egg-info/dependency_links.txt
+Taote.egg-info/top_level.txt
