@@ -1,0 +1,10 @@
+buildbot_fossil/__init__.py,sha256=I362P4QMS4VHDj7I4aoycN2AqOx6cnUCr5nPpMB85-U,33
+buildbot_fossil/changes.py,sha256=eR5Al3tJLYx_QgFFSJHtY0TtK-1FkMRgOxVLFSO4j84,11879
+buildbot_fossil/steps.py,sha256=-AKybqu0OCgz5MJQKU4YDxFsYQJpu_rccmhanMEjUcM,9904
+buildbot_fossil/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+buildbot_fossil/test/test_changes.py,sha256=-wtT-bgZ7PLDi4oRksRlz4NdRn6_rMTKy5CKL2KJ9ho,21558
+buildbot_fossil-0.2.dist-info/entry_points.txt,sha256=NpA7vI-cEWbxtBaRfPHtr2mXSnOs3cTsDHBXyJgJR6s,124
+buildbot_fossil-0.2.dist-info/LICENSE,sha256=34QkYgTjxUzSSuu8I3FCNfX8QddU1TtlREoq-_BwEw8,15122
+buildbot_fossil-0.2.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+buildbot_fossil-0.2.dist-info/METADATA,sha256=dTJXoAlg0A2YIOfETpLwNMJE6WYJS6bwrVpq74R_UXY,1597
+buildbot_fossil-0.2.dist-info/RECORD,,
