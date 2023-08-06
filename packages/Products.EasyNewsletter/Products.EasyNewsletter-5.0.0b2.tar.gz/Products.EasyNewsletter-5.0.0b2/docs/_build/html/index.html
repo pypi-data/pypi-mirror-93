@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to EasyNewsletter’s documentation! &#8212; EasyNewsletter 2.5.6 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">EasyNewsletter 2.5.6 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Welcome to EasyNewsletter’s documentation!</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-easynewsletter-s-documentation">
+<h1>Welcome to EasyNewsletter’s documentation!<a class="headerlink" href="#welcome-to-easynewsletter-s-documentation" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="what-is-it">
+<h1>What is it?<a class="headerlink" href="#what-is-it" title="Permalink to this headline">¶</a></h1>
+<p>EasyNewsletter is a simple but powerful newsletter/mailing product for Plone.</p>
+<p>For Features, Requirements and Installation see <a class="reference external" href="https://pypi.python.org/pypi/Products.EasyNewsletter">README</a> on PyPi.</p>
+</div>
+<div class="section" id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<p>You can use EasyNewsletter to manually create mailings/newsletters
+or you can use the collection criteria to collect content.</p>
+<p>EasyNewsletter can use multiple Collections to aggregate content for a newsletter issue.</p>
+<p>Once the content is generated one can edit the text as usual in Plone. But it’s not recommended,
+because TinyMCE is not very helpful with email markup. This will change when we integrated the <a href="#id3"><span class="problematic" id="id4">`Mosaico-Newsletter-Editor`_</span></a>. (Budget welcome!)
+.. _Mosaico-Newsletter-Editor: <a class="reference external" href="https://mosaico.io/">https://mosaico.io/</a></p>
+<p>You can create your own templates to structure the selected content. Please refer
+to the provided templates to see how it works.</p>
+</div>
+<div class="section" id="step-by-step">
+<h2>Step by step<a class="headerlink" href="#step-by-step" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Add a EasyNewsletter instance, fill in the form and save it.</p></li>
+<li><p>If you want to write a simple manual mailing, you can add an Issue and fill it out with your text.</p></li>
+<li><p>Or if you want to use collections to aggregate your content first, select some existing Collection in <code class="docutils literal notranslate"><span class="pre">Content</span> <span class="pre">aggregation</span> <span class="pre">sources</span></code> on the Newsletter and finally add an Issue.</p></li>
+<li><p>You can select more than one Collection to build categories like news, events and pictures in your newsletter.
+Empty Collections will be ignored in default aggregations templates.</p></li>
+<li><p>Go to the view tab and call <code class="docutils literal notranslate"><span class="pre">Aggregate</span> <span class="pre">body</span> <span class="pre">content</span></code> from the action or Newsletter menu menu.</p></li>
+<li><p>You can also select <cite>Content aggregation sources`</cite> on Issue level. Then only the issue Collections are used.</p></li>
+<li><p>Go to Send tab or Send action in Newsletter menu (&gt;=Plone 5) and push <code class="docutils literal notranslate"><span class="pre">Test</span> <span class="pre">Newsletter</span></code>.</p></li>
+<li><p>If your Newsletter/Mailing is finished, you can activate the send button by clicking on <code class="docutils literal notranslate"><span class="pre">Enable</span> <span class="pre">send</span> <span class="pre">button</span></code>.
+Then you can click on <code class="docutils literal notranslate"><span class="pre">Send</span> <span class="pre">newsletter</span></code> to send the Newsletter to all subscribers or selected groups and users.</p></li>
+</ol>
+</div>
+<div class="section" id="issue-workflow-information">
+<h2>Issue workflow information<a class="headerlink" href="#issue-workflow-information" title="Permalink to this headline">¶</a></h2>
+<p>There are now four workflow states for an issue, which are draft, sending, sent and master.
+If an issue is created, it’s initial state is draft.</p>
+<p>Only issues with state draft can be send.</p>
+<p>If a sendout is started, the state will move to sending.</p>
+<p>After an issue is sent, it’s state is sent and it will appear in the newsletter archive.</p>
+<p>In addition a master can be made out of an issue with the state draft or sent using the actions menu.
+The master acts as a blueprint, which can be reedited and copied as a new draft.</p>
+</div>
+<div class="section" id="images-in-html-mails">
+<h2>Images in HTML mails<a class="headerlink" href="#images-in-html-mails" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>All images with local urls in <code class="docutils literal notranslate"><span class="pre">src</span></code> attribute, are included and attached to the mail.</p></li>
+<li><p>All images with external absolute urls in <code class="docutils literal notranslate"><span class="pre">src</span></code> attribute are not attached but included in HTML with the original <code class="docutils literal notranslate"><span class="pre">src</span></code> url.</p></li>
+</ul>
+</div>
+<div class="section" id="elements-for-mails-only">
+<h2>Elements for mails only<a class="headerlink" href="#elements-for-mails-only" title="Permalink to this headline">¶</a></h2>
+<p>If you want some elements, let’s say a logo only in mails but not in the public view, you can add a class <code class="docutils literal notranslate"><span class="pre">mailonly</span></code>. All elements with class <code class="docutils literal notranslate"><span class="pre">mailonly</span></code> are filtered out in the public view.</p>
+</div>
+<div class="section" id="asyncronous-sendout">
+<h2>Asyncronous sendout<a class="headerlink" href="#asyncronous-sendout" title="Permalink to this headline">¶</a></h2>
+<p>Products.EasyNewsletter supports asyncronous sendout using <a class="reference external" href="https://pypi.python.org/pypi/collective.taskqueue">collective.taskqueue</a></p>
+<p>Add this to your instance section in your buildout config:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zope</span><span class="o">-</span><span class="n">conf</span><span class="o">-</span><span class="n">additional</span> <span class="o">=</span>
+    <span class="o">&lt;</span><span class="n">taskqueue</span><span class="o">&gt;</span>
+      <span class="n">queue</span> <span class="n">Products</span><span class="o">.</span><span class="n">EasyNewsletter</span><span class="o">.</span><span class="n">queue</span>
+    <span class="o">&lt;/</span><span class="n">taskqueue</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">taskqueue</span><span class="o">-</span><span class="n">server</span><span class="o">&gt;</span>
+      <span class="n">queue</span> <span class="n">Products</span><span class="o">.</span><span class="n">EasyNewsletter</span><span class="o">.</span><span class="n">queue</span>
+    <span class="o">&lt;/</span><span class="n">taskqueue</span><span class="o">-</span><span class="n">server</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>In your eggs list you should add the following install extra <code class="docutils literal notranslate"><span class="pre">[taskqueue]</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Products</span><span class="o">.</span><span class="n">EasyNewsletter</span><span class="p">[</span><span class="n">taskqueue</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>This will install collective.taskqeue as requirement. If you have configured your buildout according accordingly, Products.EasyNewsletter will automatically delegate the sendout to your worker instance.</p>
+</div>
+<div class="section" id="sending-a-daily-issue-automatically">
+<h2>Sending a daily issue automatically<a class="headerlink" href="#sending-a-daily-issue-automatically" title="Permalink to this headline">¶</a></h2>
+<p>EasyNewsletter can create and send daily issues, using the default template and
+default criteria. Beside those, you just need to configure your crontab (or
+clock server) to send a <cite>POST</cite> on <cite>&#64;&#64;daily-issue</cite> view.
+Eg:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Sends a newsletter, from Mon to Fri, at 0:00AM</span>
+<span class="mi">0</span> <span class="mi">0</span> <span class="o">*</span> <span class="o">*</span> <span class="mi">1</span><span class="o">-</span><span class="mi">5</span> <span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">POST</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">user</span><span class="p">:</span><span class="n">passwd</span><span class="nd">@example</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">mynewsletter</span><span class="o">/@</span><span class="nd">@daily</span><span class="o">-</span><span class="n">issue</span>
+</pre></div>
+</div>
+<p><cite>&#64;&#64;daily-issue</cite> returns a HTTP status code indicating what just happened (you
+can also test it with a GET, instead). In the table below, you can check the
+responses codes.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 25%" />
+<col style="width: 10%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="4"><p>&#64;&#64;daily-issue responses</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>Method/Precondition</p></th>
+<th class="head"><p>Not yet sent</p></th>
+<th class="head"><p>Empty</p></th>
+<th class="head"><p>Already Sent</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>GET</p></td>
+<td><p>100</p></td>
+<td><p>204</p></td>
+<td><p>200</p></td>
+</tr>
+<tr class="row-even"><td><p>POST</p></td>
+<td><p>200 <a class="footnote-reference brackets" href="#id2" id="id1">*</a></p></td>
+<td><p>204</p></td>
+<td><p>409</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">*</a></span></dt>
+<dd><p>It sends the issue first.</p>
+</dd>
+</dl>
+<div class="section" id="using-cron4plone-to-send-it-out">
+<h3>Using cron4plone to send it out<a class="headerlink" href="#using-cron4plone-to-send-it-out" title="Permalink to this headline">¶</a></h3>
+<p>You can now use cron4plone to call the new trigger <code class="docutils literal notranslate"><span class="pre">&#64;&#64;trigger-daily-issue</span></code> which will make a POST request to the <code class="docutils literal notranslate"><span class="pre">&#64;&#64;daily-issue</span></code>.</p>
+</div>
+</div>
+<div class="section" id="allowed-placeholders">
+<h2>Allowed placeholders<a class="headerlink" href="#allowed-placeholders" title="Permalink to this headline">¶</a></h2>
+<p>The following placeholder can be used in the header, body and footer fields or the aggregation and output templates:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">subscriber_salutation</span> <span class="pre">}}</span></code> example: Dear Ms.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">salutation</span> <span class="pre">}}</span></code> example: Ms.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">unsubscribe</span> <span class="pre">}}</span></code> unsubscribe link to be included in emails</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">unsubscribe_info</span> <span class="pre">}}</span></code> unsubscribe info dict, provides: link, text and rendered html, which equals the unsubscribe placeholder.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">receiver</span> <span class="pre">}}</span></code>  example: <code class="docutils literal notranslate"><span class="pre">{'salutation':</span> <span class="pre">'Guten</span> <span class="pre">Tag',</span> <span class="pre">'nl_language':</span> <span class="pre">'de',</span> <span class="pre">'fullname':</span> <span class="pre">'Test</span> <span class="pre">Member',</span> <span class="pre">'email':</span> <span class="pre">'maik&#64;planetcrazy.de'}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">language</span> <span class="pre">}}</span></code>  example: de</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">fullname</span> <span class="pre">}}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">issue_title</span> <span class="pre">}}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">issue_description</span> <span class="pre">}}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">banner_src</span> <span class="pre">}}</span></code>  Banner src url</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">logo_src</span> <span class="pre">}}</span></code>  Logo src url</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">date</span> <span class="pre">}}</span></code>  example: 30.05.2017</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">month</span> <span class="pre">}}</span></code>  example: 5</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">year</span> <span class="pre">}}</span></code>  example: 2017</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">calendar_week</span> <span class="pre">}}</span></code>  example: 41</p></li>
+</ul>
+</div>
+<div class="section" id="customize-personalization-placeholders">
+<h2>Customize personalization (placeholders)<a class="headerlink" href="#customize-personalization-placeholders" title="Permalink to this headline">¶</a></h2>
+<p>You can use the BeforePersonalizeEvent to override placeholder values or even manipulate the html before the placeholder are filled.</p>
+<p>First define a event handler somewhere in you package.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">enl_personalize</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+    <span class="n">edc</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;context&#39;</span><span class="p">]</span>
+    <span class="n">event</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;html&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;html&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;PHP&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">)</span>
+    <span class="n">firstname</span> <span class="o">=</span> <span class="n">edc</span><span class="p">[</span><span class="s1">&#39;receiver&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;firstname&#39;</span><span class="p">)</span>
+    <span class="n">lastname</span> <span class="o">=</span> <span class="n">edc</span><span class="p">[</span><span class="s1">&#39;receiver&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lastname&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">firstname</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">lastname</span><span class="p">:</span>
+        <span class="n">edc</span><span class="p">[</span><span class="s1">&#39;SUBSCRIBER_SALUTATION&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;Dear </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">edc</span><span class="p">[</span><span class="s1">&#39;receiver&#39;</span><span class="p">][</span><span class="s1">&#39;email&#39;</span><span class="p">]</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+<p>Then register the event handler for the BeforePersonalizeEvent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">subscriber</span>
+  <span class="k">for</span><span class="o">=</span><span class="s2">&quot;Products.EasyNewsletter.interfaces.IBeforePersonalizationEvent&quot;</span>
+  <span class="n">handler</span><span class="o">=</span><span class="s2">&quot;.subscribers.enl_personalize&quot;</span>
+  <span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p>For a working example see <code class="docutils literal notranslate"><span class="pre">test_before_the_personalization_filter</span></code> in <code class="docutils literal notranslate"><span class="pre">test_newsletter.py</span></code>.</p>
+</div>
+<div class="section" id="output-templates">
+<h2>Output templates<a class="headerlink" href="#output-templates" title="Permalink to this headline">¶</a></h2>
+<p>Output templates define the general frame (layout) for your newsletter.
+We provide some output templates, but you can add more. A output template has to be global available template.
+The default templates are in the skins folder. They have to be registered in the Plone registry, see below for an example how to do that with GenericSetup.</p>
+<p>You can add your output templates TTW in /portal_skins/custom/manage_main and add them to the registry in /portal_registry.
+Search there for EasyNewsletter, you will find <code class="docutils literal notranslate"><span class="pre">Products</span> <span class="pre">EasyNewsletter</span> <span class="pre">output_templates</span></code> where you can add your templates.</p>
+<p>To do it with your addon product, add this to your registry.xml in your profiles.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">name=</span><span class="s">&quot;Products.EasyNewsletter.output_templates&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">type=</span><span class="s">&quot;plone.registry.field.Dict&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;title&gt;</span>ENL Output templates<span class="nt">&lt;/title&gt;</span>
+        <span class="nt">&lt;key_type</span> <span class="na">type=</span><span class="s">&quot;plone.registry.field.TextLine&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;value_type</span> <span class="na">type=</span><span class="s">&quot;plone.registry.field.TextLine&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;value</span> <span class="na">purge=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;element</span> <span class="na">key=</span><span class="s">&quot;output_green_energy&quot;</span><span class="nt">&gt;</span>Green energy output template<span class="nt">&lt;/element&gt;</span>
+    <span class="nt">&lt;/value&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+<p>You can use methods like <code class="docutils literal notranslate"><span class="pre">get_results_from_aggregation_sources</span></code> in helper_views to get some useful infos about collections used to aggregate content. You can use them to create a table of contents for example.</p>
+</div>
+<div class="section" id="aggregation-templates">
+<h2>Aggregation templates<a class="headerlink" href="#aggregation-templates" title="Permalink to this headline">¶</a></h2>
+<p>An aggregation template defines how the from collections aggregated content is rendered in the newsletter issue.
+We provide some content aggregation templates, but you can add more. A aggregation template has to be global available template.
+The default templates are in the skins folder. They have to be registered in the Plone registry, see below for an example how to do that with GenericSetup.</p>
+<p>You can add your aggregation templates TTW in /portal_skins/custom/manage_main and add them to the registry in /portal_registry.
+Search there for EasyNewsletter, you will find <code class="docutils literal notranslate"><span class="pre">Products</span> <span class="pre">EasyNewsletter</span> <span class="pre">content_aggregation_templates</span></code> where you can add your templates.</p>
+<p>To do it with your addon product, add this to your registry.xml in your profiles.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">name=</span><span class="s">&quot;Products.EasyNewsletter.content_aggregation_templates&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">type=</span><span class="s">&quot;plone.registry.field.Dict&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;title&gt;</span>ENL Content aggregation templates<span class="nt">&lt;/title&gt;</span>
+        <span class="nt">&lt;key_type</span> <span class="na">type=</span><span class="s">&quot;plone.registry.field.TextLine&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;value_type</span> <span class="na">type=</span><span class="s">&quot;plone.registry.field.TextLine&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/field&gt;</span>
+    <span class="nt">&lt;value</span> <span class="na">purge=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;element</span> <span class="na">key=</span><span class="s">&quot;aggregation_fancy_pictures&quot;</span><span class="nt">&gt;</span>Fancy pictures listing<span class="nt">&lt;/element&gt;</span>
+    <span class="nt">&lt;/value&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+<p>You can use methods like <code class="docutils literal notranslate"><span class="pre">brain_has_lead_image</span></code> in helper_views to use them in the templates logic.</p>
+</div>
+<div class="section" id="filtering-users-groups-and-receivers">
+<h2>Filtering Users, Groups and Receivers<a class="headerlink" href="#filtering-users-groups-and-receivers" title="Permalink to this headline">¶</a></h2>
+<p>EasyNewsletter provide a flexible way to filter the Plone members, Plone groups and the recivers list. You can provide smal funtion in your add-on and register it as IReceiversMemberFilter, IReceiversGroupFilter or IReceiversPostSendingFilter. The filter get the list and can filter out some entries or even add some entries.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Interface:</span> <span class="pre">Products.EasyNewsletter.interfaces.IReceiversMemberFilter</span></code></p>
+<p>The IReceiversMemberFilter filters can be used to filter the list of Plone members which a user can select in newsletters and issues.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ReceiversMemberFilterNoPloneMember</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; filters all members out of newsletter receivers selection list,</span>
+<span class="sd">        which are default plone members. This is usefull if you whant</span>
+<span class="sd">        only membrane members but not the default plone user as receivers.</span>
+<span class="sd">        receivers: [(id, {&#39;email&#39;: &#39;info@example.com&#39;,...})]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span> <span class="o">=</span> <span class="n">context</span>
+
+    <span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">receivers</span><span class="p">):</span>
+        <span class="n">portal</span> <span class="o">=</span> <span class="n">getSite</span><span class="p">()</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">query</span><span class="p">[</span><span class="s1">&#39;portal_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Contact&#39;</span><span class="p">,]</span>
+        <span class="n">contacts</span> <span class="o">=</span> <span class="n">portal</span><span class="o">.</span><span class="n">membrane_tool</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+        <span class="n">whitelist</span> <span class="o">=</span> <span class="p">[</span><span class="n">contact</span><span class="o">.</span><span class="n">getUserId</span> <span class="k">for</span> <span class="n">contact</span> <span class="ow">in</span> <span class="n">contacts</span><span class="p">]</span>
+        <span class="n">receivers</span> <span class="o">=</span> <span class="p">[</span><span class="n">receiver</span> <span class="k">for</span> <span class="n">receiver</span> <span class="ow">in</span> <span class="n">receivers</span>
+                <span class="k">if</span> <span class="n">receiver</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="n">whitelist</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">receivers</span>
+</pre></div>
+</div>
+<p><strong>This filter should be registered as follow:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">subscriber</span> <span class="n">zcml</span><span class="p">:</span><span class="n">condition</span><span class="o">=</span><span class="s2">&quot;installed my.package&quot;</span>
+    <span class="k">for</span><span class="o">=</span><span class="s2">&quot;Products.EasyNewsletter.interfaces.IEasyNewsletter&quot;</span>
+    <span class="n">factory</span><span class="o">=</span><span class="s2">&quot;my.package.newsletter.ReceiversMemberFilterNoPloneMember&quot;</span>
+    <span class="n">provides</span><span class="o">=</span><span class="s2">&quot;Products.EasyNewsletter.interfaces.IReceiversMemberFilter&quot;</span> <span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Interface:</span> <span class="pre">Products.EasyNewsletter.interfaces.IReceiversGroupFilter</span></code></p>
+<p>The IReceiversGroupFilter filters can be used to filter the list of Plone groups which a user can select in newsletters and issues.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ReceiversGroupFilterInactiveOrganizations</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Filter all inactive organizations, out of the group selection list.</span>
+<span class="sd">        receivers: [(id, {&#39;email&#39;: &#39;info@example.com&#39;,...})]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span> <span class="o">=</span> <span class="n">context</span>
+
+    <span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">receivers</span><span class="p">):</span>
+        <span class="n">portal</span> <span class="o">=</span> <span class="n">getSite</span><span class="p">()</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">query</span><span class="p">[</span><span class="s1">&#39;portal_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Organization&#39;</span><span class="p">]</span>
+        <span class="n">query</span><span class="p">[</span><span class="s1">&#39;review_state&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;inactive&#39;</span><span class="p">,</span> <span class="s1">&#39;internal&#39;</span><span class="p">,</span> <span class="s1">&#39;pending&#39;</span><span class="p">,</span> <span class="s1">&#39;former_member&#39;</span><span class="p">]</span>
+        <span class="n">inactive_groups</span> <span class="o">=</span> <span class="n">portal</span><span class="o">.</span><span class="n">membrane_tool</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+        <span class="n">blacklist</span> <span class="o">=</span> <span class="p">[</span><span class="n">black</span><span class="o">.</span><span class="n">getGroupId</span> <span class="k">for</span> <span class="n">black</span> <span class="ow">in</span> <span class="n">inactive_groups</span><span class="p">]</span>
+        <span class="n">receivers</span> <span class="o">=</span> <span class="p">[</span><span class="n">receiver</span> <span class="k">for</span> <span class="n">receiver</span> <span class="ow">in</span> <span class="n">receivers</span>
+                <span class="k">if</span> <span class="n">receiver</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">blacklist</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">receivers</span>
+</pre></div>
+</div>
+<p><strong>This filter should be registered as follow:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">subscriber</span> <span class="n">zcml</span><span class="p">:</span><span class="n">condition</span><span class="o">=</span><span class="s2">&quot;installed my.package&quot;</span>
+    <span class="k">for</span><span class="o">=</span><span class="s2">&quot;Products.EasyNewsletter.interfaces.IEasyNewsletter&quot;</span>
+    <span class="n">factory</span><span class="o">=</span><span class="s2">&quot;my.package.newsletter.ReceiversGroupFilterInactiveOrganizations&quot;</span>
+    <span class="n">provides</span><span class="o">=</span><span class="s2">&quot;Products.EasyNewsletter.interfaces.IReceiversGroupFilter&quot;</span> <span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Interface:</span> <span class="pre">Products.EasyNewsletter.interfaces.IReceiversMemberFilter</span></code></p>
+<p>The IReceiversPostSendingFilter can be used to filter the list of reveivers before sending emails to all receivers.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ReceiversPostSendingFilterNoNewsletter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Filter all contacts that has not set the receive_newsletter</span>
+<span class="sd">    flag, out of receivers email list. But only if the Newsletter provide</span>
+<span class="sd">    IReceiversMemberFilterNoNewsletter.</span>
+<span class="sd">    receivers: [{&#39;email&#39;: &#39;info@example.com&#39;,...}]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span> <span class="o">=</span> <span class="n">context</span>
+
+    <span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">receivers</span><span class="p">):</span>
+        <span class="n">newsletter_object</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span>
+        <span class="k">if</span> <span class="n">IReceiversMemberFilterNoNewsletter</span><span class="o">.</span><span class="n">providedBy</span><span class="p">(</span><span class="n">newsletter_object</span><span class="p">):</span>
+            <span class="n">portal</span> <span class="o">=</span> <span class="n">getSite</span><span class="p">()</span>
+            <span class="n">query</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">query</span><span class="p">[</span><span class="s1">&#39;portal_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Contact&#39;</span><span class="p">]</span>
+            <span class="n">query</span><span class="p">[</span><span class="s1">&#39;getReceive_newsletter&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">no_enl_contacts</span> <span class="o">=</span> <span class="n">portal</span><span class="o">.</span><span class="n">membrane_tool</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+            <span class="n">blacklist</span> <span class="o">=</span> <span class="p">[</span><span class="n">black</span><span class="o">.</span><span class="n">getUserId</span> <span class="k">for</span> <span class="n">black</span> <span class="ow">in</span> <span class="n">no_enl_contacts</span><span class="p">]</span>
+            <span class="n">receivers</span> <span class="o">=</span> <span class="p">[</span><span class="n">receiver</span> <span class="k">for</span> <span class="n">receiver</span> <span class="ow">in</span> <span class="n">receivers</span>
+                    <span class="k">if</span> <span class="n">receiver</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">blacklist</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">receivers</span>
+</pre></div>
+</div>
+<p><strong>This filter should be registered as follow:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">subscriber</span> <span class="n">zcml</span><span class="p">:</span><span class="n">condition</span><span class="o">=</span><span class="s2">&quot;installed my.package&quot;</span>
+    <span class="k">for</span><span class="o">=</span><span class="s2">&quot;Products.EasyNewsletter.interfaces.IEasyNewsletter&quot;</span>
+    <span class="n">factory</span><span class="o">=</span><span class="s2">&quot;my.package.newsletter.ReceiversPostSendingFilterNoNewsletter&quot;</span>
+    <span class="n">provides</span><span class="o">=</span><span class="s2">&quot;Products.EasyNewsletter.interfaces.IReceiversPostSendingFilter&quot;</span> <span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p>An external subscriber sources provides (additional) subscriber to a newsletter instance.</p>
+<p>You configure an external subscriber source as a Zope 3 utility providing ISubscriberSource
+(here’s an example where subscriptions are managed externally through MongoDB):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NewsletterSource</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="n">implements</span><span class="p">(</span><span class="n">ISubscriberSource</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">getSubscribers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">newsletter</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; return all subscribers for the given newsletter</span>
+<span class="sd">            from the MyInfo user database. Newsletter subscriptions</span>
+<span class="sd">            are referenced inside MyInfo through UIDs.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">uid</span> <span class="o">=</span> <span class="n">newsletter</span><span class="o">.</span><span class="n">UID</span><span class="p">()</span>
+
+        <span class="c1"># find MyInfo subscribers</span>
+        <span class="n">myinfo</span> <span class="o">=</span> <span class="n">getUtility</span><span class="p">(</span><span class="n">IMyInfo</span><span class="p">)</span>
+        <span class="n">subscribers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">myinfo</span><span class="o">.</span><span class="n">accounts</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s1">&#39;data.newsletters&#39;</span><span class="p">:</span> <span class="n">uid</span><span class="p">,</span> <span class="s1">&#39;state&#39;</span><span class="p">:</span> <span class="s1">&#39;active&#39;</span><span class="p">}):</span>
+            <span class="n">subscribers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="n">user</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">],</span> <span class="n">fullname</span><span class="o">=</span><span class="n">user</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]))</span>
+        <span class="k">return</span> <span class="n">subscribers</span>
+</pre></div>
+</div>
+<p>The utility must be registered using ZCML:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">utility</span> <span class="n">zcml</span><span class="p">:</span><span class="n">condition</span><span class="o">=</span><span class="s2">&quot;installed Products.EasyNewsletter&quot;</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MyInfo subscribers&quot;</span>
+    <span class="n">factory</span><span class="o">=</span><span class="s2">&quot;.newsletter.NewsletterSource&quot;</span>
+    <span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p>Inside the <code class="docutils literal notranslate"><span class="pre">Edit</span></code> view of the instance under the <code class="docutils literal notranslate"><span class="pre">External</span></code> tab you should find
+<code class="docutils literal notranslate"><span class="pre">MyInfo</span> <span class="pre">subscribers</span></code> under the option <code class="docutils literal notranslate"><span class="pre">External</span> <span class="pre">subscriber</span> <span class="pre">source</span></code>.</p>
+</div>
+</div>
+<div class="section" id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
+<p>Online documentation: <a class="reference external" href="http://productseasynewsletter.readthedocs.io">http://productseasynewsletter.readthedocs.io</a></p>
+</div>
+<div class="section" id="source-code">
+<h1>Source Code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>repository: <a class="reference external" href="https://github.com/collective/Products.EasyNewsletter">https://github.com/collective/Products.EasyNewsletter</a></p></li>
+</ul>
+</div>
+<div class="section" id="bugtracker">
+<h1>Bugtracker<a class="headerlink" href="#bugtracker" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/collective/Products.EasyNewsletter/issues">https://github.com/collective/Products.EasyNewsletter/issues</a></p></li>
+</ul>
+</div>
+<div class="section" id="maintainers">
+<h1>Maintainers<a class="headerlink" href="#maintainers" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Maik Derstappen</p></li>
+</ul>
+</div>
+<div class="section" id="authors">
+<h1>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>initial release: Kai Dieffenbach</p></li>
+<li><p>Maik Derstappen</p></li>
+<li><p>Andreas Jung</p></li>
+<li><p>Philip Bauer</p></li>
+<li><p>Timo Stollenwerk</p></li>
+<li><p>Dinu Gherman</p></li>
+<li><p>Jens Klein</p></li>
+<li><p>Peter Holzer</p></li>
+</ul>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to EasyNewsletter’s documentation!</a></li>
+<li><a class="reference internal" href="#what-is-it">What is it?</a></li>
+<li><a class="reference internal" href="#usage">Usage</a><ul>
+<li><a class="reference internal" href="#general">General</a></li>
+<li><a class="reference internal" href="#step-by-step">Step by step</a></li>
+<li><a class="reference internal" href="#issue-workflow-information">Issue workflow information</a></li>
+<li><a class="reference internal" href="#images-in-html-mails">Images in HTML mails</a></li>
+<li><a class="reference internal" href="#elements-for-mails-only">Elements for mails only</a></li>
+<li><a class="reference internal" href="#asyncronous-sendout">Asyncronous sendout</a></li>
+<li><a class="reference internal" href="#sending-a-daily-issue-automatically">Sending a daily issue automatically</a><ul>
+<li><a class="reference internal" href="#using-cron4plone-to-send-it-out">Using cron4plone to send it out</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#allowed-placeholders">Allowed placeholders</a></li>
+<li><a class="reference internal" href="#customize-personalization-placeholders">Customize personalization (placeholders)</a></li>
+<li><a class="reference internal" href="#output-templates">Output templates</a></li>
+<li><a class="reference internal" href="#aggregation-templates">Aggregation templates</a></li>
+<li><a class="reference internal" href="#filtering-users-groups-and-receivers">Filtering Users, Groups and Receivers</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+<li><a class="reference internal" href="#source-code">Source Code</a></li>
+<li><a class="reference internal" href="#bugtracker">Bugtracker</a></li>
+<li><a class="reference internal" href="#maintainers">Maintainers</a></li>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">EasyNewsletter 2.5.6 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Welcome to EasyNewsletter’s documentation!</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011, Kai Diefenbach and the Plone Community.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.4.3.
+    </div>
+  </body>
+</html>
