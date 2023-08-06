@@ -1,0 +1,11 @@
+flogging/__init__.py,sha256=8ZcHhe9ewvF14Nt0NIIaUvAKdihQewztGIQA7-3GPRs,36
+flogging/__main__.py,sha256=pvd5SZ65Tr9Rwbj-WlVWni5TPUOdWyqtrKJrvoKqTFc,88
+flogging/flogging.py,sha256=BNdHImh7mAEs-ROxaIUJDH3y3-AK0rvZhswLf9vRC34,11136
+flogging/version.py,sha256=TuQo6-EYscbmgjM_sh0egSOyf7tFAEm9msWh7zxBRSg,84
+flogging/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flogging/tests/test_main.py,sha256=UrrwGou4_it15-rbNPb48oRyhm1OAbw-qfaBDn-edMQ,141
+flogging-0.0.8.dist-info/LICENSE,sha256=_vF5n2zeiY86PJ3WbmQFFb5sg8JLgeQyJLQb79erVYQ,1067
+flogging-0.0.8.dist-info/METADATA,sha256=b4yPHxQGQKC2Y8bMrPPmQJmH0wpFXAi6Fvzv4gmnzqE,1378
+flogging-0.0.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+flogging-0.0.8.dist-info/top_level.txt,sha256=gvvrhTFZ1cn4XW2laVD8N0_TpHk3CDXXDV0qDPdXZxo,9
+flogging-0.0.8.dist-info/RECORD,,
