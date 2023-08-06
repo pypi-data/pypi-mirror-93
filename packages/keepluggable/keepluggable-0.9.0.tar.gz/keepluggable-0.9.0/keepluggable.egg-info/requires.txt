@@ -1,0 +1,3 @@
+bag>=3.0.0
+kerno
+pydantic<1.5a,>1.4a
