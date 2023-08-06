@@ -1,0 +1,2 @@
+wechaty_puppet_hostie
+wechaty_puppet_service
