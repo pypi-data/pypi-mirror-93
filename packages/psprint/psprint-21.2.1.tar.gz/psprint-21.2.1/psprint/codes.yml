@@ -1,0 +1,25 @@
+color_indices:
+- ['k',  '0',  'black']
+- ['r',  '1',  'red']
+- ['g',  '2',  'green']
+- ['y',  '3',  'yellow']
+- ['b',  '4',  'blue']
+- ['m',  '5',  'magenta']
+- ['c',  '6',  'cyan']
+- ['w',  '7',  'white']
+- ['lk', '8',  'light black']
+- ['lr', '9',  'light red']
+- ['lg', '10', 'light green']
+- ['ly', '11', 'light yellow']
+- ['lb', '12', 'light blue']
+- ['lm', '13', 'light magenta']
+- ['lc', '14', 'light cyan']
+- ['lw', '15', 'light white']
+
+gloss_indices:
+- ['r',  '0',  'reset']
+- ['n',  '1',  'normal']
+- ['d',  '2',  'dim']
+- ['b',  '3',  'bright']
+
+pref_max_len: 7

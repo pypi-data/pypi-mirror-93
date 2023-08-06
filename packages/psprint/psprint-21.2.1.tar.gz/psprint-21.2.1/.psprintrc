@@ -1,0 +1,16 @@
+FLAGS:
+  # short = False
+  pad: True
+  flush: True
+  # sep =
+  # end =
+
+help:
+  pref: HELP
+  pref_s: "?"
+  pref_color: yellow
+  pref_bgcol: black
+  pref_style: red
+  text_color: white
+  text_style: normal
+  text_bgcol: black
