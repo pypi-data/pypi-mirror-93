@@ -1,0 +1,8 @@
+README.md
+setup.py
+sRemo/__init__.py
+sRemo/sRemoAPI.py
+sRemo.egg-info/PKG-INFO
+sRemo.egg-info/SOURCES.txt
+sRemo.egg-info/dependency_links.txt
+sRemo.egg-info/top_level.txt
