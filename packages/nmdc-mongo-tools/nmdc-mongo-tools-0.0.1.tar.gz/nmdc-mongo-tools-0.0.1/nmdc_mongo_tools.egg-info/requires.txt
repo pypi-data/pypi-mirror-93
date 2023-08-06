@@ -1,0 +1,14 @@
+jsonschema
+mongospawn
+pymongo
+python-dotenv
+requests
+tqdm
+toolz
+
+[dev]
+black
+invoke
+pytest
+setuptools-scm
+twine
