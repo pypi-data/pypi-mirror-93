@@ -1,0 +1,17 @@
+phoebusgen/__init__.py,sha256=Z_Iw2SiaN6XkAdpP9EJRMvnUiyVBzhVEn5A2wv7dXSo,120
+phoebusgen/phoebusgen.py,sha256=NLQF-FBojqjVHDE-U51mBGF5yc2QS96kfblTTglbVHI,210
+phoebusgen/shared_property_helpers.py,sha256=kP1SDlbdN9FeAWh6z-Fg5lcajnQL2SI205BV8coUKkI,3336
+phoebusgen/screen/__init__.py,sha256=DNBQ7qXo7p5bjhqC_Nn7TVbCRBJnZpmfcMOBVQS3MEk,93
+phoebusgen/screen/screen.py,sha256=RaI1tFVPRk5sfC5m3nIkuFAyenBa_pOZOgomHbVMDLc,2698
+phoebusgen/widget/__init__.py,sha256=4cqwTToIabnFRi3XzxsQigyyrZAdLftjRXEw42tPKiY,100
+phoebusgen/widget/colors.yaml,sha256=mLThr90rHkKn-dpFzMJmbeYJb7i7QFkNI1JsHSwLcqY,1256
+phoebusgen/widget/fonts.yaml,sha256=LIuZ7QaoBGAL0JZeMOpSj2YQa2U3IPnHgK6-PopN3CM,550
+phoebusgen/widget/property.py,sha256=OF76oFs-RnfBos12QX3RwWaR7IZX6qZZUEa0JdODfh0,11031
+phoebusgen/widget/property_stubs.py,sha256=OdXu2bII-pNrvfqyuV2G0Lh3ty8K6tQxOLajRkFV4cY,10267
+phoebusgen/widget/widget.py,sha256=RT8N51ZER7ADpWl9MGazy_8G77lNTDH5XVJd0jIswMc,2301
+phoebusgen/widget/widgets.py,sha256=RumqAnpNhW0J6iVChvKjEsAS0LGEDlgvcqrmsD9a830,12120
+phoebusgen-0.0.7.dist-info/LICENSE,sha256=qxX9UmvY3Rip5368E5ZWv00z6X_HI4zRG_YOK5uGZsY,17987
+phoebusgen-0.0.7.dist-info/METADATA,sha256=MvcgTa0OzlWuOZyNLN5xK4zb09wa0n1YyhHzSE4DPvM,3009
+phoebusgen-0.0.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+phoebusgen-0.0.7.dist-info/top_level.txt,sha256=NcmCfio9avQsSLZIH9lhOX7TtYW8TOTpoDTwyuidLTs,11
+phoebusgen-0.0.7.dist-info/RECORD,,
