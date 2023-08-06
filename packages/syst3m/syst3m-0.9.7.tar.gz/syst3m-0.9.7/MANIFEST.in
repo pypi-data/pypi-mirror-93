@@ -1,0 +1,3 @@
+include syst3m/README.md
+include syst3m/v1/classes/browser/drivers/*
+include syst3m/v1/classes/browser/drivers/*/**
