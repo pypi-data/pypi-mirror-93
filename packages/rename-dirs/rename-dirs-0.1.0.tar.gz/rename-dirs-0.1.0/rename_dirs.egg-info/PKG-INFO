@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: rename-dirs
+Version: 0.1.0
+Summary: A python script to rename multiple directories to lowercase words with underscore separators.
+Home-page: https://github.com/rchtgpt/rename-dirs
+Author: Rachit Gupta
+Author-email: guptarachit2004@gmail.com
+License: UNKNOWN
+Description: ## Rename Dirs
+        
+        A python script to rename multiple directories to lowercase words with underscore separators.
+        
+        ## Example
+        
+        `Example File.txt` -> `example_file.txt`
+        
+        ## Installation
+        
+        ```bash
+        pip install rename-dirs
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
