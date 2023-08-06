@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: easybotfn
+Version: 0.0.1
+Summary: A free lobbybot coded in python.
+Home-page: https://github.com/Aspect0002/EasyBot
+Author: Aspect
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: sanic
+Requires-Dist: uvloop
+Requires-Dist: crayons
+Requires-Dist: fortnitepy
+Requires-Dist: BenBotAsync
+Requires-Dist: FortniteAPIAsync
+Requires-Dist: aioconsole
+
+This is a free lobbybot.
+
+Change Log
+==========
+
+0.0.1(28/01/2021)
+------------------
+- First Release
+
