@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: tavern_fastapi
+Version: 0.0.2
+Summary: Tavern http backend for FastAPI TestClient
+Home-page: UNKNOWN
+Author: Hamed Zaghaghi
+Author-email: hamed.zaghaghi@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Pytest
+Requires: fastapi
+Requires: pytest
+Requires: tavern
+Requires: future
