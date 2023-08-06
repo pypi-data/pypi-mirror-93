@@ -1,0 +1,20 @@
+CHANGES
+=======
+
+0.1.6.2
+-------
+
+* fix again
+* fix github yml
+* update fetch depth
+* remove large files
+* support upload to pypi using github actions
+* add tidevice relay support
+* add tidevice relay support
+* exclude tests, make release tar.gz smaller
+* exclude tests, make release tar.gz smaller
+* fix #12
+* fix #12
+* add support tidevice xctest -e USE\_PORT:8100
+* add support tidevice xctest -e USE\_PORT:8100
+* finish cmd: developer, update readme
