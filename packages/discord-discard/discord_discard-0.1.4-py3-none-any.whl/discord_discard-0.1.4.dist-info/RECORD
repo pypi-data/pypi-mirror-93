@@ -1,0 +1,10 @@
+discard/__init__.py,sha256=1REzq_buSkj6tSET5-L5LTDo9_WBoiI0fMkl7ZJ09a8,63
+discard/__main__.py,sha256=gaWnBvootF-jE9j5_n8izp8BqcIc6gNIXS_lg-fCtQc,59
+discard/cli.py,sha256=8N7syNst5GXaP9NY2PcTu0I0yBH-ZdyY5KLacFFjCmg,1798
+discard/discard.py,sha256=lIzUoGkD4adly04TSi0zwY21xhpssz8JKLlelbu-Xuk,13800
+discard/test_discard.py,sha256=J7pEUS-CpGHAwe5XtzZCPIqLUMM5VyUorPOZMhgfNeU,5709
+discord_discard-0.1.4.dist-info/LICENSE,sha256=FnKFL1gR2-783b9Z1cwbdaSvQqHuI-6xc96BZKQ5e5c,733
+discord_discard-0.1.4.dist-info/METADATA,sha256=miJnsJcfRRiMptqX26BeDC-5dXN4odSJaafklemt-Xo,7517
+discord_discard-0.1.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+discord_discard-0.1.4.dist-info/top_level.txt,sha256=v4bAOfRqI-0VUFSV-6ebIsnFBm1bivtOzb0e1v838LA,8
+discord_discard-0.1.4.dist-info/RECORD,,
