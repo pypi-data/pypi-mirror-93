@@ -1,0 +1,9 @@
+README.md
+qwiic_rfid.py
+setup.cfg
+setup.py
+sparkfun_qwiic_rfid.egg-info/PKG-INFO
+sparkfun_qwiic_rfid.egg-info/SOURCES.txt
+sparkfun_qwiic_rfid.egg-info/dependency_links.txt
+sparkfun_qwiic_rfid.egg-info/requires.txt
+sparkfun_qwiic_rfid.egg-info/top_level.txt
