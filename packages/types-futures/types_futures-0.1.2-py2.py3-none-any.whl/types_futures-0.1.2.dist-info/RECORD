@@ -1,0 +1,10 @@
+concurrent-stubs/METADATA.toml,sha256=rnHWMRmbcJAiPEgxS7RWo7DOytfc_BdihdFFc6vlg20,47
+concurrent-stubs/__init__.pyi,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+concurrent-stubs/futures/__init__.pyi,sha256=zAZn69ohscdtL7rotnHyxSu7jzhVMw005ANG7J09apw,436
+concurrent-stubs/futures/_base.pyi,sha256=rPSXJhb-LKP8qcFX9YQou0wCs33t6a3_hgfdD1zO278,3701
+concurrent-stubs/futures/process.pyi,sha256=rGmQHTSHwVsXVPxwu4R1efuU0b8D1gqAEG9N_XH3vr8,195
+concurrent-stubs/futures/thread.pyi,sha256=jEiKlhYG3p-MOOEpWFeYHNOKzK9vL7eAYEe-bI2V4XY,574
+types_futures-0.1.2.dist-info/METADATA,sha256=32f4EvfXP15omsWbpVrJHwPqEWPAtfRHD002kxy3qmE,792
+types_futures-0.1.2.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+types_futures-0.1.2.dist-info/top_level.txt,sha256=vZowZvLCmHHEHolWPzRbDp14LR4VBhPKZa5BM5qiXk4,17
+types_futures-0.1.2.dist-info/RECORD,,
