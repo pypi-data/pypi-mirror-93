@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: aerokit
+Version: 1.1.0
+Summary: Python tools for basic fluid mechanics computations
+Home-page: https://github.com/jgressier/aerokit
+License: MIT
+Author: j.gressier
+Author-email: jeremie.gressier@isae-supaero.fr
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: matplotlib (>=3.3.3,<4.0.0)
+Requires-Dist: numpy (>=1.19.4,<2.0.0)
+Requires-Dist: scipy (>=1.5.4,<2.0.0)
+Project-URL: Documentation, https://aerokit.readthedocs.io/en/latest/
+Project-URL: Repository, https://github.com/jgressier/aerokit
