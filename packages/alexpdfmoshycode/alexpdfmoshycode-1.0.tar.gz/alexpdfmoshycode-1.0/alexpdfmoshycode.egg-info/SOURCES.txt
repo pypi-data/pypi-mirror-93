@@ -1,0 +1,9 @@
+README.md
+setup.py
+alexpdf/__init__.py
+alexpdf/pdf2image.py
+alexpdf/pdf2text.py
+alexpdfmoshycode.egg-info/PKG-INFO
+alexpdfmoshycode.egg-info/SOURCES.txt
+alexpdfmoshycode.egg-info/dependency_links.txt
+alexpdfmoshycode.egg-info/top_level.txt
