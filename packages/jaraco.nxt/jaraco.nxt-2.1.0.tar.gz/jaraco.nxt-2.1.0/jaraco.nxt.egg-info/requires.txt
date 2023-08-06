@@ -1,0 +1,20 @@
+pyserial>=2.4
+
+[docs]
+sphinx
+jaraco.packaging>=8.2
+rst.linker>=1.9
+
+[input]
+jaraco.input>=1.1dev
+
+[testing]
+pytest!=3.7.3,>=3.5
+pytest-checkdocs>=1.2.3
+pytest-flake8
+pytest-cov
+pytest-enabler
+
+[testing:platform_python_implementation != "PyPy"]
+pytest-black>=0.3.7
+pytest-mypy
