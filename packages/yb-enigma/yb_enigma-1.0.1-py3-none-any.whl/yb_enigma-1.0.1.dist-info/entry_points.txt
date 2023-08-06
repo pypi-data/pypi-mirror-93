@@ -1,0 +1,4 @@
+
+            [console_scripts]
+            enigma-cli=yb_enigma.cli:run
+      
