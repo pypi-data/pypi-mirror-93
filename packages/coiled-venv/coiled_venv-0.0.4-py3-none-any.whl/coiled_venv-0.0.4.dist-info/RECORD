@@ -1,0 +1,12 @@
+coil/__init__.py,sha256=_kocLElg6NSeYs_3_0_n9_oN9jPrxL8KgPr4_qRYFRM,156
+coil/__main__.py,sha256=ywswM3eJR6BOgvyaVxNF-z7yRf-6ynZbjJs52DoclAc,1464
+coil/config.py,sha256=nluBdlNHQ7FvE9CawkGoQLtS3mj8ubZayhucoJkIYYQ,436
+coil/db.py,sha256=diMWdEsF5Hi2BEfo3Tt9fbPukqHv28aiLI890-ROWcg,424
+coil/shell.py,sha256=SR1i_FHdpuMZXaZRC8NxNlma_y-e8TbNtPuE3OsXDHY,1028
+coil/venv.py,sha256=GW6jtyuAeH4DGdWrmUU3Bhk4Y_TTW2UWKDShKQAZxbM,1214
+coiled_venv-0.0.4.dist-info/LICENSE,sha256=KACRAOZww-__3kwFdp40CaLw8jsFxK4WEQDeCiOAAro,1068
+coiled_venv-0.0.4.dist-info/METADATA,sha256=iW4NwShw-TgirtmrEQp9HrNzdAk_v9ATsaA6iE9UHVE,2385
+coiled_venv-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+coiled_venv-0.0.4.dist-info/entry_points.txt,sha256=KvTyPegQCAYygshOUUK7ImHreK9hZV6xGCuApUkjLHE,45
+coiled_venv-0.0.4.dist-info/top_level.txt,sha256=ayhjWdpLEi-4Y8MPgtgE479Ijlisif9iGXg8hOBs0qA,5
+coiled_venv-0.0.4.dist-info/RECORD,,
