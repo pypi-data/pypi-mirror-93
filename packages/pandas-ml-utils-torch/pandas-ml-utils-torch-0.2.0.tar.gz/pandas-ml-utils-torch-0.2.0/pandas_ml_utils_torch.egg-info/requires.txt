@@ -1,0 +1,10 @@
+numba
+torch
+wcmatch
+pandas-ml-common==0.2.0
+pandas-ml-utils==0.2.0
+
+[dev]
+ipykernel
+nbconvert
+nbformat
