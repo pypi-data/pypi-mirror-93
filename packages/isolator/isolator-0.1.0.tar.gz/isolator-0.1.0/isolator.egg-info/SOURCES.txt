@@ -1,0 +1,8 @@
+README.md
+setup.py
+isolator/__init__.py
+isolator/isolator.py
+isolator.egg-info/PKG-INFO
+isolator.egg-info/SOURCES.txt
+isolator.egg-info/dependency_links.txt
+isolator.egg-info/top_level.txt
