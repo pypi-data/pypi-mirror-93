@@ -1,0 +1,10 @@
+README.md
+setup.py
+desktop_file/__init__.py
+desktop_file/__main__.py
+desktop_file/desktop_file.py
+desktop_file_generate.egg-info/PKG-INFO
+desktop_file_generate.egg-info/SOURCES.txt
+desktop_file_generate.egg-info/dependency_links.txt
+desktop_file_generate.egg-info/entry_points.txt
+desktop_file_generate.egg-info/top_level.txt
