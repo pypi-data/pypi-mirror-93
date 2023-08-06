@@ -1,0 +1,9 @@
+include Changelog
+include LICENSE
+include CONTRIBUTING
+include README.md
+include requirements-test.txt
+include requirements.txt
+
+prune .venv
+global-exclude __pycache__ *.py[cod] *.pyx *.so
