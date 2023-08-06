@@ -1,0 +1,9 @@
+django-cache-memoize~=0.1
+django-celery-email~=3.0.0
+django-nested-admin~=3.3.2
+influxdb~=5.3
+netaddr~=0.8
+openwisp-controller~=0.8
+openwisp-utils[rest]
+python-dateutil<3.0,>=2.7
+swapper~=1.1
