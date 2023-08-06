@@ -1,0 +1,14 @@
+deepstack/__init__.py,sha256=AUc1-KvwQ89ZVWz0mNVYFNxcRkBphQsMRr9tjDPs2aM,272
+deepstack/base.py,sha256=FH521ZZm6HnWZ0tKTR7DueHujRZQBETpaHB0OiVIMMM,335
+deepstack/config.py,sha256=2PVQLgKr3G8fHpuCejEJOHinuzn-VZCjXoy4etNrvMU,310
+deepstack/detection.py,sha256=z6pJaz1linqq5aITKZoMT7Z08D--MYmKfRMZbDk_cQ8,6032
+deepstack/face.py,sha256=s2CJT93UBevwKq98Hh8oZCsP534Hhc_Z21FIJxi-NZ4,14468
+deepstack/scene.py,sha256=j2-QVFdyCqMdSRAeL4QV5TYkiZ27ol9MWyPr8jIXNqE,5836
+deepstack/structs.py,sha256=wWjV3eUR-eQJw1WAOnHIZUQimx8-CkXuVRJiIuFXMrA,2214
+deepstack/utils.py,sha256=Rz-dEGyfm3CrnWSxyaHjXSFDZYDA41oY0_qwTcoXadg,790
+deepstack/viz.py,sha256=D7v40l61UTYK8zug03U9kh4wykmHr6kIwbO2nnE6DZw,2578
+deepstack_sdk-0.1.0.dist-info/LICENSE,sha256=RNuLDW9wlNgRT_x5gVzxEWsxJK5CXQnBApaUhFfMo-U,1091
+deepstack_sdk-0.1.0.dist-info/METADATA,sha256=vm1AiGX_ZKw3G7zCoY2WVH0Ed2Fvxj4iylD06ChG0h8,574
+deepstack_sdk-0.1.0.dist-info/WHEEL,sha256=D1Wh14kWDxPnrM-5t_6UCB-UuQNrEODtRa3vF4OsvQY,97
+deepstack_sdk-0.1.0.dist-info/top_level.txt,sha256=OoQR06pbFok44hXdGQSWMYlSAZ6xA-xwFNs388fnc6Y,10
+deepstack_sdk-0.1.0.dist-info/RECORD,,
