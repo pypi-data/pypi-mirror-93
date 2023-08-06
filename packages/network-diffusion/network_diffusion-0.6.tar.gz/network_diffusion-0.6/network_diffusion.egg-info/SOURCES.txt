@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+network_diffusion/__init__.py
+network_diffusion/flat_spreading.py
+network_diffusion/multi_spreading.py
+network_diffusion/multilayer_network.py
+network_diffusion/propagation_model.py
+network_diffusion/utils.py
+network_diffusion.egg-info/PKG-INFO
+network_diffusion.egg-info/SOURCES.txt
+network_diffusion.egg-info/dependency_links.txt
+network_diffusion.egg-info/requires.txt
+network_diffusion.egg-info/top_level.txt
