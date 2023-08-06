@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: spammsg
+Version: 0.0.1
+Summary: Spam messages in any messaging softwares
+Home-page: https://github.com/dead-zone-termux
+Author: kanish
+Author-email: kanish.ravikumar@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: core
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
