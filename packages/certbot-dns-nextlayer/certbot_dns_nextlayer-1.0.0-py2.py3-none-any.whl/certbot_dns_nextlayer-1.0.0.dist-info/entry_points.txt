@@ -1,0 +1,3 @@
+[certbot.plugins]
+dns-nextlayer = certbot_dns_nextlayer.dns_nextlayer:Authenticator
+
