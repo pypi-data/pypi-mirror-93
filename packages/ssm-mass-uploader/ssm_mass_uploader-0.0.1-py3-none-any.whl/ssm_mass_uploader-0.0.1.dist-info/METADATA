@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: ssm-mass-uploader
+Version: 0.0.1
+Summary: You pass in a encrypted file and kms key id, the package will decrypt the data, and upload the contents to aws ssm.
+Home-page: https://github.com/jayfry1077/ssm_mass_uploader
+Author: Jonathan Bradbury
+Author-email: jonathanabradbury@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: boto3
+
+CHANGE LOG
+==========
+
+0.0.1 (01/30/21)
+-----------------
+
+- First Release
+
