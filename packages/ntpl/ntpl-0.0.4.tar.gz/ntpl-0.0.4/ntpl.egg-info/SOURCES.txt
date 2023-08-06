@@ -1,0 +1,8 @@
+README.md
+setup.py
+ntpl/__init__.py
+ntpl.egg-info/PKG-INFO
+ntpl.egg-info/SOURCES.txt
+ntpl.egg-info/dependency_links.txt
+ntpl.egg-info/requires.txt
+ntpl.egg-info/top_level.txt
