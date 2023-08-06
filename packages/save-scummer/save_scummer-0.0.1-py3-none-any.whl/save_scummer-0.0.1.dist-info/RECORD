@@ -1,0 +1,11 @@
+save_scummer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+save_scummer/backup.py,sha256=Ukqk9zruAPP-cnC57mMRJaKzMvZtOXKR9W9o1OisU5I,5101
+save_scummer/cli.py,sha256=ViAdXdmWWc4NVcel9fWJ9n17jKB25eCDZyE7yDlIWHY,7743
+save_scummer/config.py,sha256=QlfrvnFoYTOVkAY8B1K3zWcmOMLzBthsaJIjtO5r1pw,3256
+save_scummer/utils.py,sha256=31AkEuKe7upuVIPsxDBLG0ySslLXThsiAktLdh24DrY,3010
+save_scummer-0.0.1.dist-info/LICENSE,sha256=IJW8XsLgkmlqtSSBPwfHKU6ZzkGwFplhvTqJpXhY_Ew,1068
+save_scummer-0.0.1.dist-info/METADATA,sha256=AOMUUd-4IcN4DWNXPPcz0580Yt06QB907uChqFjv2QA,8181
+save_scummer-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+save_scummer-0.0.1.dist-info/entry_points.txt,sha256=QTuCT4XaNuGXkVIzr8fGYZoS53kyDOZ_WiI0cWE943A,82
+save_scummer-0.0.1.dist-info/top_level.txt,sha256=s4ksVjLyuBOLJNeAbBKlZj7KsUnhB1z9eWlRLoF4Ndg,13
+save_scummer-0.0.1.dist-info/RECORD,,
