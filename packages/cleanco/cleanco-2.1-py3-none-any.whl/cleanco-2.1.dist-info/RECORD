@@ -1,0 +1,12 @@
+cleanco/__init__.py,sha256=4DsHAYP62Gr6c_Mi-9xBYrjpQiin_7iag20yAUk1r54,131
+cleanco/classify.py,sha256=UEhAE1GPA11ENSCQ-8H-vOYEcJpfL9YUWAPe303QRVs,1685
+cleanco/clean.py,sha256=gJfzvGjP8MZLwhIA69Sj4lezwIG6xPBYVzbwRw5ccfw,3433
+cleanco/clean_old.py,sha256=ASuv091LOSqBYpt1GhPW2YOFFMWv0YsX7DzgO_2zO7w,4975
+cleanco/cleanco.py,sha256=_m8zgcKpfGTmhy5GGsuI2zBInYGZqggP_ApLSaKSyew,564
+cleanco/non_nfkd_map.py,sha256=sOifL3WOsoyWhht-MqAnVP2QdDWZw0Kdc_mz4ZziOfk,3671
+cleanco/termdata.py,sha256=oF6XNNqwhGpLmMF-J89fShD6jZzdPudVKeXaN1vhAyI,7111
+cleanco-2.1.dist-info/LICENSE.txt,sha256=qO4-hvVEMwYtvWM_Iwsc9LZzbMTzB3iEPWe1ABJ7os0,1098
+cleanco-2.1.dist-info/METADATA,sha256=8AX74qyhvjyVZBeaHHX4DwAxrfim3Zh14q5oFMcK-WU,3961
+cleanco-2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cleanco-2.1.dist-info/top_level.txt,sha256=OGnmzAcMIYnbwmxRpGvHwffseNTkO8bB4H0W7YtiV9c,8
+cleanco-2.1.dist-info/RECORD,,
