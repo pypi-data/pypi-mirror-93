@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: SDP18
+Version: 0.0.9
+Summary: NUS SDP 18
+Home-page: https://github.com/lwq96/NewProject
+Author: SDP18
+Author-email: e0176071@u.nus.edu
+License: MIT
+Description: This is for SDP18 NUS ISE Metaheuristic Surgery Scheduling
+        SA, GA, HCO, TS
+Keywords: metaheuristic,surgery,scheduling
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
