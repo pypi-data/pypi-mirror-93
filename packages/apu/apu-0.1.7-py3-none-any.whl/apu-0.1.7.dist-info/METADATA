@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: apu
+Version: 0.1.7
+Summary: Antons Python Utilities
+Home-page: https://github.com/afeldman/apu
+Author: Anton Feldmann
+Author-email: anton.feldmann@gmail.com
+Maintainer: Anton Feldmann
+Maintainer-email: anton.feldmann@gmail.com
+License: MIT
+Download-URL: https://github.com/afeldman/apu
+Project-URL: Documentation, https://afeldman.github.io/apu/
+Project-URL: Source, https://github.com/afeldman/apu
+Project-URL: Tracker, https://github.com/afeldman/apu/issues
+Keywords: utility
+Platform: Linux
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: all
+Requires-Dist: pytz ; extra == 'all'
+Requires-Dist: pint ; extra == 'all'
+Requires-Dist: tzlocal ; extra == 'all'
+Requires-Dist: GitPython ; extra == 'all'
+Requires-Dist: numpy ; extra == 'all'
+Requires-Dist: dill ; extra == 'all'
+Requires-Dist: h5py ; extra == 'all'
+Requires-Dist: mat4py ; extra == 'all'
+Requires-Dist: pyyaml ; extra == 'all'
+Requires-Dist: python-magic ; extra == 'all'
+Requires-Dist: msgpack ; extra == 'all'
+Requires-Dist: torch ; extra == 'all'
+Provides-Extra: datetime
+Requires-Dist: pytz ; extra == 'datetime'
+Requires-Dist: pint ; extra == 'datetime'
+Requires-Dist: tzlocal ; extra == 'datetime'
+Provides-Extra: designpattern
+Requires-Dist: dill ; extra == 'designpattern'
+Provides-Extra: geo
+Requires-Dist: numpy ; extra == 'geo'
+Provides-Extra: setup
+Requires-Dist: GitPython ; extra == 'setup'
+
+# apu
+
+## Anton's Python Utils
+This is a collection of tools and methods I need for my projects.
+
+
