@@ -1,0 +1,9 @@
+aiobtcrpc/__init__.py,sha256=pSw_CfviYnrokOIgGeDwu85GD-QaFzEvzEFz9BCoVSE,78
+aiobtcrpc/bitcoin_core_client.py,sha256=Jv993HfIvfj5lLb7i1-wVWaEMV3IIBpVLeLbmCgDRf0,2282
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_bitcoin_core_client.py,sha256=CAswrEni973h2ZMY7VFrCVZAJTp4BL1g4v3bGYi6Tq0,153
+aiobtcrpc-0.1.0.dist-info/LICENSE.md,sha256=JNIIPIMHZz6yCF4HE9adYukneAma8smq-iqiR9T937s,1051
+aiobtcrpc-0.1.0.dist-info/METADATA,sha256=uD4mdV65gkZD9tsIG30b2Xrv9PGTM-a5CXpPhLBSTUY,234
+aiobtcrpc-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aiobtcrpc-0.1.0.dist-info/top_level.txt,sha256=2C6DYhjUEWFAhjsmkLm8B0mb1T_6pdjXLDejF6OSOCI,16
+aiobtcrpc-0.1.0.dist-info/RECORD,,
