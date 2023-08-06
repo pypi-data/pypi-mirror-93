@@ -1,0 +1,29 @@
+{
+  "db": {
+    "id": "fa469717-6544-4fb6-b0ec-a0bd35e7bc06",
+    "name": "test",
+    "type": "DB"
+  },
+  "doc_count_estimates": [
+    3
+  ],
+  "id": "19fc83d1-806f-4357-881b-e612737f8c0c",
+  "indexes": [
+    {
+      "function": {
+        "$reql_type$": "BINARY",
+        "data": "JHJlcWxfaW5kZXhfZnVuY3Rpb24kCQcHBwAAAAAAAAEKAAAAAAAAAPcAAABbMjQsW1s2NSxbWzMy\r\nLFtbMTAsW1sxLDEwLDExXV0sMTBdLFsxLCJzdHVkZW50cyIsMTJdXSw5XSxbMTcwLFtbMTAsW1sx\r\nLDEwLDE1XV0sMTRdLFsxLCJzdHVkZW50cyIsMTZdXSwxM10sWzIsW10sMTddXSw4XSxbNjUsW1sz\r\nMixbWzEwLFtbMSwxMCwyMV1dLDIwXSxbMSwic3VwZXJ2aXNvcnMiLDIyXV0sMTldLFsxNzAsW1sx\r\nMCxbWzEsMTAsMjVdXSwyNF0sWzEsInN1cGVydmlzb3JzIiwyNl1dLDIzXSxbMixbXSwyN11dLDE4\r\nXV0sN10ABwAAAAEA"
+      },
+      "geo": false,
+      "index": "members",
+      "multi": true,
+      "outdated": false,
+      "query": "indexCreate('members', function(project) { return r.add(r.branch(project.hasFields(\"students\"), project(\"students\"), []), r.branch(project.hasFields(\"supervisors\"), project(\"supervisors\"), [])); }, {multi: true})",
+      "ready": true
+    }
+  ],
+  "name": "projects",
+  "primary_key": "id",
+  "type": "TABLE",
+  "write_hook": null
+}
