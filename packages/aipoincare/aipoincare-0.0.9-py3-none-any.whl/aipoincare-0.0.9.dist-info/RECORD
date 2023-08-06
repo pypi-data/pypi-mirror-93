@@ -1,0 +1,9 @@
+aipoincare/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aipoincare/main.py,sha256=U5Se38DHMTAPE7vkXC8I5y-T0TXrQaW4ssW9sR_5tjw,3120
+aipoincare/backend/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aipoincare/backend/training.py,sha256=WJh3d0WldF7_7m3_ez_Cqmw65DaBjJ03ukbeBMdiPOU,6086
+aipoincare-0.0.9.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+aipoincare-0.0.9.dist-info/METADATA,sha256=kDc3yDTLovNmh-Rkq3og8D-gDguHEzXZ_NYQltfDkzE,657
+aipoincare-0.0.9.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+aipoincare-0.0.9.dist-info/top_level.txt,sha256=W4JcpoSCcX9zz-ZXXuGOZflZ-wzo6P9qhByGeBBY75o,11
+aipoincare-0.0.9.dist-info/RECORD,,
