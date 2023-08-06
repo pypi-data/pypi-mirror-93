@@ -1,0 +1,17 @@
+azure/mgmt/attestation/__init__.py,sha256=NN6uJlf1ivEuRzMXvrCcvyRfLlEoQFTWctk9_IUUWAQ,755
+azure/mgmt/attestation/_attestation_management_client.py,sha256=eRrJDsrNj6-LymmYuEvWbzjx-yDzWUEqOw0HvJeX4vU,2811
+azure/mgmt/attestation/_configuration.py,sha256=1V2YD5PGDOG0RrtutZJgOKpHmh4e5KrNqIa6pMIgZgU,1883
+azure/mgmt/attestation/version.py,sha256=MIy9z7MiLbJseQLtllNm1vCTEx1tKN3NN_IaccBSlxY,492
+azure/mgmt/attestation/models/__init__.py,sha256=uYNLJSnymHDX4xYu4Mn7Nean5HxpeGK0fqqCbGhMHBA,2869
+azure/mgmt/attestation/models/_attestation_management_client_enums.py,sha256=lgDF4AuV0XI6RMays8dquFLcWZePNDf1Vs3ON3Lr3Eo,917
+azure/mgmt/attestation/models/_models.py,sha256=qw9jBX9M4h2XWoSCESIffGg4icQpWJby6wT7lQjASKs,24637
+azure/mgmt/attestation/models/_models_py3.py,sha256=BrleMv0Xy11ED62x9CRE5-toS75mwjJiO-dGE7YSEJY,24716
+azure/mgmt/attestation/models/_paged_models.py,sha256=MTzZ73_QRo2ixyWMmxQA4Dgxtp1_c0SrldWYTZujXQ0,1009
+azure/mgmt/attestation/operations/__init__.py,sha256=YgkrQ3mOIp1bwzCu6KAikxu0g4RjD7ZZllTAodCykzQ,794
+azure/mgmt/attestation/operations/_attestation_providers_operations.py,sha256=LBOLCfDlBJBH7b3sWloGI3Nfhn6_UmvosI76ssKNL7M,25150
+azure/mgmt/attestation/operations/_operations.py,sha256=DOBN-tAVleCcd5bZqzuM6zsPnDEtcZG8gindSW_jkE0,3596
+azure/mgmt/attestation/operations/_private_endpoint_connections_operations.py,sha256=g48PEhVOpNtJUAF9dmKN-lPhi8r46MXKtYlsLFqYkOA,16239
+azure_mgmt_attestation-0.3.0.dist-info/METADATA,sha256=6PQhuwdtKXPqfypkfLucSDcZlhpsLqmfJk6dBgj6Jao,2989
+azure_mgmt_attestation-0.3.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+azure_mgmt_attestation-0.3.0.dist-info/top_level.txt,sha256=S7DhWV9m80TBzAhOFjxDUiNbKszzoThbnrSz5MpbHSQ,6
+azure_mgmt_attestation-0.3.0.dist-info/RECORD,,
