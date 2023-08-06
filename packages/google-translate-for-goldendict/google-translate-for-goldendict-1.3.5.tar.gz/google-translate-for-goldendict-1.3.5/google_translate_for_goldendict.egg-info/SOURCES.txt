@@ -1,0 +1,11 @@
+README.md
+setup.py
+google_translate_for_goldendict.egg-info/PKG-INFO
+google_translate_for_goldendict.egg-info/SOURCES.txt
+google_translate_for_goldendict.egg-info/dependency_links.txt
+google_translate_for_goldendict.egg-info/requires.txt
+google_translate_for_goldendict.egg-info/top_level.txt
+googletranslate/__init__.py
+googletranslate/__main__.py
+googletranslate/googletranslate.py
+googletranslate/googletranslatetk.py
