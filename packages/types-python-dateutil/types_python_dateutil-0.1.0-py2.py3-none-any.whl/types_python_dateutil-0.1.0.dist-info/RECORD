@@ -1,0 +1,15 @@
+dateutil-stubs/METADATA.toml,sha256=i4S-fhszn-dtnm090JpOig_OvgZMLR3YzcCIlLAEfjw,70
+dateutil-stubs/__init__.pyi,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dateutil-stubs/_common.pyi,sha256=Xxs-IpVplkwjwEnqCLwzA-JIm6I9kzAFkcLQWyzZWvY,340
+dateutil-stubs/easter.pyi,sha256=5mypiQN0QZHpFBk80RddMUkFuRHb4qWOX8wJCbx4a6s,214
+dateutil-stubs/parser.pyi,sha256=Brz_8xe_yX14RB6B8pVk6BacM6HizqkUCIQ5vc9U-_I,1779
+dateutil-stubs/relativedelta.pyi,sha256=SfCOq1b8otE6in4nsnH0m0Kbyl2jbWaxGwcBoeapTHk,3243
+dateutil-stubs/rrule.pyi,sha256=EBup_m5smahe2tbtJG_-0kj6pyZjyv0YKi5oWKjwP1s,3219
+dateutil-stubs/utils.pyi,sha256=c9oLGnocofsb4y9CPpCIZGPFF_tysaA6P9i_g3CpZVE,281
+dateutil-stubs/tz/__init__.pyi,sha256=MlXCZJGqduJh-Mk0pHLw06oNxeW1fvPP3ixfo2SM8ak,340
+dateutil-stubs/tz/_common.pyi,sha256=0C_pqZ2TLRyKAsg_lS6WR-pwbGiezi4PY7uotzfUMjk,818
+dateutil-stubs/tz/tz.pyi,sha256=mExYydbsNJYcED03KVMfEHthqixakuSa3Qq_9mDczUc,3970
+types_python_dateutil-0.1.0.dist-info/METADATA,sha256=NpQIlPkJz9N8rX51X9Gm-XxmbMjZnLOlvpYXFAnmSyY,879
+types_python_dateutil-0.1.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+types_python_dateutil-0.1.0.dist-info/top_level.txt,sha256=7RvmrLD4hH59M0zJbCdEpUIajJEprCzblZfuiLg6ark,15
+types_python_dateutil-0.1.0.dist-info/RECORD,,
