@@ -1,0 +1,573 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title>wmtile</title>
+	<meta name="generator" content="LibreOffice 7.0.3.1 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2021-01-29T17:50:44.696007565"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin-left: 0.79in; margin-right: 0.39in; margin-top: 0.39in; margin-bottom: 0.39in }
+		p { margin-bottom: 0.1in; line-height: 115%; background: transparent }
+		h1 { margin-bottom: 0.08in; background: transparent; page-break-after: avoid }
+		h1.western { font-family: "Liberation Serif", serif; font-size: 24pt; font-weight: bold }
+		h1.cjk { font-family: "Noto Serif CJK SC"; font-size: 24pt; font-weight: bold }
+		h1.ctl { font-family: "Lohit Devanagari"; font-size: 24pt; font-weight: bold }
+		h2 { margin-top: 0.14in; margin-bottom: 0.08in; background: transparent; page-break-after: avoid }
+		h2.western { font-family: "Liberation Serif", serif; font-size: 18pt; font-weight: bold }
+		h2.cjk { font-family: "Noto Serif CJK SC"; font-size: 18pt; font-weight: bold }
+		h2.ctl { font-family: "Lohit Devanagari"; font-size: 18pt; font-weight: bold }
+		h3 { margin-top: 0.1in; margin-bottom: 0.08in; background: transparent; page-break-after: avoid }
+		h3.western { font-family: "Liberation Serif", serif; font-size: 14pt; font-weight: bold }
+		h3.cjk { font-family: "Noto Serif CJK SC"; font-size: 14pt; font-weight: bold }
+		h3.ctl { font-family: "Lohit Devanagari"; font-size: 14pt; font-weight: bold }
+		pre { background: transparent }
+		pre.western { font-family: "Liberation Mono", monospace; font-size: 10pt }
+		pre.cjk { font-family: "Noto Sans Mono CJK SC", monospace; font-size: 10pt }
+		pre.ctl { font-family: "Liberation Mono", monospace; font-size: 10pt }
+		td p { orphans: 0; widows: 0; background: transparent }
+		th p { font-weight: bold; text-align: center; orphans: 0; widows: 0; background: transparent }
+		code.western { font-family: "Liberation Mono", monospace }
+		code.cjk { font-family: "Noto Sans Mono CJK SC", monospace }
+		code.ctl { font-family: "Liberation Mono", monospace }
+		strong { font-weight: bold }
+		a:link { color: #000080; so-language: zxx; text-decoration: underline }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr">
+<div title="header"><p style="margin-bottom: 0.2in; line-height: 100%">
+	wmtile User Guide – <span style="font-weight: normal">Ver</span>sion
+	0.9.3		<span style="background: #c0c0c0"><sdfield type=PAGE subtype=RANDOM format=PAGE>11</sdfield></span>
+	of <span style="background: #c0c0c0"><sdfield type=DOCSTAT subtype=PAGE format=PAGE>11</sdfield></span></p>
+</div><p><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+</p>
+<h1 class="western" align="center"><code class="western">wmtile</code>
+User Guide</h1>
+<p align="center"><strong>Version 0.9.</strong><strong>3</strong></p>
+<p align="center"><a href="https://pypi.org/project/wmtile">https://pypi.org/project/wmtile</a></p>
+<p align="center"><strong>Carlo Alessandro Verre</strong></p>
+<p align="center"><a href="mailto:carlo.alessandro.verre@gmail.com">carlo.alessandro.verre@gmail.com</a></p>
+<p align="center"><strong>january 29, 2021</strong> 
+</p>
+<h2 class="western"><br/>
+<br/>
+
+</h2>
+<h2 class="western" style="page-break-before: always">Contents</h2>
+<ul>
+	<li><p style="margin-bottom: 0in"><a href="#1.">1. Before Usage</a></p>
+	<ul>
+		<li><p style="margin-bottom: 0in"><a href="#1.1.">1.1. Introduction</a>
+				</p>
+		<li><p style="margin-bottom: 0in"><a href="#1.2.">1.2. Installation</a>
+				</p>
+	</ul>
+	<li><p style="margin-bottom: 0in"><a href="#2.">2. Usage</a></p>
+	<ul>
+		<li><p style="margin-bottom: 0in"><a href="#2.1.">2.1. CLI Usage</a>
+				</p>
+		<li><p style="margin-bottom: 0in"><a href="#2.2.">2.2. Parameters</a>
+				</p>
+		<li><p style="margin-bottom: 0in"><a href="#2.3.">2.3. Mouse Usage</a>
+				</p>
+		<li><p style="margin-bottom: 0in"><a href="#2.4.">2.4. Keyboard
+		Usage</a> 
+		</p>
+	</ul>
+	<li><p style="margin-bottom: 0in"><a href="#3.">3. Functions</a></p>
+	<ul>
+		<li><p style="margin-bottom: 0in"><a href="#3.1.">3.1. Minimize</a>
+				</p>
+		<li><p style="margin-bottom: 0in"><a href="#3.2.">3.2. Tiles</a> 
+		</p>
+		<li><p style="margin-bottom: 0in"><a href="#3.3.">3.3. Portraits</a>
+				</p>
+		<li><p style="margin-bottom: 0in"><a href="#3.4.">3.4. Landscapes</a>
+				</p>
+		<li><p style="margin-bottom: 0in"><a href="#3.5.">3.5. Stack</a> 
+		</p>
+		<li><p style="margin-bottom: 0in"><a href="#3.6.">3.6. Big</a> 
+		</p>
+		<li><p style="margin-bottom: 0in"><a href="#3.7.">3.7. Close</a> 
+		</p>
+	</ul>
+	<li><p style="margin-bottom: 0in"><a href="#4.">4. Appendices</a></p>
+	<ul>
+		<li><p style="margin-bottom: 0in"><a href="#4.1.">4.1. Known Bugs</a>
+				</p>
+		<li><p style="margin-bottom: 0in"><a href="#4.2.">4.2. Acronyms</a>
+				</p>
+		<li><p style="margin-bottom: 0in"><a href="#4.3.">4.3. Credits</a> 
+		</p>
+		<li><p><a href="#4.4.">4.4. Changelog</a> 
+		</p>
+	</ul>
+</ul>
+<h2 class="western"><br/>
+<br/>
+
+</h2>
+<h2 class="western" style="page-break-before: always"><a name="1."></a>
+1. Before Usage</h2>
+<h3 class="western"><a name="1.1."></a>1.1. Introduction</h3>
+<p><code class="western">wmtile</code> is a small CLI utility written
+in Python 3, aimed to reshape in seven various ways all the windows
+in current workspace.</p>
+<p>Using <code class="western">wmctrl</code> and <code class="western">xdotool</code>,
+<code class="western">wmtile</code> is compatible with the EWMH/NetWM
+specification, so it can work with many Window Mangers as XFCE,
+Enlightenment, Icewm, Kwin or Sawfish.</p>
+<p>Under XFCE <code class="western">wmtile</code> can install
+automatically the panel launchers needed for mouse usage, and the
+keyboard shortcuts needed for keyboard usage.</p>
+<h3 class="western"><a name="1.2."></a>1.2. Installation</h3>
+<p><code class="western">wmtile</code> requires also <code class="western">wmctrl</code>
+and <code class="western">xdotool</code>, for instance on a
+Debian-derived Linux type:</p>
+<pre class="western" style="margin-bottom: 0.2in"><code class="western">    </code><code class="western">$ sudo apt-get -y install wmctrl xdotool</code></pre><p>
+If you lack <code class="western">pip3</code> command, you must
+install it, for instance on a Debian-derived Linux type:</p>
+<pre class="western" style="margin-bottom: 0.2in"><code class="western">    </code><code class="western">$ sudo apt-get -y install python3-pip</code></pre><p>
+Now you can install <code class="western">wmtile</code> typing
+(without <code class="western">sudo</code>):</p>
+<pre class="western" style="margin-bottom: 0.2in"><code class="western">    </code><code class="western">$ pip3 install wmtile</code></pre><h2 class="western">
+<br/>
+<br/>
+
+</h2>
+<h2 class="western" style="page-break-before: always"><a name="2."></a>
+2. Usage</h2>
+<h3 class="western"><a name="2.1."></a>2.1. CLI Usage</h3>
+<p>usage: <code class="western">wmtile [-h] [-H] [-V] [-i] [-k] [-m]
+[-t] [-p] [-l] [-s] [-b] [-c]</code></p>
+<p>optional arguments (give always one and only one):</p>
+<pre class="western"><code class="western">  </code><code class="western">-h, --help        show this help message and exit</code>
+<code class="western">  </code><code class="western">-H, --user-guide  open User Guide in PDF format and exit</code>
+<code class="western">  </code><code class="western">-V, --version     show program's version number and exit</code>
+<code class="western">  </code><code class="western">-i, --launchers   Install 7 panel launchers (XFCE only)</code>
+<code class="western">  </code><code class="western">-k, --shortcuts   install 7 Keyboard shortcuts (XFCE only)</code>
+<code class="western">  </code><code class="western">-m, --minimize    Minimize</code>
+<code class="western">  </code><code class="western">-t, --tiles       reshape as Tiles</code>
+<code class="western">  </code><code class="western">-p, --portraits   reshape as Portraits</code>
+<code class="western">  </code><code class="western">-l, --landscapes  reshape as Landscapes</code>
+<code class="western">  </code><code class="western">-s, --stack       reshape as a Stack</code>
+<code class="western">  </code><code class="western">-b, --big         reshape as Big = maximize</code>
+<code class="western">  </code><code class="western">-c, --close       gracefully Close</code></pre><h3 class="western">
+<a name="2.2."></a>2.2. Parameters</h3>
+<p><code class="western">wmtile</code> behavior is tuned by eight
+parameters:</p>
+<table cellpadding="2" cellspacing="2">
+	<thead>
+		<tr>
+			<th style="border-top: 1px double #808080; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding: 0.02in"><p>
+				PARAMETER</p>
+			</th>
+			<th style="border-top: 1px double #808080; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding: 0.02in"><p>
+				DEFAULT</p>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				top_margin</p>
+			</td>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				32</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				bottom_margin</p>
+			</td>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				0</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				left_margin</p>
+			</td>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				0</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				right_margin</p>
+			</td>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				0</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				bottom_space</p>
+			</td>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				36</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				right_space</p>
+			</td>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				12</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				top_stack</p>
+			</td>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				20</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				left_stack</p>
+			</td>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				20</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>Any value is an unsigned integer, denoting a number of pixels.</p>
+<p><code class="western">top_margin</code>, <code class="western">bottom_margin</code>,
+<code class="western">left_margin</code> and <code class="western">right_margin</code>
+give the reserved space on the screen where <code class="western">wmtile</code>
+cannot put the windows. Default for <code class="western">top_margin</code>
+is 32 because we imagine to have a single horizontal panel 32 pixels
+high at the top of the screen.</p>
+<p><code class="western">bottom_space</code> and <code class="western">right_space</code>
+is an additional reserved space below and to the right of each
+window. We need this to prevent window overlapping, because not all
+windows behave the same way.</p>
+<p><code class="western">top_stack</code> and <code class="western">left_stack</code>
+only affect the stack function (<code class="western">wmtile -s</code>)
+and says howmany pixels any window goes down and right compared to
+the previous one. In particular <code class="western">top_stack</code>
+must be sufficient to read the titles of all windows.</p>
+<p>Default values can be altered by the content of the file
+<code class="western">'~/.config/wmtile/parameters.cfg'</code> which,
+if exists, should contain &quot;assignment&quot; lines with syntax:</p>
+<pre class="western" style="margin-bottom: 0.2in"><code class="western">    </code><code class="western">name '=' integer [ '#' comment ]</code></pre><p>
+or &quot;empty&quot; lines with syntax:</p>
+<pre class="western" style="margin-bottom: 0.2in"><code class="western">    </code><code class="western">[ '#' comment ]</code></pre><p>
+for example:</p>
+<pre class="western"><code class="western">    </code><code class="western"># wmtile configuration parameters</code>
+<code class="western">    </code><code class="western">left_stack = 10 # for me, 10 is more than enough</code>
+<code class="western">    </code><code class="western">top_margin = 36 # horizontal top panel, 36 pixels high</code></pre><h3 class="western">
+<a name="2.3."></a>2.3. Mouse Usage</h3>
+<p>You can use <code class="western">wmtile</code> directly from
+terminal, but is more convenient to use it either by mouse or by
+keyboard, depending on your tastes. For mouse usage you should create
+by hand seven panel launchers for the <code class="western">wmtile</code>
+seven functions (minimize, tiles, portraits, landscapes, stack, big
+and close), but under XFCE you can invoke the automatic <code class="western">wmtile</code>
+installer for panel launchers:</p>
+<pre class="western"><code class="western">    </code><code class="western">$ wmtile -i</code>
+<code class="western">    </code><code class="western">installing 7 wmtile panel launchers</code>
+<code class="western">        </code><code class="western">launcher --&gt; wmtile -m # Minimize</code>
+<code class="western">        </code><code class="western">launcher --&gt; wmtile -t # reshape as Tiles</code>
+<code class="western">        </code><code class="western">launcher --&gt; wmtile -p # reshape as Portraits</code>
+<code class="western">        </code><code class="western">launcher --&gt; wmtile -l # reshape as Landscapes</code>
+<code class="western">        </code><code class="western">launcher --&gt; wmtile -s # reshape as a Stack</code>
+<code class="western">        </code><code class="western">launcher --&gt; wmtile -b # reshape as Big = maximize</code>
+<code class="western">        </code><code class="western">launcher --&gt; wmtile -c # gracefully Close</code></pre><p>
+which will create the seven panel launchers: 
+<img src="../../launchers.png" name="Image1" alt="Alt text" align="bottom" width="227" height="33" border="0"/>
+</p>
+<p>If you have one panel only, the seven launchers will be added
+immediately at and of your panel.</p>
+<p>If otherwise you have more than one, you will be asked seven times
+(sorry...) which panel you want to add each launcher to. Panels are
+numbered as 0, 1...</p>
+<p><strong>Beware</strong>: if you issue <code class="western">'wmtile
+-i'</code> a second time, you create other seven launchers in your
+panel, and you will have to delete them one by one.</p>
+<h3 class="western"><a name="2.4."></a>2.4. Keyboard Usage</h3>
+<p>In order to use <code class="western">wmtile</code> by keyboard,
+you should define by hand seven keyboard shortcuts for the <code class="western">wmtile</code>
+seven functions (Minimize, Tiles, Portraits, Landscapes, Stack, Big
+and Close), but under XFCE you can invoke the automatic <code class="western">wmtile</code>
+installer for keyboard shortcuts:</p>
+<pre class="western"><code class="western">    </code><code class="western">$ wmtile -k</code>
+<code class="western">    </code><code class="western">installing 7 wmtile keyboard shortcuts</code>
+<code class="western">        </code><code class="western">Alt+Shift+M --&gt; wmtile -m # inimize</code>
+<code class="western">        </code><code class="western">Alt+Shift+T --&gt; wmtile -t # reshape as Tiles</code>
+<code class="western">        </code><code class="western">Alt+Shift+P --&gt; wmtile -p # reshape as Portraits</code>
+<code class="western">        </code><code class="western">Alt+Shift+L --&gt; wmtile -l # reshape as Landscapes</code>
+<code class="western">        </code><code class="western">Alt+Shift+S --&gt; wmtile -s # reshape as a Stack</code>
+<code class="western">        </code><code class="western">Alt+Shift+B --&gt; wmtile -b # reshape as Big = maximize</code>
+<code class="western">        </code><code class="western">Alt+Shift+C --&gt; wmtile -c # gracefully Close</code>
+<code class="western">    </code><code class="western">please reboot in order to make wmtile keyboard shortcuts effective</code></pre><p>
+If you issue <code class="western">'wmtile -k'</code> a second time,
+don't worry, the new seven shortcuts overlap the previous ones,
+without duplication.</p>
+<h2 class="western"><br/>
+<br/>
+
+</h2>
+<h2 class="western" style="page-break-before: always"><a name="3."></a>
+3. Functions</h2>
+<p>Now we'll illustrate the seven <code class="western">wmtile</code>
+functions. If you have more than one workspace, functions operate on
+all windows in the current workspace only. Let's create, say, five
+terminal windows. They will all appear randomly overlapping.</p>
+<p><img src="../../wmtile-x.png" name="Image2" align="bottom" width="662" height="374" border="0"/>
+</p>
+<h3 class="western"><a name="3.1."></a>3.1. Minimize</h3>
+<p>Left-clicking the Minimize panel launcher 
+<img src="../../wmtile-m.ico.png" name="Image3" align="bottom" width="33" height="33" border="0"/>
+,
+or pressing Alt+Shift+M, all windows in current workspace are
+minimized and disappear.</p>
+<p><img src="../../wmtile-m.png" name="Image4" align="bottom" width="662" height="373" border="0"/>
+</p>
+<h3 class="western"><a name="3.2."></a>3.2. Tiles</h3>
+<p>Left-clicking the Tiles panel launcher 
+<img src="../../wmtile-t.ico.png" name="Image5" align="bottom" width="33" height="33" border="0"/>
+,
+or pressing Alt+Shift+T, all windows in current workspace are
+arranged in a grid, n * n or n * (n + 1).</p>
+<p><img src="../../wmtile-t.png" name="Image6" align="bottom" width="662" height="373" border="0"/>
+</p>
+<h3 class="western"><a name="3.3."></a>3.3. Portraits</h3>
+<p>Left-clicking the Portraits panel launcher 
+<img src="../../wmtile-p.ico.png" name="Image7" align="bottom" width="33" height="33" border="0"/>
+,
+or pressing Alt+Shift+P, all windows in current workspace are
+horizontally arranged in vertical portraits.</p>
+<p><img src="../../wmtile-p.png" name="Image8" align="bottom" width="662" height="373" border="0"/>
+</p>
+<h3 class="western"><a name="3.4."></a>3.4. Landscapes</h3>
+<p>Left-clicking the Landscapes panel launcher 
+<img src="../../wmtile-l.ico.png" name="Image9" align="bottom" width="33" height="33" border="0"/>
+,
+or pressing Alt+Shift+L, all windows in current workspace are
+vertically arranged in horizontal landscapes.</p>
+<p><img src="../../wmtile-l.png" name="Image10" align="bottom" width="662" height="373" border="0"/>
+</p>
+<h3 class="western"><a name="3.5."></a>3.5. Stack</h3>
+<p>Left-clicking the Stack panel launcher 
+<img src="../../wmtile-s.ico.png" name="Image11" align="bottom" width="33" height="33" border="0"/>
+,
+or pressing Alt+Shift+S, all windows in current workspace are
+reshaped in a stack.</p>
+<p><img src="../../wmtile-s.png" name="Image12" align="bottom" width="662" height="373" border="0"/>
+</p>
+<h3 class="western"><a name="3.6."></a>3.6. Big</h3>
+<p>Left-clicking the Big panel launcher 
+<img src="../../wmtile-b.ico.png" name="Image13" align="bottom" width="33" height="33" border="0"/>
+,
+or pressing Alt+Shift+B, all windows in current workspace are
+maximized, so you will see the most recent one only. Of course you
+can access the other windows by Alt-Tab or Alt-Shift-Tab.</p>
+<p><img src="../../wmtile-b.png" name="Image14" align="bottom" width="662" height="373" border="0"/>
+</p>
+<h3 class="western"><a name="3.7."></a>3.7. Close</h3>
+<p>Left-clicking the Close panel launcher 
+<img src="../../wmtile-c.ico.png" name="Image15" align="bottom" width="33" height="33" border="0"/>
+,
+or pressing Alt+Shift+C, all windows in current workspace are
+gracefully closed. Here &quot;gracefully&quot; means that if one of
+the windows to be closed belongs to an application processing an open
+file, then you will be asked whether to save the file before closing.</p>
+<p><img src="../../wmtile-c.png" name="Image16" align="bottom" width="662" height="373" border="0"/>
+</p>
+<h2 class="western"><a name="4."></a>4. Appendices</h2>
+<h3 class="western"><a name="4.1."></a>4.1. Known Bugs</h3>
+<p>For some obscure reason, LibreOffice windows refuse to be reshaped
+by <code class="western">wmtile</code>.</p>
+<h3 class="western"><a name="4.2."></a>4.2. Acronyms</h3>
+<table cellpadding="2" cellspacing="2">
+	<thead>
+		<tr>
+			<th style="border-top: 1px double #808080; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding: 0.02in"><p>
+				INITIALS</p>
+			</th>
+			<th style="border-top: 1px double #808080; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding: 0.02in"><p>
+				MEANING</p>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				CLI</p>
+			</td>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				Command Language Interface</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				DE</p>
+			</td>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				Desktop Environment</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				EWMH</p>
+			</td>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				Extended Window Manager Hints</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				GUI</p>
+			</td>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				Graphic User Interface</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				HTML</p>
+			</td>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				HyperText Markup Language</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				MD</p>
+			</td>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				MarkDown</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				PDF</p>
+			</td>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				Page Description Format</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				PyPI</p>
+			</td>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				Python Package Index</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				WM</p>
+			</td>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				Window Manager</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				XFCE</p>
+			</td>
+			<td style="border-top: none; border-bottom: 1px double #808080; border-left: 1px double #808080; border-right: 1px double #808080; padding-top: 0in; padding-bottom: 0.02in; padding-left: 0.02in; padding-right: 0.02in"><p>
+				X Forms Common (or Cool) Environment</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<h3 class="western"><a name="4.3."></a>4.3. Credits</h3>
+<p>The <code class="western">wmtile</code> project has been:</p>
+<ul>
+	<li><p style="margin-bottom: 0in">developed in <a href="http://www.python.org/">Python</a>
+	3.8.6 
+	</p>
+	<li><p style="margin-bottom: 0in">by <a href="https://docs.python.org/3/library/idle.html">Idle</a>
+	3.8.6 
+	</p>
+	<li><p style="margin-bottom: 0in">built and published on PyPI by
+	<a href="https://pypi.org/project/flit">flit</a> 3.0.0 on <a href="https://xubuntu.org/">Linux
+	Xubuntu</a> 20.10 
+	</p>
+	<li><p>tested on <a href="https://xubuntu.org/">Linux Xubuntu</a>
+	20.10 and <a href="https://www.ghostbsd.org/">GhostBSD-XFCE</a> 
+	</p>
+</ul>
+<p><code class="western">wmtile</code> uses two CLI utilities in
+order to interact with WM:</p>
+<ul>
+	<li><p style="margin-bottom: 0in"><a href="https://github.com/jordansissel/xdotool">xdotool</a>
+	1:3:20160805.1-4 for window minimization (which seems impossible by
+	wmctrl) 
+	</p>
+	<li><p><a href="https://linux.die.net/man/1/wmctrl">wmctrl</a>
+	1.07-7build1 for any other function 
+	</p>
+</ul>
+<p>The <code class="western">wmtile</code> User Guide file you see by
+typing <code class="western">'wmtile -H'</code> has been:</p>
+<ul>
+	<li><p style="margin-bottom: 0in">written in MD format and exported
+	in HTML format by <a href="https://pypi.org/project/ReText">ReText</a>
+	7.1.0 
+	</p>
+	<li><p style="margin-bottom: 0in">processed by <a href="https://pypi.org/project/toc2md">toc2md</a>
+	0.9.2 (see <code class="western">toc2md</code> User Guide) 
+	</p>
+	<li><p>translated from HTML into PDF format by <a href="https://www.libreoffice.org/">LibreOffice
+	Writer</a> 7.0.3.1 
+	</p>
+</ul>
+<p>Thanks to <a href="https://apod.nasa.gov/">APOD (Astronomical
+Picture of the Day)</a> for the <a href="https://apod.nasa.gov/apod/ap190101.html">Sombrero
+Galaxy in Infrared</a> image used as desktop background.</p>
+<h3 class="western"><a name="4.4."></a>4.4. Changelog</h3>
+<ul>
+	<li><p>Version <strong>0.9.</strong><strong>3</strong> - 2021-01-29</p>
+	<ul>
+		<li><p>Changed</p>
+		<ul>
+			<li><p style="margin-bottom: 0in">README.txt converted into
+			README.md</p>
+			<p style="margin-bottom: 0in"></p>
+		</ul>
+	</ul>
+	<li><p>Version <strong>0.9.2</strong> - 2021-01-29</p>
+	<ul>
+		<li><p>Changed</p>
+		<ul>
+			<li><p style="margin-bottom: 0in">Help and User Guide have been
+			updated 
+			</p>
+			<p style="margin-bottom: 0in"></p>
+		</ul>
+	</ul>
+	<li><p>Version <strong>0.9.1</strong> - 2021-01-25</p>
+	<ul>
+		<li><p>Changed</p>
+		<ul>
+			<li><p style="margin-bottom: 0in">User Guide has been updated 
+			</p>
+		</ul>
+	</ul>
+	<li><p>Version <strong>0.0.1</strong> - 2020-10-14</p>
+	<ul>
+		<li><p>First version published on Pypi 
+		</p>
+	</ul>
+</ul>
+</body>
+</html>
