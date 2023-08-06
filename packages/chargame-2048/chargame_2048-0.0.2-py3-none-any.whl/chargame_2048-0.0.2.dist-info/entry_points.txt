@@ -1,0 +1,3 @@
+[console_scripts]
+2048 = chargame_2048:main
+
