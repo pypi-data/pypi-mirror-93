@@ -1,0 +1,3 @@
+[console_scripts]
+evbus_test = evbus.scripts:start
+
