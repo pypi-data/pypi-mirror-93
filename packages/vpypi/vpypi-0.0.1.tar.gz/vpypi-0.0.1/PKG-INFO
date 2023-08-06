@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: vpypi
+Version: 0.0.1
+Summary: vpypi is a CLI tool to verify GPG signature for Python packages on PyPI.
+Home-page: https://github.com/orsinium-labs/vpypi
+Author: Gram
+Author-email: gram@orsinium.dev
