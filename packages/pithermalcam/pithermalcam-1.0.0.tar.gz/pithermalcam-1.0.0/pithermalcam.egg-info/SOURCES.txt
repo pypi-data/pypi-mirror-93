@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+pithermalcam/__init__.py
+pithermalcam/pi_therm_cam.py
+pithermalcam/web_server.py
+pithermalcam.egg-info/PKG-INFO
+pithermalcam.egg-info/SOURCES.txt
+pithermalcam.egg-info/dependency_links.txt
+pithermalcam.egg-info/requires.txt
+pithermalcam.egg-info/top_level.txt
+pithermalcam/templates/index.html
