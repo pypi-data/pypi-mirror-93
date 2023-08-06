@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: super-py
+Version: 0.3.0
+Summary: Features that Python should have in the standard library
+License: MIT
+Author: Marcel Kröker
+Author-email: kroeker.marcel@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+
+# SuperPy
+
+Description follows (Or look into the files, its not that complicated)
