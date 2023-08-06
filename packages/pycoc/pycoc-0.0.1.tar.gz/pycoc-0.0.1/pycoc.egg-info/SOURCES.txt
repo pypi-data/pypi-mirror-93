@@ -1,0 +1,9 @@
+README.md
+setup.py
+pycoc/__init__.py
+pycoc/__main__.py
+pycoc/pyCopasiSE.py
+pycoc.egg-info/PKG-INFO
+pycoc.egg-info/SOURCES.txt
+pycoc.egg-info/dependency_links.txt
+pycoc.egg-info/top_level.txt
