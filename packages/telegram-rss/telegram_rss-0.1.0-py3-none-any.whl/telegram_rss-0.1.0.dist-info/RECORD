@@ -1,0 +1,16 @@
+telegram_rss/__init__.py,sha256=EWQOjcUKoIDVNfJrOvQagYZDhu3gd00bwzvMbYreIuo,64
+telegram_rss/__main__.py,sha256=HA5MAaA8KCxCMdLa5EnutAi0wloJUozQ8XQWZgOX534,85
+telegram_rss/commands/__init__.py,sha256=dvwg8HCIdGOrwdXBsAo0bhvslEiPEjaab9ER7cSdAgw,481
+telegram_rss/commands/start.py,sha256=T8FsEGUa0glVw9QhZJwbtLMN886tJ_QJw7YDWMbiexQ,413
+telegram_rss/commands/update.py,sha256=c91leFjSZjchW6PfnGpX8wgm6c39_OOdxLSB-WyHcVI,283
+telegram_rss/config.py,sha256=JNemMLtFjpz6ROod9LUAzjDC90sKZi0qvzhpMLQdrgU,2786
+telegram_rss/feed.py,sha256=ARzn-S3l00utcmgHTDdDgj13gRqBOajyCOkico1bZOY,1042
+telegram_rss/main.py,sha256=-PCj3uPcI9J1fP8sF214uFdGYZsHcxcmTQu9OQESGgw,1015
+telegram_rss/telegram.py,sha256=8imuISflIMK3xXQEkKKVMU05x-pMT3URH83xfop8gX4,119
+telegram_rss/utils.py,sha256=SGe9FPi-4mNsG008bcKXg84oMKcEZdewgWU_MvLDB7o,785
+telegram_rss/version.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+telegram_rss-0.1.0.dist-info/entry_points.txt,sha256=2WqysPPMJf9BFxt_iIYFmdtfi6zwXkv22x--W31uExE,55
+telegram_rss-0.1.0.dist-info/LICENSE,sha256=UNeFbs6UZXli5MOnvCmADXXVCzvqRNIM3nZmUr2tZ6o,1068
+telegram_rss-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+telegram_rss-0.1.0.dist-info/METADATA,sha256=yLLBdSlUqY7BFZAEdaZNGfvOIIE1Bcd8C-SIF-Ob6vg,1017
+telegram_rss-0.1.0.dist-info/RECORD,,
