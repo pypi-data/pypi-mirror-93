@@ -1,0 +1,3 @@
+[console_scripts]
+chat_replay_downloader = chat_replay_downloader.cli:main
+
