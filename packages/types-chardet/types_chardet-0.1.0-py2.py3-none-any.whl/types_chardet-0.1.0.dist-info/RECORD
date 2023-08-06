@@ -1,0 +1,16 @@
+chardet-stubs/METADATA.toml,sha256=i4S-fhszn-dtnm090JpOig_OvgZMLR3YzcCIlLAEfjw,70
+chardet-stubs/__init__.pyi,sha256=iTl0aDlS_uQVPCs4ZQSsAYwNveIOYkE3ADM0Bu09Q04,667
+chardet-stubs/enums.pyi,sha256=inSdRKDA-1mWbD2S2Wk1NRmWRmefiYx5YQxJMGimkz4,710
+chardet-stubs/langbulgarianmodel.pyi,sha256=OpF1fUvRwXdQXUXoJs33oTP4KRMWZF05xwZjkLu6iyc,263
+chardet-stubs/langcyrillicmodel.pyi,sha256=QbAYnXFTbOS3n1OntaCWI1x3XIbWX96oRwyyA9A5vZw,536
+chardet-stubs/langgreekmodel.pyi,sha256=T0VzNfG5ktCgMT8PY-JSmVToVUXYxY9T72iaYQ9xmmk,240
+chardet-stubs/langhebrewmodel.pyi,sha256=tUeIdTVWsWmI-RJAIkk5ubiUqeI9R1vUElAk1cdCxP4,169
+chardet-stubs/langhungarianmodel.pyi,sha256=6sMaBbtCipjI9zwb3pK2ojnJ1V50ueO7cLd3ODuBkVo,263
+chardet-stubs/langthaimodel.pyi,sha256=X0Ot8G3kPmA4VrnAxy7wwAkLyZJ5QfLOQMMSZfDpNH4,157
+chardet-stubs/langturkishmodel.pyi,sha256=0xxalkd4p4lrZFWdCy9OZhvAG_S1rPEH2HuguWFe_7o,171
+chardet-stubs/universaldetector.pyi,sha256=Cv9ikp-HF1JsbmUUnfrTGdj-ogw_iFVSf0yOQEE5Hxs,809
+chardet-stubs/version.pyi,sha256=9L2O530uTJPPoHbmYkRjZwFkoIeIOhCWwGGBYouCKN4,61
+types_chardet-0.1.0.dist-info/METADATA,sha256=fS9ojLOtqVSCYvToI210_suJGxm1OucQUb-X-LLP64E,831
+types_chardet-0.1.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+types_chardet-0.1.0.dist-info/top_level.txt,sha256=_aARHcS1S5R-kF8rV0u-xRexNcGIxD9bsPstcpocsNo,14
+types_chardet-0.1.0.dist-info/RECORD,,
