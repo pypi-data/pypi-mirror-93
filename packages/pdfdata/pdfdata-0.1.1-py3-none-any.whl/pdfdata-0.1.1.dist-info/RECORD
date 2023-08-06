@@ -1,0 +1,12 @@
+pdfdata/__init__.py,sha256=ezICvlahH7WQpd1No6V8mL4-EjmiVG4O9zaq_vgPv78,356
+pdfdata/flag_decomposer.py,sha256=8bmtNzOXarEeU4VehDNEdlaSCZpZh4qoVJ6AUp_-9-Q,661
+pdfdata/parse_pdf.py,sha256=CYobzRQ_brLBifgFrqidj6sClsVjq9QWx416f7nrNvM,116
+pdfdata/pdf_doc_extract_line.py,sha256=pHjNZ0QCcMb05ahpwoHmN1Zq4u4NFQAhMcxDdwma2g4,1607
+pdfdata/pdf_doc_extract_span_df.py,sha256=ske9z-VoeKayBN3foWJTplDiR6gn3ZAl1O9g4R6LCtw,2891
+pdfdata/pdf_doc_extract_span_list.py,sha256=xDM0-efcMAkikRJOVDxd5z4ndxsUPQdXseNL9hU8ZZU,3336
+pdfdata/pdf_text_to_jsonnl.py,sha256=vcUCPUcMFiAqC152kLikCjE0ShYWWZml-13On4DRQlQ,327
+pdfdata-0.1.1.dist-info/LICENCE,sha256=Rc9wJ74aRrrdvhDYrcpJoeqKIECSsbIb2XvyjJhrY9k,1058
+pdfdata-0.1.1.dist-info/METADATA,sha256=XsbyUSb14AyhkS-HSTXyEe0PC7MsP5gx3YGjhVG1LkI,1204
+pdfdata-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pdfdata-0.1.1.dist-info/top_level.txt,sha256=2BhBt-7E-AEC-2i98_IIBuxvuBIHxzpgH0DFrGo9Aak,8
+pdfdata-0.1.1.dist-info/RECORD,,
