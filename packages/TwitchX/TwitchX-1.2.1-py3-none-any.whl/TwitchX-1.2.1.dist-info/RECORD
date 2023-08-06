@@ -1,0 +1,15 @@
+TwitchX/__init__.py,sha256=IhbauctzVOJq-dDZvPzRz698piTQ7UpHpdQDlxSVrxg,129
+TwitchX/stream.py,sha256=f51pJ9U_5fIzxi90AXCui38-2gJoh85dW6-_tPQIKgs,3572
+TwitchX/error/__init__.py,sha256=qvBA-kpVAphwnBgTuegYHe0ieZuitc7f85ymMz9H19A,207
+TwitchX/ext/__init__.py,sha256=ZdeM_mF5S3LifYEp_vcYINGwvZN1pCXvo1c2ihlcYio,91
+TwitchX/ext/GraphQL/__init__.py,sha256=LoR6gEojpGSle9JGkaWJY26zqc0yR9njrAYzMbgsdNM,2835
+TwitchX/ext/login/__init__.py,sha256=BMO0_oqZ82dpD5j4gKNA_Nn6OtkpUXd59OBRoebgQsw,3586
+TwitchX/ext/parser/__init__.py,sha256=E5g7Wg5MGhxJKr-Ogo6Zf5MakMpE694fdb0oAUbCoJM,58
+TwitchX/ext/parser/get_vendorjs.py,sha256=FoJYWRABQtGXzhE7w-qEPodJiK2BBiPzbCvrHrWWA0Y,1420
+TwitchX/util/__init__.py,sha256=oxM3UvpsU66D8_vov5IEzyk6FB_oyXSNi4rEiJkKnvM,40
+TwitchX/util/_http.py,sha256=PigOREkk-a9ymd_eXrVOCLG1AhAww_lqh6IoUK3eRbI,1746
+TwitchX-1.2.1.dist-info/LICENSE,sha256=X_Hwalz9KTNpZaEE2xWDcbKMITcdmYV-i49Vl12_-Qw,71
+TwitchX-1.2.1.dist-info/METADATA,sha256=WQLh7TxxuhX2QAA4rdQkvACVFlNMTOuqe9OPW9N1By4,706
+TwitchX-1.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+TwitchX-1.2.1.dist-info/top_level.txt,sha256=GU6ldXytvLrGPmHW6R0Kq9sw86fDl-P9rIGXBF1Ow2Y,8
+TwitchX-1.2.1.dist-info/RECORD,,
