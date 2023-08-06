@@ -1,0 +1,239 @@
+# Template Library CLI
+This is a CLI client for the Template library.
+
+## Table of Contents
+  - [Introduction](#introduction)
+    - [Prerequisites](#installation)
+    - [Installation](#installation)
+  - [Usage](#usage)
+    - [Setup](#setup)
+    - [Auth](#auth)
+    - [Templates](#templates)
+    - [Template groups](#template-groups)
+    - [Users](#users)
+    - [User groups](#user-groups)
+
+## Introduction
+Template library CLI is called [`xopera-template-library`](https://pypi.org/project/xopera-template-library/) and is 
+available on [PyPI](https://pypi.org/project/xopera-template-library/) and 
+[TestPyPI](https://test.pypi.org/project/xopera-template-library/) instances. The tool can be used to view, upload and 
+download TOSCA template modules and their implementations. 
+
+### Prerequisites
+`xopera-template-library` requires python 3 (and a virtual environment). In a typical modern Linux environment, we 
+should already be set. In Ubuntu, however, we might need to run the following commands:
+
+```console
+$ sudo apt update
+$ sudo apt install -y python3-venv python3-wheel python-wheel-common
+```
+
+### Installation
+After the prerequisites are satisfy you can proceed with the installation.
+The simplest way to test `xopera-template-library` is to install it into virtual environment:
+
+```console
+$ mkdir ~/opera && cd ~/opera
+$ python3 -m venv .venv && . .venv/bin/activate
+(.venv) $ pip install xopera-template-library
+```
+
+## Usage
+This part explains the usage of Template library CLI tool.
+
+```console
+$ xopera-template-library template -h
+usage: xopera-template-library [-h] [-v]
+                               {template,template-group,user-group,user,setup,login,logout}
+                               ...
+
+positional arguments:
+  {template,template-group,user-group,user,setup,login,logout}
+    template            Template actions.
+    template-group      Actions for groups of templates.
+    user-group          Actions for groups of users.
+    user                User info.
+    setup               Setup client variables.
+    login               Login to your account.
+    logout              Logout of your account.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --verbose         Increase output verbosity
+```
+
+At any point the `-h/--help` (help) flag is available to display proceeding options. There is also `-v/--verbose` flag
+that will turn on the debug mode to see more output.
+
+### Setup
+Before you begin using `xopera-template-library` tool you have to make sure that Template library REST API endpoint and
+KeyCloak auth endpoint are properly configured. This can be done with `setup` command where you will be able to change
+the default values that are:
+
+```python
+# default REST API endpoint
+REST_API_ENDPOINT = "https://template-library-radon.xlab.si/api"
+# default KeyCloak endpoint
+KEYCLOAK_ENDPOINT = "https://openid-radon.xlab.si"
+```
+
+If you run only `xopera-template-library setup` you will be able to modify only the REST API endpoint. You have to use
+`--keycloak` flag to tell the CLI that you will modify KeyCloak auth endpoint too.
+
+Examples:
+
+```console
+$ xopera-template-library setup
+Current Template Library REST API endpoint: https://template-library-radon.xlab.si/api
+Modify API endpoint (press enter to keep the current): 
+Template library REST API endpoint has been set to: https://template-library-radon.xlab.si/api.
+
+Current KeyCloak auth endpoint: https://openid-radon.xlab.si
+Modify KeyCloak endpoint (press enter to keep the current): 
+KeyCloak endpoint has been set to: https://openid-radon.xlab.si.
+```
+
+### Auth
+Before invoking any Template library actions  you need to login with your account.
+
+You can login as:
+- Template library native user
+- XLAB KeyCloak user (use `--keycloak xlab` flag)
+- RADON KeyCloak user (use `--keycloak radon` flag)
+
+Optional arguments are usually not optional. If there is missing data, you will be prompted with input.
+You don't have to type password directly - leave it out and enter it on `getpass()` prompt.
+
+Examples:
+
+```console
+# login as a native user
+$ xopera-template-library login 
+Username: test
+Password: *******
+
+# login as a native user
+$ xopera-template-library login --username "username1"
+Password: *******
+
+# login as a native user
+$ xopera-template-library login --username "username1" --password "password1"
+
+# login as XLAB KeyCloak user
+$ xopera-template-library login --username "username1" --password "password1" --keycloak xlab
+
+# login as RADON KeyCloak user
+$ xopera-template-library login --username "username1" --password "password1" --keycloak radon
+```
+
+To logout, use `xopera-template-library logout`
+
+### Templates
+Next you can use option `list` to display available templates.
+The templates will list in a table with templates' information.
+You can use filters for **keyword** (template name and description), template **type** and template **privacy** setting.
+Option `version` displays a list of template's published versions.
+
+Examples:
+
+```console
+$ xopera-template-library template list
+$ xopera-template-library template list --keyword aws
+$ xopera-template-library template list --type node --public true
+$ xopera-template-library template version --name AwsLambda
+```
+
+To download a template you have to provide a `path` to where you want the template to be saved and the name of the
+template to download. By default, the last version is downloaded.
+With argument `--version` you can download other versions.
+
+Example:
+
+```console
+$ xopera-template-library template get --name DemoBlueprintOpenFaaS --path example/
+$ xopera-template-library template get --name DemoBlueprintOpenFaaS --path example/ --version 0.0.1
+```
+
+If the desired template does not exist you can create and upload your own.
+You can start by generating a basic file structure by using `create` option.
+You will be asked for your template's name and type.
+
+Possible types are `data`, `artifact`, `capability`, `requirement`, `relationship`, `interface`, `node`, `group`,
+`policy`, `csar` and `other`.
+
+Examples:
+
+```console
+$ xopera-template-library template create
+Template type: node
+Template name: ExampleTemplate
+```
+
+When using the `xopera-template-library template create` CLI command this will automatically create the structure for
+your template, which contains the following files:
+
+ ```console
+|-- Folder
+        |-- files
+            |-- create.yml
+            |-- delete.yml
+        |-- NodeType.tosca
+        |-- README.md
+```
+
+The structure is similar to [RADON particles](https://github.com/radon-h2020/radon-particles) and is compatible with 
+[Eclipse Winery](https://projects.eclipse.org/projects/soa.winery) modelling tool.
+
+After the basic files are generated you can edit them and upload your template to the library (use `save` CLI command).
+By default templates are private. For publishing your template publicly, add `--public` flag.
+
+Examples:
+
+```console
+$ xopera-template-library template save --name AwsLambda --path example/AwsLambdaFunction --public --version 0.0.1
+```
+
+### Template groups
+Templates can be ordered in **template groups**. User can create a template group, list existing groups and get a list 
+of templates in a template group. Template group owners can add and remove templates.
+
+Examples:
+
+```console
+$ xopera-template-library template-group create --group_name AwsGroup --group_description "A group of AWS related templates"
+$ xopera-template-library template-group list
+$ xopera-template-library template-group get --group_name AwsGroup
+$ xopera-template-library template-group add-template --group_name AwsGroup --template_name AwsBucket
+$ xopera-template-library template-group remove-template --group_name AwsGroup --template_name AwsBucket
+```
+
+### Users
+Users can look up their info, list user groups they are members of and list template groups they have access to.
+
+Examples:
+
+```console
+$ xopera-template-library user info
+$ xopera-template-library user user-groups
+$ xopera-template-library user template-groups
+```
+
+### User groups
+Users can be members of **user groups**. User groups can be granted access to groups of templates. User can create a
+user group, list existing groups, get a list of users in a given user group and get a list of template groups a user
+group is granted access to.
+
+User group owners can add and remove users and access to template groups.
+
+Examples:
+
+```console
+$ xopera-template-library user-group create --group_name RadonGroup --group_description "Members of Radon project"
+$ xopera-template-library user-group list
+$ xopera-template-library user-group get-users --group_name RadonGroup
+$ xopera-template-library user-group template-groups --group_name RadonGroup
+$ xopera-template-library user-group add-user --group_name RadonGroup --username johny
+$ xopera-template-library user-group remove-user --group_name RadonGroup --username johny
+$ xopera-template-library user-group add-templates --user_group RadonGroup --template_group AwsGroup
+$ xopera-template-library user-group remove-templates --user_group RadonGroup --template_group AwsGroup
+```
