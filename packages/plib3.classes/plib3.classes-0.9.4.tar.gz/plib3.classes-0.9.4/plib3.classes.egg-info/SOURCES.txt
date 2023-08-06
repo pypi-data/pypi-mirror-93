@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README
+setup.py
+setuputils.py
+plib/__init__.py
+plib/classes/StateMachine.py
+plib/classes/__init__.py
+plib/classes/_defs.py
+plib/test/__init__.py
+plib/test/classes/__init__.py
+plib/test/classes/__main__.py
+plib/test/classes/test_StateMachine.py
+plib3.classes.egg-info/PKG-INFO
+plib3.classes.egg-info/SOURCES.txt
+plib3.classes.egg-info/dependency_links.txt
+plib3.classes.egg-info/top_level.txt

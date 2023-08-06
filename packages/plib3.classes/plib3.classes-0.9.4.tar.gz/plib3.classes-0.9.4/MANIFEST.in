@@ -1,0 +1,3 @@
+include setuputils.py
+recursive-exclude . *.pyc
+include LICENSE
