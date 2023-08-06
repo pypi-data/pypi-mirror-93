@@ -1,0 +1,10 @@
+README.md
+setup.py
+persistedRmq/__init__.py
+persistedRmq/persistedrmq.py
+persistedRmq.egg-info/PKG-INFO
+persistedRmq.egg-info/SOURCES.txt
+persistedRmq.egg-info/dependency_links.txt
+persistedRmq.egg-info/requires.txt
+persistedRmq.egg-info/top_level.txt
+persistedRmq.egg-info/zip-safe
