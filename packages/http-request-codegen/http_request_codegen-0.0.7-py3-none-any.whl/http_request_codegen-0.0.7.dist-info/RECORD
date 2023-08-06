@@ -1,0 +1,14 @@
+http_request_codegen/__init__.py,sha256=VIFkbEeTYMmO8VkfXUGP4_WhBbWuXcoYD7TjpRHdnoE,595
+http_request_codegen/hrc_api.py,sha256=v0gWiws2z1wDDPyc3QFZbSCLQ0PHUIwSZWrfAvMQOhc,14512
+http_request_codegen/hrc_exceptions.py,sha256=96WpYn5h_1EHjKwINh0oz1dyqvr8CJ00w666YuuLj9U,847
+http_request_codegen/hrc_factory.py,sha256=axn3hxiCA1iA2dEf8Wmh4qtDf4eH2FknMOSZe5_0XGc,2904
+http_request_codegen/hrc_http.py,sha256=E2g-KcQXV1W-wCCQDrJ-1rMfoLSaex6OTGDOpc36Zng,155
+http_request_codegen/hrc_meta.py,sha256=N0WeV7OR4Z2mLEgMXsfqLQjlgqhEAJ6WwpqiwtouBnY,3036
+http_request_codegen/hrc_string.py,sha256=tPpNcCMYDWMwDJJbPaLxme4FLF0uiRiStYhYH9mAXPM,10249
+http_request_codegen/hrc_support.py,sha256=Q1-rzRJS3W-YS1cgAxR0zATPIJ3UT9-AEqLKIJNHACI,4268
+http_request_codegen/hrc_valuer.py,sha256=W7kZDjwAxZ49zzeo68QNlcUNTkCeRn5Q5kGKP-2Cdy0,9263
+http_request_codegen-0.0.7.dist-info/LICENSE,sha256=tcZ2c7Gk2a26-ggOKYZR8-0v0Ig6N-yg6ddcwuy3SuI,1536
+http_request_codegen-0.0.7.dist-info/METADATA,sha256=CgZMssCeb25XTmqBB5djsltAg3e-D8fToKY_AT1pLS8,4004
+http_request_codegen-0.0.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+http_request_codegen-0.0.7.dist-info/top_level.txt,sha256=nRtzcT8G78wMqt9NcS9ErP9os5mVg5IVt2klmPXgFiA,21
+http_request_codegen-0.0.7.dist-info/RECORD,,
