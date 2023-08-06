@@ -1,0 +1,11 @@
+aliyunsdkfacebody/__init__.py,sha256=F6RPJohBJFM-vBDy7Pa-czmOxplx2tNDffcS6x3FwTA,22
+aliyunsdkfacebody/endpoint.py,sha256=sMY18QlXlQM2FwvoeHUMpRty-ZItdR5yKvzA0_N4KsI,1088
+aliyunsdkfacebody/request/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aliyunsdkfacebody/request/v20200910/DetectIPCPedestrianOptimizedRequest.py,sha256=nj8S8yt5oAxVYhYmwk77B6bSuafMqfNxDw4ZxKeOA3Y,1844
+aliyunsdkfacebody/request/v20200910/ExecuteServerSideVerificationRequest.py,sha256=P4IZvuZak52P0AXj5URKrY59t0mGIEL9sP8gfQGLjvY,2398
+aliyunsdkfacebody/request/v20200910/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aliyun_python_sdk_facebody-1.2.13.dist-info/LICENSE,sha256=CvyZB4el1cZGT3cy9OYoITxta_Ea2maondKqmi8EcpU,575
+aliyun_python_sdk_facebody-1.2.13.dist-info/METADATA,sha256=aBOKOf2DCNlRRQm0bij5kFoAic6nVfkm0KCTbSgs2ZM,1481
+aliyun_python_sdk_facebody-1.2.13.dist-info/WHEEL,sha256=ADKeyaGyKF5DwBNE0sRE5pvW-bSkFMJfBuhzZ3rceP4,110
+aliyun_python_sdk_facebody-1.2.13.dist-info/top_level.txt,sha256=woq75U9HkVXMva3GrbPyu3ulpxPLlb2tisnXCH0Mcpk,18
+aliyun_python_sdk_facebody-1.2.13.dist-info/RECORD,,
