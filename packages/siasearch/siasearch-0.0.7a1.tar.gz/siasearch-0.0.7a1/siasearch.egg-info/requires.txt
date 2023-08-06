@@ -1,0 +1,7 @@
+dataclasses
+ipython
+pandas
+matplotlib
+scikit-image
+requests
+pyarrow
