@@ -1,0 +1,37 @@
+0.4.0 - 2021-02-01
+==================
+
+* NEW: add thickness_from_fft, determine thicknesses by FFT.
+* Add option min_distance to `thickness_from_minmax`.
+* Enhance documentation
+* Remove support for scipy<1.1.0
+* Add delimiter option on io
+
+0.3 - 2018-04-20
+================
+
+* Change the return type for thickness_minmax()
+The scalar has been replaced by a class containing
+the thickness and other data.
+* Fix travis build array
+
+0.2 - 2018-04-18
+================
+
+* Fix mistakes in doc
+* Replace the doc template
+
+
+0.1.1 - 2018-04-03
+==================
+
+* Fall back to scikit-image for ransac
+* Improved documentation
+* Add CI for unittests
+* General metadata enhancement
+
+
+0.1 - 2018-04-03
+================
+
+* First version
