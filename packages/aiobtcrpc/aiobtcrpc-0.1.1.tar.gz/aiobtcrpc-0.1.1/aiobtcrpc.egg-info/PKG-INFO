@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: aiobtcrpc
+Version: 0.1.1
+Summary: Asynchronous Bitcoin RPC Client
+Home-page: https://github.com/biobdeveloper/aiobtcrpc
+Author: @biobdeveloper
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
