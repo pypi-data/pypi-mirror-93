@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: snntorch
+Version: 0.1.0
+Summary: Deep learning with spiking neural networks.
+Home-page: https://github.com/jeshraghian/snntorch
+Author: Jason K. Eshraghian
+Author-email: jasonesh@umich.edu
+License: GNU General Public License v3
+Keywords: snntorch
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: Click (>=7.0)
+Requires-Dist: torch (>=1.2.0)
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: celluloid
+Requires-Dist: numpy (>=1.17)
+
+========
+snntorch
+========
+
+
+.. image:: https://img.shields.io/pypi/v/snntorch.svg
+        :target: https://pypi.python.org/pypi/snntorch
+
+.. image:: https://img.shields.io/travis/jeshraghian/snntorch.svg
+        :target: https://travis-ci.com/jeshraghian/snntorch
+
+.. image:: https://readthedocs.org/projects/snntorch/badge/?version=latest
+        :target: https://snntorch.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+
+
+Deep learning with spiking neural networks.
+
+
+* Free software: GNU General Public License v3
+* Documentation: https://snntorch.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.0.1 (2021-01-20)
+------------------
+
+* First release on PyPI.
+
+
