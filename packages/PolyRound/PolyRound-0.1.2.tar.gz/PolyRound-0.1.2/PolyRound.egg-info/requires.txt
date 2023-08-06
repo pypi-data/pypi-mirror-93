@@ -1,0 +1,9 @@
+numpy>=1.18
+pandas>=1.0
+python-dateutil>=2.8
+python-libsbml>=5.18
+scipy>=1.4
+h5py>=2.10
+optlang>=1.4
+tables>=3.6
+cobra>=0.20

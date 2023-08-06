@@ -1,0 +1,29 @@
+Metadata-Version: 1.2
+Name: PolyRound
+Version: 0.1.2
+Summary: A python package for rounding polytopes.
+Home-page: https://gitlab.com/csb.ethz/PolyRound
+Author: Axel Theorell
+Author-email: atheorell@ethz.ch
+License: MIT License
+Description: Efficient random sampling in convex polytopes relies on a 'rounding' preprocessing step, in which the polytope is rescaled so that the width is as uniform as possible across different dimensions.
+        PolyRound rounds polytopes on the general form:
+        
+        $`P := \{x \in \mathcal{R}^n: A_{eq}x = b_{eq}, A_{ineq}x \leq b_{ineq}\}`$ with matrices $`A_{eq} \in \mathcal{R}^{m,n}`$ and $`A_{ineq}\in \mathcal{R}^{k,n}`$ and vectors $`b_{eq} \in \mathcal{R}^{m}`$ and $`b_{ineq}\in \mathcal{R}^{k}`$. 
+        
+        This formulation often arises in Systems Biology as the flux space of a metabolic network.
+        
+        As output, PolyRound produces a polytope on the form $`P^{r} := \{v \in \mathcal{R}^l: A^{r}_{ineq}v \leq b^{r}_{ineq}\}`$ where $`l \leq n`$ and the zero vector is a stricly interior point. For transforming points back to the original space, it also provides a matrix $`S \in \mathcal{R}^{n,l}`$ and a vector $`t \in \mathcal{R}^{n}`$, so that $`x = Sv + t`$.
+        
+        Currently, PolyRound is supported for python 3.7 and 3.8.
+        
+        PolyRound no longer depends on a Gurobi installation and uses optlang (https://github.com/opencobra/optlang) to delegate linear programs to GLPK in case Gurobi is not installed. However, PolyRound is more reliable with Gurobi. Free Gurobi licenses for academic use can be obtained at https://www.gurobi.com/. Once the license is installed, the easiest way to get gurobi to work in python is through Anaconda https://www.anaconda.com/. Installation of gurobi in a conda environment is done with "conda install -c gurobi gurobi".
+        
+        An easy example of how to get started is presented in the jupyter notebook "example_usage".
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
