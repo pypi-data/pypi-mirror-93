@@ -1,0 +1,72 @@
+Metadata-Version: 1.1
+Name: buildout_component
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: https://www.nicestudio.com.tw/projects/Buildout Component/
+Author: niceStuio, Inc.
+Author-email: service@nicestudio.com.tw
+License: GPL-3.0 License
+Description: # buildout-component
+        
+        Python Buildout component tool, a tool program used to help componentize the settings of zc.buildout.
+        
+        ## Introduction
+        
+        Buildout is a great tool for Python development and deployment environment, but it requires a lot of settings to work
+        well.
+        
+        I am used to Buildout each reusable item as a component. If there is a component that needs to be reused, just copy its
+        content to a new project to use it directly, but it still depends on manual settings and configuration.
+        
+        In order to simplify the complicated settings, I wrote a gadget called `buildout-component` to help me set up the
+        componentized environment of Buildout more conveniently.
+        
+        ## Features
+        
+        - Generate the file structure of Buildout Component;
+        - Through the question and answer method, to generate the Buildout profile.
+        
+        ## Installation
+        
+        Install `buildout-component`:
+        
+            $ pip install buildout-component
+        
+        ## Use
+        
+        After installation, you can execute the `buildout-component` command:
+        
+        - set up
+        
+                $ buildout-component setup
+        
+        - Display set value
+        
+                $ buildout-component show-options
+        
+        - Create Component
+        
+                $ buildout-component create
+        
+        
+        
+        ChangeLog
+        ---------
+        
+        0.1.dev0
+        ------------------------------------------------------------------------------
+        
+        * First release on PyPI.
+        
+Keywords: buildout_component
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4

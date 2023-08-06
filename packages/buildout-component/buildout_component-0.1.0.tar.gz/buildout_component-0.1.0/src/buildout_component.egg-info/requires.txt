@@ -1,0 +1,4 @@
+zc.buildout
+wrapt
+setuptools>=51.3.3
+six
