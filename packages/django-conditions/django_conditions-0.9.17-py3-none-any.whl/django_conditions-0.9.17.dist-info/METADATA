@@ -1,0 +1,122 @@
+Metadata-Version: 2.1
+Name: django-conditions
+Version: 0.9.17
+Summary: A Django app that allows creation of conditional logic in admin.
+Home-page: https://github.com/RevolutionTech/django-conditions
+License: ISC
+Author: Lucas Connors
+Author-email: lucas@revolutiontech.ca
+Requires-Python: >=3.6.1,<4.0.0
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Dist: Django (>=2.2,<3.2a0)
+Requires-Dist: django-jsonfield (>=1.1,<2.0)
+Project-URL: Repository, https://github.com/RevolutionTech/django-conditions
+Description-Content-Type: text/markdown
+
+# django-conditions
+
+[![Build Status](https://travis-ci.org/RevolutionTech/django-conditions.svg?branch=master)](https://travis-ci.org/RevolutionTech/django-conditions)
+[![codecov](https://codecov.io/gh/RevolutionTech/django-conditions/branch/master/graph/badge.svg)](https://codecov.io/gh/RevolutionTech/django-conditions)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8fccc57f17e44c5496a912adc691fc39)](https://www.codacy.com/app/RevolutionTech/django-conditions)
+[![Dependency Status](https://www.versioneye.com/user/projects/56de7e4cdf573d0048dafc52/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56de7e4cdf573d0048dafc52)
+[![Documentation Status](https://readthedocs.org/projects/django-conditions/badge/?version=latest)](http://django-conditions.readthedocs.org/en/latest/)
+
+Move conditional logic that changes often from code into models so that the logic can be easily modified in admin. Some possible use cases:
+- Segment your user base into cohorts with targeted messaging
+- Provide different rewards to users depending on their expected value
+- In a game, define the winning objectives of a mission/quest
+- and many more...
+
+## Installation
+
+First install the `django-conditions` package:
+
+    pip install django-conditions
+
+Then add `conditions` to your `INSTALLED_APPS` setting:
+
+```python
+## settings.py
+INSTALLED_APPS = [
+    ...
+    'conditions',
+]
+```
+
+## Basic Usage
+
+Start by defining a condition in code:
+
+```python
+## condition_types.py
+from conditions import Condition
+
+class FullName(Condition):
+    # The name that appears in the db and represents your condition
+    condstr = 'FULL_NAME'
+
+    # Normal conditions define eval_bool, which takes in a user
+    # and returns a boolean
+    def eval_bool(self, user, **kwargs):
+        return bool(user.first_name and user.last_name)
+```
+
+Then add a ConditionsField to your model:
+
+```python
+## models.py
+from django.db import models
+from conditions import ConditionsField, conditions_from_module
+import condition_types
+
+class Campaign(models.Model):
+    text = models.TextField()
+
+    # The ConditionsField requires the definitions of all possible conditions
+    # conditions_from_module can take an imported module and sort this out for you
+    target = ConditionsField(definitions=conditions_from_module(condition_types))
+```
+
+In the model's change form on admin, you can enter JSON to represent when you want your condition to be satisfied.
+
+```javascript
+{
+    "all": ["FULL_NAME"]
+}
+```
+
+Now you can use the logic you created in admin to determine the outcome of an event:
+
+```python
+## views.py
+from django.http import HttpResponse
+from conditions import eval_conditions
+from models import Campaign
+
+def profile(request):
+    for campaign in Campaign.objects.all():
+        if eval_conditions(campaign, 'target', request.user):
+            return HttpReponse(campaign.text)
+
+    return HttpResponse("Nothing new to see.")
+```
+
+Use django-conditions in your Django projects to change simple logic without having to re-deploy, and pass on the power to product managers and other non-engineers.
+
+## More Information
+
+Full documentation is available [on Read The Docs](http://django-conditions.readthedocs.org/).
+
