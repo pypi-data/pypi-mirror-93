@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: izk
+Version: 0.4.4
+Summary: Zookeeper CLI with autocomplete, syntax highlighting and pretty printing
+License: Apache Software License
+Author: Balthazar Rouberol
+Author-email: br@imap.cc
+Requires-Python: >=3.6.1
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Pygments (>=2.7.4,<3.0.0)
+Requires-Dist: colored (>=1.4.2,<2.0.0)
+Requires-Dist: kazoo (>=2.8.0,<3.0.0)
+Requires-Dist: prompt-toolkit (>=3.0.14,<4.0.0)
