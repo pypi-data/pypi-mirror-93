@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: brainf-interpret
+Version: 1.0.2
+Summary: Interpret brainf in python
+Home-page: https://github.com/YOYITsM3M8/Brainfuck-Interpreter
+Author: retronbv
+Author-email: retronbv@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+
+
+# Brainfuck Interpreter
+A Brainfuck interpreter!
+
+**BIG HELP FROM [TOUCHCREATOR](https://github.com/Touchcreator)**
+
+```shell
+$ pip install brainf_interpret
+```
+Then use it in your files!
+```python3
+import brainf_interpret as bf
+bf.run(">>>+>")
+```
+**OR**
+```python3
+import brainf_interpret as bf
+with open("./brainfuck.txt") as file:
+  bf.run(file.read())
+```
+
