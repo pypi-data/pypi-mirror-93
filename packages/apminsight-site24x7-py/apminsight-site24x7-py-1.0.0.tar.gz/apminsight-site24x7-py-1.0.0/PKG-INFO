@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: apminsight-site24x7-py
+Version: 1.0.0
+Summary: site24x7 monitoring package
+Home-page: https://github.com/Wealize/apminsight-site24x7-py
+License: MIT
+Keywords: monitoring,site24x7
+Author: Wealize
+Author-email: ops@wealize.digital
+Maintainer: Wealize
+Maintainer-email: ops@wealize.digital
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Plugins
+Classifier: Framework :: Django
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Spanish
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Bug Tracking
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: System :: Systems Administration
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Project-URL: Documentation, https://github.com/Wealize/apminsight-site24x7-py
+Project-URL: Repository, https://github.com/Wealize/apminsight-site24x7-py
+Description-Content-Type: text/markdown
+
+Python Application Performance Monitoring
+=========================================
+
+Monitor and optimize your Python application performance with a Site24x7 APM Insight Python agent. The agent provides you information on your application's response time, throughput, database operations, and errors. Track these metrics over time to identify where to optimize them for enhanced performance.
+
+Before you can use an APM Insight agent to monitor metrics, ensure that you have a Site24x7 account.
+
+Requirements : Python version 3.8 and above
+
+Supported frameworks : Django, Flask
+Supported components : pymysql, psycopg2, pymemcache, redis, sqlite, jinja
+
+**Installation**
+
+* Install APM Insight Python agent using pip or poetry
+
+        pip install apminsight-site24x7-py
+        poetry add apminsight-site24x7-py
+
+* For Django applications, add **apminsight.contrib.django** as the first of **INSTALLED_APPS** in django settings.py
+
+* For Flask applications, add **import apminsight** in the first line of main file
+
+* Add the license key in environment **S247_LICENSE_KEY** as well as **APM_APP_NAME** and **APM_APP_PORT**
+
+        export S247_LICENSE_KEY=<license-key>
+        export APM_APP_NAME=<your-app-name>
+        export APM_APP_PORT=<your-app-port>
+

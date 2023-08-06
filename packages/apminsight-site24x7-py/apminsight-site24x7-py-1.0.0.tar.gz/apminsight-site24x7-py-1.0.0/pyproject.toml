@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "apminsight-site24x7-py"
+version = "1.0.0"
+license = "MIT"
+description = "site24x7 monitoring package"
+
+authors = ["Wealize <ops@wealize.digital>"]
+maintainers = ["Wealize <ops@wealize.digital>"]
+
+readme = "README.md"
+
+homepage = "https://github.com/Wealize/apminsight-site24x7-py"
+repository = "https://github.com/Wealize/apminsight-site24x7-py"
+documentation = "https://github.com/Wealize/apminsight-site24x7-py"
+
+keywords = ["monitoring", "site24x7"]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Plugins",
+    "Framework :: Django",
+    "Framework :: Flask",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Natural Language :: Spanish",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Bug Tracking",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Monitoring",
+    "Topic :: System :: Systems Administration"
+]
+
+packages = [
+    { include = "apminsight" }
+]
+
+exclude = [".gitignore"]
+include = ["LICENSE"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.25.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
