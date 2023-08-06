@@ -1,0 +1,14 @@
+bbutils/__init__.py,sha256=13OapDuC_8H8xq6c6KtcvnH_fVeIc8rUs_nZc5kNKS0,10293
+bbutils/static/extract_submission_file.js,sha256=36UwwunLzasxThvSuRcZNZnzOJF0wNGGye3uajHo2XQ,2232
+bbutils/templates/index.html,sha256=_dAYOLW_WfZiOHQP5iCPsYuiGjbDoSXrGdLxILHV2lA,719
+makefile/__init__.py,sha256=DnWlgtkAi9YmYDSn8SEmEGFWTUhV4FH7tZV-x35iTTg,2339
+ta_tooling/__init__.py,sha256=9bDjCP-gDIZWc7HBNNlcn8vRM7Sl1ZVz1ZyEtXpdATg,3672
+ta_tooling/cli.py,sha256=AVp6TUskwlm56PSpIcRBgwLvydVmfvBBIuD7_gcflyY,720
+ta_tooling/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ta_tooling/scripts/next.sh,sha256=pjOwAoObEZnJtikHmrzu_Dg18VChzrBCjBmiE2JVbWw,820
+ta_tooling-0.3.0.dist-info/LICENSE,sha256=BLJ7rj6YwuxkttzZYSzF8ovMarrdm_k3yaTO9U7ZyU8,1073
+ta_tooling-0.3.0.dist-info/METADATA,sha256=Kf9mVLA4HXqPE7H6n8vQVyfz2ETUh_ZxMLtTSkvBMVk,915
+ta_tooling-0.3.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ta_tooling-0.3.0.dist-info/entry_points.txt,sha256=-4RbMB2zkzKZIOPVTKXJyDLCvu7PLz5phJbcd-uCaEE,52
+ta_tooling-0.3.0.dist-info/top_level.txt,sha256=cFXOVVE2AefMTajHjmAafHadFg5zaptVzMGT2LKI2ek,28
+ta_tooling-0.3.0.dist-info/RECORD,,
