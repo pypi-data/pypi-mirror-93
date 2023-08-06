@@ -1,0 +1,12 @@
+chessdotcom/__init__.py,sha256=gNVbv0B8_byrq3GCIicd__fhg-4n1zPi9BIVB6TGf1k,141
+chessdotcom/caller.py,sha256=mCh3KKrvFs69EBq51dDZJvCUayqwnM0r6pAVHJhrntc,14718
+chessdotcom/errors.py,sha256=7Q227WWy1vq0VvsSjiSrEMVq7q8YmorqxEnnXXrxsfA,776
+chessdotcom/response.py,sha256=X1bSt45JseYA-VsE-xCDR_z3Wwaqnn9UTKjC9_Uf68Y,892
+tests/__init__.py,sha256=haX1IsoFOLU6lVVjT1lKi9SZmzh7mIrAZXidn9F4_Y4,32
+tests/date_resolution_test.py,sha256=yj33IITo7RmadN9ngRzcJSn4f7K_i_Zzff5gPW8O4qs,918
+tests/endpoints_test.py,sha256=HVYzHVg_5en8wer1XNA1Zv7_nmarG-L6vWepYyzTB-I,3944
+chess.com-1.3.1.dist-info/LICENSE.txt,sha256=qsTfMoFrtgTHN2YTnLMTwjpRgljakGDlMKK-cUw7g7U,1093
+chess.com-1.3.1.dist-info/METADATA,sha256=TF-6zo3axXjNwb6asalYM4Zv79KFgXVqM4dqSaFkOIc,1229
+chess.com-1.3.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+chess.com-1.3.1.dist-info/top_level.txt,sha256=Su7L01O9ZKfv43R9lNr82VTu1e332pBJ--zs79I--wY,18
+chess.com-1.3.1.dist-info/RECORD,,
