@@ -1,0 +1,5 @@
+gql
+pandas
+pytz
+pyyaml
+fake-useragent
