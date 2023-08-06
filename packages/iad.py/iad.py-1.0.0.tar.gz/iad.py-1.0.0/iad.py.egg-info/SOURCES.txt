@@ -1,0 +1,14 @@
+README.md
+setup.py
+iad/__init__.py
+iad/errors.py
+iad/ratelimit.py
+iad/request.py
+iad.py.egg-info/PKG-INFO
+iad.py.egg-info/SOURCES.txt
+iad.py.egg-info/dependency_links.txt
+iad.py.egg-info/requires.txt
+iad.py.egg-info/top_level.txt
+iad/model/__init__.py
+iad/model/client.py
+iad/model/upload.py
