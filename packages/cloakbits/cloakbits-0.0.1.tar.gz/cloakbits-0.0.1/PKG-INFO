@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: cloakbits
+Version: 0.0.1
+Summary: A utility for managing Cloakbits stealth sessions.
+Home-page: https://github.com/cloakbits/cloakbits-python
+Author: Cloakbits
+Author-email: dev@cloakbits.co
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Provides-Extra: test
