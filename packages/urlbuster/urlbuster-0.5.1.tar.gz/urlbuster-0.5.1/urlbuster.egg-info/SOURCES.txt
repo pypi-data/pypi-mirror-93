@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+bin/urlbuster
+examples/useragents-basic.txt
+examples/useragents-sqlinject.txt
+urlbuster.egg-info/PKG-INFO
+urlbuster.egg-info/SOURCES.txt
+urlbuster.egg-info/dependency_links.txt
+urlbuster.egg-info/requires.txt
+urlbuster.egg-info/top_level.txt
