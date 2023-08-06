@@ -1,0 +1,3 @@
+pop>=16.2
+starlette
+uvicorn
