@@ -1,0 +1,11 @@
+bbb_dl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bbb_dl/ffmpeg.py,sha256=yAIxeRaZ9T0tIqTiHFYTJPiRD0RdpIZ8FuXHFuU-kp4,5255
+bbb_dl/main.py,sha256=qqHVIgOUi5Pzf57heZbDbmsTRivC86F6PLSOvMd3OmY,24469
+bbb_dl/version.py,sha256=4FdYq1QhEnfseFtVXCMw_8wLQbaC3UXVBIhzGsP6C-8,20
+bbb_dl-0.5.dist-info/AUTHORS,sha256=F_T8KRMg-GQez6stuW6-7_bpzEp02Ro4_JmN44O14bY,216
+bbb_dl-0.5.dist-info/LICENSE,sha256=wDzqAntLQORAL6vQhVdzZyfsPVvFStZKtkct5DIZjK0,18047
+bbb_dl-0.5.dist-info/METADATA,sha256=VL2mgyJg4zmnQWjf5dMydxt_mKcOJog2cuN3EwoLwNo,2749
+bbb_dl-0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bbb_dl-0.5.dist-info/entry_points.txt,sha256=Bh9bsc-N3y0gvkF6BFTceV28Lyw4uGbk0BJN6xQCJmU,45
+bbb_dl-0.5.dist-info/top_level.txt,sha256=FDJlQVlLgO6oDBtCWr9A2RiEW-JlaN0Aps0xQlzwhbw,7
+bbb_dl-0.5.dist-info/RECORD,,
