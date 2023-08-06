@@ -1,0 +1,9 @@
+README.md
+setup.py
+fastpredict/__init__.py
+fastpredict/predict.py
+fastpredict.egg-info/PKG-INFO
+fastpredict.egg-info/SOURCES.txt
+fastpredict.egg-info/dependency_links.txt
+fastpredict.egg-info/requires.txt
+fastpredict.egg-info/top_level.txt
