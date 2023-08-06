@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: sparkfun-qwiic-rfid
+Version: 0.0.2
+Summary: SparkFun Electronics Qwiic RFID Reader package
+Home-page: https://www.sparkfun.com/products/15191
+Author: SparkFun Electronics
+Author-email: info@sparkfun.com
+License: MIT
+Description: This is a python package for SparkFun's Qwiic RFID Reader (https://www.sparkfun.com/products/15191).         The functions included can get RFID tag ID's and their scan times. It's also possible to change the I2C address of         the reader to something other than the default so that multiple can be daisy-chained on the same bus.
+Keywords: electronics,maker
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
