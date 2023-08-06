@@ -1,0 +1,21 @@
+Metadata-Version: 1.0
+Name: function-optimization
+Version: 0.3
+Summary: Optimize functions.Newton and Gradient descent methods
+Home-page: UNKNOWN
+Author: Mark Eltsefon
+Author-email: meltsefon1@gmail.com
+License: UNKNOWN
+Description: Features
+        --------
+        
+        This package provides means to optimize functions. Newtons and gradient descent methods are provided.
+        
+        Basic Usage
+        -----------
+        
+            func = lambda x: x**2 - 15*x +35
+            func = Optimization_function(func,show = True,method = 'GradientDescent')
+            func.optimize()
+        
+Platform: UNKNOWN
