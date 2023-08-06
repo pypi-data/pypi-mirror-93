@@ -1,0 +1,13 @@
+jasper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jasper/blast.py,sha256=P9RvXOVG8vMRdb44SyhscuUatUNU2jiZITybbijhIrw,9593
+jasper/crispr.py,sha256=mVCUI0FgrUuJbp27UjTlFZ96d2gZfjiIZ6Wi-EJV508,7835
+jasper/mash.py,sha256=cUeUkJO08b80bKcDLA5GkRNl7qkw8m-5uFY7BgYx7wM,6490
+jasper/merge.py,sha256=e0PQCHVZrTY8yAW0ZYL-3poLiEKtM-_dyLGiJkSaCrs,1112
+jasper/trna.py,sha256=FmFTlWg6YaXiW3ZFhM7kSomu4klizufa3_w_uhUfHjc,8300
+jasper/utils.py,sha256=I6ibvTCwMVceaCXU9r-9bgMHzaHWUMpZiVlLJNbNQj4,1548
+jasper/wish.py,sha256=gGR6i0DaQ9CzaOOPagwxx9Usbp8BeKKGK866RgJS7E4,6444
+jasper_vh-1.1.data/scripts/jasper-vh,sha256=RuoI8KpysHhXxkJdr5743wFxWqtFMQ4uatQ-drxLDD4,14664
+jasper_vh-1.1.dist-info/METADATA,sha256=o1iTx4RQIBZwW3BlgEf-fPweTAlg3VI2a9hRfspTZr8,6267
+jasper_vh-1.1.dist-info/RECORD,,
+jasper_vh-1.1.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+jasper_vh-1.1.dist-info/top_level.txt,sha256=hFxwwWnA0pT69P80N9zTtmSMaqHgdWVO5dEaSAORRXY,7
