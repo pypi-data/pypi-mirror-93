@@ -1,0 +1,3 @@
+[console_scripts]
+ingot-prometheus = ingot_prometheus.scripts.ingot_prometheus:main
+
