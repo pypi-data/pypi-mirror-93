@@ -1,0 +1,10 @@
+pysquid/__init__.py,sha256=UdeVjGxiDxn2dyXRoNOGfRsPgnGC_tNJKhRqcaYCBS4,453
+pysquid/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pysquid/loaders/__init__.py,sha256=OfYWHVHqljtGc-LZ8H0qpqDiXehdieCL1v9RYgJomUI,197
+pysquid/templating/__init__.py,sha256=gPOIMKRgm-oZdY-PuvgmRci0DvKn8CLt7xtethgCvCs,1379
+pysquid/templating/build.py,sha256=i3ADmIgmG6lH53vY0j7wiJDxgoqGv_fB_nQMIDDSf2Q,2041
+pysquid-0.0.1a0.dist-info/LICENSE,sha256=ENMW0_3nDT5V6zZn_WU7CDXhSpmXmM7WMxVgBbZ0Of0,1077
+pysquid-0.0.1a0.dist-info/METADATA,sha256=z88xDuLNvaP5UC40Ie76aKsbIbrKkZlhypYzM59ywmE,935
+pysquid-0.0.1a0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pysquid-0.0.1a0.dist-info/top_level.txt,sha256=QNfYFPyhn33kxbcNNjYh9T0M8CJ0PHqvP0O-Sa2cJ9A,8
+pysquid-0.0.1a0.dist-info/RECORD,,
