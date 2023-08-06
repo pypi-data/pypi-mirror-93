@@ -1,0 +1,12 @@
+LICENSE.rst
+README.rst
+pyproject.toml
+setup.cfg
+elective/__init__.py
+elective/config.py
+elective.egg-info/PKG-INFO
+elective.egg-info/SOURCES.txt
+elective.egg-info/dependency_links.txt
+elective.egg-info/entry_points.txt
+elective.egg-info/requires.txt
+elective.egg-info/top_level.txt
