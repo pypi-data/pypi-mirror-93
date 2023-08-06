@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: mindpowered-reservedseating
+Version: 0.0.4
+Summary: Reserved/Allocated/Assigned Seating for Venues and Events
+Home-page: https://mindpowered.dev/
+Author: Mind Powered Corporation
+Author-email: support@mindpowered.dev
+License: CPAL-1.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: mindpowered-maglev
+
+
+reservedseating
+===============
+Reserved/Allocated/Assigned Seating for Venues and Events
+
+![Build Status](https://mindpowered.dev/assets/images/github-badges/build-passing.svg)
+
+Contents
+========
+
+* [Source Code and Documentation](#source-code-and-documentation)
+* [Licensing](#licensing)
+* [About](#about)
+* [Requirements](#requirements)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Support](#support)
+
+# Source Code and Documentation
+- Source Code: [https://github.com/mindpowered/reserved-seating-python](https://github.com/mindpowered/reserved-seating-python)
+- Documentation: [https://mindpowered.github.io/reserved-seating-python](https://mindpowered.github.io/reserved-seating-python)
+
+# Licensing
+To obtain a version of this package under the MIT License, follow the instructions to [get a license][purchase]. The MIT License has no restrictions on commercial use and permits reuse within proprietary software.
+
+# About
+Reserved seating is when each event ticket has a specific seat. That is, attendees will know where they will sit ahead of time. Seats are usually identified by row and seat using numbers or letters.
+
+Venues may be set up for different types of events. In this case, the seating configuration, and seats available, will change.
+
+Buying tickets for a reserved seating event can end in disappointment. Unless a system is in place that can hold a seat, they may sell out during the sale process. The system must also have a time limit on holds to make sure enough seats are available to buy. Holds should only last until the sale process is complete or expired. Expired holds should release the seats for sale again. Holds should only last long enough to complete the sale process.
+
+This package aims to reserve seats for a venue and event and allow booking with holds that expire.
+
+# Requirements
+- Requires Python 3.x. Due to security fixes and new features Python 3.7 or later is recommended.
+- pip
+
+
+Third-party dependencies may have additional requirements.
+
+# Installation
+You can retrieve the reservedseating package from the Python Package Index https://pypi.org/ using pip. First make sure you have python3 and python3-pip installed. Then you can start by making a `requirements.txt` file in your working directory with the reservedseating requirement in it. You can add any other packages to your requirements here, each as a separate line.
+
+requirements.txt:
+```
+mindpowered-reservedseating>0
+```
+Now you can use pip to install the reservedseating package: `python3 -m pip install -r requirements.txt`
+If you would like to update the package, simply run the above command again.
+
+
+# Usage
+```python
+from mindpowered_reservedseating import *
+
+cc = ReservedSeating()
+colors = rs.CreateVenue("123", "Venue 1", "250")
+
+```
+
+
+# Support
+We are here to support using this package. If it doesn't do what you're looking for, isn't working, or you just need help, please [Contact us][contact].
+
+There is also a public [Issue Tracker][bugs] available for this package.
+
+
+
+[bugs]: https://github.com/mindpowered/reserved-seating-python/issues
+[contact]: https://mindpowered.dev/support.html?ref=reserved-seating-python/
+[docs]: https://mindpowered.github.io/reserved-seating-python/
+[licensing]: https://mindpowered.dev/?ref=reserved-seating-python
+[purchase]: https://mindpowered.dev/purchase/
+
+
