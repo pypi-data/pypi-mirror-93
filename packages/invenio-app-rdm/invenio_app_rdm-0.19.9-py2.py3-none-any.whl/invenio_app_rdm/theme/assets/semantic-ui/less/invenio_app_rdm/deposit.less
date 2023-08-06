@@ -1,0 +1,83 @@
+/*
+ *   Copyright (C) 2020 CERN.
+ *   Copyright (C) 2020 Northwestern University.
+ *
+ * Invenio App RDM is free software; you can redistribute it and/or modify it
+ * under the terms of the MIT License; see LICENSE file for more details.
+ */
+
+/** Deposit page styles */
+
+#deposit-form {
+
+  .field label.title {
+    background-color: #5aaad9;
+    color: white;
+    font-size: 1.05em;
+
+    label {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .save-button {
+    margin-bottom: 0.5em;
+  }
+
+  .access-right {
+    .inline.fields {
+      margin-bottom: .75em;
+
+      &:first-of-type {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  .ck-editor__editable {
+    min-height: 8.5em;
+  }
+
+  .ui.form .field > label.helptext {
+    margin-top: -0.5em;
+    margin-bottom: 0.5em;
+    color: #737373;
+    font-weight: normal;
+    font-size: 0.9em;
+  }
+
+  .ui.form .field .ui.list {
+    margin-top: 0;
+  }
+
+  .ui.list {
+    .item.license-listitem {
+      margin-bottom: 5px;
+    }
+
+    .item.creatibutor-listitem {
+      margin-bottom: 5px;
+      &.hidden {
+        opacity: 0;
+      }
+    }
+  }
+
+  .ui.items {
+    .item.license-item {
+      cursor: pointer;
+      .image.license-radiobox {
+        padding-left: 5px;
+        padding-top: 2em;
+        width: 4%;
+      }
+      .content.license-item-content {
+        padding-left: 10px;
+        .description.license-item-description {
+          font-size: smaller;
+          color: rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
+  }
+}
