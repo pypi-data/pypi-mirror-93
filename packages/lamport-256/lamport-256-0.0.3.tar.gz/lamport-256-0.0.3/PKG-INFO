@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: lamport-256
+Version: 0.0.3
+Summary: Simple single use Lamport signature scheme
+Home-page: https://github.com/johnpaulkiser/lamport-256
+Author: JP Kiser
+Author-email: johnpaulkiser@gmail.com
+License: UNKNOWN
+Description: # lamport-256
+        Simple single use Lamport signature scheme in python
+        
+        _Great for building toy blockchains and the like._
+        
+        **DO NOT use in a security conscious production environment!** 
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >3.6
+Description-Content-Type: text/markdown
