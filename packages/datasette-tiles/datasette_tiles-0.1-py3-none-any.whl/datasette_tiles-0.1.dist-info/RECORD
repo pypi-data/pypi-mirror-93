@@ -1,0 +1,9 @@
+datasette_tiles/__init__.py,sha256=jBplCyjzs0cKpCkDuO9yMx0Mal9A_7yHjzE_aiylHyY,2681
+datasette_tiles/utils.py,sha256=kzQJOAZDx_3zBzCIAZhwbf11grgrUJD8jnbXf8EbkyE,691
+datasette_tiles/templates/mbtiles_explorer.html,sha256=z5KRpEQlxMRCrAlX31uXNII17pxLYZIaigWcgX0xRnA,1113
+datasette_tiles/templates/mbtiles_index.html,sha256=bxjBSy8PUVOMW5rgBBo-Z1Ae1eM0faipVyFiZWwjeXY,354
+datasette_tiles-0.1.dist-info/METADATA,sha256=jqF3KERGXqIrkURYW64oFjzfNz4EmSimqP5jx9f1pUA,1915
+datasette_tiles-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+datasette_tiles-0.1.dist-info/entry_points.txt,sha256=NG0k5vYTgxaxyyUfcYz1QzDATgLsRGAx43_u_Yg6Z9w,39
+datasette_tiles-0.1.dist-info/top_level.txt,sha256=DaYPSDFfQPMRNkPVcVD6pnRy7Y2ILtMTzYD2aKNCOhA,16
+datasette_tiles-0.1.dist-info/RECORD,,

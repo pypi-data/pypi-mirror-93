@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: datasette-tiles
+Version: 0.1
+Summary: Mapping tile server for Datasette, serving tiles from MBTiles packages
+Home-page: https://github.com/simonw/datasette-tiles
+Author: Simon Willison
+License: Apache License, Version 2.0
+Project-URL: Issues, https://github.com/simonw/datasette-tiles/issues
+Project-URL: CI, https://github.com/simonw/datasette-tiles/actions
+Project-URL: Changelpog, https://github.com/simonw/datasette-tiles/releases
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: datasette
+Requires-Dist: datasette-leaflet (>=0.2.2)
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-asyncio ; extra == 'test'
+Requires-Dist: datasette-basemap ; extra == 'test'
+
+# datasette-mbtiles
+
+[![PyPI](https://img.shields.io/pypi/v/datasette-mbtiles.svg)](https://pypi.org/project/datasette-mbtiles/)
+[![Changelog](https://img.shields.io/github/v/release/simonw/datasette-mbtiles?include_prereleases&label=changelog)](https://github.com/simonw/datasette-mbtiles/releases)
+[![Tests](https://github.com/simonw/datasette-mbtiles/workflows/Test/badge.svg)](https://github.com/simonw/datasette-mbtiles/actions?query=workflow%3ATest)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/simonw/datasette-mbtiles/blob/main/LICENSE)
+
+Datasette plugin for serving MBTiles map tiles
+
+## Installation
+
+Install this plugin in the same environment as Datasette.
+
+    $ datasette install datasette-mbtiles
+
+## Usage
+
+Usage instructions go here.
+
+## Development
+
+To set up this plugin locally, first checkout the code. Then create a new virtual environment:
+
+    cd datasette-mbtiles
+    python3 -mvenv venv
+    source venv/bin/activate
+
+Or if you are using `pipenv`:
+
+    pipenv shell
+
+Now install the dependencies and tests:
+
+    pip install -e '.[test]'
+
+To run the tests:
+
+    pytest
+
+
