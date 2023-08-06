@@ -1,0 +1,3 @@
+[console_scripts]
+iscacheable = iscacheable.cli:main
+
