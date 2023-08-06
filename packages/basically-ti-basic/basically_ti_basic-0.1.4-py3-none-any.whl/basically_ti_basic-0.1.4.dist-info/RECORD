@@ -1,0 +1,12 @@
+basically_ti_basic/__init__.py,sha256=Fn2784GWxomY7m71iVO5UBwg8ARuJwue5K84AakUVN8,320
+basically_ti_basic/__version__.py,sha256=rgTJOYGGVVC2u2cFLhdMpGiXNdEUg5Tk9uTc8LmPTMo,355
+basically_ti_basic/main.py,sha256=j55v84mW6ChR4NYWJrCkkQYPiNArJZrMzrHNvXAC1oI,1414
+basically_ti_basic/compiler/__init__.py,sha256=XIbbAn8aGoCd9nRiwMkCdwbQANSubsKyNFShW6ag87s,3148
+basically_ti_basic/files/__init__.py,sha256=OEKOoeELYeCXr0oHuDbl53JmoPw6wKrVqX-SiUoUXwE,8871
+basically_ti_basic/tokens/__init__.py,sha256=gBLLSZFM7XUP4iO2-hzclKzcjHYMkygG-lWlVMxziVE,13828
+basically_ti_basic-0.1.4.dist-info/LICENSE,sha256=CxW81L6Y4VGb3pURVC8IxmdbjnfLJGT6cxc4qxzNtWk,1127
+basically_ti_basic-0.1.4.dist-info/METADATA,sha256=cuRM-BFQn10yQywU6T9Nl0C0uEEeTed9j519Lf9Has8,4460
+basically_ti_basic-0.1.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+basically_ti_basic-0.1.4.dist-info/entry_points.txt,sha256=a07EPGC7TgsZiGAZorOM9lP_tP7GeTPFIrOKC_rct20,105
+basically_ti_basic-0.1.4.dist-info/top_level.txt,sha256=HGe7hAYxYdqqAdjicioA0GLw08T-MYDjmXRKTmqo5_Q,19
+basically_ti_basic-0.1.4.dist-info/RECORD,,
