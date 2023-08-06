@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: mxc
+Version: 0.1.0
+Summary: ProperMX Command Line Interface (CLI)
+Home-page: https://github.com/propermx/mxc
+Author: ProperMX Team
+Author-email: dev@propermx.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: requests (==2.25.1)
+
+UNKNOWN
+
+
