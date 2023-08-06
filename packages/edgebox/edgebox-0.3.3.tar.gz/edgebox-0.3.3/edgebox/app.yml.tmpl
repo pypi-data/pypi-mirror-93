@@ -1,0 +1,13 @@
+# App definition
+region: $region
+app:
+  key:
+    name: $appname
+    version: "1.0"
+    organization: $devorg
+  image_path: $docker/$devorg_lc/images/$appname
+  image_type: 1
+  deployment: kubernetes
+  default_flavor:
+    name: m4.small
+  access_ports: "tcp:1234" # FIXME
