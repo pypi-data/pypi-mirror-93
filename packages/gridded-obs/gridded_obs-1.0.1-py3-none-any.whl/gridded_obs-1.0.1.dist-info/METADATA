@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: gridded-obs
+Version: 1.0.1
+Summary: Efficient verification of gridded observations
+Home-page: https://github.com/dja001/gridded_obs.git
+Author: Dominik Jacques
+Author-email: dominik.jacques@gmail.com
+License: GPL-3.0-or-later
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: python (>=3.7.0)
+Requires-Dist: matplotlib (>=3.1.1)
+Requires-Dist: numpy (>=1.17.0)
+Requires-Dist: domcmc
+Requires-Dist: domutils
+Requires-Dist: packaging
+Requires-Dist: pygrib
+
+gridded_obs a package for the verification of gridded obsewrvations
+
+- Any quantity, does not care about units
+- Easy to add readers
+
+- Contingency scores
+- Lmin from Fss
+- Correlation coefficient
+
+
