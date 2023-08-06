@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/mf4parser.py
+src/mf4parser.egg-info/PKG-INFO
+src/mf4parser.egg-info/SOURCES.txt
+src/mf4parser.egg-info/dependency_links.txt
+src/mf4parser.egg-info/requires.txt
+src/mf4parser.egg-info/top_level.txt
