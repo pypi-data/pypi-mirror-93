@@ -1,0 +1,8 @@
+requests
+
+[:python_version < "3.5"]
+pymysql<0.10
+typing
+
+[:python_version >= "3.5"]
+pymysql
