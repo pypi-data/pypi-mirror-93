@@ -1,0 +1,6 @@
+README.md
+setup.py
+dentmark.egg-info/PKG-INFO
+dentmark.egg-info/SOURCES.txt
+dentmark.egg-info/dependency_links.txt
+dentmark.egg-info/top_level.txt
