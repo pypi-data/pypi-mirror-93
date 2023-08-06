@@ -1,0 +1,262 @@
+Metadata-Version: 2.1
+Name: naga-gwas-rest
+Version: 0.7.1
+Summary: REST service for Network Assisted Genomic Analysis (NAGA)
+Home-page: https://github.com/idekerlab/naga-gwas-rest
+Author: Chris Churas
+Author-email: churas.camera@gmail.com
+License: BSD license
+Keywords: naga-gwas-rest
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: argparse
+Requires-Dist: networkx (==1.11)
+Requires-Dist: ndex2 (==3.0.0a1)
+Requires-Dist: naga-gwas (==0.4.1)
+Requires-Dist: numpy
+Requires-Dist: flask
+Requires-Dist: flask-restplus
+Requires-Dist: python-daemon
+
+==============
+naga-gwas-rest
+==============
+
+
+.. image:: https://img.shields.io/pypi/v/naga-gwas-rest.svg
+        :target: https://pypi.python.org/pypi/naga-gwas-rest
+
+.. image:: https://img.shields.io/travis/idekerlab/naga-gwas-rest.svg
+        :target: https://travis-ci.org/idekerlab/naga-gwas-rest
+
+
+
+
+REST service for `Network Assisted Genomic Analysis (NAGA) <https://github.com/shfong/naga/>`_
+
+`For more information please click here to visit our wiki <https://github.com/idekerlab/naga-gwas-rest/wiki>`_
+
+This service is currently running here: http://nbgwas.ucsd.edu
+
+Compatibility
+-------------
+
+ * Tested with Python 3.6 in Anaconda_
+
+Dependencies to run
+-------------------
+
+ * `naga-gwas <https://pypi.org/project/naga-gwas/>`_
+ * `ndex2 <https://pypi.org/project/ndex2/>`_
+ * `python-daemon <https://pypi.org/project/python-daemon/>`_
+ * `flask <https://pypi.org/project/flask/>`_
+ * `flask-restplus <https://pypi.org/project/flast-restplus>`_
+ * `numpy <https://pypi.org/project/numpy>`_
+
+Additional dependencies to build
+--------------------------------
+
+ * GNU make
+ * `wheel <https://pypi.org/project/wheel/>`_
+ * `setuptools <https://pypi.org/project/setuptools/>`_
+
+
+Installation
+------------
+
+It is highly reccommended one use `Anaconda <https://www.anaconda.com/>`_ for Python environment
+
+.. code:: bash
+
+  git clone https://github.com/idekerlab/naga-gwas-rest.git
+  cd naga-gwas-rest
+  make install
+
+Running service in development mode
+-----------------------------------
+
+
+**NOTE:** Example below runs the REST service and not the task runner.
+
+.. code:: bash
+
+  # It is assumed the application has been installed as described above
+  export FLASK_APP=nbgwas_rest
+  flask run # --host=0.0.0.0 can be added to allow all access from interfaces
+
+  # Service will be running on http://localhost:5000
+
+  # NOTE: To have tasks processed naga_taskrunner.py must be started in
+  # another terminal
+
+
+`Click here for information on launching service via Vagrant VM <https://github.com/idekerlab/naga-gwas-rest/wiki/NAGA-REST-under-Vagrant-Virtual-Machine>`_
+
+
+Example usage of service
+------------------------
+
+Below is a small script that leverages the nbgwas_rest service to run NAGA on the
+compressed **nagadata/schizophrenia.txt.gz** passed into the script on the command line
+
+.. code:: bash
+
+    #!/usr/bin/env python
+
+    import sys
+    import gzip
+    import time
+    import requests
+
+    # pass the gzipped schizophrenia.txt.gz
+    networkfile = sys.argv[1]
+
+    # set parameters
+    data_dict = {}
+    data_dict['protein_coding']='hg18'
+    data_dict['window']=10000
+    data_dict['ndex']='f93f402c-86d4-11e7-a10d-0ac135e8bacf'
+
+    # set snp file
+    files = {'snp_level_summary': gzip.open(networkfile, 'rb')}
+    url = 'http://nbgwas.ucsd.edu/rest/v1/snp_analyzer'
+    r = requests.post(url, data=data_dict, files=files,
+                      timeout=30)
+
+    # If successful the previous POST will return 202
+    if r.status_code != 202:
+        sys.stderr.write('Submission failed with code: ' + str(r.status_code) +
+                         '\n')
+        sys.stderr.write('Message: ' + str(r.text) + '\n')
+        sys.exit(1)
+
+    # If successful Location will be set to a URL that can
+    # be polled for result
+    if 'Location' not in r.headers:
+        sys.stderr.write('Expected Location in Header, ' +
+                         'but its not there: ' + str(r.headers) + '\n')
+        sys.exit(2)
+
+    resulturl = r.headers['Location']
+    getres = requests.get(resulturl, timeout=30)
+    json_res = getres.json()
+    while getres.status_code != 200 or json_res['status'] == 'submitted' or json_res['status'] == 'processing':
+       sys.stderr.write('.')
+       sys.stderr.flush()
+       time.sleep(5)
+       getres = requests.get(resulturl, timeout=30)
+       json_res = getres.json()
+
+    sys.stderr.write('\n')
+    sys.stdout.write(str(json_res) + '\n')
+
+Assuming the above is saved in a file named **foo.py** and run from base directory of this source tree
+
+
+.. code:: bash
+
+  ./foo.py nagadata/schizophrenia.txt.gz
+
+
+Example output:
+
+.. code:: bash
+
+   {'result': {'A1BG': 1.818739214334769, 'A1CF': 2.9679830980888413,
+   'A2M': 3.9294999566765174, 'A2ML1': 1.4379620790934335, 'A3GALT2': 1.9918435374785632,
+   'A4GALT': 1.8734641163972634, 'A4GNT': 1.335302470858104, 'AAAS': 2.384799543926567,
+   'AACS': 2.965792987307328, 'AADAC': 1.455957465785784, 'AADACL2': 1.0156608351922358,
+   'AADACL3': 0.895944981993654, 'AADACL4': 1.2458363441128992, 'AADAT': 2.689141678947707,
+   'AAED1': 0.12364477699188797, 'AAGAB': 0.14237051805828474, 'AAK1': 5.652340641567231,
+   'AAMDC': 0.1647736242197245, 'AAMP': 3.2927511707526884, 'AANAT': 5.654764562774087,
+   'AAR2': 0.9427896961129361,
+   .
+   .
+   , 'status': 'done'}
+
+Bugs
+-----
+
+Please report them `here <https://github.com/idekerlab/naga-gwas-rest/issues>`_
+
+Acknowledgements
+----------------
+
+* Original implementation by `Samson Fong <https://github.com/shfong>`_
+
+* Initial template created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+.. _Anaconda: https://www.anaconda.com/
+
+
+=======
+History
+=======
+
+0.7.1 (2021-02-03)
+------------------
+
+* Minor changes to enable naga_taskrunner.py to run as a systemd service on centos7 boxes
+
+0.7.0 (2019-07-01)
+------------------
+
+* Added dm6 in list of valid protein coding region files
+
+0.6.0 (2019-05-06)
+------------------
+
+* Added mm10 and rn6 in list of valid protein coding region files
+
+0.5.0 (2019-03-07)
+------------------
+
+* Replace infinite heat values returned from NAGA bug
+  `issue #24 <https://github.com/idekerlab/naga-gwas-rest/issues/23>`_
+
+* Add naga version used in processing to result json
+  `issue #23 <https://github.com/idekerlab/naga-gwas-rest/issues/23>`_
+
+* Rename to naga-gwas-rest
+  `issue #22 <https://github.com/idekerlab/naga-gwas-rest/issues/22>`_
+
+* Add input parameters snp_analyzer/get endpoint enhancement
+  `issue #20 <https://github.com/idekerlab/naga-gwas-rest/issues/20>`_
+
+* Modify naga_taskrunner.py to run in a daemon mode
+  `issue #3 <https://github.com/idekerlab/naga-gwas-rest/issues/3>`_
+
+
+0.4.1 (2018-12-20)
+------------------
+
+* Replace Association with Analysis in REST service description bug
+  `issue #19 <https://github.com/idekerlab/naga-gwas-rest/issues/19>`_
+
+0.4.0 (2018-12-19)
+------------------
+
+* Enabled DELETE rest endpoint `issue #16 <https://github.com/idekerlab/naga-gwas-rest/issues/16>`_
+
+* Fixed problems including numpy and running under apache modwsgi bug
+  `issue #15 <https://github.com/idekerlab/naga-gwas-rest/issues/15>`_
+
+* nbgwas_taskrunner.py should remove snp level summary file after job runs
+  `issue #5 <https://github.com/idekerlab/naga-gwas-rest/issues/5>`_
+
+0.1.1 (2018-11-30)
+------------------
+
+* First release onto github
+
+
