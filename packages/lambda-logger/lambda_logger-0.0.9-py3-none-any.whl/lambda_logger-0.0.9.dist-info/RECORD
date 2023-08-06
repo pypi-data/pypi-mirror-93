@@ -1,0 +1,15 @@
+lambda-logger/__init__.py,sha256=_kHxGmPG-s4rpo3XWw_IZtdMaU5IDcVkxDtG3vjJ-ak,23
+lambda-logger/_nbdev.py,sha256=7z5KFHlhXpNWTbWr-6PXyAapCuspd28--QLaDnV3z5I,431
+lambda-logger/core.py,sha256=TrWKvXytyf6O7J0x5Js5tKQK8WzLtFL9HxTOn5STBYM,1613
+lambda_log_service/__init__.py,sha256=b8Tfyn46wV92NWm_uziWVxCW3zTxPV8EyFKcI9HhXcA,23
+lambda_log_service/_nbdev.py,sha256=FIApnJewWBbpydfp6BC_t2Sy8-6iGKfYdYM83jhRTIE,400
+lambda_log_service/core.py,sha256=sjKoH8_IO3Ofro_pEKGW-qyXe3JlDQUa9_z9e12mXmg,1480
+lambda_logger/__init__.py,sha256=ry5O5SW74ugwOUMKSV2_LbWjYa8B0IEvUm7S-lHPA2c,23
+lambda_logger/_nbdev.py,sha256=hFlZluUQQ9E046PMAbh_PeIWXmP8RW0tM-h9EthFIfQ,390
+lambda_logger/core.py,sha256=sjKoH8_IO3Ofro_pEKGW-qyXe3JlDQUa9_z9e12mXmg,1480
+lambda_logger-0.0.9.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+lambda_logger-0.0.9.dist-info/METADATA,sha256=lYnGwslyzaNwZnJQT1DNTfKEbVRGVZAP6axcnu3ZlI0,1208
+lambda_logger-0.0.9.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+lambda_logger-0.0.9.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+lambda_logger-0.0.9.dist-info/top_level.txt,sha256=d1G_5QGRzSoaDlKUAUEq9OKwdPN4TssMkLzQVXhcKrc,14
+lambda_logger-0.0.9.dist-info/RECORD,,
