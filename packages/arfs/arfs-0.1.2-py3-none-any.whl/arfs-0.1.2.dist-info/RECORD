@@ -1,0 +1,12 @@
+arfs/__init__.py,sha256=O1y2i1C4m602NbHgLdHmpflu9TGf21O6bs3ZEn_x0w4,23
+arfs/allrelevant.py,sha256=0jAhTwynF2ioR8obwBEEkIiwLWAU3vhRrSbdzMpJ9-o,89783
+arfs/featselect.py,sha256=CohLvh02n9yML3waOkgMB-XPcxIVVWFqRjYhO7XD0O8,49370
+arfs/utils.py,sha256=mP5qRKqWmg59qoUmc0vkc0OYkKwpF299zmKZr8sTSnQ,16799
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_allrelevant.py,sha256=z3JIjHudyZKeUazZ6H86W4suVOxV11eFDiVA84NaIkA,13644
+tests/test_featselect.py,sha256=oZ-h9OsWN0-2MDH6lACRAzrdV-4RW6uaav9sajKIJH0,25795
+arfs-0.1.2.dist-info/LICENSE.md,sha256=0I4FH-NIzdwAq2X9BvPcgUEaTMBKaPEUAsKh6lWcJ3g,1091
+arfs-0.1.2.dist-info/METADATA,sha256=oy6F3z3qv8Oe_fW5qSBWin0sg0JDPa_XpHArxt1mrI4,15753
+arfs-0.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+arfs-0.1.2.dist-info/top_level.txt,sha256=g9zaTGgBw6EVou6qxFWq_ebaRULuvldcAW2yOFwB6ho,11
+arfs-0.1.2.dist-info/RECORD,,
