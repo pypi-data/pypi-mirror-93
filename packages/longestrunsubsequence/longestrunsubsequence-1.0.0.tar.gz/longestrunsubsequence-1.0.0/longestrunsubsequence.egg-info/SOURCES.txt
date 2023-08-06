@@ -1,0 +1,12 @@
+README.md
+setup.py
+longestrunsubsequence/__init__.py
+longestrunsubsequence/algorithms.py
+longestrunsubsequence/lrs.py
+longestrunsubsequence/reduction.py
+longestrunsubsequence/util.py
+longestrunsubsequence.egg-info/PKG-INFO
+longestrunsubsequence.egg-info/SOURCES.txt
+longestrunsubsequence.egg-info/dependency_links.txt
+longestrunsubsequence.egg-info/requires.txt
+longestrunsubsequence.egg-info/top_level.txt
