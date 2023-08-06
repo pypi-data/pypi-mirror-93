@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: circle-python
+Version: 0.0.3
+Summary: Python SDK for Circle.
+Home-page: https://www.circle.com/en/
+Author: Crawford Leeds
+Author-email: crawford@crawfordleeds.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: bumpversion ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+
+
+# Circle Python
+
+Python SDK for the Circle API.
+
