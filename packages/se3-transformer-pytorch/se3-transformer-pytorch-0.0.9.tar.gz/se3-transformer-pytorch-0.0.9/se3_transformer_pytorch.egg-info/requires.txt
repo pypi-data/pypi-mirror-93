@@ -1,0 +1,5 @@
+einops>=0.3
+filelock
+lie_learn
+numpy
+torch>=1.6
