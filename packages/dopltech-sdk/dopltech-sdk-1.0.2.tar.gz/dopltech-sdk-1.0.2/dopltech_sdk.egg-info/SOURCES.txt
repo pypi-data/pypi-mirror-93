@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+dopltech/sdk/__init__.py
+dopltech/sdk/bin/__init__.py
+dopltech/sdk/bin/libsdk_amd64.dll
+dopltech/sdk/bin/libsdk_amd64.dylib
+dopltech/sdk/bin/libsdk_amd64.so
+dopltech/sdk/bin/libsdk_arm.so
+dopltech_sdk.egg-info/PKG-INFO
+dopltech_sdk.egg-info/SOURCES.txt
+dopltech_sdk.egg-info/dependency_links.txt
+dopltech_sdk.egg-info/requires.txt
+dopltech_sdk.egg-info/top_level.txt
