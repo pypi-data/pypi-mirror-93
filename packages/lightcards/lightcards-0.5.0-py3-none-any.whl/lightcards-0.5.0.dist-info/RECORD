@@ -1,0 +1,13 @@
+lightcards/__init__.py,sha256=gk11scBy5I0bVJ_gUlmIxTMIN4iWU3iahWqKfVawFjo,44
+lightcards/deck.py,sha256=heeWXvWvr9D73WvpJ4GGHfAF4XTBhyZfuHC_6A_wuVM,1314
+lightcards/display.py,sha256=pkJsQMLP9tduq4-yFF_SbchDwGTap_yaE-MwGQ2q_No,11499
+lightcards/lightcards.py,sha256=NArpXcNqszy6keI1BWUwafqmHC6zbm_w9SphufWiTN4,2875
+lightcards/parse.py,sha256=aiN5orkUsPyVUTk2AjQN58QLssnp0aYXtlLMa6LH_yc,957
+lightcards/progress.py,sha256=f5262iCF-zY0EuP5JKL52RBSQR-VGTEt4kx2I979bs4,886
+lightcards-0.5.0.data/data/man/man1/lightcards.1,sha256=VO5YiIN-EWFGaslgkQkF3KNoTvialpk_SLGxBepZ0oo,1763
+lightcards-0.5.0.data/scripts/lightcards,sha256=Ivxma29XckIcnhonOCUUbf1c1SefcNxJt_VS4tDx3Ws,45
+lightcards-0.5.0.dist-info/LICENSE,sha256=VBDEFvR4lzYlfC8KMdLu0x7_4DiS3XXoYI0_IeCRDkY,1123
+lightcards-0.5.0.dist-info/METADATA,sha256=WQcCugCiiy8xmkX2wUdMubm5qts6r9L-jiRtOWvn7os,978
+lightcards-0.5.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+lightcards-0.5.0.dist-info/top_level.txt,sha256=n1132gmxEp9oC6lo5BJQZA73XSWaT6BdG3vlf1fSoTg,11
+lightcards-0.5.0.dist-info/RECORD,,
