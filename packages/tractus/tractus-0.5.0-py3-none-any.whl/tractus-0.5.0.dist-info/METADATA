@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: tractus
+Version: 0.5.0
+Summary: Trace a HTTP request and gather the performance metrics.
+Home-page: https://github.com/Navid2zp/tractus
+Author: Navid Zarepak
+Author-email: navid2zp@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# tractus
+
+Trace a HTTP request and gather the performance metrics.
+
