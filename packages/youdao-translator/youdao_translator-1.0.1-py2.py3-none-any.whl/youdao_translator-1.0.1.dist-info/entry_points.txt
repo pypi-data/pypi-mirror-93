@@ -1,0 +1,3 @@
+[console_scripts]
+youdao-trans-cli = youdao_translator:cli
+
