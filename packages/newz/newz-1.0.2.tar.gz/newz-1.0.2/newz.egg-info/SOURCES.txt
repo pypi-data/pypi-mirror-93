@@ -1,0 +1,13 @@
+setup.py
+newz/__init__.py
+newz/articles.py
+newz/finance.py
+newz/forecast.py
+newz/newz.py
+newz/newzconfig.py
+newz/weather.py
+newz.egg-info/PKG-INFO
+newz.egg-info/SOURCES.txt
+newz.egg-info/dependency_links.txt
+newz.egg-info/entry_points.txt
+newz.egg-info/top_level.txt
