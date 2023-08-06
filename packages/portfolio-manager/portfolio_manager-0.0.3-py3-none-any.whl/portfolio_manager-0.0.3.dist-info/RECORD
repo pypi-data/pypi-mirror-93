@@ -1,0 +1,9 @@
+portfolio_manager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+portfolio_manager/exceptions.py,sha256=JAXo1fnu_bvimgksoeuUbpH18nu2OuE0aWyjKMVz6mI,1065
+portfolio_manager/portfolio.py,sha256=nGbvqjNjBBFb1Ec31JlQyQJ-l1b4Y9VcGXT7K_pcCuA,8562
+portfolio_manager/return_calculators.py,sha256=d-ZKrHNi2sipNju6ysONzaoaPFBiLYPPyvJoNJyTeLs,7835
+portfolio_manager-0.0.3.dist-info/LICENSE,sha256=8Xb77VBo7H_gMhVICyg5hpbM7c4uQuq9MgeisV7LOhc,1070
+portfolio_manager-0.0.3.dist-info/METADATA,sha256=SVt_Vquk3JOi5cZwZN3klkchg9nECNMwhoGRRi58y-I,1718
+portfolio_manager-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+portfolio_manager-0.0.3.dist-info/top_level.txt,sha256=pi4dug0A6KiaKG_vPQlaP4USYiNaqngfeRj8z8YUO4w,18
+portfolio_manager-0.0.3.dist-info/RECORD,,
