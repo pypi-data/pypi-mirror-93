@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+tidevice.egg-info/PKG-INFO
+tidevice.egg-info/SOURCES.txt
+tidevice.egg-info/dependency_links.txt
+tidevice.egg-info/top_level.txt
