@@ -1,0 +1,10 @@
+glue-core>=1.0
+rasterio>=1.0
+pyproj>=2.3
+affine
+
+[test]
+pytest
+pytest-cov
+pytest-faulthandler
+mock
