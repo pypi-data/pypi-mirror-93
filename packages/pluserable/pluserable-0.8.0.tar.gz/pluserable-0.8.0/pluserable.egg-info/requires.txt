@@ -1,0 +1,10 @@
+bag>=3.1.0
+kerno>=0.5.0
+sqlalchemy
+transaction
+cryptacular
+deform
+pyramid
+pyramid_mailer
+pyramid_mako
+zope.interface
