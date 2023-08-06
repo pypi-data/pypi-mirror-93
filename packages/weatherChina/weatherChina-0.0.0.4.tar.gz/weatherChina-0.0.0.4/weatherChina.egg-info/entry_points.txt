@@ -1,0 +1,3 @@
+[console_scripts]
+weatherChina = weatherChina.clitools.cli:main
+
