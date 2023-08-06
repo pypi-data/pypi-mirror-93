@@ -1,0 +1,136 @@
+Metadata-Version: 2.1
+Name: grpc-web-proto-compile
+Version: 1.1.2
+Summary: No description has been added so far.
+Home-page: https://github.com/romnn/grpc-web-proto-compile
+Author: romnn
+Author-email: contact@romnn.com
+License: MIT
+Keywords: grpc_web_proto_compile
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Requires-Dist: Click (>=6.0)
+Provides-Extra: dev
+Requires-Dist: Click (>=6.0) ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest-xdist ; extra == 'dev'
+Requires-Dist: pytest-sugar ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pyfakefs ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: codecov ; extra == 'dev'
+Requires-Dist: sphinx (>=2.0) ; extra == 'dev'
+Requires-Dist: romnn-sphinx-press-theme ; extra == 'dev'
+Requires-Dist: sphinxemoji ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: black (==19.10b0) ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: m2r ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: invoke ; extra == 'dev'
+Requires-Dist: ruamel.yaml ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: cookiecutter ; extra == 'dev'
+Requires-Dist: bump2version ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx (>=2.0) ; extra == 'docs'
+Requires-Dist: romnn-sphinx-press-theme ; extra == 'docs'
+Requires-Dist: sphinxemoji ; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: tox ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest-xdist ; extra == 'test'
+Requires-Dist: pytest-sugar ; extra == 'test'
+Requires-Dist: mypy ; extra == 'test'
+Requires-Dist: pyfakefs ; extra == 'test'
+
+===============================
+grpc-web-proto-compile
+===============================
+
+.. image:: https://github.com/romnn/grpc-web-proto-compile/workflows/test/badge.svg
+        :target: https://github.com/romnn/grpc-web-proto-compile/actions
+        :alt: Build Status
+
+.. image:: https://img.shields.io/pypi/v/grpc-web-proto-compile.svg
+        :target: https://pypi.python.org/pypi/grpc-web-proto-compile
+        :alt: PyPI version
+
+.. image:: https://img.shields.io/github/license/romnn/grpc-web-proto-compile
+        :target: https://github.com/romnn/grpc-web-proto-compile
+        :alt: License
+
+.. image:: https://codecov.io/gh/romnn/grpc-web-proto-compile/branch/master/graph/badge.svg
+        :target: https://codecov.io/gh/romnn/grpc-web-proto-compile
+        :alt: Test Coverage
+
+""""""""
+
+This is a small script tailored to be used in CI environments and piplines to completely take care of generating typescript grpc stubs from protobuf files.
+
+.. code-block:: console
+
+    $ pip install grpc_web_proto_compile
+
+To compile a directory with your proto files, simply run:
+
+.. code-block:: console
+
+    $ grpc_web_proto_compile path/to/your/proto/sources ./out
+    $ grpc_web_proto_compile --help # For a list of available options
+
+If you cloned the repository, the command looks like:
+
+.. code-block:: console
+
+    $ git clone https://github.com/romnn/grpc-web-proto-compile
+    $ cd grpc-web-proto-compile/
+    $ python -m grpc_web_proto_compile.cli ./tests/sample/ ./out
+
+Development
+-----------
+
+For detailed instructions see `CONTRIBUTING <CONTRIBUTING.rst>`_.
+
+Tests
+~~~~~~~
+You can run tests with
+
+.. code-block:: console
+
+    $ invoke test
+    $ invoke test --min-coverage=90     # Fail when code coverage is below 90%
+    $ invoke type-check                 # Run mypy type checks
+
+Linting and formatting
+~~~~~~~~~~~~~~~~~~~~~~~~
+Lint and format the code with
+
+.. code-block:: console
+
+    $ invoke format
+    $ invoke lint
+
+All of this happens when you run ``invoke pre-commit``.
+
+Note
+-----
+
+This project is still in the alpha stage and should not be considered production ready.
+
+
