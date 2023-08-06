@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: customs
+Version: 0.1.0
+Summary: Python library for guarding APIs.
+Home-page: https://github.com/gijswobben/customs
+Author: NewInnovator
+Author-email: 
+License: MIT
+Description: # Customs - Authentication made easy
+        Passport.js inspired library for setting up server authentication in Python.
+        
+Keywords: Security Flask Authentication
+Platform: UNKNOWN
+Classifier: Topic :: Utilities
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
