@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        tailf=aiotailf.cli:cli
+    
