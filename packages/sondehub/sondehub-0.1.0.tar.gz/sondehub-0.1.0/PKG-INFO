@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: sondehub
+Version: 0.1.0
+Summary: 
+Author: Michaela
+Author-email: git@michaela.lgbt
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: paho-mqtt (>=1.5.1,<2.0.0)
