@@ -1,0 +1,13 @@
+README.md
+setup.py
+coil/__init__.py
+coil/__main__.py
+coil/config.py
+coil/db.py
+coil/shell.py
+coil/venv.py
+coiled_venv.egg-info/PKG-INFO
+coiled_venv.egg-info/SOURCES.txt
+coiled_venv.egg-info/dependency_links.txt
+coiled_venv.egg-info/entry_points.txt
+coiled_venv.egg-info/top_level.txt
