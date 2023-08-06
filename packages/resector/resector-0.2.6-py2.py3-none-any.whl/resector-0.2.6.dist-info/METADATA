@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: resector
+Version: 0.2.6
+Summary: Algorithm to simulate resections osurgery on brain MRI scans.
+Home-page: https://github.com/fepegar/resector
+Author: Fernando Perez-Garcia
+Author-email: fernando.perezgarcia.17@ucl.ac.uk
+License: MIT license
+Keywords: resector
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6, <3.9
+Description-Content-Type: text/markdown
+Requires-Dist: Click (>=7.0)
+Requires-Dist: noise
+Requires-Dist: torchio
+Requires-Dist: SimpleITK
+Requires-Dist: scikit-image
+Requires-Dist: scipy
+Requires-Dist: vtk
+
+# `resector`
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/fepegar/resector/master/docs/images/60_examples_resized_50.gif"
+        alt="Resections">
+</p>
+
+Implementation of a [TorchIO](https://torchio.readthedocs.io/) transform
+used to simulate a resection cavity from a T1-weighted brain MRI and a
+corresponding [geodesic information flows (GIF) brain parcellation (version 3.0)](http://niftyweb.cs.ucl.ac.uk/program.php?p=GIF).
+
+## Credit
+
+If you use this library for your research, please cite our MICCAI 2020 paper:
+
+[F. Pérez-García, R. Rodionov, A. Alim-Marvasti, R. Sparks, J. S. Duncan and
+S. Ourselin. *Simulation of Brain Resection for Cavity Segmentation Using
+Self-Supervised and Semi-Supervised Learning*](https://link.springer.com/chapter/10.1007%2F978-3-030-59716-0_12).
+
+Bibtex:
+
+```bibtex
+@InProceedings{10.1007/978-3-030-59716-0_12,
+    author="P{\'e}rez-Garc{\'i}a, Fernando
+    and Rodionov, Roman
+    and Alim-Marvasti, Ali
+    and Sparks, Rachel
+    and Duncan, John S.
+    and Ourselin, S{\'e}bastien",
+    title="Simulation of Brain Resection for Cavity Segmentation Using Self-supervised and Semi-supervised Learning",
+    booktitle="Medical Image Computing and Computer Assisted Intervention -- MICCAI 2020",
+    year="2020",
+    publisher="Springer International Publishing",
+    address="Cham",
+    pages="115--125",
+    isbn="978-3-030-59716-0"
+}
+```
+
+[[Preprint on arXiv](https://arxiv.org/abs/2006.15693)]
+
+## Installation
+
+```shell
+$ git clone https://github.com/fepegar/resector.git
+$ pip install --editable ./resector
+```
+
+## Usage
+
+```shell
+$ resect t1.nii.gz gif_parcellation.nii.gz t1_resected.nii.gz t1_resection_label.nii.gz
+```
+
+Run `resect --help` for more options.
+
+
