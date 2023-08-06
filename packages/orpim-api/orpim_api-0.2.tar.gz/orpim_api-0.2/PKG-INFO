@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: orpim_api
+Version: 0.2
+Summary: A simple python wrapper for the orp.im URL shortener API
+Home-page: https://github.com/ICTman1076/orpim_api
+Author: ICTman1076
+Author-email: orpim.pypi@sorcerertech.co.uk
+License: APL-1.0
+Download-URL: https://github.com/ICTman1076/orpim_api/archive/0.2.tar.gz
+Description: UNKNOWN
+Keywords: URL shortener
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
