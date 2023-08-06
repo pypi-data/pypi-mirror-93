@@ -1,0 +1,13 @@
+pycoinbase/__init__.py,sha256=Hc0g8HMsO3WRghOQdRyaLC9zjc2pRrVAB24uYcIfmH0,16
+pycoinbase/wallet/__init__.py,sha256=S5w2hwi5yHYNFVnoUwcENVzBk47WIJv23_RpBwGPU8c,38
+pycoinbase/wallet/auth.py,sha256=r5UEYlcJn-opDCJl3moJ9TI2vcXVMVspnlKixkZrwD8,1718
+pycoinbase/wallet/client.py,sha256=B_EWBB9dW5i4k0jK2UKj85ymnLjLUVHo0jxHH483axo,30612
+pycoinbase/wallet/compat.py,sha256=AtazjNAaqegD4Caq4_rXgEhKwc7v3bmeFM9DFSSDEEk,325
+pycoinbase/wallet/error.py,sha256=_0x2W4VbYnUr8rTVYWG5mnXiHFytTFKbvgZK4uNpl7I,4213
+pycoinbase/wallet/model.py,sha256=eqXoUEKTaCKolk4oRwU951NRTt4NzKWyk-S87_SuIS8,14428
+pycoinbase/wallet/util.py,sha256=N4OHuUSXgEoud9CmMn4LXVZTzpmnFCs-6HAK5efoC0o,1511
+pycoinbase-2.1.3.dist-info/LICENSE,sha256=yHiO_ZKKpX3dVAzuY7ibsMDdIXTqFMPw9Vsfz75bBOA,11344
+pycoinbase-2.1.3.dist-info/METADATA,sha256=Nd92ocmPE1xwmUHK7oM0qNzMW1KgPPInPyoZy9Gdq7E,2760
+pycoinbase-2.1.3.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+pycoinbase-2.1.3.dist-info/top_level.txt,sha256=uz4RbMNtKwP_BF4eL8keMfnXelQZ4h9lX7Rxmr-tmAY,11
+pycoinbase-2.1.3.dist-info/RECORD,,
