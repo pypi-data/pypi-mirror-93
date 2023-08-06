@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: tsdst
+Version: 1.0.2
+Summary: A low-key data science and statistics toolkit
+Home-page: https://tomwerner5.github.io/tsdst/
+Author: Tom W
+Author-email: tomwerner5@gmail.com
+License: MIT
+Download-URL: https://github.com/tomwerner5/tsdst/archive/v_1.0.2tar.gz
+Description: # Tom's Statistics and Data Science Toolkit (tsdst)
+        
+        ## Introduction
+        
+        This project began as a list of functions for tasks I did repeatedly and hated coding every new instance. Now, it has evolved into a statistical utility tool and a notepad. Some of these functions were created because I wanted to learn and understand the innards of some mathematical concept, and are thus not optimized in any way. Other functions have been used repeatedly on projects and are hopefully optimized to some extent.
+        
+        Some of the more useful code here extends functionality of sklearn and other libraries.
+        
+        Reach out if you have any feedback.
+        
+        Documentation can be found [here:](https://tomwerner5.github.io/tsdst/Descriptions.html)
+        
+        ## Installation
+        
+        To Install:
+        
+        ```{python}
+        pip install tsdst
+        ```
+        
+Keywords: data science,statistics,neural network,bayesian
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Description-Content-Type: text/markdown
