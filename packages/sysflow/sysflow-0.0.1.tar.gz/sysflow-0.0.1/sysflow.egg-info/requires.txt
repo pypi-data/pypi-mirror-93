@@ -1,0 +1,12 @@
+bs4
+schedule
+python-dateutil
+arxiv2bib
+pybtex
+bibtexparser
+
+[dev]
+check-manifest
+
+[test]
+coverage
