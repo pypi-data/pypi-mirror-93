@@ -1,0 +1,23 @@
+pefile
+
+[crypto]
+pycryptodome>=3
+
+[disasm]
+
+[disasm:platform_system == "Linux"]
+capstone
+
+[disasm:platform_system == "Windows"]
+capstone-windows
+
+[doc]
+sphinx>=1.8.2
+sphinx_autodoc_typehints>=1.4.0
+sphinx-rtd-theme>=0.4.3
+
+[jsonschema]
+jsonschema>=2.3.0
+
+[yara]
+yara-python>=3.8.0
