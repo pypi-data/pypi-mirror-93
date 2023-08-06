@@ -1,0 +1,65 @@
+{
+    "root_folder": "/tmp/beat_core_test",
+    "environment": {
+        "name": "Does not exist",
+        "version": "1.4.0"
+    },
+    "protocols": [
+        {
+            "name": "double",
+            "template": "double/1",
+            "views": {
+                "double": {
+                    "view": "Double",
+                    "parameters": {}
+                }
+            }
+        },
+        {
+            "name": "triple",
+            "template": "triple/1",
+            "views": {
+                "triple": {
+                    "view": "Triple",
+                    "parameters": {}
+                }
+            }
+        },
+        {
+            "name": "two_sets",
+            "template": "two_sets/1",
+            "views": {
+                "double": {
+                    "view": "Double",
+                    "parameters": {}
+                },
+                "triple": {
+                    "view": "Triple",
+                    "parameters": {}
+                }
+            }
+        },
+        {
+            "name": "labelled",
+            "template": "labelled/1",
+            "views": {
+                "labelled": {
+                    "view": "Labelled",
+                    "parameters": {}
+                }
+            }
+        },
+        {
+            "name": "different_frequencies",
+            "template": "different_frequencies/1",
+            "views": {
+                "double": {
+                    "view": "DifferentFrequencies",
+                    "parameters": {}
+                }
+            }
+        }
+    ],
+    "schema_version": 2,
+    "description": ""
+}
