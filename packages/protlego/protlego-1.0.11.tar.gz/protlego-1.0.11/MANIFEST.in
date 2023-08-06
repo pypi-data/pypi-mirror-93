@@ -1,0 +1,8 @@
+include runner README
+recursive-include protlego/database *
+recursive-include protlego/network *
+recursive-include protlego/builder *
+recursive-include protlego/scorer *
+recursive-include protlego/structural *
+recursive-include protlego/builder/TMalign
+recursive-include protlego/docs/ *.ipynb

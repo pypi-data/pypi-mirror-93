@@ -1,0 +1,10 @@
+numpy
+scipy
+csb
+moleculekit
+matplotlib
+openmm
+mdtraj
+pandas
+boost
+boost-cpp
