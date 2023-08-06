@@ -1,0 +1,9 @@
+README.md
+setup.py
+py_repo_root.egg-info/PKG-INFO
+py_repo_root.egg-info/SOURCES.txt
+py_repo_root.egg-info/dependency_links.txt
+py_repo_root.egg-info/not-zip-safe
+py_repo_root.egg-info/top_level.txt
+pyreporoot/__init__.py
+pyreporoot/pyreporoot.py
