@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+core/__init__.py
+core/utils.py
+slack_integration.egg-info/PKG-INFO
+slack_integration.egg-info/SOURCES.txt
+slack_integration.egg-info/dependency_links.txt
+slack_integration.egg-info/not-zip-safe
+slack_integration.egg-info/requires.txt
+slack_integration.egg-info/top_level.txt
