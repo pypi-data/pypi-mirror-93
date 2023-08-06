@@ -1,0 +1,11 @@
+mopidy_bandcamp/__init__.py,sha256=0s5H3yDMYuEIaaVbva5fwYCy-GhEK4CcGAKOdTncPwI,1499
+mopidy_bandcamp/backend.py,sha256=VPhBGw1x0Z08Q39Q_cKkC4iZiWXC_9-NJZ045DwJFLs,3453
+mopidy_bandcamp/bandcamp.py,sha256=_xTN-3kdrpSOtUVmMoiVBYkZ23m06lFRvjvJlTr_NHw,5832
+mopidy_bandcamp/ext.conf,sha256=3B4-RwUQPEu_1e88AVDO4noo89oBnMqcOigWlcvvUFM,439
+mopidy_bandcamp/library.py,sha256=KCghK_qJMB_CEQREmWmC-zgzvtdSHa3VV0DcIunKaNo,19158
+Mopidy_Bandcamp-1.1.1.dist-info/LICENSE,sha256=7mTnP184mJ-SbqSI5U5YOxRM6V-aUkWHmdq315KeQqI,1091
+Mopidy_Bandcamp-1.1.1.dist-info/METADATA,sha256=LY2AiY8Tb9wodmvSNGgfc7-6bqB94bqPqugrNiFxxEo,6670
+Mopidy_Bandcamp-1.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+Mopidy_Bandcamp-1.1.1.dist-info/entry_points.txt,sha256=us0SlRHb-bS6f1cwa9Pt5kWtWcVPId4hkemBvdCXxf4,51
+Mopidy_Bandcamp-1.1.1.dist-info/top_level.txt,sha256=cG2_8cEeYFtt1skuq5F-2lc61Cv5SCpx8V0zwkrkDdA,16
+Mopidy_Bandcamp-1.1.1.dist-info/RECORD,,
