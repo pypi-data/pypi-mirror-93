@@ -1,0 +1,9 @@
+torch
+numpy
+pandas
+psutil
+threadpoolctl
+scikit-learn>=0.23
+
+[:python_version < "3.8"]
+importlib_metadata>=0.7
