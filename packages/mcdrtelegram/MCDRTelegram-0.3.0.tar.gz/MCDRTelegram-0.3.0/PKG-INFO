@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mcdrtelegram
+Version: 0.3.0
+Summary: 
+License: MIT
+Author: Yi-Jyun Pan
+Author-email: pan93412@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aiogram (>=2.11.2,<3.0.0)
+Requires-Dist: ujson (>=4.0.2,<5.0.0)
+Requires-Dist: uvloop (>=0.14.0,<0.15.0)
