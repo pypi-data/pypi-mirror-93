@@ -1,0 +1,9 @@
+README.md
+setup.py
+HQProxy/__init__.py
+HQProxy/hqproxy.py
+HQProxy.egg-info/PKG-INFO
+HQProxy.egg-info/SOURCES.txt
+HQProxy.egg-info/dependency_links.txt
+HQProxy.egg-info/requires.txt
+HQProxy.egg-info/top_level.txt
