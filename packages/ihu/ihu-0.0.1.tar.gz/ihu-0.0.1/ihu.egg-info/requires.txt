@@ -1,0 +1,6 @@
+fastcore
+numpy
+pytest
+qutip
+scipy
+matplotlib
