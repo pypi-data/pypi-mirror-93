@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+package.yml
+setup.py
+src/nr/__init__.py
+src/nr.functional.egg-info/PKG-INFO
+src/nr.functional.egg-info/SOURCES.txt
+src/nr.functional.egg-info/dependency_links.txt
+src/nr.functional.egg-info/not-zip-safe
+src/nr.functional.egg-info/top_level.txt
+src/nr/functional/__init__.py
+src/nr/functional/py.typed
