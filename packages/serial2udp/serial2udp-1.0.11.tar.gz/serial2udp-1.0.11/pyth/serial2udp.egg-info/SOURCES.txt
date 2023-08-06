@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+pyth/serial2udp.py
+pyth/SerialReader/SerialReader.py
+pyth/SerialReader/__init__.py
+pyth/serial2udp.egg-info/PKG-INFO
+pyth/serial2udp.egg-info/SOURCES.txt
+pyth/serial2udp.egg-info/dependency_links.txt
+pyth/serial2udp.egg-info/entry_points.txt
+pyth/serial2udp.egg-info/requires.txt
+pyth/serial2udp.egg-info/top_level.txt
