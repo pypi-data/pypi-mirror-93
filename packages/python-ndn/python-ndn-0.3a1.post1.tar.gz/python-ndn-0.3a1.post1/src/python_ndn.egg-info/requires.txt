@@ -1,0 +1,8 @@
+pycryptodomex>=3.9.9
+pygtrie>=2.3.3
+dataclasses>=0.6
+
+[dev]
+pytest>=5.3.5
+pytest-cov>=2.8.1
+flake8>=3.7.9
