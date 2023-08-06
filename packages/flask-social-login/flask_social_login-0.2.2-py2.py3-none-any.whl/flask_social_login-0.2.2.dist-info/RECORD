@@ -1,0 +1,14 @@
+flask_social_login/__init__.py,sha256=Yz_G5Z9OEu102Azy5nw4SqmcyKtMlkx-XekZKT-HdTc,248
+flask_social_login/core.py,sha256=WP6nluKz1jakuUV7Z6Od5k6n8cwjm7GzQINgRN1aN5E,4420
+flask_social_login/datastore.py,sha256=CAYB-UqVV_SpbS2t-Ykjr5CGTyMCxH2tPKIzVpDYdws,2459
+flask_social_login/utils.py,sha256=G7E3W5kMMwr9Dyu9_tW-GytSUOnGLUE4hxR5eSPpYy4,4389
+flask_social_login/views.py,sha256=GFuYQKA2Wi1sLwy0vQvb65sTbF82mcN5uT0a8xk0uCo,8349
+flask_social_login/providers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flask_social_login/providers/facebook.py,sha256=toI8JC5FExO5rN2PgS8zTm1KhHpIojb1NeXvqXNlGQM,1846
+flask_social_login/providers/google.py,sha256=YHA9hMdc0oB3ZKcLRcU3w6wkzdEIkvI9e4cJOf46HwE,2462
+flask_social_login-0.2.2.dist-info/AUTHORS.rst,sha256=lOZU0e_tJgVoxBby7w9UcJ6qpaAtUMGW_jRfKJjn2aA,155
+flask_social_login-0.2.2.dist-info/LICENSE,sha256=vDfId9CcQg-S-6suMuVmpEr9uVjuHc4L3xX-GXjD9jM,1072
+flask_social_login-0.2.2.dist-info/METADATA,sha256=xlDzSRdbm_0qbZupWUD8u3K6ZcJ7koLBXrKb_rEdJp8,2108
+flask_social_login-0.2.2.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+flask_social_login-0.2.2.dist-info/top_level.txt,sha256=RrOiJE2egN-rSjSIVJdUjrBcja4N6mCtGACAP5Dl8K0,19
+flask_social_login-0.2.2.dist-info/RECORD,,
