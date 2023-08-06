@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: jsonapy
+Version: 0.1.1
+Summary: Library for dumping models into JSON:API
+Home-page: https://github.com/Arkelis/jsonapy
+License: MIT
+Author: Guillaume Fayard
+Author-email: guillaume.fayard@pycolore.fr
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/Arkelis/jsonapy
+Description-Content-Type: text/x-rst
+
+Dumping JSON:API in Python
+==========================
+
+`jsonapy` is a Python library for dumping models into JSON:API-compliant JSON.
+
+
