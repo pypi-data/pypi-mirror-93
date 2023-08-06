@@ -1,0 +1,3 @@
+[console_scripts]
+glap=glap.cli:main
+
