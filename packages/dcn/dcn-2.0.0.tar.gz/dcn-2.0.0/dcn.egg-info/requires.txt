@@ -1,0 +1,2 @@
+ansicolors>=1.1.8
+pycryptodome>=3.9.9
