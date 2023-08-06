@@ -1,0 +1,7 @@
+README.md
+setup.py
+one_cli_plugin_dnx_assume.egg-info/PKG-INFO
+one_cli_plugin_dnx_assume.egg-info/SOURCES.txt
+one_cli_plugin_dnx_assume.egg-info/dependency_links.txt
+one_cli_plugin_dnx_assume.egg-info/top_level.txt
+plugin_dnx_assume/__init__.py
