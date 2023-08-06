@@ -1,0 +1,4 @@
+jupyterlab<3,>=2
+notebook>=6.0.0
+cryptography>=3.0
+tornado>=6.0
