@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: facetoolsz
+Version: 0.0.1
+Summary: face image process lib
+Home-page: UNKNOWN
+Author: wvinzh
+Author-email: wvinzh@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+A image lib for face image process, eg. Transform
+
+Borrowed from https://github.com/iperov/DeepFaceLab
+
