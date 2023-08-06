@@ -1,0 +1,123 @@
+Metadata-Version: 2.1
+Name: lavender
+Version: 0.2.0
+Summary: The slightly more compromising code formatter.
+Home-page: https://github.com/spinda/lavender#readme
+License: MIT
+Keywords: automation,formatter,black,yapf,autopep8
+Author: Michael Smith
+Author-email: michael@spinda.net
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Provides-Extra: d
+Requires-Dist: aiohttp (>=3.3.2,<4.0.0); extra == "d"
+Requires-Dist: aiohttp_cors (>=0.7.0,<0.8.0); extra == "d"
+Requires-Dist: appdirs (>=1.4.0,<2.0.0)
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: colorama (>=0.4.3,<0.5.0)
+Requires-Dist: dataclasses (>=0.6,<0.9)
+Requires-Dist: mypy_extensions (>=0.4.3,<0.5.0)
+Requires-Dist: pathspec (>=0.6.0,<0.9)
+Requires-Dist: regex (>=2020.1.8)
+Requires-Dist: toml (>=0.10.1,<0.11.0)
+Requires-Dist: typed-ast (>=1.4.0,<2.0.0)
+Requires-Dist: typing_extensions (>=3.7.4,<4.0.0)
+Project-URL: Repository, https://github.com/spinda/lavender.git
+Description-Content-Type: text/markdown
+
+# Lavender
+
+[![PyPI](https://img.shields.io/pypi/v/lavender.svg)](https://pypi.python.org/pypi/lavender)
+
+A slightly more compromising Python code formatter, based on the latest stable release of
+[Black](https://github.com/python/black#readme)
+([`20.8b10`](https://github.com/psf/black/releases/tag/20.8b1) at the time of writing).
+
+## Differences from Black
+
+- The default line length is 99 instead of 88 (configurable with `--line-length`).
+- Single quoted strings are preferred (configurable with
+ `--string-normalization none/single/double`).
+- Empty lines between `class`es and `def`s are treated no differently from other code. The old
+  behavior, which sometimes inserts double empty lines between them, remains available via
+  `--special-case-def-empty-lines`.
+- The Vim plugin configuration variable for line length is named `g:lavender_line_length` instead
+  of `g:lavender_linelength`, for consistency with the other configuration variable names.
+
+## Documentation
+
+Read up on [Black](https://github.com/python/black#readme), but replace `black` with `lavender` in your
+head.
+
+## Development
+
+[Poetry](https://poetry.eustace.io/) is recommended for managing Python development tooling.
+
+To initialize an isolated Python development environment for Lavender:
+
+```
+poetry install
+```
+
+### Code Formatting
+
+Code formatting for Python is handled by Lavender itself.
+
+To check that the code is correctly formatted:
+
+```
+poetry run lavender --check .
+```
+
+To auto-format the code:
+
+```
+poetry run lavender .
+```
+
+### Type Checking
+
+Type checking for Python is handled by [mypy](https://github.com/python/mypy#readme).
+
+To check that the code is correctly typed:
+
+```
+poetry run mypy .
+```
+
+## License
+
+Lavender is Copyright (c) 2019-2021 Michael Smith &lt;michael@spinda.net&gt;
+
+Black, the software on which it was based, is Copyright (c) 2018-2020 Łukasz Langa
+
+This program is free software: you can redistribute it and/or modify it under the terms of the MIT
+License.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the MIT
+License for more details.
+
+You should have received a [copy](LICENSE) of the MIT License along with this program. If not, see
+[http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT).
+
+### Contribution
+
+Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in
+this work by you shall be licensed as above, without any additional terms or conditions.
+
+[modeline]: # ( vim: set tw=99 ts=2 sw=2 et: )
+
