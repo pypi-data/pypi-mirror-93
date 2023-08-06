@@ -1,0 +1,7 @@
+README.md
+setup.py
+qrtransfer.egg-info/PKG-INFO
+qrtransfer.egg-info/SOURCES.txt
+qrtransfer.egg-info/dependency_links.txt
+qrtransfer.egg-info/entry_points.txt
+qrtransfer.egg-info/top_level.txt
