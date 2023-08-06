@@ -1,0 +1,9 @@
+README.md
+setup.py
+pyreedsolomon/__init__.py
+pyreedsolomon/pyreedsolomon.py
+pyreedsolomon.egg-info/PKG-INFO
+pyreedsolomon.egg-info/SOURCES.txt
+pyreedsolomon.egg-info/dependency_links.txt
+pyreedsolomon.egg-info/requires.txt
+pyreedsolomon.egg-info/top_level.txt
