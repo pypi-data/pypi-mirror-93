@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: autoforecast
+Version: 0.0.1
+Summary: AutoML time series forecasting
+Home-page: https://github.com/pypa/sampleproject
+Author: Guillaume Simo
+Author-email: guillaume.simo@hotmail.fr
+License: UNKNOWN
+Description: # Auto Forecast
+        AutoML library for time series forecasting
+        
+        ## Getting started
+        
+        Install virtualenv
+        ```bash
+        $ pip install virtualenv
+        ```
+        
+        Create a virtualenv named venv
+        ```bash
+        $ virtualenv venv
+        ```
+        
+        Activate the virtualenv venv
+        ```bash
+        $ source venv/bin/activate
+        ```
+        
+        Upgrade pip
+        ```bash
+        $ pip install pip --upgrade
+        ```
+        
+        Install the requirements
+        ```bash
+        $ pip install -r requirements.txt
+        ```
+        
+        Run the main.py file
+        ```bash
+        $ python3 main.py
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
