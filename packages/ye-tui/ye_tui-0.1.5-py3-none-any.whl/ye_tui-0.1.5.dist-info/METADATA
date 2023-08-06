@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: ye-tui
+Version: 0.1.5
+Summary: yet is a console (kind of rss) application to download youtube videos.
+Home-page: https://github.com/nevarman/yet
+Author: mushroomrisotto
+Author-email: pypi.gib@aleeas.com
+License: GPL3
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Environment :: Console :: Curses
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Desktop Environment
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: xmltodict
+Requires-Dist: youtube-dl
+
+# YET - _Youtube export TUI_
+
+yet is a console (kind of rss) application to download youtube videos. It uses _subscriptions.json_ file which comes with your youtube export data. It provides a minimalistic and nice curses interface. It uses [youtube-dl](https://github.com/ytdl-org/youtube-dl#output-template) to download videos.
+
+![](./docs/preview.jpg)
+
+## Dependencies
+
+- Python>=3.6
+- youtube-dl
+- xmltodict
+
+## Installation
+
+### Using Pip
+
+- You can install yet through PyPi: _pip install ye-tui_
+
+### From source
+
+- Checkout this project: git clone https://github.com/nevarman/yet
+- cd /yet
+- sudo python setup.py install
+
+## Usage
+
+First export your youtube data from https://takeout.google.com/, it should come with a subscriptions.json file. Move the subscriptions.json into ~/.config/yet folder.
+
+Run 'yet' from your terminal emulator.
+
+Use arrow keys or 'h,j,k,l' to navigate around.
+_D_ to download, _V_ to open in VLC media player(if installed) and _O_ to open in browser. You can change the keybindings from the config file.
+
+The downloaded video files are saved under $HOME/Videos directory. You can change the path from config file.
+
+### Configuration
+
+Copy the yet/config/yet.conf from this repo or from python package directory, into ~/.config/yet folder. The config file is self explanatory.
+
+
