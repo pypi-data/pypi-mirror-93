@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: odoo13-addon-stock-quant-package-dimension-total-weight-from-packaging
+Version: 13.0.1.1.0
+Summary: Estimated weight of a package
+Home-page: https://github.com/OCA/stock-logistics-workflow
+Author: Camptocamp, Odoo Community Association (OCA)
+Author-email: support@odoo-community.org
+License: AGPL-3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.5
+Requires-Dist: odoo13-addon-product-total-weight-from-packaging
+Requires-Dist: odoo13-addon-stock-quant-package-dimension
+Requires-Dist: odoo (<13.1dev,>=13.0a)
+
+UNKNOWN
+
+
