@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: youtube-rss-subscriber
+Version: 0.0.2
+Summary: Subscribe to YouTube channels without a YouTube account
+Home-page: https://github.com/miquelruiz/youtube-rss-subscriber
+Author: Miquel Ruiz
+Author-email: self@miquelruiz.net
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4
+Requires-Dist: click
+Requires-Dist: lxml
+Requires-Dist: python-dateutil
+Requires-Dist: pyyaml
+Requires-Dist: sqlalchemy
+Requires-Dist: tabulate
+Requires-Dist: youtube-dl
+
+# YouTube RSS Subscriber
+
+YouTube RSS Subscriber allows you to subscribe to YouTube channels without the
+need of a YouTube account.
+
