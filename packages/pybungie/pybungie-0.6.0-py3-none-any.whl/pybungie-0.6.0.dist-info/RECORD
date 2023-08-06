@@ -1,0 +1,9 @@
+pybungie/BungieAPI.py,sha256=GXBjfQr7gxfCorOlySLmR3r68R6GRdlpi0jn7mzWVJk,12765
+pybungie/OAuth2.py,sha256=P7osHwQIZXjFEdkj6msI7vsQbV0uCd3Asc1nk5A7bOs,6323
+pybungie/__init__.py,sha256=_yUK_YDkCrjCsq1aYnQuL_vAiuhWu6vnRHj97UNB5WY,64
+pybungie/destiny_enums.py,sha256=6HX2CajTqzIaOZj5BU4ymNp2OeM-i2s_IhMGztaeX-Q,2894
+pybungie/config/pybungie.ini,sha256=j-gUHrDkHXLTupRBxmyAiOVLGn4SMA3Cv4BQtC569xI,280
+pybungie-0.6.0.dist-info/METADATA,sha256=_I-HveofCHEpeWZxqXWbwhSOJ8JLmCLWj_7ahllHoIM,2353
+pybungie-0.6.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pybungie-0.6.0.dist-info/top_level.txt,sha256=-4I3odbamPQcrKw8sDznTuqx3xSGMkjXSigi7JJSpOE,9
+pybungie-0.6.0.dist-info/RECORD,,
