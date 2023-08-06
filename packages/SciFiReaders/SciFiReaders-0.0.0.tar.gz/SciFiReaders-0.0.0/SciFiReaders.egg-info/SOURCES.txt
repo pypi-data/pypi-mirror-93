@@ -1,0 +1,5 @@
+setup.py
+SciFiReaders.egg-info/PKG-INFO
+SciFiReaders.egg-info/SOURCES.txt
+SciFiReaders.egg-info/dependency_links.txt
+SciFiReaders.egg-info/top_level.txt
