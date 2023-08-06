@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: powerk8s
+Version: 0.1.4
+Summary: Powerline Segment for Kubernetes
+License: MIT
+Author: George Kontridze
+Author-email: george.kontridze@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyYAML (>=5.4.1,<6.0.0)
+Requires-Dist: kubernetes (>=12.0.1,<13.0.0)
+Requires-Dist: powerline-status (>=2.7,<3.0)
