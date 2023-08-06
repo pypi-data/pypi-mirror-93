@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: yaml2sbml
+Version: 0.2.0
+Summary: A small package to convert ODEs specified in a yaml file to SBML/PEtab.
+Home-page: https://github.com/martamatos/yaml2sbml
+Author: Jakob Vanhoefer, Marta R. A. Matos
+Author-email: marta.ra.matos@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Requires-Python: >=3.6
+Provides-Extra: examples
