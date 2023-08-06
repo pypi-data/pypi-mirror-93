@@ -1,0 +1,13 @@
+mypy_boto3_migrationhub_config/__init__.py,sha256=rsXv1bLqRJyoKOH0yBBivyoXn8oLnpAzC8UBpWP_OX4,563
+mypy_boto3_migrationhub_config/__init__.pyi,sha256=hxbBTQWkHE3SMe2hKGu5ODU5rk4NCFbVRqFQwy5a9zM,562
+mypy_boto3_migrationhub_config/__main__.py,sha256=_v3Tk62mSIjZpCiXFPZc5X_f5Ah2_y22MOmFXWwx-qU,415
+mypy_boto3_migrationhub_config/client.py,sha256=kaZ4JY_CJC_4jVWw_87u9LzrWfZvnubqg-boNUWur7A,3311
+mypy_boto3_migrationhub_config/client.pyi,sha256=sl9nOG9ka3q3Wwbhaag7LD2o_YDs5sSQEzY5KpG_7PU,3302
+mypy_boto3_migrationhub_config/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_migrationhub_config/type_defs.py,sha256=-fRagdsspdbK9cITzE6QxGwH5UapaaiYGj7IghNAerU,1641
+mypy_boto3_migrationhub_config/type_defs.pyi,sha256=yCr6FpfW_gZmxeXWRoWsC4bKLaBXtJnjRIdFOi7DG5Y,1638
+mypy_boto3_migrationhub_config/version.py,sha256=TAj-95M0HWKvJGXYSh0GBcUq6ypLB6lXQp1CkKxnWho,56
+mypy_boto3_migrationhub_config-1.17.1.0.dist-info/METADATA,sha256=ldx2-_EyscGIoBv-bxu4VrotsOhMfs7gMBvv9HKU-SE,6549
+mypy_boto3_migrationhub_config-1.17.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mypy_boto3_migrationhub_config-1.17.1.0.dist-info/top_level.txt,sha256=MSvDtNZU_9n3OFg8CI7abvFXga6izdm6ugtdmZ5bF_Q,31
+mypy_boto3_migrationhub_config-1.17.1.0.dist-info/RECORD,,
