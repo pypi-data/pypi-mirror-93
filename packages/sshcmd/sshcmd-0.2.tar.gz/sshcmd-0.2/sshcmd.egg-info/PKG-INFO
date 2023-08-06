@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: sshcmd
+Version: 0.2
+Summary: ssh cmd
+Home-page: UNKNOWN
+Author: lxl
+Author-email: xliang.lee@qq.com
+License: MIT
+Description: ssh cmd
+Keywords: ssh,cmd
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=2.6
+Description-Content-Type: text/markdown
