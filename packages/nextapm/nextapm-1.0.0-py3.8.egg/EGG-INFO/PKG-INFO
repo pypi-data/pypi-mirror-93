@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: nextapm
+Version: 1.0.0
+Summary: Monitor vercel serverless python api
+Home-page: https://nextapm.dev
+Author: Chan Anan
+Author-email: chan@nextapm.dev
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
