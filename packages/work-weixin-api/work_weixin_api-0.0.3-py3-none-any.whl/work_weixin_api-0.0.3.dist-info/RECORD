@@ -1,0 +1,11 @@
+test/WorkWeixinClientTest.py,sha256=2UFmPHLSwCfItt2Ls6c_kWnUxh74COIhpOtlOR7VXno,1917
+test/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+work_weixin_api/__init__.py,sha256=kYI4NdbLIWuiwRPq2oEqTKhdkAJ8Cp0M_kIS1dHfj-Y,117
+work_weixin_api/version.py,sha256=VS1AylSwYdtImV6RBMZfPHU9x8NfAHgJLoKZJoPCRng,43
+work_weixin_api/work_weixin_api.py,sha256=ZoUvJJefc98jrcXXG00Lt2216lA6coX51Q4QemoERug,7467
+work_weixin_api/work_weixin_client.py,sha256=B7HP0eZLCAdrzSb6CcyqfM6oIb_36Wy0pWxsxn621AQ,4451
+work_weixin_api-0.0.3.dist-info/METADATA,sha256=-XmQlscz_KCm70kTYVgMC0ZAqLHUI5QKzG0aDO8CT_o,1860
+work_weixin_api-0.0.3.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+work_weixin_api-0.0.3.dist-info/top_level.txt,sha256=qX-71hZHgyI5gR9nNLLcz3yMiy3EA76ZQy5AWY3LwpU,21
+work_weixin_api-0.0.3.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+work_weixin_api-0.0.3.dist-info/RECORD,,
