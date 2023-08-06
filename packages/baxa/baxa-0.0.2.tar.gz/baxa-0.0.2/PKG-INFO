@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: baxa
+Version: 0.0.2
+Summary: Models and examples built with JAX
+Home-page: https://github.com/prabhuomkar/baxa
+Author: Omkar Prabhu
+Author-email: prabhuomkar@pm.me
+License: Apache 2.0
+Description: # Baxa
+        Models and examples built with JAX
+        
+        ## Installation
+        
+        ## Getting Started
+        
+        ## Communication
+        
+        ## Releases and Contributing
+        
+        ## License
+        Baxa has a Apache-2.0 license, as found in the [LICENSE](LICENSE) file.
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
