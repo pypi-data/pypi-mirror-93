@@ -1,0 +1,10 @@
+cog/__init__.py,sha256=qJ19vLszdLBXEbgMm7wV2kEGbcUNtPgB6ecGEpaQ03k,35
+cog/config.py,sha256=GYln16O4mB-uA70MxjPng5YPgpdNduq7_mtuhNL6Imc,1565
+cog/core.py,sha256=KJ2PWzapm6Q00OPPvtJ3NRVudz-qmMwoOe7NrUHbHRU,12950
+cog/database.py,sha256=zJBCzl5P3ASVcLgjk9tYjYZ4WO7P50-jRw18eQRXTAs,8783
+cog/torque.py,sha256=cAlDqUiMf82yOax88QYVMC0iop-W6bZ-v99ng8XT-qk,5047
+cogdb-2.0.0.dist-info/LICENSE,sha256=0pcfHTUx6x8bbOshcNK2GrXQuANDRIXtJ4oWrP8hzZY,1070
+cogdb-2.0.0.dist-info/METADATA,sha256=Rp6qTbZw5N2vKSz_9jEWzHDCte-QXExDIhPKq8CIvTA,223
+cogdb-2.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cogdb-2.0.0.dist-info/top_level.txt,sha256=fYcp0fIblT53_uhUuwnYmCm9avvKFlFsrdS_1KOdu4c,4
+cogdb-2.0.0.dist-info/RECORD,,
