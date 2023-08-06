@@ -1,0 +1,9 @@
+README.md
+setup.py
+ta_tooling/__init__.py
+ta_tooling.egg-info/PKG-INFO
+ta_tooling.egg-info/SOURCES.txt
+ta_tooling.egg-info/dependency_links.txt
+ta_tooling.egg-info/entry_points.txt
+ta_tooling.egg-info/not-zip-safe
+ta_tooling.egg-info/top_level.txt
