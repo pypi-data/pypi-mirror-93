@@ -1,0 +1,7 @@
+README.md
+setup.py
+scrimage.egg-info/PKG-INFO
+scrimage.egg-info/SOURCES.txt
+scrimage.egg-info/dependency_links.txt
+scrimage.egg-info/entry_points.txt
+scrimage.egg-info/top_level.txt

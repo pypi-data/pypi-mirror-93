@@ -1,0 +1,4 @@
+[console_scripts]
+img2sam = scrimage.commands.img2sam:main
+sam2img = scrimage.commands.sam2img:main
+
