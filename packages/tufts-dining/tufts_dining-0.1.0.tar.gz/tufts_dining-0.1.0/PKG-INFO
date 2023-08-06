@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: tufts_dining
+Version: 0.1.0
+Summary: A Python package for retrieving menus from Tufts Dining
+Home-page: https://github.com/dahalankur/tufts_dining
+Author: Ankur Dahal
+Author-email: dahalankur123@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: tufts-dining-package tufts-university dining-package
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Requires-Python: >=3.6

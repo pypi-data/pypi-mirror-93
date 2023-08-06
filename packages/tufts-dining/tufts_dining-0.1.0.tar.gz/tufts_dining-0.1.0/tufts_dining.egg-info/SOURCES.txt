@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+tufts_dining/__init__.py
+tufts_dining/constants.py
+tufts_dining/tuftsdining.py
+tufts_dining.egg-info/PKG-INFO
+tufts_dining.egg-info/SOURCES.txt
+tufts_dining.egg-info/dependency_links.txt
+tufts_dining.egg-info/requires.txt
+tufts_dining.egg-info/top_level.txt
