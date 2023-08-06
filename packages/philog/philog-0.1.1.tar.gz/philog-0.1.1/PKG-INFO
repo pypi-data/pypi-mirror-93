@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: philog
+Version: 0.1.1
+Summary: Threaded logger for personal use
+Home-page: https://github.com/rahungria/philog
+Author: Raphael Hungria
+Author-email: rhja93@gmail.com
+License: MIT
+Download-URL: https://github.com/rahungria/philog/archive/0.1.3.tar.gz
+Description: > PHILOG
+        Simple python file logger for personal projects/user
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown

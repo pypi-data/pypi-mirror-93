@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+philog/__init__.py
+philog/exceptions.py
+philog/logger.py
+philog.egg-info/PKG-INFO
+philog.egg-info/SOURCES.txt
+philog.egg-info/dependency_links.txt
+philog.egg-info/top_level.txt
