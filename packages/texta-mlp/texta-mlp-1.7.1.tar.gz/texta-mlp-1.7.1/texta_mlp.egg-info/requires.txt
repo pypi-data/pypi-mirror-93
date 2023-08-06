@@ -1,0 +1,12 @@
+beautifulsoup4>=4.9.*
+celery==4.*
+lang-trans
+langdetect
+lxml
+pelecanus
+phonenumberslite
+pytest
+redis==3.*
+regex
+stanza==1.1.*
+torch==1.5.*
