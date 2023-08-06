@@ -1,0 +1,4 @@
+graft passgen
+graft tests
+include LICENSE.txt
+global-exclude *.pyc
