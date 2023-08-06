@@ -1,0 +1,11 @@
+README.md
+setup.py
+meraki_cli/__init__.py
+meraki_cli/__main__.py
+meraki_cli/__version__.py
+meraki_cli.egg-info/PKG-INFO
+meraki_cli.egg-info/SOURCES.txt
+meraki_cli.egg-info/dependency_links.txt
+meraki_cli.egg-info/entry_points.txt
+meraki_cli.egg-info/requires.txt
+meraki_cli.egg-info/top_level.txt
