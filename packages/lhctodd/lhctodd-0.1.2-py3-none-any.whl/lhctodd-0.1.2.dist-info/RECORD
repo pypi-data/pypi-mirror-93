@@ -1,0 +1,16 @@
+lhctodd/__init__.py,sha256=lcJ9Rok_9roOSsT_kdYaD0PXCe4P2slVyCtyjJuXDKI,1290
+lhctodd/model.py,sha256=o80FTsCwoS_bjb21CqIT-uVClkH4Zg8h3nT2I9YLfQE,7237
+lhctodd/theory.py,sha256=uGq4aVh6wm57M6O0CbO5HFHAuL8UDMLaX3w2Df5o-so,5641
+lhctodd/tools.py,sha256=CxBFfdyDu0pjOnpX5c6IlPCPamAiuIYwEny7eLoLcHI,766
+lhctodd/.ipynb_checkpoints/model-checkpoint.py,sha256=7bKPn8wIOiSY74ZoueqgBNaeJAJ7blTGUKqH38K55SQ,6360
+lhctodd/.ipynb_checkpoints/theory-checkpoint.py,sha256=J11eUMQkH0PkoB6iHd8yDsLYAvgEAMrA6MHyLVK0jiQ,4455
+lhctodd/.ipynb_checkpoints/tools-checkpoint.py,sha256=CxBFfdyDu0pjOnpX5c6IlPCPamAiuIYwEny7eLoLcHI,766
+lhctodd/data/alpha_s.csv,sha256=29ShteorZIzQlXK74EIZWH-Uwly1KOiHkQrNhyxREdw,2500
+lhctodd/data/.ipynb_checkpoints/alpha_s-checkpoint.csv,sha256=UA1osoSt8ZKGyXF-JaYlM_ddsgK02pNaEuuqFS-ok_A,2515
+lhctodd/data/darkmatter-data/data.mdb,sha256=VPQlnm4SxeZM2SgeEPMIiIOOWo3scxs9L9cZkIZbk8M,77824
+lhctodd/data/darkmatter-data/lock.mdb,sha256=X3ZCZ3pKyUIU27iKB6ziq7yTYIvlZDwuq9R_ZLPXG7U,8192
+lhctodd-0.1.2.dist-info/LICENSE,sha256=lEAte1RTFc3Od8MvhmdCNH8YNJzddjG8rQL0XTW2xZ0,1523
+lhctodd-0.1.2.dist-info/METADATA,sha256=2CXpq3jtYkG5SZp-3CXxTLVzmkNrf8Ewbv1Va5PFrbs,2886
+lhctodd-0.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+lhctodd-0.1.2.dist-info/top_level.txt,sha256=GpzoXM56O-_RU2ei56F2wfhL5ktSzG_uucPCBUv2Bf0,8
+lhctodd-0.1.2.dist-info/RECORD,,
