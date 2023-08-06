@@ -1,0 +1,34 @@
+import os
+from setuptools import setup, find_packages
+
+def read(fname):
+	return open(os.path.join(os.path.dirname(__file__), fname)).read()
+
+setup(
+	name = "natex",
+	version = "1.0.2",
+	author = "Dan Borufka",
+	author_email = "danborufka@gmail.com",
+	description = "Regular Expressions turbo-charged with notations for part-of-speech and dependency tree tags",
+	license = "MIT",
+	keywords = "regex regular expression nlp pos dep",
+	url = "https://github.com/polygoat/natex-py",
+	packages=find_packages(),
+	install_requires=[
+        "pydash",
+		"stanza"
+    ],
+    include_package_data=True,
+	long_description=read('README.md'),
+	long_description_content_type="text/markdown",
+	classifiers=[
+		"Programming Language :: Python :: 3",
+		"Development Status :: 3 - Alpha",
+		"Topic :: Utilities",
+		"License :: OSI Approved :: MIT License",
+		"Operating System :: OS Independent"
+	],
+	python_requires='>=3.6'
+)
+
+print('done.')
