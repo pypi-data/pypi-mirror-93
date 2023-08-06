@@ -1,0 +1,11 @@
+django_light_auth/__init__.py,sha256=k7Z2099R412QJtD_ubfNTHxnIyBAAuKhGQz42ZM5tWE,630
+django_light_auth/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+django_light_auth/apps.py,sha256=c4rnw8yJS8090Ihcz6oSIsBaTE_N1nA5pH8GXi56Vn0,1579
+django_light_auth/runtimes.py,sha256=8CJiuD7_uKlYfthiilJaLGVFzpwd9V_twmac4bvTCic,3569
+django_light_auth/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+django_light_auth/views.py,sha256=GvFsiv9Yy-GGHkiIA_EpCo8gGR5odmX6bL-Dp4mNWAM,1190
+django_light_auth-0.2.1.dist-info/LICENSE,sha256=MCC2EV4rryc4M1gRogsemKBRr3P_OZe0HcTFxmRY4Uw,1066
+django_light_auth-0.2.1.dist-info/METADATA,sha256=9ltrc5mhbOtWM_Bk8yF-bm721AwIrL-Q37639OQTsfY,2520
+django_light_auth-0.2.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+django_light_auth-0.2.1.dist-info/top_level.txt,sha256=GVU2tghDf0-jv2Pp3IRSyxjbkXdmdebG6957XrBOTkI,18
+django_light_auth-0.2.1.dist-info/RECORD,,
