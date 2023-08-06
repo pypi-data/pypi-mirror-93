@@ -1,0 +1,10 @@
+setup.py
+JaviMartinez/ExploratoryDataAnalysis.py
+JaviMartinez/FeatureEngineering.py
+JaviMartinez/Finances.py
+JaviMartinez/__init__.py
+JaviMartinez/info.py
+JaviMartinez.egg-info/PKG-INFO
+JaviMartinez.egg-info/SOURCES.txt
+JaviMartinez.egg-info/dependency_links.txt
+JaviMartinez.egg-info/top_level.txt
