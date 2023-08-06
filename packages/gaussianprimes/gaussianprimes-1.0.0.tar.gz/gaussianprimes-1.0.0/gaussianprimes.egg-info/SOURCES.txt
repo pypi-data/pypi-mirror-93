@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.py
+gaussianprimes.egg-info/PKG-INFO
+gaussianprimes.egg-info/SOURCES.txt
+gaussianprimes.egg-info/dependency_links.txt
+gaussianprimes.egg-info/requires.txt
+gaussianprimes.egg-info/top_level.txt
+python/gaussianprimes.cpp
+src/BaseSieve.cpp
+src/BlockSieve.cpp
+src/OctantDonutSieve.cpp
+src/OctantMoat.cpp
+src/OctantSieve.cpp
+src/SectorSieve.cpp
+src/cython_bindings.cpp
