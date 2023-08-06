@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "ethereum-gasprice"
+version = "1.1.0"
+description = "Tool for fetching actual gasprice in ethereum blockchain"
+authors = ["Nikita Yugov <nikitosnikn@yandex.ru>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/Elastoo-Team/ethereum-gasprice-py"
+repository = "https://github.com/Elastoo-Team/ethereum-gasprice-py"
+keywords = ["ethereum", "gasprice", "web3", "etherscan", "ethgasstation"]
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = ">=2.18.0"
+web3 = ">=5.1.0"
+eth-utils = ">=1.0.0"
+aiohttp = {version = ">=3.5.0", optional = true}
+
+[tool.poetry.dev-dependencies]
+bumpversion = "^0.6.0"
+pre-commit = "^2.10.0"
+
+[tool.poetry.extras]
+aiohttp = ["aiohttp"]
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+    | migrations
+  )
+)
+'''
+
+[build-system]
+requires = ["poetry-core>=1.1.0"]
+build-backend = "poetry.core.masonry.api"
