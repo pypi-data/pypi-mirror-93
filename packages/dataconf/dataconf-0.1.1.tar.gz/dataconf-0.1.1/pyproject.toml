@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "dataconf"
+version = "0.1.1"
+description = "Lightweight configuration with automatic dataclasses parsing (HOCON/JSON/YAML/PROPERTIES)"
+authors = []
+license = "Apache2"
+readme = "README.md"
+repository = "https://github.com/zifeo/dataconf"
+include = [
+    "dataconf", "pyproject.toml"
+]
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+]
+
+[tool.poetry.scripts]
+dataconf = 'dataconf.cli:run'
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pyhocon = "^0.3.54"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.4"
+pre-commit = "^2.3.0"
+
+[build-system]
+requires = ["poetry"]
+build-backend = "poetry.masonry.api"
