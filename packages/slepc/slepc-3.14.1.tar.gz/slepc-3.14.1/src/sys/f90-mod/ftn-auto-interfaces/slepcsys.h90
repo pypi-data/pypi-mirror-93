@@ -1,0 +1,73 @@
+      subroutine SlepcSCCompare(a,b,c,d,e,f,z)
+      use slepcsysdef
+       SlepcSC a ! SlepcSC
+       PetscScalar b ! PetscScalar
+       PetscScalar c ! PetscScalar
+       PetscScalar d ! PetscScalar
+       PetscScalar e ! PetscScalar
+       PetscInt f ! PetscInt
+        PetscErrorCode z
+       end subroutine SlepcSCCompare
+      subroutine SlepcSortEigenvalues(a,b,c,d,e,z)
+      use slepcsysdef
+       SlepcSC a ! SlepcSC
+       PetscInt b ! PetscInt
+       PetscScalar c ! PetscScalar
+       PetscScalar d ! PetscScalar
+       PetscInt e ! PetscInt
+        PetscErrorCode z
+       end subroutine SlepcSortEigenvalues
+      subroutine SlepcInitialized(a,z)
+      use slepcsysdef
+       PetscBool a ! PetscBool
+        PetscErrorCode z
+       end subroutine SlepcInitialized
+      subroutine VecNormalizeComplex(a,b,c,d,z)
+      use slepcsysdef
+       Vec a ! Vec
+       Vec b ! Vec
+       PetscBool c ! PetscBool
+       PetscReal d ! PetscReal
+        PetscErrorCode z
+       end subroutine VecNormalizeComplex
+      subroutine VecCheckOrthogonality(a,b,c,d,e,f,g,z)
+      use slepcsysdef
+       Vec a (*) ! Vec
+       PetscInt b ! PetscInt
+       Vec c (*) ! Vec
+       PetscInt d ! PetscInt
+       Mat e ! Mat
+       PetscViewer f ! PetscViewer
+       PetscReal g ! PetscReal
+        PetscErrorCode z
+       end subroutine VecCheckOrthogonality
+      subroutine VecCheckOrthonormality(a,b,c,d,e,f,g,z)
+      use slepcsysdef
+       Vec a (*) ! Vec
+       PetscInt b ! PetscInt
+       Vec c (*) ! Vec
+       PetscInt d ! PetscInt
+       Mat e ! Mat
+       PetscViewer f ! PetscViewer
+       PetscReal g ! PetscReal
+        PetscErrorCode z
+       end subroutine VecCheckOrthonormality
+      subroutine VecDuplicateEmpty(a,b,z)
+      use slepcsysdef
+       Vec a ! Vec
+       Vec b ! Vec
+        PetscErrorCode z
+       end subroutine VecDuplicateEmpty
+      subroutine MatCreateTile(a,b,c,d,e,f,g,h,i,z)
+      use slepcsysdef
+       PetscScalar a ! PetscScalar
+       Mat b ! Mat
+       PetscScalar c ! PetscScalar
+       Mat d ! Mat
+       PetscScalar e ! PetscScalar
+       Mat f ! Mat
+       PetscScalar g ! PetscScalar
+       Mat h ! Mat
+       Mat i ! Mat
+        PetscErrorCode z
+       end subroutine MatCreateTile

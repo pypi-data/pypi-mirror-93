@@ -1,0 +1,130 @@
+      subroutine RGRingSetParameters(a,b,c,d,e,f,g,z)
+      use slepcrgdef
+       RG a ! RG
+       PetscScalar b ! PetscScalar
+       PetscReal c ! PetscReal
+       PetscReal d ! PetscReal
+       PetscReal e ! PetscReal
+       PetscReal f ! PetscReal
+       PetscReal g ! PetscReal
+        PetscErrorCode z
+       end subroutine RGRingSetParameters
+      subroutine RGRingGetParameters(a,b,c,d,e,f,g,z)
+      use slepcrgdef
+       RG a ! RG
+       PetscScalar b ! PetscScalar
+       PetscReal c ! PetscReal
+       PetscReal d ! PetscReal
+       PetscReal e ! PetscReal
+       PetscReal f ! PetscReal
+       PetscReal g ! PetscReal
+        PetscErrorCode z
+       end subroutine RGRingGetParameters
+      subroutine RGIntervalSetEndpoints(a,b,c,d,e,z)
+      use slepcrgdef
+       RG a ! RG
+       PetscReal b ! PetscReal
+       PetscReal c ! PetscReal
+       PetscReal d ! PetscReal
+       PetscReal e ! PetscReal
+        PetscErrorCode z
+       end subroutine RGIntervalSetEndpoints
+      subroutine RGCreate(a,b,z)
+      use slepcrgdef
+      MPI_Comm a ! MPI_Comm
+       RG b ! RG
+        PetscErrorCode z
+       end subroutine RGCreate
+      subroutine RGSetFromOptions(a,z)
+      use slepcrgdef
+       RG a ! RG
+        PetscErrorCode z
+       end subroutine RGSetFromOptions
+      subroutine RGIsTrivial(a,b,z)
+      use slepcrgdef
+       RG a ! RG
+       PetscBool b ! PetscBool
+        PetscErrorCode z
+       end subroutine RGIsTrivial
+      subroutine RGCheckInside(a,b,c,d,e,z)
+      use slepcrgdef
+       RG a ! RG
+       PetscInt b ! PetscInt
+       PetscScalar c ! PetscScalar
+       PetscScalar d ! PetscScalar
+       PetscInt e ! PetscInt
+        PetscErrorCode z
+       end subroutine RGCheckInside
+      subroutine RGComputeContour(a,b,c,d,z)
+      use slepcrgdef
+       RG a ! RG
+       PetscInt b ! PetscInt
+       PetscScalar c (*) ! PetscScalar
+       PetscScalar d (*) ! PetscScalar
+        PetscErrorCode z
+       end subroutine RGComputeContour
+      subroutine RGComputeBoundingBox(a,b,c,d,e,z)
+      use slepcrgdef
+       RG a ! RG
+       PetscReal b ! PetscReal
+       PetscReal c ! PetscReal
+       PetscReal d ! PetscReal
+       PetscReal e ! PetscReal
+        PetscErrorCode z
+       end subroutine RGComputeBoundingBox
+      subroutine RGSetComplement(a,b,z)
+      use slepcrgdef
+       RG a ! RG
+       PetscBool b ! PetscBool
+        PetscErrorCode z
+       end subroutine RGSetComplement
+      subroutine RGGetComplement(a,b,z)
+      use slepcrgdef
+       RG a ! RG
+       PetscBool b ! PetscBool
+        PetscErrorCode z
+       end subroutine RGGetComplement
+      subroutine RGSetScale(a,b,z)
+      use slepcrgdef
+       RG a ! RG
+       PetscReal b ! PetscReal
+        PetscErrorCode z
+       end subroutine RGSetScale
+      subroutine RGGetScale(a,b,z)
+      use slepcrgdef
+       RG a ! RG
+       PetscReal b ! PetscReal
+        PetscErrorCode z
+       end subroutine RGGetScale
+      subroutine RGPushScale(a,b,z)
+      use slepcrgdef
+       RG a ! RG
+       PetscReal b ! PetscReal
+        PetscErrorCode z
+       end subroutine RGPushScale
+      subroutine RGPopScale(a,z)
+      use slepcrgdef
+       RG a ! RG
+        PetscErrorCode z
+       end subroutine RGPopScale
+      subroutine RGDestroy(a,z)
+      use slepcrgdef
+       RG a ! RG
+        PetscErrorCode z
+       end subroutine RGDestroy
+      subroutine RGEllipseSetParameters(a,b,c,d,z)
+      use slepcrgdef
+       RG a ! RG
+       PetscScalar b ! PetscScalar
+       PetscReal c ! PetscReal
+       PetscReal d ! PetscReal
+        PetscErrorCode z
+       end subroutine RGEllipseSetParameters
+      subroutine RGPolygonSetVertices(a,b,c,d,z)
+      use slepcrgdef
+       RG a ! RG
+       PetscInt b ! PetscInt
+       PetscScalar c (*) ! PetscScalar
+       PetscScalar d (*) ! PetscScalar
+        PetscErrorCode z
+       end subroutine RGPolygonSetVertices
