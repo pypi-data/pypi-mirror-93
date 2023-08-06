@@ -1,0 +1,4 @@
+
+def word():
+    print('Hello')
+
