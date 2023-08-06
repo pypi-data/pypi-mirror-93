@@ -1,0 +1,8 @@
+pybind11<2.6.2
+psutil
+
+[:python_version == "2.7"]
+numpy<1.17,>=1.10.0
+
+[:python_version >= "3.5"]
+numpy>=1.10.0
