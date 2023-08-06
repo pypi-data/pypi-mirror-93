@@ -1,0 +1,7 @@
+purplship/mappers/ups_package/__init__.py,sha256=pheCzfaz9XjPFmEnKFg5_yB-Zj03Skh66y-IbcV6ADQ,571
+purplship/mappers/ups_package/mapper.py,sha256=rZrhtjpeWWke8wpUmKtLsCWY1JG8q-dTtqdqrWguayA,4175
+purplship/mappers/ups_package/proxy.py,sha256=YDEobLVLGe_Wx8_18owChHkpx9Fv1nMym3w3Fn4bzuM,2978
+purplship/mappers/ups_package/settings.py,sha256=y_xmIrGXbRn8bMrBTWVVvi6Q-pwoEPvyYKrAWqxwY0U,464
+purplship.ups_package-2021.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+purplship.ups_package-2021.1.dist-info/METADATA,sha256=-ppRilT0DwxxHRiAGT_vcyxYpBy0E-RiGgXDAtU4juY,1427
+purplship.ups_package-2021.1.dist-info/RECORD,,
