@@ -1,0 +1,15 @@
+dist: focal
+os: linux
+language: python
+cache:
+    directories:
+        - $HOME/.cache/pip
+        - $HOME/tests/data
+python:
+    - "3.8"
+install:
+    - pip install -r requirements.txt
+    - pip install -v pytest pytest-cov pytest-datadir-mgr
+script:
+    - pytest --cov=gffpandas -s
+
