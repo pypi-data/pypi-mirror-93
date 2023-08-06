@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: encpng
+Version: 0.2a0
+Summary: A steganographic library to encrypt files and text in PNG images
+Home-page: https://github.com/tadaka9/encpng
+Author: tadaka9
+Author-email: trapdoorfunction@gmail.com
+License: UNKNOWN
+Keywords: steganography,cryptography,images
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+Requires-Dist: Pillow
+Requires-Dist: filetype
+Requires-Dist: py-cpuinfo
+Requires-Dist: pybase64
+Requires-Dist: pycryptodomex
+
+# EncPNG
+
+A steganographic library to encrypt files and text in PNG images using CSPRNG random generated pixel colors, shuffled charset for pybase64, and AES-256 with tag (anti-tamper support, and with Intel-NI support on Intel processors) to encrypt or decrypt data (full UTF-8 support).
+
+
+## USING LIBRARY ENCPNG
+
+```python
+from encpng import EncPNG
+enc = EncPNG("Ko n ni chi ka!", "Password ][!")
+# Image passed as bytes
+img = enc.encrypt()
+result = enc.decrypt(img)
+```
+
+```python
+from encpng import EncPNG
+enc = EncPNG("Ko n ni chi ka!", "Password ][!", "/path/to/out")
+enc.encrypt()
+enc.decrypt("08a30930-ecdf-4f6a-9978-c274093d63e1.png", "Password ][!", "/path/to/file")
+```
+
+
