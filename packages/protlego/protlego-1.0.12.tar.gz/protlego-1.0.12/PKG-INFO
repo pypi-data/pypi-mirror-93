@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: protlego
+Version: 1.0.12
+Summary: A python package for the automated construction of chimeras and analysis
+Home-page: https://github.com/Hoecker-Lab/protlego
+Author: Noelia Ferruz
+Author-email: noelia.feruz@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/Hoecker-Lab/protlego/archive/1.0.10.tar.gz
+Description: UNKNOWN
+Keywords: PROTEIN DESIGN,CHIMERAGENESIS,PROTEIN EVOLUTION,NETWORK THEORY,FUZZLE
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
