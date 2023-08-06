@@ -1,0 +1,10 @@
+README.md
+setup.py
+mandrill-stubs/__init__.py
+mandrill-stubs/__init__.pyi
+mandrill_stubs.egg-info/PKG-INFO
+mandrill_stubs.egg-info/SOURCES.txt
+mandrill_stubs.egg-info/dependency_links.txt
+mandrill_stubs.egg-info/not-zip-safe
+mandrill_stubs.egg-info/requires.txt
+mandrill_stubs.egg-info/top_level.txt
