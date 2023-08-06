@@ -1,0 +1,15 @@
+pyqt5
+matplotlib
+numpy
+scipy
+pandas
+scikit-learn
+seaborn
+scikit-image
+hdbscan
+svgpathtools
+setuptools
+spectral
+beautifulsoup4
+imageio
+pyyaml
