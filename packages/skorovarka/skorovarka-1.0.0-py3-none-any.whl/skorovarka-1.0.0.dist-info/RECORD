@@ -1,0 +1,12 @@
+skorovarka/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skorovarka/main.py,sha256=AU53y1fhTsYJnBihKM6sKFhzj663M9vIUn8mgjNLwYc,1317
+skorovarka/parse_yaml.py,sha256=fEnQIY2nATdIx5dvsZ1XE-eL04l0fVzDKEiTTeN_-7Y,208
+skorovarka/process.py,sha256=C7-CtG9s2l1Ofnn3ptmG9HVBH389ZDo6KgsT_nz-Ptw,10493
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_dir_processor.py,sha256=ITBCUXF96ujSAu_kZgPgB3ly0l4zHpJpPoPpkHiWzTg,1002
+tests/test_patterns.py,sha256=NiYKJPFuL4xIJsBzeTfFZKf3DOJxwYRBwTPEEA6TCqY,888
+skorovarka-1.0.0.dist-info/METADATA,sha256=JkmUFXJudpcFsj9ioYFuc8RosnnHkaFyQXEcQuxB4WU,2419
+skorovarka-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+skorovarka-1.0.0.dist-info/entry_points.txt,sha256=1yLvxtwIABE-QEtybdxtkG4AZK6OY5CdjFjKZEBzpC4,47
+skorovarka-1.0.0.dist-info/top_level.txt,sha256=a5T-4Y7z9kXiVdohh22fM5yKFq9pYFpJZJliH9nykr4,17
+skorovarka-1.0.0.dist-info/RECORD,,

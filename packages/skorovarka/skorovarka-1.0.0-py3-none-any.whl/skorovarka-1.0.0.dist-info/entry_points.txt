@@ -1,0 +1,3 @@
+[console_scripts]
+skvk = skorovarka.main:main
+
