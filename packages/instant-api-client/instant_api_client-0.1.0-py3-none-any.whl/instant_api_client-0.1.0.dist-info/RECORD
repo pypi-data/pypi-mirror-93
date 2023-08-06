@@ -1,0 +1,8 @@
+apiclient/__init__.py,sha256=xwZKKnsZAKFqdNhtSHAkrb8eUgLHd3rq-qm__UGOrYY,43
+apiclient/core.py,sha256=Vuh1wspLuuYi_NWE3-z-tDIPOMIDPFQmEz3ZA5W4BLI,3611
+apiclient/methods.py,sha256=1EzafCgtF9rwuf6nwOWxl5gFSIFlyKyM-s1bxUf3CYs,3126
+instant_api_client-0.1.0.dist-info/LICENSE,sha256=rrLmUTuXUJkRYQDbbdgOT5AfWv1J80Pr39CNAEmJR9Y,1065
+instant_api_client-0.1.0.dist-info/METADATA,sha256=P66JADyG-gHEbKQUr4WRhyXpjnlXby_fhKq7bUzttnY,1923
+instant_api_client-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+instant_api_client-0.1.0.dist-info/top_level.txt,sha256=CNL4yr8OrNw2YMoKsuFme2txKhQ3YQC61464soKjmNk,10
+instant_api_client-0.1.0.dist-info/RECORD,,
