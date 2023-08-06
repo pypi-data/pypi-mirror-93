@@ -1,0 +1,9 @@
+StyleTransferTensorFlow/__init__.py,sha256=q5yZgJv7-kY2Zk43WTZIBjC2O7jyqdeTLsc-l3UFsYA,222
+StyleTransferTensorFlow/convert.py,sha256=DeuDMACZ3pnJm5hJqDTlx65ClFd6dZUJipEwvQJLI6U,1341
+StyleTransferTensorFlow/extract.py,sha256=QlvkUSZvUbQOcXVethD0fgaPXUJhhk0wXBuLKjxNsZA,806
+StyleTransferTensorFlow/style.py,sha256=_nb1Uexu_8WOuBSGZjCvx5hMZLvwt5HjPhsE84FzW7c,1432
+StyleTransferTensorFlow-0.0.9.dist-info/LICENSE.txt,sha256=Z_R0qA8dBa_UBMGgM1fEedm0wV7CBqwIBaBEOu4iT5w,1077
+StyleTransferTensorFlow-0.0.9.dist-info/METADATA,sha256=S6gJCH7vrwAU09dak0qMvNRsmqNJ9wQzmqLQPisU93k,592
+StyleTransferTensorFlow-0.0.9.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+StyleTransferTensorFlow-0.0.9.dist-info/top_level.txt,sha256=_sD9wl0cHf-YlvHB0k3gbuJQTg5rix6nbrvLYVfcg6k,24
+StyleTransferTensorFlow-0.0.9.dist-info/RECORD,,
