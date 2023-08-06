@@ -1,0 +1,11 @@
+setup.py
+qvmcli/__init__.py
+qvmcli/describe_instances.py
+qvmcli/run_instances.py
+qvmcli/terminate_instances.py
+qvmcli.egg-info/PKG-INFO
+qvmcli.egg-info/SOURCES.txt
+qvmcli.egg-info/dependency_links.txt
+qvmcli.egg-info/entry_points.txt
+qvmcli.egg-info/requires.txt
+qvmcli.egg-info/top_level.txt

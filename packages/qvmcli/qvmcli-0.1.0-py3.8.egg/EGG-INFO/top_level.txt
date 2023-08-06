@@ -1,0 +1,4 @@
+describe_instances
+qvmcli
+run_instances
+terminate_instances

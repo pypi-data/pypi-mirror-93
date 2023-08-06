@@ -1,0 +1,5 @@
+[console_scripts]
+qvmcreate = qvmcli.run_instances:run_instances
+qvmdel = qvmcli.terminate_instances:terminate_instances
+qvminfo = qvmcli.describe_instances:describe_instances
+
