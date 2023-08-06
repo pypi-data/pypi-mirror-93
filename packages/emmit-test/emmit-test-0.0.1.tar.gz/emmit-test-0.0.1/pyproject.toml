@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "emmit-test"
+version = "0.0.1"
+
+packages = [
+    { include = "namespace_test" }
+]
+
+description = "test"
+authors = []
+
+[tool.poetry.dependencies]
+pandas = { version="1.0.5", optional = true }
+dnspython = { version="1.16", optional = true }
+
+[tool.poetry.extras]
+pandas = ["pandas"]
+dns = ["dnspython"]
