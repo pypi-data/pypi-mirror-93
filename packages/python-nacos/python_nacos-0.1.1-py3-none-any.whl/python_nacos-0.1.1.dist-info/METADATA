@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: python-nacos
+Version: 0.1.1
+Summary: Python3 client for Nacos.
+Home-page: https://github.com/sunglowrise/python-nacos/
+Maintainer: Murray
+Maintainer-email: sunglowrise@qq.com
+License: MIT
+Download-URL: https://github.com/sunglowrise/python-nacos/
+Keywords: nacos,python-nacos,pynacos,pynacos-sdk
+Platform: Platform Independent
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content :: CGI Tools/Libraries
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.22.0)
+
+# python-nacos
+### 声明
+> 参考nacos-sdk-python项目改造
+>
+> https://github.com/nacos-group/nacos-sdk-python
+
+### Usage
+```python
+from nacos import NacosUsage
+
+SERVER_ADDRESSES = "127.0.0.1:8848"
+NAMESPACE = "44b27ac4-60c1-43e7-8ac3-ed34108ca1aa"
+
+params = {
+    "servers": SERVER_ADDRESSES,
+    "namespace": NAMESPACE,
+    "service_name": "test.service",
+    # "ip": "127.0.0.1",
+    "port": 8080,
+    "cluster_name": "testCluster",
+    "weight": 1.0,
+    "metadata": {},
+    "enable": True,
+    "healthy": True,
+    "ephemeral": True,
+}
+
+usage = NacosUsage(debug=False, daemon=False, **params)
+
+# 获取配置
+conf = usage.get_config(data_id="test")
+print("config: {}".format(conf))
+
+# 注册实例
+usage.register_instance()
+```
+
+
