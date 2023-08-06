@@ -1,0 +1,11 @@
+README.rst
+setup.py
+sc_config.egg-info/PKG-INFO
+sc_config.egg-info/SOURCES.txt
+sc_config.egg-info/dependency_links.txt
+sc_config.egg-info/requires.txt
+sc_config.egg-info/top_level.txt
+scconfig/__init__.py
+scconfig/config.py
+tests/__init__.py
+tests/test_config.py
