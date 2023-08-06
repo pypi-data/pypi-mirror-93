@@ -1,0 +1,4 @@
+
+            [console_scripts]
+            costsekondi=costsekondi.__main__:main
+        
