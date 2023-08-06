@@ -1,0 +1,12 @@
+txt_process/__init__.py,sha256=pK-Jn9NYBZBTKYqlk3gU1JIGEkLu8wcWwczjB-0G8ZM,172
+txt_process/debug.py,sha256=azlDvpSZk43EEWTR4uWtNDU2tXw3zirPRnwVAnLJ0sw,379
+txt_process/format_file.py,sha256=KDIdVvMuK8PUe6IfrXv8Gx7YU3oy-QlvLfVJeAkdL8Y,2000
+txt_process/read_file.py,sha256=-CDzBqhgvpUGjPrvVgGPdWAEGheOxBnzVvIrL5S6yM8,1399
+txt_process/split_file.py,sha256=murK1P9_6PyAdLdxUM2Mhv1UQl6HiXI_EwZkfZiRLXU,1253
+txt_process/my_unittest/__init__.py,sha256=oipKJseBeVUxvgSRmBBZJbNvyfrIs0Y7C6ISc8QqmYw,161
+txt_process/my_unittest/test_read_file.py,sha256=1z-A_lIxJ6sagGz-z8czBugPKg5OXCB7OILe0Hun5es,865
+worktools-0.0.2.dist-info/LICENSE,sha256=rQSu91HgnVxF9Qhe7MVNoA7-WOo7Ir3v5bZlOQx0bcU,1060
+worktools-0.0.2.dist-info/METADATA,sha256=qjoXXKtxeA1plxHFTzRkmnoa0EZiQui-sbqUiLQl5ns,496
+worktools-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+worktools-0.0.2.dist-info/top_level.txt,sha256=sEEjI5BcSbN_LWZMlDZbQSv_H36BZjIxkpTq7sAK09I,12
+worktools-0.0.2.dist-info/RECORD,,

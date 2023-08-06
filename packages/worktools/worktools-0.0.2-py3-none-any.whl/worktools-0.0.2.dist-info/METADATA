@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: worktools
+Version: 0.0.2
+Summary: Some common tools for the convenience of work and study
+Home-page: https://github.com/cxz13797090526/MyTools/tree/feature
+Author: Cheng Xiaozhao
+Author-email: 867616144@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# MyTools
+Common tool functions
+
+
