@@ -1,0 +1,8 @@
+whooper/__init__.py,sha256=P7ANp0CKTSeukGyTaW1hxe93qTgg0P6GmB4qc8SZ_xY,491
+whooper/_boto.py,sha256=sTMuqGvGVdO1cQ4yQNFyFCUgMnaFmy7NCrHi7fLpEr4,1937
+whooper/_redshift.py,sha256=I8lvAND05OSawhlhgVeXn51X4Mw7sUUVpKwVBipGVXM,6181
+whooper/_s3.py,sha256=7HhMlQiLda9-BuS6rfJQuDAOWHP99piQS-SeV2JFXI8,13424
+whooper-0.0.0.dist-info/LICENSE,sha256=ieEKJ-VczfHpbzAARBk5cBwN-Qfu4_jjKLNpnH1JyAg,9161
+whooper-0.0.0.dist-info/WHEEL,sha256=CqyTrkghQBNsEzLD3HbCSEIJ_fY58-XpoU29dUzwHSk,81
+whooper-0.0.0.dist-info/METADATA,sha256=gJV3zVx3aFTU9Yyke49y_tCpmimWPjLww8nH4xlVGkQ,12434
+whooper-0.0.0.dist-info/RECORD,,
