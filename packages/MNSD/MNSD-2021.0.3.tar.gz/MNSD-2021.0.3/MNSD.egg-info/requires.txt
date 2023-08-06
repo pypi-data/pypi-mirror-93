@@ -1,0 +1,14 @@
+matplotlib
+pytube
+pyyaml
+PrtSc
+OS_Platform
+psutil
+batterycharge
+opencv-python
+pyjokes
+requests
+flask
+pyautogui
+pypiwin32
+rotate-screen
