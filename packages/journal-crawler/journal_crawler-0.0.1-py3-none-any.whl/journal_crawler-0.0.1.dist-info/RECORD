@@ -1,0 +1,11 @@
+journal_crawler/__init__.py,sha256=Q3vs0at9ZBLUXJDYC1DXMx-KZCDxLuSTmAfXSYv7lek,245
+journal_crawler/const.py,sha256=s8QpZNk9TpyJr2tbKwtRytbTon2zrZuHvQQ6o68J5b0,238
+journal_crawler/journals/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+journal_crawler/journals/international_press_crawler.py,sha256=WG_oNMrBFfU_4KYuHL7B0L3qJOXBagoCk7E7lOtjR5g,5867
+journal_crawler/journals/journal_of_singularities_crawler.py,sha256=LZbjC2vtHYz6VhKlND4Jra0lT5STRAGZ91azuH5a-o4,3001
+journal_crawler/main.py,sha256=6FxnLTETzdCNT9Kl-kfhCnDjBa2PHQEGJ93ynZTT6Cc,966
+journal_crawler/utils.py,sha256=VT72eXlLYv1Q1uX-It_sWjaR35ReEE_ZaRwM4oiUMyM,598
+journal_crawler-0.0.1.dist-info/LICENSE,sha256=tT76e0atDka9tSC8WsXYrMdQUe6WhJaoStO4IBfzIzk,11092
+journal_crawler-0.0.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+journal_crawler-0.0.1.dist-info/METADATA,sha256=ox-a5jIIcUl7tQ7sp0qwM3gYkM6UOCe1S_adD8WtpuY,949
+journal_crawler-0.0.1.dist-info/RECORD,,
