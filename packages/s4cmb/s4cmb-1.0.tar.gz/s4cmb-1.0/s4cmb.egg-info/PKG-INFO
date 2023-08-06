@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: s4cmb
+Version: 1.0
+Summary: Simulate systematic effects in the context of CMB
+Home-page: https://github.com/JulienPeloton/s4cmb
+Author: Julien Peloton, Giulio Fabbian
+Author-email: peloton@lal.in2p3.fr
+License: GPL-3.0
+Download-URL: https://github.com/JulienPeloton/s4cmb/archive/1.0.tar.gz
+Description: UNKNOWN
+Platform: any
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Astronomy
