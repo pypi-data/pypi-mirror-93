@@ -1,0 +1,6 @@
+setup.py
+VersionControl/__init__.py
+VersionControl.egg-info/PKG-INFO
+VersionControl.egg-info/SOURCES.txt
+VersionControl.egg-info/dependency_links.txt
+VersionControl.egg-info/top_level.txt
