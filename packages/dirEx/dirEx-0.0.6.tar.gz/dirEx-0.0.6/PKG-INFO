@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: dirEx
+Version: 0.0.6
+Summary: An extension to the built-in function dir()
+Home-page: https://github.com/floydawong/dirEx.git
+Author: Floyda
+Author-email: floyda@163.com
+License: MIT
+Description: # DirEx
+        > An extension to the built-in function dir() for Python  
+        
+        
+        ## APIs
+        - show_dir_info
+        - show_dir_method
+        - show_dir_module
+        
+        
+        ## Install
+        `pip install direx`
+        
+        
+        ## Example
+        ```Python
+        from direx import show_dir_info, show_dir_method, show_dir_module
+        
+        import os
+        
+        show_dir_module(os)
+        show_dir_method(os)
+        show_dir_info()
+        ```
+        
+Keywords: dir extend built-in
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
