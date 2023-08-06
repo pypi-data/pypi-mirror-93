@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: hatter
+Version: 0.0.1
+Summary: Framework to easily create microservices backed by a RabbitMQ broker
+Home-page: UNKNOWN
+Author: Austin Howard
+Author-email: austin@tangibleintelligence.com
+License: UNKNOWN
+Platform: UNKNOWN
+
+# hatter
+Framework to easily create microservices backed by a RabbitMQ broker
+
+
