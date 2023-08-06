@@ -1,0 +1,8 @@
+README.rst
+setup.py
+aiozaneapi/__init__.py
+aiozaneapi.egg-info/PKG-INFO
+aiozaneapi.egg-info/SOURCES.txt
+aiozaneapi.egg-info/dependency_links.txt
+aiozaneapi.egg-info/not-zip-safe
+aiozaneapi.egg-info/top_level.txt
