@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+clustergram/__init__.py
+clustergram/_version.py
+clustergram/clustergram.py
+clustergram/test_clustergram.py
+clustergram.egg-info/PKG-INFO
+clustergram.egg-info/SOURCES.txt
+clustergram.egg-info/dependency_links.txt
+clustergram.egg-info/requires.txt
+clustergram.egg-info/top_level.txt
