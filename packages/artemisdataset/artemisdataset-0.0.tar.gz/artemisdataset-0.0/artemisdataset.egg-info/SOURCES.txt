@@ -1,0 +1,6 @@
+setup.py
+artemisdataset.egg-info/PKG-INFO
+artemisdataset.egg-info/SOURCES.txt
+artemisdataset.egg-info/dependency_links.txt
+artemisdataset.egg-info/not-zip-safe
+artemisdataset.egg-info/top_level.txt
