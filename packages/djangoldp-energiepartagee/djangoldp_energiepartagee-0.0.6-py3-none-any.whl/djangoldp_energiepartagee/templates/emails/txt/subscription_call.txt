@@ -1,0 +1,9 @@
+Appel à cotisation
+
+Hello {{user.name}} !
+
+Energie partagée lance son appel à cotisation, voici le lien pour accèder à votre facture !
+
+Excellente journée !
+
+L'équipe Energie-Partagée,
