@@ -1,0 +1,14 @@
+pretix_capacity_reports/__init__.py,sha256=10qAXZycWEi2O0lVP6abLnPbPP_NwjgXIrtsYC19wsI,757
+pretix_capacity_reports/exporter.py,sha256=EZoqF5zL8EinU8sMp_Tn-zO1dlrN65xlrHBv4RKB4Vc,27724
+pretix_capacity_reports/signals.py,sha256=fnRd0H_-dUmpNGr6lp9awp-TZvx4VzmjhsW5A-UnlVc,679
+pretix_capacity_reports/locale/de/LC_MESSAGES/django.po,sha256=id2KCI-qsYlJ20GXAOw9s_VqkNbBqpH6X2nXbyR9aVU,311
+pretix_capacity_reports/locale/de_Informal/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pretix_capacity_reports/locale/de_Informal/LC_MESSAGES/django.po,sha256=id2KCI-qsYlJ20GXAOw9s_VqkNbBqpH6X2nXbyR9aVU,311
+pretix_capacity_reports/static/pretix_capacity_reports/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pretix_capacity_reports/templates/pretix_capacity_reports/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pretix_capacity_reports-1.0.0.dist-info/LICENSE,sha256=ePtOJa7la9hsiGwtnEUYLW55jfVSRM7qjkrREvqsaPQ,554
+pretix_capacity_reports-1.0.0.dist-info/METADATA,sha256=NpxHIxH98iF-6931wPq_x1V-MQS7KVVWrPIJ3DSOa5E,1649
+pretix_capacity_reports-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pretix_capacity_reports-1.0.0.dist-info/entry_points.txt,sha256=sZBrW98w63Rz4FPe-YUQ_b_FJHgnXXH3Y_a7sseCFlA,82
+pretix_capacity_reports-1.0.0.dist-info/top_level.txt,sha256=0Ywn8k-4A9vXbZ_o_RJeUUFi_1qZO8P32HQ5xy3Xt3Q,24
+pretix_capacity_reports-1.0.0.dist-info/RECORD,,
