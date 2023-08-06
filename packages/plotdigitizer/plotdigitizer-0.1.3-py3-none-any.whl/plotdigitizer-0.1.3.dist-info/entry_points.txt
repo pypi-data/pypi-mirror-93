@@ -1,0 +1,4 @@
+[console_scripts]
+plotdigitizer=plotdigitizer.plotdigitizer:main
+plotdigitizer-locate=plotdigitizer.locate:main
+
