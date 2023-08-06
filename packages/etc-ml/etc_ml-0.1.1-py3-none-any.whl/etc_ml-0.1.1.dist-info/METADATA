@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: etc-ml
+Version: 0.1.1
+Summary: etc project
+Home-page: https://github.com/UFMG-Database-lab/etc
+Author: Vitor MangaraviteCecilia Nascimento
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: Click (==7.0)
+Requires-Dist: tqdm
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: keras
+Requires-Dist: tensorflow
+Requires-Dist: fasttext
+Requires-Dist: numpy
+Requires-Dist: hyperopt
+Requires-Dist: nltk
+Requires-Dist: segtok
+Requires-Dist: networkx
+Requires-Dist: torchvision
+Requires-Dist: torch
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
