@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: linearlr
+Version: 0.0.1
+Summary: Tuning-free learning rate schedule for training deep neural networks
+Home-page: https://github.com/mtli/linearlr
+Author: Mengtian (Martin) Li
+Author-email: martinli.work@gmail.com
+License: MIT
+Keywords: deep learning linear rate schedule
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+
+See project page: https://github.com/mtli/linearlr
+
+
