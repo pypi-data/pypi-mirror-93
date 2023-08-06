@@ -1,0 +1,14 @@
+scipy==1.4.1
+arch
+mgarch_setup_fix
+pyts
+scikit-learn
+statsmodels
+pandas-ml-common==0.2.0
+
+[dev]
+TA-Lib
+ipykernel
+jupyter_client
+matplotlib
+nbconvert
