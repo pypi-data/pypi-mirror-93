@@ -1,0 +1,3 @@
+[console_scripts]
+kmailbox = kmailbox:_main
+
