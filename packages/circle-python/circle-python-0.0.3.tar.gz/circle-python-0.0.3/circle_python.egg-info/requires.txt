@@ -1,0 +1,8 @@
+requests
+
+[dev]
+black
+bumpversion
+tox
+coverage
+twine
