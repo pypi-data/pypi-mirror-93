@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: openglass
+Version: 0.2.0
+Summary: 
+Author: Hiro
+Author-email: hiro@torproject.org
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Telethon (>=1.17.5,<2.0.0)
+Requires-Dist: six (>=1.15.0,<2.0.0)
+Requires-Dist: tweepy (>=3.9.0,<4.0.0)

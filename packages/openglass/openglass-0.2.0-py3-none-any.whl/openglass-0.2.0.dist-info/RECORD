@@ -1,0 +1,10 @@
+openglass/__init__.py,sha256=qvqjM0TpE9IcjyY0khDg48iD62aXmoL9xJc1ng9XyCk,7685
+openglass/settings.py,sha256=aet0uA7SrgO_nicJ9zqckTU383GF6xTqtu5CMQzCkoQ,2642
+openglass/telegram.py,sha256=x-9Zy0J9fJvxvkr-Bi0AMJi2Jz2vSTuITNZ2OAMw2bU,4867
+openglass/twitter.py,sha256=IAEly95BWh1twlPOAc3Rnd4IcPfvCL-jawZTPOhooL0,2277
+openglass/utility.py,sha256=jBipARbTtwW_MsEJrL3lQjcgNLXUy8vqVMVwjV3pe3E,4657
+openglass-0.2.0.dist-info/entry_points.txt,sha256=2XzLUCSRRmg4kz9WwnoAsANTBaxPebmNSa6WcM2kKPw,44
+openglass-0.2.0.dist-info/LICENSE,sha256=5lc5JAM-8lL6NtNVCtLrqG3zGqRWsR8OuH6iKlhnMp8,35279
+openglass-0.2.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+openglass-0.2.0.dist-info/METADATA,sha256=ikq_QaLUzvZyR5E4bBk1ofyjtTCjZp2ciZTSyM7nZGw,404
+openglass-0.2.0.dist-info/RECORD,,
