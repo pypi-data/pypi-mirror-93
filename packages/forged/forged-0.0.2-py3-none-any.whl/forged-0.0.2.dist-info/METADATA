@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: forged
+Version: 0.0.2
+Summary: Tools for data generation
+Home-page: https://github.com/otosense/forged
+Author: OtoSense
+License: apache-2.0
+Keywords: data generation,synthetic data,feature vectors
+Platform: any
+Description-Content-Type: text/markdown
+Requires-Dist: scikit-learn
+Requires-Dist: numpy
+
+
+# forged
+Tools for data generation
+
+
+To install:	```pip install forged```
+
+
