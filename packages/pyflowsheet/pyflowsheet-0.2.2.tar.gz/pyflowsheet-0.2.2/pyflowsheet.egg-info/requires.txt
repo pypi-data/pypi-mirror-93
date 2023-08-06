@@ -1,0 +1,5 @@
+svgwrite>=1.4
+pathfinding>=1.0.1
+
+[plots]
+matplotlib
