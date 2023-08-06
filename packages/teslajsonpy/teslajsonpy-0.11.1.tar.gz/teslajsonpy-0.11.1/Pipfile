@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "*"
+detox = "*"
+mypy = "*"
+pydocstyle = "*"
+pylint = "*"
+pytest = "*"
+pytest-asyncio = "*"
+pytest-cov = "*"
+tox = "*"
+tox-pipenv = "*"
+twine = "*"
+python-semantic-release = "*"
+black = "*"
+
+[packages]
+aiohttp = "*"
+backoff = "*"
+bs4 = "*"
+wrapt = "*"
+
+[pipenv]
+allow_prereleases = true
