@@ -1,0 +1,12 @@
+cospar/__init__.py,sha256=c-6sVtUNbmswn_ObP4MqotuhQ8NGbn32EPO_7Xn1BLs,317
+cospar/datasets.py,sha256=E1a5hIkzWFslGhgY2ujguOCB_8StfScrhHq86iKIK38,8267
+cospar/hf.py,sha256=vv9k35B90_-B_TILKuHXLEYgFj_K9UdG1s-nu7bZsd0,36
+cospar/logging.py,sha256=vKft6nje04vCqn7sb0Ky4oLnE0Nh3POFCq0pb-yBA1k,8188
+cospar/pl.py,sha256=1Rln8PHoTkK0w7QYn1Xht_mzXHytEyFyBpvwoRcyUsw,30
+cospar/pp.py,sha256=X4Dr7w_rUkZV6pZGzKRxYmUcEsCQzqPi61GwY4T8pYY,35
+cospar/settings.py,sha256=5qzP2i-8Jz_rqiB30092MWG8495rvNPmCR_Xp9FyUDA,6998
+cospar-0.0.2.dist-info/LICENSE,sha256=KYRMv1rd92vQJQ4EK1mCjIg1VcPA3AYLy3eD-O8tg2s,1079
+cospar-0.0.2.dist-info/METADATA,sha256=NuUTtp4vgYPfbfrq7gsrhSsRAa_FFYtLvf9H7Z3d5tg,3544
+cospar-0.0.2.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+cospar-0.0.2.dist-info/top_level.txt,sha256=WA1NsC05dV3ltJu-DncBIMJHBWV5yKLx4WsS1xxkU7Y,7
+cospar-0.0.2.dist-info/RECORD,,
