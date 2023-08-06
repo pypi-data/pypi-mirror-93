@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-27 15:22+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: apps.py:7
+msgid "Capitalist"
+msgstr ""
+
+#: models.py:9
+msgid "ISO code"
+msgstr ""
+
+#: models.py:12 models.py:30
+msgid "currency"
+msgstr ""
+
+#: models.py:13
+msgid "currencies"
+msgstr ""
+
+#: models.py:26
+msgid "unique number"
+msgstr ""
+
+#: models.py:27
+msgid "name"
+msgstr ""
+
+#: models.py:28
+msgid "balance"
+msgstr ""
+
+#: models.py:29
+msgid "blocked amount"
+msgstr ""
+
+#: models.py:33
+msgid "account"
+msgstr ""
+
+#: models.py:34
+msgid "accounts"
+msgstr ""
+
+#: models.py:41
+msgid "batch ID"
+msgstr ""
+
+#: models.py:42 models.py:77
+msgid "created at"
+msgstr ""
+
+#: models.py:43 models.py:78
+msgid "updated at"
+msgstr ""
+
+#: models.py:51 models.py:73
+msgid "batch"
+msgstr ""
+
+#: models.py:52
+msgid "batches"
+msgstr ""
+
+#: models.py:66
+msgid "New"
+msgstr ""
+
+#: models.py:67
+msgid "Ready"
+msgstr ""
+
+#: models.py:68
+msgid "In process"
+msgstr ""
+
+#: models.py:69
+msgid "Declined"
+msgstr ""
+
+#: models.py:70
+msgid "Processed"
+msgstr ""
+
+#: models.py:74
+msgid "status"
+msgstr ""
+
+#: models.py:75
+msgid "record data (CSV)"
+msgstr ""
+
+#: models.py:76
+msgid "internal ID"
+msgstr ""
+
+#: models.py:86
+msgid "batch record"
+msgstr ""
+
+#: models.py:87
+msgid "batch records"
+msgstr ""
+
+#: validators.py:8
+msgid "Invalid Capitalist account number."
+msgstr "Некорректный номер счёта Capitalist."
