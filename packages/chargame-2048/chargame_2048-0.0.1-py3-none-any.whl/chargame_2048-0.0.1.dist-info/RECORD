@@ -1,0 +1,14 @@
+chargame_2048/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chargame_2048/logic.py,sha256=KkqdBY6djkwGS3KjDjM5ZyN2umyfe0_cTeYpRLXP0i8,3219
+chargame_2048/main.py,sha256=vX7s1RVv81dWPdCuFZnzyIcZUN6Mn4zyOu7W7icOr5g,2123
+chargame_2048/render.py,sha256=aaY2J8MJ-r67rHDVvq7zG1UIvLILKtMKz6nftxSpjA4,2290
+chargame_2048/util.py,sha256=pHJAXxHXIooKVktAmxasn6fyTG61Bwu15tJh0GqxVWE,866
+util/__init__.py,sha256=eI4qFXh3O9FMKOHuRux1bKvsZCEsbldW1ZPucAvkKQs,98
+util/dict_wrapper.py,sha256=8skOTNUwprIrwBlV1Wt3jTXMhg-l6k7hEt88mrKbUt8,262
+util/resolve_argv.py,sha256=gSHgUiv0AJJZq8VUC-rfeeHwZ2sdCQw8Vl4WhrR1KQo,415
+chargame_2048-0.0.1.dist-info/LICENSE.txt,sha256=ohtI-7fqYAfqfI7x2weTObae-D1sSUYSkkk7sokJ2BM,1057
+chargame_2048-0.0.1.dist-info/METADATA,sha256=p0ez46IWRmDa5eV2psJ5Rplvoi-uNBv_rAFp6DqfkhM,436
+chargame_2048-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+chargame_2048-0.0.1.dist-info/entry_points.txt,sha256=Xn2JuKRJQrjKIq6zkXZmjUoHbbO5P2QVh6v23qPAF2I,45
+chargame_2048-0.0.1.dist-info/top_level.txt,sha256=7TtwHjAWScuXzxUsj8EXz7zWQ89vLnBsrYmaU6lwWRA,19
+chargame_2048-0.0.1.dist-info/RECORD,,
