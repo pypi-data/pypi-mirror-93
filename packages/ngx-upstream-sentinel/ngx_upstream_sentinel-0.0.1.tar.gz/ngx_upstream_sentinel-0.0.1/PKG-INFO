@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: ngx-upstream-sentinel
+Version: 0.0.1
+Summary: Smart Sentinel for Upstreams to nginx
+License: MIT
+Author: Rodrigo Pinheiro Matias
+Author-email: rodrigopmatias@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
