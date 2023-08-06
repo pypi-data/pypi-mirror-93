@@ -1,0 +1,7 @@
+black
+click
+python-dateutil
+tqdm
+
+[dev]
+wheel
