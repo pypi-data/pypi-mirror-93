@@ -1,0 +1,21 @@
+from pyarma import *
+
+m = mat(2,3,fill_randu)
+m.print()
+cumsum(m).print()
+cumsum(m,1).print()
+cumsum(cumsum(m)).print()
+m.print()
+cumprod(m).print()
+cumprod(m,1).print()
+cumprod(cumprod(m)).print()
+
+n = mat(1,3,fill_randu)
+n.print()
+cumsum(n).print()
+cumsum(n,1).print()
+cumsum(cumsum(n)).print()
+n.print()
+cumprod(n).print()
+cumprod(n,1).print()
+cumprod(cumprod(m)).print()

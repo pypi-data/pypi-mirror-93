@@ -1,0 +1,11 @@
+include *
+graft doc
+graft include
+graft ext
+graft src
+graft test
+graft CMake
+exclude .travis.yml
+exclude .gitignore
+exclude build.sh
+exclude .git
