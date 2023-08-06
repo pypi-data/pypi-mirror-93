@@ -1,0 +1,11 @@
+ezodbc/__init__.py,sha256=aAzhp6TNaE0cLMuS_5SDwokwemr3s47UxhEkzBW15Mk,51
+ezodbc/__version__.py,sha256=9USGspvff1eHHygJayt5U96FckvHgJmoFFrpYlXwnZc,64
+ezodbc/core.py,sha256=j4WdwnI8lrNKIFluHEKj1OcGsVlhJ59IWGZJ7LFdzjI,3546
+ezodbc/profiles.py,sha256=lTEqYF1AXs_5WCiMR9QL1BIwbH3xpM0TA-50euar9cM,2527
+ezodbc/test.py,sha256=vZgxifHaLDdVrqFqyDgkgacQFy7BqyvANBhmWJsUCvY,875
+ezodbc/ui.py,sha256=xJRrj0OonqOR7N_h__0dAeoh_IQJ5TJeMvxAAuI9Xr8,5864
+ezodbc-0.2.3.dist-info/LICENSE,sha256=l4xd6KivwmVHFKhsd2ICHjSwDL0pSqrUwtaMfvXx4QE,1550
+ezodbc-0.2.3.dist-info/METADATA,sha256=Fd69p3Nq1PBqT-Oxxc4AjLyTkBofQ6TlstXvVKctAT0,8529
+ezodbc-0.2.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ezodbc-0.2.3.dist-info/top_level.txt,sha256=75WcFQoH6WsElCTzO3ve1msbGtsfzhBS5Vp_qsq67Ps,7
+ezodbc-0.2.3.dist-info/RECORD,,
