@@ -1,0 +1,16 @@
+uqoclient/Problem.py,sha256=34oOylzdECzN3WcFGQW8yaSKGry6VkQdqDwHM3ecrfw,7227
+uqoclient/Response.py,sha256=bL1sXspgfVkALsvXPqMjMdj3UsOaBE5TgP86zFViiDY,2800
+uqoclient/UQOExceptions.py,sha256=wWokrEmx335Aw1TE2biZewkAJOLPrY01qqDCYYHeCLM,4414
+uqoclient/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uqoclient/client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uqoclient/client/config.py,sha256=25jguVDkNIqC6EeQVJoMjZkAgM9BsFGW65oPxLGvEaI,2124
+uqoclient/client/connection.py,sha256=goHbbmsD8s5PdnjLdUJI5QFz6pbOPOe5AyEYwbsK38g,16922
+uqoclient/examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uqoclient/examples/examples.py,sha256=11CKGqIlAI8PGerF4wPc4LhN27Ak12fBWI7rjYFj0Fg,7433
+uqoclient/examples/graph_coloring_example.py,sha256=u7x1Ayakf8UWTHGr4Xyf-C-dx19P7e8zmo_OxRk42mg,3353
+uqoclient/examples/util.py,sha256=FlRnMH4kY1uM-aBxyylwJW1DFRp-xhwVA1Ge1rFGxnk,1202
+uqoclient-1.0.1.dist-info/LICENSE,sha256=m-G3DnPkcPvyOqCuEqbas8nGusYxO-y0_4mlHjJuoRI,1064
+uqoclient-1.0.1.dist-info/METADATA,sha256=Tng3g1gJLksZAd9ed5z0mEKTm3OK9sLIt9yo2uHVm5k,1898
+uqoclient-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+uqoclient-1.0.1.dist-info/top_level.txt,sha256=0eIbGZw3phy1RfC9Q0L0UOesydufKA_yCIhXAHt5ywE,10
+uqoclient-1.0.1.dist-info/RECORD,,
