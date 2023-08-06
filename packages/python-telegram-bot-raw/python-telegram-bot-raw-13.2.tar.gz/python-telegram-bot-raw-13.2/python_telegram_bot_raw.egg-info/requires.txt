@@ -1,0 +1,8 @@
+certifi
+cryptography
+
+[json]
+ujson
+
+[socks]
+PySocks
