@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: jupyter_rtc_automerge
+Version: 0.1.1
+Summary: The Jupyter RTC Python module using Automerge backend.
+Home-page: https://github.com/jupyterlab/rtc
+Author: Jupyter RTC
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN

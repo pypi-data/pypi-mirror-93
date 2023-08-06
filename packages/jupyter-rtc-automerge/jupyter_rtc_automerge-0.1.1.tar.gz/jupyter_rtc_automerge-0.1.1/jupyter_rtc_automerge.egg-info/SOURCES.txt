@@ -1,0 +1,15 @@
+Cargo.toml
+MANIFEST.in
+pyproject.toml
+setup.py
+jupyter_rtc_automerge/__init__.py
+jupyter_rtc_automerge/test_automerge.py
+jupyter_rtc_automerge.egg-info/PKG-INFO
+jupyter_rtc_automerge.egg-info/SOURCES.txt
+jupyter_rtc_automerge.egg-info/dependency_links.txt
+jupyter_rtc_automerge.egg-info/not-zip-safe
+jupyter_rtc_automerge.egg-info/top_level.txt
+src/hashmap.rs
+src/lib.rs
+src/nbformatbackend.rs
+src/textarea.rs
