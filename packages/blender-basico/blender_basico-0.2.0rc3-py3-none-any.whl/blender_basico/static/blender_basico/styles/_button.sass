@@ -1,0 +1,67 @@
+/* BUTTONS
+ * There are simple buttons, small, big, whole lot!
+ */
+.btn
+	text-decoration: none
+
+.btn-link,
+.btn-link:hover
+	color: $primary
+
+/* BUTTON EXTERNAL */
+a.btn.external
+	border-bottom: 2px solid rgba($color-secondary, .2)
+
+a.btn.external:after
+	content: '\f08e'
+	float: right
+	font-size: 75%
+	color: rgba($color-text, .6)
+	position: absolute
+	top: 6px
+	right: 8px
+	font-family: "FontAwesome"
+/* // BUTTONS */
+
+/* Call to actions. */
+/* Main button, fully opaque and standing out */
+.cta-primary, a.cta-primary
+	+button($color-primary, white, true)
+
+/* Secondary - half-transparent */
+.cta-secondary, a.cta-secondary
+	+button(rgba($color-primary, .5), white, true)
+
+/* Text-only link next to the main button */
+.cta-tertiary, a.cta-tertiary
+	align-items: center
+	display: inline-flex
+	font-size: $font-size-small
+	padding: 10px 20px
+
+	&:hover
+		text-decoration: underline
+
+		i svg
+			fill: $color-secondary
+
+	i
+		margin-right: 5px
+
+		svg
+			fill: $color-primary
+			max-width: 12px
+			position: relative
+			top: 2px
+			width: 12px
+
+.cta-container
+	align-items: center
+	display: flex
+	justify-content: center
+
+	/* If there is a button next to it, add spacing */
+	.cta-primary+.cta-secondary,
+	.cta-secondary+.cta-secondary,
+	.cta-secondary+.cta-tertiary
+		margin-left: 15px
