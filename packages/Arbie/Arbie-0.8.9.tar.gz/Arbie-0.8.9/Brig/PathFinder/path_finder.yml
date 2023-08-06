@@ -1,0 +1,27 @@
+store:
+  address: 'redis:6379'
+
+web3:
+  address: 'http://gluteus:8545'
+
+variables:
+  weth:
+    type: Weth
+    network: mainnet
+
+action_tree:
+  event:
+    'PoolUpdater.1.pools'
+  actions:
+    PathFinder:
+      input:
+        pools: 'PoolUpdater.1.pools'
+        max_depth: 4
+        weth: weth
+      output:
+          trades: trades
+    Arbitrage:
+        input:
+            trades: trades
+        output:
+          out_trades: 'Arbitrage.1.filtered_trades'
