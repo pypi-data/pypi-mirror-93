@@ -1,0 +1,2 @@
+class VueAppNotFound(Exception):
+    pass
