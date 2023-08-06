@@ -1,0 +1,12 @@
+datemore/__init__.py,sha256=Rrjd2YBWpAqu9FAS2pSgccB2OPgpo3NgA7X6-nZM7e8,143
+datemore/date.py,sha256=NgUGb_AoFxlPiTpDgLlOXS9C_1B2jGbN2ttk12-EE48,1438
+datemore/daterange.py,sha256=6OYiZ88202rZmZfgZW2eTE_PsX4zKPDrFVfIE0tOYag,810
+datemore/datetime.py,sha256=8zbzWlSNv77_uuvm7BU4gML6bZeli1li8eSljpDz-jI,3157
+datemore/time.py,sha256=b-Jj2mTl9JPtFIV5JAO-xAEt7AuTxiCDbos2RAj30J0,1367
+datemore/utils.py,sha256=dOXgBiX6luuuzNytT5I9kPFVgJlW5SssuWIJj7UWWh8,2555
+datemore-1.0.1.dist-info/AUTHORS.rst,sha256=XuivkgezXDmKNERF6AuzrxMYv2i-_jvmRKrtZ125APU,138
+datemore-1.0.1.dist-info/LICENSE,sha256=rHhmAJr30ktxGCcs3FBA2XiCx30w1kEnpSsdu4lNHno,1063
+datemore-1.0.1.dist-info/METADATA,sha256=rE3_PN_FupiFYp6kNl6KvAzSAexAegiqD4UEOcVJorE,4186
+datemore-1.0.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+datemore-1.0.1.dist-info/top_level.txt,sha256=gecTprNBpPEuusHD7U4DaV_oFDSLKnMXqNydueYbHo4,9
+datemore-1.0.1.dist-info/RECORD,,
