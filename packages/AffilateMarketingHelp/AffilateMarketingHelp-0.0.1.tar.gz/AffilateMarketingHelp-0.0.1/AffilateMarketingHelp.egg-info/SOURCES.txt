@@ -1,0 +1,5 @@
+setup.py
+AffilateMarketingHelp.egg-info/PKG-INFO
+AffilateMarketingHelp.egg-info/SOURCES.txt
+AffilateMarketingHelp.egg-info/dependency_links.txt
+AffilateMarketingHelp.egg-info/top_level.txt
