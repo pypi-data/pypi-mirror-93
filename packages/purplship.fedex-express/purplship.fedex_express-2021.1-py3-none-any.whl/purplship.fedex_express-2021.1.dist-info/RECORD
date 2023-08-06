@@ -1,0 +1,7 @@
+purplship/mappers/fedex_express/__init__.py,sha256=ZfsBPm9mcfKMUFnFWJiOJSzfXAysroVBPL4A4QEcMdk,573
+purplship/mappers/fedex_express/mapper.py,sha256=LEpxqeXxn1_YslV5NWaw1DMxjj9XDdJ3O2t0pkAW9sk,4180
+purplship/mappers/fedex_express/proxy.py,sha256=-6EVlY1wyoWHGQMgc15lFSXAHpW-92C2wgUkvyvmSU8,2651
+purplship/mappers/fedex_express/settings.py,sha256=9G2KVSlpy7C2WTcSPhPBNZUgRMRlUbYOOCjZL78zK9Q,462
+purplship.fedex_express-2021.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+purplship.fedex_express-2021.1.dist-info/METADATA,sha256=8MJ63d76jvfB9QODmMf5SXnpu_yEwEcOsvBhDm2rAvw,1443
+purplship.fedex_express-2021.1.dist-info/RECORD,,
