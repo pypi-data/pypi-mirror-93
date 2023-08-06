@@ -1,0 +1,6 @@
+django>=3.1
+django-classy-tags>=1.0
+django-cms<4,>=3.8
+django-entangled>=0.4
+djangocms-text-ckeditor>=3.7
+requests
