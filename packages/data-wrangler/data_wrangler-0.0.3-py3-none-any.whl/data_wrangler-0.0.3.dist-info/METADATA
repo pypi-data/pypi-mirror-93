@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: data-wrangler
+Version: 0.0.3
+Summary: A small python package full of useful methods for data cleaning and manipulation.
+Home-page: https://github.com/drewipson/DW
+Author: Drew Ipson
+Author-email: drewipson@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Data Wrangler (DW)
+
+A simple python package for data cleaning and transformations. The majority of the methods are used for somewhat intermediate string and regex manipulations that I've built out to avoid doing so in the future. This has been helpful in different cleaning different data sets -- particulary text data sets.
+
+This package is open for contribution. Any useful data cleaning functions or tools built are welcome to be contributed and will be credited. Star this project to add! (:
+
+## DataWrangler
+The DataWrangler class includes the following methods. A detailed description and example can be viewed in the table below. 
+
+### Installation and Use
+
+#### Installation
+`python3 -m pip install DW`
+
+#### Importing the Package & Use
+```
+from DW import DataWrangler
+DW = DataWrangler()
+
+# for use in script or jupyter notebook
+DW.method_call()
+# for use in pandas dataseries
+df['Col_Name'].apply(DW.method_call)
+```
+### Method Descriptions and Examples
+#### Methods = Method Name | Data Type Object = Data Type the method can be used on. | Description of the method | Example of method use |
+|Methods               |Data Type Object| Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Example                                                                                                                 | 
+|----------------------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+|remove_pii            |String          | A list called pii_info is compiled as a regular expression pattern that is used to remove sensitive information. A cleaned string called no_pii is returned with the removed PII.                                                                                                                                                                                                                                                                                                             |`remove_pii(text="This is a string of personable identifiable information (pii): Drew Ipson", pii: ['Drew', 'Ipson'])`   |
+|insert_space          |String          | Takes a string and index argument to add spacing in a string at a given index. You can find the index using python's string package to determine the integer argument to pass.                                                                                                                                                                                                                                                                                                                |`insert_space(text="This is a string thatneeds a space.", index=21)` *returns "This is a string that needs a space"*     |
+|check_spacing         |String          | Checks for spacing in front and end of string by gettting the index of the found word and subtracting 1 for the front space and adding the length of the word to the index for the rear spacing. The insert_space method is used if a space should exist where there is none -- front or back.                                                                                                                                                                                                |`check_spacing(text="This is a string thatneeds a space.", word_start_index=21, word_end_index=25)`                      |
+|remove_character_set  |String          | Pass string and list of characters as ok_pattern to be cleared when removing character set. Everything not in that character set will be removed from the string before being returned. To preserve string structure, a space is added inspace of the character removed. The ok_pattern argument is a list of characters that will stay in the text. The string.ascii_letters and space (' ') are the default  list of characters that are allowed.                                           |`remove_character_set(text="This is a % string with a character # set that is not wanted.", ok_pattern=list(string.letters + ' ' + '.'))` *returns "This is a string with a character set that is not wanted."*|
+|remove_spacing        |String          | Eliminates unnecessary spacing in string of words in description. Ensures that a only one space between words exist.                                                                                                                                                                                                                                                                                                                                                                          |`remove_spacing(text="This is a string with        unwanted spacing.")` *returns "This is a string with unwanted spacing* |
+|remove_www            |String          | Removes anything internet related in string such as www or .com; takes a patter_list as argument for string pattern comparison and removal.                                                                                                                                                                                                                                                                                                                                                   |`remove_www(text="This is a string with internet www.google.com references.", internet_pattern=['WWW.', '.COM',])` *returns "This is a string with internet google references." Additionally the pattern 'www.google.com' could be added to remove the entire URL.* |
+|split_file            |File            | Splits file into the number of rows determined by the method argument (default is 10,000 rows). Default delimiter is comma but can be changed by passing a method argument. Output_name_template is the file naming convention passed with an incrementer number included in the file name. The default output is csv file. The default path argument is set to the current directory. The keep_headers argument outputs file headers into each new file split and the default value is True. |`split_file(open('path/to/file','r'), delimiter=',', row_limit=10000, output_name_template='output_$s.csv', output_path='path/to/write/file', keep_headers=True)` |
+
+
