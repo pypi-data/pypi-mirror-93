@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/document-save-as.png</file>
+    <file>icons/help-about.png</file>
+    <file>icons/media-playback-start.svg</file>
+    <file>icons/media-playback-start.svg</file>
+    <file>icons/fileopen.png</file>
+    <file>icons/AV.png</file>
+    <file>icons/max.png</file>
+    <file>icons/close.svg</file>
+    <file>icons/media-record.svg</file>
+    <file>icons/refreshstructure.svg</file>
+  </qresource>
+</RCC>
