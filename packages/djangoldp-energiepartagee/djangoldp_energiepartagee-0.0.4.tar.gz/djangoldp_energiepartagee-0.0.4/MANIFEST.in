@@ -1,0 +1,4 @@
+include djangoldp_energiepartagee/templates/*
+include djangoldp_energiepartagee/templates/emails/
+include djangoldp_energiepartagee/templates/emails/txt/*
+include djangoldp_energiepartagee/templates/emails/html/*

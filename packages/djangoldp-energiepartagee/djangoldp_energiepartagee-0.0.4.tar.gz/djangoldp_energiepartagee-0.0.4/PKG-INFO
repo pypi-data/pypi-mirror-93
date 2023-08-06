@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: djangoldp_energiepartagee
+Version: 0.0.4
+Summary: Custom DjangoLDP based package for Energie Partagee
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: MIT
+Description: Custom DjangoLDP based package for Energie Partagee
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
