@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ch-password-generator
+Version: 0.8.2.dev1
+Summary: A simple password generator
+Home-page: https://github.com/jpocentek/passgen/
+Author: Jakub Pocentek
+Author-email: pocedev@gmail.com
+License: UNKNOWN
+Keywords: password generator
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: ~=2.7
+Description-Content-Type: text/markdown
+
+Passgen
+=======
+
+A simple Python password generator.
+
+
