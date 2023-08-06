@@ -1,0 +1,11 @@
+nr/__init__.py,sha256=V4HKk2TVKBPn9noSDfyZUHgwFUUHFFXpAchk3zhVj_o,82
+nr/caching/__init__.py,sha256=84bMT7wcfF5O9py2n_Q9GfDybPViZw2GQVS8Z5ElgOI,85
+nr/caching/api.py,sha256=nUI9fHyptotMabTxE5rxC7qgDsZZ44yIqXg964hbQa0,1720
+nr/caching/json.py,sha256=qmBDV3w4KMSTMyGNrFDcFFxxZJ9fGHkMLu_0XDK-7b8,5221
+nr/caching/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nr/caching/sqlite.py,sha256=AmvA8uZyM01rE5vt_H6Rgosdy6C23W-HtOOpGg5SaLA,5513
+nr.caching-0.3.2.dist-info/LICENSE.txt,sha256=PTMA8TgKd7TibXuKbMOGlqATHes1D76uP9dAlPyqdEk,1002
+nr.caching-0.3.2.dist-info/METADATA,sha256=GiIbhSS4kc_sg3eMCMOEeAnmdK556vOX9QG7r1pVhIQ,1188
+nr.caching-0.3.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+nr.caching-0.3.2.dist-info/top_level.txt,sha256=8ipe96hphd64fYwhLcJmehxJ5lvqPpqOvSWVv-HcPnI,3
+nr.caching-0.3.2.dist-info/RECORD,,
