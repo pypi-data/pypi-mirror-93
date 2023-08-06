@@ -1,0 +1,11 @@
+Sphinx
+m2r2
+sphinxcontrib-napoleon
+numpy
+scipy==1.4.1
+sympy
+math3d
+matplotlib
+transforms3d
+urdfpy
+ikpy==3.0.1
