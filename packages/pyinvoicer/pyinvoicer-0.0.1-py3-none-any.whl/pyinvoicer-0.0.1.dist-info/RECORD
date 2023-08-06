@@ -1,0 +1,13 @@
+pyinvoicer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyinvoicer/html.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyinvoicer/invoice.py,sha256=NBXHH0rWq80PBuHaysLODkrKbF-WanMyz5nYTH4_7Y4,2454
+pyinvoicer/item.py,sha256=MTipedm_9cG2RJ4Zt8PHj5-bBub0-Pq-OxCKdL59COE,947
+pyinvoicer/pyinvoicer.py,sha256=wCkKpnGtf4TvDk5tT3gskiZgYnavR8zHQLHh7t2aS5Y,1060
+pyinvoicer/renderer.py,sha256=sGMpE6v29cAnWYrJa4YvEVKUFubsdTrvbAz_cwSxgi8,2609
+pyinvoicer/templates/invoice.html,sha256=33JveHgT82nGv3IEQytBV-InxnheVdCusxKNzlo2K78,2778
+pyinvoicer/templates/styles.css,sha256=b0w86k6mvtvxp5zit-HPzIJJGDRKekI7740Lbd5k-SQ,946
+pyinvoicer-0.0.1.dist-info/entry_points.txt,sha256=KaCW24kApNMksyiAhBstXDf_o35dbxyrONFfjT_-DyU,55
+pyinvoicer-0.0.1.dist-info/LICENSE,sha256=-2CvnyEMQmVD5g0mac3WfoyTopyFn2Z9yITyPgjQkS4,1526
+pyinvoicer-0.0.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+pyinvoicer-0.0.1.dist-info/METADATA,sha256=cqbaOOxmTiWyne0U8Nff82GIFAN0VUbn0trFE_Ah8i8,456
+pyinvoicer-0.0.1.dist-info/RECORD,,

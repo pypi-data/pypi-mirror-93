@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pyinvoicer
+Version: 0.0.1
+Summary: 
+License: BSD 3-Clause license
+Author: Taihsiang Ho (tai271828)
+Author-email: tai271828@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Jinja2 (>=2.11.2,<3.0.0)
+Requires-Dist: PyYAML (>=5.4.1,<6.0.0)
+Requires-Dist: WeasyPrint (>=52.2,<53.0)
