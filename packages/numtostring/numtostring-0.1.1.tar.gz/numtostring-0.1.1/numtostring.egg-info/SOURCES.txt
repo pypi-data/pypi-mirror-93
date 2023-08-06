@@ -1,0 +1,8 @@
+README.md
+setup.py
+numtostring/__init__.py
+numtostring/numberToText.py
+numtostring.egg-info/PKG-INFO
+numtostring.egg-info/SOURCES.txt
+numtostring.egg-info/dependency_links.txt
+numtostring.egg-info/top_level.txt

@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: numtostring
+Version: 0.1.1
+Summary: A simple int-to-string converter to covert numbers like 10 to strings like ten
+Home-page: https://github.com/Khhs167/number-to-string/
+Author: khhs
+Author-email: khhs1671@gmail.com
+License: UNKNOWN
+Description: # numtostring
+            Numtostring(or numbertostring, as the import name is) is a tool for converting numbers/ints like 10 to pieces of text like ten!
+            ## Example of usage
+            ```py
+            import numbertostring as numtostring
+            print(numtostring.convert(245))
+            # Output: two hundred and forty five
+            ```
+Keywords: number to text,conversion
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Other Audience
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
