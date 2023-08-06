@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: corrily-live-price
+Version: 0.0.2
+Summary: Corrily LivePrice
+Home-page: UNKNOWN
+Author: OpenAPI Generator community
+Author-email: founders@corrily.com
+License: UNKNOWN
+Keywords: OpenAPI,OpenAPI-Generator,Corrily LivePrice
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: urllib3 (>=1.25.3)
+Requires-Dist: python-dateutil
+Requires-Dist: nulltype
+
+Corrily&#39;s LivePrice lets you to interact with Corrily&#39;s dynamic pricing models to optimize your prices in real-time.   # noqa: E501
+
+
