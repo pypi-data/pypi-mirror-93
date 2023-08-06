@@ -1,0 +1,3 @@
+[console_scripts]
+desktop-file-generate = desktop_file_generate.desktop_file_generate:main
+
