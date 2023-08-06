@@ -1,0 +1,9 @@
+README.md
+setup.py
+w01florem/__init__.py
+w01florem/main.py
+w01florem/program.py
+w01florem.egg-info/PKG-INFO
+w01florem.egg-info/SOURCES.txt
+w01florem.egg-info/dependency_links.txt
+w01florem.egg-info/top_level.txt
