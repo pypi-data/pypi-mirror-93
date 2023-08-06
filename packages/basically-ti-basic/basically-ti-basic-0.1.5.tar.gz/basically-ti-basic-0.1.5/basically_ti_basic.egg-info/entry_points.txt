@@ -1,0 +1,4 @@
+[console_scripts]
+basically-ti-basic = basically_ti_basic.main:main
+tibc = basically_ti_basic.main:main
+
