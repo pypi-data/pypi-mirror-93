@@ -1,0 +1,9 @@
+protobuf==3.14.0
+orjson==3.4.4
+wsaccel==0.6.3
+uvloop==0.14.0
+
+[backend]
+requests==2.21.0
+PyYAML==3.13
+xmltodict==0.12.0
