@@ -1,0 +1,54 @@
+CHANGES
+=======
+
+0.0.11
+------
+
+* Fix setup cfg
+
+0.0.10
+------
+
+* Switch the setup process to use PBR (#23)
+* Add the fields and max\_records featues to get and iterate. (#22)
+* Move the create\_view outside of Airtable class to keep the API as close as possible to airtable package. (#21)
+* Implement the dict\_class arg. (#18)
+* Fix typing stubs after mock.\_patch became generic
+* Fix typing, by packaging the stub file as well. (#17)
+
+0.0.8
+-----
+
+* Check own typing in CI. (#16)
+* Add Python typing. (#15)
+* Add a create\_empty\_table function. (#14)
+
+0.0.6
+-----
+
+* Fix the \`filter\_by\_formula\` when a quoted value contains a quote. (#13)
+
+0.0.5
+-----
+
+* Bump version to 0.0.5 (#11)
+* Fix the offset response in the get method. (#12)
+* Implement the "view" and "filter\_by\_formula" features for the iterate method. (#10)
+* Raises an error when trying to access a table that was not created before. (#9)
+* Implement the "view" feature of the get method using formulas. (#8)
+
+0.0.4
+-----
+
+* Implement the filter\_by\_formula feature of the get method. (#7)
+
+0.0.3
+-----
+
+* Add a TestCase class to ease independant unit testing. Also release v0.0.3. (#6)
+* Add a clear method to clear all data in the mock bases so that airtablemock does not conflict across several unit tests. (#5)
+* Add unit tests, and fix multiple syntax error in the get method. (#4)
+* Release v0.0.2 with the fix. (#3)
+* Fix basic table access. (#2)
+* Help release to PyPi
+* Mock basic operations

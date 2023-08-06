@@ -1,0 +1,18 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: python:3
+    steps:
+      - checkout
+      - run:
+          name: Install requirements
+          command: |
+            pip install . -r requirements-test.txt
+      - run:
+          name: Run tests
+          command: nosetests
+      - run:
+          name: Check typing
+          command: |
+            mypy airtablemock test --strict
