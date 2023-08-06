@@ -1,0 +1,300 @@
+/**
+ ******************************************************************************
+ * @details This file was created with cantata, a code generation tool for can databases
+ * @author Pol Feliu Cuberes
+ * @link https://github.com/polfeliu/cantata
+ ******************************************************************************
+ */
+
+#ifndef __db_H
+#define __db_H
+#ifdef __cplusplus
+ extern "C" {
+#endif
+#include <stdint.h> 
+#include "stdbool.h"
+#include "FreeRTOS.h"
+#include "task.h"
+
+typedef float single;
+
+/*[[[cog
+import cog
+if settings['FreeRTOSInteractionLayer']:
+    cog.out("""
+/*
+ * Interaction Layer: Start function prototype
+ */
+        """);
+
+    cog.out("""
+void %s_InteractionLayerStart(void);
+    """ % prefix)
+]]]*/
+//[[[end]]]
+
+
+/*[[[cog
+import cog
+if settings['calculateCANFilter']:
+    cog.out("""
+/*
+ * CAN Filters: CAN Filters filter and mask
+ */
+%s
+#define %s_StandardFilter   %s
+#define %s_StandardMask     %s
+#define %s_ExtendedFilter   %s
+#define %s_ExtendedMask     %s
+ """ %(
+    filter['evaluation'],
+    prefix, """{:#013b}""".format(filter['StandardFilter']),
+    prefix, """{:#013b}""".format(filter['StandardMask']),
+    prefix, """{:#031b}""".format(filter['ExtendedFilter']),
+    prefix, """{:#031b}""".format(filter['ExtendedMask'])
+    ));
+]]]*/
+//[[[end]]]
+
+
+/*
+ * CAN Callbacks: Receive Callback prototype
+ */
+
+/*[[[cog
+import cog
+if settings['CallbackLib'] is not None:
+    cog.out(
+"""
+void %s_ReceiveCallback(uint64_t data, uint32_t ID, bool is_extended, uint8_t DLC);
+""" % (prefix));
+]]]*/
+//[[[end]]]
+
+/*
+ * Enum definitions for CANbyteorder_t
+ */
+typedef enum {
+    little_endian, //intel
+    big_endian //motorola
+} CANbyteorder_t;
+
+/*
+ * Enum definitions of types of signals
+ */
+typedef enum {
+    Tbool,
+    Tdouble, 
+    Tsingle,
+    Tuint8_t,
+    Tuint16_t,
+    Tuint32_t,
+    Tuint64_t,
+    Tint8_t,
+    Tint16_t,
+    Tint32_t,
+    Tint64_t
+} CANvaluetype_t;
+
+/*
+ * Enum definitions for value tables
+ */
+/*[[[cog
+import cog
+for vtname, vt in valuetables.items():
+	cog.out(
+"""
+typedef enum {"""
+    )
+
+	for key,value in vt.items():
+		cog.out(
+"""
+    %ssig_%sVT_%s=%s,"""
+        %(
+            prefix,vtname,key,value
+        ));
+	cog.out(
+"""
+}%ssig_%sVT_t;
+"""
+	 %(
+	 	prefix,vtname
+ 	));
+    
+]]]*/
+//[[[end]]]
+
+/*
+ * Export message structs
+ */
+/*[[[cog
+import cog
+for framename, frame in frames.items():
+    cog.out(
+"""
+struct %s_%s_t %s_%s;"""
+% (
+    prefix,framename, prefix, framename,
+));
+]]]*/
+//[[[end]]]
+
+/*
+ * Export signal structs
+ */
+/*[[[cog
+import cog
+for signame, sig in signals.items():
+    cog.out(
+"""
+struct %ssig_%s_t %ssig_%s;""" 
+    % (
+        prefix,signame,prefix,signame
+    ));
+]]]*/
+//[[[end]]]
+
+/*
+ * Define types of the signal structs
+ */
+/*[[[cog
+import cog
+for signame, sig in signals.items():
+    cog.out(
+"""
+struct %ssig_%s_t{
+    const uint8_t length;
+    const CANbyteorder_t byte_order;
+    const CANvaluetype_t value_type;
+    const char unit[%s];
+    const %s initial_value ;
+    const double factor ;
+    const double offset ;
+    const double min ;
+    const double max ;
+    %s raw;
+    %s (*const getValue)(void);"""
+    % (
+        prefix,signame,
+        sig['unit_len'],
+        sig['getsetValue_type'],
+        sig['value_type'], 
+        sig['getsetValue_type'],
+    ));
+
+    if sig["TX"]:
+        cog.out(
+            """
+    bool (*const setValue)(%s);
+    void (*const setRaw)(%s);"""
+        % (
+            sig['getsetValue_type'],
+            sig['value_type']
+        ));
+
+        if settings['FreeRTOSInteractionLayer']:
+            cog.out(
+        """
+    bool sent;""")
+
+            if 'GenSigSendType' in sig['attributes']:
+                GenSigSendType = sig['attributes']['GenSigSendType'].value
+                choices = sig['attribute_definitions']['GenSigSendType'].choices
+
+                if (GenSigSendType == choices.index("IfActive")) or (GenSigSendType == choices.index("IfActiveWithRepetition")):
+                    cog.out(
+        """
+    uint32_t inactiveValue;""")
+
+    cog.outl("""
+};"""
+    	)
+]]]*/
+//[[[end]]]
+
+/*
+ * Define types of the message structs
+ */
+/*[[[cog
+import cog
+for framename, frame in frames.items():
+    cog.out(
+"""
+// Comment: %s
+struct %s_%s_t{
+    const uint32_t ID;
+    const bool is_extended;
+    const uint8_t DLC;
+    uint64_t raw;""" % (
+        frame['comment'],
+        prefix,framename,
+    ));
+
+
+    if frame['RX']:
+        cog.out("""
+    void (*const receive)(void);"""
+        %());
+
+    if frame['TX']:
+        cog.out("""
+    void (*const send)(void);"""
+        %());
+
+    if settings['FreeRTOSInteractionLayer']:
+        if 'GenMsgNrOfRepetition' in frame['attributes']:
+            cog.out("""
+    const uint32_t repetitions;
+    uint32_t repetitionsleft;"""
+        %());
+
+
+    cog.out("""
+    const struct %s_%s_signals_t{"""%(prefix, framename));
+
+    for signalname, signal in frame['signals'].items():
+        if signal['RX']==False and signal['TX']==False:
+            cog.outl("""
+        //%s is not mapped to this ECU""" % (signalname))
+        else:
+            cog.out(
+"""
+        const struct{""");
+            
+            if signal['multiplexor'] is not None:
+                cog.out(
+        """
+            const struct %ssig_%s_t *multiplexor;
+            const int32_t multiplexValues[%s];""" 
+            %(
+                prefix, signal['multiplexor'],
+                len(signal['multiplexValues'])
+            ))
+
+            cog.out(
+            """
+            const struct %ssig_%s_t *signal;
+            const uint64_t startbit;
+            const uint64_t mask;
+        }%ssig_%s;
+"""         % (
+                prefix,signalname,
+                prefix,signalname
+            ));
+    5
+
+    cog.out(
+"""
+    }signals;
+};""");
+
+
+]]]*/
+//[[[end]]]
+
+#ifdef __cplusplus
+}
+#endif
+#endif /*__ can_H */
+

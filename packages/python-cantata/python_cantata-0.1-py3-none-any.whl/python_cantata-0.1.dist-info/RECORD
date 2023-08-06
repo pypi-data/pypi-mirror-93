@@ -1,0 +1,9 @@
+cantata/__init__.py,sha256=fKfy334K531gksUyf5ZAEshs5wt4QH4zh6_Z8JJVUIs,25
+cantata/main.py,sha256=KULAJ8CJCL1ICqNVrM-5NaqhPT0F1yGpPzGdx3wSjRA,23987
+cantata/templates/cantata.c.cogen,sha256=ZYWBmgeVxe3rH3VAEIENNrmJNxatE8tSc6hrY1l2ds0,25366
+cantata/templates/cantata.h.cogen,sha256=miBtNEAWaz7uHAPchyZEwjBdjkw7KHmKTvaCANFF6-g,6104
+python_cantata-0.1.dist-info/License.txt,sha256=5mwmnUgZqqs0tJ71IgxN2rZ1byG7UYB2Gk64Vh8re70,20850
+python_cantata-0.1.dist-info/METADATA,sha256=1Og2g6GQIF_SFF7bSTTIt_dML77NmQTrMVQaqudnpEg,15100
+python_cantata-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+python_cantata-0.1.dist-info/top_level.txt,sha256=rTd6zxTi-2300xr-mIZ1BEPlX6qPBEf8BuQcvi773O4,8
+python_cantata-0.1.dist-info/RECORD,,
