@@ -1,0 +1,2 @@
+walt-common==7
+python-daemon>=2.2.3
