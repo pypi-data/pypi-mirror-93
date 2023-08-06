@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+jk_datamatrix/DataMatrix.py
+jk_datamatrix/DataMatrixRow.py
+jk_datamatrix/__init__.py
+jk_datamatrix.egg-info/PKG-INFO
+jk_datamatrix.egg-info/SOURCES.txt
+jk_datamatrix.egg-info/dependency_links.txt
+jk_datamatrix.egg-info/not-zip-safe
+jk_datamatrix.egg-info/requires.txt
+jk_datamatrix.egg-info/top_level.txt
