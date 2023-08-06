@@ -1,0 +1,3 @@
+[napari.plugin]
+napari-nikon-nd2 = napari_nikon_nd2
+
