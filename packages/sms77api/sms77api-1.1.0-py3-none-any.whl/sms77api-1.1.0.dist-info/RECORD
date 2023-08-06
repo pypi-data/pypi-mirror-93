@@ -1,0 +1,17 @@
+sms77api/Sms77api.py,sha256=X2Gx-mnQPTmM6eGAvKNtX3Gy76bcJVfyLwCF1OQHN1M,4919
+sms77api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sms77api/classes/Contacts.py,sha256=hZlJtotp7Pu5voaGn8ucY5bZC1JSzArXgU3TAPPGZXU,216
+sms77api/classes/Endpoint.py,sha256=GUAYwAymic2FmrecZnorra9U2WviQAokS7TF_K4hmBc,359
+sms77api/classes/ExtendedEnum.py,sha256=1JOcVch4pdFVaDJUZOSniafWvOSGZ6XLF8BW1aA-UVE,137
+sms77api/classes/Hooks.py,sha256=FALCOOCmRSOs1QW4CaWm2uU1qvic5Vk_zvpQfHeeryQ,364
+sms77api/classes/Journal.py,sha256=33MnH7KOKRY5zD4q97Salc_3yJc5SnVIWncCDALJIRI,184
+sms77api/classes/Lookup.py,sha256=ooTpHN2wM0FpUQPPdRpPkgvSUYqThKcOfZBq9uJNQGc,395
+sms77api/classes/Method.py,sha256=lDy0vgOg5jl9xD38SQv0bi31LAxUaihhBf9xTYXpYAc,119
+sms77api/classes/Pricing.py,sha256=ekKm49agFVwpw5G8vVxh1-GCsU6uHTA79o1tCPdBoBw,126
+sms77api/classes/Status.py,sha256=iBgdnErL6OD-NQlBq9CYbftBU0_34nZ2X1PRTUrTRx8,334
+sms77api/classes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sms77api-1.1.0.dist-info/LICENSE,sha256=tHL-PYTp2gLycXfPVGwASpXOJ2-SN9pcT5-pzuQmORw,1074
+sms77api-1.1.0.dist-info/METADATA,sha256=eECrhNhVXZ5-aYSQh5emM3I8JJ0LKOG9DlJc_jR29JY,1212
+sms77api-1.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sms77api-1.1.0.dist-info/top_level.txt,sha256=jecMEqpUof_2HBlCjDamw2k1A-oqj_K9VcotnP8Xpio,9
+sms77api-1.1.0.dist-info/RECORD,,
