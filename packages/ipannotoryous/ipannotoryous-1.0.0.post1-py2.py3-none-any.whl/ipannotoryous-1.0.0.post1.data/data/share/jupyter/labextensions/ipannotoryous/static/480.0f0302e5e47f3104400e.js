@@ -1,0 +1,1 @@
+(self.webpackChunkipannotoryous=self.webpackChunkipannotoryous||[]).push([[480],{480:(t,e,o)=>{"use strict";o.r(e),o.d(e,{default:()=>s});var r=o(246),i=o(841),n=o(657);const s={id:"ipannotoryous:plugin",requires:[r.IJupyterWidgetRegistry],activate:function(t,e){e.registerWidget({name:n.o,version:n.Y,exports:i})},autoStart:!0}}}]);

@@ -1,0 +1,1 @@
+(self.webpackChunkipannotoryous=self.webpackChunkipannotoryous||[]).push([[568],{568:(o,n,u)=>{"use strict";u.r(n),u.d(n,{MODULE_NAME:()=>e.o,MODULE_VERSION:()=>e.Y,AnnotoriusModel:()=>r.AnnotoriusModel,AnnotoriusView:()=>r.AnnotoriusView,AuthorModel:()=>r.AuthorModel});var e=u(657),r=u(841)}}]);
