@@ -1,0 +1,10 @@
+README.md
+setup.py
+datasette_basemap/__init__.py
+datasette_basemap.egg-info/PKG-INFO
+datasette_basemap.egg-info/SOURCES.txt
+datasette_basemap.egg-info/dependency_links.txt
+datasette_basemap.egg-info/entry_points.txt
+datasette_basemap.egg-info/requires.txt
+datasette_basemap.egg-info/top_level.txt
+datasette_basemap/data/basemap.db
