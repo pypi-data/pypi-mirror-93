@@ -1,0 +1,14 @@
+Metadata-Version: 1.0
+Name: dirEx
+Version: 0.0.1
+Summary: An extension to the built-in function dir()
+Home-page: https://github.com/floydawong/dirEx.git
+Author: Floyda
+Author-email: floyda@163.com
+License: MIT
+Description: # DirEx
+        > An extension to the built-in function dir() for Python  
+        
+        
+Keywords: dir extend built-in
+Platform: UNKNOWN

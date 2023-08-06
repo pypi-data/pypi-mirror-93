@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+dirEx.egg-info/PKG-INFO
+dirEx.egg-info/SOURCES.txt
+dirEx.egg-info/dependency_links.txt
+dirEx.egg-info/top_level.txt
+direx/__init__.py
+direx/direx.py
