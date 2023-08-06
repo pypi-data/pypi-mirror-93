@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: lightcards
+Version: 0.5.0
+Summary: Terminal flashcards from Markdown
+Home-page: https://sr.ht/~armaan/lightcards
+Author: Armaan Bhojwani
+Author-email: me@armaanb.net
+License: MIT
+Description: # lightcards
+        Terminal flashcards from Markdown.
+        
+        ## Installation
+        ### From PyPI
+        `pip install lightcards`
+        
+        ### From Git
+        ```
+        git clone https://git.sr.ht/~armaan/lightcards
+        cd lightcards
+        git checkout $(git tag | tail -n 1) # Don't include to use development version
+        `pip install .`
+        ```
+        
+        ## Usage
+        see `lightcards --help`
+        
+        ## Input file
+        See `contrib/example.md` for an example input file
+        
+        ## License
+        Copyright Armaan Bhojwani 2021, MIT license
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Other Audience
+Classifier: Environment :: Console :: Curses
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
