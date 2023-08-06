@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+mopti/__init__.py
+mopti.egg-info/PKG-INFO
+mopti.egg-info/SOURCES.txt
+mopti.egg-info/dependency_links.txt
+mopti.egg-info/top_level.txt
