@@ -1,0 +1,9 @@
+pytest
+pytest_cases
+pytest-mock
+mock
+hypothesis
+scipy
+torchvision
+onnxruntime
+onnx
