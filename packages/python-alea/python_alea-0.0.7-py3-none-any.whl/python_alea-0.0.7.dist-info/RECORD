@@ -1,0 +1,11 @@
+alea/CEtAPI.dll,sha256=4RhHVTb_RU4F6LSgp_yoG2pLx_hSFCZGXA71hCo5G1g,15360
+alea/CEtAPIx64.dll,sha256=4zWKPdMcvfXv48pfqonpI5HTk_hJjnUZnf4adcni-3U,18432
+alea/EtApi.dll,sha256=Dr-SrD40kOjSMv_P5bPNU0jF8iATXShvaHHzZ17GbsA,87552
+alea/__init__.py,sha256=Z2JJq4ppv7TtG4OjY7bRyiGmC4fNAHIvFLz5MwsotmI,43
+alea/alea.py,sha256=KNNbnWJhKTrLne8ugOd94aXB9yYb9dNsEel6IBVKkw0,70429
+python_alea-0.0.7.dist-info/DESCRIPTION.rst,sha256=ji1cob5F4qWxYb27Oovs8zbj0-jvBwHPFNWUHlUQxxo,117
+python_alea-0.0.7.dist-info/METADATA,sha256=8vS4nuZRnqyEB3svHo1x7F5HAJ-kV1M5xlWnJSvl9aM,688
+python_alea-0.0.7.dist-info/RECORD,,
+python_alea-0.0.7.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+python_alea-0.0.7.dist-info/metadata.json,sha256=TVKi0u4yrXtVvuO42lvo2VG2OnEr4UTPB-GShYXAcQ8,712
+python_alea-0.0.7.dist-info/top_level.txt,sha256=h6ue0KA3DLUr4JBBTWCui7B446hcjpW_nhrItAeHE2c,5
