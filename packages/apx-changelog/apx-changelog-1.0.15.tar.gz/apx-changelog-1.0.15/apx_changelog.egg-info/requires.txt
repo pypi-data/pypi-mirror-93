@@ -1,0 +1,3 @@
+regex
+Jinja2
+GitPython
