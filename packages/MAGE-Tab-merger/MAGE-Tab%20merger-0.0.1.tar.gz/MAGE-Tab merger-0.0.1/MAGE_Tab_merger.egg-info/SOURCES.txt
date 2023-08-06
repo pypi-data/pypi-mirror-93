@@ -1,0 +1,13 @@
+README.md
+merge_condensed_sdrfs.py
+merge_sdrfs.py
+setup.py
+IDF/__init__.py
+MAGE_Tab_merger.egg-info/PKG-INFO
+MAGE_Tab_merger.egg-info/SOURCES.txt
+MAGE_Tab_merger.egg-info/dependency_links.txt
+MAGE_Tab_merger.egg-info/requires.txt
+MAGE_Tab_merger.egg-info/top_level.txt
+SDRF/__init__.py
+SDRF/sdrfcol_enum_tests.py
+SDRF/tests.py
