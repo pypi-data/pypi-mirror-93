@@ -1,0 +1,3 @@
+[console_scripts]
+ta-tooling = ta_tooling.cli:main
+
