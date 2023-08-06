@@ -1,0 +1,16 @@
+pysmashgg/__init__.py,sha256=NS16cAmvvTFHETysp2p9LHwEbIrHpI6V0S3qayA4avs,37
+pysmashgg/api.py,sha256=zrnnFCDvfKwdPL8ewdDYPWcWjsLxbihwNTKJBxLtF4M,897
+pysmashgg/b_queries.py,sha256=qY8gZThCaIfykiPrnjHxO74aPPtHcbHvaZIBVPZsi5Q,1036
+pysmashgg/brackets.py,sha256=Cc2wiIRLa6P_mL3d0_A63z6H9dj-yCmCNlVYeF4YpC8,730
+pysmashgg/exceptions.py,sha256=RJVTmjxLdLtyTemHvfpuE9e-tRM25NqXVwYa7fwSNcE,227
+pysmashgg/filters.py,sha256=bJiIxFn0uF_UMTKErPZnTwSaKjDLbHnMg7pZl_Yuw-Q,19905
+pysmashgg/p_queries.py,sha256=lRXjovNilw4F5gRpqNyTCVu9EpBNQpxznDJas4m-2L4,1398
+pysmashgg/players.py,sha256=9Rui3xY_2kp7QBmOT07BrTiDICLILZ2f0VtRfuIx8BM,967
+pysmashgg/smashgg.py,sha256=JhXa2mBNAS-EV_wwS4kdVg-blSah2sOwyJuV6rdi4i0,3732
+pysmashgg/t_queries.py,sha256=frU019sKPmkQkaiSTcXtP1L_zGtAqo3WWMa8fnKmh30,3394
+pysmashgg/tournaments.py,sha256=r2RBb4qrp2ODp5M4M-AYt3gGIe0VW0-qLUk3MRV84Rg,4651
+pysmashgg-0.6.0.dist-info/LICENSE.md,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+pysmashgg-0.6.0.dist-info/METADATA,sha256=Zzo7uYsE6nKGtm1mN8l5CN6Gv3XzrCKPSEIMK_uPmYE,7813
+pysmashgg-0.6.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pysmashgg-0.6.0.dist-info/top_level.txt,sha256=Tv1wXHliSPc5llZjBnheakxaM5jOCar9b5wAuBKKMpE,10
+pysmashgg-0.6.0.dist-info/RECORD,,
