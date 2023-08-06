@@ -1,0 +1,13 @@
+{
+    "author": "Pyrustic Evangelist",
+    "description": "A Pyrustic tool to publish Python desktop app to Github",
+    "email": "pyrustic@protonmail.com",
+    "project_name": "hubway",
+    "project_title": "Hubway",
+    "dev_mode": true,
+    "home_page": "https://github.com/pyrustic/hubway",
+    "version": "0.0.3",
+    "requirements": null,
+    "init_script": null,
+    "packaging_script": null
+}
