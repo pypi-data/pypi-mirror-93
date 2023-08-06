@@ -1,0 +1,9 @@
+README.md
+setup.py
+pyidw.egg-info/PKG-INFO
+pyidw.egg-info/SOURCES.txt
+pyidw.egg-info/dependency_links.txt
+pyidw.egg-info/requires.txt
+pyidw.egg-info/top_level.txt
+pythonidw/__init__.py
+pythonidw/simpleidw.py
