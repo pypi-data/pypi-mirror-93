@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+mercury_imgpprcs/__init__.py
+mercury_imgpprcs/json_filter.py
+mercury_imgpprcs/line_filter.py
+mercury_imgpprcs/mercury_json.py
+mercury_imgpprcs/mercury_line.py
+mercury_imgpprcs.egg-info/PKG-INFO
+mercury_imgpprcs.egg-info/SOURCES.txt
+mercury_imgpprcs.egg-info/dependency_links.txt
+mercury_imgpprcs.egg-info/not-zip-safe
+mercury_imgpprcs.egg-info/requires.txt
+mercury_imgpprcs.egg-info/top_level.txt

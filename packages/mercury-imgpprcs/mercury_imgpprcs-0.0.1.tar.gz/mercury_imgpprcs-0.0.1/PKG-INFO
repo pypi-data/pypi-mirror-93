@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: mercury_imgpprcs
+Version: 0.0.1
+Summary: Mercury: Image Pre-processing Open Source API for Artificial Intelligence
+Home-page: https://github.com/mercurypreprocessing/mercury-imgpreprcs
+Author: mercurypreprocessing
+Author-email: mercurypreprocessing@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: image preprocessing filter
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
