@@ -1,0 +1,10 @@
+README.md
+setup.py
+red/__init__.py
+red/inara/__init__.py
+red/inara/turtle/__init__.py
+red/inara/turtle/lib.py
+red_py.egg-info/PKG-INFO
+red_py.egg-info/SOURCES.txt
+red_py.egg-info/dependency_links.txt
+red_py.egg-info/top_level.txt

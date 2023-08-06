@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: red-py
+Version: 0.1.3
+Summary: A library of useful tools and extensions
+Home-page: https://github.com/zhooda/red-py.git
+Author: Zeeshan Hooda
+Author-email: zhooda@protonmail.com
+License: MIT
+Description: # red-py
+        
+        library of useful tools and extensions
+        
+        ## installation
+        
+        ```bash
+        pip3 install red-py
+        ```
+        
+        ## usage
+        
+        ### turtle
+        ```python
+        from red.inara.turtle import CoolTurtle
+        
+        turtle = CoolTurtle()
+        
+        turtle.fillrgba(25, 25, 112, 1)
+        turtle.begin_fill()
+        turtle.ellipse(100, 50, 180)
+        turtle.end_fill()
+        ```
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
