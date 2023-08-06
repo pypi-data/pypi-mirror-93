@@ -1,0 +1,13 @@
+affinder/__init__.py,sha256=SiU87kUdp2x_-1_E7Q04ifiCBHZWChOxj1mqCXo3QaQ,102
+affinder/_version.py,sha256=r_SIMIHc9z6UHqWx7MGMnu3yUCK1modp6qPB256ioD4,116
+affinder/affinder.py,sha256=k1xr8z-UMd7XU2ilMyYWgWFucTUD0kGDKdhkAvL98ms,5794
+affinder/main.py,sha256=m5NmwFhJuZVG9Ii74AlbH2XXglr6ShvSddpyEyzwfqY,310
+affinder/plugin.py,sha256=o5a-chRLesznlxtQW3921tuolDyRMIIiwD67SNjBCfw,200
+affinder/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+affinder/_tests/test_affinder.py,sha256=6mFXcqhWvOJzUnhGimOYlR2L-0pgzj-66NAD9lGHWcI,27
+affinder-0.1.0.dist-info/LICENSE,sha256=0E5t8kbjOujj5nXdR1cFLQkYFKKMTEBB1nOMI-_dlvY,1486
+affinder-0.1.0.dist-info/METADATA,sha256=ZFI2DDxttyd8yeWvYtZYlhvqiw7L4g4vbeku4Rw5Yi4,3404
+affinder-0.1.0.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+affinder-0.1.0.dist-info/entry_points.txt,sha256=LtuhEpeaNctNBvaCdF2l_hYq9T9Pz0uHsbwj__z7f50,93
+affinder-0.1.0.dist-info/top_level.txt,sha256=4hvOa9zwZiopedE3Z4CyS1NE0FNalaubsRYfm-m0NNQ,9
+affinder-0.1.0.dist-info/RECORD,,

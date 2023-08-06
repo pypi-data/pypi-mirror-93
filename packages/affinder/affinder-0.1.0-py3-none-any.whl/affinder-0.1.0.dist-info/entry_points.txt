@@ -1,0 +1,6 @@
+[console_scripts]
+affinder = affinder.main:main
+
+[napari.plugin]
+affinder = affinder.plugin
+
