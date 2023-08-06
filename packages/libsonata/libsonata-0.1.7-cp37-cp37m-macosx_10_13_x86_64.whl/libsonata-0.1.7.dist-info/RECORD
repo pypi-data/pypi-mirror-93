@@ -1,0 +1,10 @@
+libsonata/__init__.py,sha256=hyn9yFELs5I7ujLwGtqpMNRqx_U_hGUgATeKop2E8Vg,933
+libsonata/_libsonata.cpython-37m-darwin.so,sha256=8QgxhXwiaQVgIYIGvr_Zi1SKFRpRbsDE9w8cF8SXzkQ,4455072
+libsonata/.dylibs/libsz.2.dylib,sha256=X6nVsxMMEJIIYs_HMdK8pb2jpTPMKg9dxYISJ0Mvpmo,52448
+libsonata/.dylibs/libhdf5.200.dylib,sha256=dJ7VD5zJRQfoDN37-w9X-S2CdyAGTvmHOjQnlA7EuHE,3354568
+libsonata-0.1.7.dist-info/RECORD,,
+libsonata-0.1.7.dist-info/WHEEL,sha256=I5mlg0ErMAEUt46AuNDBeJRH1wdvXo7D9dcPVCo2Pa4,111
+libsonata-0.1.7.dist-info/COPYING.LESSER,sha256=GkWx0KhgPf4s_GRPnauXCxdi-Sur4qrG6y9dRXLEpoA,7653
+libsonata-0.1.7.dist-info/COPYING,sha256=5X8cMguM-HmKfS_4Om-eBqM6A1hfbgZf6pfx2G24QFI,35150
+libsonata-0.1.7.dist-info/top_level.txt,sha256=lbZhDOeoJcQjLCSQj5ZIzG9jajJ9P6zb_pPWA8GtkEM,10
+libsonata-0.1.7.dist-info/METADATA,sha256=9SiECqAw-RuXsuAOEGKD6hMFDymGe8HivtWAxnVENKA,11116
