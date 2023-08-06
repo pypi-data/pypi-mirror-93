@@ -1,0 +1,120 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: fill
+    name: email
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: name
+        value: email
+        index: 0
+        uses: -1
+      - mode: name
+        value: email
+        index: 0
+        uses: -1
+      - mode: id
+        value: email
+        index: 0
+        uses: -1
+      - mode: id
+        value: email
+        index: 0
+        uses: -1
+      - mode: css
+        value: '[aria-label="Email"]'
+        index: 0
+        uses: -1
+      - mode: id
+        value: Email
+        index: 0
+        uses: -1
+      - mode: name
+        value: CI_email
+        index: 0
+        uses: 82
+  - verb: fill
+    name: zip
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: name
+        value: zip
+        index: 0
+        uses: -1
+      - mode: name
+        value: zip
+        index: 0
+        uses: -1
+      - mode: id
+        value: zip
+        index: 0
+        uses: -1
+      - mode: id
+        value: zip
+        index: 0
+        uses: -1
+      - mode: css
+        value: '[aria-label="Zip"]'
+        index: 0
+        uses: -1
+      - mode: id
+        value: Zip
+        index: 0
+        uses: -1
+      - mode: name
+        value: CI_custom2
+        index: 0
+        uses: 82
+  - verb: click
+    name: submit
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: text
+        value: Submit
+        index: 0
+        uses: -1
+      - mode: text
+        value: Submit
+        index: 0
+        uses: -1
+      - mode: text
+        value: submit
+        index: 0
+        uses: -1
+      - mode: value
+        value: Submit
+        index: 0
+        uses: 81
+      - mode: value
+        value: Submit
+        index: 0
+        uses: 0
+      - mode: value
+        value: submit
+        index: 0
+        uses: 0
