@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+adyeno/__init__.py
+adyeno/exceptions.py
+adyeno.egg-info/PKG-INFO
+adyeno.egg-info/SOURCES.txt
+adyeno.egg-info/dependency_links.txt
+adyeno.egg-info/not-zip-safe
+adyeno.egg-info/requires.txt
+adyeno.egg-info/top_level.txt
+test/test.py

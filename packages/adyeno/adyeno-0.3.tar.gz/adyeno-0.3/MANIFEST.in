@@ -1,0 +1,2 @@
+recursive-include adyeno/pytransform *.dll
+recursive-include adyeno/pytransform *.dylib
