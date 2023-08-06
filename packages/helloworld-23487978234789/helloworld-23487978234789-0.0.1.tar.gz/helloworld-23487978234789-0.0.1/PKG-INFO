@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: helloworld-23487978234789
+Version: 0.0.1
+Summary: Say Hello!
+Home-page: https://github.com/ashutoshc8101/helloworld
+Author: ashutoshc8101
+Author-email: ashutoshc8101@gmail.com
+License: UNKNOWN
+Description: # Hello World
+        
+        This is a example project demostrating how to publish to PyPi
+        
+        ## Usage
+        
+        ```python
+        from helloworld import say_hello
+        
+        say_hello()
+        say_helllo('John Doe')
+        
+        ## Developing Hello World
+        
+        ```bash
+        $ pip install -e .[dev]
+        ```
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Provides-Extra: dev
