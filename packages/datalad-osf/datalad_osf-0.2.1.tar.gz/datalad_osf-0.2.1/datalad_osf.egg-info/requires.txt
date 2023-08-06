@@ -1,0 +1,10 @@
+annexremote>=1.4.0
+datalad>=0.13.0
+requests
+six
+tqdm
+
+[devel]
+coverage
+nose
+nose-exclude
