@@ -1,0 +1,26 @@
+{% ckan_extends %}
+
+{# Surcharger la section footer_content du fichier base/footer.html #}
+{% block footer_content %}
+<div class="row">
+  <div class="col-md-2 footer-ul-logo">
+    <a href="https://www.ulaval.ca"><img class="ul-logo" src="{{ /images/logo-ulaval.svg') }}" alt="ULaval Logo"></a>
+  </div>
+  <div class="col-md-2 footer-links">
+    {% block footer_nav %}
+      <ul class="list-unstyled">
+          <li><a href="https://valeria.science/a-propos">À propos de VALERIA</a></li>
+          <li><a href="https://valeria.science/nous-joindre">Nous joindre</a></li>
+      </ul>
+    {% endblock %}
+  </div>
+  <div class="col-md-8 footer-policies">
+    <ul class="list-unstyled">
+      <li><a href="https://valeria.science/confidentialite">Confidentialité</a></li>
+      <li>&copy;2020 VALERIA - UNIVERSITÉ LAVAL | Tous droits réservés</li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
+
+

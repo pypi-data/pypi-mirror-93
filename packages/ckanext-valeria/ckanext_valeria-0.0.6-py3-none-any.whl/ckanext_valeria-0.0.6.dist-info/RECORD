@@ -1,0 +1,27 @@
+ckanext_valeria-0.0.6-py3.8-nspkg.pth,sha256=VaH--vNo0_vzXvZAeqyq-Bg6m47pBBRlxwvBj0KQxe0,544
+ckanext/valeria/__init__.py,sha256=gjyNfiBAiSrI0ap1zr-OboGsa_FrAtD4iPOPlj2l-kI,41
+ckanext/valeria/plugin.py,sha256=t7aSDgMs8G6297CqKKvaHoU2ZfeZdtzN2uaHbJ5o-jo,683
+ckanext/valeria/public/valeria_theme.css,sha256=jf1fyIE6vHvUREd1UAkySIDNTmGrBNOgKL9FCama7xA,1367
+ckanext/valeria/public/images/VALERIA_Symbole_Blanc.svg,sha256=Rob_1p_yuy-7_6dMTj71M2rpCDXfUBWEGSmwy5vtM6k,65316
+ckanext/valeria/public/images/VALERIA_Symbole_Gris_Pale.svg,sha256=9LzeskfmCjw1qRSvQ1eDNNMn8lsZFV4cY_teTtDVYdg,9545
+ckanext/valeria/public/images/VALERIA_Symbole_Noir.svg,sha256=zl6ghVeIppK5YVisoFXpd8qwgf5rGuvYSMfVE5OqMq4,9460
+ckanext/valeria/public/images/VALERIA_Texte_Blanc.svg,sha256=cRrQ6H5pOtdopyKNF3EtPJTlTTdSS4QZIAFHu1lRZPU,9363
+ckanext/valeria/public/images/VALERIA_Texte_Couleur.svg,sha256=I7dt4ui7wQijFn9BtPtwzIQFfPVJhqVUHd-KwITa3pc,7299
+ckanext/valeria/public/images/VALERIA_Texte_Noir.svg,sha256=IP17_IJ30Y1xxnuBxJp66Lxi-wmf3Kztu40yR8JsVKI,9363
+ckanext/valeria/public/images/VALERIA_ang_coul.svg,sha256=GskFsc6P6ErHiE5sXkWhyq3ei9KPDxsYpVkz6JmSB8k,39188
+ckanext/valeria/public/images/VALERIA_fr_coul.png,sha256=0TxFAKJxe7ueHfKvF14JxLXNFOsnHvJujenuAZyKDmQ,13546
+ckanext/valeria/public/images/VALERIA_fr_coul.svg,sha256=swJW6XSZ6KmBsGxk7VejfHpoxC1YvetRpE5ngBFLyPo,38916
+ckanext/valeria/public/images/background-image.jpg,sha256=fIdLdX4rNlPH3w53NjvNF17mob0_XiHp9LHwV98ynOs,1737157
+ckanext/valeria/public/images/logo-ulaval-blanc.svg,sha256=mb0GvZiRVG92QUzFTxo24rKutUqZjqRAGVGbmtyqE2Y,34252
+ckanext/valeria/public/images/logo-ulaval.svg,sha256=gkCpROsDTW0mgvCSKfuYRvv0AIv8syAIJB9wuYgmWJ4,31879
+ckanext/valeria/templates/base.html,sha256=UWwwfdaWLTMOo_gG29i4p2bFAqjnIGhvzqLPKogUObQ,122
+ckanext/valeria/templates/footer copy.html,sha256=kgYFfw7ZhyYS6KVaoTgwfkUDEvcjVzxNSOLd4QTQgoA,981
+ckanext/valeria/templates/footer.html,sha256=A0f8WpRT2Ijs_OwK6xF0RxwTb29pIH2tbvq2J2k7mzo,891
+ckanext/valeria/templates/promoted.html,sha256=cOpObc38pjQSlsJF0ewLnptRk61RNRZLWHdlHHUkGzU,788
+ckanext_valeria-0.0.6.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+ckanext_valeria-0.0.6.dist-info/METADATA,sha256=Mu7TXQYIvjjw85qiJy0pdXqSPptJ3vsiWjDFxzN6C_g,263
+ckanext_valeria-0.0.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ckanext_valeria-0.0.6.dist-info/entry_points.txt,sha256=3RyzGHt0kf9yb_xWoHwdvudvielHgH76cWR2KKDMpDw,153
+ckanext_valeria-0.0.6.dist-info/namespace_packages.txt,sha256=5yjNwq-s42weaiMMUuA5lZ45g99ANsfcRBCvac1JMS4,8
+ckanext_valeria-0.0.6.dist-info/top_level.txt,sha256=5yjNwq-s42weaiMMUuA5lZ45g99ANsfcRBCvac1JMS4,8
+ckanext_valeria-0.0.6.dist-info/RECORD,,
