@@ -1,0 +1,5 @@
+from simple_memory_testing_env.env.simple_memory_testing_env import SimpleMemoryTestingEnv 
+from simple_memory_testing_env.env.simple_memory_testing_env import generate_env
+from simple_memory_testing_env.env.simple_memory_testing_env import generate_2colors_env
+from simple_memory_testing_env.env.simple_memory_testing_env import generate_easy_env
+from simple_memory_testing_env.env.simple_memory_testing_env import generate_easy_2colors_env
