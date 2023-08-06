@@ -1,0 +1,11 @@
+requests
+
+[dev]
+twine
+pytest
+check-manifest
+setuptools
+wheel
+
+[json]
+ujson
