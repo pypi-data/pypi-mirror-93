@@ -1,0 +1,6 @@
+include README.md
+include images/*
+include pyautocv/version.py
+include README.rst
+include docs/*
+include sample_results/*
