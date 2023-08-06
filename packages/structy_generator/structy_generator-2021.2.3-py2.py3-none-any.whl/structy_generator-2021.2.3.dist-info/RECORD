@@ -1,0 +1,14 @@
+structy_generator/__init__.py,sha256=xxueNvR3DO-WHa7k5-Hwh34E9mirpqiazA3JZlsieJE,77
+structy_generator/__main__.py,sha256=PSkDt7aWr4LuFvv6QqKu445PTj4nIs8Bt-BPZa8Pt1o,2701
+structy_generator/kinds.py,sha256=gEgxNsLvD84ZNfmoHEBODnDLKNxP4OD3MAUjp0l59F4,2759
+structy_generator/parser.py,sha256=GSx8rcCbe55-Yby7YYFCCUG3-rFGPRDVV1itd4pyFKM,2108
+structy_generator/templates/__init__.py,sha256=QZkkzXtILDO2MFh8d9xyi3XTK72HrwTUpoyyU9ooxdc,1064
+structy_generator/templates/c.header.jinja2,sha256=WNQNxUxheTsXDvvle4Ciu2ucw2HHn43XbJNLNt7H5Ak,845
+structy_generator/templates/c.source.jinja2,sha256=WFZtEmKMv0L9SDyH7CwDmznHMAbDTPIMrDD5QtllO90,1288
+structy_generator/templates/js.jinja2,sha256=J6liqrultCqw1Ty_-iwyRvcUSMDjbu6t1EPJuG8kpXc,528
+structy_generator/templates/py.jinja2,sha256=eKdwyGQFZg5YJ8WY__Xk_JtQDhDxeVvg4C4HpjLYORM,729
+structy_generator-2021.2.3.dist-info/entry_points.txt,sha256=pSG2N4HheVFUoYfadlqhn7SE34nJM3VnA80ZebgaRqs,109
+structy_generator-2021.2.3.dist-info/LICENSE,sha256=2H-JUtOR-N1yc4IbzCPIm2tZO-YF1LhaMWYxpWRhRNE,1092
+structy_generator-2021.2.3.dist-info/WHEEL,sha256=NLqmsx-ZFZ6gDavYgh2oH0ZSN-KRmpcdEXIZDnYy9Pg,99
+structy_generator-2021.2.3.dist-info/METADATA,sha256=UhkAxL8vX7Ytcsq517NW-0bymFNh5FkiTSoaToECB5Q,463
+structy_generator-2021.2.3.dist-info/RECORD,,

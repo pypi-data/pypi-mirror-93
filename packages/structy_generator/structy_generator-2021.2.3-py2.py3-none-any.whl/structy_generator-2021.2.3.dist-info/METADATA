@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: structy_generator
+Version: 2021.2.3
+Summary: Structy generator generates structy structs.
+Home-page: https://github.com/theacodes/structy
+License: UNKNOWN
+Author: Alethea Katherine Flowers
+Author-email: thea@winterbloom.com
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: jinja2
+
+# Structy Generator
+
+This is the generator for [Structy](https://github.com/theacodes/structy).
+

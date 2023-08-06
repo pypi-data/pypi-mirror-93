@@ -1,0 +1,4 @@
+[console_scripts]
+structy=structy_generator.__main__:main
+structy_generator=structy_generator.__main__:main
+
