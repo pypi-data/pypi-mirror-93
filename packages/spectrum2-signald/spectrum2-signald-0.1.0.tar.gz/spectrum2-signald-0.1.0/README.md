@@ -1,0 +1,127 @@
+# Signald spectrum2 backend
+
+## What is this?
+
+This is a way to connect to the [signal](https://www.signal.org/) instant
+messaging network using other messaging networks such as
+[XMPP](https://www.xmpp.org/).
+
+It can act as a linked device to your main signal device (your phone), or
+as a standalone replacement for official signal clients. The latter is my
+personal use case so this is what is most tested.
+
+Alternatively, you might be interested in the signald python interface in
+`spectrum2_signald/signald.py`.
+
+## What do I need?
+
+- [signald](https://gitlab.com/signald/signald)
+- [spectrum2](https://spectrum.im/)
+- [pyspectrum2](https://pypi.org/project/pyspectrum2/)
+- qrencode to link an existing signal device
+
+### Could you be a little more specific?
+
+#### Python stuff
+
+Someday I might package this more properly but for now, just clone this
+repository, and use either `pip install --user` or a virtualenv of some
+sort to install pyspectrum2.
+
+#### XMPP Server
+
+Configure a specific component in your XMPP server, for instance with
+prosody, add something like this to `/etc/prosody/prosody.cfg.lua`:
+
+```lua
+modules_enabled = {
+  -- [...]
+  "privilege";
+}
+
+ -- [...]
+
+Component "signal.example.com"
+    component_secret = "something-random"
+    modules_enabled = {"privilege"}
+
+-- [...]
+
+VirtualHost "example.com"
+    privileged_entities = {
+        ["signal.example.com"] = {
+            roster = "both";
+            message = "outgoing";
+        }
+    }
+
+```
+
+The privilege thing is not mandatory, but will allow carbons for messages
+sent from official signal clients to be sent to XMPP clients.
+
+From my experience, reloading configuration and components while prosody
+is running is not enough to get the privilege thing working, so you might
+need to `systemctl restart prosody` at this point.
+
+#### Signald
+
+Have the `/var/lib/signald/attachments` directory readable for the user
+that runs spectrum2 if you want attachments to work.
+
+#### Spectrum2
+
+Modify the `signal.cfg` file to match the component secret, path to the
+right python interpreter and __main__.py script, and http upload stuff for
+attachments.
+Copy it to `/etc/spectrum2/transports`.
+You should now be able to use `spectrum2_manager signal.example.com start`.
+
+#### XMPP client
+
+- Discover services on your server.
+- Subscribe to the gateway signal.example.com, using your phone number as a
+  username.
+- If you already used signald with this phone number, your roster should
+  populate with your signal contacts and you should be able to send
+  receive/contacts.
+- If you did not configure signald for this phone number, you should receive
+  a message from a signal@signal.example.com prompting you with instructions
+  to either register your phone number or to link signald to the official
+  signal app.
+- To see which groups are available send a message with "groups" as body to
+  this user to get a link of XMPP URIs to join your groups.
+
+## How secure is this?
+
+Not as secure as using the official signal client, especially since this is
+pre-alpha software. You can read more about it [in this gitlab issue](https://gitlab.com/signald/signald/-/issues/101).
+As a rule of thumb, if your main concern is privacy and security, you should
+use the official signal clients.
+However, if you are running your own XMPP server, this shouldn't be a lot
+less "secure" than anything else on your XMPP server.
+
+### Multi-user considerations
+
+Right now, it is not safe at all to allow public registrations, because of [spectrum](https://github.com/SpectrumIM/spectrum2/issues/234) and [signald](https://gitlab.com/signald/signald/-/issues/119).
+This should be improved some day. Right now, my advice is to only use it on your own server,
+and disable public registrations as soon as you register your user.
+
+## What works?
+
+- Send/receive private messages.
+- Join and send/receive messages from groups.
+- Attachments if the the script has access to a dir that is publicly available
+  via http.
+- Carbons for self messages sent from official signal clients.
+
+## What doesn't work?
+
+- It crashes quite often, especially [this issue](https://gitlab.com/signald/signald/-/issues/111)
+  seems to be really annoying.
+- Groups need to be manually joined via the XMPP client.
+- Unsubscribing via XMPP does not delete the signald user.
+
+## What is the license?
+
+Something free (libre), yet to be determined. I am no expert in this stuff.
