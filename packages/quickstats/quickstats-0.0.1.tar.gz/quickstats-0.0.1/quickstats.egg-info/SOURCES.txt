@@ -1,0 +1,9 @@
+README.md
+setup.py
+quickstats/__init__.py
+quickstats/_version.py
+quickstats.egg-info/PKG-INFO
+quickstats.egg-info/SOURCES.txt
+quickstats.egg-info/dependency_links.txt
+quickstats.egg-info/requires.txt
+quickstats.egg-info/top_level.txt
