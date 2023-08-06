@@ -1,0 +1,3 @@
+[console_scripts]
+decker = decker.management:main
+
