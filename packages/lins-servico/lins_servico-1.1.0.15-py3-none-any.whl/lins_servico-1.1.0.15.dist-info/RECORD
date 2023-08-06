@@ -1,0 +1,9 @@
+lins_servico/__init__.py,sha256=bSkAcwmfszAB1mdIosveGgb9hgsnrZBi5VrHBhU4d_0,19
+lins_servico/decorators.py,sha256=nwVRz65boJY3SpaVrH_4N55qdZ7_RNU8SY2eGbx4z-A,1303
+lins_servico/exceptions.py,sha256=lLGnNGEIvisYwB6qHLWTczBx8NTMFPPdMwfFlwEF-TE,91
+lins_servico/thread.py,sha256=1bWXG_v8VaG8MDxFUia72Zlop2geADK9jyiC7eblH54,2128
+lins_servico/utils.py,sha256=1jjIYghkY_pdVf3M2Sej6SrjKHH0xIxPp_OvSGZozGg,656
+lins_servico-1.1.0.15.dist-info/METADATA,sha256=UsGS2WQAHMWVIYpPbDs-F0ZevoT3afIHYNcmnWiV9Zo,452
+lins_servico-1.1.0.15.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+lins_servico-1.1.0.15.dist-info/top_level.txt,sha256=vxLsYs9g7bgGsEiu5XmE9eICtkZOaq6AKdo47n4zpTg,13
+lins_servico-1.1.0.15.dist-info/RECORD,,
