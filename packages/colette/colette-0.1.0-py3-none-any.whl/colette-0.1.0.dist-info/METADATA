@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: colette
+Version: 0.1.0
+Summary: Manage rounds of coffee roulette
+License: AGPL3
+Author: David Horsley
+Author-email: david.e.horsley@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Jinja2 (>=2.11,<3.0)
+Requires-Dist: mip (>=1.13,<2.0)
