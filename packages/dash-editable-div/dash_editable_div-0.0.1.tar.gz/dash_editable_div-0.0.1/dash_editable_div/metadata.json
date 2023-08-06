@@ -1,0 +1,37 @@
+{
+  "src/lib/components/EditableDiv.react.js": {
+    "description": "EditableDiv is div component with editable\ncontent storing its innerHTML in the state.",
+    "displayName": "EditableDiv",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The value displayed in the input."
+      },
+      "children": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "The chilren components"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
+      }
+    }
+  }
+}

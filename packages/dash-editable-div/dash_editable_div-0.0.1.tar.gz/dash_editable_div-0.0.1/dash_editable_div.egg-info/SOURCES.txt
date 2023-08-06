@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+package.json
+setup.py
+dash_editable_div/EditableDiv.py
+dash_editable_div/__init__.py
+dash_editable_div/_imports_.py
+dash_editable_div/dash_editable_div.min.js
+dash_editable_div/dash_editable_div.min.js.map
+dash_editable_div/metadata.json
+dash_editable_div/package-info.json
+dash_editable_div.egg-info/PKG-INFO
+dash_editable_div.egg-info/SOURCES.txt
+dash_editable_div.egg-info/dependency_links.txt
+dash_editable_div.egg-info/top_level.txt

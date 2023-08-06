@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: dash_editable_div
+Version: 0.0.1
+Summary: Editable HTML component for enhanced TextArea components
+Home-page: UNKNOWN
+Author: Rémi Delbouys <remi.delbouys@laposte.net>
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Framework :: Dash
