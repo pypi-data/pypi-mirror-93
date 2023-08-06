@@ -1,0 +1,13 @@
+README.md
+setup_pywitness.py
+pywitness/__init__.py
+pywitness/channels.py
+pywitness/main.py
+pywitness/parser.py
+pywitness/witness.py
+pywitness.egg-info/PKG-INFO
+pywitness.egg-info/SOURCES.txt
+pywitness.egg-info/dependency_links.txt
+pywitness.egg-info/entry_points.txt
+pywitness.egg-info/requires.txt
+pywitness.egg-info/top_level.txt

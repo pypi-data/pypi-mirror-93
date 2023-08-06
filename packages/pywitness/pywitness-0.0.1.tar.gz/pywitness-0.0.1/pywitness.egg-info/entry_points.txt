@@ -1,0 +1,3 @@
+[console_scripts]
+pywitness = pywitness.main:cli_entry_point
+
