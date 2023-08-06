@@ -1,0 +1,59 @@
+.ys-cfg-rpc {
+    max-height: 24px;
+    width: 100%;
+}
+
+.btn-jstree-grid {
+    max-height: 23px;
+}
+
+/*
+ * The default 'disabled' color in jstree is actually *darker* than the
+ * default Cisco-UI-Kit font color. Fix that.
+ */
+.jstree-default .jstree-disabled {
+    color: #b6b9bb !important;  /* Cisco-UI-Kit "Medium Gray 4" */
+}
+
+.netconf-output {
+    background: #dfdfdf;  /* Cisco-UI-Kit "Light Gray 3" */
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.netconf-output pre {
+    background: #fff;
+    padding: 5px;
+    margin: 10px;
+    overflow-x: auto;
+    border: 1px solid #00bceb;  /* Cisco-UI-Kit "Cisco Blue" */
+    /* Improve contrast over Cisco-UI-Kit defaults */
+    color: #000;
+}
+
+/*
+ *  Text color for p element to match <label> color in a form group
+ */
+.cui .form-group p {
+    color: #676767;
+}
+
+/* Source of truth for RPC execution and saving */
+.source-of-truth {
+    outline: 3px solid #00bceb;  /* Cisco-UI-Kit "Cisco Blue" */
+}
+
+/* Our use of font-awesome icons requires a change in the menu declaration */
+.cui .dropdown__menu a {
+    display: inline-block;
+}
+
+/* Don't treat jstree entries as links to highlight as such */
+.cui a.jstree-anchor {
+    color: black;
+}
+
+/* Override apparent bug in Firefox where disabled items are darker than enabled */
+.cui option:disabled, .cui optgroup:disabled {
+    color: #c6c7ca;
+}
