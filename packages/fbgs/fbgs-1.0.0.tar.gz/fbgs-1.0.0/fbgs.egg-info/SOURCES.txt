@@ -1,0 +1,12 @@
+README.md
+setup.py
+fbgs/__init__.py
+fbgs/__main__.py
+fbgs/datatypes.py
+fbgs/exceptions.py
+fbgs/scraper.py
+fbgs/utils.py
+fbgs.egg-info/PKG-INFO
+fbgs.egg-info/SOURCES.txt
+fbgs.egg-info/dependency_links.txt
+fbgs.egg-info/top_level.txt
