@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: cricket-tops
+Version: 1.0.3
+Summary: A Python package to view the top ODI, Tests, T20 ranked players (men and women) as well as Top Tests, ODI and T20 ranked teams.
+Home-page: UNKNOWN
+Author: Arghya Tarafdar
+Author-email: arghya.tarafdar86@yahoo.co.in
+License: MIT
+Description: # Cricket Tops
+        
+        A Python package to view the top ODI, Tests, T20 ranked players (Men and Women) as well as Top Tests, ODI and T20 ranked teams.
+        
+        ## Usage
+        
+        Following methods/functions can be called to view the top teams or top players.
+        	testtop10batters()
+        	testtop10bowlers()
+        	testtop10allrounder()
+        	oditop10batters()
+        	oditop10bowling()
+        	oditop10allrounder()
+        	t20top10batters()
+        	t20top10bowlers()
+        	t20top10allrounder()
+        	toptestteams()
+        	topoditeams()
+        	topt20teams()
+        	odiwonentop10batters()
+        	odiwonentop10bowlers()
+        	odiwonentop10allrounder()
+        	t20wonentop10batters()
+        	t20wonentop10bowlers()
+        	t20wonentop10allrounder()
+        
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
