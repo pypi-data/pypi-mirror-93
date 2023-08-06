@@ -1,0 +1,7 @@
+spectrum2_signald/__init__.py,sha256=Wzf5T3NBDfhQoTnhnRNHSlAsE0XMqbclXG-M81Vas70,22
+spectrum2_signald/__main__.py,sha256=lH5dWtUWApsSp0_7pCbKpSjTFfBzuF7C4JTTChiANTM,2576
+spectrum2_signald/backend.py,sha256=klAAGBlD_do4BIuPDZl5pkp3cCefUppcBypR_KbJPas,16118
+spectrum2_signald/signald.py,sha256=ySTpSLz7PtlkTbJuz0TuZWkWi5EUckBFA47H_1Mbwcs,11564
+spectrum2_signald-0.1.4.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+spectrum2_signald-0.1.4.dist-info/METADATA,sha256=SPbMZLVJJqxmeKzE-RYWOB9O-I_0AN18tKwRRQNeSbI,4819
+spectrum2_signald-0.1.4.dist-info/RECORD,,
