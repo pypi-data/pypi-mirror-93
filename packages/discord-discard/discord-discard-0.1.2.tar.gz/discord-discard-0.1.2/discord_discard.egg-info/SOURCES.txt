@@ -1,0 +1,12 @@
+README.md
+setup.py
+discard/__init__.py
+discard/__main__.py
+discard/cli.py
+discard/discard.py
+discard/test_discard.py
+discord_discard.egg-info/PKG-INFO
+discord_discard.egg-info/SOURCES.txt
+discord_discard.egg-info/dependency_links.txt
+discord_discard.egg-info/requires.txt
+discord_discard.egg-info/top_level.txt
