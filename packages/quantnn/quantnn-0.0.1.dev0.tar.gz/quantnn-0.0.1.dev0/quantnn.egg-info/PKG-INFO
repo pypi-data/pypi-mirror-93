@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: quantnn
+Version: 0.0.1.dev0
+Summary: Quantile regression neural networks.
+Home-page: https://github.com/simonpf/quantnn
+Author: Simon Pfreundschuh
+License: UNKNOWN
+Description: # quantnn
+        
+        The ``quantnn`` package provides an implementation of quantile regression neural
+        networks on top of Keras and Pytorch.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
