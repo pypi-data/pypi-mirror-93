@@ -1,0 +1,18 @@
+{% extends "billjobs/base.html" %}
+{% block body %}
+<section class="section">
+  <div class="container">
+    <div class="column is-half is-offset-one-quarter">
+      <article class="message is-success">
+        <div class="message-header">
+          <p>Bienvenue</p>
+        </div>
+        <div class="message-body">
+          {% url "admin:login" as login_url %}
+          Vous êtes inscrit à notre espace de coworking. <a href="{{ login_url }}">Connectez-vous.</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+{% endblock body %}
