@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: quantkits
+Version: 0.0.6
+Summary: setup quantkits
+Home-page: UNKNOWN
+Author: josephchen
+Author-email: josephchenhk@gmail.com
+License: MIT
+Keywords: setup,quantkits
+Platform: any
+Requires-Dist: sqlalchemy
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: pytz
+Requires-Dist: selenium
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+
+
+This is a collection of quantitative tools for data science and algo-trading.
+
+[Update] 2021-01-29:
+Added quantapi to provide HK companies' financial data.
+
+
