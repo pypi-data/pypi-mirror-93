@@ -1,0 +1,12 @@
+README.txt
+setup.py
+udpipe_parser/__init__.py
+udpipe_parser/dicts.py
+udpipe_parser/text_preprocessor.py
+udpipe_parser/udpipe_parser.py
+udpipe_parser/utilities.py
+udpipe_parser_test.egg-info/PKG-INFO
+udpipe_parser_test.egg-info/SOURCES.txt
+udpipe_parser_test.egg-info/dependency_links.txt
+udpipe_parser_test.egg-info/requires.txt
+udpipe_parser_test.egg-info/top_level.txt
