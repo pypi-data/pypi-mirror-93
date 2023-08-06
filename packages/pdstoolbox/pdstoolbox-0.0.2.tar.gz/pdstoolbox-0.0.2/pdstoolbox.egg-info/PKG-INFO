@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pdstoolbox
+Version: 0.0.2
+Summary: PDS(Personalized Data-Studio) Data Mining Toolbox
+Home-page: https://github.com/QinYu211/pds
+Author: TQ
+Author-email: tqin0411@outlook.com
+License: UNKNOWN
+Description: # PDS
+        PDS(Personalized Data-Studio) Data Mining Toolbox.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
