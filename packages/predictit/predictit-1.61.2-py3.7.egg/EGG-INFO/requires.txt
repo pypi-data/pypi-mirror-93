@@ -1,0 +1,15 @@
+mydatapreprocessing>=1.1.17
+mylogging>=2.0.1
+numpy
+pandas
+eel
+scipy
+statsmodels
+sklearn
+pygments
+tabulate
+matplotlib
+plotly
+seaborn
+requests
+IPython
