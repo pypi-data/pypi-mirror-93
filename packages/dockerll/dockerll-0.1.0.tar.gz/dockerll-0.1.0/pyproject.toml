@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "dockerll"
+version = "0.1.0"
+description = "Docker layer labeler - put tags on the intermediary stages of a multistage docker build"
+authors = ["Mardoqueu Pimentel <mardoqueu.pimentel@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+click = "^7.1.2"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+
+[tool.poetry.scripts]
+dockerll = 'dockerll.__main__:run'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
