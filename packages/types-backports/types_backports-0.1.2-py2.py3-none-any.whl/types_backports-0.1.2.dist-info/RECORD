@@ -1,0 +1,7 @@
+backports-stubs/METADATA.toml,sha256=UCeB452SPwfmvUZ_B_b1UHmJd9YZkyh6ZzO2hxh5IpI,31
+backports-stubs/__init__.pyi,sha256=CKeVKOomLpAIZH2ipts0a2F9ugydH1mCvfIGlfvtEbc,109
+backports-stubs/ssl_match_hostname.pyi,sha256=jAdLMMvdxdszZCIdVGxRZw7i5waIBqb4RqwketJqMr4,81
+types_backports-0.1.2.dist-info/METADATA,sha256=WsO6OMpHKpY7QY5v7Kq_BvG-fqiLeRhNMgNcZEs3XCk,804
+types_backports-0.1.2.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+types_backports-0.1.2.dist-info/top_level.txt,sha256=M4_EBEPR5z2N41Jn7zIsHxINVy64WZG46Osc6wr4X2c,16
+types_backports-0.1.2.dist-info/RECORD,,
