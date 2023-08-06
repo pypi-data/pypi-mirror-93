@@ -1,0 +1,9 @@
+tencentcloud/__init__.py,sha256=TP-Nz7KkrO1KatI76gpqV1_OK3pgKPCtFkAwa10Il5M,630
+tencentcloud/dbbrain/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/dbbrain/v20191016/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/dbbrain/v20191016/dbbrain_client.py,sha256=PiS3Uj1bV5WYIteW0UF3ZgeB7XLAjhGnx4ACZiEIsjY,21272
+tencentcloud/dbbrain/v20191016/models.py,sha256=Gk_D4xo5VWiNC2O7Ee-5DpFwYW1sZ_yAHmC9IWik2n4,51035
+tencentcloud_sdk_python_dbbrain-3.0.336.dist-info/METADATA,sha256=2Q3LHZss7i_mRdIOG2W18da1QtD2l4YuicRIS5puX-0,1452
+tencentcloud_sdk_python_dbbrain-3.0.336.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+tencentcloud_sdk_python_dbbrain-3.0.336.dist-info/top_level.txt,sha256=g-8OyzoqI6O6LiS85zkeNzhB-osEnRIPZMdyRd_0eL0,13
+tencentcloud_sdk_python_dbbrain-3.0.336.dist-info/RECORD,,
