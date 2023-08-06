@@ -1,0 +1,6 @@
+[kedro.hooks]
+kubeflow_cfg_hook = kedro_kubeflow.hooks:register_templated_config_loader
+
+[kedro.project_commands]
+kubeflow = kedro_kubeflow.cli:commands
+
