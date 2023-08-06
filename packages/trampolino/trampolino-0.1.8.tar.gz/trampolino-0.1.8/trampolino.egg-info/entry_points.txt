@@ -1,0 +1,4 @@
+[console_scripts]
+get_example_data = trampolino.utils.get_example_data:grab_data
+trampolino = trampolino.cli:cli
+
