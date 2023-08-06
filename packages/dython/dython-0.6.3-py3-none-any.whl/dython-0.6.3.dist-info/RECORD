@@ -1,0 +1,12 @@
+dython/__init__.py,sha256=DL7a_EpD8UDXLSKf85YgTQ0HfTc64RDSA8shI8Acd_4,269
+dython/_private.py,sha256=rzVENYNJZNlFR8AqvR8OuxBDtYlH-sm83GQ5RbJUJ_8,1693
+dython/data_utils.py,sha256=nepdkI1Di354aN4F474F2-Fx5KySPnvXo9j6eHWBJbQ,4739
+dython/examples.py,sha256=JcGC4L5rBLn6k1MfjhOPSPQiwKm9tRXjxueafITj1Vk,3426
+dython/model_utils.py,sha256=aRWL0fkNweRT8NW221oaYZ648Dyklmu3N9WvoqwbaOo,10609
+dython/nominal.py,sha256=T03qqvtTHuxSTPZlLUSm3tsW69TSGeVacQRlueX6OeY,28979
+dython/sampling.py,sha256=iy37HBy0W7tl1mMfolrir4NDY1p73Dt0nwmwu8dp5xE,1881
+dython-0.6.3.dist-info/LICENSE,sha256=tJeHVo4own9JHidjBGOA4fcdtHWCCZ_vjZnI_Gj_bE4,1525
+dython-0.6.3.dist-info/METADATA,sha256=OOS7ap7ebbfL51JON9_Zg9J_5uulhXEJbSjOTu0XC6E,1830
+dython-0.6.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dython-0.6.3.dist-info/top_level.txt,sha256=N4yzfr30knKHZ4PMeCIe9l4EFMEU-dsHN10S0N_3AsY,7
+dython-0.6.3.dist-info/RECORD,,
