@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: nonebot-plugin-songpicker2
+Version: 0.1.2
+Summary: 适用于nonebot2的点歌插件
+Home-page: https://github.com/maxesisn/nonebot_plugin_songpicker2
+Author: maxesisn
+Author-email: me@maxesisn.online
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Framework :: AsyncIO
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
