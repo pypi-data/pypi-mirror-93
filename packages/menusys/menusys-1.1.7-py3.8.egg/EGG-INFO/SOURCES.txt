@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+menusys/__init__.py
+menusys/menusys.py
+menusys/version.py
+menusys.egg-info/PKG-INFO
+menusys.egg-info/SOURCES.txt
+menusys.egg-info/dependency_links.txt
+menusys.egg-info/top_level.txt
