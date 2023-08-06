@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: troj
+Version: 0.0.3
+Summary: TrojAI provides the troj Python convenience package to allow users to integrate TrojAI adversarial protections and robustness metrics seamlessly into their AI development pipelines.
+Home-page: https://troj.ai
+Author: TrojAI
+Author-email: stan.petley@troj.ai
+License: UNKNOWN
+Description: # TrojAI Integration Package
+        
+        TrojAI provides the troj Python convenience package to allow users to integrate TrojAI adversarial protections and robustness metrics seamlessly into their AI development pipelines.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

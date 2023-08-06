@@ -1,0 +1,7 @@
+README.md
+setup.py
+troj.egg-info/PKG-INFO
+troj.egg-info/SOURCES.txt
+troj.egg-info/dependency_links.txt
+troj.egg-info/top_level.txt
+troj_pkg/__init__.py
