@@ -1,0 +1,13 @@
+{
+    "menu": {
+        "id": "artella-plugins-about",
+        "command": "from artella.core import plugins; plug = plugins.get_plugin_by_id('artella-plugins-about'); plug.about()",
+        "tags": ["artella", "about", "version", "info"],
+        "label": "About Artella Plugin",
+        "parents": ["More Artella"]
+    },
+    "name": "About",
+    "package": "Artella",
+    "resources": "resources",
+    "icon": "about.png"
+}
