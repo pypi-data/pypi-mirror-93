@@ -1,0 +1,6 @@
+voicegen/__init__.py,sha256=Gci_TJeZr_D4UJnFY6TVIAY5iTjFVLIPvv843v_D_PQ,805
+voicegen/__main__.py,sha256=-4akXpjQECBQrRj3gb3AiD_YmTNujD0gtBjcsWe-v3A,971
+voicegen/voicegen.py,sha256=M8XjILW3WEPjDwjTISNH1R4P6zo1nyxB13Al0m5vpks,6602
+voicegen-0.1.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+voicegen-0.1.1.dist-info/METADATA,sha256=RnBhiMFY1-eZhWvcV3JuoyOULfwdEPImue_C8ll7wRU,440
+voicegen-0.1.1.dist-info/RECORD,,
