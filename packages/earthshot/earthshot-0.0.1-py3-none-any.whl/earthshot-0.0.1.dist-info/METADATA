@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: earthshot
+Version: 0.0.1
+Summary: Earthshot Labs Central Python Package
+Home-page: https://github.com/earthshot-labs/earthshot
+Author: Eartshot Labs Contributors
+Author-email: jlmccreight@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: bokeh (==2.2.3)
+Requires-Dist: earthengine-api (==0.1.243)
+Requires-Dist: folium (>=0.11.0)
+Requires-Dist: numpy (==1.18.5)
+Requires-Dist: pandas (==1.0.5)
+Requires-Dist: pytest (==5.4.3)
+Requires-Dist: pytest-html (==2.1.1)
+Requires-Dist: pytest-datadir-ng (==1.1.1)
+Requires-Dist: pytest-lazy-fixture (==0.6.3)
+Requires-Dist: scipy (>=1.2.1)
+
+# earthshot
+
+A central python package for projects at Eartshot Labs. 
+
+
