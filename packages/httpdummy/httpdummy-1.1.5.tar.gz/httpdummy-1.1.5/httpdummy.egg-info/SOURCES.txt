@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+httpdummy/__init__.py
+httpdummy/server.py
+httpdummy.egg-info/PKG-INFO
+httpdummy.egg-info/SOURCES.txt
+httpdummy.egg-info/dependency_links.txt
+httpdummy.egg-info/entry_points.txt
+httpdummy.egg-info/not-zip-safe
+httpdummy.egg-info/requires.txt
+httpdummy.egg-info/top_level.txt
