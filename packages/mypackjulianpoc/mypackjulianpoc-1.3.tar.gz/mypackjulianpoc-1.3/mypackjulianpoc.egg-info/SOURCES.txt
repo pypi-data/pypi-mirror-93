@@ -1,0 +1,6 @@
+mypackjulianpoc.egg-info/PKG-INFO
+mypackjulianpoc.egg-info/SOURCES.txt
+mypackjulianpoc.egg-info/dependency_links.txt
+mypackjulianpoc.egg-info/top_level.txt
+selfpoc/_init_.py
+selfpoc/mySeflJulianSum.py
