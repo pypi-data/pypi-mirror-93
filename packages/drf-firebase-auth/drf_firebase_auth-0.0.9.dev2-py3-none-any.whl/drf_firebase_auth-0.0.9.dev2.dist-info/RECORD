@@ -1,0 +1,12 @@
+drf_firebase_auth/__init__.py,sha256=EUiwDUKDroiTOhcuXyX8RzNzaVRnukZzygr1p27fK0M,494
+drf_firebase_auth/apps.py,sha256=jV6Np4viEuO55ZC-ZUe1NslTHyCiRGTmVT-Y3SG9rBY,120
+drf_firebase_auth/authentication.py,sha256=oqHKsC7oKXdr_MX3I2k-jrB1EAPBeJmWbeiXZq_5T70,10129
+drf_firebase_auth/models.py,sha256=DZ-mKMC3-AmgPvqIBH6ejQUASY2ceSpd5ZBtMcdAxFU,977
+drf_firebase_auth/settings.py,sha256=5w6IcRDK-swIqe0DOB5HDr5wAZtAFHgx-xC_R3vGqKU,1228
+drf_firebase_auth/migrations/0001_initial.py,sha256=FfECXKNhDz9V1PejnfBBFoFLmyV-2HpgcH7BNtT0GtU,1378
+drf_firebase_auth/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+drf_firebase_auth-0.0.9.dev2.dist-info/LICENSE,sha256=VWXhFYMyG8hFA_GOmyZpxg95UWobhWpuqgAZTGKkMEM,1070
+drf_firebase_auth-0.0.9.dev2.dist-info/METADATA,sha256=-1yHYFeAW0zk7tSnnJw5KSyeywYo7ID2AM6WdNElY8c,4162
+drf_firebase_auth-0.0.9.dev2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+drf_firebase_auth-0.0.9.dev2.dist-info/top_level.txt,sha256=Ao2m8InrC64gSMnxgCxoZjzW7LLNf_8hFQOafUkj-iI,18
+drf_firebase_auth-0.0.9.dev2.dist-info/RECORD,,
