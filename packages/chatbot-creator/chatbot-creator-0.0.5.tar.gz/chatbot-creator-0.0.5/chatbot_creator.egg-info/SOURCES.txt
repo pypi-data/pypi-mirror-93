@@ -1,0 +1,11 @@
+README.md
+setup.py
+ChatbotCreator/__init__.py
+ChatbotCreator/cc.py
+ChatbotCreator/dbot.py
+ChatbotCreator/run.py
+chatbot_creator.egg-info/PKG-INFO
+chatbot_creator.egg-info/SOURCES.txt
+chatbot_creator.egg-info/dependency_links.txt
+chatbot_creator.egg-info/requires.txt
+chatbot_creator.egg-info/top_level.txt
