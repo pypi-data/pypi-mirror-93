@@ -1,0 +1,8 @@
+dataclass_utils/VERSION.py,sha256=baAcEjLSYFIeNZF51tOMmA_zAMhN8HvKael-UU-Ruec,22
+dataclass_utils/__init__.py,sha256=wtS9NYH7izEAamTBTWENCbSjISPUTUaZpTYdtASHwvY,942
+dataclass_utils/error.py,sha256=AZyZLI0ssEmF14edIh1z-U-P7ZCw3iQDZFoLh-DV_JM,406
+dataclass_utils/into_dataclass.py,sha256=9p56zHFwl7Vc4r6AqAdchRhyhaaSNxTh3s_cCoE2jDY,1142
+dataclass_utils/type_checker.py,sha256=D6gfoXFJSrGGkjsIU7NfZUJR-AW2YaY0TL9qjTlGdFY,3652
+dataclass_utils-0.6.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+dataclass_utils-0.6.1.dist-info/METADATA,sha256=e1JN2mYhmWPWeRfGLz_wOkt60fMHln0ipqQZuCIa4cg,298
+dataclass_utils-0.6.1.dist-info/RECORD,,
