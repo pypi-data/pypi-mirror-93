@@ -1,0 +1,12 @@
+pyperclip3/__init__.py,sha256=Akgbr9jU4sdc4V2Xn0L8T434Uu-t7AT3onSRWbTmWdU,1562
+pyperclip3/__main__.py,sha256=IifrnAzdJ9Uns8r7tUBBWYn5PFxJZOrd5rFQ7xYKDsQ,657
+pyperclip3/base.py,sha256=hll9BifvANWU85qIPAF6C_gDJgPYXp3pM4aNkwomXUM,1197
+pyperclip3/cli.py,sha256=QdVLhtH7crfARly8_m-RI25oGKgKxZdsWGlUG6MtOpk,1542
+pyperclip3/macos_clip.py,sha256=niYOsNpTp7diELPs0naqOZllO_ZEE8tMuJ54pyDJI8o,6026
+pyperclip3/util.py,sha256=bio2-8CNzEpzhpBpy6Qj2_hQZB5dMBCdIZha4i2ZV4w,1003
+pyperclip3/win_clip.py,sha256=AlOxQ7L_pOvGjjvvh-bC1wHowElLuRpadJ0S-W8bSZQ,7826
+pyperclip3-0.3.0.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+pyperclip3-0.3.0.dist-info/METADATA,sha256=nUTEHq47RVufeD1Ed8-geflnLel5EqXhUkIlvfCRKNw,2871
+pyperclip3-0.3.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyperclip3-0.3.0.dist-info/top_level.txt,sha256=4UU993BKGZI2r02YK5NQll5fm0BuBS1FyIw4jmPvvak,11
+pyperclip3-0.3.0.dist-info/RECORD,,
