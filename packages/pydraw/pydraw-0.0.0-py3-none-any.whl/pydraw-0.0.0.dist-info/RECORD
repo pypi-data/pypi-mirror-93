@@ -1,0 +1,16 @@
+pydraw/__init__.py,sha256=bhIXJVyhw2vtDwh7Kr823NGqpbT7vPjkR6E9JHnSlKw,170
+pydraw/color.py,sha256=-2GLGDPUput4ihbJbqoMgO-cGVAqMF5CwpBB2GnAgfg,3070
+pydraw/errors.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydraw/location.py,sha256=iF5MmtyVSf_X5H3F-rgPkwsA2qy_IDZkK8BSl9P2TqI,700
+pydraw/objects.py,sha256=YNmndbIJ48oHh1hUBMNHmwdFrUQz79lPP9KQujV5kZc,8391
+pydraw/screen.py,sha256=eTfus_7550WEufdPlURBSmQwCgLO4NN2QihSMRn6B4A,11411
+tests/__init__.py,sha256=STxOJsavZGEG9OFGVNVEdI-Jv605jZods2cOjpCYaV4,41
+tests/fps_test.py,sha256=W2L6x80UCjVuJC7yJFsl6U37KBLTi8sLQU5wpTLI_R8,1322
+tests/full_test.py,sha256=TFP5njN1lQ1RGvjOYKCT54iQka9Ga0pXY1xemvHS1Rg,1025
+tests/object_test.py,sha256=evtxag0mVhySYlKm81Ak6sDztPsXpdVBz7pRHAoia5c,461
+tests/tutorial.py,sha256=I2ptD_4tHqzQaXpi_dzYT49KH6htqQceMCBv-WbEO-M,2005
+pydraw-0.0.0.dist-info/LICENSE.md,sha256=A49wYvkunfh99QzrSM_qnDu4Cf0591mzeF_mUW117x8,1088
+pydraw-0.0.0.dist-info/METADATA,sha256=tpLDiDS0ogQU9GqQjp4FaI0v1Q944xBSBMlsifbKjIA,580
+pydraw-0.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pydraw-0.0.0.dist-info/top_level.txt,sha256=CstEtkSWciqMigRl_I_q9ri8CYlp5tRC7jqtkG43Dlo,13
+pydraw-0.0.0.dist-info/RECORD,,
