@@ -1,0 +1,4 @@
+anyio>=2
+asks
+asyncakumuli>=0.4.3
+distkv>=0.50
