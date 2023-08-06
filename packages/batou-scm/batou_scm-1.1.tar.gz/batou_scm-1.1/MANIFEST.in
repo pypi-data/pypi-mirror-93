@@ -1,0 +1,12 @@
+include *.rst
+include *.txt
+include *.yaml
+include .coveragerc
+include buildout.cfg
+include pytest.ini
+include src/batou_scm/resources/hgrc
+include tox.ini
+
+recursive-include doc *.py
+recursive-include doc *.txt
+recursive-include src *.cfg
