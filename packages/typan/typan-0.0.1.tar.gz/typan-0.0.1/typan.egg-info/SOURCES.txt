@@ -1,0 +1,13 @@
+README.md
+setup.py
+typan/__init__.py
+typan/filestream.py
+typan/pyinclude.py
+typan/pysave.py
+typan/tkplus.py
+typan/typan.py
+typan/uppy.py
+typan.egg-info/PKG-INFO
+typan.egg-info/SOURCES.txt
+typan.egg-info/dependency_links.txt
+typan.egg-info/top_level.txt
