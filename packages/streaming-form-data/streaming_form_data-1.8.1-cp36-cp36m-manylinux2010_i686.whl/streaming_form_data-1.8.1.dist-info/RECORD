@@ -1,0 +1,10 @@
+streaming_form_data/targets.py,sha256=ToQOKOMgCsRoTdwc0j0035z8UKUv2dnVDB67YAFIrOE,3206
+streaming_form_data/__init__.py,sha256=Vdf5aPNYo49JI8WSVlGkQE6_PgrkVGJ6-RQWIW8eZYY,106
+streaming_form_data/_parser.cpython-36m-i386-linux-gnu.so,sha256=BiYUAuz8mbJXRqnvutlUFz3xyTXG_Yps8MHGCVMf4ts,784280
+streaming_form_data/validators.py,sha256=jfXWpKkdsA8yprSjexhUOm-5uSCV1JUg9pF8HQIYY8U,401
+streaming_form_data/parser.py,sha256=uN80nLibAVx1GQdkEfNSkp-_eArK2Ejj-7L109ko-rw,2175
+streaming_form_data-1.8.1.dist-info/LICENSE.txt,sha256=XkPbI6zVBy2SNv3X2ilBnze7j-T0Fw3j5pWUH9Xxtg0,1077
+streaming_form_data-1.8.1.dist-info/METADATA,sha256=72Ti4ZJ8G9hYp_U7ISMDj9ADLwZRAjhcVJzWwPDLjS4,3527
+streaming_form_data-1.8.1.dist-info/WHEEL,sha256=7JtNhRWDruRK5WHD5rpJF9GKteDJvrX2KOqcdZMEbfQ,110
+streaming_form_data-1.8.1.dist-info/top_level.txt,sha256=lTgAZgYvLH3LLe_DILwXtizVMs-Tb9GgpCgUBbRFRfo,20
+streaming_form_data-1.8.1.dist-info/RECORD,,
