@@ -1,0 +1,9 @@
+README.md
+setup.py
+detect_litter/__init__.py
+detect_litter/main.py
+detect_litter.egg-info/PKG-INFO
+detect_litter.egg-info/SOURCES.txt
+detect_litter.egg-info/dependency_links.txt
+detect_litter.egg-info/entry_points.txt
+detect_litter.egg-info/top_level.txt
