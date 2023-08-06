@@ -1,0 +1,9 @@
+pyjwt
+kubernetes
+gql
+httpx
+pydantic
+python-dateutil
+
+[fastapi]
+fastapi
