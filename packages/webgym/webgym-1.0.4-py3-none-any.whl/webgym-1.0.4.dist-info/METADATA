@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: webgym
+Version: 1.0.4
+Summary: Reinforcement Learning Environments for 50+ web-based tasks
+Home-page: https://github.com/praveen-palanisamy/webgym
+Author: Praveen Palanisamy
+Author-email: praveen.palanisamy@outlook.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/praveen-palanisamy/Tensorflow-2-Reinforcement-Learning-Cookbook
+Project-URL: Author website, https://praveenp.com
+Keywords: webgym,rl web tasks,rl in browser,Gym environments
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+Requires-Dist: gym
+
+## WebGym
+
+The WebGym package provides learning environments for agents to perceive the world-wide-web like how we (humans) perceive – using the pixels rendered on to the display screen. The agent interacts with the environment using keyboard and mouse events as actions. This allows the agent to experience the world-wide-web like how we do thereby require no new additional modifications for the agents to train. This allows us to train RL agents that can directly work with the web-based pages and applications to complete real-world tasks. It is an extension of Wolrd-Of-Bits (WOB) & MiniWoB++.
+
+WebGym is part of [TensorFlow Reinforcement Learning Cookbook](https://github.com/PacktPublishing/Tensorflow-2-Reinforcement-Learning-Cookbook). More details about this package, see Deep RL Web Assistants discussed in **Chapter 6 - RL in real-world: Building intelligent agents to complete your To-dos**
+
+
