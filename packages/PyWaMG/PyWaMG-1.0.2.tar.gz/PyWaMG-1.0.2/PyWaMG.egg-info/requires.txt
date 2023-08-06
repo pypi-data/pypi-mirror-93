@@ -1,0 +1,3 @@
+msedge-selenium-tools
+selenium==3.141
+pillow==8.0.1
