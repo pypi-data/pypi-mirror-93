@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: thmap
+Version: 0.0.2
+Summary: A solar thematic map manipulation class
+Home-page: UNKNOWN
+Author: J. Marcus Hughes
+Author-email: j-marcus.hughes@noaa.gov
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: scikit-learn
+Requires-Dist: numpy
+Requires-Dist: deepdish
+Requires-Dist: astropy
+Requires-Dist: goes-solar-retriever
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
