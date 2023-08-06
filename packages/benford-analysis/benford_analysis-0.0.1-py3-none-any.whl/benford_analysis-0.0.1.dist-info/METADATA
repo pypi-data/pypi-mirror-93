@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: benford-analysis
+Version: 0.0.1
+Summary: Use this package to analyse your data with Benford's law
+Home-page: https://github.com/jurjen93/Benfords_law
+Author: Jurjen de Jong
+Author-email: jurjendejong93@gmail.com
+License: LICENSE.txt
+Platform: UNKNOWN
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+
+UNKNOWN
+
+
