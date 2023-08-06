@@ -1,0 +1,3 @@
+[console_scripts]
+dtool-tk = dtool_gui_tk.tkgui:tkgui
+
