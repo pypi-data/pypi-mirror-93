@@ -1,0 +1,16 @@
+jupyterhub>=1.1.*
+docutils>=0.15.*
+tornado>=6.0.*
+traitlets>=4.3.*
+
+[dev]
+black==20.8b1
+docutils==0.16
+flake8==3.8.4
+
+[test]
+pytest==6.1.*
+requests==2.22.0
+docker==4.1.0
+docutils==0.15.2
+flake8==3.8.4
