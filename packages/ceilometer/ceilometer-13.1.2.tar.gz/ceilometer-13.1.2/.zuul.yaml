@@ -1,0 +1,40 @@
+- job:
+    name: grenade-dsvm-ceilometer
+    parent: legacy-dsvm-base
+    run: playbooks/legacy/grenade-dsvm-ceilometer/run.yaml
+    post-run: playbooks/legacy/grenade-dsvm-ceilometer/post.yaml
+    timeout: 10800
+    voting: false
+    irrelevant-files: &ceilometer-irrelevant-files
+      - ^(test-|)requirements.txt$
+      - ^setup.cfg$
+      - ^doc/.*$
+      - ^.*\.rst$
+      - ^releasenotes/.*$
+      - ^ceilometer/tests/.*$
+    required-projects:
+      - openstack/grenade
+      - openstack/devstack-gate
+      - openstack/ceilometer
+- project:
+    templates:
+      - openstack-cover-jobs
+      - openstack-python-jobs
+      - openstack-python3-train-jobs
+      - publish-openstack-docs-pti
+      - periodic-stable-jobs
+      - release-notes-jobs-python3
+      - openstack-lower-constraints-jobs
+    check:
+      jobs:
+        - grenade-dsvm-ceilometer
+        - telemetry-dsvm-integration-train:
+            irrelevant-files: *ceilometer-irrelevant-files
+    gate:
+      queue: telemetry
+      jobs:
+        - grenade-dsvm-ceilometer
+        - telemetry-dsvm-integration-train:
+            irrelevant-files: *ceilometer-irrelevant-files
+        - telemetry-dsvm-integration-ipv6-only:
+            irrelevant-files: *ceilometer-irrelevant-files
