@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+h2.c
+h2.h
+setup.py
+verthashmodule.c
+tiny_sha3/sha3.c
+tiny_sha3/sha3.h
+verthash.egg-info/PKG-INFO
+verthash.egg-info/SOURCES.txt
+verthash.egg-info/dependency_links.txt
+verthash.egg-info/top_level.txt
