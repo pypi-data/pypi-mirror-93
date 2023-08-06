@@ -1,0 +1,4 @@
+[console_scripts]
+gf = gistfinder.console:cli
+gistfinder = gistfinder.console:cli
+

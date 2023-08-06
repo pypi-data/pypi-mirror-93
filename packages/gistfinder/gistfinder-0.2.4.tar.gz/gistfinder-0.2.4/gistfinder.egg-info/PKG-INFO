@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gistfinder
+Version: 0.2.4
+Summary: A CLI tool for searching your gists
+Home-page: https://github.com/robdmc/gistfinder
+Author: Rob deCarvalho
+Author-email: unlisted@unlisted.net
+License: MIT
+Description: A CLI tool for searching your gists
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Provides-Extra: dev
