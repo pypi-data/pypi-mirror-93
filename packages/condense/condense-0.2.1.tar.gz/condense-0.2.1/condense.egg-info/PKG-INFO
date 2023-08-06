@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: condense
+Version: 0.2.1
+Summary: Neural Network Pruning Framework
+Home-page: https://github.com/SirBubbls/condense
+Author: Lucas Sas Brunschier
+Author-email: lucassas@live.de
+License: MIT
+Download-URL: https://github.com/SirBubbls/condense/archive/v_01.tar.gz
+Description: > **CAUTION**  
+        > This module is currently in development so bugs will happen and frequent updates are highly recommended.
+        
+        # Condense
+        
+        ## Functionality
+        - Keras wrapper to prune model during training (`.fit()`)
+        - Unit/Weight pruning on numpy ndarrays 
+        
+Keywords: pruning,ai,machine learning,tensorflow,framework
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown

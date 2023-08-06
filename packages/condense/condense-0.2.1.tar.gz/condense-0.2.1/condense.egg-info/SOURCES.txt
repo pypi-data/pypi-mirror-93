@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+condense/__init__.py
+condense.egg-info/PKG-INFO
+condense.egg-info/SOURCES.txt
+condense.egg-info/dependency_links.txt
+condense.egg-info/requires.txt
+condense.egg-info/top_level.txt
