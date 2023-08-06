@@ -1,0 +1,8 @@
+queenbee==1.22.15
+queenbee-local==0.3.2
+click-plugins==1.1.1
+
+[pollination]
+queenbee-pollination==0.7.2
+click==7.1.2
+click_plugins==1.1.1
