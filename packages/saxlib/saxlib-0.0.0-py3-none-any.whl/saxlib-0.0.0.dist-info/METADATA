@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: saxlib
+Version: 0.0.0
+Summary: SAXLIB : Library of Neural Network S-parameter compact models for SAX 
+Home-page: UNKNOWN
+Author: Floris Laporte
+Author-email: floris.laporte@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: Apache Software License
+Description-Content-Type: text/markdown
+
+# SAXLIB
+
+Library of Neural Network S-parameter compact models for SAX.
+
+[SAX](https://github.com/flaport/sax) :: S + Autograd + XLA :: S-parameter based frequency domain circuit simulations and optimizations based on JAX. 
+
+
+## Installation
+
+```
+pip install saxlib
+```
+
+

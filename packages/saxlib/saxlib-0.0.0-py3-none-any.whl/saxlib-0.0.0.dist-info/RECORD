@@ -1,0 +1,13 @@
+saxlib/__init__.py,sha256=eBGUl78fWK_T0BtRxaIUVrWfz-2KEkGFVTXcGpyxlqg,183
+saxlib/dc_straight/__init__.py,sha256=tCXH8gZJRl-9qpOF4a8GDmyc_ZSs3HV1gMWQj3YcEYY,179
+saxlib/dc_straight/dc_straight.py,sha256=eZN1T05Ey-DIzrCGWlDixQCsXdbiUS-5mZCjMoDRDfo,5478
+saxlib/dc_straight/weights/neff_norms.json,sha256=yNgQhjX_r5CeJ5jduW3LZTtyiqiVCjhmC__27lE0c0M,2236
+saxlib/dc_straight/weights/neff_weights_L=02_H=016.json,sha256=dtnuGZwDNitai52MkIptQrcOQThWR6fJG_aWHX8Z5nw,19113
+saxlib/wg_straight/__init__.py,sha256=1YkbVphP-98cwDLbbYe5s-yL2ItJpgppuM98LMU1fZ8,180
+saxlib/wg_straight/wg_straight.py,sha256=-XPJFNW33HHWmAQNKMA7nkfarQipZng0zXRUsTlI0l8,4366
+saxlib/wg_straight/weights/neff_norms.json,sha256=za5jQC6dS2XHQZomCfw2vAN10EHO2lpdaoGrw16LRXU,1236
+saxlib/wg_straight/weights/neff_weights_L=02_H=004.json,sha256=tpFpexz1ZPjW3KRusuabJeL6uIuO_5c3XfVL2WUJ4MY,2654
+saxlib-0.0.0.dist-info/METADATA,sha256=WLR4luHocBUWWNUpqjX0_0GCo4kwuDB2Bjz6ai171I0,1089
+saxlib-0.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+saxlib-0.0.0.dist-info/top_level.txt,sha256=jr9KJQJ115KdJvyJbzAfUv0C0ZKe7tASdKG_CU-JWBU,7
+saxlib-0.0.0.dist-info/RECORD,,
