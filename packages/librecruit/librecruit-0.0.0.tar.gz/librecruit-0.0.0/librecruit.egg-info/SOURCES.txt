@@ -1,0 +1,5 @@
+setup.py
+librecruit.egg-info/PKG-INFO
+librecruit.egg-info/SOURCES.txt
+librecruit.egg-info/dependency_links.txt
+librecruit.egg-info/top_level.txt
