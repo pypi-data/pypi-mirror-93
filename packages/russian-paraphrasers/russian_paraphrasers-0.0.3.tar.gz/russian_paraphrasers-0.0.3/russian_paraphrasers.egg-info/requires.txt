@@ -1,0 +1,4 @@
+nltk
+scipy
+transformers>=4.0.1
+sentence-transformers==0.4.0
