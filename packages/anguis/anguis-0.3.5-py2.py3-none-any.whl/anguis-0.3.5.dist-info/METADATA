@@ -1,0 +1,131 @@
+Metadata-Version: 2.1
+Name: anguis
+Version: 0.3.5
+Summary: A generic key-store library.
+Home-page: https://github.com/reale/anguis
+Author: Roberto Reale
+Author-email: roberto@reale.me
+License: MIT license
+Keywords: anguis,cache,key-value store
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Requires-Dist: gitpython
+Requires-Dist: paramiko
+Requires-Dist: etcd3
+Requires-Dist: redis
+Requires-Dist: sqlitedict
+Requires-Dist: pymemcache
+Requires-Dist: google-api-python-client
+Requires-Dist: google-auth-httplib2
+Requires-Dist: google-auth-oauthlib
+
+======
+anguis
+======
+
+.. image:: https://img.shields.io/pypi/v/anguis.svg
+        :target: https://pypi.python.org/pypi/anguis
+
+.. image:: https://img.shields.io/travis/reale/anguis.svg
+        :target: https://travis-ci.com/reale/anguis
+
+.. image:: https://readthedocs.org/projects/anguis/badge/?version=latest
+        :target: https://anguis.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+.. image:: https://pyup.io/repos/github/reale/anguis/shield.svg
+     :target: https://pyup.io/repos/github/reale/anguis/
+     :alt: Updates
+
+*Latet anguis in herba* (Virgil, *Eclogues*, 3, 93)
+
+**anguis** is a generic key-store library in Python.
+
+Currently, the following backends are supported:
+
+-  filesystem
+-  Etcd
+-  Git
+-  Redis
+-  memcached
+-  SFTP
+-  Sqlite
+-  Google Drive
+
+Rationale
+---------
+
+TODO
+
+Installation
+------------
+
+From source:
+
+::
+
+    $ python setup.py install
+
+From PyPI:
+
+::
+
+    $ pip3 install anguis
+
+Example of usage
+----------------
+
+::
+
+    from anguis.fs import AnguisFS
+
+    cache = AnguisFS()
+
+    cache['foo'] = 'bar'
+    print(cache['foo'])
+    # bar
+
+    del(cache['foo'])
+    print(cache['foo'])
+    # None
+
+
+=======
+History
+=======
+
+0.3.5 (2021-02-03)
+------------------
+
+* Partial support for Google Drive.
+
+0.3.4 (2021-02-03)
+------------------
+
+* Partial support for memcached.
+
+0.3.3 (2021-02-03)
+------------------
+
+* Fix imports.
+
+0.3.2 (2021-02-03)
+------------------
+
+* Restructure.
+
+0.3.0 (2021-02-03)
+------------------
+
+* Dict-like behavior, added support for Sqlite, package restructured.
+
+
