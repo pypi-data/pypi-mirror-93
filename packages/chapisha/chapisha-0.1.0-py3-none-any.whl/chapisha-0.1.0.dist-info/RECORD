@@ -1,0 +1,24 @@
+chapisha/__init__.py,sha256=db2vr_Gye98pbBm4euCDRO6wzS3ikfLKK7jGtYtAaA4,268
+chapisha/__main__.py,sha256=MR4Q-2vwgRjKl4WSIlOOn4KWEn6eX9p9Pl6yVfVROMQ,193
+chapisha/create/__init__.py,sha256=DYBqw4aOX6KeCP4FpbkovzRGvYbBZivp1FsO43zm788,156
+chapisha/create/create.py,sha256=65s1iJ6Y37fb7CL401u1-ZQRO39m1x0b7jjFp3sdo4k,25797
+chapisha/helpers/__init__.py,sha256=Ba0SRra8loyVrLGoRFUqHqMujp1po2lZwf474LH8V30,145
+chapisha/helpers/common.py,sha256=S1BfcQduXesOLICDZGJVHNSbZoD4O3QSR7IM9Ddl1To,11279
+chapisha/helpers/css/stylesheet.css,sha256=Qjg3pYkJ_1mRJgUB_oxaU_oCglbvjs2qmO8HSVpiEso,2340
+chapisha/helpers/fonts/PT-Sans-Bold.ttf,sha256=V2tZcy__lniV66Hu0PxfjNsGnqMf3oeMDNw2qi1GFe8,457448
+chapisha/helpers/fonts/PT-Sans-Italic.ttf,sha256=Es-IdNB7Wj4pAxTKV1uYDly1dC9C5wM-aCsVsRUxrZM,412804
+chapisha/helpers/fonts/PT-Sans.ttf,sha256=O7_5q2mEU6THBeyaudj1KNIVYqaEu2gW8VcWNjfqyRQ,429172
+chapisha/helpers/fonts/PT-Serif-Bold.ttf,sha256=fOwxPZBgxKDAk8PI9Hk-iWZj0evKt-8PK42pMqLJbEI,327840
+chapisha/helpers/fonts/PT-Serif-Italic.ttf,sha256=R1cRfbbdlwlItqQSu6v4OtUzSXlD47MIelhyGXIavzk,363200
+chapisha/helpers/fonts/PT-Serif.ttf,sha256=feLgCJ5bpOj_kabWY_Vs5PsJFDH9V0G4KACDwkqWcCU,346892
+chapisha/helpers/fonts/Times-New-Roman-Italic.ttf,sha256=Inszu9kxvnlJbhcWesW7d2ZlZq5U81NJWs5mE5fwjgU,884748
+chapisha/helpers/fonts/Times-New-Roman.ttf,sha256=XrqUpHt5AnVxnM3dVdjyvtY-iuw87PonXeT1XxSx2kE,1110940
+chapisha/helpers/images/logo.png,sha256=SSWYXll8Jx17asrOu5SD5LngKfumu-xGvvpgdinM8ac,1468
+chapisha/helpers/json/dublin_core.json,sha256=ZvV06M3Hnh89NxoXLnsFlArCm3Yvp1f12xmBlpgRZSY,1466
+tests/data/Usan Abasi’s Lament - ebook.docx,sha256=H5sUjGrCSFzF2ELNCcw3HPrYD7BCssU6Kpgbdoyxtrc,75342
+tests/data/cover.jpg,sha256=z_tW9ukUlr8WyYdsnnqYqRfFF0Rpfus5yHQUnl56JM8,625919
+tests/data/usan-abasis-lament.epub,sha256=N9hYXWC4kj76edZtzuoiGGL6PlL2O2eMkdmyLlsehJY,2844319
+chapisha-0.1.0.dist-info/LICENSE,sha256=uee1qmE16X_WleVAlWGPy5R7UqHnn-d8ynrL1Sjj1Js,1543
+chapisha-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+chapisha-0.1.0.dist-info/METADATA,sha256=PMZ72da1YoY83A5CfX3_M9vG3wEtZNJRoYjoPycbdnE,3973
+chapisha-0.1.0.dist-info/RECORD,,
