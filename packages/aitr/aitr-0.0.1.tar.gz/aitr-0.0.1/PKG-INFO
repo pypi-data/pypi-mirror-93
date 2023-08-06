@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: aitr
+Version: 0.0.1
+Summary: Artificial Intelligence for Turkish
+Home-page: https://github.com/msaidzengin/aitr
+Author: M. Said Zengin
+Author-email: msaidzengin@gmail.com
+Maintainer: M. Said Zengin
+Maintainer-email: msaidzengin@gmail.com
+License: UNKNOWN
+Description: # aitur
+        Artificial Intelligence for Turkish
+Keywords: ai,turkish,tur,artificial intelligence,yapay zeka,makine ögrenmesi
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
