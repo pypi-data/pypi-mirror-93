@@ -1,0 +1,6 @@
+pcg_gazebo
+numpy-quaternion
+scikit-learn
+shapely
+opencv-python
+trimesh[easy]
