@@ -1,0 +1,7 @@
+README.md
+setup.py
+ColorX.egg-info/PKG-INFO
+ColorX.egg-info/SOURCES.txt
+ColorX.egg-info/dependency_links.txt
+ColorX.egg-info/requires.txt
+ColorX.egg-info/top_level.txt
