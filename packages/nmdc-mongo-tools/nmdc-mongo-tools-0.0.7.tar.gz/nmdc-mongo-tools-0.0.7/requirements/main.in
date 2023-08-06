@@ -1,0 +1,7 @@
+jsonschema
+mongospawn
+pymongo
+python-dotenv
+requests
+tqdm
+toolz
