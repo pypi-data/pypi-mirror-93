@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: python-linstor
+Version: 1.6.0
+Summary: Linstor python api
+Home-page: https://www.linbit.com
+Author: Robert Altnoeder <robert.altnoeder@linbit.com>, Roland Kammerer <roland.kammerer@linbit.com>, Rene Peinthor <rene.peinthor@linbit.com>
+Author-email: roland.kammerer@linbit.com
+Maintainer: LINBIT HA-Solutions GmbH
+Maintainer-email: drbd-user@lists.linbit.com
+License: GPLv3
+Platform: UNKNOWN
+Requires-Dist: enum34 ; python_version<'3'
+
+Python linstor api interface
+
+
