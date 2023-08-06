@@ -1,0 +1,9 @@
+gitpython
+paramiko
+etcd3
+redis
+sqlitedict
+pymemcache
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
