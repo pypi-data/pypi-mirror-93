@@ -1,0 +1,17 @@
+numpy
+matplotlib
+scipy
+
+[docs]
+sphinx
+
+[jupyter]
+jupyterlab
+
+[lint]
+black
+pylint
+
+[test]
+pytest
+radon
