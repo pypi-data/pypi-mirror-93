@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: covpipe
+Version: 3.0.0
+Summary: Sars-Cov-2 NGS Pipline for generating consensus sequences
+Home-page: UNKNOWN
+Author: René Kmiecinski
+Author-email: r.w.kmiecinski@gmail.com
+License: GPL-v3
+Platform: UNKNOWN
+Requires-Dist: snakemake (>5.26)
+Requires-Dist: strictyaml
+Requires-Dist: PyYAML
+Requires-Dist: biopython
+Requires-Dist: pysam
+Requires-Dist: pandas
+Requires-Dist: numpy
+
+UNKNOWN
+
+
