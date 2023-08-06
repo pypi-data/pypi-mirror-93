@@ -1,0 +1,3 @@
+pytest>=6.0
+allure-pytest>=2.8.19
+pydantic>=1.2
