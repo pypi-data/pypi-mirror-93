@@ -1,0 +1,10 @@
+CowtransferAPI/__init__.py,sha256=6LSvhwN6fNYAq71zpigM53AIvigHCK9jiJoAijpOgV4,58
+CowtransferAPI/__main__.py,sha256=BFsFOSlPFrZ_3E5I-irWVmEV3JiPhP7o3kk1j40d8RQ,63
+CowtransferAPI/__version__.py,sha256=-LGgpVzBvQsNFEbahLrAD1u9e1Ur3koil2eg54r1t7Y,23
+CowtransferAPI/cli.py,sha256=knPgptKngJONMv5e8NQZZ3b9Pbo-oA-PIRfwipqvrI8,1098
+CowtransferAPI/upload.py,sha256=yp4CLpEjfIE2De4LTLqVzO_FxabIoyeggCUTO7n7s4Q,15182
+CowtransferAPI-0.0.1.dist-info/LICENSE,sha256=-uM9iJ6Y5KS8QNmL9qapAGh90oQMNzNrLvZaF_3VRk4,1084
+CowtransferAPI-0.0.1.dist-info/METADATA,sha256=FCVPXWuee8PLIhWABwL1zW5uLQH3zM4Kz7Xv0NvWZec,2287
+CowtransferAPI-0.0.1.dist-info/WHEEL,sha256=D1Wh14kWDxPnrM-5t_6UCB-UuQNrEODtRa3vF4OsvQY,97
+CowtransferAPI-0.0.1.dist-info/top_level.txt,sha256=MvtsKuz9Obl2OFGvLnoz36a3SEuxAkIL8dnIlQeByuA,15
+CowtransferAPI-0.0.1.dist-info/RECORD,,
