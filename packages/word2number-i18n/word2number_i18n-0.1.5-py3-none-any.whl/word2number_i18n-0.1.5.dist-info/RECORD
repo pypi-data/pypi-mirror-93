@@ -1,0 +1,13 @@
+word2numberi18n/__init__.py,sha256=EjSTNmTadpNwF9SsDJqKLOh8IEDT1lXs__x_3pidy6Q,147
+word2numberi18n/w2n.py,sha256=qYeCuzrmewDM_6UvWoyirWxVkKrxEoQ6VIg5gA9PQwI,13756
+word2numberi18n/data/__init__.py,sha256=UoSTMSAOYKGrcwPzbeEoPuhFBsQipQi3RkVhx-gCvkM,282
+word2numberi18n/data/number_system_de.txt,sha256=8um5OmKWHXTQ2La6iTH6dgt0ApAi3qTHBl6c72A7i94,473
+word2numberi18n/data/number_system_en.txt,sha256=xe3Qjc7s1ahWhf0aB7nBNGaACiQWwC-WYm6AM-SfUEI,330
+word2numberi18n/data/number_system_fr.txt,sha256=Y_Cwg8cUGo3f2lVR1-0cLHy8IExdqFOh4XsDqmCsoPk,1698
+word2numberi18n/data/number_system_hi.txt,sha256=RhFHrlrx_dIvENJFjJ0ALiFya6dFnuhSdvfRdQq0wd8,333
+word2numberi18n/data/number_system_pt.txt,sha256=QTLSrYYlUFTAOA9K9pu2abaAx44KrpdHOscGxgDJQSc,444
+word2numberi18n/data/number_system_ru.txt,sha256=YRH1Ax70JJR8lGquMEm58bXLZsjYTrGJBlkIZEnoyiE,898
+word2number_i18n-0.1.5.dist-info/METADATA,sha256=pvs1KZZ20U_2npX0cETKC_1F7wWjFyQckTSXFDh6Obs,5488
+word2number_i18n-0.1.5.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+word2number_i18n-0.1.5.dist-info/top_level.txt,sha256=9PVbsffTrQnT3t4v3f1ydXOs2k_3k8OelKHTT2YAWTk,37
+word2number_i18n-0.1.5.dist-info/RECORD,,
