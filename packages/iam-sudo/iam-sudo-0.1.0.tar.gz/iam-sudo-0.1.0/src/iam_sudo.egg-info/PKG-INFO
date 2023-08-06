@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: iam-sudo
+Version: 0.1.0
+Summary: generates credentials to impersonate IAM Roles
+Home-page: https://github.com/binxio/iam-sudo
+Author: Mark van Holsteijn
+Author-email: mark@binx.io
+License: BSD
+Description: # IAM sudo
+        With AWS you are allowed to create roles with specific permissions. These roles are always intended 
+        for accounts or AWS services to assume. Unfortunately, you cannot assume this role as a user for
+        testing purposes.
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
