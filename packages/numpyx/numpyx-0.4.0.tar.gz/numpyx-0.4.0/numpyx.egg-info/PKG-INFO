@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: numpyx
+Version: 0.4.0
+Summary: Utility functions for numpy, written in cython
+Home-page: https://github.com/gesellkammer/numpyx
+Author: eduardo moguillansky
+Author-email: eduardo.moguillansky@gmail.com
+License: GPL v3
+Download-URL: https://github.com/gesellkammer/numpyx
+Description: A small package with fast numpy routines written in cython
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
