@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+secret_token.py
+setup.cfg
+setup.py
+secret_token.egg-info/PKG-INFO
+secret_token.egg-info/SOURCES.txt
+secret_token.egg-info/dependency_links.txt
+secret_token.egg-info/top_level.txt
