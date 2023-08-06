@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+spin_rewriter_api.egg-info/PKG-INFO
+spin_rewriter_api.egg-info/SOURCES.txt
+spin_rewriter_api.egg-info/dependency_links.txt
+spin_rewriter_api.egg-info/not-zip-safe
+spin_rewriter_api.egg-info/requires.txt
+spin_rewriter_api.egg-info/top_level.txt
+spinrewriterapi/__init__.py
+spinrewriterapi/spinrewriterapi.py
