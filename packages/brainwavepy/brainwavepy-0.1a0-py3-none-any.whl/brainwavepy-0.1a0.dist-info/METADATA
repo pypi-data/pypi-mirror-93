@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: brainwavepy
+Version: 0.1a0
+Summary: Library to interact with BrainWave's BRW and BXR files.
+Home-page: https://github.com/Helveg/bwpy
+Author: Robin De Schepper
+Author-email: robingilbert.deschepper@unipv.it
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: h5py (<3.0.0)
+Requires-Dist: numpy
+Provides-Extra: dev
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: furo ; extra == 'dev'
+
+# bwpy
+Python library for interacting with BRW and BXR files.
+
+    pip install brainwavepy
+
+
