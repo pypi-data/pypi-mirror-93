@@ -1,0 +1,5 @@
+numpy
+Cython
+websocket_client
+tokenizers
+requests
