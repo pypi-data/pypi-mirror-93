@@ -1,0 +1,14 @@
+pyclip/__init__.py,sha256=seSN-X2f4wNlcn8c2iBuxjMFfJ4SIQE-YsEGvxjCu-s,1546
+pyclip/__main__.py,sha256=IifrnAzdJ9Uns8r7tUBBWYn5PFxJZOrd5rFQ7xYKDsQ,657
+pyclip/base.py,sha256=hll9BifvANWU85qIPAF6C_gDJgPYXp3pM4aNkwomXUM,1197
+pyclip/cli.py,sha256=mvQDMVOA2wRO_G16TXYm--x17wrkE5AbYlcmv8aHK0c,1534
+pyclip/macos_clip.py,sha256=OO5W_h4_BGXdQmfCUwbHrrkFAkn9pQKcaele5Og6rok,6015
+pyclip/util.py,sha256=-LnBICR8r-HJEEBz6QpBg5grFOWn0_-NHeqblzxzEcs,1116
+pyclip/win_clip.py,sha256=0WVpfz2KiS2_-33j0_qYBjuA2-bOmOwh9DU76DJC6QM,7806
+pyclip/xclip_clip.py,sha256=6wSrzw-FaUqaYa-gAhF8VtixZDojun0yzRXEA1eD6GE,3306
+pyclip-0.5.0.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+pyclip-0.5.0.dist-info/METADATA,sha256=9CwMNS4eNsqu7ZnO28QD2nU35mDXoKfG2mBClh_rnJ8,3059
+pyclip-0.5.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyclip-0.5.0.dist-info/entry_points.txt,sha256=mda6xtoL8cJcjV2d7jtUnmlcyDNJrjVtfUtby9s7gAs,44
+pyclip-0.5.0.dist-info/top_level.txt,sha256=h64senT7YjCx1F9iQSor4kFD70wMTG3RAYbCcq768W8,7
+pyclip-0.5.0.dist-info/RECORD,,
