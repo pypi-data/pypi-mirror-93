@@ -1,0 +1,4 @@
+include requirements.txt
+include src/acomod/resources.qrc
+recursive-exclude src/acomod/data *.wav *.WAV
+include src/acomod/data/cow.wav
