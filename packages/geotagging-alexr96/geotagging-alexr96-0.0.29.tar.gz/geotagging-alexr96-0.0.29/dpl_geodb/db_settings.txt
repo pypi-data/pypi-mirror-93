@@ -1,0 +1,1 @@
+{"version": "0.0.3", "changelog": [["0.0.2", {"PictureReference": "ADD filesize VARCHAR(20)"}], ["0.0.3", {"PictureReference": "ADD lat VARCHAR(30), lng VARCHAR(30);"}]]}
