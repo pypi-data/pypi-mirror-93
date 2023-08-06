@@ -1,0 +1,19 @@
+#!python
+
+import argparse
+
+from fbiradio import currently_playing
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Find the current playing song on FBI radio.")
+    parser.add_argument(
+        "-n",
+        help="Number of latest tracks",
+        default=1,
+        type=int,
+        choices=range(101))
+    args = parser.parse_args()
+    for track in currently_playing(n = args.n):
+        print(track)
+
