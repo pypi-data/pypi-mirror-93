@@ -1,0 +1,3 @@
+[console_scripts]
+audpipe = audlib.cli.audpipe:cli
+
