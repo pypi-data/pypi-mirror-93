@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: ailab-lite
+Version: 0.1.0
+Summary: Jupyter Notebook extension GUI node editor
+Home-page: https://github.com/fathoms-io/ailab-lite
+Author: Michal Zagalski
+Author-email: michal.zagalski@logicai.io
+License: UNKNOWN
+Keywords: ipython,jupyter,widgets
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: IPython
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: ipywidgets (>=7.6.0)
+
+Jupyter Notebook extension GUI node editor
+
+
