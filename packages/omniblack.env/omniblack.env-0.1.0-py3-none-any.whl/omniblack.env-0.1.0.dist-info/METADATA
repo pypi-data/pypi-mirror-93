@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: omniblack.env
+Version: 0.1.0
+Summary: Get the current enviroment
+License: AGPL-3.0-or-later
+Author: Terry Patterson
+Author-email: Terryp@wegrok.net
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/x-rst
+
+Omniblack Env
+*************
+
+Get the curent enviroment for omniblack dotfiles projects.
+
+At the moment it just checks for the env variable :code:`ENV`_ to determine
+the enviroment type, and checks for the :code:`HEADLESS`_ to see if the
+enviroment is headless.
+
