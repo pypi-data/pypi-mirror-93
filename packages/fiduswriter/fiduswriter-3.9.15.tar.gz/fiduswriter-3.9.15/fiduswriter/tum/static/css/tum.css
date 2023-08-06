@@ -1,0 +1,3 @@
+span.fab.fa-tum::before {
+    content: url(../svg/tum.svg);
+}
