@@ -1,0 +1,3 @@
+include CONTRIBUTORS.rst
+include README.rst
+include LICENSE
