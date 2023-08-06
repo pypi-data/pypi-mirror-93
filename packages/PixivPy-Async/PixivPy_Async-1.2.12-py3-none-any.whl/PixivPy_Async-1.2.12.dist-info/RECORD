@@ -1,0 +1,16 @@
+pixivpy_async/__init__.py,sha256=iypwdExBVyBLHbbdibZgq06UNRnal2aB6ihzQ0FXakk,267
+pixivpy_async/aapi.py,sha256=cEa572fRAZy8MS4wY-f-qk1Qyd8aFt9QRHZzUBqMFak,18702
+pixivpy_async/api.py,sha256=dv_nlQz5XS0uosBVSYaPYkQx2wNo-8NJ6OVKumMfZjY,4983
+pixivpy_async/bapi.py,sha256=BdQpicN2faFt_da9pN9UCYGXpRFvIXTou_j86WnH1VY,5816
+pixivpy_async/client.py,sha256=n0Ojk1urHgh1saR6XAbTbqPpi1ap4HmJwy9aRtf7DbY,1381
+pixivpy_async/error.py,sha256=YGvjWkoLPFY0pR8P1wpMTz8_qJh-dda7xNZBh1tAh1w,1749
+pixivpy_async/net.py,sha256=Jwcv88aD35dKKNOUn-pdPrUoyjZTRoQYPKAR796C77A,3220
+pixivpy_async/papi.py,sha256=VG2irNtmyQLsLoDmjGhD2mPYeW0Laz5aHIvIx7jYzNE,10628
+pixivpy_async/retry.py,sha256=NWA8Yn5oyyHCoCziV5mzjhmJ4Myi81zXXFzK9d-OOfg,1604
+pixivpy_async/sync.py,sha256=ek84zr2Y2D-0JLAzpyU_o2P34c4Ap3_PIhjgdSwL9z8,1352
+pixivpy_async/utils.py,sha256=-qwXJXPmx20wNPONiUJUv-lUyi2UoPO9htyEeGfrTiQ,2598
+PixivPy_Async-1.2.12.dist-info/LICENSE,sha256=iNm062BXnBkew5HKBMFhMFctfu3EqG2qWL8oxuFMm80,1210
+PixivPy_Async-1.2.12.dist-info/METADATA,sha256=X2TIlAVXiOaSzvdP8peS7ez2wB9rbSAzlAaxLBLO87M,6417
+PixivPy_Async-1.2.12.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+PixivPy_Async-1.2.12.dist-info/top_level.txt,sha256=UMbRrpzIaag4ePU_KlC5buypbEiQyclgV9KtHgL1lfI,14
+PixivPy_Async-1.2.12.dist-info/RECORD,,
