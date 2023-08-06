@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: switchto
+Version: 0.0.1
+Summary: switch between dev and prod environments from command line
+Home-page: https://github.com/hananbeer/switchto
+Author: Hanan Beer
+Author-email: email@hanan.beer
+License: MIT
+Description: # switchto
+        switch between dev and prod environments from command line
+        
+Keywords: cli dev tool
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
