@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: airtablemock
+Version: 0.0.11
+Summary: Mock library for the airtable python client
+Home-page: https://github.com/bayesimpact/airtablemock
+Author: Pascal Corpet
+Author-email: UNKNOWN
+License: The MIT License (MIT)
+Keywords: airtable,api,mock
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: mock (>=2.0.0)
+Requires-Dist: parsimonious (>=0.8.1)
+Requires-Dist: requests
+
+Airtable Mock
+=============
+
+A mock library to help test Python code accessing Airtable using the
+`Python library <https://github.com/nicocanali/airtable-python>`__.
+
+It keeps tables in RAM and can do basic operations.
+
+Installation
+------------
+
+The easiest way is using pip:
+
+.. code:: sh
+
+    pip install airtablemock
+
+Usage
+-----
+
+In your test, you patch the whole airtable library:
+
+.. code:: py
+
+    import unittest
+
+    import airtablemock
+
+    import mycode
+
+
+    @airtablemock.patch(mycode.__name__ + '.airtable')
+    class TestMyCode(unittest.TestCase):
+
+      def test_foo():
+        # This is a client for the base "baseID", it will not access the real
+        # Airtable service but only the mock one which keeps data in RAM.
+        client = airtablemock.Airtable('baseID', 'apiKey')
+
+        # Populate the table.
+        client.create('table-foo', {'field1': 1, 'field2': 'two'})
+
+        # Run your code that uses Airtable, it should transparently uses the table
+        # above.
+        mycode.run()
+
+        # Access the table again to check if anything was modified.
+        records = client.get('table-foo')
+        …
+
+Release
+-------
+
+To create a new release of airtablemock, tag the Git repo and run:
+
+.. code:: sh
+
+    python setup.py sdist bdist_wheel
+    twine upload dist/airtablemock-*
+
+
+
