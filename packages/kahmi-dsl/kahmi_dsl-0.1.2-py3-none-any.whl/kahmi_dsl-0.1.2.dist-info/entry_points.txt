@@ -1,0 +1,3 @@
+[kahmi.dsl.macros]
+yaml = kahmi.dsl.macros.yaml:YamlMacro
+
