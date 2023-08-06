@@ -1,0 +1,16 @@
+yfinance2pg/__init__.py,sha256=3KXfAcA5rzzQXMtfwpHphgbJNZdA0XWaW96kdWVSZJw,22
+yfinance2pg/__main__.py,sha256=I7ZdYkfJF5mlJ2yI83osyMnVIImFXo70kKftYr9AKdA,63
+yfinance2pg/args.py,sha256=R_Ka4A5iTcejlcMD6jbPseG2iDrhkpsfu-UolE5tzxc,433
+yfinance2pg/config.py,sha256=hJzu-Te6CiZMKkSp7OS9o4Szyg089iAZKnbww2Irj_o,459
+yfinance2pg/db.py,sha256=KQwrUxUxCAxPYllLGu4C8IXQhPOnLMjWsjGeiA0np2A,1823
+yfinance2pg/download.py,sha256=tAr1ApL6uPjnKL2VmGMl4YHJMCKQ6i8j9-Z0K7yzYTE,2663
+yfinance2pg/help_text.py,sha256=2unSFaTgYyi4eulXdftrJ5ph8RUBMnmhb3Bij-rGYAU,518
+yfinance2pg/helpers.py,sha256=TuemAr7CxavEj5lveTbXe9FVuCwMa5_HrIyAm6sQ02M,281
+yfinance2pg/main.py,sha256=507KvDu5IT96CEJxK78wU3n0ulNeIxbkpLgIiJNSMAE,1278
+yfinance2pg/tickers.py,sha256=NPFEbtw2Ic8M5WXS4h8530VtcqDta-44vBTEir-eAZc,248
+yfinance2pg-1.0.1.dist-info/LICENSE,sha256=BO5Byv0gvTOzRaqlzR6SgvV80AzgZZNyzwNL9xl674s,1072
+yfinance2pg-1.0.1.dist-info/METADATA,sha256=BbFPyWTXzB0aZgQ_0CZLvl590HbLiM7m8LpCPt6w3aA,1114
+yfinance2pg-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+yfinance2pg-1.0.1.dist-info/entry_points.txt,sha256=PkWRbq_OI_fdGmRXfrfypfU5f6GDCba-lR1pp5blg18,73
+yfinance2pg-1.0.1.dist-info/top_level.txt,sha256=aCW0FqgIrk-Z2ZI5AnfYlBVTKO5uqWrvlVgv_pZk8ps,12
+yfinance2pg-1.0.1.dist-info/RECORD,,
