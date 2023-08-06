@@ -1,0 +1,36 @@
+CHANGES
+=======
+
+v0.0.5
+------
+
+* added admin authorisation support
+* added support for feudalAdapter v3.9: disable commandline args
+* refactoring for spelling consistency of authorised
+* add http bearer security requirement for validate\_user
+* added support for additional states
+* updated feudal-adapter package
+
+v0.0.4
+------
+
+* support changes in version 0.3.2 of feudal adapter, e.g. non-interactivity
+* updated installation instructions in readme
+
+v0.0.3
+------
+
+* return state for /user/get and /verify\_user
+* added two options for mappings database: redis and file
+
+v0.0.2
+------
+
+* added info on docker image repo
+* more .gitignore stuff
+* added primitive db to store mappings remote id -> local id
+
+v0.0.1
+------
+
+* initial commit of mapper api prototype
