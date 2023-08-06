@@ -1,0 +1,12 @@
+ads_log_daemon/__init__.py,sha256=dQgWLIgqgn6-3fy5lVJzQK8xxdpDHxTsOjZ7pYa5qEI,252
+ads_log_daemon/_version.py,sha256=-qpDhuUNiDUYbtdVhqw0bdeS9mKAPYFv3sEHAQ4Y2zk,497
+ads_log_daemon/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ads_log_daemon/tests/conftest.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ads_log_daemon/tests/test_blank.py,sha256=72vBvDYTS292Wk0DlaNsNYTGNtukuAgXsOivuiH34IE,103
+ads_log_daemon-0.0.1.dist-info/AUTHORS.rst,sha256=K567wlp_1H3hLfYwPfOZJuCT_QwI91Q-NvLXZPvrAj8,152
+ads_log_daemon-0.0.1.dist-info/LICENSE,sha256=eHrGLQQqf-mpbYvWYFUZkRTBuf0LH7078bmXd2xqxuo,2468
+ads_log_daemon-0.0.1.dist-info/METADATA,sha256=tdSEyrKGdvSwCk8OoPVqPSoESgb5w5xDBV-sq8GZaoc,1205
+ads_log_daemon-0.0.1.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+ads_log_daemon-0.0.1.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+ads_log_daemon-0.0.1.dist-info/top_level.txt,sha256=HwJmP7jjfVeF-m_IFSRVEywhGjjxNY3lNEWy15flBx8,15
+ads_log_daemon-0.0.1.dist-info/RECORD,,
