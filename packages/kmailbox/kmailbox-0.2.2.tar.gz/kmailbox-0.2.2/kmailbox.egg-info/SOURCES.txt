@@ -1,0 +1,9 @@
+README.rst
+kmailbox.py
+setup.py
+kmailbox.egg-info/PKG-INFO
+kmailbox.egg-info/SOURCES.txt
+kmailbox.egg-info/dependency_links.txt
+kmailbox.egg-info/entry_points.txt
+kmailbox.egg-info/not-zip-safe
+kmailbox.egg-info/top_level.txt
