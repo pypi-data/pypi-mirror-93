@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+_metadata.py
+setup.py
+pytket/extensions/backends/projectq/__init__.py
+pytket/extensions/backends/projectq/_metadata.py
+pytket/extensions/backends/projectq/projectq_backend.py
+pytket/extensions/projectq/__init__.py
+pytket/extensions/projectq/projectq_convert.py
+pytket_projectq.egg-info/PKG-INFO
+pytket_projectq.egg-info/SOURCES.txt
+pytket_projectq.egg-info/dependency_links.txt
+pytket_projectq.egg-info/not-zip-safe
+pytket_projectq.egg-info/requires.txt
+pytket_projectq.egg-info/top_level.txt
