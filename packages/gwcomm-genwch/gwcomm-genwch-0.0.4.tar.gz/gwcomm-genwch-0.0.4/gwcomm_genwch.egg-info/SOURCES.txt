@@ -1,0 +1,10 @@
+README.md
+setup.py
+gwcomm/__init__.py
+gwcomm/conf.py
+gwcomm/filesystem.py
+gwcomm/logger.py
+gwcomm_genwch.egg-info/PKG-INFO
+gwcomm_genwch.egg-info/SOURCES.txt
+gwcomm_genwch.egg-info/dependency_links.txt
+gwcomm_genwch.egg-info/top_level.txt
