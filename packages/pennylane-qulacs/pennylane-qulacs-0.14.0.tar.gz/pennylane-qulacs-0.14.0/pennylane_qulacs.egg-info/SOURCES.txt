@@ -1,0 +1,10 @@
+README.rst
+setup.py
+pennylane_qulacs/__init__.py
+pennylane_qulacs/qulacs_device.py
+pennylane_qulacs.egg-info/PKG-INFO
+pennylane_qulacs.egg-info/SOURCES.txt
+pennylane_qulacs.egg-info/dependency_links.txt
+pennylane_qulacs.egg-info/entry_points.txt
+pennylane_qulacs.egg-info/requires.txt
+pennylane_qulacs.egg-info/top_level.txt
