@@ -1,0 +1,8 @@
+README.md
+setup.py
+bengali/__init__.py
+bengali/date.py
+bengali.egg-info/PKG-INFO
+bengali.egg-info/SOURCES.txt
+bengali.egg-info/dependency_links.txt
+bengali.egg-info/top_level.txt
