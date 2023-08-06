@@ -1,0 +1,13 @@
+ipyannotator/__init__.py,sha256=VrXpHDu3erkzwl_WXrqINBm9xWkcyUy53IQOj042dOs,22
+ipyannotator/_nbdev.py,sha256=fwFON3WYxy0KRq7hgxfVHnuXfCDrLwAXb5X0itWm8Dk,1834
+ipyannotator/bbox_annotator.py,sha256=KO1Uyk7yNrKclYwMBbCts7zhws3zVphj656qHgFMvW0,4467
+ipyannotator/bbox_canvas.py,sha256=sOBwDqqw60Oo40SsH5v6spDefMX3O0nybZW9B5WDDyQ,7800
+ipyannotator/capture_annotator.py,sha256=AjTab-Xg_07vn6_akNNOzHvgZe6fC2fcIoZuzy7f48A,9611
+ipyannotator/im2im_annotator.py,sha256=Q1X1jITHmf-bUK4X89VuMW0sTYYPzB-upC3Z6qULKWo,8550
+ipyannotator/image_button.py,sha256=E8iTAMB1LExFWHnU-e5H_aLXRuxH1vON3ZoD0ZsuROc,3793
+ipyannotator/navi_widget.py,sha256=CDUfyddyKsKRcdMcf9IPLhnjepG0IP_l6kFlEmhj5wI,2066
+ipyannotator/storage.py,sha256=wT56HI1qfwZRoqOaHrta3pnui1qn1NdjXYdeAY_Be1Y,8792
+ipyannotator-0.3.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ipyannotator-0.3.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+ipyannotator-0.3.0.dist-info/METADATA,sha256=cVNEdQLQe7ibtpZogJhnhyuGIqvjuOxt7m2hfjFH9uI,4923
+ipyannotator-0.3.0.dist-info/RECORD,,
