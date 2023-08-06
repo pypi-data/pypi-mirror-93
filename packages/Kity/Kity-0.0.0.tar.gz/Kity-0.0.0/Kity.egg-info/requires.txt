@@ -1,0 +1,3 @@
+Kivy[full]
+Kivy>=2.0.0
+kivy_examples

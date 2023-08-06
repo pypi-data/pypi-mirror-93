@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: Kity
+Version: 0.0.0
+Summary: A simple graphics module.
+Home-page: UNKNOWN
+Author: Hrishikesh Arun
+Author-email: hrishikesh28arun@gmail.com
+License: UNKNOWN
+Description: # Kity Engine
+        
+        A Module made with Kivy.
+        Supports Python 3.8+
+        Supports Kv Language.
+        
+        Sample code:
+        
+        >>>
+        >>>from KityEngine import App
+        >>>
+        >>>myapp=App(title="My Test App")
+        >>>
+        >>>myapp.run()
+        >>>
+        
+        When you run this , A Kivy Window will be opened.
+Platform: UNKNOWN
+Classifier: Topic :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
