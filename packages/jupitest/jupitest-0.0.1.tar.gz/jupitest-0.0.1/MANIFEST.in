@@ -1,0 +1,4 @@
+recursive-include jupitest *.json
+recursive-include jupitest *.txt
+recursive-include jupitest *.png
+recursive-include jupitest LICENSE

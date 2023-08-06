@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+jupitest/LICENSE
+jupitest.egg-info/PKG-INFO
+jupitest.egg-info/SOURCES.txt
+jupitest.egg-info/dependency_links.txt
+jupitest.egg-info/entry_points.txt
+jupitest.egg-info/requires.txt
+jupitest.egg-info/top_level.txt
+jupitest/pyrustic_data/app.json
+jupitest/pyrustic_data/gui.json
+tests/__init__.py

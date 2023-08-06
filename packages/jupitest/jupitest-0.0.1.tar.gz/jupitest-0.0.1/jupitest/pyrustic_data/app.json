@@ -1,0 +1,13 @@
+{
+    "author": "Pyrustic Evangelist",
+    "description": "Graphical Test Runner for Pyrustic",
+    "email": "pyrustic@protonmail.com",
+    "project_name": "jupitest",
+    "project_title": "Jupitest",
+    "dev_mode": true,
+    "home_page": "https://github.com/pyrustic/jupitest",
+    "version": "0.0.1",
+    "requirements": null,
+    "init_script": null,
+    "packaging_script": null
+}

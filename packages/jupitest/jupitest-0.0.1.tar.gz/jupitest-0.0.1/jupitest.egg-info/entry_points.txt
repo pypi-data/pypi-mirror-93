@@ -1,0 +1,3 @@
+[console_scripts]
+jupitest = jupitest.main:main
+
