@@ -1,0 +1,11 @@
+README.md
+setup.py
+aiobtcrpc/__init__.py
+aiobtcrpc/bitcoin_core_client.py
+aiobtcrpc.egg-info/PKG-INFO
+aiobtcrpc.egg-info/SOURCES.txt
+aiobtcrpc.egg-info/dependency_links.txt
+aiobtcrpc.egg-info/requires.txt
+aiobtcrpc.egg-info/top_level.txt
+tests/__init__.py
+tests/test_bitcoin_core_client.py
