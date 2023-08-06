@@ -1,0 +1,12 @@
+siweilib/__init__.py,sha256=oSJL4aazdXBkoLgaelpPDMjrDt_ns2oPHlFCenLKDNw,252
+siweilib/general.py,sha256=YqerzTsi9Wijn5lU16jFcygBMLp9epq6P0OYaFVCy6Y,3418
+siweilib/filez/__init__.py,sha256=YjEdihEkL5jYmOiEWBMOuBfZv0uaGR0FfH6YIt9L2Mk,74
+siweilib/filez/chash.py,sha256=nQYXOLfFQLeS9kG8yfRNgopeAPqY7TuPRISRvub6lUY,1765
+siweilib/filez/lib.py,sha256=zu2h7QqpF6ufmNuy5Bonw81rfHrN8pbRajKp0cX35sU,3858
+siweilib/filez/test.py,sha256=6CP85GXhfqc83W82D8vnEVNqhV0F3wioCGnV9p11DBQ,2367
+siweilib-0.0.2.9.dist-info/DESCRIPTION.rst,sha256=Vfek6rT5E1JeNsixFj2rvGJ27WDHIlMSwEa7n0kRdwQ,168
+siweilib-0.0.2.9.dist-info/METADATA,sha256=2kQfLk8YWiCbWYnUv6cdVXq_Qos1owNPrnlGaph8yYM,429
+siweilib-0.0.2.9.dist-info/RECORD,,
+siweilib-0.0.2.9.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+siweilib-0.0.2.9.dist-info/metadata.json,sha256=_FSpDSKJi9E9qFdecfqGB2bNBENOw-GFjoKmTR388YM,315
+siweilib-0.0.2.9.dist-info/top_level.txt,sha256=eWaDMMowWFbOP02vmv61HkPvw47-UG6sSoLkvEswB7U,9
