@@ -1,0 +1,16 @@
+ICAPConnection.c
+ICAPConnection.h
+ICAPResponse.c
+ICAPResponse.h
+MANIFEST.in
+README.rst
+cicap_compat.c
+cicap_compat.h
+gcc_attributes.h
+icapclient.c
+setup.cfg
+setup.py
+icapclient3.egg-info/PKG-INFO
+icapclient3.egg-info/SOURCES.txt
+icapclient3.egg-info/dependency_links.txt
+icapclient3.egg-info/top_level.txt
