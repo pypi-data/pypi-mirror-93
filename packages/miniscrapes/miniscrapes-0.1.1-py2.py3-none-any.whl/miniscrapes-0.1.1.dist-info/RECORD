@@ -1,0 +1,12 @@
+miniscrapes/__init__.py,sha256=x2hgxkNanmOsQ_0KnUnQt7Fv4chQh1LItWzjGV8Jdjo,127
+miniscrapes/cli.py,sha256=JS2l6Zqb19zQWm7fr44ck3sz1xRxEbO4Dg1mj7ACxM4,649
+miniscrapes/execution.py,sha256=v1kcojCWaElHrCJ3sBd73lSymmVtpxHefi0JVVkc4bA,316
+miniscrapes/handlers.py,sha256=oB2PZ3Fn91JfKEGEqm5NzKRYSd8HbAPMRVRs9N2Fv8M,1499
+miniscrapes/scrapers.py,sha256=vh9ygzvJ5XsXg0P2b517LCn7BG3PgSmtx7sfASFbwiE,1344
+miniscrapes-0.1.1.dist-info/AUTHORS.rst,sha256=0YRb5CEoj_JNy7dfqAxaqQAYwcHbDDX6I-DKscOKuPY,154
+miniscrapes-0.1.1.dist-info/LICENSE,sha256=ER8jcneXOvNkmEM4uCKEM3xJQbvf5OMDBfKEftBJCHU,583
+miniscrapes-0.1.1.dist-info/METADATA,sha256=ZxuDUxF-wjF5x-rkZ3awSUeXN6hKXcCwLODzE_XSQIE,1790
+miniscrapes-0.1.1.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+miniscrapes-0.1.1.dist-info/entry_points.txt,sha256=tZ-tFJ3InCHhduB_1btIUcr2I82tmEIqGXNraQWuDNA,54
+miniscrapes-0.1.1.dist-info/top_level.txt,sha256=Ox2jGecR9gURTLeEqDVPLTp1T3aq74PE5usNyTSdrKo,12
+miniscrapes-0.1.1.dist-info/RECORD,,
