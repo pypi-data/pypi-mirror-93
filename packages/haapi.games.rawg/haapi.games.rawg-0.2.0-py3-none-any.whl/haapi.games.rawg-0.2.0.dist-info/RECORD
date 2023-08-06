@@ -1,0 +1,12 @@
+LICENSE.rst,sha256=2ScaeHk9pUtIhcs5yX_MDxfp7Igo8MrNhJqd_eayKn8,1077
+haapi/games/rawg/__init__.py,sha256=WNfghNhIYTL5trDHoE-C63eMgWxLi4OwJUbvTAkG6zg,105
+haapi/games/rawg/async_api.py,sha256=iGB05vSGg97AViw_SWSDp7St-EIvjK1dp0b1dp5KsTY,2265
+haapi/games/rawg/constants.py,sha256=R_bOL2aTdAKt7C9hvTkcCzNiquDLK1MDcpOe8h37xmk,102
+haapi/games/rawg/objects/__init__.py,sha256=uJQRlAVCnhLboW3Gu07Y9fVOi41aftWRjcNMFxG9n0M,158
+haapi/games/rawg/objects/game.py,sha256=fEVyaW1g1PKZuKfCnl0EBsf-DYz3Bou4Ym-oS1zLAc4,2303
+haapi/games/rawg/objects/genre.py,sha256=vVgHD_O85qFpvQGannW1a60ycwYpgdslfSjIO24hXQA,409
+haapi/games/rawg/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+haapi.games.rawg-0.2.0.dist-info/LICENSE.rst,sha256=2ScaeHk9pUtIhcs5yX_MDxfp7Igo8MrNhJqd_eayKn8,1077
+haapi.games.rawg-0.2.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+haapi.games.rawg-0.2.0.dist-info/METADATA,sha256=o-KZJsc6wRHxpIx-MMDSVh8X396NCtzacRI6DmLs3Yw,3476
+haapi.games.rawg-0.2.0.dist-info/RECORD,,
