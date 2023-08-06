@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: idquant
+Version: 1.0.0
+Summary: Calculation of metabolite concentrations from C12 and C13 Mass Spectrometry Integrated Data
+Home-page: https://github.com/LoloPopoPy/IDQuant
+Author: Loïc LE GREGAM
+Author-email: legregam@insa-toulouse.fr
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/LoloPopoPy/IDQuant/issues
+Project-URL: Source, https://github.com/LoloPopoPy/IDQuant/
+Description: Welcome to IDQuant's documentation!
+        ===================================
+        
+        **IDQuant (Isotopic Dilution Quantification) is a software that calculates sample concentrations
+        of metabolites from C12 and C13 Mass Spectrometry Integrated Data**
+        
+        It uses linear and quadratic regression equations to predict concentrations using calibration data
+        from (unlabeled and fully labeled) Standard Molecules.
+        It takes as input integrated C12/C13 MS data from Emzed C13 Profiler.
+        
+        It is one of the routine tools used by `MetaToul platform <https://www6.toulouse.inrae.fr/metatoul>`_.
+        
+        The code is open-source, and available on GitHub under a GPLv3 license.
+Keywords: biology,bio-informatics
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.8, <4
+Provides-Extra: dev
