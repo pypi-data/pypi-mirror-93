@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    closet-viewer-cv=pkg:main
+    
