@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: bengali
+Version: 0.0.1
+Summary: A Python package for Bengali language processing related tasks.
+Home-page: https://github.com/faruk-ahmad/bengali
+Author: Faruk Ahmad
+Author-email: faruk.csebrur@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+# bengali
+----------------------------------------------
+#### A Python package for Bengali language processing related tasks.
+-----------------------------------------------
+
+## Background
+<p align= "justify">
+
+```Bengali``` also known as ```Bangla``` is one of the widely used language in the world. This python package is an effort to combine some usefull python tools to work conveniently with Bengali language and computation.
+</p>
+
+--------------------------------------------------
+
+
+## Installation
+Install using the following command - 
+```bash
+pip install bengali
+```
+
+Uninstall using the following command - 
+```bash
+pip uninstall bengali
+```
+
+## Getting Started
+
+To use ```bengali``` install it using ```pip```. And make sure you have the required python version in your environment, i.e. ```python >= 3.5```.
+
+
+## How to Contribute
+
+## Inspiration
+
+
