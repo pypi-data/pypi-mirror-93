@@ -1,0 +1,8 @@
+opencv-python>=4.1.0.25
+torch==1.0.1.post2
+torch-dct==0.1.5
+pandas<0.26,>=0.25
+numpy<2,>=1.17.3
+Pillow>=6.0.0
+PyWavelets>=1.1.1
+numpy>=1.17.0
