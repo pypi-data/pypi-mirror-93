@@ -1,0 +1,2 @@
+include lib/*.txt.gz
+include pyminer/*.txt
