@@ -1,0 +1,9 @@
+winney/__init__.py,sha256=WtwkL8o-kS1SnXNXZ_2sv_euwrtp2osOnH8cbvMoKUc,72
+winney/errors.py,sha256=HRVrS6CONiI7kmAy_ErJqkxAlZI0wKto3XUFJDPLH6o,413
+winney/mock.py,sha256=1fI3ujuLUq5RNtwtTRn23277YxI92uUYqzpwvMVaCUI,557
+winney/winney.py,sha256=r1eKPqkjM8PncEJpwKwDWLNAdGnrd2pkNHzqbdPbu3A,7530
+winney-0.5.0.dist-info/LICENSE,sha256=HuNnEzfVXc8teGriEwhydOjGsZGBKohvMawJN5YXp3Y,1069
+winney-0.5.0.dist-info/METADATA,sha256=_F10LipsKn-NgnWEsvHPr0Zu338YTz_TmmxhfCvNaSI,860
+winney-0.5.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+winney-0.5.0.dist-info/top_level.txt,sha256=sVvtrDGVXBGn8GBXtcsWlbIvtSTEfv5zycC1J0UB_Mw,7
+winney-0.5.0.dist-info/RECORD,,
