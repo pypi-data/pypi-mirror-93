@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: Num2Kor
+Version: 1.0.2
+Summary: Convert Number into Korean Words!
+Home-page: https://github.com/pl-Steve28-lq/Num2Kor
+Author: Steve28
+Author-email: holiday28784@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Num2Kor 
+Convert Number into Korean Words! <br>
+Inspired by [huskyhoochu/num-to-korean](https://github.com/huskyhoochu/num-to-korean)
+
