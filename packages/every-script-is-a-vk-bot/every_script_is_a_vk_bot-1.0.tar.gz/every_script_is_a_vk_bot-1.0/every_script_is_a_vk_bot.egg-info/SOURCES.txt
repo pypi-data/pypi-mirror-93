@@ -1,0 +1,8 @@
+README.md
+setup.py
+every_script_is_a_vk_bot.egg-info/PKG-INFO
+every_script_is_a_vk_bot.egg-info/SOURCES.txt
+every_script_is_a_vk_bot.egg-info/dependency_links.txt
+every_script_is_a_vk_bot.egg-info/top_level.txt
+every_script_is_vk_a_bot/__init__.py
+every_script_is_vk_a_bot/main_functions.py
