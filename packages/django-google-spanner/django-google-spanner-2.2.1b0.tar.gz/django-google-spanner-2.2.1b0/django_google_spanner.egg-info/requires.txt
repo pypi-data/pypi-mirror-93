@@ -1,0 +1,2 @@
+sqlparse>=0.3.0
+google-cloud-spanner>=3.0.0
