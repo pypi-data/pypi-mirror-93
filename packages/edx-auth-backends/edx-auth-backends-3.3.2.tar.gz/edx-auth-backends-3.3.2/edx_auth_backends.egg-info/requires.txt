@@ -1,0 +1,5 @@
+six
+Django
+social-auth-app-django
+PyJWT
+social-auth-core
