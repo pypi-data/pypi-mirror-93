@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: odoo13-addons-oca-margin-analysis
+Version: 13.0.20210131.0
+Summary: Meta package for oca-margin-analysis Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo13-addon-account-invoice-margin
+Requires-Dist: odoo13-addon-account-invoice-margin-sale
+Requires-Dist: odoo13-addon-sale-margin-delivered
+Requires-Dist: odoo13-addon-sale-margin-security
+Requires-Dist: odoo13-addon-sale-order-margin-percent
+Requires-Dist: odoo13-addon-sale-report-margin
+
+UNKNOWN
+
+
