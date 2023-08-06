@@ -1,0 +1,5 @@
+twisted
+argparse
+pyOpenSSL
+lyra2re2-hash
+verthash
