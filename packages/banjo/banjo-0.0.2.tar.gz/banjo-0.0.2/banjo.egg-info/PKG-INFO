@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: banjo
+Version: 0.0.2
+Summary: Not a placeholder for an internal library
+Home-page: UNKNOWN
+Author: Max He
+Author-email: pypi@mail.maxhe.org
+License: UNKNOWN
+Description: # banjo
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
