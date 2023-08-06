@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: saml-reader
+Version: 0.0.3
+Summary: SAML response parser for MongoDB Cloud
+Home-page: https://github.com/clegaspi/saml_reader
+Author: Christian Legaspi
+Author-email: christian.legaspi@mongodb.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN

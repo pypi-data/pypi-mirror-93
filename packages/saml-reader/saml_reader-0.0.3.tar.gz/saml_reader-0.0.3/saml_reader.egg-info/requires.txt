@@ -1,0 +1,7 @@
+pyperclip
+haralyzer
+python3-saml
+cryptography
+networkx
+lxml
+defusedxml
