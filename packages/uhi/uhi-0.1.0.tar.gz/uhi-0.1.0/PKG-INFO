@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: uhi
+Version: 0.1.0
+Summary: Unified Histogram Indexing
+Home-page: https://github.com/Scikit-HEP/uhi
+License: BSD-3-Clause
+Author: Henry Schreiner
+Author-email: henryschreineriii@gmail.com
+Maintainer: The Scikit-HEP admins
+Maintainer-email: scikit-hep-admins@googlegroups.com
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Provides-Extra: docs
+Provides-Extra: test
+Requires-Dist: pytest (>=5.2,<6.0); extra == "test"
+Requires-Dist: sphinx (==3); extra == "docs"
+Requires-Dist: sphinx-rtd-theme (>=0.5.1,<0.6.0); extra == "docs"
+Requires-Dist: typing_extensions (>=3.7,<4.0); python_version < "3.8"
+Project-URL: Repository, https://github.com/Scikit-HEP/uhi
