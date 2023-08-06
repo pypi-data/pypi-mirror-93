@@ -1,0 +1,13 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+KrishnaCalculator.egg-info/PKG-INFO
+KrishnaCalculator.egg-info/SOURCES.txt
+KrishnaCalculator.egg-info/dependency_links.txt
+KrishnaCalculator.egg-info/top_level.txt
+Mymodule.egg-info/SOURCES.txt
+Mymodule.egg-info/dependency_links.txt
+Mymodule.egg-info/top_level.txt
+krishnabasiccalculator/__init__.py

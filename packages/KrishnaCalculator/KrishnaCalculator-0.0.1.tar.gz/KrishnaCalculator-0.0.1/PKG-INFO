@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: KrishnaCalculator
+Version: 0.0.1
+Summary: A useful calculator
+Home-page: UNKNOWN
+Author: Krishna Koirala
+Author-email: koiralakp5@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: calculation
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
