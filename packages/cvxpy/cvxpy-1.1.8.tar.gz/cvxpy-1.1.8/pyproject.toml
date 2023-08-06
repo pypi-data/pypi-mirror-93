@@ -1,0 +1,2 @@
+[build-system]
+requires = ["oldest-supported-numpy", "scipy >= 1.1.0", "setuptools>=40.8.0", "wheel"]
