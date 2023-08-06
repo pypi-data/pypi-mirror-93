@@ -1,0 +1,57 @@
+Neads
+=====
+
+NEADS is a modular tool to process comparative studies on dynamical systems
+with an inherent network structure. It enables a simple design of 
+analytical pipelines via a plugin architecture. Using this approach, we 
+can use this tool for explorative and comparative studies on dynamical 
+systems. This tool also implements procedures from essential tools such as 
+Numpy or NetworkX, making plugin design easier. This tool is suitable for 
+many real-world systems including the human brain, financial systems or 
+social networks, see `examples <https://www.cs.cas
+.cz/hartman/neads/doc/html/examples/index.html>`_ in documentation.
+
+
+Install
+-------
+
+Install Neads via :code:`pip`::
+
+    $ pip install neads
+
+Then you may use the tutorials_ to help you with the first steps.
+
+.. _tutorials: https://www.cs.cas.cz/hartman/neads/doc/html/tutorials/index.html
+
+Bugs
+----
+
+Please report any bugs you find `here <https://github.com/thrayld/neads/issues>`_.
+
+
+License
+-------
+
+NetworkX is distributed with the GPL v.3 license.
+
+::
+
+    Neads is a modular tool to process comparative studies on dynamical
+    systems with an inherent network structure.
+    Copyright (C) 2021, Neads developers
+    Tomáš Hons <hons.t.m :at: seznam.cz>
+    David Hartman <hartman :at: cs.cas.cz>
+    Jaroslav Hlinka <hlinka :at: cs.cas.cz>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published
+    by the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.

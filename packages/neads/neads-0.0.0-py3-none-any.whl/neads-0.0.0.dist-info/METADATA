@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: neads
+Version: 0.0.0
+Summary: Modular tool to analysis of dynamic system with an inherent network structure.
+Home-page: https://www.cs.cas.cz/hartman/neads/
+Author: Tomáš Hons, David Hartman, Jaroslav Hlinka
+Author-email: Hons.T.m@seznam.cz
+License: GPL3
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Dist: pandas (>=1.1.5)
+Requires-Dist: pandas-datareader (>=0.9.0)
+Requires-Dist: python-log-indenter (>=0.9)
+Requires-Dist: seaborn (>=0.11.0)
+Requires-Dist: pyinform (>=0.2.0)
+Requires-Dist: networkx (>=2.5)
+Requires-Dist: numpy (>=1.19.3)
+Requires-Dist: matplotlib (>=3.3.1)
+Requires-Dist: ipython (>=7.19.0)
+Requires-Dist: scikit-learn (>=0.24.0)
+
+Neads
+=====
+
+NEADS is a modular tool to process comparative studies on dynamical systems
+with an inherent network structure. It enables a simple design of 
+analytical pipelines via a plugin architecture. Using this approach, we 
+can use this tool for explorative and comparative studies on dynamical 
+systems. This tool also implements procedures from essential tools such as 
+Numpy or NetworkX, making plugin design easier. This tool is suitable for 
+many real-world systems including the human brain, financial systems or 
+social networks, see `examples <https://www.cs.cas
+.cz/hartman/neads/doc/html/examples/index.html>`_ in documentation.
+
+
+Install
+-------
+
+Install Neads via :code:`pip`::
+
+    $ pip install neads
+
+Then you may use the tutorials_ to help you with the first steps.
+
+.. _tutorials: https://www.cs.cas.cz/hartman/neads/doc/html/tutorials/index.html
+
+Bugs
+----
+
+Please report any bugs you find `here <https://github.com/thrayld/neads/issues>`_.
+
+
+License
+-------
+
+NetworkX is distributed with the GPL v.3 license.
+
+::
+
+    Neads is a modular tool to process comparative studies on dynamical
+    systems with an inherent network structure.
+    Copyright (C) 2021, Neads developers
+    TomĂˇĹˇ Hons <hons.t.m :at: seznam.cz>
+    David Hartman <hartman :at: cs.cas.cz>
+    Jaroslav Hlinka <hlinka :at: cs.cas.cz>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published
+    by the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
