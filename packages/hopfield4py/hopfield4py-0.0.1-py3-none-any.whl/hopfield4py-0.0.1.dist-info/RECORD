@@ -1,0 +1,8 @@
+hopfield4py/__init__.py,sha256=1INyBx0tf3myaUjsc4AM66YBSl7UK2kxSqrTNFH6fYA,133
+hopfield4py/diluted.py,sha256=90bmpIWhpqvwwaXJJKH0hqe4AjVYFVITFuxM4Qhb-6M,1036
+hopfield4py/hopfield.py,sha256=aQ1aFC8gykDGAl1ke_SpKH6TXLav85ZaKcJbM8XIjn8,2592
+hopfield4py/hopfield_helper.py,sha256=MRCoTZ5dTB2MmjOatfuLWmlZxAxqTPxtYzvrj1pYdP8,2846
+hopfield4py-0.0.1.dist-info/METADATA,sha256=CQne8s3wVzZ3AUKJazOvOxyEgpovMxugwj_HOaplmOI,495
+hopfield4py-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+hopfield4py-0.0.1.dist-info/top_level.txt,sha256=ot2Ydm6ifzbVjpEo7eZQ3fLjQJ4omOWE7tA9wI259CU,12
+hopfield4py-0.0.1.dist-info/RECORD,,
