@@ -1,0 +1,15 @@
+README.rst
+pyproject.toml
+setup.py
+audiogen_p3/__init__.py
+audiogen_p3/filters.py
+audiogen_p3/generators.py
+audiogen_p3/noise.py
+audiogen_p3/sampler.py
+audiogen_p3/util.py
+audiogen_p3.egg-info/PKG-INFO
+audiogen_p3.egg-info/SOURCES.txt
+audiogen_p3.egg-info/dependency_links.txt
+audiogen_p3.egg-info/requires.txt
+audiogen_p3.egg-info/top_level.txt
+test/test.py
