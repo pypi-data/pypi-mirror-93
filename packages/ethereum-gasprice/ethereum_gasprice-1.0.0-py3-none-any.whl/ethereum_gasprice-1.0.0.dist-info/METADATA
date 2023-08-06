@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: ethereum-gasprice
+Version: 1.0.0
+Summary: Tool for fetching actual gasprice in ethereum blockchain
+Home-page: https://github.com/Elastoo-Team/ethereum-gasprice-py
+License: MIT
+Keywords: ethereum,gasprice,web3,etherscan,ethgasstation
+Author: Nikita Yugov
+Author-email: nikitosnikn@yandex.ru
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: eth-utils (>=1.10.0,<2.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Requires-Dist: web3 (>=5.15.0,<6.0.0)
+Project-URL: Repository, https://github.com/Elastoo-Team/ethereum-gasprice-py
+Description-Content-Type: text/markdown
+
+Ethereum gasprice: Actual gasprice for ethereum blockchain
+=======================================
+
+# Installation
+
+TBD
+
+# Quickstart
+
+```python
+from ethereum_gasprice import GaspriceController, GaspriceStrategy
+
+ETHERSCAN_API_KEY = "..."
+
+controller = GaspriceController(etherscan_api_key=ETHERSCAN_API_KEY)
+actual_gasprice = controller.get_gasprice_by_strategy(GaspriceStrategy.FAST)  # output: 69
+```
+
+# Documentation
+
+TBD
+
+
+# License
+
+Ethereum gasprice is licensed under the terms of the MIT License (see the file LICENSE).
+
