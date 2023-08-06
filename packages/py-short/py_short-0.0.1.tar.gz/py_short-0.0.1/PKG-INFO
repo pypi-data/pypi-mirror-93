@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: py_short
+Version: 0.0.1
+Summary: short form for common python statements
+Home-page: https://github.com/dead-zone-termux
+Author: kanish
+Author-email: kanish.ravikumar@gmail.com
+License: MIT
+Description: # how to to use:
+        
+        from pyshort.s import *
+        
+        p() _instead of_ print()
+        
+        fr_p() _insted of for statement_ |fr_p(_range_, _print value_)|
+        
+        rpc(_value to replace_, _what to replace_, _what to make the replaced value_)
+        eg:
+        m="hello world"
+        rpc(m, "hello", "hi")
+        
+        will give output as
+        
+        hi world
+        
+        rvs(_value to reverse_)
+        
+        if elif else eg:
+        m=input()
+        if_elif_else(m, 'hello', 'hi', 'bye', 'no', 'good')
+        
+        will give output same as
+        
+        if m=="hello":
+            print("hi)
+        elif m=="bye":
+            print("no")
+        else:
+            print("good")
+Keywords: core
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

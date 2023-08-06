@@ -1,0 +1,9 @@
+README.md
+setup.py
+py_short.egg-info/PKG-INFO
+py_short.egg-info/SOURCES.txt
+py_short.egg-info/dependency_links.txt
+py_short.egg-info/not-zip-safe
+py_short.egg-info/top_level.txt
+pyshort/__init__.py
+pyshort/s.py
