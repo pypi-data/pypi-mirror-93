@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: omniblack.logging
+Version: 0.1.0
+Summary: Default logging configuration for omniblack projects
+License: AGPL-3.0-or-later
+Author: Terry Patterson
+Author-email: Terryp@wegrok.net
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: rich
+Requires-Dist: rich (>=9.10.0,<10.0.0); extra == "rich"
