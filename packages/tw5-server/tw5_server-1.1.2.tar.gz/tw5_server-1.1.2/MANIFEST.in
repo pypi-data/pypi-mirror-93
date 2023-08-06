@@ -1,0 +1,3 @@
+include tw5_server/static/*
+include tw5_server/flask_server/templates/*
+include tw5_server/templates/*
