@@ -1,0 +1,13 @@
+pep272_encryption/__init__.pyi,sha256=U9bz5qVGjybhzDlGSqRyG4iutFgogyxQXMF66J0QVCg,1535
+pep272_encryption/__init__.py,sha256=zfQqHF2ARJS9x4dmMMM6u3DATVMYWMJseWJg2etzPcg,12907
+pep272_encryption/util.pyi,sha256=4EBfxi_REN75pMrXLEjT_FsE5VaTU-Gppy06dlH7hjc,1073
+pep272_encryption/util.py,sha256=cIaweyen2H5GjXaZNXVacKeXZpAMKdr4sQQYgHHavp8,8082
+pep272_encryption/_fast_xor.pyi,sha256=_4ZEUFaxBY87O86fYfH-gOo8MN4-l1-x9SH037y-KkM,92
+pep272_encryption/version.py,sha256=4CkPQ5_ovkNb5Ol4rIqm14vnZkGHPoBrnY2RJPTT-hk,500
+pep272_encryption/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pep272_encryption/_fast_xor.abi3.so,sha256=DksqCunoV-H5BPYM2KPXnEBXg98UF5az0pwznb3DOZo,91664
+pep272_encryption-0.4.dist-info/top_level.txt,sha256=6XCY09QrdUzoHfjkeAQRFGyASOQS5hrujIKs5FnhMg4,18
+pep272_encryption-0.4.dist-info/RECORD,,
+pep272_encryption-0.4.dist-info/WHEEL,sha256=Cxz2ci5BkpvR-tVK-XUaIluttIBtfn_gSvA8bfOtPU4,112
+pep272_encryption-0.4.dist-info/METADATA,sha256=XXYPP7sAw4EL-5us-cBCTRGQTlbWE7ptga3t6ybjEVU,2991
+pep272_encryption-0.4.dist-info/LICENSE,sha256=XDfkETUJGjmCHPswathRZiWwu0lRDOVq2Fw0e7xG3yk,6383
