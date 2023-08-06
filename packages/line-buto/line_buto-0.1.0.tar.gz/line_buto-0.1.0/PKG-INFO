@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: line-buto
+Version: 0.1.0
+Summary: 
+Author: fandong
+Author-email: fandong@coding.net
+Requires-Python: >=2.7,<3.0
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
