@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: questradeist
+Version: 0.3.4
+Summary: A library for interacting with the Questrade API.
+License: MIT
+Author: Chayim I. Kirshen
+Author-email: c@kirshen.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyYAML (>=5.3.1,<6.0.0)
+Requires-Dist: requests (>=2.24.0,<3.0.0)
