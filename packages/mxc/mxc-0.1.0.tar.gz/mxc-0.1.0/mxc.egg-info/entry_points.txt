@@ -1,0 +1,3 @@
+[console_scripts]
+mxc = mxc.cli:run
+
