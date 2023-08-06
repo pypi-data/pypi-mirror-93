@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+SHLogger.egg-info/PKG-INFO
+SHLogger.egg-info/SOURCES.txt
+SHLogger.egg-info/dependency_links.txt
+SHLogger.egg-info/requires.txt
+SHLogger.egg-info/top_level.txt

@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: SHLogger
+Version: 1.1.0
+Summary: Super Simple Log handling system. With Error handling
+Home-page: https://github.com/dev-nolant/simple-loghandler
+Author: Nolan Taft
+Author-email: contact@nolant.org
+License: MIT
+Download-URL: https://pypi.org/project/simple-loghandler/
+Description: # LogHandlingModule
+        LH Module - With debugging. 
+        # Simple Use - More detail coming soon
+        ```pip install Simple-LogHandler```
+        ```python
+        from Simple-LogHandler import LogHandler
+        log = LogHandler.loghandle()
+        log.pathset(r'PATH')
+        log.log('ERROR')
+        # Will Output detailed error log To Log File Based on Date.
+        # ERRORs can be Bools, Strings, and Integers - Will be translated to string forms and output.
+        # More features to come!
+        ```
+        
+Keywords: simple-loghandler,SLH,Super simple
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
