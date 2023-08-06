@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+package.yml
+setup.py
+src/nr/__init__.py
+src/nr.pylang.ast.egg-info/PKG-INFO
+src/nr.pylang.ast.egg-info/SOURCES.txt
+src/nr.pylang.ast.egg-info/dependency_links.txt
+src/nr.pylang.ast.egg-info/requires.txt
+src/nr.pylang.ast.egg-info/top_level.txt
+src/nr.pylang.ast.egg-info/zip-safe
+src/nr/pylang/__init__.py
+src/nr/pylang/ast/__init__.py
+src/nr/pylang/ast/dynamic_eval.py
