@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: pyrano
+Version: 0.1.3
+Summary: Solar irradiance simulations for PV and BPS applications
+Home-page: https://gitlab.tue.nl/bp-tue/pyrano
+Author: Adam Bognar
+Author-email: a.bognar@tue.nl
+License: MIT
+Download-URL: https://gitlab.tue.nl/bp-tue/pyrano/-/archive/v0.1.3/pyrano-v0.1.3.tar.gz
+Description: 
+        Pyrano is a Python package for simulating solar irradiance
+        on external built surfaces using Digital Surface Model (DSM)
+        point clouds as shading geometry. Pyrano aims to bridge the gap
+        between building energy, solar irradiance and PV power simulations.
+        It is compatible with EnergyPlus, Radiance and PVMismatch. 
+        
+        See more at https://gitlab.tue.nl/bp-tue/pyrano
+        
+Keywords: solar,irradiance,pv,radiance,energyplus,pvmismatch,lidar,pointclouds
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
