@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+proxybootstrap/Dockerfile.jinja2
+proxybootstrap/__init__.py
+proxybootstrap/nginx.default.jinja2
+proxybootstrap/proxy.py
+proxybootstrap.egg-info/PKG-INFO
+proxybootstrap.egg-info/SOURCES.txt
+proxybootstrap.egg-info/dependency_links.txt
+proxybootstrap.egg-info/entry_points.txt
+proxybootstrap.egg-info/requires.txt
+proxybootstrap.egg-info/top_level.txt
