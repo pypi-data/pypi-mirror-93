@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: preadator
+Version: 0.1.0a1
+Summary: Process and Thread Management Utility.
+Home-page: https://github.com/LabShare/polus-plugins/tree/master/utils/polus-preadator-util/
+Author: Nick Schaub
+Author-email: nick.schaub@labshare.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# Preadator Utility
+
+Streamlined management of threads and processes for algorithm scaling.
+
+Supports Python>=3.9.
+
+# Bugs
+
+Preadator is designed to work in Python >= 3.7, but there is a 
+[bug in Python](https://bugs.python.org/issue39098)
+in the `ProcessPoolExecutor` that causes an `OSError` with
+`.shutdown(wait=False)`.
+
+Since the bug is in Python itself, currently only Python 3.9 is supported. If
+the bug is fixed, then Preadator will support older versions of Python.
+
+## Install
+
+`pip install preadator`
+
+
