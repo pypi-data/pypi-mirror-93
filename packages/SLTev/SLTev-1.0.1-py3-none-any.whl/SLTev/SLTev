@@ -1,0 +1,226 @@
+#!/usr/bin/env python 
+
+import os
+import sys
+import argparse
+import requests
+from os import getcwd
+from urllib.request import urlopen
+import subprocess as sp
+import shutil
+import logging
+import git
+import subprocess
+import pkg_resources
+
+if __name__ == "__main__":
+    # initiate the parser
+    parser = argparse.ArgumentParser(description="generate and evaluate slt/mt/asr files.")
+    parser.add_argument("-g", help="eliter index name for download files ", type=str)
+    parser.add_argument("--simple", help="if exist just some of the results will be shown", const='True', nargs='?', default='False')
+    parser.add_argument("--outdir", help="slt output results directory (output of the SLTev) ", default= "./outdir/", type=str)
+    parser.add_argument("-e", help="eliter working directory", type=str)
+    parser.add_argument("--commitid", help="commitid for eliter-testset repo) ", default= "HEAD", type=str)
+    # read arguments from the command line
+    args = parser.parse_args()
+    import subprocess
+
+    #-----------add SLTev home to the path 
+    try:
+        sltev_home = pkg_resources.resource_filename('SLTev', '')
+    except:
+        sltev_home = os.path.dirname(os.path.realpath(sys.argv[0]))
+    sys.path.insert(1, sltev_home)
+    
+    from utilities import *
+    from ASRev import ASRev
+    from evaluator import evaluator
+    
+    try:
+        repo = git.Repo('/'.join(sltev_home.split('/')[:-1]))
+        sha = repo.head.object.hexsha
+        SLTev_commit_id = 'SLTev_' + repo.git.rev_parse(sha, short=True)
+    except:
+        SLTev_commit_id = ''
+    #-----------check output directory 
+    if args.e == None and args.g == None:
+        parser.print_help()
+        sys.exit(1)
+        
+    output_dir = './'
+    if os.path.isdir(args.outdir):
+        output_dir = args.outdir
+    else:
+        os.makedirs(args.outdir, exist_ok=True)
+        output_dir = args.outdir
+    if output_dir[-1] != '/':
+        output_dir += '/'
+
+    #----get commit id
+
+    try:
+        elitr_path = "./elitr-testset"
+        repo = git.Repo(elitr_path)
+        commit_id = repo.head.commit
+    except:
+        commit_id = "no commit id, you are using offline mode"
+    elitr_path = "./elitr-testset"
+    
+    if args.g != None:
+        #if elitr-testset repo exist pull it and otherwise clone it
+        git_path = "https://github.com/ELITR/elitr-testset.git"
+
+        if os.path.isdir(elitr_path):
+            try:
+                repo = git.Repo(elitr_path)
+                repo.remotes.origin.pull()
+                sha = repo.head.object.hexsha
+                commit_id = 'elitrtestset_' + repo.git.rev_parse(sha, short=True)
+                print("elitr-tesset pulled")
+            except:
+                print ("pull from elitr-testset faild pleae remove ./elitr-testset folder and run SLTev -g ", args.g)
+                sys.exit(1)
+        else:
+            try:
+                print("cloning elitr-testset repo to the current directory")
+                git.Git("./").clone(git_path)
+                repo = git.Repo(elitr_path)
+                sha = repo.head.object.hexsha
+                commit_id = 'elitrtestset_' + repo.git.rev_parse(sha, short=True)
+            except:
+                print("cloning from elitr-testset faild, please check your internet conection")
+                sys.exit(1)
+        #------check commit id 
+        if args.commitid != 'HEAD':
+            try:
+                repo = git.Repo(elitr_path)
+                repo.git.checkout(args.commitid)
+                print("checkout to ", args.commitid, " done.")
+            except:
+                print (args.commitid, ' is not valid')
+
+        try:
+            print('elitr-tesset commit id is: ', commit_id)
+            gitLock() # lock the repo
+            indice_file_path = "./elitr-testset/indices/" + args.g
+            target_path = output_dir
+            populate(indice_file_path, target_path)
+            gitUnLock() #unlock the repo 
+        except:
+            print ("Generating inedx ",args.g ," failed. check ", args.g, " index, it does not seem to exist, also check ", output_dir, ' for write permision'  )
+        sys.exit(1)
+
+
+    #----checking working directory    
+    working_dir = args.e
+    if working_dir[-1] != '/':
+        working_dir += '/'
+
+    if os.path.isdir(working_dir):
+        print ('working directory is ', working_dir)
+    else:
+        print(working_dir, ' is not exist.')
+        sys.exit(1)
+
+    #---make signature
+    signature =  SLTev_commit_id
+    if os.path.isdir(elitr_path):
+        try:
+            repo = git.Repo(elitr_path)
+            sha = repo.head.object.hexsha
+            elitr_commit_id = 'elitrtestset_' + repo.git.rev_parse(sha, short=True)
+            signature = signature + '-' +  elitr_commit_id
+        except:
+            pass
+    """
+
+    Naming template:
+    - OSt
+    <file-name> . <language> . OSt
+    -OStt
+    <file-name> . <language> . OStt
+    -align
+    <file-name> . <source-lang> . <target-lang> . align
+    -ASR/SLT/MT
+    <file-name> . <source-lang> . <target-lang> . asr/slt/mt
+
+    """
+
+    submissions, inputs = split_submissions_inputs(working_dir) 
+    orig_stdout = sys.stdout
+    
+    if submissions == []:
+        print("No SLT/ASR/MT files in working directory ", working_dir, " for evaluatin")
+
+    for submission_file in submissions:
+        #---check slt/asr/mt format
+        state = check_input(submission_file)
+        if state:
+            continue
+        status, tt, ostt, align = SLTev_inputs_per_submmision(submission_file, inputs)
+
+        #----checking number of C sentences in OStt and all tt must be equal
+        parity_state,error = partity_test(ostt, tt)
+        if  parity_state == 0:
+            print ("The number of Complete lines (C) in ", ostt, " and ", ' '.join(tt), ' are not equal')
+            print(error)
+            sys.exit(1)
+        #----checking MT contain at least one C segment
+        if MT_checking(submission_file) == 0:
+            print(submission_file , "does not contain any Complete segment (C) for evaluation it must contain at least one C segment")
+            sys.exit(1)
+
+        if tt == []:
+            print ("evaluation faild, no OSt file exist for ", submission_file)
+            continue
+        if ostt == '':
+            print("evaluation faild, no OStt file exist for ", submission_file)
+            continue
+        if align == [] and 'asr' == removeDigits(status):
+            print("Evaluating the file ", submission_file, " in terms of  WER score against ", tt[0])
+            out_name = args.outdir + submission_file.split('/')[-1] + ".WER.out" 
+            with open(out_name, 'w') as f:
+                sys.stdout = f
+                print('Signature: ', signature)
+                ASRev(ost=tt[0], asr=submission_file, SLTev_home=sltev_home, simple=args.simple)
+                sys.stdout = orig_stdout
+                
+            print("Results saved in ", out_name)
+            print("Evaluating the file ", submission_file, " in terms of translation quality against ", ' '.join(tt))
+            out_name = args.outdir + submission_file.split('/')[-1] + ".BLEU.out" 
+            with open(out_name, 'w') as f:
+                sys.stdout = f
+                print('Signature: ', signature)
+                evaluator(ostt=ostt, asr=True, tt=tt, align=[], mt=submission_file, SLTev_home=sltev_home, simple=args.simple)
+                sys.stdout = orig_stdout
+            print("Results saved in ", out_name)
+            continue
+
+        if align == [] and 'asr' != removeDigits(status):
+            print("Evaluating the file ", submission_file, " in terms of translation quality against ", ' '.join(tt))
+            out_name = args.outdir + submission_file.split('/')[-1] + ".BLEU.out" 
+            with open(out_name, 'w') as f:
+                sys.stdout = f
+                print('Signature: ', signature)
+                evaluator(ostt=ostt, asr=True, tt=tt, align=[], mt=submission_file, SLTev_home=sltev_home, simple=args.simple)
+                sys.stdout = orig_stdout
+            print("Results saved in ", out_name)
+            continue
+
+        if align != [] and 'asr' != removeDigits(status):
+            if len(align) != len(tt):
+                print("Evaluating the file ", submission_file, " faild, the number of TT files and align files not equal")
+                continue
+
+            print("Evaluating the file ", submission_file, " in terms of translation quality against ", ' '.join(tt))
+            out_name = args.outdir + submission_file.split('/')[-1] + ".BLEU.out" 
+            with open(out_name, 'w') as f:
+                sys.stdout = f
+                print('Signature: ', signature)
+                evaluator(ostt=ostt, tt=tt, align=align, mt=submission_file, SLTev_home=sltev_home, simple=args.simple)
+                sys.stdout = orig_stdout
+            print("Results saved in ", out_name)
+            continue
+
+
+
