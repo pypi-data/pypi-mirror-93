@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: file-tree-fsl
+Version: 0.1.0
+Summary: filetree definitions for the FSL neuroimaging library
+Home-page: https://git.fmrib.ox.ac.uk/ndcn0236/filetree.git
+Author: Michiel Cottaar
+Author-email: MichielCottaar@protonmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
