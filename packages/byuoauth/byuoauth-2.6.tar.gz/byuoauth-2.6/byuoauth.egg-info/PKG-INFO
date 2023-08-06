@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: byuoauth
+Version: 2.6
+Summary: Scripts to easily allow BYU applications to generate OAuth tokens and JWTs for test use.
+Home-page: https://github.com/byu-oit/python-token-scripts
+Author: Mark Roth
+Author-email: mark_roth@byu.edu
+License: UNKNOWN
+Description: # python-token-scripts
+        This repository includes scripts that easily allow generation of OAuth tokens and JWTs.
+        
+        You can import this script by running:
+         
+         `pip3 install byu-oauth`
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License 
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
