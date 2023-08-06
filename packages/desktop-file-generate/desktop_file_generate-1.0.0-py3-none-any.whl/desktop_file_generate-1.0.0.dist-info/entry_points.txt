@@ -1,0 +1,3 @@
+[console_scripts]
+desktop-file = desktop_file.desktop_file:main
+
