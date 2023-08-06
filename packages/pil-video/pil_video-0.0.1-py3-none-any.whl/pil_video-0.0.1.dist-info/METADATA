@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pil-video
+Version: 0.0.1
+Summary: Play a PIL Image list as a video
+Home-page: https://github.com/krishnachaitanya7/pil_video
+Author: Kodur Krishna Chaitanya
+Author-email: kodur.chaitanya@colorado.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Pillow (>=8.0.1)
+Requires-Dist: imageio (>=2.9.0)
+Requires-Dist: imageio-ffmpeg (>=0.4.3)
+
+UNKNOWN
+
+
