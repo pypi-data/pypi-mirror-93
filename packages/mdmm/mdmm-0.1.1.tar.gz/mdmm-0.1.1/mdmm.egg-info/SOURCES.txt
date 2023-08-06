@@ -1,0 +1,12 @@
+LICENSE
+README.md
+mdmm_demo_mnist.py
+mdmm_demo_tv.py
+setup.py
+mdmm/__init__.py
+mdmm/mdmm.py
+mdmm.egg-info/PKG-INFO
+mdmm.egg-info/SOURCES.txt
+mdmm.egg-info/dependency_links.txt
+mdmm.egg-info/requires.txt
+mdmm.egg-info/top_level.txt
