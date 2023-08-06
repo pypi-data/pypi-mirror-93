@@ -1,0 +1,10 @@
+README.md
+setup.py
+vid2slides/__init__.py
+vid2slides/cli.py
+vid2slides.egg-info/PKG-INFO
+vid2slides.egg-info/SOURCES.txt
+vid2slides.egg-info/dependency_links.txt
+vid2slides.egg-info/entry_points.txt
+vid2slides.egg-info/requires.txt
+vid2slides.egg-info/top_level.txt
