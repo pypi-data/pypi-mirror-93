@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: nbmake
+Version: 0.2
+Summary: Pytest plugin for testing notebooks
+Home-page: https://github.com/treebeardtech/nbmake
+License: Apache-2.0
+Author: alex-treebeard
+Author-email: alex@treebeard.io
+Requires-Python: >=3.6.1,<4.0.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: html
+Requires-Dist: PyYAML (>=5.3.1,<6.0.0)
+Requires-Dist: Pygments (>=2.7.3,<3.0.0)
+Requires-Dist: ipykernel (>=5.4.0,<6.0.0)
+Requires-Dist: jupyter-book (>=0.8.3,<0.9.0); extra == "html"
+Requires-Dist: nbclient (>=0.3,<1.0)
+Requires-Dist: nbformat (>=5.0.8,<6.0.0)
+Requires-Dist: pathlib (>=1.0.1,<2.0.0)
+Requires-Dist: pydantic (>=1.7.2,<2.0.0)
+Requires-Dist: pytest (>=6.1.2,<7.0.0)
+Description-Content-Type: text/markdown
+
+# nbmake
+[![codecov](https://codecov.io/gh/treebeardtech/nbmake/branch/main/graph/badge.svg?token=9GuDM35FuO)](https://codecov.io/gh/treebeardtech/nbmake)
+[![PyPI versions](https://img.shields.io/pypi/pyversions/nbmake?logo=python&logoColor=white)](https://pypi.org/project/nbmake)
+[![PyPI versions](https://img.shields.io/pypi/v/nbmake?logo=python&logoColor=white)](https://pypi.org/project/nbmake) [![Slack](https://img.shields.io/static/v1?label=slack&message=join&color=green&logo=slack)](https://join.slack.com/t/treebeard-entmoot/shared_invite/zt-jyvuqted-xBjnbvlfcu5P2ltBvn1~mg)
+
+**What?** Pytest plugin for testing and releasing notebook documentation
+
+**Why?** To raise the quality of scientific material through better automation
+
+**Who is this for?** Research/Machine Learning Software Engineers who maintain packages/teaching materials with documentation written in notebooks.
+
+## Functionality
+
+1. Executes notebooks using pytest and nbclient, allowing parallel notebook testing
+2. Optionally writes back to the repo, allowing faster building of [nbsphinx](https://github.com/spatialaudio/nbsphinx) or [jupyter book](https://github.com/executablebooks/jupyter-book) docs
+3. Optionally builds an HTML report using [jupyter-book](https://github.com/executablebooks/jupyter-book) of the test run which can be uploaded to hosting providers such as Netlify.
+
+**See [docs](https://treebeardtech.github.io/nbmake) to get started.**
+<br/>
+<br/>
+
+## See Also
+
+* [nbmake-action](https://github.com/treebeardtech/nbmake-action)
+
+### HTML Report Example
+
+![HTML Report](docs/screen.png)
+
+
+## Developing
+
+### Install local package
+```
+poetry install -E html
+```
+
+### Activate shell
+```
+poetry shell
+```
+
+### Run static checks
+```
+pre-commit run --all-files
+pre-commit install
+```
+
+### Run tests
+```
+pytest
+```
+
+
