@@ -1,0 +1,67 @@
+Change Log
+==========
+
+0.0.1(01/02/2021)
+-----------------
+- Get Hwid
+- Check Hwid
+- Check Username
+- Check Password
+- Check Ip
+- Send Request
+- Get Sql Data
+- Fetch Sql Data (with indexing)
+- Encrypt Text
+- Geo Location
+- Reverse Hostname
+- Phone Lookup
+
+0.0.2(01/02/2021)
+-----------------
+- Discord Webhook Delete
+- Fixed & Updated Check Ip Func
+- Get Ip
+
+0.0.3(01/02/2021)
+-----------------
+- Added Functions list (basic docs)
+- Added a github repository
+
+0.0.4(01/02/2021)
+-----------------
+- Added Code Examples to Github
+
+0.0.5(01/02/2021)
+-----------------
+- Added Portscanner
+- Added DnsLookup
+- Updated the github Examples
+- Updated Function List
+
+0.0.6(01/02/2021)
+-----------------
+- Updated README.txt
+- Added Current Time
+- Updated Examples
+- Updated README.txt
+
+0.0.7(01/02/2021)
+-----------------
+- Discord Webhook Spammer
+- Updated Examples
+- Updated github
+
+0.0.8(01/02/2021)
+-----------------
+- Updated Setup File
+
+0.0.9(02/02/2021)
+-----------------
+- Optimized Source
+
+0.1.0(02/02/2021)
+-----------------
+- Fixed Phone Lookup
+- Fixed Dns Lookup
+- Updated Webhook Delete response
+- Updated Get Hwid
