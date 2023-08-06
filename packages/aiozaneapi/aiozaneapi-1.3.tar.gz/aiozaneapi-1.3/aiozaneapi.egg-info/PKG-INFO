@@ -1,0 +1,16 @@
+Metadata-Version: 1.0
+Name: aiozaneapi
+Version: 1.3
+Summary: An async wrapper made in Python for Zane API.
+Home-page: http://github.com/kal-byte/aiozaneapi
+Author: kal-byte
+Author-email: UNKNOWN
+License: MIT
+Description: # aiozaneapi - An async wrapper made in Python for Zane API.
+        
+        Example:
+        ```py
+        client = aiozaneapi.Client('Token Here') # Instantiate the Client.
+        image = await client.magik('Image URL Here') # This will return a BytesIO object.
+        ```
+Platform: UNKNOWN
