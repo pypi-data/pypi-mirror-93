@@ -1,0 +1,15 @@
+README.md
+setup.py
+py_xbrl.egg-info/PKG-INFO
+py_xbrl.egg-info/SOURCES.txt
+py_xbrl.egg-info/dependency_links.txt
+py_xbrl.egg-info/requires.txt
+py_xbrl.egg-info/top_level.txt
+xbrl_parser/__init__.py
+xbrl_parser/cache.py
+xbrl_parser/instance.py
+xbrl_parser/linkbase.py
+xbrl_parser/taxonomy.py
+xbrl_parser/helper/__init__.py
+xbrl_parser/helper/uri_resolver.py
+xbrl_parser/helper/xml_parser.py
