@@ -1,0 +1,11 @@
+honeybee-core==1.42.4
+honeybee-radiance-folder==2.4.0
+honeybee-radiance-command==1.1.8
+honeybee-standards==2.0.0
+
+[cli]
+click==7.1.2
+click_plugins==1.1.1
+
+[cli:python_version >= "3.6"]
+honeybee-schema==1.42.0
