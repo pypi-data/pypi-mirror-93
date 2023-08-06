@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: b-stage-deployment
+Version: 0.0.4
+Summary: AWS CDK resource that creates a stage deployment. Original one has too many bugs.
+Home-page: https://github.com/biomapas/B.StageDeployment.git
+Author: Laimonas Sutkus
+Author-email: laimonas.sutkus@biomapas.com
+License: Apache License 2.0
+Keywords: AWS API Gateway Stage Deployment
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: boto3 (<2.0.0,>=1.16.0)
+Requires-Dist: pytest (<7.0.0,>=6.0.2)
+Requires-Dist: b-aws-testing-framework (<1.0.0,>=0.0.24)
+Requires-Dist: aws-cdk.core (<2.0.0,>=1.75.0)
+Requires-Dist: aws-cdk.aws-apigatewayv2 (<2.0.0,>=1.75.0)
+Requires-Dist: aws-cdk.aws-lambda (<2.0.0,>=1.75.0)
+
+# TODO
+
+# Release history
+
+### 0.0.4
+* Increase the function timeout.
+
+### 0.0.3
+* Update boto3 requirement.
+
+### 0.0.2
+* Add more docstrings.
+
+### 0.0.1
+* Initial build.
+
+
