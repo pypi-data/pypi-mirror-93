@@ -1,0 +1,72 @@
+
+# Pyvise: A FastAPI implementation of account authorization
+
+This project aims to implement authentication using FastAPI and JWT
+to enable authenticated requests to a backend.
+
+## Setup
+
+### Prerequisites
+
+A magic.link account
+
+### Environment
+
+A sample app using magic.link and gatsby can be seen in the tests/
+directory
+
+
+```python
+
+```
+## Overview
+
+### Backend Model
+
+The backend uses graphql to communicate with a Hasura graphql instance.  I'm using Hasura
+as a reference design.
+
+
+
+# Reference Design (https://devhints.io/devise)
+
+## Model
+```ruby
+create_table :account_profiles do |t|
+  t.database_authenticatable
+  t.confirmable
+  t.recoverable
+  t.rememberable
+  t.trackable
+  t.timestamps
+end
+```
+
+## Helpers
+
+user_signed_in?
+current_user
+user_session
+destroy_user_session_path (Logout)
+new_user_session_path (Login)
+edit_user_registration_path (Edit registration)
+new_user_registration_path (Register new user)
+
+# Middleware 
+# before_filter :authenticate_user!
+## Routes
+ # Session routes for Authenticatable (default)
+    #      new_user_session GET  /users/sign_in                    {:controller=>"devise/sessions", :action=>"new"}
+    #          user_session POST /users/sign_in                    {:controller=>"devise/sessions", :action=>"create"}
+    #  destroy_user_session GET  /users/sign_out                   {:controller=>"devise/sessions", :action=>"destroy"}
+   
+    # # Password routes for Recoverable, if User model has :recoverable configured
+    #     new_user_password GET  /users/password/new(.:format)     {:controller=>"devise/passwords", :action=>"new"}
+    #    edit_user_password GET  /users/password/edit(.:format)    {:controller=>"devise/passwords", :action=>"edit"}
+    #         user_password PUT  /users/password(.:format)         {:controller=>"devise/passwords", :action=>"update"}
+    #                       POST /users/password(.:format)         {:controller=>"devise/passwords", :action=>"create"}
+   
+    # # Confirmation routes for Confirmable, if User model has :confirmable configured
+    # new_user_confirmation GET  /users/confirmation/new(.:format) {:controller=>"devise/confirmations", :action=>"new"}
+    #     user_confirmation GET  /users/confirmation(.:format)     {:controller=>"devise/confirmations", :action=>"show"}
+    #                       POST /users/confirmation(.:format)     {:controller=>"devise/confirmations", :action=>"create"}
