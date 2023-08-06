@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: xonsh-tcg
+Version: 0.1.1
+Summary: tcg support for the Xonsh shell
+Home-page: https://github.com/zasdfgbnm/tcg
+Author: Xiang Gao
+Author-email: tcg@emailaddress.biz
+License: MIT
+Platform: UNKNOWN
+
+# xonsh-tcg
+
+[xonsh](https://xon.sh/) plugin for tcg
+
