@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: mongoengine-arrow
+Version: 0.1.1
+Summary: Arrow datetime support for MongoEngine
+Author: Niko Järvinen
+Author-email: nbjarvinen@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: arrow (>=0.17.0,<0.18.0)
+Requires-Dist: mongoengine (>=0.22.1,<0.23.0)
+Description-Content-Type: text/markdown
+
+# mongoengine-arrow
+
+## Description
+
+[Arrow](https://github.com/arrow-py/arrow) datetime support for [MongoEngine](https://github.com/MongoEngine/mongoengine)
+
+## Install
+
+```bash
+pip3 install --upgrade mongoengine-arrow
+```
+
+## How it works
+
+Feed it datetime with or without timezone info in any format Arrow supports.
+To confirm whether it will work, feed it to `arrow.get()` function.
+
+## Usage example
+
+```python3
+# Import the field
+from mongoengine_arrow import ArrowDateTimeField
+
+...
+
+# Define model
+class MyModel(Document):
+    timestamp = ArrowDateTimeField(required=True)
+
+...
+
+# Get instance
+myinstance = MyModel.objects.first()
+
+# Get timestamp in local time
+timestamp = myinstance.timestamp.to("local")
+
+# Set timestamp in any timezone
+myinstance.timestamp = arrow.get(2021, 1, 1, tzinfo="UTC")
+
+# Set timestamp from datetime
+from datetime import datetime
+myinstance.timestamp = datetime(2021, 1, 1)
+
+# Set timestamp from datetime that has tzinfo
+from datetime import datetime
+from dateutil.tz import gettz
+myinstance.timestamp = datetime(2021, 1, 1, tzinfo=gettz("UTC+5"))
+```
+
