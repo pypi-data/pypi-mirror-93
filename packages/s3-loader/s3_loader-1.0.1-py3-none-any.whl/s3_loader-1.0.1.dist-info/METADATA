@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: s3-loader
+Version: 1.0.1
+Summary: wrapper script for uploading files and dirs to s3
+Author: phil-bell
+Author-email: philhabell@gmail.com
+Requires-Python: >=3.6.12,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: boto3 (>=1.16.63,<2.0.0)
+Requires-Dist: typer (>=0.3.2,<0.4.0)
