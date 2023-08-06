@@ -1,0 +1,11 @@
+storer/__init__.py,sha256=UV-ugOP2WHzJBGOlVBoopVO0byTZdg_O9B4z70OAXUM,484
+storer/storer.py,sha256=97qDFy3bVy096lQ5Kkde9atVmVe8x3-EwOJLXCmmhao,5089
+storer/compressor/__init__.py,sha256=IRqwoA43bPAey9ccS7P7qr8igaZw70ZIvVr2VlIjpeM,34
+storer/compressor/compressor.py,sha256=D255XojkXFrouDxc7EKmtIyzUctsrQV5DSOhshR1-3I,1832
+storer/tests/__init__.py,sha256=CwYrSfc9SSivyDzMvLs-pCaKvSGwj_D-g10mxEA_46I,20
+storer/tests/tests.py,sha256=ylFiERa6fWmOKv4htpxAkSfXGeCncvg7fBaykhZZFcs,6042
+storer-1.0.3.dist-info/LICENSE.txt,sha256=VURe1MQyEDSCzi-xlF7PrJ7eMzJJQWYdobQ4-4fRrqk,1070
+storer-1.0.3.dist-info/METADATA,sha256=yQ-Xd3uj8A89EJr_Gntt8CeVpGtbQuO-jQ2WdyrY5sE,2340
+storer-1.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+storer-1.0.3.dist-info/top_level.txt,sha256=FpX6dvk6frRuwZhxj2AhbUcyuUvZYAVAUsS7JRLOB8k,7
+storer-1.0.3.dist-info/RECORD,,
