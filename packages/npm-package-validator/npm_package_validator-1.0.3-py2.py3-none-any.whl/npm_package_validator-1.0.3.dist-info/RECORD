@@ -1,0 +1,11 @@
+npm_package_validator/__init__.py,sha256=s3GvHobpHl_m7jwTXER7Dd1lEKHzUhWmL7SVSrEAruY,596
+npm_package_validator/cli.py,sha256=NdUVkLgK4kPrCf2AG3WlDfC4TtmyRhFkCcsC-diSKQ0,993
+npm_package_validator/constants.py,sha256=PJXSqUaXjveqBvgracFTQmgwilMYoIE3c6jlD5AWGCE,789
+npm_package_validator/validate.py,sha256=CgcLguJMMQCr8-X7jJQgTACw91UDnkOdeuLdZ9nG2KA,2900
+npm_package_validator-1.0.3.dist-info/AUTHORS.rst,sha256=XuivkgezXDmKNERF6AuzrxMYv2i-_jvmRKrtZ125APU,138
+npm_package_validator-1.0.3.dist-info/LICENSE,sha256=2gLWLxS76L2p4qDYiOv0dM5EjYlTJT1o4Pnb-D3KfZE,726
+npm_package_validator-1.0.3.dist-info/METADATA,sha256=IfOUhWGkI7bjn3gsLR-1GoiJXrBR25TZUMVQHlS8K7g,5216
+npm_package_validator-1.0.3.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+npm_package_validator-1.0.3.dist-info/entry_points.txt,sha256=9OWQiQFkBnuzj8Jun4j5_MWFf2e1lA33vFfXE1mlEmE,74
+npm_package_validator-1.0.3.dist-info/top_level.txt,sha256=3S2Kfmq59TCNJW3ZOUIP-RlxcZylKph3dD8iXV3qdQo,22
+npm_package_validator-1.0.3.dist-info/RECORD,,
