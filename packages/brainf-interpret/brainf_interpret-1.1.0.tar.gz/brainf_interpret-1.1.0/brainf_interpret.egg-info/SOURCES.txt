@@ -1,0 +1,7 @@
+README.md
+setup.py
+brainf_interpret/__init__.py
+brainf_interpret.egg-info/PKG-INFO
+brainf_interpret.egg-info/SOURCES.txt
+brainf_interpret.egg-info/dependency_links.txt
+brainf_interpret.egg-info/top_level.txt
