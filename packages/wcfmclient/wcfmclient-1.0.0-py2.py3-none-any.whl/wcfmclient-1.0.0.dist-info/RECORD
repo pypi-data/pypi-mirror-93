@@ -1,0 +1,13 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/data.py,sha256=nnQD_v1bIPkpWF3okaFMvqscygKWe7kYUyu0kAKHb5U,203
+tests/test_api.py,sha256=lCMEZyZRNSvb2qxNF38K34rfwSPbPJb71vOekhWBZWM,1593
+tests/test_jwt_auth.py,sha256=XzBHoXO1MZxgOsfOeQGYvwI2TtbjapNp9bfe2mLMqZA,1121
+wcfmclient/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wcfmclient/api.py,sha256=6f56HwpGH0izAynvH_1fv3_859j9upW9PXfk9wj9ggU,2555
+wcfmclient/jwt_auth_service.py,sha256=XItR0nFlQ2Caj6fBNusMhKr4VtuKzTwVKxKpmYw6qAc,1373
+wcfmclient/session.py,sha256=uWqj5xhSy25CtKdQ0P0ZJDyPPnm0ONfygcNp42vRi6U,1323
+wcfmclient-1.0.0.dist-info/LICENSE,sha256=k5BRCYV9hPHfKBBqZVwhT3PJ29q8EmgNtRIWOjDhalM,1069
+wcfmclient-1.0.0.dist-info/METADATA,sha256=WzaYKQNB9uP3fT9B53PfEXIv6SEQGQP8WSIkDtmghlA,2312
+wcfmclient-1.0.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+wcfmclient-1.0.0.dist-info/top_level.txt,sha256=pM2NrHWaVEJcxlYtR0LoqU5623ccrTaSZLRyzzBecPQ,17
+wcfmclient-1.0.0.dist-info/RECORD,,
