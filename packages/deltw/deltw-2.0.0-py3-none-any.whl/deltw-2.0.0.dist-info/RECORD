@@ -1,0 +1,10 @@
+deltw/__init__.py,sha256=5mknfR6EOt_h_eF4kaA_GGwsUP4pHuIKccaWHzjrTAk,46
+deltw/cleaner.py,sha256=7amFqj0HuK4gqRdaiYypXKoTjPN0TzDtU_qD4B3aQTg,5364
+deltw/cli.py,sha256=voSAsjk83Hu9Js0eSNzjyIsTkcXQvwYRT-J0xjhVRlw,1105
+deltw/util.py,sha256=kiznl2ww4YLqtwNjmm4yr_KsM4jVsD_O9bN38tWdefs,2770
+deltw-2.0.0.dist-info/LICENSE,sha256=-iFpGNreDeJuggAvhfskBZYciUHEsJ_4tjZaPvUbM8U,1084
+deltw-2.0.0.dist-info/METADATA,sha256=5X28F1MOWulgdanw5QlIaHjq2DBfhgv4SVvaWFZujd8,1666
+deltw-2.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+deltw-2.0.0.dist-info/entry_points.txt,sha256=hnGv5w6AZN2dc751SgXatzbI3t4ceiy6Ld9h4_C9YVg,42
+deltw-2.0.0.dist-info/top_level.txt,sha256=d6bWVkpMxRg7FHmEErDbf2CX7hqM86DCt5tnk5Qip8g,6
+deltw-2.0.0.dist-info/RECORD,,
