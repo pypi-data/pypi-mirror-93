@@ -1,0 +1,15 @@
+pynada/__init__.py,sha256=W6SvsqSK7_I1VQfYvrVCJTfIUZJpXlFEtBiEZ8Ygnlo,146
+pynada/citations.py,sha256=KD0VXRCTv8XK7V6OMFU8qWIxnwFrvQGjpPFP0XV8A3s,800
+pynada/commons.py,sha256=0OC0dkPed7h-isC6QBxTMKjFWg_pJW4_o4X6AcS1058,3801
+pynada/create_and_import.py,sha256=rdCFUVOguMgkD5J2HCwtvPLlDrJiu-N86_FFNONkil8,22734
+pynada/create_dataset.py,sha256=zNwWLeVsdiGJoFyFfCS8wIIsED6TioEQZHd16fDNdx8,3225
+pynada/datasets.py,sha256=6zhU0MTRbrmCo9ACpMKWHMnFGoVgg8ojBZBnbDCXi2E,597
+pynada/manage_and_update.py,sha256=0ymaY360i93sbdneDeCCcHJuOKDHlyKyshU7zGj543A,4850
+pynada/manage_catalog.py,sha256=20xSnhXbb6oaL5C5Vhi5mfdpBfrj5g_rswOm3Nd9BdE,354
+pynada/search_and_browse.py,sha256=BYhPt6SkG_dIUPYXtDQ5YDbnONT5l2GExVj4EymMrjQ,7929
+pynada/search_catalog.py,sha256=ZNYSAYUNN2-HsmKy65MojYEps7sT_01agvWP74UooEs,1528
+pynada/utils.py,sha256=9w2Lgi7ITerQrlaZkcVyiJSwj5hMf-9goSlIEibQCvo,668
+pynada-0.0.18.dist-info/METADATA,sha256=67Lbvq7v5lZykpot67yDhp4KV7BjN1Ew99f6-H8Xt94,1081
+pynada-0.0.18.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pynada-0.0.18.dist-info/top_level.txt,sha256=GoQ8BvQ1TnmYcnl4GM7bY8slFyxUb9hGgUx667PYT4c,7
+pynada-0.0.18.dist-info/RECORD,,
