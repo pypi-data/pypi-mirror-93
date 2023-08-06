@@ -1,0 +1,6 @@
+microvmi-0.0.1.dist-info/top_level.txt,sha256=4dEWhxyX_cu6qe_DG3yuvzr0xFg5Tw7uLATjb6XEHIA,9
+microvmi-0.0.1.dist-info/WHEEL,sha256=qby9cgnI2827ChqQJmx7trZCgChWhqq21UEtmFKHZo8,112
+microvmi-0.0.1.dist-info/METADATA,sha256=QsrpV2kgxwz_znzzjfGGc8vlsFFLiRPJaKUMSDeRmnw,1301
+microvmi-0.0.1.dist-info/RECORD,,
+microvmi/__init__.py,sha256=FSz0kui3vaFbGp6bEK1tAkU-7rFvNL_NbaBPuKe2UQ4,26
+microvmi/pymicrovmi.cpython-36m-x86_64-linux-gnu.so,sha256=5jgdy0daeLoVBfCX4PFKdE-BUoIF9PI3ocmAGRKb6gk,4297864
