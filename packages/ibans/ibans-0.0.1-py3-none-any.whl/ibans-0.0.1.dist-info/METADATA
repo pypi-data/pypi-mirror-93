@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: ibans
+Version: 0.0.1
+Summary: Parses Iban and Swift/BIC
+Home-page: https://github.com/iltoningui/ibans-py
+Author: Ilton Ingui
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: atomicwrites (==1.4.0)
+Requires-Dist: attrs (==20.3.0)
+Requires-Dist: colorama (==0.4.4)
+Requires-Dist: flake8 (==3.8.4)
+Requires-Dist: iniconfig (==1.1.1)
+Requires-Dist: mccabe (==0.6.1)
+Requires-Dist: packaging (==20.8)
+Requires-Dist: pluggy (==0.13.1)
+Requires-Dist: py (==1.10.0)
+Requires-Dist: pycodestyle (==2.6.0)
+Requires-Dist: pyflakes (==2.2.0)
+Requires-Dist: Pygments (==2.7.4)
+Requires-Dist: pyparsing (==2.4.7)
+Requires-Dist: pytest (==6.2.1)
+Requires-Dist: toml (==0.10.2)
+
+UNKNOWN
+
+
