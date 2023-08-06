@@ -1,0 +1,14 @@
+.gitignore
+.pre-commit-config.yaml
+pyproject.toml
+setup.py
+tox.ini
+.github/workflows/python.yml
+kropotkin/__init__.py
+kropotkin/_version.py
+kropotkin.egg-info/PKG-INFO
+kropotkin.egg-info/SOURCES.txt
+kropotkin.egg-info/dependency_links.txt
+kropotkin.egg-info/requires.txt
+kropotkin.egg-info/top_level.txt
+tests/test_packing.py
