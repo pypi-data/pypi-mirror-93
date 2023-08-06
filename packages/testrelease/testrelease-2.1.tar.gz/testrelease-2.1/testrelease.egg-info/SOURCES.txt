@@ -1,0 +1,11 @@
+README.md
+setup.py
+testrelease/ModelZoo.py
+testrelease/__init__.py
+testrelease/_version.py
+testrelease.egg-info/PKG-INFO
+testrelease.egg-info/SOURCES.txt
+testrelease.egg-info/dependency_links.txt
+testrelease.egg-info/not-zip-safe
+testrelease.egg-info/requires.txt
+testrelease.egg-info/top_level.txt
