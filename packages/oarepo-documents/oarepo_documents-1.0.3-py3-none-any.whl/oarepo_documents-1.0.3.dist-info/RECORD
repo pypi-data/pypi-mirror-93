@@ -1,0 +1,16 @@
+oarepo_documents/__init__.py,sha256=Ofj9B7BZoKqbjniv0C4ZuAiJ_RcfyGoVPI7hVBX5Ujc,274
+oarepo_documents/api.py,sha256=hWhBE1pyr4Th9yIa6wm3K1pYshEl7JgsYs3sd8LDaJA,4126
+oarepo_documents/document_json_mapping.py,sha256=lJq2gI_w7ZKdv6wyMMqYmTb3pwRLBBMm1ppnG4_lw-A,8390
+oarepo_documents/minter.py,sha256=ARVlzmsUdCir6D0XxXXijvflWKLti_Lge7qlhtPJeUc,284
+oarepo_documents/version.py,sha256=FHEKn_6BGNef39DVvn7ol7kJ30SluvALBgUFrJ5Ex6I,1400
+oarepo_documents/included_mappings/v7/document-v1.0.0.json,sha256=IF3s_UZVAgy50niTTg_iRMynK-lE207r0XmRfbMKXz8,17474
+oarepo_documents/jsonschemas/__init__.py,sha256=mlEFXs7b4oeXc1XZRgTyANfYHBR8HG8qIaRnaoHsk_4,467
+oarepo_documents/jsonschemas/document-v1.0.0.json,sha256=qn3355vDsG0GgWfvDRMdCr18KkFkuM7Z0SCndp9V_lg,18113
+oarepo_documents/marshmallow/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oarepo_documents/marshmallow/document.py,sha256=pBBSCCkqN597GKV4mcj9JDkZ4zDWYWGQRKRv_ZfEyKo,7684
+oarepo_documents-1.0.3.dist-info/LICENSE,sha256=oxlvOW3GiojF5mcapEzPff39MfADzIw5Qt8iOonks8c,1062
+oarepo_documents-1.0.3.dist-info/METADATA,sha256=F4em7hQeOW0Ttr7spvA-8WRRvLXnrfbvd8D5alRoyYY,5712
+oarepo_documents-1.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+oarepo_documents-1.0.3.dist-info/entry_points.txt,sha256=B8rtCf9avLQGax2DpOmtqN3hmS9mumjtF4SWMF1x6Eo,264
+oarepo_documents-1.0.3.dist-info/top_level.txt,sha256=aBzWaIuv2Lx4NuqnZ2ZC_NpV4RfH4o4wwOKhFpfUAKY,17
+oarepo_documents-1.0.3.dist-info/RECORD,,
