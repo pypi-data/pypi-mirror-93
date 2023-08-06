@@ -1,0 +1,12 @@
+awscli
+boto3
+botocore
+daemoniker
+keyring
+lxml
+psutil
+requests
+
+[test]
+tblib
+wurlitzer
