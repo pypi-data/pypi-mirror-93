@@ -1,0 +1,5 @@
+setup.py
+fdns.egg-info/PKG-INFO
+fdns.egg-info/SOURCES.txt
+fdns.egg-info/dependency_links.txt
+fdns.egg-info/top_level.txt
