@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: lh_clean_tool
+Version: 0.1.0
+Summary: clean universial code tool
+Home-page: https://github.com/jiaozhusos/LhClean.git
+Author: zxj
+Author-email: zhaoxuejiaotyut@126.com
+License: MIT Licence
+Description: for data clean,add clean universial code
+Platform: any
