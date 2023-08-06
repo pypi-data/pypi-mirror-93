@@ -1,0 +1,8 @@
+django-paperlayer
+django-paperlayer/api
+django-paperlayer/api/migrations
+django-paperlayer/api/models
+django-paperlayer/api/serializers
+django-paperlayer/api/views
+django-paperlayer/backend
+django-paperlayer/templates
