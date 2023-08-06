@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: opsas.gitlab
+Version: 0.0.1
+Summary: operation should as a service
+Home-page: https://github.com/calmzhu/opsas-pylib
+Author: Calm Zhu
+Author-email: saint@justcalm.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+
+UNKNOWN
+
+
