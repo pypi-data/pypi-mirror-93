@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+aliyun_python_sdk_safconsole.egg-info/PKG-INFO
+aliyun_python_sdk_safconsole.egg-info/SOURCES.txt
+aliyun_python_sdk_safconsole.egg-info/dependency_links.txt
+aliyun_python_sdk_safconsole.egg-info/requires.txt
+aliyun_python_sdk_safconsole.egg-info/top_level.txt
+aliyunsdksafconsole/__init__.py
+aliyunsdksafconsole/request/__init__.py
+aliyunsdksafconsole/request/v20210112/RevokeFeedbackRequest.py
+aliyunsdksafconsole/request/v20210112/SendFeedbackRequest.py
+aliyunsdksafconsole/request/v20210112/__init__.py
