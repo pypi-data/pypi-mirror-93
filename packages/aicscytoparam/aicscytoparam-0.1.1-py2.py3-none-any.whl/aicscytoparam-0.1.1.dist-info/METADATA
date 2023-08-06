@@ -1,0 +1,107 @@
+Metadata-Version: 2.1
+Name: aicscytoparam
+Version: 0.1.1
+Summary: Cytoplasm parameterization using spherical harmonics
+Home-page: https://github.com/AllenCell/aics-cytoparam
+Author: Matheus Viana
+Author-email: matheus.viana@alleninstitute.org
+License: Allen Institute Software License
+Keywords: aicscytoparam
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: Free for non-commercial use
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: aicsshparam (>=0.0.14)
+Requires-Dist: tqdm
+Requires-Dist: numpy
+Requires-Dist: vtk (>=9.0.0)
+Requires-Dist: aicsimageio (<4.0.0,>=3.0.0)
+Requires-Dist: scipy
+Requires-Dist: scikit-image (>=0.15.0)
+Provides-Extra: all
+Requires-Dist: aicsshparam (>=0.0.14) ; extra == 'all'
+Requires-Dist: tqdm ; extra == 'all'
+Requires-Dist: numpy ; extra == 'all'
+Requires-Dist: vtk (>=9.0.0) ; extra == 'all'
+Requires-Dist: aicsimageio (<4.0.0,>=3.0.0) ; extra == 'all'
+Requires-Dist: scipy ; extra == 'all'
+Requires-Dist: scikit-image (>=0.15.0) ; extra == 'all'
+Requires-Dist: pytest-runner (>=5.2) ; extra == 'all'
+Requires-Dist: black (>=19.10b0) ; extra == 'all'
+Requires-Dist: codecov (>=2.1.4) ; extra == 'all'
+Requires-Dist: flake8 (>=3.8.3) ; extra == 'all'
+Requires-Dist: flake8-debugger (>=3.2.1) ; extra == 'all'
+Requires-Dist: pytest (>=5.4.3) ; extra == 'all'
+Requires-Dist: pytest-cov (>=2.9.0) ; extra == 'all'
+Requires-Dist: pytest-raises (>=0.11) ; extra == 'all'
+Requires-Dist: bump2version (>=1.0.1) ; extra == 'all'
+Requires-Dist: coverage (>=5.1) ; extra == 'all'
+Requires-Dist: ipython (>=7.15.0) ; extra == 'all'
+Requires-Dist: m2r2 (>=0.2.7) ; extra == 'all'
+Requires-Dist: Sphinx (>=3.4.3) ; extra == 'all'
+Requires-Dist: sphinx-rtd-theme (>=0.5.1) ; extra == 'all'
+Requires-Dist: tox (>=3.15.2) ; extra == 'all'
+Requires-Dist: twine (>=3.1.1) ; extra == 'all'
+Requires-Dist: wheel (>=0.34.2) ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: pytest-runner (>=5.2) ; extra == 'dev'
+Requires-Dist: black (>=19.10b0) ; extra == 'dev'
+Requires-Dist: codecov (>=2.1.4) ; extra == 'dev'
+Requires-Dist: flake8 (>=3.8.3) ; extra == 'dev'
+Requires-Dist: flake8-debugger (>=3.2.1) ; extra == 'dev'
+Requires-Dist: pytest (>=5.4.3) ; extra == 'dev'
+Requires-Dist: pytest-cov (>=2.9.0) ; extra == 'dev'
+Requires-Dist: pytest-raises (>=0.11) ; extra == 'dev'
+Requires-Dist: bump2version (>=1.0.1) ; extra == 'dev'
+Requires-Dist: coverage (>=5.1) ; extra == 'dev'
+Requires-Dist: ipython (>=7.15.0) ; extra == 'dev'
+Requires-Dist: m2r2 (>=0.2.7) ; extra == 'dev'
+Requires-Dist: Sphinx (>=3.4.3) ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme (>=0.5.1) ; extra == 'dev'
+Requires-Dist: tox (>=3.15.2) ; extra == 'dev'
+Requires-Dist: twine (>=3.1.1) ; extra == 'dev'
+Requires-Dist: wheel (>=0.34.2) ; extra == 'dev'
+Provides-Extra: setup
+Requires-Dist: pytest-runner (>=5.2) ; extra == 'setup'
+Provides-Extra: test
+Requires-Dist: black (>=19.10b0) ; extra == 'test'
+Requires-Dist: codecov (>=2.1.4) ; extra == 'test'
+Requires-Dist: flake8 (>=3.8.3) ; extra == 'test'
+Requires-Dist: flake8-debugger (>=3.2.1) ; extra == 'test'
+Requires-Dist: pytest (>=5.4.3) ; extra == 'test'
+Requires-Dist: pytest-cov (>=2.9.0) ; extra == 'test'
+Requires-Dist: pytest-raises (>=0.11) ; extra == 'test'
+
+# Cytoplasm Parameterization
+
+[![Build Status](https://github.com/AllenCell/aics-cytoparam/workflows/Build%20Main/badge.svg)](https://github.com/AllenCell/aics-cytoparam/actions)
+[![Documentation](https://github.com/AllenCell/aics-cytoparam/workflows/Documentation/badge.svg)](https://AllenCell.github.io/aicscytoparam/)
+[![Code Coverage](https://codecov.io/gh/AllenCell/aics-cytoparam/branch/main/graph/badge.svg)](https://codecov.io/gh/AllenCell/aics-cytoparam)
+
+Spherical harmonics expansion coefficients-based parameterization of the cytoplasm and nucleoplasm for 3D cells
+---
+## Installation
+
+**Stable Release:** `pip install aicscytoparam`<br>
+**Development Head:** `pip install git+https://github.com/AllenCell/aics-cytoparam.git`
+
+## Documentation
+
+For full package documentation please visit [AllenCell.github.io/aicscytoparam](https://AllenCell.github.io/aicscytoparam).
+
+## Development
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for information related to developing the code.
+
+## Questions?
+
+If you have any questions, feel free to leave a comment in our Allen Cell forum: [https://forum.allencell.org/](https://forum.allencell.org/). 
+
+
+***Free software: Allen Institute Software License***
+
