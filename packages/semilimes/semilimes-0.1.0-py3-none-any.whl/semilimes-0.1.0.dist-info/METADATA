@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: semilimes
+Version: 0.1.0
+Summary: Python lib for semilimes ws
+Home-page: UNKNOWN
+Author: Flavio Ansovini
+Author-email: UNKNOWN
+License: gpl-3.0
+Platform: UNKNOWN
+Requires-Dist: websocket-client
+Requires-Dist: numpy
+
+UNKNOWN
+
+
