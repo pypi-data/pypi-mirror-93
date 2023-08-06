@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: CitadelML
+Version: 1.0.5
+Summary: Upload and train machine learning models on a remote server.
+Home-page: https://github.com/UMass-Rescue/PhotoAnalysisServer
+Author: Cody Richter
+Author-email: cody@richter.codes
+License: UNKNOWN
+Description: # CitadelML
+        
+        Upload and train machine learning models on a remote server.
+        
+        
+        ## Setup
+        ```
+        pip install citadelml
+        ```
+        
+        ## Quick use
+        
+        Create a tensorflow model, and then send it to the server.
+        
+        ```python
+        from citadelml import upload_model
+        import tensorflow as tf
+        
+        model = tf.keras.models.Sequential([
+            tf.keras.layers.experimental.preprocessing.Rescaling(1./255),
+            tf.keras.layers.Flatten(input_shape=(28, 28)),
+            tf.keras.layers.Dense(128, activation='relu'),
+            tf.keras.layers.Dropout(0.2),
+            tf.keras.layers.Dense(10)
+        ])
+        
+        upload_model(
+            server='http://localhost:5000',
+            dataset='example_dataset',
+            username='usernameGoesHere',
+            password='passwordGoesHere',
+            model=model,
+            loss_function='tf.keras.losses.SparseCategoricalCrossentropy',
+            optimizer='adam',
+            n_epochs=5,
+            seed=12345,
+            split=0.2,
+            batch_size=32,
+            save_training_results=False
+        )
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
