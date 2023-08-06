@@ -1,0 +1,9 @@
+persian_sa/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+persian_sa/persian_sa.py,sha256=9Ohvgk8Wc7MUbUFEz5SS3gVTfg-AkYEKNy2oivo3-1Q,1146
+persian_sa/data/preprocessingpipline.pkl,sha256=hSUU8wPQzo5Mdr4TV5P6cE8lPjhCUnnQZrUtUmhSRUs,577900
+persian_sa/data/svmmodel.pkl,sha256=mv831bYSKW2GWOGpwPA70cxA4MVzc2YKnFGg2NmLuKE,69868
+persian_sa-0.2.5.dist-info/LICENSE,sha256=TzVHBBSqgzXseUFbs5Hx_kJWq0KNuwhkugSDoTM2oZo,1066
+persian_sa-0.2.5.dist-info/METADATA,sha256=JpIrd-i8_YEb7AOkW3UXxSti1ROir5D0OgXOfT-jCRw,3019
+persian_sa-0.2.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+persian_sa-0.2.5.dist-info/top_level.txt,sha256=OSu99yjxhtwAgrLfeo97aUL06YP1sgy65yzQzxA8Uow,11
+persian_sa-0.2.5.dist-info/RECORD,,
