@@ -1,0 +1,6 @@
+[tool.towncrier]
+package = "trio_parallel"
+filename = "docs/source/history.rst"
+directory = "newsfragments"
+underlines = ["-", "~", "^"]
+issue_format = "`#{issue} <https://github.com/richardsheridan/trio_parallel/issues/{issue}>`__"
