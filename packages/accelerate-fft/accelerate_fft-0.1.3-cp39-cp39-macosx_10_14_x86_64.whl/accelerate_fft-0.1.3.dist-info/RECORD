@@ -1,0 +1,9 @@
+_accelerate_fft_cffi.abi3.so,sha256=6PuUORgEqq8hsaSIuoyLRL7w8jva3fdHLDiXDFA5GY8,62712
+accelerate_fft.py,sha256=sboc4Ykd88GLLL7rCLuHsZGFUpTz5MjXV7cwD6crQhY,29498
+accelerate_fft_build.py,sha256=gDjV3lLRuMePTGA2pI3Dl4MLQ5FVB5ot1lHOAuGyVZQ,7267
+accelerate_fft_test.py,sha256=uLBP0zY1KYbPn6wWSrrqqapTnYUH6BH-V_zkerQBZhs,15820
+accelerate_fft-0.1.3.dist-info/LICENSE,sha256=fT775h-5FbYDVz3t7oIfoDhEzC06ULyAlM7eFxIBRHY,1068
+accelerate_fft-0.1.3.dist-info/METADATA,sha256=_6QezFWeW-hJdupAymwqvnnNZhNTMBJlbuxhgmXQQBc,523
+accelerate_fft-0.1.3.dist-info/WHEEL,sha256=7vkJ3ZnexegyTUl8grQkOVww_TVBMjxMIgcotcWEQj4,110
+accelerate_fft-0.1.3.dist-info/top_level.txt,sha256=qVe049D23USysLC1_z_pb55ZOC1qsUeYuRhjAz6QMM4,77
+accelerate_fft-0.1.3.dist-info/RECORD,,
