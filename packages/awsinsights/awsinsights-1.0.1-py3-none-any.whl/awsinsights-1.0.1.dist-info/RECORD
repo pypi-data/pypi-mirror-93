@@ -1,0 +1,9 @@
+awsinsights/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+awsinsights/__main__.py,sha256=gn0iCwik0ar9aiRXmjxNr1M7nKP2Ic3f0hPpjiroJE4,4688
+awsinsights/awsinsights.py,sha256=3_pXOUbtf90XMgTbdAkZ1z-Esq2kVL32qz1gT331dLQ,3574
+awsinsights-1.0.1.dist-info/LICENSE,sha256=nHTr7iEeriyGaU2D9KyO_560EXYNO7MCDVQ1sZjy2Mg,1100
+awsinsights-1.0.1.dist-info/METADATA,sha256=VeoPE4ipZfEUS_LrVwaN4Xnd6b25AjEKU7Z_MvHgRuo,3939
+awsinsights-1.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+awsinsights-1.0.1.dist-info/entry_points.txt,sha256=CWVKcGSxGqFc81XvO5DUYbGCoY5GkVfeL9nQXWXY0Uo,59
+awsinsights-1.0.1.dist-info/top_level.txt,sha256=UR-nheysTAOvr52JTjXjtcGsgBlRc6sar3vtSMEKMeA,12
+awsinsights-1.0.1.dist-info/RECORD,,
