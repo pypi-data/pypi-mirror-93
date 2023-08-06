@@ -1,0 +1,10 @@
+neural_network/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+neural_network/nn/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+neural_network/nn/core.py,sha256=8KO6jktxmX75YUq5oGjo6EXYjafxxy_ul6RM2RO1l3c,6521
+neural_network/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+neural_network/utils/utillties.py,sha256=4R6M_WS5vUsY9-VAU2rM9al090PDSDk20b949K7Qx6I,2258
+self_designed_NeuralNetwork-0.0.1.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+self_designed_NeuralNetwork-0.0.1.dist-info/METADATA,sha256=Uw7_qCscVEquE_ua-QvyR6l8nqSCKXnT_5eh9UoY3eY,818
+self_designed_NeuralNetwork-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+self_designed_NeuralNetwork-0.0.1.dist-info/top_level.txt,sha256=3-TEq_MGWIbdqv5QkQiw1BXfUZzRhHjG6eEFm1C-6nM,15
+self_designed_NeuralNetwork-0.0.1.dist-info/RECORD,,
