@@ -1,0 +1,9 @@
+README.md
+setup.py
+FinanceDatabase.egg-info/PKG-INFO
+FinanceDatabase.egg-info/SOURCES.txt
+FinanceDatabase.egg-info/dependency_links.txt
+FinanceDatabase.egg-info/top_level.txt
+Searcher/__init__.py
+Searcher/json_options.py
+Searcher/json_picker.py
