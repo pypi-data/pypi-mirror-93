@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: portx
+Version: 0.0.2
+Summary: Python library for the RedRobotics PPX Programmable Port eXpander
+Home-page: https://github.com/RedRobotics
+Author: Neil Lambeth
+Author-email: neil@redrobotics.co.uk
+License: UNKNOWN
+Description: # PortX
+        **Python library for the RedRobotics PPX - Programmable Port eXpander**  
+        A stackable add-on board for the Raspberry Pi computer. Use it with or without the [RedBoard+](https://github.com/RedRobotics/RedBoard) robotics controller, to add 12 GPIO pins which can be configured as:
+        - Digital IO
+        - PWM
+        - ADC
+        - Quadrature Encoder Interface    
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
