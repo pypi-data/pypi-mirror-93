@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+http_constants/__init__.py
+http_constants/header.py
+http_constants/method.py
+http_constants/schema.py
+http_constants/status.py
+http_status_codes.egg-info/PKG-INFO
+http_status_codes.egg-info/SOURCES.txt
+http_status_codes.egg-info/dependency_links.txt
+http_status_codes.egg-info/top_level.txt
