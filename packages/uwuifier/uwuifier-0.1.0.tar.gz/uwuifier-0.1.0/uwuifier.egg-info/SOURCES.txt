@@ -1,0 +1,9 @@
+README.rst
+setup.cfg
+setup.py
+uwuifier/__init__.py
+uwuifier/uwuify.py
+uwuifier.egg-info/PKG-INFO
+uwuifier.egg-info/SOURCES.txt
+uwuifier.egg-info/dependency_links.txt
+uwuifier.egg-info/top_level.txt
