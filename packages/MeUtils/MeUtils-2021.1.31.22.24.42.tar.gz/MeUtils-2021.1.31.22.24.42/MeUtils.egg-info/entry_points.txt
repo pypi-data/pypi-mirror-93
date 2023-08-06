@@ -1,0 +1,4 @@
+[console_scripts]
+mecli = meutils.cli:cli
+mecli.conf = meutils.clis.conf:conf_cli
+

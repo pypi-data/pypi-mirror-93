@@ -1,0 +1,10 @@
+a: 1
+b: 2
+
+default-db:
+  port: 3306
+
+user-db:
+  port: ${default-db.port}
+
+date: '%Y%m%d'
