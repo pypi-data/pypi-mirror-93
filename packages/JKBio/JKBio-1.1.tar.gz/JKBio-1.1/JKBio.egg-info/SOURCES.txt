@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+JKBio.egg-info/PKG-INFO
+JKBio.egg-info/SOURCES.txt
+JKBio.egg-info/dependency_links.txt
+JKBio.egg-info/requires.txt
+JKBio.egg-info/top_level.txt
+cell_line_mapping-master/python/setup.py
+epigenetics/rose/ROSE_bamToGFF.py
+epigenetics/rose/ROSE_bamToGFF_turbo.py
+epigenetics/rose/ROSE_geneMapper.py
+epigenetics/rose/ROSE_main.py
+epigenetics/rose/ROSE_main_turbo.py
+epigenetics/rose/ROSE_utils.py
