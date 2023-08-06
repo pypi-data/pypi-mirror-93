@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: mysqlsheet
+Version: 1.0.0
+Summary: Push Big XL sheet in MySQL database table
+Home-page: https://github.com/sachinchavan9/mysqlsheet
+Author: Sachin Chavan
+Author-email: sachinewx@gmail.com
+License: UNKNOWN
+Keywords: MySQL xlsheet xlsx BigFile
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Database
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: astroid (==2.4.2)
+Requires-Dist: autopep8 (==1.5.4)
+Requires-Dist: colorama (==0.4.4)
+Requires-Dist: et-xmlfile (==1.0.1)
+Requires-Dist: hurry.filesize (==0.9)
+Requires-Dist: isort (==5.7.0)
+Requires-Dist: jdcal (==1.4.1)
+Requires-Dist: lazy-object-proxy (==1.4.3)
+Requires-Dist: mccabe (==0.6.1)
+Requires-Dist: mysqlclient (==2.0.3)
+Requires-Dist: numpy (==1.19.5)
+Requires-Dist: openpyxl (==3.0.6)
+Requires-Dist: pandas (==1.2.1)
+Requires-Dist: pycodestyle (==2.6.0)
+Requires-Dist: pyfiglet (==0.8.post1)
+Requires-Dist: pylint (==2.6.0)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pytz (==2020.5)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: SQLAlchemy (==1.3.22)
+Requires-Dist: termcolor (==1.1.0)
+Requires-Dist: toml (==0.10.2)
+Requires-Dist: wrapt (==1.12.1)
+
+```
+ ___ ___       _______ _______ ___      _______ __                __   
+|   Y   .--.--|   _   |   _   |   |    |   _   |  |--.-----.-----|  |_ 
+|.      |  |  |   1___|.  |   |.  |    |   1___|     |  -__|  -__|   _|
+|. \_/  |___  |____   |.  |   |.  |___ |____   |__|__|_____|_____|____|
+|:  |   |_____|:  1   |:  1   |:  1   ||:  1   |                       
+|::.|:. |     |::.. . |::..   |::.. . ||::.. . |                       
+`--- ---'     `-------`----|:.`-------'`-------'                       
+                           `--'                                        
+
+[!] MySQL Sheet.
+
+```
+usage: mysqlsheet [-h] -f FILE [-b BUFFER] [-u USER] [-p PASSWORD] [--host HOST] [--port PORT] -d DATABASE -t TABLE [-m MAX]
+
+dump big xlsheet in mysql table
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FILE, --file FILE  big xlsheet file path
+  -b BUFFER, --buffer BUFFER
+                        file buffuer in bytes default buffer size is 4096
+  -u USER, --user USER  mysql username default user is root
+  -p PASSWORD, --password PASSWORD
+                        mysql password default is empty
+  --host HOST           mysql hostname default is localhost
+  --port PORT           database port number
+  -d DATABASE, --database DATABASE
+                        mysql database name
+  -t TABLE, --table TABLE
+                        mysql table name
+  -m MAX, --max MAX     max record push concurrently in msyql
+
+
