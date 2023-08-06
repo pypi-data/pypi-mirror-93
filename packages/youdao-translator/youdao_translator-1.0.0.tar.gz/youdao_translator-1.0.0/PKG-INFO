@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: youdao_translator
+Version: 1.0.0
+Summary: simple approach to translate English to Chinese by youdao-translator-cli
+Home-page: https://github.com/faris-shi/youdao_translator
+Author: Faris Shi
+Author-email: faris.shi84@gmail.com
+License: MIT
+Description: # youdao_translator
+        
+        English translator from CLI, really cool. 
+        
+        You Dao is a famous translator website between Chinese and English. This library is only for individual study purposes. please see the official version for other purposes:
+        
+        - http://youdao.com/
+        
+        
+        # Installation
+        
+        ```
+        pip install youdao-translator
+        
+        youdao-trans-cli [word]
+        ```
+        
+        # Usage
+        
+        ![1.png](https://i.loli.net/2021/01/29/qc7DPH91pKFxjlb.png)
+        
+        ![2.png](https://i.loli.net/2021/01/29/DWcXuAwEIy67UOj.png)
+        
+        ![3.png](https://i.loli.net/2021/01/29/ToL54AHDJkP3GmU.png)
+        
+        ## Dependencies
+        
+        - pyquery
+        - click
+        - rich
+        - requests
+        
+        ## Try it without installing
+        
+        ```
+        git clone git@github.com:faris-shi/youdao_translator.git
+        
+        pip3 install
+        
+        youdao-trans-cli [word]
+        ```
+Keywords: youdao translator english cli command
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Topic :: Utilities
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown

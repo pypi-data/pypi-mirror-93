@@ -1,0 +1,4 @@
+pyquery
+click
+rich
+requests
