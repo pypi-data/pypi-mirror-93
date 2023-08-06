@@ -1,0 +1,79 @@
+# pfevaluator: A library for evaluating performance metrics of Pareto fronts in multiple/many objective optimization problems
+
+[![GitHub release](https://img.shields.io/badge/release-1.0.0-yellow.svg)]()
+[![Documentation Status](https://readthedocs.org/projects/permetrics/badge/?version=latest)](https://permetrics.readthedocs.io/en/latest/?badge=latest)
+[![](https://img.shields.io/badge/python-3.7+-orange.svg)](https://www.python.org/downloads/release/python-370/)
+[![Wheel](https://img.shields.io/pypi/wheel/gensim.svg)](https://pypi.python.org/pypi/permetrics) 
+[![PyPI version](https://badge.fury.io/py/permetrics.svg)](https://badge.fury.io/py/permetrics)
+[![DOI](https://zenodo.org/badge/280617738.svg)](https://zenodo.org/badge/latestdoi/280617738)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+
+---
+> "Knowledge is power, sharing it is the premise of progress in life. It seems like a burden to someone, but it is the only way to achieve immortality."
+>  --- [Thieu Nguyen](https://www.researchgate.net/profile/Thieu_Nguyen6)
+---
+
+## Introduction
+
+
+### Dependencies
+* Python (>= 3.6)
+* Numpy (>= 1.15.1)
+* pygmo (>= 2.13.0) 
+
+### User installation
+Install the [current PyPI release](https://pypi.python.org/pypi/pfevaluator):
+
+```bash
+pip install pfevaluator
+```
+
+Or install the development version from GitHub:
+
+```bash
+pip install git+https://github.com/thieu1995/pfevaluator
+```
+
+
+### Example
+
+* The more complicated tests in the folder: examples
+
+The [documentation](https://pfevaluator.readthedocs.io/) includes more detailed installation instructions and explanations.
+
+### Changelog
+* See the [ChangeLog.md](https://github.com/thieu1995/pfevaluator/blob/master/ChangeLog.md) for a history of notable changes to permetrics.
+
+
+### Important links
+
+* Official source code repo: https://github.com/thieu1995/pfevaluator
+* Official documentation: https://pfevaluator.readthedocs.io/
+* Download releases: https://pypi.org/project/pfevaluator/
+* Issue tracker: https://github.com/thieu1995/pfevaluator/issues
+
+* This project also related to my another projects which are "meta-heuristics" and "neural-network", check it here
+    * https://github.com/thieu1995/opfunu
+    * https://github.com/thieu1995/metaheuristics
+    * https://github.com/thieu1995/mealpy
+    * https://github.com/thieu1995/permetrics
+    * https://github.com/chasebk
+    
+   
+## Contributions 
+
+### Citation
++ If you use permetrics in your project, please cite my works: 
+```code 
+@article{nguyen2019efficient,
+  title={Efficient Time-Series Forecasting Using Neural Network and Opposition-Based Coral Reefs Optimization},
+  author={Nguyen, Thieu and Nguyen, Tu and Nguyen, Binh Minh and Nguyen, Giang},
+  journal={International Journal of Computational Intelligence Systems},
+  volume={12},
+  number={2},
+  pages={1144--1161},
+  year={2019},
+  publisher={Atlantis Press}
+}
+```
