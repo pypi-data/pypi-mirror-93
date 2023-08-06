@@ -1,0 +1,85 @@
+Metadata-Version: 1.1
+Name: oops_datedir2amqp
+Version: 0.1.0
+Summary: OOPS DateDir to AMQP republisher.
+Home-page: https://launchpad.net/python-oops-datedir2amqp
+Author: Launchpad Developers
+Author-email: launchpad-dev@lists.launchpad.net
+License: UNKNOWN
+Description: *******************************************************
+        python-oops-datedir2amqp: Bridge a datedir repo to amqp
+        *******************************************************
+        
+            Copyright (c) 2011, Canonical Ltd
+        
+            This program is free software: you can redistribute it and/or modify
+            it under the terms of the GNU Affero General Public License as published by
+            the Free Software Foundation, either version 3 of the License, or
+            (at your option) any later version.
+        
+            This program is distributed in the hope that it will be useful,
+            but WITHOUT ANY WARRANTY; without even the implied warranty of
+            MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+            GNU Affero General Public License for more details.
+        
+            You should have received a copy of the GNU Affero General Public License
+            along with this program.  If not, see <http://www.gnu.org/licenses/>.
+        
+        
+        The oops_datedir2amqp package provides a script that will retransmit OOPS
+        reports (http://pypi.python.org/pypi/oops) stored in a datedir repo over amqp,
+        cleaning up the repo as it goes.
+        
+        Dependencies
+        ============
+        
+        * Python 2.6+
+        
+        * oops_datedir_repo
+        
+        * oops_amqp
+        
+        Testing Dependencies
+        ====================
+        
+        * rabbitfixture (http://pypi.python.org/pypi/rabbitfixture)
+        
+        * testresources (http://pypi.python.org/pypi/testresources)
+        
+        * testtools (http://pypi.python.org/pypi/testtools)
+        
+        Usage
+        =====
+        
+        Install the package in a virtualenv (or similar)::
+        
+          $ virtualenv oops-datedir2amqp
+          $ oops-datedir2amqp/bin/pip install oops-datedir2amqp
+        
+        Run the script::
+        
+          $ oops-datedir2amqp/bin/datedir2amqp \
+            --host XX --username XX --password XX --vhost XX --exchange XX --repo XX
+        
+        Note that the repo should be the same path you are supplying to your
+        DateDirRepo in whatever process is creating OOPSes.
+        
+        A common use for this setup is as a fallback: in your application report to
+        AMQP directly, with a DateDirRepo configured as fallback, then use datedir2amqp
+        to pickup and respool any OOPS reports that were generated while your AMQP
+        server is unavailable.
+        
+        Development
+        ===========
+        
+        Upstream development takes place at
+        https://launchpad.net/python-oops-datedir2amqp.
+        
+        To run the tests, use ``tox``.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
