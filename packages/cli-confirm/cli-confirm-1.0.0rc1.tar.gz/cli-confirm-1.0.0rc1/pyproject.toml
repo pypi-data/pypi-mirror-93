@@ -1,0 +1,63 @@
+[tool.poetry]
+name = "cli-confirm"
+version = "1.0.0rc1"
+description = "CLI utility to confirm yes/no."
+license = "MIT"
+authors = ["Takahiro Ueda <takahiro.ueda@yahoo.com>"]
+readme = "README.md"
+repository = "https://github.com/tueda/cli-confirm"
+keywords = ["console", "cli", "confirmation"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+]
+packages = [
+    { include = "confirm" },
+]
+
+[tool.poetry.dependencies]
+python = "~2.7 || ^3.5"
+click = "^7.0"
+
+[tool.poetry.dev-dependencies]
+pre-commit = { version = "^2.10.0", python = "^3.6.1" }
+pytest = { version = "^6.2.2", python = "^3.6.0" }
+pytest-cov = { version = "^2.11.1", python = "^3.6.0" }
+taskipy = { version = "^1.6.0", python = "^3.6.0" }
+
+[tool.poetry.scripts]
+confirm = "confirm.__main__:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.report]
+exclude_lines = [
+    "@overload",
+    "if TYPE_CHECKING:",
+    "pragma: no cover",
+    "raise AssertionError()",
+    "return NotImplemented",
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--cov-report=html",
+    "--cov-report=term",
+    "--cov=confirm",
+    "--doctest-modules",
+]
+
+[tool.taskipy.tasks]
+# Set up a development environment.
+setup = "pre-commit install && pre-commit install --hook-type commit-msg"
+
+# Run linters.
+lint = "pre-commit run --all-files"
+
+# Run tests.
+test = "pytest"
