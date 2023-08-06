@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: dnfile
+Version: 0.5.0
+Summary: Parse .NET executable files.
+Home-page: https://github.com/malwarefrank/dnfile
+Author: MalwareFrank
+License: MIT license
+Keywords: dnfile
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.5
+Requires-Dist: pefile (>=2019.4.18)
+
+======
+dnfile
+======
+
+
+.. image:: https://img.shields.io/pypi/v/dnfile.svg
+        :target: https://pypi.python.org/pypi/dnfile
+
+
+Parse .NET executable files.
+
+
+* Free software: MIT license
+
+
+Features
+--------
+
+* Parse as much as we can, even if the file is partially malformed.
+* Easy to use.  Developed with IDE autocompletion in mind.
+
+
+TODO
+----
+
+* CI
+* Documentation on readthedocs
+
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.5.0 (2021-01-29)
+------------------
+
+* First release.
+
+

@@ -1,0 +1,13 @@
+dnfile/__init__.py,sha256=PAHZzh0daBmG0go2UZiwJtrnoE4HwRl7srWQvY0c9W0,18834
+dnfile/base.py,sha256=q8O66eyi1tbOHDegAkFTXb9LLNyJ50SI7ZUWt3BMoYs,15196
+dnfile/codedindex.py,sha256=og33KXCmYUzsqyRiLFD8nMd__BBhn7B-I8XuwjATRII,2297
+dnfile/enums.py,sha256=T6TTTHxrMJgQbLfrSCtGVuAotGjtbwlKwMRrBkDn7_s,32673
+dnfile/errors.py,sha256=H5IluW2xRyEIIAys-ENT9yFl0-BQ7xlHDtKM6bVmeOo,41
+dnfile/mdtable.py,sha256=6EG-ICB3DJjUOCCaiZO9pN5pqZDuLZ2cbRLKiVAyyXQ,47161
+dnfile/stream.py,sha256=NPtYEDhzNYe9xMlSFwiX1PPg0CPEZG3TY0StCBurGkc,11303
+dnfile/utils.py,sha256=lODkIxDcBmW8KT2OPE4C1EJZsUvkRA1pQbUrSTs3Td0,2022
+dnfile-0.5.0.dist-info/LICENSE,sha256=a9E8PHMspl2wAJvO9G4XJ-BmmcebwN9rX5tPkvlBp9I,1071
+dnfile-0.5.0.dist-info/METADATA,sha256=apUso9qaYzij7DN0PuIBHiwfBzakQAQX91ehUouxHtU,1493
+dnfile-0.5.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dnfile-0.5.0.dist-info/top_level.txt,sha256=A1xyGeKE1Vwlv4r0rc-Kut8KK4pzahDlLQt_n3avKXs,7
+dnfile-0.5.0.dist-info/RECORD,,
