@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+src/portfolio_manager/__init__.py
+src/portfolio_manager/exceptions.py
+src/portfolio_manager/portfolio.py
+src/portfolio_manager/return_calculators.py
+src/portfolio_manager.egg-info/PKG-INFO
+src/portfolio_manager.egg-info/SOURCES.txt
+src/portfolio_manager.egg-info/dependency_links.txt
+src/portfolio_manager.egg-info/requires.txt
+src/portfolio_manager.egg-info/top_level.txt
+tests/__init__.py
+tests/test_portfolio.py
+tests/test_return_calculators.py
