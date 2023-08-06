@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: pyomo-mps
+Version: 0.1.4
+Summary: A quick, unfinished module to produce a pyomo model from a given mps file, adding functionality as and when I need it
+Home-page: https://github.com/michaelRadigan/pyomo-mps
+Author: Michael Radigan
+Author-email: michael@radigan.co.uk
+License: Apache2.0
+Description: UNKNOWN
+Platform: UNKNOWN
