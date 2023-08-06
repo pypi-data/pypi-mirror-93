@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: opti
+Version: 1.0.4
+Summary: A module for easy python
+Home-page: https://github.com/codingcup04/python_opti
+Author: codingPro01
+Author-email: 
+License: UNKNOWN
+Download-URL: https://github.com/codingcup04/python_opti
+Keywords: optimization,easy,python
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: pynput
+
+Opti
+
+(A module for easy python)
+
+How to use:
+    Importing:
+        "from opti.opti import *"
+    Commands:
+
+        delay(sec): delays time
+        delayms(msec): delays time (milliseconds)
+        randnum(min, max): returns random number between [min] and [max]
+        randeven(min, max): returns even number randomly between [min] and [max]
+        typeKey(txt): automatically types the text
+        pr(txt): prints out the text
+        q(txt): same as input(txt)
+
+        Other commands: Please check github and website [Preparing]
+
+
+
+
