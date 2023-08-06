@@ -1,0 +1,10 @@
+README.md
+cli.py
+maven_version.py
+pyproject.toml
+setup.py
+mvn_compare.egg-info/PKG-INFO
+mvn_compare.egg-info/SOURCES.txt
+mvn_compare.egg-info/dependency_links.txt
+mvn_compare.egg-info/entry_points.txt
+mvn_compare.egg-info/top_level.txt

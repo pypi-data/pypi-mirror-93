@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: mvn-compare
+Version: 1.0
+Summary: Compare maven release versions
+Home-page: https://github.com/suru33/maven-version-comparator
+Author: SuRu
+Author-email: 33urus@gmail.com
+License: GPLv3+
+Description: # Maven Version Comparator
+        
+        Compare maven release versions
+        
+        ```shell
+        pip install mvn-compare
+        ```
+        
+        ### Examples
+        
+        ```shell
+        
+        ~$ mvn-compare "1.0-alpha1" "1.0-beta1"
+        -1  
+        
+        ~$ mvn-compare "1.0" "1.0-beta1"
+        1
+        
+        ~$ mvn-compare "1.0-final" "1.0"
+        0
+        
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
