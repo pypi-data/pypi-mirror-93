@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: imagebox
+Version: 0.0.0.16
+Summary: ImageBox: python utilities for working with multispectral imagery
+Home-page: https://github.com/brookisme/imagebox
+Author: Brookie Guzder-Williams
+Author-email: brook.williams@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/brookisme/imagebox/tarball/0.1
+Keywords: python,geotiff,rasterio,image,io
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: rasterio
+Requires-Dist: pyyaml
+Requires-Dist: affine
+Requires-Dist: gcs-helpers (>=0.0.0.22)
+
+UNKNOWN
+
+
