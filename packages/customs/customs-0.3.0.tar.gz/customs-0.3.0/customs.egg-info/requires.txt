@@ -1,0 +1,4 @@
+flask
+python-jose[cryptography]
+requests
+requests_oauthlib
