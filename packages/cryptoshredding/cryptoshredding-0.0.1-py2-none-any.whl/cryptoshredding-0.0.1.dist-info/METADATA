@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: cryptoshredding
+Version: 0.0.1
+Summary: Crypto shredding for Python
+Home-page: https://github.com/hupe1980/cryptoshredding
+Author: hupe1980
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >= 3.6
+Requires-Dist: aws-encryption-sdk (>=2.0.0)
+Requires-Dist: boto3 (>=1.16.63)
+Requires-Dist: dynamodb-encryption-sdk (>=1.2.0)
+
+===============
+CryptoShredding
+===============
+
+Crypto shredding is the practice of 'deleting' data through the destruction of the cryptographic keys protecting the data. 
+
