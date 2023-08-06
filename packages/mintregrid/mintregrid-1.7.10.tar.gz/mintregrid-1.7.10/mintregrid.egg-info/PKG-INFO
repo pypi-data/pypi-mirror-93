@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mintregrid
+Version: 1.7.10
+Summary: Mimetic INterpolation on the sphere
+Home-page: https://github.com/pletzer/mint
+Author: Alexander Pletzer
+Author-email: alexander.pletzer@nesi.org.nz
+License: UNKNOWN
+Description: 
+        Interpolates or regrids an edge centred field from a source grid to either a destination grid or a target element. The 
+        interpolation is mimetic in the sense that line integrals are conserved from source to destination grids, i.e. Stokes'
+        theorem is statisfied to near machine precision.
+            
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/x-rst
