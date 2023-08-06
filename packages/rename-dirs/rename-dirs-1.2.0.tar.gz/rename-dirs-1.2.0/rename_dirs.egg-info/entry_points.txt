@@ -1,0 +1,3 @@
+[console_scripts]
+rename-dirs = rename_dirs.__main__:main
+

@@ -1,0 +1,9 @@
+README.md
+setup.py
+rename_dirs/__init__.py
+rename_dirs/__main__.py
+rename_dirs.egg-info/PKG-INFO
+rename_dirs.egg-info/SOURCES.txt
+rename_dirs.egg-info/dependency_links.txt
+rename_dirs.egg-info/entry_points.txt
+rename_dirs.egg-info/top_level.txt
