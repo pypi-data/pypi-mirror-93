@@ -1,0 +1,10 @@
+dist/__init__.py,sha256=8D5a8oKgqd6WA1RUkiKCn4l_PVemtyuckxQut0vDHXM,20
+dist/main.py,sha256=vKOtKR1sdnjNkp9VM2ZDDQYMyjB7T63BnaQnGjDSfrY,1171
+module/__init__.py,sha256=8D5a8oKgqd6WA1RUkiKCn4l_PVemtyuckxQut0vDHXM,20
+module/main.py,sha256=vKOtKR1sdnjNkp9VM2ZDDQYMyjB7T63BnaQnGjDSfrY,1171
+EzCalc-1.0.0.dist-info/LICENSE,sha256=ZLVLVGoN7sfSQbuIgBjcjzwjnaC6hwFD_uIiNNqTUdU,1083
+EzCalc-1.0.0.dist-info/METADATA,sha256=A9MqyC8nIXKKw59zMt6Xxpg2zXE_7RxLPG_gDZt-bPI,950
+EzCalc-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+EzCalc-1.0.0.dist-info/top_level.txt,sha256=rCVQUTc7DucbyvV1vRKPlp8MRkSTuDqKf-ZCJsPhQHc,7
+EzCalc-1.0.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+EzCalc-1.0.0.dist-info/RECORD,,
