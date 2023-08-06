@@ -1,0 +1,8 @@
+CMD_COPY = 'cp'
+CMD_PREFIX = 'aws s3'
+LS_CMD = 'ls'
+CMD_PATH_PREFIX = 's3://'
+CMD_EXCLUDE_PREFIX = '--exclude'
+CMD_INCLUDE_PREFIX = '--include'
+ALL_DIRS = '*'
+ALL_SUBDIRS = '*/*'
