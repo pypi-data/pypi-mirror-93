@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: EasyCompleteYou
+Version: 0.0.2
+Summary: for ECY
+Home-page: https://github.com/pypa/sampleproject
+Author: jimmy huang
+Author-email: 1902161621@qq.com
+License: UNKNOWN
+Description: sdfsdf
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
