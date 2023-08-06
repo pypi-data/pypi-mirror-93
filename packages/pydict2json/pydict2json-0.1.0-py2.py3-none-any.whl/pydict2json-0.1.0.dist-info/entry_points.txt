@@ -1,0 +1,3 @@
+[console_scripts]
+pydict2json = __main__:main
+
