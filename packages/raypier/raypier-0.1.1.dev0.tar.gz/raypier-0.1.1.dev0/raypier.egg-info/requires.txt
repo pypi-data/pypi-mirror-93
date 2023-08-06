@@ -1,0 +1,4 @@
+numpy>=1.1
+Traits>=3.0
+Mayavi>=3.0
+TraitsUI>=3.0
