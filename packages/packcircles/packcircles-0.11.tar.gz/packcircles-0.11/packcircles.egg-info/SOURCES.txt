@@ -1,0 +1,9 @@
+README.md
+setup.py
+packcircles/__init__.py
+packcircles/packcircles.py
+packcircles.egg-info/PKG-INFO
+packcircles.egg-info/SOURCES.txt
+packcircles.egg-info/dependency_links.txt
+packcircles.egg-info/requires.txt
+packcircles.egg-info/top_level.txt
