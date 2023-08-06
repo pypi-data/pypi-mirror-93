@@ -1,0 +1,11 @@
+sn_stat/__init__.py,sha256=E5pxKI2BxtH3WeV1TvEaqUnbY41NTWGuRoeKTjg6IYY,179
+sn_stat/llr.py,sha256=xpnIC8CTcqnNRnnzgODbsu3SbBuCgEwNe11RStAe2Ns,7561
+sn_stat/rate.py,sha256=YXYA9g0fkQ0CdNVPPmYHvoNJagXY__oCXB0_YlBFwn8,4244
+sn_stat/sampler.py,sha256=PAqDJo6dhkiEgbFa1Peh1n8GA9SmUxzWgtv6AaYLr48,795
+sn_stat/sig_calc.py,sha256=jfms9l1oPeEfSKVRUxPz4Co6-qFio0otbbfT18soFuw,1645
+sn_stat/signals.py,sha256=I5xr4sFuLVfLSCJ0Qu9YDbGdmjAZ4Nd9nN7DRlROrjg,970
+sn_stat-0.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+sn_stat-0.2.dist-info/METADATA,sha256=jZ0poJymJrJPcsQuNucwaG60yqXLaWTGqnrMRzYdwOw,794
+sn_stat-0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sn_stat-0.2.dist-info/top_level.txt,sha256=jB4YwVVGDohmIFTmKSxkXarWh-E8RSKzxb6DdPrdwUg,8
+sn_stat-0.2.dist-info/RECORD,,
