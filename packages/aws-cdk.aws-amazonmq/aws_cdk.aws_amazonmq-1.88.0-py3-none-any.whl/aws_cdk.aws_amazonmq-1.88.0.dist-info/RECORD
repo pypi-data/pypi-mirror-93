@@ -1,0 +1,8 @@
+aws_cdk/aws_amazonmq/__init__.py,sha256=KX1QPZfv2qenVMkdmKUvS5x1flV43S2rB66yLqtQlEo,80977
+aws_cdk/aws_amazonmq/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_amazonmq/_jsii/__init__.py,sha256=3xef0RLtQLDkZWw2nSGZbz07eIQ-eKu1aCSGpAbPw2Y,373
+aws_cdk/aws_amazonmq/_jsii/aws-amazonmq@1.88.0.jsii.tgz,sha256=eBze53xPgtzcbTuuKGDsQu4FTxuphd2oc8-Z3C0uJo8,42895
+aws_cdk.aws_amazonmq-1.88.0.dist-info/METADATA,sha256=NpkpOkl__q_8tDiGYyqJPf2sep0KdQhTXA82Q-IM7HU,1600
+aws_cdk.aws_amazonmq-1.88.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aws_cdk.aws_amazonmq-1.88.0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_amazonmq-1.88.0.dist-info/RECORD,,
