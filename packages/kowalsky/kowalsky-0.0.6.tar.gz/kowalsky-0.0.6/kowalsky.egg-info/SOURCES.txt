@@ -1,0 +1,11 @@
+README.md
+setup.py
+kowalsky/__init__.py
+kowalsky/df.py
+kowalsky/kag.py
+kowalsky/metrics.py
+kowalsky/opt.py
+kowalsky.egg-info/PKG-INFO
+kowalsky.egg-info/SOURCES.txt
+kowalsky.egg-info/dependency_links.txt
+kowalsky.egg-info/top_level.txt
