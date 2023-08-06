@@ -1,0 +1,8 @@
+README.md
+setup.py
+Num2Kor.egg-info/PKG-INFO
+Num2Kor.egg-info/SOURCES.txt
+Num2Kor.egg-info/dependency_links.txt
+Num2Kor.egg-info/top_level.txt
+num2kor/__init__.py
+num2kor/num2kor.py
