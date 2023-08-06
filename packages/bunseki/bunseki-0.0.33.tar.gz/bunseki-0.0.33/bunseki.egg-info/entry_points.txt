@@ -1,0 +1,4 @@
+[console_scripts]
+bunseki = bunseki.analyze:main
+bunseki_repobuilder = bunseki.repobuilder:main
+

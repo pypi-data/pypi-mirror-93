@@ -1,0 +1,14 @@
+README.md
+setup.py
+bunseki/__init__.py
+bunseki/_version.py
+bunseki/analyze.py
+bunseki/asklichess.py
+bunseki/repobuilder.py
+bunseki/util.py
+bunseki.egg-info/PKG-INFO
+bunseki.egg-info/SOURCES.txt
+bunseki.egg-info/dependency_links.txt
+bunseki.egg-info/entry_points.txt
+bunseki.egg-info/requires.txt
+bunseki.egg-info/top_level.txt

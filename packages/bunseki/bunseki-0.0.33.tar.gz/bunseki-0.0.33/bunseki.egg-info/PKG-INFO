@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: bunseki
+Version: 0.0.33
+Summary: compares moves in a chess repertoire against lichess database
+Home-page: https://github.com/smautner/
+Author: Stefan Mautner
+Author-email: myl4stn4m3@cs.uni-freiburg.de
+License: LICENSE
+Description: UNKNOWN
+Platform: UNKNOWN
