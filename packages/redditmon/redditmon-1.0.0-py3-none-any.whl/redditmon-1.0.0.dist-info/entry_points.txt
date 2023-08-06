@@ -1,0 +1,3 @@
+[console_scripts]
+redditmon = redditmon.redditmon:redditmon_cli
+
