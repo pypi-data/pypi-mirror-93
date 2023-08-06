@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: libgenesis
+Version: 0.1.0
+Summary: Asynchronous python lib for Libgen.rs
+Home-page: https://github.com/Samfun75/libgenesis
+Author: Samson Misganaw
+Author-email: samfunn75@gmail.com
+License: MIT License
+Download-URL: https://github.com/Samfun75/libgenesis/archive/v0.1.0.tar.gz
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP
+Description-Content-Type: text/markdown
+Requires-Dist: aiofiles (>=0.5.0)
+Requires-Dist: aiohttp (>=3.6.0)
+Requires-Dist: beautifulsoup4 (>=4.9.0)
+Requires-Dist: lxml (>=4.6.0)
+Requires-Dist: requests (>=2.25.0)
+
+Asynchronous python library for Libgen.rs to search and download books.
+
+Installing libgenesis
+        using the command line
+        pip install libgenesis
+
+        Importing libgenesis
+        from libgenesis import Libgen
+
+        Creating libgenesis object
+        lg = Libgen()
+        or
+        lg = Libgen(sort= "year", sort_mode= "ASC", result_limit= 50)
+
+        Searching for a book
+        async def search():
+            q = "japan history"
+            result = await lg.search(q)
+            for item in result:
+                print("id = " + item)
+                print("title = " + result[item]["title"])
+                print("md5 = " + result[item]["md5"])
+
+
+       Downloading for a book
+
+       async def download():
+
+           q = "japan history"
+
+           result = await lg.search(q)
+
+           download_location = []
+
+           for item in result:
+
+               file_path = await lg.download(result[item]["mirrors"]["main"])
+
+               # path = Path("Downloads")
+
+               # file_path = await lg.download(result[item]["mirrors"]["main"]], dest_folder=path)
+
+               download_location.append(file_path)
+
