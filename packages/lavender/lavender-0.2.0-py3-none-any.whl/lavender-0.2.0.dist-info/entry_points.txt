@@ -1,0 +1,4 @@
+[console_scripts]
+lavender=lavender:patched_main
+lavenderd=lavenderd:patched_main[d]
+
