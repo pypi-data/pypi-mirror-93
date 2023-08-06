@@ -1,0 +1,6 @@
+setup.py
+dispatcher/__init__.py
+rosetta_dispatcher.egg-info/PKG-INFO
+rosetta_dispatcher.egg-info/SOURCES.txt
+rosetta_dispatcher.egg-info/dependency_links.txt
+rosetta_dispatcher.egg-info/top_level.txt
