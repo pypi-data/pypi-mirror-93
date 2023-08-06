@@ -1,0 +1,12 @@
+pfevaluator/__init__.py,sha256=4PF0Wr2is7YjqrastKkXtCttKm2cHajp9Ci6iMa_f0A,768
+pfevaluator/closeness.py,sha256=uEwpk2_5YadbZsULpiP367uT7hPJyJ6shAjADqht8q0,2867
+pfevaluator/closeness_diversity.py,sha256=WYyYdsZhFG4nAxP9Gc6g2aO62i6bx7yqV6kAyazo-fI,2391
+pfevaluator/distribution.py,sha256=pI3qR4eMsRca2gp-iHQBst-EuxIkyvFQ8-Rae2GnuQg,3635
+pfevaluator/ratio.py,sha256=uWnaS2InttgN5x_DwEMcQBIzuTT0qRV12eTb19wZkpI,2547
+pfevaluator/root.py,sha256=80ujUu68Dc5azWULE8Akk0aOf67Snmb8uuyueLBxVd4,7072
+pfevaluator/spread.py,sha256=o37tKjag5Q23Ac36X2z-Z-A90M_cdEfKbK6BZywMcqA,1975
+pfevaluator-1.0.0.dist-info/LICENSE,sha256=iVDrLinMlkIME42zragQMW2jJQ2VN33olFqzcY_-8GY,11346
+pfevaluator-1.0.0.dist-info/METADATA,sha256=2mFVipgNhbM7ORegHIIRgem0njdjhy98EN5-NfIEJ-k,4303
+pfevaluator-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pfevaluator-1.0.0.dist-info/top_level.txt,sha256=rjiCn4nKUwiQeswv-z937KyqhVM8WO8HO6fiMc83wrI,12
+pfevaluator-1.0.0.dist-info/RECORD,,
