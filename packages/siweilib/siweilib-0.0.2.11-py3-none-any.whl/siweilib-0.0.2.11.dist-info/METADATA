@@ -1,0 +1,27 @@
+Metadata-Version: 2.0
+Name: siweilib
+Version: 0.0.2.11
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: argparse
+Requires-Dist: cryptography
+Requires-Dist: pytz
+Requires-Dist: termcolor
+
+A collection of utilities
+
+To publish:
+
+python upgrade_version.py -u
+source build.sh
+
+
+To publish (deprecated):
+
+python setup.py sdist bdist_wheel
+twine upload dist/*
+
