@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: omniblack.work
+Version: 0.0.2
+Summary: An enviroment manager
+Author: Terry Patterson
+Author-email: Terryp@wegrok.net
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: all
+Provides-Extra: github
+Provides-Extra: gitlab
+Requires-Dist: GitPython (>=3.1.12,<4.0.0)
+Requires-Dist: PyGithub (>=1.54.1,<2.0.0); extra == "github" or extra == "all"
+Requires-Dist: argcomplete (>=1.12.2,<2.0.0)
+Requires-Dist: omniblack.path (>=0.1.4,<0.2.0)
+Requires-Dist: python-box (>=5.2.0,<6.0.0)
+Requires-Dist: python-gitlab (>=2.6.0,<3.0.0); extra == "gitlab" or extra == "all"
+Requires-Dist: ruamel.yaml (>=0.16.12,<0.17.0)
+Description-Content-Type: text/x-rst
+
+Omniblack work
+**************
+
+Omniblack work offers an development enviroment manager.
+The primary entry point of this package is the shell function :code:`wrk`.
+
+This function can be accesed adding one of these lines to your shell's
+configuration file.
+
+.. code-block:: shell
+
+    # In ~/.bashrc for bash
+    source "$(wrk_file env_files/wrk.bash)"
+
+   # In ~/.zshrc for zsh
+   source "$(wrk_file env_files/wrk.zsh)"
+
+
+

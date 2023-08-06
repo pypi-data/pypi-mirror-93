@@ -1,0 +1,6 @@
+[console_scripts]
+mkwrk=omniblack.work.mkwrk:main
+rmwrk=omniblack.work.rmwrk:main
+wrk_config=omniblack.work.config:main
+wrk_file=omniblack.work.wrk_file:main
+
