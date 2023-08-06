@@ -1,0 +1,9 @@
+byuoauth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+byuoauth/cred_manager.py,sha256=JIcxEfXpfYFOEPT6nPYv4yLBiXxByDnB1Oypym7kErc,3250
+byuoauth/jwt_client.py,sha256=vYX9_hYjJqdX2yRTuk8bh-Q7FGLN2PxBey3m_UhOhlo,1293
+byuoauth/token_client.py,sha256=4n7cOp5RtqPoqT7fQcozxDbNaA2GlhwkCfAPOv1qRKU,3266
+byuoauth-2.6.dist-info/LICENSE,sha256=C000MaXLC8Bb5ctiNl_cqQYdf6As5cnCOMZkvNJnsuM,11354
+byuoauth-2.6.dist-info/METADATA,sha256=2j-4ZizW0V-X_Hi1IyFumseqQsRHVSkQHa2_ybnInTc,736
+byuoauth-2.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+byuoauth-2.6.dist-info/top_level.txt,sha256=pH6va18jIBddSVGl0YC1LlM3TTTwUYJPXWMV79HgU10,9
+byuoauth-2.6.dist-info/RECORD,,
