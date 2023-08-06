@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: YUM-menu-tree
+Version: 0.0.1
+Summary: menu tree
+Home-page: https://github.com/filipp218/test
+Author: Bashir Filipp
+Author-email: filipp218@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+This is a test item for work. The tree menu is implemented here
+(https://github.com/filipp218/test)
+
+
