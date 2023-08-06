@@ -1,0 +1,11 @@
+README.md
+setup.py
+./scripts/metric
+shopcloud_metric/__init__.py
+shopcloud_metric/__main__.py
+shopcloud_metric/cli.py
+shopcloud_metric.egg-info/PKG-INFO
+shopcloud_metric.egg-info/SOURCES.txt
+shopcloud_metric.egg-info/dependency_links.txt
+shopcloud_metric.egg-info/requires.txt
+shopcloud_metric.egg-info/top_level.txt
