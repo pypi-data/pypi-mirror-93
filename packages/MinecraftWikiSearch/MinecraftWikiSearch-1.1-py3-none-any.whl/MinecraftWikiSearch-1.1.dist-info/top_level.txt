@@ -1,0 +1,2 @@
+MinecraftWikiSearch
+function
