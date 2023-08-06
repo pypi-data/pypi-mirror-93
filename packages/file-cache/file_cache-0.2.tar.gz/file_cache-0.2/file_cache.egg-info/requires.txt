@@ -1,0 +1,3 @@
+easydict
+matplotlib
+tqdm>4.29.0
