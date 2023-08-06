@@ -1,0 +1,13 @@
+cubicweb_oauth2/__init__.py,sha256=nEnXFCpJM16XHPf6XyzLrnY9B2ZZb1t_1dtmv_plgh8,243
+cubicweb_oauth2/__pkginfo__.py,sha256=aEJDwYHPYAqZx9CDsp_hAPqOPpTih3wBObRw4ivLZ58,669
+cubicweb_oauth2/auth.py,sha256=Of-N2wOgCm5h39aXHe2WCbyXZh5awDLbRdzTMuA8Zkk,8335
+cubicweb_oauth2/site_cubicweb.py,sha256=hey8atE7XEhICevvxVl--s6RhSHgEbbiN45a2ai8Tgo,5123
+cubicweb_oauth2/views.py,sha256=-RNHS3lrqXksvwitoD1H-wXx-eJXGBB7NSVPqw3E08g,2702
+cubicweb_oauth2/i18n/en.po,sha256=LHUBJ82h8DhRaKO1Hawipwt-pRdoFRNV7zYmt-17jWI,298
+cubicweb_oauth2/i18n/es.po,sha256=LHUBJ82h8DhRaKO1Hawipwt-pRdoFRNV7zYmt-17jWI,298
+cubicweb_oauth2/i18n/fr.po,sha256=LHUBJ82h8DhRaKO1Hawipwt-pRdoFRNV7zYmt-17jWI,298
+cubicweb_oauth2-0.3.0.dist-info/METADATA,sha256=xLfiGYDkpIumYvYHLWUbshPv0eul1EZrlsa1Bp0UbgY,2951
+cubicweb_oauth2-0.3.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cubicweb_oauth2-0.3.0.dist-info/entry_points.txt,sha256=dBgtDo5yn138nMRcxttX-F5-xzxOTZU1HeQkvBqP1go,43
+cubicweb_oauth2-0.3.0.dist-info/top_level.txt,sha256=gdIazKzbopP9CJ9oS5I9yvxEejibLfGGgroy4mncfow,16
+cubicweb_oauth2-0.3.0.dist-info/RECORD,,
