@@ -1,0 +1,11 @@
+gyazo/__about__.py,sha256=aRQFrM4n3fy262FEeDmRhTgTRf14XMWDFv-FxXKug7w,35
+gyazo/__init__.py,sha256=a_2W1QiQIG2CedaonYWU8C-CyAQGtRlClfzQjU4EQlU,193
+gyazo/api.py,sha256=GR_YmT5BC1yXKcBXFSJiVvrEdGub8OTjD22JkFBVqgk,6462
+gyazo/error.py,sha256=rBlZV71fPxO3CXo39Uqwb5IMjH8W-clccfMHYgAOUdA,76
+gyazo/image.py,sha256=RgO8rIIKeQfojDSKNhUZ3ocV__N9BlwrP9AstPGKK0M,9174
+gyazo/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_gyazo-2.1.0.dist-info/LICENSE,sha256=tp0QmNdGWEq2B_5iiKcMYWQpDIkDQkL0seMDUQS9FC8,1082
+python_gyazo-2.1.0.dist-info/METADATA,sha256=MJ0likt8plXQbDtAnfJ1xtrAG7B_KYlZhQ4WtfXtRow,3638
+python_gyazo-2.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+python_gyazo-2.1.0.dist-info/top_level.txt,sha256=XSdIQEK-ssYF0WsyPbke1KfpvzlbML1wyej8bpOuQ08,6
+python_gyazo-2.1.0.dist-info/RECORD,,

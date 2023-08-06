@@ -1,0 +1,127 @@
+Metadata-Version: 2.1
+Name: python-gyazo
+Version: 2.1.0
+Summary: A Python wrapper for Gyazo API
+Home-page: https://github.com/ymyzk/python-gyazo
+Author: Yusuke Miyazaki
+Author-email: miyazaki.dev@gmail.com
+License: MIT
+Keywords: gyazo
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Internet
+Requires-Python: <4,>=3.5
+Requires-Dist: python-dateutil (>=2.4)
+Requires-Dist: requests (>=2.7)
+Provides-Extra: docs
+Requires-Dist: Sphinx (<3,>=2.3) ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme (<1,>=0.4) ; extra == 'docs'
+Provides-Extra: mypy
+Requires-Dist: mypy ; extra == 'mypy'
+Provides-Extra: test
+Requires-Dist: coverage (<6,>=5) ; extra == 'test'
+Requires-Dist: coveralls (<2.0,>=1.1) ; extra == 'test'
+Requires-Dist: flake8 (<4,>=3.3) ; extra == 'test'
+Requires-Dist: pytest (<7,>=6) ; extra == 'test'
+Requires-Dist: pytest-cov (<3,>=2) ; extra == 'test'
+Requires-Dist: pytest-mock (<4,>=3) ; extra == 'test'
+
+python-gyazo
+============
+.. image:: https://badge.fury.io/py/python-gyazo.svg
+   :target: https://pypi.python.org/pypi/python-gyazo/
+   :alt: PyPI version
+.. image:: https://img.shields.io/pypi/pyversions/python-gyazo.svg
+   :target: https://pypi.python.org/pypi/python-gyazo/
+   :alt: PyPI Python versions
+.. image:: https://github.com/ymyzk/python-gyazo/workflows/CI/badge.svg
+   :target: https://github.com/ymyzk/python-gyazo/actions?query=workflow%3ACI
+   :alt: CI Status
+.. image:: https://readthedocs.org/projects/python-gyazo/badge/?version=latest
+   :target: https://python-gyazo.readthedocs.io/
+   :alt: Documentation Status
+
+A Python wrapper for `Gyazo API`_.
+
+The full-documentation is available on `Read the Docs`_.
+
+Requirements
+------------
+* Python 3.5+
+
+Installation
+------------
+.. code-block:: shell
+
+   pip install python-gyazo
+
+Note: Please use the latest version of setuptools & pip
+
+.. code-block:: shell
+
+   pip install -U setuptools pip
+
+
+Usage
+-----
+At first, you must create an application and get an access token from https://gyazo.com/oauth/applications
+
+.. code-block:: python
+
+   from gyazo import Api
+
+
+   client = Api(access_token='YOUR_ACCESS_TOKEN')
+
+   ### Get a list of images
+   images = client.get_image_list()
+   for image in images:
+       print(str(image))
+
+   ### Using an image model
+   image = images[0]
+   print("Image ID: " + image.image_id)
+   print("URL: " + image.url)
+
+   ### Download an image
+   if image.url:
+       with open(image.filename, 'wb') as f:
+           f.write(image.download())
+
+   ### Upload an image
+   with open('sample.png', 'rb') as f:
+       image = client.upload_image(f)
+       print(image.to_json())
+
+   ### Delete an image
+   client.delete_image('IMAGE_ID')
+
+   ### oEmbed
+   image = images[0]
+   print(client.get_oembed(image.permalink_url))
+
+Backup
+------
+``gyazo-backup`` is moved to `python-gyazo-backup`_.
+
+License
+-------
+MIT License. Please see `LICENSE`_.
+
+.. _Read the Docs: https://python-gyazo.readthedocs.io/
+.. _Gyazo API: https://gyazo.com/api?lang=ja
+.. _python-gyazo-backup: https://github.com/ymyzk/python-gyazo-backup
+.. _LICENSE: LICENSE
+
+
