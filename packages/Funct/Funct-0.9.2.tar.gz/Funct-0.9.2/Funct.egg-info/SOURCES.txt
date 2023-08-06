@@ -1,0 +1,13 @@
+.gitignore
+LICENCE
+README.md
+setup.py
+Funct.egg-info/PKG-INFO
+Funct.egg-info/SOURCES.txt
+Funct.egg-info/dependency_links.txt
+Funct.egg-info/top_level.txt
+docs/Array.html
+docs/index.html
+funct/Array.py
+funct/__init__.py
+tests/tests.py
