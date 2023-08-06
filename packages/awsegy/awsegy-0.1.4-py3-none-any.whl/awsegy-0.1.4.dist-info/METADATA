@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: awsegy
+Version: 0.1.4
+Summary: Greet someone
+Home-page: https://github.com/changhyuni/awsegy
+Author: loanshark
+Author-email: bhs9610@naver.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: Click (==7.0)
+Requires-Dist: awscli (==1.18.214)
+Requires-Dist: boto3 (==1.16.9)
+Requires-Dist: boto (==2.49.0)
+Requires-Dist: botocore (==1.19.54)
+Requires-Dist: progressbar (==2.5)
+Requires-Dist: pyfiglet (==0.8.post1)
+Requires-Dist: virtualenv (==20.1.0)
+
+UNKNOWN
+
+
