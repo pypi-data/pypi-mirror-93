@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+src/rbIotModem/__init__.py
+src/rbIotModem/_rbIotModem.so
+src/rbIotModem/rbIotModem.py
+src/rbIotModem.egg-info/PKG-INFO
+src/rbIotModem.egg-info/SOURCES.txt
+src/rbIotModem.egg-info/dependency_links.txt
+src/rbIotModem.egg-info/requires.txt
+src/rbIotModem.egg-info/top_level.txt
