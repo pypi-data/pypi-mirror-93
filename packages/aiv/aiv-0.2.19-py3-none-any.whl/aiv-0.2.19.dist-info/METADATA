@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: aiv
+Version: 0.2.19
+Summary: A variant annotation package
+Home-page: https://github.com/nesegunes
+Author: tardis
+Author-email: nesegunes.ce@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: myvariant
+
+## Annotation of Identified Variants
+
+Annotation of Identified Variants to Create Reports for Clinicians to Assist Therapeutic Decisions
+
+## Prerequisites
+
+It requires three main modules: pandas, myvariant and reportlab
+
+```
+pip install pandas
+pip install myvariant
+pip install reportlab
+```
+
+## Installation
+
+```
+pip install aiv
+```
+
+## Upgrade
+
+```
+pip install aiv --upgrade
+```
+
+## Usage
+
+```
+import aiv
+
+aiv.annotate_mutations('variant_calls.tsv')
+```
+
+
