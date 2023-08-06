@@ -1,0 +1,12 @@
+README.md
+setup.py
+bin/madeira-deploy
+bin/madeira-remove
+bin/madeira-run-dev
+madeira_tools/__init__.py
+madeira_tools/tools.py
+madeira_tools.egg-info/PKG-INFO
+madeira_tools.egg-info/SOURCES.txt
+madeira_tools.egg-info/dependency_links.txt
+madeira_tools.egg-info/requires.txt
+madeira_tools.egg-info/top_level.txt
