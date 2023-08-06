@@ -1,0 +1,8 @@
+pigeon/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pigeon/test.py,sha256=OcneV9Wau8hvAFM_WvktBtatsL-haD__d2HfwrE4H9c,3443
+pigeon/url/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pigeon/url/utils.py,sha256=Txc5uMQ4pPEVOyK9DXLgKEKzcGgs3WtMKjVNJhLmqdc,322
+django_pigeon-0.4.0.dist-info/LICENSE,sha256=IHUs6x-6GeQHk-dN4K7Oskj8ude26y-q-VWgXUOusW4,758
+django_pigeon-0.4.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+django_pigeon-0.4.0.dist-info/METADATA,sha256=LEZmaDhQXgN-ejoggWTVIhFPyntowINzKJ2OHbJQ-NE,4680
+django_pigeon-0.4.0.dist-info/RECORD,,
