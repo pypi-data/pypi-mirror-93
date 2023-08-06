@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: python-alea
+Version: 0.0.8
+Summary: Python wrapper for the IntelliGaze API by Alea Technologies
+Home-page: https://github.com/esdalmaijer/PyAlea
+Author: Edwin Dalmaijer
+Author-email: edwin.dalmaijer@gmail.com
+License: UNKNOWN
+Description: A bug in twine prevents reading Markdown files, so please read the README at https://github.com/esdalmaijer/PyAlea
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
