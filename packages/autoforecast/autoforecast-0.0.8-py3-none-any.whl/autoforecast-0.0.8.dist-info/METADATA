@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: autoforecast
+Version: 0.0.8
+Summary: AutoML time series forecasting
+Home-page: https://github.com/GuillaumeSimo/autoforecast
+Author: Guillaume Simo
+Author-email: guillaume.simo@hotmail.fr
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp (==3.7.3)
+Requires-Dist: fbprophet (==0.7.1)
+Requires-Dist: Keras (==2.4.3)
+Requires-Dist: numpy (==1.19.4)
+Requires-Dist: pandas (==1.2.0)
+Requires-Dist: scikit-learn (==0.24.0)
+Requires-Dist: statsmodels (==0.12.1)
+Requires-Dist: tensorflow (==2.4.0)
+Requires-Dist: xgboost (==1.3.1)
+
+# Auto Forecast
+AutoML library for time series forecasting
+
+## Getting started
+
+Upgrade pip
+```bash
+$ pip install pip --upgrade
+```
+
+Install autoforecast
+```bash
+$ pip install autoforecast
+```
+
+
+### Run the example function
+```python
+from autoforecast.examples import autoforecast_bitcoin
+
+
+res = autoforecast_bitcoin.run()
+print(res)
+```
+
+### Use you own dataset
+```python
+from autoforecast.automl import AutoForecast
+
+res_auto_forecast = AutoForecast(train).run_auto_forecast(
+    X_train, y_train, X_test, y_test,
+    verbose=False, max_time_in_sec=600
+)
+```
+
+
