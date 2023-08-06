@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: asen_6008
+Version: 1.0.0
+Summary: Constants for CU Boulder's ASEN 6008
+Home-page: https://github.com/nbelakovski/asen_6008
+Author: Nickolai Belakovski
+License: UNKNOWN
+Description: ## Installation
+        
+        ```
+        pip install asen_6008
+        ```
+        
+        
+        ## Usage
+        
+        ```
+        import asen_6008
+        
+        print(dir(asen_6008)) # This will show a list of all available constants and functions
+        
+        earth_circular_velocity = (asen_6008.mu_sun / asen_6008.AU) ** 0.5
+        
+        print(earth_circular_velocity)
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Free For Educational Use
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
