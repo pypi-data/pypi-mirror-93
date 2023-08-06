@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+SortingAlgorithms/Algorithms.py
+SortingAlgorithms/__init__.py
+SortingAlgorithms.egg-info/PKG-INFO
+SortingAlgorithms.egg-info/SOURCES.txt
+SortingAlgorithms.egg-info/dependency_links.txt
+SortingAlgorithms.egg-info/top_level.txt
