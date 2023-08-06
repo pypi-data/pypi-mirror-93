@@ -1,0 +1,12 @@
+sphinxcontrib/__init__.py,sha256=jA-5rJeaXThhb1RSWBCkDzcrTCMYnUWoOjsW5V-3Bwk,341
+sphinxcontrib/extras_require/__init__.py,sha256=l6czkUwrtRw-rQDn6dM8FzuyXy4VMEdqJSpg3iCRv4Q,2623
+sphinxcontrib/extras_require/directive.py,sha256=-wKRjDOXDPRYKsrGmzEOftnPGAvFJ4bHi8gwmI_gzfM,6572
+sphinxcontrib/extras_require/flit_config.py,sha256=Zk4PAe7eTw7TiPwWxih7VCXTFsGUXGZJQ7ueZvCDRQg,6356
+sphinxcontrib/extras_require/purger.py,sha256=vGKT14zykdw-ta7XrjeHYjTYThowq2s9IHFiEUdIuuA,1573
+sphinxcontrib/extras_require/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sphinxcontrib/extras_require/sources.py,sha256=3RYCb-vPc2zWVKBHBewhuSe7h-ejENfkb0hIm930B7Y,8101
+extras_require-0.2.4.dist-info/LICENSE,sha256=9PPLksk4ZHsUUmFrixmqt__bNVhDPqrA8u9PA2CYN7I,1333
+extras_require-0.2.4.dist-info/METADATA,sha256=6GG_feDuH5H9YpmfRfPY4tz6MYNp0H7UWXcFt3pOwlk,10697
+extras_require-0.2.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+extras_require-0.2.4.dist-info/top_level.txt,sha256=VJrV3_vaiKQVgVpR0I1iecxoO0drzGu-M0j40PVP2QQ,14
+extras_require-0.2.4.dist-info/RECORD,,
