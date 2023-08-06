@@ -1,0 +1,13 @@
+Change Log
+=========
+0.0.3 (1/30/2121)
+-----------------
+Removed unnecessary files 
+=========
+0.0.2 (1/30/2121)
+-----------------
+Removed requirments for standard python library modules
+=========
+0.0.1 (1/30/2121)
+-----------------
+First release

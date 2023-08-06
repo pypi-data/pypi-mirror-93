@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+FreshServiceApi/__init__.py
+FreshServiceApi.egg-info/PKG-INFO
+FreshServiceApi.egg-info/SOURCES.txt
+FreshServiceApi.egg-info/dependency_links.txt
+FreshServiceApi.egg-info/requires.txt
+FreshServiceApi.egg-info/top_level.txt
