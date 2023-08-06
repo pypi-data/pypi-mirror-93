@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: tokenwiser
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: gensim (>=3.8.3)
+Requires-Dist: jellyfish (>=0.8.2)
+Requires-Dist: Pyphen (>=0.10.0)
+Requires-Dist: scikit-learn (>=0.24.0)
+Requires-Dist: PyYAML (>=5.3.1)
+Requires-Dist: typer (==0.3.2)
+Requires-Dist: spacy (>=3.0)
+Requires-Dist: yake-github (>=0.4.0)
+Requires-Dist: rich (>=9.2.0)
+Requires-Dist: mktestdocs (>=0.1.0)
+Requires-Dist: bpemb (>=0.3.2)
+Requires-Dist: fasttext (>=0.9.2)
+Provides-Extra: dev
+Requires-Dist: flake8 (>=3.6.0) ; extra == 'dev'
+Requires-Dist: pytest (>=4.0.2) ; extra == 'dev'
+Requires-Dist: jupyter (>=1.0.0) ; extra == 'dev'
+Requires-Dist: jupyterlab (>=0.35.4) ; extra == 'dev'
+
+UNKNOWN
+
+
