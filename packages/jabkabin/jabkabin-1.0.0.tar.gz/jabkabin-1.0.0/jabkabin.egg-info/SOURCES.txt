@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+jabkabin/__init__.py
+jabkabin/asyncpastebin.py
+jabkabin/syncpastebin.py
+jabkabin/utils.py
+jabkabin.egg-info/PKG-INFO
+jabkabin.egg-info/SOURCES.txt
+jabkabin.egg-info/dependency_links.txt
+jabkabin.egg-info/not-zip-safe
+jabkabin.egg-info/top_level.txt
