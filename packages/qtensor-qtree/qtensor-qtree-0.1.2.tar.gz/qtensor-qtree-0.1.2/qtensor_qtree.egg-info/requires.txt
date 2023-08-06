@@ -1,0 +1,8 @@
+cirq
+google-api-core<=1.17.0
+matplotlib
+networkx>=2.3
+numpy
+
+[tensorflow]
+tensorflow<=1.15
