@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: jama-client-CERTIC
+Version: 0.0.10
+Summary: Jama client library
+Home-page: https://git.unicaen.fr/certic/jama-python-client
+Author: Mickaël Desfrênes
+Author-email: mickael.desfrenes@unicaen.fr
+License: UNKNOWN
+Description: # Jama Python Client
+        
+        Jama Python library and CLI.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
