@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: petabvis
+Version: 0.0.1
+Summary: Interactive visualization of PEtab problems
+Home-page: https://github.com/PEtab-dev/petab-interactive-viz
+Maintainer: Dilan Pathirana, Daniel Weindl
+Maintainer-email: dilan.pathirana@uni-bonn.de, daniel.weindl@helmholtz-muenchen.de
+License: BSD-3-Clause License
+Project-URL: Bug Reports, https://github.com/PEtab-dev/petab-interactive-viz/issues
+Project-URL: Source, https://github.com/PEtab-dev/petab-interactive-viz
+Keywords: petab,visualization
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Requires-Python: <4,>=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pandas (>=1.2.1)
+Requires-Dist: petab (>=0.1.14)
+Requires-Dist: PySide2 (>=5.15.1)
+Requires-Dist: PyYAML (>=5.3.1)
+Requires-Dist: pyqtgraph (>=0.11.0)
+Requires-Dist: scipy (>=1.5.0)
+Requires-Dist: numpy (>=1.19)
+
+# PEtab vis
+
+An interactive visualization tool for
+[PEtab](https://github.com/PEtab-dev/PEtab) measurement and simulation files.
+
+## Installation
+
+### From pypi
+
+```shell
+pip3 install petabvis
+```
+
+### From GitHub repository
+
+```shell
+pip3 install git+https://github.com/PEtab-dev/petab-interactive-viz.git@main
+```
+
+### From local source directory
+
+From within the root source directory, run:
+
+```shell
+pip3 install .
+```
+
+## Usage
+
+1. Run `petabvis`
+2. Select a PEtab yaml file
+3. Optionally select a PEtab measurement file
+4. Navigate through the plots
+
+See also `petabvis -h` for command line usage.
+
+
