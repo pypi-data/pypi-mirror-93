@@ -1,0 +1,11 @@
+common_pkg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+common_pkg/fake-UA.py,sha256=2DV8Hrv0RE1lCNvi3TNwvolpGWGI9WfRAp3aNvHllps,6453
+common_pkg/os.py,sha256=biiY4oIembsFrIPp0kHf53oy97XZQ-11ww5UuctHc4M,130
+common_pkg/web.py,sha256=iHLAj0QeYZ1VrU-_TICAdo5HWHukD4LMXtvJGr7S3FI,3972
+common_pkg/database/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+common_pkg/database/mysql.py,sha256=Ql2271VM4nNbbDzxydvauJKWbQA-JugkbRMc4RRDCXI,4615
+common_pkg_dennis-0.0.1.dist-info/LICENSE.txt,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+common_pkg_dennis-0.0.1.dist-info/METADATA,sha256=o8__J4YLLcCiuEJmKUWFPZwqkL6mGtX8-XVzgt7UTzM,662
+common_pkg_dennis-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+common_pkg_dennis-0.0.1.dist-info/top_level.txt,sha256=HmZS1N5JdhzqumHA64jdU_j-Pay4PEAEYvC_hlLGxN4,11
+common_pkg_dennis-0.0.1.dist-info/RECORD,,
