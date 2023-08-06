@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: flask-minio-factory
+Version: 0.1.0
+Summary: A package, which provides easy usage for minio with flask
+Home-page: UNKNOWN
+Author: 
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Framework :: Flask
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: minio
+Provides-Extra: dev
+Requires-Dist: Flask ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: coveralls ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+
+
+## flask_minio
+This is the starter text for a python package.
+
+
