@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/cdk_bucket_deployment_expirator/__init__.py
+src/cdk_bucket_deployment_expirator/py.typed
+src/cdk_bucket_deployment_expirator.egg-info/PKG-INFO
+src/cdk_bucket_deployment_expirator.egg-info/SOURCES.txt
+src/cdk_bucket_deployment_expirator.egg-info/dependency_links.txt
+src/cdk_bucket_deployment_expirator.egg-info/requires.txt
+src/cdk_bucket_deployment_expirator.egg-info/top_level.txt
+src/cdk_bucket_deployment_expirator/_jsii/__init__.py
+src/cdk_bucket_deployment_expirator/_jsii/cdk-bucket-deployment-expirator@1.87.1.jsii.tgz
