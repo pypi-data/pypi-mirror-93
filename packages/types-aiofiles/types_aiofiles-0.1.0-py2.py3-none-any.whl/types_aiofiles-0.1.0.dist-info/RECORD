@@ -1,0 +1,11 @@
+aiofiles-stubs/METADATA.toml,sha256=nq991l4AlCDeS2m_dLVZjgk-Lq4rotoD83sSbK97RtQ,55
+aiofiles-stubs/__init__.pyi,sha256=JV9ztGDgZgmwrcgLqJ_R6o8Fgf3cmJWE5MgYjP2BEE0,37
+aiofiles-stubs/base.pyi,sha256=gL3zcEhpb3ZeAHKbouMayq0UIzTDrsE8oTwKU8Yhyq0,1490
+aiofiles-stubs/os.pyi,sha256=G9ZSixzRK7_9tZ5sSjqhp-c7Uy5f8tfI_SEQUwYnScw,1040
+aiofiles-stubs/threadpool/__init__.pyi,sha256=plwVo_uI0AiOap217i7Ef_Gh_TGyOOeJren5WnTIZds,2812
+aiofiles-stubs/threadpool/binary.pyi,sha256=xmn9nxqyzM5XQCr5H8sx2xzW7YkqAOQ159cL1yljyIA,1619
+aiofiles-stubs/threadpool/text.pyi,sha256=X4W8oOVHyTrz32gJ-W_-rYQIw9A92MUd1pp3okUG3xY,1416
+types_aiofiles-0.1.0.dist-info/METADATA,sha256=djWysRIrxShYluDYhKk9yC4Vy4PX1HOhgHeB4yPMhUE,837
+types_aiofiles-0.1.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+types_aiofiles-0.1.0.dist-info/top_level.txt,sha256=t58et2RkjHfTTiZmL25XHdLh7Xqxt0_gHYHyBdsgnfE,15
+types_aiofiles-0.1.0.dist-info/RECORD,,
