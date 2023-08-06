@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ColorX
+Version: 1.0
+Summary: First Python Module
+Home-page: https://github.com/Caz-Developer/colorx
+Author: Caz
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: os
+Requires-Dist: time
+
+# Installing
+```
+python -m pip install ColorX
+```
+
