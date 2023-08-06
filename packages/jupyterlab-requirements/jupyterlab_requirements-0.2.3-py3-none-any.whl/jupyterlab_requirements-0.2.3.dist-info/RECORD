@@ -1,0 +1,15 @@
+jupyterlab_requirements-0.2.3.data/data/etc/jupyter/jupyter_notebook_config.d/jupyterlab_requirements.json,sha256=wGqAHWcNhbeH0FOHUT0atDo2YKzYXhqhjRHkmxNa2VU,100
+jupyterlab_requirements-0.2.3.data/data/etc/jupyter/jupyter_server_config.d/jupyterlab_requirements.json,sha256=3jXVzMoPFwihhZr1RCphbKNWaVammUh93DFcz8dPseo,98
+jupyterlab_requirements-0.2.3.data/data/share/jupyter/lab/extensions/jupyterlab_requirements/install.json,sha256=9ORzXlBnJsOddqeo99fyt1h9COSvPG1x4hnglZmGn_k,207
+jupyterlab_requirements-0.2.3.data/data/share/jupyter/lab/extensions/jupyterlab_requirements/package.json,sha256=0jUa3I4MDOalu8cljv2uoaydd6ggH5U4S85J4D1Z7k4,3334
+jupyterlab_requirements-0.2.3.data/data/share/jupyter/lab/extensions/jupyterlab_requirements/static/486.5d7c17b6e09cb651a1c2.js,sha256=yOC6sdg0-X4LbmyXUD2DfVaU5faqVQ-x7YmhWcuF6ik,70314
+jupyterlab_requirements-0.2.3.data/data/share/jupyter/lab/extensions/jupyterlab_requirements/static/486.5d7c17b6e09cb651a1c2.js.LICENSE.txt,sha256=0z77300wm_pESBmVUTcf-B1fV2YbeB-vedJWVU4DhZU,336
+jupyterlab_requirements-0.2.3.data/data/share/jupyter/lab/extensions/jupyterlab_requirements/static/549.3487186f6d32d1516df7.js,sha256=M9fW7QWjJk2o7rHzGb6WYuj8slvywNrZtEvrs1SIa5I,6486
+jupyterlab_requirements-0.2.3.data/data/share/jupyter/lab/extensions/jupyterlab_requirements/static/778.55d441adab9713aa300f.js,sha256=_T3QK0qWH1cndvOvTLfitCIhJyTog7Be86YbDIPQ68U,37188
+jupyterlab_requirements-0.2.3.data/data/share/jupyter/lab/extensions/jupyterlab_requirements/static/remoteEntry.cf1eb97f42a05b2541c9.js,sha256=m3TZ_iXSQ_G5chJNrmNsQzOtPu9ivk1gGzew7N07WEw,6802
+jupyterlab_requirements-0.2.3.data/data/share/jupyter/lab/extensions/jupyterlab_requirements/static/style.js,sha256=JssvE7Z9qXspvSoKI5yIiUHo2jffJjyrApORSQ1Sc28,167
+jupyterlab_requirements-0.2.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+jupyterlab_requirements-0.2.3.dist-info/METADATA,sha256=YcTrp1prQe1xBSudWIHlPK1u58aGRWDASKXXbxsKkxI,4532
+jupyterlab_requirements-0.2.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jupyterlab_requirements-0.2.3.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+jupyterlab_requirements-0.2.3.dist-info/RECORD,,
