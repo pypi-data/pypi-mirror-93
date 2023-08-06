@@ -1,0 +1,12 @@
+click
+click-aliases
+colorama
+humanfriendly
+ipfshttpclient
+pydantic
+pyjwt
+requests
+requests-toolbelt
+torrent-tracker-scraper
+torrentool
+transmission-rpc

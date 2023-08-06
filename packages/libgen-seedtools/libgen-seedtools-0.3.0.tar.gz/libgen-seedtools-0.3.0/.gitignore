@@ -1,0 +1,9 @@
+libgen-seedtools-data/
+config.json
+torrent_data.json
+venv/
+.vscode
+*.egg-info/
+**/__pycache__
+pip-wheel-metadata/
+site/
