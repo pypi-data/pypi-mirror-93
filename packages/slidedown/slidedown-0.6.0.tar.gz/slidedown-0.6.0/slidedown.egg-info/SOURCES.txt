@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+slidedown/__init__.py
+slidedown/__main__.py
+slidedown/load.py
+slidedown/slides.py
+slidedown.egg-info/PKG-INFO
+slidedown.egg-info/SOURCES.txt
+slidedown.egg-info/dependency_links.txt
+slidedown.egg-info/entry_points.txt
+slidedown.egg-info/requires.txt
+slidedown.egg-info/top_level.txt
+slidedown/static/markdown.css
