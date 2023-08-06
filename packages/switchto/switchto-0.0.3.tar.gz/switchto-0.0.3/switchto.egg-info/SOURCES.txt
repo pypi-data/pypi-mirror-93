@@ -1,0 +1,7 @@
+README.md
+setup.py
+switchto.py
+switchto.egg-info/PKG-INFO
+switchto.egg-info/SOURCES.txt
+switchto.egg-info/dependency_links.txt
+switchto.egg-info/top_level.txt
