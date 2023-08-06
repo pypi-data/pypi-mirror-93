@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/guix.py
+src/guix.egg-info/PKG-INFO
+src/guix.egg-info/SOURCES.txt
+src/guix.egg-info/dependency_links.txt
+src/guix.egg-info/top_level.txt
