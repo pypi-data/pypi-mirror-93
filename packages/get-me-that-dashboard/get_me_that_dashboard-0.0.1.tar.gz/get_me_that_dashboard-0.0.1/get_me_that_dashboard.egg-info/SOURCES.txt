@@ -1,0 +1,6 @@
+setup.py
+bin/get_me_that_dashboard
+get_me_that_dashboard.egg-info/PKG-INFO
+get_me_that_dashboard.egg-info/SOURCES.txt
+get_me_that_dashboard.egg-info/dependency_links.txt
+get_me_that_dashboard.egg-info/top_level.txt

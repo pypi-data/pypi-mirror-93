@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: get-me-that-dashboard
+Version: 0.0.1
+Summary: simple utility to import grafana dashboards into helm charts
+Home-page: UNKNOWN
+Author: Eyal Firstenberg
+Author-email: efirstenberg@paloaltonetworks.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta

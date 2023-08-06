@@ -1,0 +1,41 @@
+#! /bin/bash
+
+set -o nounset
+set -o errexit
+set -o pipefail
+
+function debug {
+        if [[ ${DEBUG:-} == 1 ]]; then
+          echo ${@}
+        fi
+}
+DASHBOARD_URL=${1}
+DASHBOARD_ID=$(echo "${DASHBOARD_URL}" | sed 's:.*/d/\([^/]*\)/.*:\1:')
+debug dashboard_id is ${DASHBOARD_ID}
+BASEURL=$(echo "${DASHBOARD_URL}" | sed 's:\(.*\)/d/.*:\1:')
+debug baseurl is ${BASEURL}
+TEMP=$(mktemp)
+curl "${BASEURL}/api/dashboards/uid/${DASHBOARD_ID}" | jq 'del(.dashboard.uid) | .dashboard' > ${TEMP}
+mkdir -p dashboards
+SLUG=$(cat ${TEMP} | jq -r '.title' | tr ' ' '_' | tr '/' '_')
+TARGET=dashboards/${SLUG}.json
+cp ${TEMP} ${TARGET}
+echo created ${TARGET}
+mkdir -p templates
+cat << EOF > templates/dashboards.yaml
+{{ \$currentScope := . }}
+{{ range \$path, \$_ := .Files.Glob "dashboards/*.json" }}
+apiVersion: integreatly.org/v1alpha1
+kind: GrafanaDashboard
+metadata:
+  labels:
+    app: grafana
+  name: {{ base \$path }}
+spec:
+  json: |
+{{ ( \$currentScope.Files.Get \$path ) | indent 4 }}
+  name: {{ base \$path }}
+---
+{{ end }}
+EOF
+echo created templates/dashboards.yaml
