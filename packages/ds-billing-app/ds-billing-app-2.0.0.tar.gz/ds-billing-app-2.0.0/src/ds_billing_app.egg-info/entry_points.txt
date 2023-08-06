@@ -1,0 +1,3 @@
+[console_scripts]
+ds-billing-app = app:main
+

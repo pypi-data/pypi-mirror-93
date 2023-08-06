@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: ds-billing-app
+Version: 2.0.0
+Summary: Backend for data science billing app standalone
+Home-page: https://github.com/cbs-data/k8s-di-apps/ds-backend-billing
+Author: Abhijit Joshi
+Author-email: abhijit.joshi@cbs.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN

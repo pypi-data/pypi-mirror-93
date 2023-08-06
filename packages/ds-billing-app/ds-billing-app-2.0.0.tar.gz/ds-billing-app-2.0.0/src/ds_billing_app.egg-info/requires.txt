@@ -1,0 +1,8 @@
+boto
+pandas==1.0.1
+starlette==0.13.2
+numpy==1.18.1
+google-cloud-bigquery==1.24.0
+python-multipart==0.0.5
+xlrd==1.2.0
+xlsxwriter==1.2.8
