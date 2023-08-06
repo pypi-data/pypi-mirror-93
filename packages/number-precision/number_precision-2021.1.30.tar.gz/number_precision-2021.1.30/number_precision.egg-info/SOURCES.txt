@@ -1,0 +1,8 @@
+README.md
+setup.py
+number_precision/__init__.py
+number_precision/number_precision.py
+number_precision.egg-info/PKG-INFO
+number_precision.egg-info/SOURCES.txt
+number_precision.egg-info/dependency_links.txt
+number_precision.egg-info/top_level.txt
