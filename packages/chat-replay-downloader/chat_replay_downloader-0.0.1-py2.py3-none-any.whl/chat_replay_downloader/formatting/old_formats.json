@@ -1,0 +1,42 @@
+{
+    "default": [
+        {
+            "template": "{time_text|timestamp}{author.badges}{amount}{author.display_name|author.name}: {message}",
+            "matching": [
+                "message_type_1",
+                "message_type_2"
+            ],
+            "keys": {
+                "time_text": "[{}] ",
+                "timestamp": {
+                    "value": "[{}] ",
+                    "format": "%Y-%m-%d %H:%M:%S"
+                },
+                "author.badges": {
+                    "value": "({}) ",
+                    "separator": ", "
+                },
+                "amount": "*{}* "
+            }
+        },
+        {
+            "template": "{time_text|timestamp}{author.badges}{amount}{author.display_name|author.name}: {message}",
+            "matching": [
+                "message_type_3",
+                "message_type_4"
+            ],
+            "keys": {
+                "time_text": "[{}] ",
+                "timestamp": {
+                    "value": "[{}] ",
+                    "format": "%Y-%m-%d %H:%M:%S"
+                },
+                "author.badges": {
+                    "value": "({}) ",
+                    "separator": ", "
+                },
+                "amount": "*{}* "
+            }
+        }
+    ]
+}
