@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: power-ml
+Version: 1.0.0a1
+Summary: Empowerment Python Machine Learing Stack.
+Home-page: https://github.com/takelushi/power-ml
+License: MIT
+Author: Takeru Saito
+Author-email: takelushi@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: boto3 (>=1.16.63,<2.0.0)
+Requires-Dist: joblib (>=1.0.0,<2.0.0)
+Requires-Dist: lightgbm (>=3.1.1,<4.0.0)
+Requires-Dist: numpy (>=1.19.5,<2.0.0)
+Requires-Dist: pandas (>=1.2.1,<2.0.0)
+Requires-Dist: psutil (>=5.8.0,<6.0.0)
+Requires-Dist: scikit-learn (>=0.24.1,<0.25.0)
+Requires-Dist: tinydb (>=4.3.0,<5.0.0)
+Project-URL: Repository, https://github.com/takelushi/power-ml
+Project-URL: issues, https://github.com/takelushi/power-ml/issues
+Description-Content-Type: text/markdown
+
+# power-ml
+
+Empowerment Python Machine Learing Stack.
+
+## Install
+
+* Requirements
+   * Poetry
+   * pyenv
+
+```sh
+poetry install --no-dev
+```
+
+## Development
+
+```sh
+# Setup
+poetry install
+
+# Run lint and test.
+bash scripts/report.bash
+```
+
