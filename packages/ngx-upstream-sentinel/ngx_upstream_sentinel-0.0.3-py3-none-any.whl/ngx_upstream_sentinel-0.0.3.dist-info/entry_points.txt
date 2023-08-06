@@ -1,0 +1,3 @@
+[console_scripts]
+ngx_up_sentinel=ngx_upstream_sentinel:main
+
