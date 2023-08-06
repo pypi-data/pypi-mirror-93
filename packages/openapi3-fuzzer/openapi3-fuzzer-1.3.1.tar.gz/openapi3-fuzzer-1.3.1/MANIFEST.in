@@ -1,0 +1,2 @@
+include requirements.txt
+include openapi3_fuzzer/fuzz/*.txt
