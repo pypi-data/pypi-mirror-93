@@ -1,0 +1,10 @@
+matplotlib
+mplcursors
+pandas-ml-common==0.2.0
+
+[dev]
+tox
+twine
+ipykernel
+nbconvert
+jupyter_client
