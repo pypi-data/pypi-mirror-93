@@ -1,0 +1,3 @@
+[console_scripts]
+pyrustic = pyrustic.manager.main:main
+
