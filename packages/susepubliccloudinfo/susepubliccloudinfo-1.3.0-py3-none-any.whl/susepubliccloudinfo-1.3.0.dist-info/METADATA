@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: susepubliccloudinfo
+Version: 1.3.0
+Summary: Command-line tool to access SUSE Public Cloud Information Service
+Home-page: https://github.com/SUSE-Enceladus/public-cloud-info-client
+Author: SUSE Public Cloud Team
+Author-email: public-cloud-dev@susecloud.net
+License: GPL-3.0+
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Description-Content-Type: text/markdown
+Requires-Dist: docopt
+Requires-Dist: lxml
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: bumpversion ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: pycodestyle ; extra == 'dev'
+Requires-Dist: nose ; extra == 'dev'
+
+[![Build Status](https://travis-ci.com/SUSE-Enceladus/public-cloud-info-client.svg?branch=master)](https://travis-ci.com/SUSE-Enceladus/public-cloud-info-client)
+
+pint
+====
+
+pint (Public Cloud INformation Tracker) is a command line client to access
+the REST API provided by the SUSE Public Cloud Information Service. The
+information service provides data about the images SUSE publishes in various
+public cloud frameworks (Amazon, Google, Microsoft) as well as the
+servers that make up the SUSE maintained and operated update infrastructure
+in those frameworks.
+
+
