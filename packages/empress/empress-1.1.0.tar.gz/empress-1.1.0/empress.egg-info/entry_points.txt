@@ -1,0 +1,6 @@
+[console_scripts]
+empress = empress.scripts._cli:empress
+
+[qiime2.plugins]
+q2-empress = empress.plugin_setup:plugin
+
