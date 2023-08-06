@@ -1,0 +1,9 @@
+build/lib/marcia/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+build/lib/marcia/mask.py,sha256=CzRrspOcBu7xzOkR8tJ91-z5cdZFi4v0YPsniZwncZ4,37667
+marcia/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+marcia/mask.py,sha256=CzRrspOcBu7xzOkR8tJ91-z5cdZFi4v0YPsniZwncZ4,37667
+MARCIA-0.1.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+MARCIA-0.1.2.dist-info/METADATA,sha256=mCXfKGIICNGobwjh9k2akdEf6P0GfVVtBxyweIxQndQ,1682
+MARCIA-0.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+MARCIA-0.1.2.dist-info/top_level.txt,sha256=rcxNTUNKlGXzWGlSTimK7nqgmUneM9IVgffr8S4MsKI,22
+MARCIA-0.1.2.dist-info/RECORD,,
