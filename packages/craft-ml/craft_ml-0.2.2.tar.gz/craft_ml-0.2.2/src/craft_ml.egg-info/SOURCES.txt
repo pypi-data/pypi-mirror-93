@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+src/craft_ml/__init__.py
+src/craft_ml/__main__.py
+src/craft_ml/mltypes.py
+src/craft_ml.egg-info/PKG-INFO
+src/craft_ml.egg-info/SOURCES.txt
+src/craft_ml.egg-info/dependency_links.txt
+src/craft_ml.egg-info/entry_points.txt
+src/craft_ml.egg-info/requires.txt
+src/craft_ml.egg-info/top_level.txt
+src/craft_ml.egg-info/zip-safe
