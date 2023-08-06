@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: percy-selenium
+Version: 1.0.0
+Summary: Python client for visual testing with Percy
+Home-page: https://github.com/percy/percy-selenium-python
+Author: Perceptual Inc.
+Author-email: team@percy.io
+License: MIT
+Keywords: selenium percy visual testing
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Requires-Dist: selenium (==3.*)
+Requires-Dist: requests (==2.*)
+
+UNKNOWN
+
+
