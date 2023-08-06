@@ -1,0 +1,13 @@
+qmenta/__init__.py,sha256=GtRobyYjQ_EJvtPNnbOsfa_lacXME6s5UngCQzy7wpU,70
+qmenta/core/.gitignore,sha256=T_6cEPGYAfQ6-gdGwpLCLe1SpRnTl4vwi4qfVM1QsYI,8
+qmenta/core/__init__.py,sha256=X10IDYLaancSvsrJ1gRgY1u3uR3f1JveOPiCglfnYLs,325
+qmenta/core/errors.py,sha256=09OB8KqB2VqM-UmUttY6RFqgbP4L11SDdWDF9H-gBq0,1166
+qmenta/core/platform.py,sha256=moXWmFkXHT72pECayrQ53-oC0fD_ttl_Oe2U3Qdv4ec,8702
+qmenta/core/upload/__init__.py,sha256=kleKeT8d6hVfMkcCCPlP72jvi62ci8Ojk3RjqDrAaYo,187
+qmenta/core/upload/multi.py,sha256=puDAzQ-IMz2tkiRCcj028WX2ZosffsXJ0SOipel1H5s,4738
+qmenta/core/upload/prepare.py,sha256=GyirCPj_eF9Z10kwljVfmPI5qDKHONKZVPsRvNFPukY,8170
+qmenta/core/upload/single.py,sha256=-p2XBiZ8pKRJKtGsh46IKG4XQhkhHfsr2nMGgSWulQE,20078
+qmenta/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qmenta_core-1.3.dev468.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+qmenta_core-1.3.dev468.dist-info/METADATA,sha256=JPjS4yXYTUNqC_4Z3F_CWNeQDydd95b4JeDm-CY8r4k,780
+qmenta_core-1.3.dev468.dist-info/RECORD,,
