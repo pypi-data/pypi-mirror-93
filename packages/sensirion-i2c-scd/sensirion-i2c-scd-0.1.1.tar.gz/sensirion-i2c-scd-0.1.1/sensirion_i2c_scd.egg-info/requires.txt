@@ -1,0 +1,14 @@
+sensirion-i2c-driver~=1.0.0
+
+[:python_version < "3.4"]
+enum34
+
+[docs]
+sphinx~=2.2.1
+sphinx-rtd-theme~=0.4.3
+
+[test]
+flake8~=3.7.8
+pytest~=3.5.0
+pytest-cov~=2.5.1
+sensirion-shdlc-sensorbridge~=0.1.1
