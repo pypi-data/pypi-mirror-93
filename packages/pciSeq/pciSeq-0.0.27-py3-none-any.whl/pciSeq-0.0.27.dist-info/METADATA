@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: pciSeq
+Version: 0.0.27
+Summary: Probabilistic cell typing for spatial transcriptomics
+Home-page: https://github.com/acycliq/pciSeq
+Author: Dimitris Nicoloutsopoulos
+Author-email: dimitris.nicoloutsopoulos@gmail.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: sklearn
+Requires-Dist: numpy-groupies
+Requires-Dist: xarray
+Requires-Dist: numexpr
+Requires-Dist: diplib
+Requires-Dist: scikit-image
+Requires-Dist: opencv-python
+Provides-Extra: interactive
+Requires-Dist: matplotlib (>=2.2.0) ; extra == 'interactive'
+Requires-Dist: jupyter ; extra == 'interactive'
+
+# pciSeq: Probabilistic Cell typing by In situ Sequencing
+A Python package that implements the cell calling algorithm as described in [[Qian, X., et al. Nature Methods (2020)]](https://www.nature.com/articles/s41592-019-0631-4)
+
+## Installation
+```
+pip install pciSeq
+```
+## Demo
+You can run a pciSeq demo in google colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/acycliq/pciSeq/blob/master/notebooks/pciSeq.ipynb)
+
+## References 
+<a id="1">[1]</a> 
+Qian, X., et al. (2020). Probabilistic cell typing enables fine mapping of closely related cell types in situ. Nat
+Methods 17, 101 â€“ 106.
+
+
+
+
