@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: chargame-2048
+Version: 0.0.4
+Summary: classical 2048 in terminal.
+Home-page: https://github.com/starskyC/chargame-2048
+Author: starskyC
+Author-email: cl2004_0123@aliyun.com
+License: MIT
+Keywords: game terminal
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+
+UNKNOWN
+
+
