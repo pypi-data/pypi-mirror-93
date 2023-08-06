@@ -1,0 +1,6 @@
+psutil
+bs4
+requests
+lxml
+pathlib
+fake-useragent
