@@ -1,0 +1,14 @@
+tbs/__init__.py,sha256=yyLtGsBhynC-sSHdax-rRGvHNjH-gdWxIY68WnPVfDw,22
+tbs/__main__.py,sha256=X-yUqedV9rNfD_ZrfQJ7gpjYNbkvKZw72mBdhCmilhs,152
+tbs/assets/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tbs/assets/meirg-logo.jpg,sha256=GrjWbwXBVgGvHfl5zjzNT5Sjd96KCkNoy2c9fLfNvug,32073
+tbs/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tbs/core/app.py,sha256=orVJOzudEijJ1wZmO9DS7iTMpP5FNS-9E7Ury4QrQpQ,321
+tbs/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tbs/utils/img_ascii.py,sha256=b-0GcVFwI1jXo-rTjRUjggRH0_TywzebA322nP9DEmc,1969
+tbs/utils/message.py,sha256=hFL15pU0zUQhmVDCRgZ4tdj8H5KMTE9GnsJ4ii5H-sw,684
+unfor19_tbs-0.0.3.dist-info/METADATA,sha256=bP8ccV2Q75gr4QwtkzOo2aYAc-BkHD3MQVE3i13xG-0,10732
+unfor19_tbs-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+unfor19_tbs-0.0.3.dist-info/entry_points.txt,sha256=7tbYhCA6HNv6MJULCVIvLz7-yHeYQseGWrj5kfhQ2VQ,43
+unfor19_tbs-0.0.3.dist-info/top_level.txt,sha256=gz8jo3UuMRh_njCXV9BmwjvAm0u93vDK-qlJeUU590A,4
+unfor19_tbs-0.0.3.dist-info/RECORD,,

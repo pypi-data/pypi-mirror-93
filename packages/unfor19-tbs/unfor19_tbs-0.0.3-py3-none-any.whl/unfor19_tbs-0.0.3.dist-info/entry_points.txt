@@ -1,0 +1,3 @@
+[console_scripts]
+tbs = tbs.__main__:main
+
