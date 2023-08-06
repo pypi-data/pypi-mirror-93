@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+linearlr.py
+setup.cfg
+setup.py
+linearlr.egg-info/PKG-INFO
+linearlr.egg-info/SOURCES.txt
+linearlr.egg-info/dependency_links.txt
+linearlr.egg-info/top_level.txt
