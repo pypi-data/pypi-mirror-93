@@ -1,0 +1,3 @@
+[console_scripts]
+detect-litter = detect_litter:main
+
