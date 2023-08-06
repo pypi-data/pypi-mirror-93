@@ -1,0 +1,12 @@
+corc==0.0.2a1
+cryptography==3.2.1
+jupyterhub
+traitlets
+
+[dev]
+black==19.10b0
+flake8==3.8.3
+
+[test]
+black==19.10b0
+flake8==3.8.3
