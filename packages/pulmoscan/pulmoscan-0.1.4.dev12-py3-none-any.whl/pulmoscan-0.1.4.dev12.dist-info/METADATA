@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: pulmoscan
+Version: 0.1.4.dev12
+Summary: An example Python project
+Home-page: https://github.com/NandreyN/PulmoAI
+Author: Andrew Naumovich
+Author-email: andrew.naumovich@yandex.ru
+License: Proprietary
+Keywords: python
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: kaggle
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: opencv-python-headless
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: pydicom
+Requires-Dist: pylibjpeg
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: pytest
+Requires-Dist: pylint
+Requires-Dist: mypy
+Requires-Dist: rope
+Requires-Dist: pytest-cov
+Requires-Dist: gin-config
+Requires-Dist: tensorflow (==2.3.1)
+Requires-Dist: Pillow
+Requires-Dist: scikit-learn
+
+UNKNOWN
+
+

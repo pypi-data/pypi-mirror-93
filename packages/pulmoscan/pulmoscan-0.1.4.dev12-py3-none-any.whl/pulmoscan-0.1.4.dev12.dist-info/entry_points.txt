@@ -1,0 +1,4 @@
+[console_scripts]
+pulmoscan_copy_resources = scripts.copy_resources:entry
+pulmoscan_train = train:entry
+
