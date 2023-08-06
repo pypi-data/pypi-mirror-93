@@ -1,0 +1,5 @@
+generalfile
+generalgui
+generallibrary
+generalpackager
+generalvector
