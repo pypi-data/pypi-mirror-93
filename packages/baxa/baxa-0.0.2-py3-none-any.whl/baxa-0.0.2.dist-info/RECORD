@@ -1,0 +1,10 @@
+baxa/__init__.py,sha256=aAyJXxo_OFxTThq_HMutWVQHsnyHDQyxQP6MYGD3J3I,49
+baxa/version.py,sha256=miSsqPy2PFJ18TW9kocQJLcv4HFpkfQhcTzgAO-GTVE,22
+baxa/datasets/__init__.py,sha256=eGdPC6RZYq4uEz2bZ3b2nfekK8ms95J9Sms5NpNbO9c,20
+baxa/layers/__init__.py,sha256=Q9OKU2PubeMeOm5fFfY1NwY7hc9ZmlccvfX3OdT8GTE,18
+baxa/models/__init__.py,sha256=HI3_25aB5ArCuc-57KXTaq1W3Hxx_8YBj3TafClM-44,18
+baxa-0.0.2.dist-info/LICENSE,sha256=jMKHqWbI-mIDRrRpSzUex8vG1o84_osrZm2vgV1Xk-A,11293
+baxa-0.0.2.dist-info/METADATA,sha256=uvbJ4Spm0V24BXttTgtNbWD3-klgQHxP1URyWwreonM,1166
+baxa-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+baxa-0.0.2.dist-info/top_level.txt,sha256=AlkRAzq-QiidGTiYsVJiARpUiC_xu_i9Q8D185XPt6s,5
+baxa-0.0.2.dist-info/RECORD,,
